@@ -2,6 +2,140 @@
 document: modulemd
 version: 2
 data:
+  name: mariadb
+  stream: '10.3'
+  version: '820190314153642'
+  context: 9edba152
+  arch: x86_64
+  license:
+    content:
+    - GPLv2
+    - GPLv2 with exceptions and LGPLv2 and BSD.
+    - LGPLv2+
+    module:
+    - MIT
+  summary: MariaDB Module
+  description: MariaDB is a community developed branch of MySQL. MariaDB is a multi-user,
+    multi-threaded SQL database server. It is a client/server implementation consisting
+    of a server daemon (mysqld) and many different client programs and libraries.
+    The base package contains the standard MariaDB/MySQL client programs and generic
+    MySQL files.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  api:
+    rpms:
+    - mariadb
+    - mariadb-server
+  components:
+    rpms:
+      Judy:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 4
+        rationale: MariaDB dependency for OQgraph computation engine
+        ref: stream-mariadb-10.3-rhel-8.0.0
+      asio:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 12
+        rationale: Galera dependency for asynchronous I/O operation
+        ref: stream-mariadb-10.3-rhel-8.0.0
+      galera:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 16
+        rationale: Galera package for MariaDB server replication
+        ref: stream-10.3-rhel-8.0.0
+      mariadb:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 8
+        rationale: MariaDB package
+        ref: stream-10.3-rhel-8.0.0
+  buildopts:
+    rpms:
+      macros: '%runselftest 1
+
+        %ignore_testsuite_result 0
+
+        '
+  references:
+    community: http://mariadb.org
+    documentation: https://mariadb.com/kb/en/library/documentation/
+    tracker: http://bugzilla.redhat.com
+  profiles:
+    client:
+      rpms:
+      - mariadb
+    galera:
+      rpms:
+      - mariadb-server
+      - mariadb-server-galera
+    server:
+      rpms:
+      - mariadb-server
+  filter:
+    rpms:
+    - Judy-devel
+    - asio-devel
+  artifacts:
+    rpms:
+    - Judy-0:1.0.5-18.module+el8+2885+7b8bb354.x86_64
+    - Judy-devel-0:1.0.5-18.module+el8+2885+7b8bb354.x86_64
+    - Judy-debugsource-0:1.0.5-18.module+el8+2885+7b8bb354.x86_64
+    - Judy-debuginfo-0:1.0.5-18.module+el8+2885+7b8bb354.x86_64
+    - mariadb-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-common-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-errmsg-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-server-galera-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-server-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-oqgraph-engine-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-backup-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-gssapi-server-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-server-utils-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-devel-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-embedded-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-embedded-devel-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-test-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-debugsource-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-debuginfo-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-server-debuginfo-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-oqgraph-engine-debuginfo-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-backup-debuginfo-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-gssapi-server-debuginfo-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-server-utils-debuginfo-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-embedded-debuginfo-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - mariadb-test-debuginfo-3:10.3.27-3.module+el8+2885+7b8bb354.x86_64
+    - asio-devel-0:1.10.8-7.module+el8+2885+7b8bb354.x86_64
+    - galera-0:25.3.31-1.module+el8+2885+7b8bb354.x86_64
+    - galera-debugsource-0:25.3.31-1.module+el8+2885+7b8bb354.x86_64
+    - galera-debuginfo-0:25.3.31-1.module+el8+2885+7b8bb354.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
   name: mailman
   stream: '2.1'
   version: '8030020200601095048'
