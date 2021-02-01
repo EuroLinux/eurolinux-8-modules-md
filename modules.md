@@ -2,6 +2,85 @@
 document: modulemd
 version: 2
 data:
+  name: libselinux-python
+  stream: '2.8'
+  version: '8020020190916085518'
+  context: b0d89eb3
+  arch: x86_64
+  license:
+    content:
+    - Public Domain
+    module:
+    - MIT
+  summary: Python 2 bindings for libselinux
+  description: The libselinux-python package contains the python bindings for developing
+    SELinux applications.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+      python27:
+      - 2.7
+    requires:
+      platform:
+      - el8
+      python27:
+      - 2.7
+  api:
+    rpms:
+    - libselinux-python
+  components:
+    rpms:
+      libselinux:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Provides libselinux python bindings
+        ref: rhel-8.1.0
+  buildopts:
+    rpms:
+      macros: '%with_python2 1
+
+        '
+  profiles:
+    common:
+      rpms:
+      - libselinux-python
+  filter:
+    rpms:
+    - libselinux
+    - libselinux-debugsource
+    - libselinux-devel
+    - libselinux-ruby
+    - libselinux-ruby-debuginfo
+    - libselinux-static
+    - libselinux-utils
+    - libselinux-utils-debuginfo
+    - python3-libselinux
+    - python3-libselinux-debuginfo
+  artifacts:
+    rpms:
+    - libselinux-static-0:2.9-2.1.module+el8.1.0+3972+45ab4324.x86_64
+    - python3-libselinux-0:2.9-2.1.module+el8.1.0+3972+45ab4324.x86_64
+    - libselinux-debuginfo-0:2.9-2.1.module+el8.1.0+3972+45ab4324.x86_64
+    - python3-libselinux-debuginfo-0:2.9-2.1.module+el8.1.0+3972+45ab4324.x86_64
+    - libselinux-utils-0:2.9-2.1.module+el8.1.0+3972+45ab4324.x86_64
+    - libselinux-python-0:2.9-2.1.module+el8.1.0+3972+45ab4324.x86_64
+    - libselinux-utils-debuginfo-0:2.9-2.1.module+el8.1.0+3972+45ab4324.x86_64
+    - libselinux-ruby-debuginfo-0:2.9-2.1.module+el8.1.0+3972+45ab4324.x86_64
+    - libselinux-python-debuginfo-0:2.9-2.1.module+el8.1.0+3972+45ab4324.x86_64
+    - libselinux-ruby-0:2.9-2.1.module+el8.1.0+3972+45ab4324.x86_64
+    - libselinux-0:2.9-2.1.module+el8.1.0+3972+45ab4324.x86_64
+    - libselinux-debugsource-0:2.9-2.1.module+el8.1.0+3972+45ab4324.x86_64
+    - libselinux-devel-0:2.9-2.1.module+el8.1.0+3972+45ab4324.x86_64
+---
+---
+document: modulemd
+version: 2
+data:
   name: ant
   stream: '1.10'
   version: '820181213135032'
