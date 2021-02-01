@@ -2,6 +2,64 @@
 document: modulemd
 version: 2
 data:
+  name: mailman
+  stream: '2.1'
+  version: '8030020200601095048'
+  context: c307c522
+  arch: x86_64
+  license:
+    content:
+    - GPLv2+
+    module:
+    - MIT
+  summary: Electronic mail discussion and e-newsletter lists managing software
+  description: An initial version of the mailman mailing list management software
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+      python27:
+      - 2.7
+    requires:
+      platform:
+      - el8
+      python27:
+      - 2.7
+  api:
+    rpms:
+    - mailman
+  components:
+    rpms:
+      mailman:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: Module API.
+        ref: stream-2.1-rhel-8.3.0
+  references:
+    documentation: https://launchpad.net/mailman
+    tracker: https://bugs.launchpad.net/mailman
+  profiles:
+    common:
+      rpms:
+      - mailman
+  filter:
+    rpms:
+    - python3-dns
+  artifacts:
+    rpms:
+    - mailman-3:2.1.29-10.module+el8.3.0+6860+8e47d84b.x86_64
+    - mailman-debugsource-3:2.1.29-10.module+el8.3.0+6860+8e47d84b.x86_64
+    - mailman-debuginfo-3:2.1.29-10.module+el8.3.0+6860+8e47d84b.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
   name: libselinux-python
   stream: '2.8'
   version: '8020020190916085518'
