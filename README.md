@@ -6,4 +6,5 @@
 
 ## Files in repo
 
-Checkout proper branch. There should be single file `modules.md`.
+Checkout proper branch. There should two single file `modules.md` that have
+builded modules data from beast, and `defaults.md` that contains default modules.
