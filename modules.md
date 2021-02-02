@@ -2,6 +2,82 @@
 document: modulemd
 version: 2
 data:
+  name: nginx
+  stream: '1.14'
+  version: '8000020190830002848'
+  context: f8e95b4e
+  arch: x86_64
+  license:
+    content:
+    - BSD
+    module:
+    - MIT
+  summary: nginx webserver
+  description: nginx 1.14 webserver module
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      nginx:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Module API.
+        ref: stream-1.14-rhel-8.0.0
+  api:
+    rpms:
+    - nginx
+    - nginx-all-modules
+    - nginx-filesystem
+    - nginx-mod-http-image-filter
+    - nginx-mod-http-perl
+    - nginx-mod-http-xslt-filter
+    - nginx-mod-mail
+    - nginx-mod-stream
+  references:
+    documentation: http://nginx.org/en/docs/
+    tracker: https://trac.nginx.org/nginx/
+  profiles:
+    common:
+      rpms:
+      - nginx
+      - nginx-all-modules
+      - nginx-filesystem
+      - nginx-mod-http-image-filter
+      - nginx-mod-http-perl
+      - nginx-mod-http-xslt-filter
+      - nginx-mod-mail
+      - nginx-mod-stream
+  artifacts:
+    rpms:
+    - nginx-1:1.14.1-9.module+el8.0.0+4108+af250afe.x86_64
+    - nginx-all-modules-1:1.14.1-9.module+el8.0.0+4108+af250afe.noarch
+    - nginx-filesystem-1:1.14.1-9.module+el8.0.0+4108+af250afe.noarch
+    - nginx-mod-http-image-filter-1:1.14.1-9.module+el8.0.0+4108+af250afe.x86_64
+    - nginx-mod-http-perl-1:1.14.1-9.module+el8.0.0+4108+af250afe.x86_64
+    - nginx-mod-http-xslt-filter-1:1.14.1-9.module+el8.0.0+4108+af250afe.x86_64
+    - nginx-mod-mail-1:1.14.1-9.module+el8.0.0+4108+af250afe.x86_64
+    - nginx-mod-stream-1:1.14.1-9.module+el8.0.0+4108+af250afe.x86_64
+    - nginx-debugsource-1:1.14.1-9.module+el8.0.0+4108+af250afe.x86_64
+    - nginx-debuginfo-1:1.14.1-9.module+el8.0.0+4108+af250afe.x86_64
+    - nginx-mod-http-image-filter-debuginfo-1:1.14.1-9.module+el8.0.0+4108+af250afe.x86_64
+    - nginx-mod-http-perl-debuginfo-1:1.14.1-9.module+el8.0.0+4108+af250afe.x86_64
+    - nginx-mod-http-xslt-filter-debuginfo-1:1.14.1-9.module+el8.0.0+4108+af250afe.x86_64
+    - nginx-mod-mail-debuginfo-1:1.14.1-9.module+el8.0.0+4108+af250afe.x86_64
+    - nginx-mod-stream-debuginfo-1:1.14.1-9.module+el8.0.0+4108+af250afe.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
   name: mod_auth_openidc
   stream: '2.3'
   version: '8020020200604180605'
