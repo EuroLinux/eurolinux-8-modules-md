@@ -2,6 +2,67 @@
 document: modulemd
 version: 2
 data:
+  name: mod_auth_openidc
+  stream: '2.3'
+  version: '8020020200604180605'
+  context: 4cda2c84
+  arch: x86_64
+  license:
+    content:
+    - ASL 2.0
+    - MIT
+    module:
+    - MIT
+  summary: Apache module suporting OpenID Connect authentication
+  description: This module enables an Apache 2.x web server to operate as an OpenID
+    Connect Relying Party and/or OAuth 2.0 Resource Server.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      cjose:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: Provides JOSE support
+        ref: stream-mod_auth_open_idc-2.3-rhel-8.2.0
+      mod_auth_openidc:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 2
+        rationale: Provides the core functionality.
+        ref: stream-mod_auth_open_idc-2.3-rhel-8.2.0
+  references:
+    community: https://github.com/zmartzone/mod_auth_openidc
+    documentation: https://github.com/zmartzone/mod_auth_openidc/wiki
+    tracker: https://github.com/zmartzone/mod_auth_openidc/issues
+  artifacts:
+    rpms:
+    - cjose-0:0.6.1-2.module+el8.2.0+6919+ac02cfd2.3.x86_64
+    - cjose-devel-0:0.6.1-2.module+el8.2.0+6919+ac02cfd2.3.x86_64
+    - cjose-debugsource-0:0.6.1-2.module+el8.2.0+6919+ac02cfd2.3.x86_64
+    - cjose-debuginfo-0:0.6.1-2.module+el8.2.0+6919+ac02cfd2.3.x86_64
+    - mod_auth_openidc-0:2.3.7-4.module+el8.2.0+6919+ac02cfd2.3.3.x86_64
+    - mod_auth_openidc-debugsource-0:2.3.7-4.module+el8.2.0+6919+ac02cfd2.3.3.x86_64
+    - mod_auth_openidc-debuginfo-0:2.3.7-4.module+el8.2.0+6919+ac02cfd2.3.3.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
   name: mercurial
   stream: '4.8'
   version: '820190108205035'
