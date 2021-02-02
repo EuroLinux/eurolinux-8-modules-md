@@ -2,6 +2,198 @@
 document: modulemd
 version: 2
 data:
+  name: php
+  stream: '7.2'
+  version: '8020020191108065827'
+  context: 2c7ca891
+  arch: x86_64
+  license:
+    content:
+    - BSD
+    - BSD and LGPLv3+
+    - PHP
+    - PHP and BSD
+    - PHP and LGPLv2 and OpenLDAP
+    - PHP and LGPLv2+
+    - PHP and Zend and BSD and MIT and ASL 1.0
+    module:
+    - GPLv2+
+  summary: PHP scripting language
+  description: php 7.2 module
+  dependencies:
+  - buildrequires:
+      httpd:
+      - 2.4
+      nginx:
+      - 1.14
+      platform:
+      - el8.2.0
+    requires:
+      httpd:
+      - 2.4
+      nginx: []
+      platform:
+      - el8
+  components:
+    rpms:
+      libzip:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: ZIP library
+        ref: stream-php-7.2-rhel-8.2.0
+      php:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: Module API.
+        ref: stream-7.2-rhel-8.2.0
+      php-pear:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 2
+        rationale: Extension management
+        ref: stream-php-7.2-rhel-8.2.0
+      php-pecl-apcu:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 3
+        rationale: APCu extension
+        ref: stream-php-7.2-rhel-8.2.0
+      php-pecl-zip:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 3
+        rationale: ZIP extension
+        ref: stream-php-7.2-rhel-8.2.0
+  api:
+    rpms:
+    - php-fpm
+  references:
+    documentation: http://php.net/
+    tracker: https://bugs.php.net/
+  profiles:
+    common:
+      rpms:
+      - php-cli
+      - php-common
+      - php-fpm
+      - php-json
+      - php-mbstring
+      - php-xml
+    devel:
+      rpms:
+      - libzip
+      - php-cli
+      - php-common
+      - php-devel
+      - php-fpm
+      - php-json
+      - php-mbstring
+      - php-pear
+      - php-pecl-zip
+      - php-process
+      - php-xml
+    minimal:
+      rpms:
+      - php-cli
+      - php-common
+  artifacts:
+    rpms:
+    - php-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-cli-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-dbg-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-fpm-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-common-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-devel-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-opcache-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-ldap-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-pdo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-mysqlnd-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-pgsql-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-process-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-odbc-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-soap-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-snmp-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-xml-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-xmlrpc-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-mbstring-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-gd-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-bcmath-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-gmp-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-dba-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-embedded-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-recode-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-intl-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-enchant-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-json-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-debugsource-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-cli-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-dbg-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-fpm-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-common-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-opcache-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-ldap-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-pdo-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-mysqlnd-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-pgsql-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-process-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-odbc-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-soap-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-snmp-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-xml-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-xmlrpc-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-mbstring-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-gd-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-bcmath-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-gmp-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-dba-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-embedded-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-recode-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-intl-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-enchant-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-json-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.x86_64
+    - libzip-0:1.5.1-2.module+el8.2.0+4601+7c76a223.x86_64
+    - libzip-devel-0:1.5.1-2.module+el8.2.0+4601+7c76a223.x86_64
+    - libzip-tools-0:1.5.1-2.module+el8.2.0+4601+7c76a223.x86_64
+    - libzip-debugsource-0:1.5.1-2.module+el8.2.0+4601+7c76a223.x86_64
+    - libzip-debuginfo-0:1.5.1-2.module+el8.2.0+4601+7c76a223.x86_64
+    - libzip-tools-debuginfo-0:1.5.1-2.module+el8.2.0+4601+7c76a223.x86_64
+    - php-pear-1:1.10.5-9.module+el8.2.0+4601+7c76a223.noarch
+    - php-pecl-zip-0:1.15.3-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-pecl-zip-debugsource-0:1.15.3-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-pecl-zip-debuginfo-0:1.15.3-1.module+el8.2.0+4601+7c76a223.x86_64
+    - php-pecl-apcu-0:5.1.12-2.module+el8.2.0+4601+7c76a223.x86_64
+    - php-pecl-apcu-devel-0:5.1.12-2.module+el8.2.0+4601+7c76a223.x86_64
+    - apcu-panel-0:5.1.12-2.module+el8.2.0+4601+7c76a223.noarch
+    - php-pecl-apcu-debugsource-0:5.1.12-2.module+el8.2.0+4601+7c76a223.x86_64
+    - php-pecl-apcu-debuginfo-0:5.1.12-2.module+el8.2.0+4601+7c76a223.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
   name: mysql
   stream: '8.0'
   version: '8020020200828111438'
