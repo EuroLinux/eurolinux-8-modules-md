@@ -2,6 +2,179 @@
 document: modulemd
 version: 2
 data:
+  name: parfait
+  stream: '0.5'
+  version: '820181213142511'
+  context: d2b614b2
+  arch: x86_64
+  license:
+    content:
+    - ASL 2.0
+    - BSD
+    module:
+    - ASL 2.0
+  summary: Parfait Module
+  description: Parfait is a Java performance monitoring library that exposes and collects
+    metrics through a variety of outputs.  It provides APIs for extracting performance
+    metrics from the JVM and other sources. It interfaces to Performance Co-Pilot
+    (PCP) using the Memory Mapped Value (MMV) machinery for extremely lightweight
+    instrumentation.
+  dependencies:
+  - buildrequires:
+      javapackages-tools:
+      - 201801
+      pki-deps:
+      - 10.6
+      platform:
+      - el8
+    requires:
+      javapackages-runtime:
+      - 201801
+      pki-deps:
+      - 10.6
+      platform:
+      - el8
+  components:
+    rpms:
+      log4j12:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 80
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/log4j12
+        rationale: Needed as a runtime dep for parfait.
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/log4j12
+      parfait:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 70
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/parfait
+        rationale: Main Parfait Package
+        ref: stream-0.5
+        repository: git://pkgs.devel.redhat.com/rpms/parfait
+      si-units:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 50
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/si-units
+        rationale: A library of SI quantities and unit types (JSR 363).
+        ref: stream-0.5
+        repository: git://pkgs.devel.redhat.com/rpms/si-units
+      unit-api:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/unit-api
+        rationale: "The Unit of Measurement library provides a set of Java language\
+          \ programming interfaces for handling units and quantities. The interfaces\
+          \ provide a layer which separates client code, which would call the API,\
+          \ from library code, which implements the API.\nThe specification contains\
+          \ Interfaces and abstract classes with methods for unit operations:\n\n\
+          \  * Checking of unit compatibility\n  * Expression of a quantity in various\
+          \ units\n  * Arithmetic operations on units"
+        ref: stream-0.5
+        repository: git://pkgs.devel.redhat.com/rpms/unit-api
+      uom-lib:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 30
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/uom-lib
+        rationale: Units of Measurement Libraries - extending and complementing JSR
+          363.
+        ref: stream-0.5
+        repository: git://pkgs.devel.redhat.com/rpms/uom-lib
+      uom-parent:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 20
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/uom-parent
+        rationale: Main parent POM for all Units of Measurement Maven projects.
+        ref: stream-0.5
+        repository: git://pkgs.devel.redhat.com/rpms/uom-parent
+      uom-se:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 40
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/uom-se
+        rationale: This package contains documentation for the Units Standard (JSR
+          363) Java SE 8 Implementation.
+        ref: stream-0.5
+        repository: git://pkgs.devel.redhat.com/rpms/uom-se
+      uom-systems:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 60
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/uom-systems
+        rationale: Units of Measurement Systems - modules for JSR 363.
+        ref: stream-0.5
+        repository: git://pkgs.devel.redhat.com/rpms/uom-systems
+  api:
+    rpms:
+    - parfait
+    - parfait-examples
+    - pcp-parfait-agent
+  profiles:
+    common:
+      rpms:
+      - parfait
+      - parfait-examples
+      - pcp-parfait-agent
+  artifacts:
+    rpms:
+    - unit-api-0:1.0-5.module+el8+2463+615f6896.noarch
+    - unit-api-javadoc-0:1.0-5.module+el8+2463+615f6896.noarch
+    - uom-parent-0:1.0.3-3.module+el8+2463+615f6896.noarch
+    - uom-lib-0:1.0.1-6.module+el8+2463+615f6896.noarch
+    - uom-lib-javadoc-0:1.0.1-6.module+el8+2463+615f6896.noarch
+    - uom-se-0:1.0.4-3.module+el8+2463+615f6896.noarch
+    - uom-se-javadoc-0:1.0.4-3.module+el8+2463+615f6896.noarch
+    - si-units-0:0.6.5-2.module+el8+2463+615f6896.noarch
+    - si-units-javadoc-0:0.6.5-2.module+el8+2463+615f6896.noarch
+    - uom-systems-0:0.7-1.module+el8+2463+615f6896.noarch
+    - uom-systems-javadoc-0:0.7-1.module+el8+2463+615f6896.noarch
+    - parfait-0:0.5.4-2.module+el8+2463+615f6896.noarch
+    - parfait-javadoc-0:0.5.4-2.module+el8+2463+615f6896.noarch
+    - pcp-parfait-agent-0:0.5.4-2.module+el8+2463+615f6896.noarch
+    - parfait-examples-0:0.5.4-2.module+el8+2463+615f6896.noarch
+    - log4j12-0:1.2.17-22.module+el8+2463+615f6896.noarch
+    - log4j12-javadoc-0:1.2.17-22.module+el8+2463+615f6896.noarch
+...
+---
+document: modulemd
+version: 2
+data:
   name: nodejs
   stream: '10'
   version: '8020020200617141353'
