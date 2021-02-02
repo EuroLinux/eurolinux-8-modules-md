@@ -2,6 +2,72 @@
 document: modulemd
 version: 2
 data:
+  name: squid
+  stream: 4
+  version: '8030020200828070549'
+  context: 30b713e6
+  arch: x86_64
+  license:
+    content:
+    - BSD
+    - GPLv2+ and (LGPLv2+ and MIT and BSD and Public Domain)
+    module:
+    - MIT
+  summary: Squid - Optimising Web Delivery
+  description: an initial version of the squid caching proxy module
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      libecap:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: library needed by Squid
+        ref: stream-1.0-rhel-8.3.0
+      squid:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 2
+        rationale: squid caching proxy
+        ref: stream-4-rhel-8.3.0
+  api:
+    rpms:
+    - squid
+  references:
+    documentation: http://www.squid-cache.org/Doc/
+    tracker: https://bugs.squid-cache.org/index.cgi
+  profiles:
+    common:
+      rpms:
+      - squid
+  artifacts:
+    rpms:
+    - libecap-0:1.0.1-2.module+el8.3.0+7851+7808b5f9.x86_64
+    - libecap-debugsource-0:1.0.1-2.module+el8.3.0+7851+7808b5f9.x86_64
+    - libecap-devel-0:1.0.1-2.module+el8.3.0+7851+7808b5f9.x86_64
+    - libecap-debuginfo-0:1.0.1-2.module+el8.3.0+7851+7808b5f9.x86_64
+    - squid-7:4.11-3.module+el8.3.0+7851+7808b5f9.x86_64
+    - squid-debuginfo-7:4.11-3.module+el8.3.0+7851+7808b5f9.x86_64
+    - squid-debugsource-7:4.11-3.module+el8.3.0+7851+7808b5f9.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
   name: scala
   stream: '2.10'
   version: '820181213143541'
