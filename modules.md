@@ -2,6 +2,109 @@
 document: modulemd
 version: 2
 data:
+  name: nodejs
+  stream: '14'
+  version: '8030020201102105049'
+  context: 229f0a1c
+  arch: x86_64
+  license:
+    content:
+    - MIT
+    - MIT and ASL 2.0 and ISC and BSD
+    module:
+    - MIT
+  summary: Javascript runtime
+  description: Node.js is a platform built on Chrome's JavaScript runtime for easily
+    building fast, scalable network applications. Node.js uses an event-driven, non-blocking
+    I/O model that makes it lightweight and efficient, perfect for data-intensive
+    real-time applications that run across distributed devices.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      nodejs:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 100
+        rationale: Javascript runtime and npm package manager.
+        ref: stream-14-rhel-8.3.0
+      nodejs-nodemon:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 200
+        rationale: Simple monitor script for use during development of a node.js app
+        ref: stream-14-rhel-8.3.0
+      nodejs-packaging:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        rationale: RPM Macros and Utilities for Node.js Packaging
+        ref: stream-14-rhel-8.3.0
+  api:
+    rpms:
+    - nodejs
+    - nodejs-devel
+    - npm
+  buildopts:
+    rpms:
+      macros: '%_with_bootstrap 1
+
+        '
+  references:
+    community: http://nodejs.org
+    documentation: http://nodejs.org/en/docs
+    tracker: https://github.com/nodejs/node/issues
+  profiles:
+    common:
+      rpms:
+      - nodejs
+      - npm
+    development:
+      rpms:
+      - nodejs
+      - nodejs-devel
+      - npm
+    minimal:
+      rpms:
+      - nodejs
+    s2i:
+      rpms:
+      - nodejs
+      - nodejs-nodemon
+      - npm
+  artifacts:
+    rpms:
+    - nodejs-packaging-0:23-3.module+el8.3.0+8610+0cf59502.noarch
+    - nodejs-1:14.15.0-1.module+el8.3.0+8610+0cf59502.x86_64
+    - nodejs-devel-1:14.15.0-1.module+el8.3.0+8610+0cf59502.x86_64
+    - nodejs-full-i18n-1:14.15.0-1.module+el8.3.0+8610+0cf59502.x86_64
+    - npm-1:6.14.8-1.14.15.0.1.module+el8.3.0+8610+0cf59502.x86_64
+    - nodejs-docs-1:14.15.0-1.module+el8.3.0+8610+0cf59502.noarch
+    - nodejs-debugsource-1:14.15.0-1.module+el8.3.0+8610+0cf59502.x86_64
+    - nodejs-debuginfo-1:14.15.0-1.module+el8.3.0+8610+0cf59502.x86_64
+    - nodejs-nodemon-0:2.0.3-1.module+el8.3.0+8610+0cf59502.noarch
+...
+---
+document: modulemd
+version: 2
+data:
   name: php
   stream: '7.2'
   version: '8020020191108065827'
