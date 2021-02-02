@@ -2,6 +2,65 @@
 document: modulemd
 version: 2
 data:
+  name: redis
+  stream: '5'
+  version: '8000020190711140130'
+  context: f8e95b4e
+  arch: x86_64
+  license:
+    content:
+    - BSD and MIT
+    - CC-BY-SA
+    module:
+    - GPLv2+
+  summary: Redis persistent key-value database
+  description: redis 5 module
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      redis:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: Module API.
+        ref: stream-5.0-rhel-8.0.0
+  api:
+    rpms:
+    - redis
+  buildopts:
+    rpms:
+      macros: '%_without_redistrib 1
+
+        '
+  references:
+    documentation: https://redis.io/documentation
+    tracker: https://github.com/antirez/redis/issues
+  profiles:
+    common:
+      rpms:
+      - redis
+  artifacts:
+    rpms:
+    - redis-0:5.0.3-2.module+el8.0.0.z+3657+acb471dc.x86_64
+    - redis-devel-0:5.0.3-2.module+el8.0.0.z+3657+acb471dc.x86_64
+    - redis-doc-0:5.0.3-2.module+el8.0.0.z+3657+acb471dc.noarch
+    - redis-debugsource-0:5.0.3-2.module+el8.0.0.z+3657+acb471dc.x86_64
+    - redis-debuginfo-0:5.0.3-2.module+el8.0.0.z+3657+acb471dc.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
   name: parfait
   stream: '0.5'
   version: '820181213142511'
