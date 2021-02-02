@@ -2,6 +2,66 @@
 document: modulemd
 version: 2
 data:
+  name: mercurial
+  stream: '4.8'
+  version: '820190108205035'
+  context: 77fc8825
+  arch: x86_64
+  license:
+    content:
+    - GPLv2+
+    module:
+    - MIT
+  summary: Mercurial -- a distributed SCM
+  description: Mercurial is a fast, lightweight source control management system designed
+    for efficient handling of very large distributed projects.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+      python27:
+      - 2.7
+    requires:
+      platform:
+      - el8
+      python27:
+      - 2.7
+  api:
+    rpms:
+    - mercurial
+    - mercurial-hgk
+  components:
+    rpms:
+      mercurial:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/mercurial
+        rationale: Mercurial -- a distributed SCM
+        ref: stream-mercurial-4.8
+        repository: git://pkgs.devel.redhat.com/rpms/mercurial
+  references:
+    community: https://www.mercurial-scm.org/
+    documentation: https://www.mercurial-scm.org/guide
+    tracker: https://www.mercurial-scm.org/wiki/BugTracker
+  profiles:
+    common:
+      rpms:
+      - mercurial
+  artifacts:
+    rpms:
+    - mercurial-hgk-0:4.8.2-1.module+el8+2647+365c7305.x86_64
+    - mercurial-0:4.8.2-1.module+el8+2647+365c7305.x86_64
+    - mercurial-debugsource-0:4.8.2-1.module+el8+2647+365c7305.x86_64
+    - mercurial-debuginfo-0:4.8.2-1.module+el8+2647+365c7305.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
   name: maven
   stream: '3.5'
   version: '820181213140354'
