@@ -2,6 +2,222 @@
 document: modulemd
 version: 2
 data:
+  name: scala
+  stream: '2.10'
+  version: '820181213143541'
+  context: 2b79a98f
+  arch: x86_64
+  license:
+    content:
+    - ASL 2.0
+    - ASL 2.0 and EPL and BSD
+    - BSD
+    - BSD and CC0 and Public Domain
+    module:
+    - MIT
+  summary: A hybrid functional/object-oriented language for the JVM
+  description: Scala is a general purpose programming language designed to express
+    common programming patterns in a concise, elegant, and type-safe way. It smoothly
+    integrates features of object-oriented and functional languages. It is also fully
+    interoperable with Java.
+  dependencies:
+  - buildrequires:
+      javapackages-tools:
+      - 201801
+      platform:
+      - el8
+      scala:
+      - 2.1
+    requires:
+      platform: []
+  components:
+    rpms:
+      hawtjni:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/hawtjni
+        rationale: 'Runtime dependency of jansi, jansi-native.
+
+          '
+        ref: stream-scala-2.10
+        repository: git://pkgs.devel.redhat.com/rpms/hawtjni
+      jansi:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 30
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jansi
+        rationale: 'Runtime dependency of jline, scala.
+
+          '
+        ref: stream-scala-2.10
+        repository: git://pkgs.devel.redhat.com/rpms/jansi
+      jansi-native:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 20
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jansi-native
+        rationale: 'Runtime dependency of jansi.
+
+          '
+        ref: stream-scala-2.10
+        repository: git://pkgs.devel.redhat.com/rpms/jansi-native
+      jline:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 40
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jline
+        rationale: 'Runtime dependency of scala.
+
+          '
+        ref: stream-scala-2.10
+        repository: git://pkgs.devel.redhat.com/rpms/jline
+      scala:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 50
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/scala
+        rationale: 'Module API.
+
+          '
+        ref: stream-scala-2.10
+        repository: git://pkgs.devel.redhat.com/rpms/scala
+  api:
+    rpms:
+    - scala
+    - scala-apidoc
+    - scala-swing
+  buildopts:
+    rpms:
+      macros: '%_with_xmvn_javadoc 1
+
+        %_without_asciidoc 1
+
+        %_without_avalon 1
+
+        %_without_bouncycastle 1
+
+        %_without_cython 1
+
+        %_without_dafsa 1
+
+        %_without_desktop 1
+
+        %_without_doxygen 1
+
+        %_without_dtd 1
+
+        %_without_eclipse 1
+
+        %_without_ehcache 1
+
+        %_without_emacs 1
+
+        %_without_equinox 1
+
+        %_without_fop 1
+
+        %_without_ftp 1
+
+        %_without_gradle 1
+
+        %_without_groovy 1
+
+        %_without_hadoop 1
+
+        %_without_hsqldb 1
+
+        %_without_itext 1
+
+        %_without_jackson 1
+
+        %_without_jmh 1
+
+        %_without_jna 1
+
+        %_without_jpa 1
+
+        %_without_junit5 1
+
+        %_without_logback 1
+
+        %_without_markdown 1
+
+        %_without_memcached 1
+
+        %_without_memoryfilesystem 1
+
+        %_without_obr 1
+
+        %_without_python 1
+
+        %_without_reporting 1
+
+        %_without_scm 1
+
+        %_without_snappy 1
+
+        %_without_spring 1
+
+        %_without_ssh 1
+
+        %_without_testlib 1
+
+        '
+  profiles:
+    common:
+      rpms:
+      - scala
+  filter:
+    rpms:
+    - ant-scala
+    - hawtjni
+    - hawtjni-javadoc
+    - jansi-javadoc
+    - jansi-native-javadoc
+    - jline-javadoc
+    - maven-hawtjni-plugin
+  artifacts:
+    rpms:
+    - hawtjni-0:1.16-1.module+el8+2477+516cbbff.noarch
+    - hawtjni-javadoc-0:1.16-1.module+el8+2477+516cbbff.noarch
+    - hawtjni-runtime-0:1.16-1.module+el8+2477+516cbbff.noarch
+    - maven-hawtjni-plugin-0:1.16-1.module+el8+2477+516cbbff.noarch
+    - jansi-native-0:1.7-5.module+el8+2477+516cbbff.x86_64
+    - jansi-native-javadoc-0:1.7-5.module+el8+2477+516cbbff.noarch
+    - jansi-0:1.17.1-1.module+el8+2477+516cbbff.noarch
+    - jansi-javadoc-0:1.17.1-1.module+el8+2477+516cbbff.noarch
+    - jline-0:2.14.6-2.module+el8+2477+516cbbff.noarch
+    - jline-javadoc-0:2.14.6-2.module+el8+2477+516cbbff.noarch
+    - scala-0:2.10.6-14.module+el8+2477+516cbbff.noarch
+    - scala-apidoc-0:2.10.6-14.module+el8+2477+516cbbff.noarch
+    - scala-swing-0:2.10.6-14.module+el8+2477+516cbbff.noarch
+    - ant-scala-0:2.10.6-14.module+el8+2477+516cbbff.noarch
+...
+---
+document: modulemd
+version: 2
+data:
   name: php
   stream: 7.3
   version: '8020020200715124551'
