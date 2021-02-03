@@ -2,6 +2,78 @@
 document: modulemd
 version: 2
 data:
+  name: varnish
+  stream: 6
+  version: '8030020200530080205'
+  context: 30b713e6
+  arch: x86_64
+  license:
+    content:
+    - BSD
+    module:
+    - MIT
+  summary: Varnish HTTP cache
+  description: Varnish Cache web application accelerator
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      varnish:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Module API.
+        ref: stream-6-rhel-8.3.0
+      varnish-modules:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: Extension modules.
+        ref: stream-6-rhel-8.3.0
+  api:
+    rpms:
+    - varnish
+    - varnish-modules
+  buildopts:
+    rpms:
+      macros: '%_without_python2 1
+
+        %_with_python3 1
+
+        '
+  references:
+    documentation: http://varnish-cache.org/docs/
+    tracker: https://github.com/varnishcache/varnish-cache/issues
+  profiles:
+    common:
+      rpms:
+      - varnish
+      - varnish-modules
+  artifacts:
+    rpms:
+    - varnish-0:6.0.6-2.module+el8.3.0+6843+b3b42fcc.x86_64
+    - varnish-devel-0:6.0.6-2.module+el8.3.0+6843+b3b42fcc.x86_64
+    - varnish-docs-0:6.0.6-2.module+el8.3.0+6843+b3b42fcc.x86_64
+    - varnish-modules-0:0.15.0-5.module+el8.3.0+6843+b3b42fcc.x86_64
+    - varnish-modules-debugsource-0:0.15.0-5.module+el8.3.0+6843+b3b42fcc.x86_64
+    - varnish-modules-debuginfo-0:0.15.0-5.module+el8.3.0+6843+b3b42fcc.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
   name: pki-deps
   stream: 10.6
   version: '8030020200527165326'
