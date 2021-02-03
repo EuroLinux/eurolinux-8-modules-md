@@ -2,6 +2,104 @@
 document: modulemd
 version: 2
 data:
+  name: pki-core
+  stream: 10.6
+  version: '8030020200911215836'
+  context: 5ff1562f
+  arch: x86_64
+  license:
+    content:
+    - GPLv2 and LGPLv2
+    - LGPLv2+
+    - MPLv1.1 or GPLv2+ or LGPLv2+
+    module:
+    - MIT
+  summary: PKI Core module for PKI 10.6 or later
+  description: A module for PKI Core packages for PKI version 10.6 or later.
+  dependencies:
+  - buildrequires:
+      golang-ecosystem:
+      - 1.0
+      pki-deps:
+      - 10.6
+      platform:
+      - el8
+    requires:
+      pki-deps:
+      - 10.6
+      platform:
+      - el8
+  components:
+    rpms:
+      jss:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: JSS packages
+        ref: stream-pki-10.6-rhel-8.3.0
+      ldapjdk:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: LDAP JDK packages
+        ref: stream-pki-10.6-rhel-8.3.0
+      pki-core:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 2
+        rationale: PKI Core packages
+        ref: stream-pki-10.6-rhel-8.3.0
+      tomcatjss:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: TomcatJSS packages
+        ref: stream-pki-10.6-rhel-8.3.0
+  references:
+    community: http://www.dogtagpki.org
+    documentation: http://www.dogtagpki.org
+    tracker: https://pagure.io/dogtagpki/issues
+  artifacts:
+    rpms:
+    - jss-0:4.7.3-1.module+el8.3.0+8058+d5cd4219.x86_64
+    - jss-javadoc-0:4.7.3-1.module+el8.3.0+8058+d5cd4219.x86_64
+    - jss-debugsource-0:4.7.3-1.module+el8.3.0+8058+d5cd4219.x86_64
+    - jss-debuginfo-0:4.7.3-1.module+el8.3.0+8058+d5cd4219.x86_64
+    - tomcatjss-0:7.5.0-1.module+el8.3.0+8058+d5cd4219.noarch
+    - ldapjdk-0:4.22.0-1.module+el8.3.0+8058+d5cd4219.noarch
+    - ldapjdk-javadoc-0:4.22.0-1.module+el8.3.0+8058+d5cd4219.noarch
+    - pki-symkey-0:10.9.4-1.module+el8.3.0+8058+d5cd4219.x86_64
+    - pki-base-0:10.9.4-1.module+el8.3.0+8058+d5cd4219.noarch
+    - python3-pki-0:10.9.4-1.module+el8.3.0+8058+d5cd4219.noarch
+    - pki-base-java-0:10.9.4-1.module+el8.3.0+8058+d5cd4219.noarch
+    - pki-tools-0:10.9.4-1.module+el8.3.0+8058+d5cd4219.x86_64
+    - pki-server-0:10.9.4-1.module+el8.3.0+8058+d5cd4219.noarch
+    - pki-ca-0:10.9.4-1.module+el8.3.0+8058+d5cd4219.noarch
+    - pki-kra-0:10.9.4-1.module+el8.3.0+8058+d5cd4219.noarch
+    - pki-core-debugsource-0:10.9.4-1.module+el8.3.0+8058+d5cd4219.x86_64
+    - pki-core-debuginfo-0:10.9.4-1.module+el8.3.0+8058+d5cd4219.x86_64
+    - pki-symkey-debuginfo-0:10.9.4-1.module+el8.3.0+8058+d5cd4219.x86_64
+    - pki-tools-debuginfo-0:10.9.4-1.module+el8.3.0+8058+d5cd4219.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
   name: swig
   stream: 3.0
   version: '8030020200407110056'
