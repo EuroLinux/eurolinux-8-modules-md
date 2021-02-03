@@ -1,0 +1,45 @@
+document: modulemd
+version: 2
+data:
+  name: golang-ecosystem
+  stream: 1.0
+  version: abcabcabcabc
+  context: fuckthem
+  arch: x86_64
+  license:
+    module:
+    - MIT
+  summary: The ecosystem of packages for the Go programming language
+  description: This module contains golang based tools used as dependencies for other
+    packages, for instance, go-md2man, a manpage converter written in Go.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      golang-github-cpuguy83-go-md2man:
+        rationale: Primary component of this module.
+        ref: 3199389259ddb4e6b1237e7cadefeeb72c66d4a9
+  api:
+    rpms:
+    - golang-github-cpuguy83-go-md2man
+  buildopts:
+    rpms:
+      macros: '%_with_ignore_tests 1
+
+        '
+  references:
+    community: https://github.com/golang-github-cpuguy83-go-md2man
+    documentation: https://github.com/golang-github-cpuguy83-go-md2man
+    tracker: https://github.com/golang-github-cpuguy83-go-md2man
+  profiles:
+    default:
+      rpms:
+      - golang-github-cpuguy83-go-md2man
+  artifacts:
+    rpms:
+    - golang-github-cpuguy83-go-md2man-0:1.0.7-11.module+el8.3.0+6969+d5cdaaaa.x86_64
