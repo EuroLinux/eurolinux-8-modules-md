@@ -2,6 +2,98 @@
 document: modulemd
 version: 2
 data:
+  name: rust-toolset
+  stream: rhel8
+  version: '8030020200807201053'
+  context: d48633fe
+  arch: x86_64
+  license:
+    content:
+    - (ASL 2.0 or MIT) and (BSD and MIT)
+    - ASL 2.0 or MIT
+    module:
+    - MIT
+  summary: Rust
+  description: Rust Toolset
+  dependencies:
+  - buildrequires:
+      llvm-toolset:
+      - rhel8
+      platform:
+      - el8
+      rust-toolset:
+      - rhel8
+    requires:
+      llvm-toolset:
+      - rhel8
+      platform:
+      - el8
+  components:
+    rpms:
+      rust:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Rust compiler and tools
+        ref: stream-rhel-8-rhel-8.3.0
+      rust-toolset:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Meta package for rust-toolset.
+        ref: stream-rhel-8-rhel-8.3.0
+  api:
+    rpms:
+    - cargo
+    - cargo-doc
+    - clippy
+    - rls
+    - rust
+    - rust-analysis
+    - rust-doc
+    - rust-gdb
+    - rust-lldb
+    - rust-src
+    - rust-std-static
+    - rust-toolset
+    - rustfmt
+  profiles:
+    common:
+      rpms:
+      - rust-toolset
+  artifacts:
+    rpms:
+    - rust-toolset-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.x86_64
+    - rust-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.x86_64
+    - rust-std-static-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.x86_64
+    - rust-debugger-common-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.noarch
+    - rust-gdb-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.noarch
+    - rust-lldb-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.noarch
+    - rust-doc-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.x86_64
+    - cargo-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.x86_64
+    - cargo-doc-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.noarch
+    - rustfmt-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.x86_64
+    - rls-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.x86_64
+    - clippy-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.x86_64
+    - rust-src-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.noarch
+    - rust-analysis-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.x86_64
+    - rust-debugsource-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.x86_64
+    - rust-debuginfo-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.x86_64
+    - cargo-debuginfo-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.x86_64
+    - rustfmt-debuginfo-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.x86_64
+    - rls-debuginfo-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.x86_64
+    - clippy-debuginfo-0:1.45.2-1.module+el8.3.0+7604+5c4fe027.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
   name: subversion
   stream: '1.10'
   version: '8030020200519083055'
