@@ -2,6 +2,232 @@
 document: modulemd
 version: 2
 data:
+  name: rhn-tools
+  stream: 1.0
+  version: '8010020190425142954'
+  context: f69d1239
+  arch: x86_64
+  license:
+    content:
+    - GPLv2
+    - GPLv2+
+    module:
+    - MIT
+  summary: Red Hat Satellite 5 tools for RHEL
+  description: Red Hat Satellite 5 tools packages providing additional functionality
+    like e.g. provisioning or configuration management.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+      satellite-5-client:
+      - 1.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      cobbler:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        rationale: Cobbler tool that performs cobbler orders on remote machines.
+        ref: rhel-8.0
+      osad:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        rationale: Daemon for enabling push notifications for Red Hat Satellite 5
+          clients.
+        ref: rhel-8.0
+      rhn-custom-info:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        rationale: Allows for the setting and listing of custom key/value pairs for
+          Red Hat Satellite 5 clients.
+        ref: rhel-8.0
+      rhn-virtualization:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        rationale: Various Red Hat Satellite 5 actions for manipulation with virtual
+          machine guest images.
+        ref: rhel-8.0
+      rhncfg:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        rationale: Enables configuration management extension for Red Hat Satllite
+          5 clients.
+        ref: rhel-8.0
+      rhnpush:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        rationale: Package uploader for Red Hat Satellite 5.
+        ref: rhel-8.0
+      spacewalk-abrt:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        rationale: rhn-check plug-in for collecting information about crashes handled
+          by ABRT.
+        ref: rhel-8.0
+      spacewalk-backend:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 5
+        rationale: Support libraries for RHN Toools.
+        ref: rhel-8.0
+      spacewalk-client-cert:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        rationale: Client side functionality allowing manipulation with Red Hat Satellite
+          5 client certificates (/etc/sysconfig/rhn/systemid).
+        ref: rhel-8.0
+      spacewalk-koan:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 20
+        rationale: Support package for koan interaction.
+        ref: rhel-8.0
+      spacewalk-oscap:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        rationale: OpenSCAP plug-in for rhn-check.
+        ref: rhel-8.0
+      spacewalk-remote-utils:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        rationale: Utilities to interact with a Red Hat Satellite 5 remotely.
+        ref: rhel-8.0
+      spacewalk-usix:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 2
+        rationale: Support libraries for handilng different Python versions.
+        ref: rhel-8.0
+  buildopts:
+    rpms:
+      macros: '%__python /usr/bin/python3
+
+        '
+  references:
+    community: https://github.com/spacewalkproject/spacewalk/
+    documentation: https://access.redhat.com/documentation/en-us/red_hat_satellite/5.8/
+    tracker: https://bugzilla.redhat.com/
+  profiles:
+    common:
+      rpms:
+      - koan
+      - osad
+      - python3-spacewalk-backend-libs
+      - rhn-custom-info
+      - rhn-virtualization-host
+      - rhncfg
+      - rhncfg-actions
+      - rhncfg-client
+      - rhncfg-management
+      - rhnpush
+      - spacewalk-abrt
+      - spacewalk-client-cert
+      - spacewalk-koan
+      - spacewalk-oscap
+      - spacewalk-remote-utils
+      - spacewalk-usix
+  artifacts:
+    rpms:
+    - spacewalk-usix-0:2.8.1-5.module+el8.1.0+3115+d1f204ad.noarch
+    - python3-spacewalk-usix-0:2.8.1-5.module+el8.1.0+3115+d1f204ad.noarch
+    - python3-spacewalk-backend-libs-0:2.8.48-4.module+el8.1.0+3115+d1f204ad.noarch
+    - spacewalk-remote-utils-0:2.8.4-7.module+el8.1.0+3115+d1f204ad.noarch
+    - spacewalk-oscap-0:2.8.5-4.module+el8.1.0+3115+d1f204ad.noarch
+    - python3-spacewalk-oscap-0:2.8.5-4.module+el8.1.0+3115+d1f204ad.noarch
+    - spacewalk-client-cert-0:2.8.2-3.module+el8.1.0+3115+d1f204ad.noarch
+    - spacewalk-abrt-0:2.8.3-5.module+el8.1.0+3115+d1f204ad.noarch
+    - python3-spacewalk-abrt-0:2.8.3-5.module+el8.1.0+3115+d1f204ad.noarch
+    - rhnpush-0:5.5.110-6.module+el8.1.0+3115+d1f204ad.noarch
+    - python3-rhnpush-0:5.5.110-6.module+el8.1.0+3115+d1f204ad.noarch
+    - rhncfg-0:5.10.120-10.module+el8.1.0+3115+d1f204ad.noarch
+    - python3-rhncfg-0:5.10.120-10.module+el8.1.0+3115+d1f204ad.noarch
+    - rhncfg-client-0:5.10.120-10.module+el8.1.0+3115+d1f204ad.noarch
+    - python3-rhncfg-client-0:5.10.120-10.module+el8.1.0+3115+d1f204ad.noarch
+    - rhncfg-management-0:5.10.120-10.module+el8.1.0+3115+d1f204ad.noarch
+    - python3-rhncfg-management-0:5.10.120-10.module+el8.1.0+3115+d1f204ad.noarch
+    - rhncfg-actions-0:5.10.120-10.module+el8.1.0+3115+d1f204ad.noarch
+    - python3-rhncfg-actions-0:5.10.120-10.module+el8.1.0+3115+d1f204ad.noarch
+    - python3-rhn-virtualization-common-0:5.4.70-4.module+el8.1.0+3115+d1f204ad.noarch
+    - rhn-virtualization-host-0:5.4.70-4.module+el8.1.0+3115+d1f204ad.noarch
+    - python3-rhn-virtualization-host-0:5.4.70-4.module+el8.1.0+3115+d1f204ad.noarch
+    - rhn-custom-info-0:5.4.42-4.module+el8.1.0+3115+d1f204ad.noarch
+    - osad-0:5.11.99-8.module+el8.1.0+3115+d1f204ad.noarch
+    - python3-osad-0:5.11.99-8.module+el8.1.0+3115+d1f204ad.noarch
+    - python3-osa-common-0:5.11.99-8.module+el8.1.0+3115+d1f204ad.noarch
+    - koan-0:2.0.7.1-6.module+el8.1.0+3115+d1f204ad.noarch
+    - python3-koan-0:2.0.7.1-6.module+el8.1.0+3115+d1f204ad.noarch
+    - spacewalk-koan-0:2.8.6-7.module+el8.1.0+3115+d1f204ad.noarch
+    - python3-spacewalk-koan-0:2.8.6-7.module+el8.1.0+3115+d1f204ad.noarch
+...
+---
+document: modulemd
+version: 2
+data:
   name: satellite-5-client
   stream: 1.0
   version: '8010020190621091459'
