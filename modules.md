@@ -5061,7 +5061,7 @@ data:
     - libselinux-0:2.9-2.1.module+el8.1.0+3972+45ab4324.x86_64
     - libselinux-debugsource-0:2.9-2.1.module+el8.1.0+3972+45ab4324.x86_64
     - libselinux-devel-0:2.9-2.1.module+el8.1.0+3972+45ab4324.x86_64
----
+...
 ---
 document: modulemd
 version: 2
