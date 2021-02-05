@@ -723,6 +723,20 @@ data:
         - x86_64
         rationale: Runtime requires of babel, and python2-babel
         ref: stream-2017.2-rhel-8.3.0
+      python-urllib3:
+        rationale: Python HTTP library with thread-safe connection pooling and file
+          post. Dependency of requests.
+        ref: stream-1.23-rhel-8.3.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-backports:
+        rationale: Namespace for backported Python features
+        ref: stream-1.0-rhel-8.3.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-backports-ssl_match_hostname:
+        rationale: The ssl.match_hostname() function from Python 3. Dependency of
+          urllib3/requests.
+        ref: stream-3.5.0.1-rhel-8.3.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
       scipy:
         arches:
         - aarch64
@@ -887,12 +901,15 @@ data:
     - python2-debugsource-0:2.7.17-2.module+el8.3.0+7681+f1f02ded.x86_64
     - python2-numpy-doc-1:1.14.2-13.module+el8.3.0+7681+f1f02ded.noarch
     - python2-pip-wheel-0:9.0.3-18.module+el8.3.0+7681+f1f02ded.noarch
+    - python2-backports-0:1.0-15.module+el8.3.0+7681+f1f02ded.x86_64
+    - python2-backports-ssl_match_hostname-0:3.5.0.1-11.module+el8.3.0+7681+f1f02ded.noarch
     - python2-rpm-macros-0:3-38.module+el8.3.0+7681+f1f02ded.noarch
     - python2-setuptools-0:39.0.1-12.module+el8.3.0+7681+f1f02ded.noarch
     - python2-pysocks-0:1.6.8-6.module+el8.3.0+7681+f1f02ded.noarch
     - python2-lxml-debuginfo-0:4.2.3-3.module+el8.3.0+7681+f1f02ded.x86_64
     - python2-debug-0:2.7.17-2.module+el8.3.0+7681+f1f02ded.x86_64
     - python2-mock-0:2.0.0-13.module+el8.3.0+7681+f1f02ded.noarch
+    - python2-urllib3-0:1.24.2-1.module+el8.3.0+7681+f1f02ded.noarch
     - scipy-debugsource-0:1.0.0-20.module+el8.3.0+7681+f1f02ded.x86_64
     - python2-coverage-0:4.5.1-4.module+el8.3.0+7681+f1f02ded.x86_64
     - python2-tkinter-0:2.7.17-2.module+el8.3.0+7681+f1f02ded.x86_64
