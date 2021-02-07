@@ -1,3 +1,172 @@
+---
+document: modulemd
+version: 2
+data:
+  name: mongodb
+  stream: 3.6
+  version: '8010020191120190538'
+  context: 1cd76107
+  arch: x86_64
+  license:
+    module:
+    - MIT
+  summary: MongoDB Module
+  description: Mongo from humongous is a high-performance, open source, schema-free
+    document-oriented database. MongoDB is written in C++ and offers the following
+    features. Collection oriented storage, easy storage of object/JSON-style data.
+    Dynamic queries. Full index support, including on inner objects and embedded arrays.
+    Query profiling. Replication and fail-over support. Efficient storage of binary
+    data including large objects (e.g. photos and videos). Auto-sharding for cloud-level
+    scalability (currently in early alpha). Commercial Support Available. A key goal
+    of MongoDB is to bridge the gap between key/value stores (which are fast and highly
+    scalable) and traditional RDBMS systems (which are deep in functionality).
+  dependencies:
+  - buildrequires:
+      go-toolset:
+      - rhel8
+      javapackages-tools:
+      - 201801
+      platform:
+      - el8.1.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      jctools:
+        rationale: Runtime dependency of netty.
+        ref: 050d58f8ee897d0d0de3e2f4993c9a8166f46add
+      mongo-java-driver:
+        buildorder: 2
+        rationale: Java driver for MongoDB
+        ref: af8ad672f5c435c1447df0ee2afc69c87e2c6676
+      mongo-tools:
+        rationale: MongoDB tools provides import, export, and diagnostic capabilities.
+        ref: e7a6fa34fbdf53b08f86fa1455a70b444f6f29d4
+      mongodb:
+        buildorder: 2
+        rationale: MongoDB package.
+        ref: ad0b723430751f37f7127a80f91de361b560fecf
+      netty:
+        buildorder: 1
+        rationale: Runtime dependency of mongo-java-driver.
+        ref: c11c1a34cfc9302e48d2e060a71ce1dddc6b706b
+      python-cheetah:
+        rationale: MongoDB build-only dependecy.
+        ref: b7a7dcc8dedb8f7b8bfee42ca1f8aaf4cfbb1685
+      slf4j:
+        rationale: Runtime dependency of mongo-java-driver.
+        ref: 776780893bfdf66deec2f1c682cd571ec53f7b3d
+      snappy-java:
+        rationale: Optional runtime dependency of mongo-java-driver.
+        ref: 6ab407acf5592f1aabcfb47bb2b5b467baa04fd6
+      yaml-cpp:
+        rationale: MongoDB dependency.
+        ref: 3d9bc35b146d1d27a887a625b67a1a7d5bd511c7
+  api:
+    rpms:
+    - mongo-tools
+    - mongodb
+    - mongodb-server
+  buildopts:
+    rpms:
+      macros: '%_with_xmvn_javadoc 1
+
+        %_with_jp_minimal 1
+
+        %_without_tests 1
+
+        %_without_python2 1
+
+        '
+  references:
+    community: https://docs.pagure.org/modularity/
+    documentation: https://github.com/container-images/mongodb/
+    tracker: https://github.com/modularity-modules/mongodb
+  profiles:
+    client:
+      rpms:
+      - mongo-tools
+      - mongodb
+    default:
+      rpms:
+      - mongodb
+      - mongodb-server
+    server:
+      rpms:
+      - mongodb-server
+  filter:
+    rpms:
+    - jcl-over-slf4j
+    - jctools-experimental
+    - jctools-javadoc
+    - jctools-parent
+    - jul-to-slf4j
+    - log4j-over-slf4j
+    - mongo-tools-devel
+    - mongodb-test
+    - netty-javadoc
+    - python-pymongo-doc
+    - python3-bson
+    - python3-cheetah
+    - python3-pymongo
+    - python3-pymongo-gridfs
+    - slf4j-ext
+    - slf4j-javadoc
+    - slf4j-jcl
+    - slf4j-jdk14
+    - slf4j-log4j12
+    - slf4j-manual
+    - slf4j-sources
+    - snappy-java-javadoc
+    - yaml-cpp-devel
+    - yaml-cpp-static
+  artifacts:
+    rpms:
+    - yaml-cpp-0:0.6.1-2.module_el8.1.0+141+7000450f.x86_64
+    - yaml-cpp-devel-0:0.6.1-2.module_el8.1.0+141+7000450f.x86_64
+    - yaml-cpp-static-0:0.6.1-2.module_el8.1.0+141+7000450f.x86_64
+    - yaml-cpp-debugsource-0:0.6.1-2.module_el8.1.0+141+7000450f.x86_64
+    - yaml-cpp-debuginfo-0:0.6.1-2.module_el8.1.0+141+7000450f.x86_64
+    - snappy-java-0:1.1.2.4-8.module_el8.1.0+141+7000450f.x86_64
+    - snappy-java-javadoc-0:1.1.2.4-8.module_el8.1.0+141+7000450f.noarch
+    - slf4j-0:1.7.25-4.module_el8.1.0+141+7000450f.noarch
+    - slf4j-javadoc-0:1.7.25-4.module_el8.1.0+141+7000450f.noarch
+    - slf4j-manual-0:1.7.25-4.module_el8.1.0+141+7000450f.noarch
+    - slf4j-jdk14-0:1.7.25-4.module_el8.1.0+141+7000450f.noarch
+    - slf4j-log4j12-0:1.7.25-4.module_el8.1.0+141+7000450f.noarch
+    - slf4j-jcl-0:1.7.25-4.module_el8.1.0+141+7000450f.noarch
+    - slf4j-ext-0:1.7.25-4.module_el8.1.0+141+7000450f.noarch
+    - jcl-over-slf4j-0:1.7.25-4.module_el8.1.0+141+7000450f.noarch
+    - log4j-over-slf4j-0:1.7.25-4.module_el8.1.0+141+7000450f.noarch
+    - jul-to-slf4j-0:1.7.25-4.module_el8.1.0+141+7000450f.noarch
+    - slf4j-sources-0:1.7.25-4.module_el8.1.0+141+7000450f.noarch
+    - python3-cheetah-0:3.1.0-4.module_el8.1.0+141+7000450f.x86_64
+    - python-cheetah-debugsource-0:3.1.0-4.module_el8.1.0+141+7000450f.x86_64
+    - python3-cheetah-debuginfo-0:3.1.0-4.module_el8.1.0+141+7000450f.x86_64
+    - mongo-tools-0:3.6.6-1.module_el8.1.0+141+7000450f.x86_64
+    - mongo-tools-devel-0:3.6.6-1.module_el8.1.0+141+7000450f.noarch
+    - mongo-tools-debuginfo-0:3.6.6-1.module_el8.1.0+141+7000450f.x86_64
+    - jctools-0:2.0.2-2.module_el8.1.0+141+7000450f.noarch
+    - jctools-experimental-0:2.0.2-2.module_el8.1.0+141+7000450f.noarch
+    - jctools-javadoc-0:2.0.2-2.module_el8.1.0+141+7000450f.noarch
+    - jctools-parent-0:2.0.2-2.module_el8.1.0+141+7000450f.noarch
+    - netty-0:4.1.13-5.module_el8.1.0+141+7000450f.x86_64
+    - netty-javadoc-0:4.1.13-5.module_el8.1.0+141+7000450f.x86_64
+    - mongodb-0:3.6.8-1.module_el8.1.0+141+7000450f.x86_64
+    - mongodb-server-0:3.6.8-1.module_el8.1.0+141+7000450f.x86_64
+    - mongodb-test-0:3.6.8-1.module_el8.1.0+141+7000450f.x86_64
+    - mongodb-debugsource-0:3.6.8-1.module_el8.1.0+141+7000450f.x86_64
+    - mongodb-debuginfo-0:3.6.8-1.module_el8.1.0+141+7000450f.x86_64
+    - mongodb-server-debuginfo-0:3.6.8-1.module_el8.1.0+141+7000450f.x86_64
+    - mongo-java-driver-0:3.6.4-1.module_el8.1.0+141+7000450f.noarch
+    - mongo-java-driver-bson-0:3.6.4-1.module_el8.1.0+141+7000450f.noarch
+    - mongo-java-driver-driver-0:3.6.4-1.module_el8.1.0+141+7000450f.noarch
+    - mongo-java-driver-driver-core-0:3.6.4-1.module_el8.1.0+141+7000450f.noarch
+    - mongo-java-driver-driver-async-0:3.6.4-1.module_el8.1.0+141+7000450f.noarch
+    - mongo-java-driver-javadoc-0:3.6.4-1.module_el8.1.0+141+7000450f.noarch
+...
+---
 document: modulemd
 version: 2
 data:
@@ -43,3 +212,4 @@ data:
   artifacts:
     rpms:
     - golang-github-cpuguy83-go-md2man-0:1.0.7-11.module+el8.3.0+6969+d5cdaaaa.x86_64
+...
