@@ -1,4 +1,4 @@
-...
+---
 document: modulemd
 version: 2
 data:
@@ -78,4 +78,4 @@ data:
     - postgresql-static-0:10.15-1.module+el8.3.0+8944+1ca16b1f.x86_64
     - postgresql-pltcl-debuginfo-0:10.15-1.module+el8.3.0+8944+1ca16b1f.x86_64
     - postgresql-plperl-0:10.15-1.module+el8.3.0+8944+1ca16b1f.x86_64
----
+...
