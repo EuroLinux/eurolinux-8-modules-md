@@ -21,7 +21,7 @@ data:
   dependencies:
   - buildrequires:
       platform:
-      - el8.3.0.z
+      - el8
     requires:
       platform:
       - el8
@@ -102,7 +102,7 @@ data:
   dependencies:
   - buildrequires:
       platform:
-      - el8.3.0.z
+      - el8
     requires:
       platform:
       - el8
@@ -155,4 +155,64 @@ data:
     - postgresql-test-0:9.6.20-1.module+el8.3.0+8938+7f0e88b6.x86_64
     - postgresql-plperl-debuginfo-0:9.6.20-1.module+el8.3.0+8938+7f0e88b6.x86_64
     - postgresql-pltcl-debuginfo-0:9.6.20-1.module+el8.3.0+8938+7f0e88b6.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: mercurial
+  stream: '4.8'
+  version: '820190108205035'
+  context: 77fc8825
+  arch: x86_64
+  license:
+    content:
+    - GPLv2+
+    module:
+    - MIT
+  summary: Mercurial -- a distributed SCM
+  description: Mercurial is a fast, lightweight source control management system designed
+    for efficient handling of very large distributed projects.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+      python27:
+      - 2.7
+    requires:
+      platform:
+      - el8
+      python27:
+      - 2.7
+  components:
+    rpms:
+      mercurial:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/mercurial
+        rationale: Mercurial -- a distributed SCM
+        ref: stream-mercurial-4.8
+        repository: git://pkgs.devel.redhat.com/rpms/mercurial
+  api:
+    rpms:
+    - mercurial
+    - mercurial-hgk
+  references:
+    community: https://www.mercurial-scm.org/
+    documentation: https://www.mercurial-scm.org/guide
+    tracker: https://www.mercurial-scm.org/wiki/BugTracker
+  profiles:
+    common:
+      rpms:
+      - mercurial
+  artifacts:
+    rpms:
+    - mercurial-debuginfo-0:4.8.2-1.module+el8+2647+365c7305.x86_64
+    - mercurial-debugsource-0:4.8.2-1.module+el8+2647+365c7305.x86_64
+    - mercurial-hgk-0:4.8.2-1.module+el8+2647+365c7305.x86_64
+    - mercurial-0:4.8.2-1.module+el8+2647+365c7305.x86_64
 ...
