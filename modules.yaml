@@ -346,3 +346,106 @@ data:
     - 389-ds-base-legacy-tools-debuginfo-0:1.4.3.8-7.module+el8.3.0+10310+6e88d919.x86_64
     - 389-ds-base-0:1.4.3.8-7.module+el8.3.0+10310+6e88d919.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: nodejs
+  stream: '10'
+  version: '8030020210225164533'
+  context: 229f0a1c
+  arch: x86_64
+  license:
+    content:
+    - MIT
+    - MIT and ASL 2.0 and ISC and BSD
+    module:
+    - MIT
+  summary: Javascript runtime
+  description: Node.js is a platform built on Chrome's JavaScript runtime for easily
+    building fast, scalable network applications. Node.js uses an event-driven, non-blocking
+    I/O model that makes it lightweight and efficient, perfect for data-intensive
+    real-time applications that run across distributed devices.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      nodejs:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        rationale: Javascript runtime and npm package manager.
+        ref: stream-10-rhel-8.2.0
+      nodejs-nodemon:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 200
+        rationale: Simple monitor script for use during development of a node.js app
+        ref: stream-rhel-8.0-rhel-8.2.0
+      nodejs-packaging:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 100
+        rationale: RPM Macros and Utilities for Node.js Packaging
+        ref: stream-rhel-8.0-rhel-8.2.0
+  api:
+    rpms:
+    - nodejs
+    - nodejs-devel
+    - npm
+  buildopts:
+    rpms:
+      macros: '%_with_bootstrap 1
+
+        '
+  references:
+    community: http://nodejs.org
+    documentation: http://nodejs.org/en/docs
+    tracker: https://github.com/nodejs/node/issues
+  profiles:
+    common:
+      rpms:
+      - nodejs
+      - npm
+    development:
+      rpms:
+      - nodejs
+      - nodejs-devel
+      - npm
+    minimal:
+      rpms:
+      - nodejs
+    s2i:
+      rpms:
+      - nodejs
+      - nodejs-nodemon
+      - npm
+  artifacts:
+    rpms:
+    - npm-1:6.14.11-1.10.24.0.1.module+el8.3.0+10166+b07ac28e.x86_64
+    - nodejs-nodemon-0:1.18.3-1.module+el8+2632+6c5111ed.noarch
+    - nodejs-1:10.24.0-1.module+el8.3.0+10166+b07ac28e.x86_64
+    - nodejs-packaging-0:17-3.module+el8+2873+aa7dfd9a.noarch
+    - nodejs-full-i18n-1:10.24.0-1.module+el8.3.0+10166+b07ac28e.x86_64
+    - nodejs-docs-1:10.24.0-1.module+el8.3.0+10166+b07ac28e.noarch
+    - nodejs-debuginfo-1:10.24.0-1.module+el8.3.0+10166+b07ac28e.x86_64
+    - nodejs-devel-1:10.24.0-1.module+el8.3.0+10166+b07ac28e.x86_64
+    - nodejs-debugsource-1:10.24.0-1.module+el8.3.0+10166+b07ac28e.x86_64
+...
