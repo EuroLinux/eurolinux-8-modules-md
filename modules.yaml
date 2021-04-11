@@ -1650,3 +1650,95 @@ data:
     - libecap-0:1.0.1-2.module+el8.1.0+4044+36416a77.x86_64
     - squid-7:4.11-3.module+el8.3.0+7851+7808b5f9.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: rust-toolset
+  stream: rhel8
+  version: '8030120201026160241'
+  context: bed47151
+  arch: x86_64
+  license:
+    content:
+    - (ASL 2.0 or MIT) and (BSD and MIT)
+    - ASL 2.0 or MIT
+    module:
+    - MIT
+  summary: Rust
+  description: Rust Toolset
+  dependencies:
+  - buildrequires:
+      llvm-toolset:
+      - rhel8
+      platform:
+      - el8.3.1
+      rust-toolset:
+      - rhel8
+    requires:
+      llvm-toolset:
+      - rhel8
+      platform:
+      - el8
+  components:
+    rpms:
+      rust:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Rust compiler and tools
+        ref: stream-rhel-8-rhel-8.3.1
+      rust-toolset:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Meta package for rust-toolset.
+        ref: stream-rhel-8-rhel-8.3.1
+  api:
+    rpms:
+    - cargo
+    - cargo-doc
+    - clippy
+    - rls
+    - rust
+    - rust-analysis
+    - rust-doc
+    - rust-gdb
+    - rust-lldb
+    - rust-src
+    - rust-std-static
+    - rust-toolset
+    - rustfmt
+  profiles:
+    common:
+      rpms:
+      - rust-toolset
+  artifacts:
+    rpms:
+    - rust-debuginfo-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.x86_64
+    - clippy-debuginfo-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.x86_64
+    - rust-toolset-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.x86_64
+    - rust-debugger-common-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.noarch
+    - clippy-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.x86_64
+    - rls-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.x86_64
+    - rls-debuginfo-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.x86_64
+    - rust-analysis-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.x86_64
+    - rust-debugsource-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.x86_64
+    - rustfmt-debuginfo-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.x86_64
+    - rust-doc-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.x86_64
+    - rust-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.x86_64
+    - rust-std-static-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.x86_64
+    - rust-src-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.noarch
+    - cargo-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.x86_64
+    - cargo-doc-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.noarch
+    - cargo-debuginfo-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.x86_64
+    - rustfmt-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.x86_64
+    - rust-lldb-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.noarch
+    - rust-gdb-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.noarch
+...
