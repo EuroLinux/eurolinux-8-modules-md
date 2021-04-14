@@ -2448,4 +2448,182 @@ data:
     - nginx-mod-http-perl-debuginfo-1:1.14.1-9.module+el8.0.0+4108+af250afe.x86_64
     - nginx-1:1.14.1-9.module+el8.0.0+4108+af250afe.x86_64
 ...
-/tmp/beast-module-build-repo//all/nginx-1.14-x86_64-module.md
+---
+document: modulemd
+version: 2
+data:
+  name: ant
+  stream: '1.10'
+  version: '820181213135032'
+  context: 5ea3b708
+  arch: x86_64
+  license:
+    content:
+    - ASL 2.0
+    module:
+    - MIT
+  summary: Java build tool
+  description: Apache Ant is a Java library and command-line tool whose mission is
+    to drive processes described in build files as targets and extension points dependent
+    upon each other. The main known usage of Ant is the build of Java applications.
+    Ant supplies a number of built-in tasks allowing to compile, assemble, test and
+    run Java applications. Ant can also be used effectively to build non Java applications,
+    for instance C or C++ applications. More generally, Ant can be used to pilot any
+    type of process which can be described in terms of targets and tasks.
+  dependencies:
+  - buildrequires:
+      javapackages-tools:
+      - 201801
+      platform:
+      - el8
+    requires:
+      platform: []
+  components:
+    rpms:
+      ant:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/ant
+        rationale: 'Module API.
+
+          '
+        ref: stream-ant-1.10
+        repository: git://pkgs.devel.redhat.com/rpms/ant
+  api:
+    rpms:
+    - ant
+  buildopts:
+    rpms:
+      macros: '%_with_xmvn_javadoc 1
+
+        %_without_asciidoc 1
+
+        %_without_avalon 1
+
+        %_without_bouncycastle 1
+
+        %_without_cython 1
+
+        %_without_dafsa 1
+
+        %_without_desktop 1
+
+        %_without_doxygen 1
+
+        %_without_dtd 1
+
+        %_without_eclipse 1
+
+        %_without_ehcache 1
+
+        %_without_emacs 1
+
+        %_without_equinox 1
+
+        %_without_fop 1
+
+        %_without_ftp 1
+
+        %_without_gradle 1
+
+        %_without_groovy 1
+
+        %_without_hadoop 1
+
+        %_without_hsqldb 1
+
+        %_without_itext 1
+
+        %_without_jackson 1
+
+        %_without_jmh 1
+
+        %_without_jna 1
+
+        %_without_jpa 1
+
+        %_without_junit5 1
+
+        %_without_logback 1
+
+        %_without_markdown 1
+
+        %_without_memcached 1
+
+        %_without_memoryfilesystem 1
+
+        %_without_obr 1
+
+        %_without_python 1
+
+        %_without_reporting 1
+
+        %_without_scm 1
+
+        %_without_snappy 1
+
+        %_without_spring 1
+
+        %_without_ssh 1
+
+        %_without_testlib 1
+
+        '
+  references:
+    community: https://ant.apache.org/
+  profiles:
+    common:
+      rpms:
+      - ant
+  filter:
+    rpms:
+    - ant-antlr
+    - ant-apache-bcel
+    - ant-apache-bsf
+    - ant-apache-log4j
+    - ant-apache-oro
+    - ant-apache-regexp
+    - ant-apache-resolver
+    - ant-apache-xalan2
+    - ant-commons-logging
+    - ant-commons-net
+    - ant-javadoc
+    - ant-javamail
+    - ant-jdepend
+    - ant-jmf
+    - ant-jsch
+    - ant-junit
+    - ant-manual
+    - ant-swing
+    - ant-testutil
+    - ant-xz
+  artifacts:
+    rpms:
+    - ant-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-javamail-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-xalan2-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-manual-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-commons-net-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-regexp-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-antlr-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-resolver-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-commons-logging-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-swing-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-junit-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-lib-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-log4j-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-javadoc-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-xz-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-jdepend-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-testutil-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-jsch-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-bcel-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-jmf-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-bsf-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-oro-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+...
