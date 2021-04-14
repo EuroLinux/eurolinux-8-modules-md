@@ -2823,3 +2823,72 @@ data:
     - rubygem-psych-0:3.0.2-106.module+el8.3.0+7153+c6f6daa5.x86_64
     - ruby-libs-0:2.5.5-106.module+el8.3.0+7153+c6f6daa5.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: javapackages-runtime
+  stream: '201801'
+  version: '820181213140046'
+  context: 302ab70f
+  arch: x86_64
+  license:
+    content:
+    - BSD
+    module:
+    - MIT
+  summary: Basic runtime utilities to support Java applications
+  description: This module contains basic filesystem layout and runtime utilities
+    used to support system applications written in JVM languages.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform: []
+  components:
+    rpms:
+      javapackages-tools:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/javapackages-tools
+        rationale: 'Module API.
+
+          '
+        ref: stream-javapackages-runtime-201801
+        repository: git://pkgs.devel.redhat.com/rpms/javapackages-tools
+  api:
+    rpms:
+    - javapackages-filesystem
+    - javapackages-tools
+  buildopts:
+    rpms:
+      macros: '%_without_asciidoc 1
+
+        %_without_gradle 1
+
+        '
+  profiles:
+    common:
+      rpms:
+      - javapackages-filesystem
+      - javapackages-tools
+  filter:
+    rpms:
+    - ivy-local
+    - javapackages-local
+    - maven-local
+    - python3-javapackages
+  artifacts:
+    rpms:
+    - python3-javapackages-0:5.3.0-1.module+el8+2447+6f56d9a6.noarch
+    - javapackages-filesystem-0:5.3.0-1.module+el8+2447+6f56d9a6.noarch
+    - maven-local-0:5.3.0-1.module+el8+2447+6f56d9a6.noarch
+    - javapackages-local-0:5.3.0-1.module+el8+2447+6f56d9a6.noarch
+    - javapackages-tools-0:5.3.0-1.module+el8+2447+6f56d9a6.noarch
+    - ivy-local-0:5.3.0-1.module+el8+2447+6f56d9a6.noarch
+...
