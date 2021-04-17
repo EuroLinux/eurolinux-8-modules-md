@@ -1,1 +1,3288 @@
+---
+document: modulemd
+version: 2
+data:
+  name: javapackages-tools
+  stream: 201801
+  version: '820181217165704'
+  context: dca7b4a4
+  arch: x86_64
+  license:
+    content:
+    - (CDDL or GPLv2 with exceptions) and ASL 2.0
+    - (CDDL-1.1 or GPLv2 with exceptions) and ASL 2.0
+    - ANTLR-PD
+    - ASL 1.1
+    - ASL 1.1 and ASL 2.0 and xpp and BSD and Public Domain
+    - ASL 2.0
+    - ASL 2.0 and (ASL 2.0 or LGPLv2+)
+    - ASL 2.0 and ASL 1.1
+    - ASL 2.0 and ASL 1.1 and MIT
+    - ASL 2.0 and BSD
+    - ASL 2.0 and BSD and MIT
+    - ASL 2.0 and BSD and Public Domain
+    - ASL 2.0 and CC0
+    - ASL 2.0 and CPL
+    - ASL 2.0 and EPL-1.0 and BSD
+    - ASL 2.0 and MIT
+    - ASL 2.0 and MIT and xpp
+    - ASL 2.0 and Plexus
+    - ASL 2.0 and W3C
+    - ASL 2.0 and W3C and Public Domain
+    - BSD
+    - BSD and CC-BY
+    - BSD and W3C
+    - CC0
+    - CDDL or GPLv2 with exceptions
+    - CDDL-1.0
+    - CDDL-1.0 or GPLv2 with exceptions
+    - CDDL-1.1 or GPLv2 with exceptions
+    - EPL-1.0
+    - EPL-1.0 and BSD
+    - MIT
+    - MIT and ASL 1.1
+    - MIT and ASL 2.0
+    - MIT and ASL 2.0 and ASL 1.1
+    - MPLv1.1 or LGPLv2+ or ASL 2.0
+    - Public Domain
+    - Saxpath
+    - zlib
+    module:
+    - MIT
+  summary: Tools and macros for Java packaging support
+  description: Java Packages Tools is a collection of tools that make it easier to
+    build RPM packages containing software running on Java platform.
+  dependencies:
+  - buildrequires:
+      javapackages-tools:
+      - 201801
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      ant:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/ant
+        rationale: "Runtime dependency of ant-contrib, aqute-bnd, jflex,\n     maven-antrun-plugin,\
+          \ maven-invoker-plugin,\n     maven-plugin-tools, maven-script-interpreter,\n\
+          \     plexus-ant-factory.\nBuild dependency of ant, ant-contrib, antlr,\n\
+          \     aopalliance, apache-commons-collections, apache-ivy,\n     aqute-bnd,\
+          \ bsf, bsh, cglib, hamcrest, isorelax,\n     jakarta-commons-httpclient,\
+          \ jakarta-oro, java_cup,\n     javacc, jdepend, jdom, jdom2, jflex, jtidy,\
+          \ log4j12,\n     maven-antrun-plugin, maven-invoker-plugin,\n     maven-plugin-tools,\
+          \ maven-script-interpreter, mockito,\n     plexus-ant-factory, plexus-classworlds,\
+          \ regexp, testng,\n     velocity, xalan-j2, xerces-j2, xml-commons-apis,\n\
+          \     xml-commons-resolver, xmlunit, xz-java.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/ant
+      ant-contrib:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/ant-contrib
+        rationale: 'Build dependency of apache-ivy, log4j12.
 
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/ant-contrib
+      antlr:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/antlr
+        rationale: 'Runtime dependency of ant. Build dependency of ant, velocity.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/antlr
+      aopalliance:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/aopalliance
+        rationale: 'Runtime dependency of google-guice, maven. Build dependency of
+          google-guice.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/aopalliance
+      apache-commons-beanutils:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/apache-commons-beanutils
+        rationale: 'Build dependency of apache-commons-jxpath.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/apache-commons-beanutils
+      apache-commons-cli:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/apache-commons-cli
+        rationale: "Runtime dependency of hawtjni, maven, plexus-cli,\n     plexus-containers,\
+          \ xmvn.\nBuild dependency of hawtjni, maven, plexus-cli,\n     plexus-containers.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/apache-commons-cli
+      apache-commons-codec:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/apache-commons-codec
+        rationale: "Runtime dependency of httpcomponents-client,\n     jakarta-commons-httpclient,\
+          \ maven,\n     maven-artifact-transfer, maven-assembly-plugin,\n     maven-install-plugin.\n\
+          Build dependency of httpcomponents-client,\n     jakarta-commons-httpclient,\
+          \ maven-artifact-transfer,\n     maven-assembly-plugin, maven-install-plugin.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/apache-commons-codec
+      apache-commons-collections:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/apache-commons-collections
+        rationale: "Runtime dependency of apache-commons-beanutils,\n     maven-dependency-plugin,\
+          \ maven-doxia-sitetools,\n     plexus-velocity, velocity.\nBuild dependency\
+          \ of apache-commons-beanutils,\n     maven-dependency-plugin, maven-doxia-sitetools,\n\
+          \     plexus-velocity, velocity.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/apache-commons-collections
+      apache-commons-compress:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/apache-commons-compress
+        rationale: 'Runtime dependency of plexus-archiver, xmvn. Build dependency
+          of plexus-archiver, xmvn.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/apache-commons-compress
+      apache-commons-exec:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/apache-commons-exec
+        rationale: 'Runtime dependency of exec-maven-plugin. Build dependency of exec-maven-plugin.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/apache-commons-exec
+      apache-commons-io:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/apache-commons-io
+        rationale: "Runtime dependency of jdependency, maven,\n     maven-archiver,\
+          \ maven-assembly-plugin,\n     maven-dependency-plugin, maven-doxia-sitetools,\n\
+          \     maven-invoker-plugin, maven-plugin-testing,\n     maven-resources-plugin,\
+          \ maven-shade-plugin,\n     maven-shared-utils, maven-surefire, maven-wagon,\n\
+          \     plexus-io.\nBuild dependency of jdependency, maven-archiver,\n   \
+          \  maven-assembly-plugin, maven-dependency-plugin,\n     maven-doxia-sitetools,\
+          \ maven-invoker-plugin,\n     maven-plugin-testing, maven-resources-plugin,\n\
+          \     maven-shade-plugin, maven-shared-utils, maven-surefire,\n     maven-wagon,\
+          \ plexus-archiver, plexus-io.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/apache-commons-io
+      apache-commons-jxpath:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/apache-commons-jxpath
+        rationale: 'Build dependency of maven.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/apache-commons-jxpath
+      apache-commons-lang:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/apache-commons-lang
+        rationale: "Runtime dependency of maven-dependency-plugin,\n     maven-doxia,\
+          \ maven-enforcer, velocity.\nBuild dependency of apache-ivy,\n     maven-dependency-plugin,\
+          \ maven-doxia,\n     maven-doxia-sitetools, maven-enforcer, slf4j, velocity.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/apache-commons-lang
+      apache-commons-lang3:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/apache-commons-lang3
+        rationale: "Runtime dependency of maven, maven-doxia-sitetools,\n     maven-surefire,\
+          \ xmvn.\nBuild dependency of httpcomponents-core, maven,\n     maven-shared-utils,\
+          \ maven-surefire.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/apache-commons-lang3
+      apache-commons-logging:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/apache-commons-logging
+        rationale: "Runtime dependency of ant, apache-commons-beanutils,\n     bsf,\
+          \ httpcomponents-client, jakarta-commons-httpclient,\n     maven, slf4j,\
+          \ xbean.\nBuild dependency of ant, ant-contrib,\n     apache-commons-beanutils,\
+          \ bsf, httpcomponents-client,\n     httpcomponents-core, jakarta-commons-httpclient,\n\
+          \     plexus-classworlds, powermock, slf4j, velocity, xbean.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/apache-commons-logging
+      apache-commons-net:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/apache-commons-net
+        rationale: 'Runtime dependency of ant, maven-wagon. Build dependency of ant,
+          maven-wagon.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/apache-commons-net
+      apache-commons-parent:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/apache-commons-parent
+        rationale: "Build dependency of ant-contrib,\n     apache-commons-beanutils,\
+          \ apache-commons-cli,\n     apache-commons-codec, apache-commons-collections,\n\
+          \     apache-commons-compress, apache-commons-exec,\n     apache-commons-io,\
+          \ apache-commons-jxpath,\n     apache-commons-lang, apache-commons-lang3,\n\
+          \     apache-commons-logging, apache-commons-net, apache-ivy,\n     bcel.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/apache-commons-parent
+      apache-ivy:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/apache-ivy
+        rationale: 'Runtime dependency of javapackages-tools. Build dependency of
+          ant-contrib, xmvn.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/apache-ivy
+      apache-parent:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/apache-parent
+        rationale: "Runtime dependency of apache-commons-parent,\n     felix-parent,\
+          \ httpcomponents-project, maven-parent.\nBuild dependency of apache-commons-parent,\
+          \ apache-ivy,\n     bsf, felix-parent, httpcomponents-project,\n     maven-parent,\
+          \ velocity, xalan-j2, xerces-j2,\n     xml-commons-apis, xml-commons-resolver.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/apache-parent
+      apache-resource-bundles:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/apache-resource-bundles
+        rationale: "Runtime dependency of apache-parent. Build dependency of apache-parent,\
+          \ easymock,\n     google-guice, objenesis.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/apache-resource-bundles
+      aqute-bnd:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/aqute-bnd
+        rationale: "Runtime dependency of maven-plugin-bundle. Build dependency of\
+          \ jdom2, maven-plugin-bundle,\n     mockito.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/aqute-bnd
+      assertj-core:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/assertj-core
+        rationale: 'Build dependency of maven-archiver, powermock.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/assertj-core
+      atinject:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/atinject
+        rationale: "Runtime dependency of cdi-api, google-guice, maven,\n     xmvn.\n\
+          Build dependency of cdi-api, google-guice, maven,\n     maven-resolver,\
+          \ plexus-cipher, plexus-languages, sisu.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/atinject
+      bcel:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/bcel
+        rationale: "Runtime dependency of ant, xalan-j2. Build dependency of ant,\
+          \ ant-contrib, velocity,\n     xalan-j2.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/bcel
+      beust-jcommander:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/beust-jcommander
+        rationale: 'Runtime dependency of testng, xmvn. Build dependency of testng,
+          xmvn.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/beust-jcommander
+      bsf:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/bsf
+        rationale: 'Runtime dependency of ant, bsh. Build dependency of ant, bsh.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/bsf
+      bsh:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/bsh
+        rationale: "Runtime dependency of maven-enforcer,\n     maven-invoker-plugin,\
+          \ maven-plugin-build-helper,\n     maven-plugin-tools, maven-script-interpreter,\n\
+          \     plexus-bsh-factory.\nBuild dependency of maven-enforcer,\n     maven-invoker-plugin,\
+          \ maven-plugin-build-helper,\n     maven-plugin-tools, maven-script-interpreter,\n\
+          \     plexus-bsh-factory, testng.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/bsh
+      byaccj:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/byaccj
+        rationale: 'Build dependency of qdox.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/byaccj
+      cal10n:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/cal10n
+        rationale: 'Build dependency of slf4j.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/cal10n
+      cdi-api:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/cdi-api
+        rationale: 'Runtime dependency of maven, sisu. Build dependency of plexus-cipher,
+          sisu.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/cdi-api
+      cglib:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/cglib
+        rationale: "Runtime dependency of easymock, mockito, powermock. Build dependency\
+          \ of assertj-core, easymock,\n     google-guice, mockito, powermock, xmvn.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/cglib
+      easymock:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/easymock
+        rationale: "Runtime dependency of felix-parent, hamcrest,\n     maven-plugin-testing,\
+          \ maven-plugin-tools.\nBuild dependency of felix-parent, hamcrest,\n   \
+          \  httpcomponents-client, jline, maven-artifact-resolver,\n     maven-common-artifact-filters,\
+          \ maven-plugin-testing,\n     maven-plugin-tools, maven-shared-io, powermock,\
+          \ xmvn.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/easymock
+      exec-maven-plugin:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/exec-maven-plugin
+        rationale: 'Build dependency of apache-commons-net, qdox.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/exec-maven-plugin
+      felix-osgi-compendium:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/felix-osgi-compendium
+        rationale: 'Build dependency of felix-utils.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/felix-osgi-compendium
+      felix-osgi-core:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/felix-osgi-core
+        rationale: "Runtime dependency of felix-osgi-compendium. Build dependency\
+          \ of apache-commons-compress,\n     felix-osgi-compendium, felix-utils,\
+          \ xbean.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/felix-osgi-core
+      felix-osgi-foundation:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/felix-osgi-foundation
+        rationale: 'Runtime dependency of felix-osgi-compendium. Build dependency
+          of felix-osgi-compendium.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/felix-osgi-foundation
+      felix-parent:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/felix-parent
+        rationale: "Build dependency of felix-osgi-compendium,\n     felix-osgi-core,\
+          \ felix-osgi-foundation, felix-utils,\n     maven-plugin-bundle.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/felix-parent
+      felix-utils:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/felix-utils
+        rationale: 'Runtime dependency of maven-plugin-bundle. Build dependency of
+          maven-plugin-bundle.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/felix-utils
+      forge-parent:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/forge-parent
+        rationale: "Runtime dependency of sonatype-plugins-parent,\n     spice-parent.\n\
+          Build dependency of sonatype-plugins-parent,\n     spice-parent.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/forge-parent
+      fusesource-pom:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/fusesource-pom
+        rationale: 'Build dependency of hawtjni, jansi, jansi-native.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/fusesource-pom
+      geronimo-annotation:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/geronimo-annotation
+        rationale: 'Runtime dependency of maven. Build dependency of maven.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/geronimo-annotation
+      geronimo-jms:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/geronimo-jms
+        rationale: 'Build dependency of log4j12.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/geronimo-jms
+      geronimo-jpa:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/geronimo-jpa
+        rationale: 'Build dependency of osgi-compendium.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/geronimo-jpa
+      geronimo-parent-poms:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/geronimo-parent-poms
+        rationale: "Build dependency of geronimo-annotation, geronimo-jms,\n     geronimo-jpa.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/geronimo-parent-poms
+      glassfish-annotation-api:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/glassfish-annotation-api
+        rationale: 'Build dependency of sisu.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/glassfish-annotation-api
+      glassfish-el:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/glassfish-el
+        rationale: 'Runtime dependency of cdi-api, glassfish-jsp-api. Build dependency
+          of cdi-api, glassfish-jsp-api.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/glassfish-el
+      glassfish-jsp-api:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/glassfish-jsp-api
+        rationale: 'Build dependency of apache-commons-jxpath.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/glassfish-jsp-api
+      glassfish-legal:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/glassfish-legal
+        rationale: "Build dependency of glassfish-annotation-api,\n     glassfish-el.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/glassfish-legal
+      glassfish-master-pom:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/glassfish-master-pom
+        rationale: 'Runtime dependency of glassfish-legal. Build dependency of glassfish-legal.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/glassfish-master-pom
+      glassfish-servlet-api:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/glassfish-servlet-api
+        rationale: "Runtime dependency of felix-osgi-compendium,\n     glassfish-jsp-api,\
+          \ xalan-j2.\nBuild dependency of apache-commons-jxpath,\n     apache-commons-logging,\
+          \ bsh, felix-osgi-compendium,\n     glassfish-jsp-api, google-guice, osgi-compendium,\n\
+          \     powermock, sisu, velocity, xalan-j2.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/glassfish-servlet-api
+      google-guice:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/google-guice
+        rationale: "Runtime dependency of maven, xmvn. Build dependency of maven,\
+          \ maven-resolver, sisu,\n     testng.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/google-guice
+      guava20:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/guava20
+        rationale: "Runtime dependency of google-guice, maven,\n     maven-shade-plugin,\
+          \ plexus-containers, xmvn.\nBuild dependency of google-guice, maven,\n \
+          \    maven-shade-plugin, plexus-containers.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/guava20
+      hamcrest:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/hamcrest
+        rationale: "Runtime dependency of junit, mockito, powermock. Build dependency\
+          \ of ant, junit, maven-resolver,\n     maven-shared-utils, mockito, powermock.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/hamcrest
+      hawtjni:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/hawtjni
+        rationale: 'Runtime dependency of jansi, jansi-native, maven. Build dependency
+          of jansi, jansi-native.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/hawtjni
+      httpcomponents-client:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/httpcomponents-client
+        rationale: "Runtime dependency of maven, maven-doxia,\n     maven-resolver,\
+          \ maven-wagon.\nBuild dependency of maven-doxia, maven-resolver,\n     maven-wagon.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/httpcomponents-client
+      httpcomponents-core:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/httpcomponents-core
+        rationale: "Runtime dependency of httpcomponents-client, maven,\n     maven-doxia,\
+          \ maven-resolver, maven-wagon.\nBuild dependency of httpcomponents-client,\
+          \ maven-doxia,\n     maven-resolver, maven-wagon.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/httpcomponents-core
+      httpcomponents-project:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/httpcomponents-project
+        rationale: "Build dependency of httpcomponents-client,\n     httpcomponents-core.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/httpcomponents-project
+      isorelax:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/isorelax
+        rationale: 'Build dependency of jdom2.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/isorelax
+      jakarta-commons-httpclient:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jakarta-commons-httpclient
+        rationale: 'Build dependency of ant-contrib, apache-ivy.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jakarta-commons-httpclient
+      jakarta-oro:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jakarta-oro
+        rationale: 'Runtime dependency of ant. Build dependency of ant, apache-ivy,
+          log4j12, velocity.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jakarta-oro
+      jansi:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jansi
+        rationale: "Runtime dependency of jline, maven. Build dependency of jline,\
+          \ maven, maven-shared-utils,\n     maven-surefire.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jansi
+      jansi-native:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jansi-native
+        rationale: 'Runtime dependency of jansi, maven. Build dependency of jansi.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jansi-native
+      java_cup:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/java_cup
+        rationale: 'Runtime dependency of jflex, xalan-j2. Build dependency of java_cup,
+          jflex, xalan-j2.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/java_cup
+      javacc:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/javacc
+        rationale: 'Runtime dependency of javacc-maven-plugin. Build dependency of
+          bsh, javacc, javacc-maven-plugin.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/javacc
+      javacc-maven-plugin:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/javacc-maven-plugin
+        rationale: 'Build dependency of glassfish-el, maven-surefire.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/javacc-maven-plugin
+      javamail:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/javamail
+        rationale: 'Runtime dependency of ant. Build dependency of ant, log4j12.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/javamail
+      javapackages-tools:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/javapackages-tools
+        rationale: "Module API. Runtime dependency of ant, ant-contrib, antlr,\n \
+          \    aopalliance, apache-commons-beanutils,\n     apache-commons-cli, apache-commons-codec,\n\
+          \     apache-commons-collections, apache-commons-compress,\n     apache-commons-exec,\
+          \ apache-commons-io,\n     apache-commons-jxpath, apache-commons-lang,\n\
+          \     apache-commons-lang3, apache-commons-logging,\n     apache-commons-net,\
+          \ apache-commons-parent, apache-ivy,\n     apache-parent, apache-resource-bundles,\
+          \ aqute-bnd,\n     assertj-core, atinject, bcel, beust-jcommander, bsf,\n\
+          \     bsh, cal10n, cdi-api, cglib, easymock,\n     exec-maven-plugin, felix-osgi-compendium,\n\
+          \     felix-osgi-core, felix-osgi-foundation, felix-parent,\n     felix-utils,\
+          \ forge-parent, fusesource-pom,\n     geronimo-annotation, geronimo-jms,\
+          \ geronimo-jpa,\n     geronimo-parent-poms, glassfish-annotation-api,\n\
+          \     glassfish-el, glassfish-jsp-api, glassfish-legal,\n     glassfish-master-pom,\
+          \ glassfish-servlet-api,\n     google-guice, guava20, hamcrest, hawtjni,\n\
+          \     httpcomponents-client, httpcomponents-core,\n     httpcomponents-project,\
+          \ isorelax,\n     jakarta-commons-httpclient, jakarta-oro, jansi,\n    \
+          \ jansi-native, java_cup, javacc, javacc-maven-plugin,\n     javamail, javassist,\
+          \ jaxen, jboss-interceptors-1.2-api,\n     jboss-parent, jdepend, jdependency,\
+          \ jdom, jdom2, jflex,\n     jline, jsch, jsoup, jsr-305, jtidy, junit,\n\
+          \     jvnet-parent, jzlib, log4j12, maven,\n     maven-antrun-plugin, maven-archiver,\n\
+          \     maven-artifact-resolver, maven-artifact-transfer,\n     maven-assembly-plugin,\
+          \ maven-clean-plugin,\n     maven-common-artifact-filters, maven-compiler-plugin,\n\
+          \     maven-dependency-analyzer, maven-dependency-plugin,\n     maven-dependency-tree,\
+          \ maven-doxia,\n     maven-doxia-sitetools, maven-enforcer,\n     maven-file-management,\
+          \ maven-filtering,\n     maven-install-plugin, maven-invoker,\n     maven-invoker-plugin,\
+          \ maven-jar-plugin, maven-parent,\n     maven-plugin-build-helper, maven-plugin-bundle,\n\
+          \     maven-plugin-testing, maven-plugin-tools,\n     maven-plugins-pom,\
+          \ maven-remote-resources-plugin,\n     maven-reporting-api, maven-reporting-impl,\n\
+          \     maven-resolver, maven-resources-plugin,\n     maven-script-interpreter,\
+          \ maven-shade-plugin,\n     maven-shared, maven-shared-incremental,\n  \
+          \   maven-shared-io, maven-shared-utils,\n     maven-source-plugin, maven-surefire,\
+          \ maven-verifier,\n     maven-wagon, maven2, mockito, modello, mojo-parent,\n\
+          \     munge-maven-plugin, objectweb-asm, objectweb-pom,\n     objenesis,\
+          \ os-maven-plugin, osgi-annotation,\n     osgi-compendium, osgi-core, plexus-ant-factory,\n\
+          \     plexus-archiver, plexus-bsh-factory, plexus-build-api,\n     plexus-cipher,\
+          \ plexus-classworlds, plexus-cli,\n     plexus-compiler, plexus-component-api,\n\
+          \     plexus-component-factories-pom, plexus-components-pom,\n     plexus-containers,\
+          \ plexus-i18n, plexus-interactivity,\n     plexus-interpolation, plexus-io,\
+          \ plexus-languages,\n     plexus-pom, plexus-resources, plexus-sec-dispatcher,\n\
+          \     plexus-utils, plexus-velocity, powermock, qdox, regexp,\n     sisu,\
+          \ sisu-mojos, slf4j, sonatype-oss-parent,\n     sonatype-plugins-parent,\
+          \ spec-version-maven-plugin,\n     spice-parent, testng, velocity, weld-parent,\
+          \ xalan-j2,\n     xbean, xerces-j2, xml-commons-apis,\n     xml-commons-resolver,\
+          \ xmlunit, xmvn, xz-java.\nBuild dependency of ant, ant-contrib, antlr,\n\
+          \     aopalliance, apache-commons-beanutils,\n     apache-commons-cli, apache-commons-codec,\n\
+          \     apache-commons-collections, apache-commons-compress,\n     apache-commons-exec,\
+          \ apache-commons-io,\n     apache-commons-jxpath, apache-commons-lang,\n\
+          \     apache-commons-lang3, apache-commons-logging,\n     apache-commons-net,\
+          \ apache-commons-parent, apache-ivy,\n     apache-parent, apache-resource-bundles,\
+          \ aqute-bnd,\n     assertj-core, atinject, bcel, beust-jcommander, bsf,\n\
+          \     bsh, cal10n, cdi-api, cglib, easymock,\n     exec-maven-plugin, felix-osgi-compendium,\n\
+          \     felix-osgi-core, felix-osgi-foundation, felix-parent,\n     felix-utils,\
+          \ forge-parent, fusesource-pom,\n     geronimo-annotation, geronimo-jms,\
+          \ geronimo-jpa,\n     geronimo-parent-poms, glassfish-annotation-api,\n\
+          \     glassfish-el, glassfish-jsp-api, glassfish-legal,\n     glassfish-master-pom,\
+          \ glassfish-servlet-api,\n     google-guice, guava20, hamcrest, hawtjni,\n\
+          \     httpcomponents-client, httpcomponents-core,\n     httpcomponents-project,\
+          \ isorelax,\n     jakarta-commons-httpclient, jakarta-oro, jansi,\n    \
+          \ jansi-native, java_cup, javacc, javacc-maven-plugin,\n     javamail, javassist,\
+          \ jaxen, jboss-interceptors-1.2-api,\n     jboss-parent, jdepend, jdependency,\
+          \ jdom, jdom2, jflex,\n     jline, jsch, jsoup, jsr-305, jtidy, junit,\n\
+          \     jvnet-parent, jzlib, log4j12, maven,\n     maven-antrun-plugin, maven-archiver,\n\
+          \     maven-artifact-resolver, maven-artifact-transfer,\n     maven-assembly-plugin,\
+          \ maven-clean-plugin,\n     maven-common-artifact-filters, maven-compiler-plugin,\n\
+          \     maven-dependency-analyzer, maven-dependency-plugin,\n     maven-dependency-tree,\
+          \ maven-doxia,\n     maven-doxia-sitetools, maven-enforcer,\n     maven-file-management,\
+          \ maven-filtering,\n     maven-install-plugin, maven-invoker,\n     maven-invoker-plugin,\
+          \ maven-jar-plugin, maven-parent,\n     maven-plugin-build-helper, maven-plugin-bundle,\n\
+          \     maven-plugin-testing, maven-plugin-tools,\n     maven-plugins-pom,\
+          \ maven-remote-resources-plugin,\n     maven-reporting-api, maven-reporting-impl,\n\
+          \     maven-resolver, maven-resources-plugin,\n     maven-script-interpreter,\
+          \ maven-shade-plugin,\n     maven-shared, maven-shared-incremental,\n  \
+          \   maven-shared-io, maven-shared-utils,\n     maven-source-plugin, maven-surefire,\
+          \ maven-verifier,\n     maven-wagon, maven2, mockito, modello, mojo-parent,\n\
+          \     munge-maven-plugin, objectweb-asm, objectweb-pom,\n     objenesis,\
+          \ os-maven-plugin, osgi-annotation,\n     osgi-compendium, osgi-core, plexus-ant-factory,\n\
+          \     plexus-archiver, plexus-bsh-factory, plexus-build-api,\n     plexus-cipher,\
+          \ plexus-classworlds, plexus-cli,\n     plexus-compiler, plexus-component-api,\n\
+          \     plexus-component-factories-pom, plexus-components-pom,\n     plexus-containers,\
+          \ plexus-i18n, plexus-interactivity,\n     plexus-interpolation, plexus-io,\
+          \ plexus-languages,\n     plexus-pom, plexus-resources, plexus-sec-dispatcher,\n\
+          \     plexus-utils, plexus-velocity, powermock, qdox, regexp,\n     sisu,\
+          \ sisu-mojos, slf4j, sonatype-oss-parent,\n     sonatype-plugins-parent,\
+          \ spec-version-maven-plugin,\n     spice-parent, testng, velocity, weld-parent,\
+          \ xalan-j2,\n     xbean, xerces-j2, xml-commons-apis,\n     xml-commons-resolver,\
+          \ xmlunit, xmvn, xz-java.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/javapackages-tools
+      javassist:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/javassist
+        rationale: 'Runtime dependency of powermock. Build dependency of powermock,
+          slf4j.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/javassist
+      jaxen:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jaxen
+        rationale: 'Build dependency of jdom, jdom2, velocity.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jaxen
+      jboss-interceptors-1.2-api:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jboss-interceptors-1.2-api
+        rationale: 'Runtime dependency of cdi-api. Build dependency of cdi-api.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jboss-interceptors-1.2-api
+      jboss-parent:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jboss-parent
+        rationale: 'Build dependency of jboss-interceptors-1.2-api.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jboss-parent
+      jdepend:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jdepend
+        rationale: 'Runtime dependency of ant. Build dependency of ant.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jdepend
+      jdependency:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jdependency
+        rationale: 'Runtime dependency of maven-shade-plugin. Build dependency of
+          maven-shade-plugin.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jdependency
+      jdom:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jdom
+        rationale: "Runtime dependency of maven-shade-plugin. Build dependency of\
+          \ apache-commons-jxpath, jaxen,\n     maven-shade-plugin, velocity.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jdom
+      jdom2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jdom2
+        rationale: 'Runtime dependency of plexus-containers. Build dependency of plexus-containers.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jdom2
+      jflex:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jflex
+        rationale: 'Build dependency of java_cup, jflex, qdox.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jflex
+      jline:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jline
+        rationale: 'Runtime dependency of bsh, plexus-interactivity. Build dependency
+          of plexus-interactivity.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jline
+      jsch:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jsch
+        rationale: 'Runtime dependency of ant. Build dependency of ant, apache-ivy.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jsch
+      jsoup:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jsoup
+        rationale: 'Runtime dependency of maven-wagon, modello. Build dependency of
+          maven-wagon, modello.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jsoup
+      jsr-305:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jsr-305
+        rationale: "Runtime dependency of guava20. Build dependency of guava20, maven-assembly-plugin,\n\
+          \     maven-enforcer, maven-filtering, maven-shared-utils,\n     maven-surefire,\
+          \ plexus-archiver, plexus-io, testng.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jsr-305
+      jtidy:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jtidy
+        rationale: 'Runtime dependency of maven-plugin-tools. Build dependency of
+          maven-plugin-tools.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jtidy
+      junit:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/junit
+        rationale: "Runtime dependency of ant, ant-contrib, atinject,\n     guava20,\
+          \ hamcrest, javapackages-tools, maven-verifier,\n     mockito, modello,\
+          \ powermock, xmlunit.\nBuild dependency of ant, ant-contrib,\n     apache-commons-cli,\
+          \ apache-commons-compress,\n     apache-commons-exec, apache-commons-io,\n\
+          \     apache-commons-jxpath, apache-commons-logging,\n     apache-commons-net,\
+          \ aqute-bnd, assertj-core, atinject,\n     bsh, cal10n, cglib, easymock,\
+          \ felix-parent,\n     glassfish-el, guava20, hamcrest, httpcomponents-client,\n\
+          \     httpcomponents-core, jakarta-commons-httpclient, jansi,\n     jansi-native,\
+          \ javacc-maven-plugin, javamail, javassist,\n     jdependency, jflex, jline,\
+          \ log4j12, maven,\n     maven-archiver, maven-artifact-resolver,\n     maven-artifact-transfer,\
+          \ maven-clean-plugin,\n     maven-common-artifact-filters, maven-doxia,\n\
+          \     maven-file-management, maven-invoker,\n     maven-plugin-testing,\
+          \ maven-reporting-impl,\n     maven-resolver, maven-script-interpreter,\n\
+          \     maven-shared-io, maven-shared-utils,\n     maven-source-plugin, maven-surefire,\
+          \ maven-verifier,\n     mockito, modello, munge-maven-plugin, objenesis,\n\
+          \     os-maven-plugin, plexus-cipher, plexus-containers,\n     plexus-interpolation,\
+          \ plexus-sec-dispatcher, powermock,\n     sisu, sisu-mojos, spec-version-maven-plugin,\
+          \ testng,\n     velocity, xmlunit, xmvn.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/junit
+      jvnet-parent:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jvnet-parent
+        rationale: "Build dependency of glassfish-annotation-api,\n     glassfish-el,\
+          \ glassfish-jsp-api, glassfish-servlet-api,\n     javamail, spec-version-maven-plugin.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jvnet-parent
+      jzlib:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jzlib
+        rationale: 'Runtime dependency of jsch. Build dependency of jsch.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/jzlib
+      log4j12:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/log4j12
+        rationale: "Runtime dependency of ant, slf4j, xbean. Build dependency of ant,\
+          \ apache-commons-logging, jdom2,\n     slf4j, velocity, xbean.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/log4j12
+      maven:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven
+        rationale: "Runtime dependency of cal10n, exec-maven-plugin,\n     hawtjni,\
+          \ javacc-maven-plugin, maven-antrun-plugin,\n     maven-archiver, maven-artifact-resolver,\n\
+          \     maven-artifact-transfer, maven-assembly-plugin,\n     maven-clean-plugin,\
+          \ maven-common-artifact-filters,\n     maven-compiler-plugin, maven-dependency-analyzer,\n\
+          \     maven-dependency-plugin, maven-doxia-sitetools,\n     maven-enforcer,\
+          \ maven-file-management, maven-filtering,\n     maven-install-plugin, maven-invoker-plugin,\n\
+          \     maven-jar-plugin, maven-plugin-build-helper,\n     maven-plugin-bundle,\
+          \ maven-plugin-tools,\n     maven-remote-resources-plugin, maven-reporting-impl,\n\
+          \     maven-resources-plugin, maven-script-interpreter,\n     maven-shade-plugin,\
+          \ maven-shared-incremental,\n     maven-shared-io, maven-source-plugin,\
+          \ maven-surefire,\n     maven2, modello, munge-maven-plugin, os-maven-plugin,\n\
+          \     plexus-containers, sisu-mojos,\n     spec-version-maven-plugin, xmvn.\n\
+          Build dependency of aqute-bnd, cal10n,\n     exec-maven-plugin, hawtjni,\
+          \ javacc-maven-plugin,\n     maven-antrun-plugin, maven-archiver,\n    \
+          \ maven-artifact-resolver, maven-artifact-transfer,\n     maven-assembly-plugin,\
+          \ maven-clean-plugin,\n     maven-common-artifact-filters, maven-compiler-plugin,\n\
+          \     maven-dependency-analyzer, maven-dependency-plugin,\n     maven-dependency-tree,\
+          \ maven-doxia-sitetools,\n     maven-enforcer, maven-file-management, maven-filtering,\n\
+          \     maven-install-plugin, maven-invoker-plugin,\n     maven-jar-plugin,\
+          \ maven-plugin-build-helper,\n     maven-plugin-bundle, maven-plugin-testing,\n\
+          \     maven-plugin-tools, maven-remote-resources-plugin,\n     maven-reporting-impl,\
+          \ maven-resources-plugin,\n     maven-script-interpreter, maven-shade-plugin,\n\
+          \     maven-shared-incremental, maven-shared-io,\n     maven-shared-utils,\
+          \ maven-source-plugin,\n     maven-surefire, modello, munge-maven-plugin,\n\
+          \     os-maven-plugin, plexus-containers, sisu-mojos,\n     spec-version-maven-plugin,\
+          \ xmvn.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven
+      maven-antrun-plugin:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-antrun-plugin
+        rationale: "Runtime dependency of apache-commons-parent,\n     felix-parent.\n\
+          Build dependency of apache-commons-cli,\n     apache-commons-collections,\
+          \ apache-commons-compress,\n     apache-commons-exec, apache-commons-io,\n\
+          \     apache-commons-lang3, apache-commons-net,\n     apache-commons-parent,\
+          \ felix-parent, jdependency,\n     log4j12, maven-invoker, slf4j.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-antrun-plugin
+      maven-archiver:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-archiver
+        rationale: "Runtime dependency of hawtjni, maven-assembly-plugin,\n     maven-jar-plugin,\
+          \ maven-plugin-bundle,\n     maven-source-plugin.\nBuild dependency of hawtjni,\
+          \ maven-assembly-plugin,\n     maven-jar-plugin, maven-plugin-bundle,\n\
+          \     maven-source-plugin.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-archiver
+      maven-artifact-resolver:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-artifact-resolver
+        rationale: 'Runtime dependency of maven-remote-resources-plugin. Build dependency
+          of maven-remote-resources-plugin.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-artifact-resolver
+      maven-artifact-transfer:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-artifact-transfer
+        rationale: "Runtime dependency of maven-assembly-plugin,\n     maven-dependency-plugin,\
+          \ maven-enforcer,\n     maven-shade-plugin.\nBuild dependency of maven-assembly-plugin,\n\
+          \     maven-dependency-plugin, maven-enforcer,\n     maven-shade-plugin.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-artifact-transfer
+      maven-assembly-plugin:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-assembly-plugin
+        rationale: "Runtime dependency of apache-commons-parent. Build dependency\
+          \ of apache-commons-codec,\n     apache-commons-jxpath, apache-commons-parent,\
+          \ jaxen,\n     log4j12, maven, maven-enforcer, plexus-component-api,\n \
+          \    qdox, xmvn.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-assembly-plugin
+      maven-clean-plugin:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-clean-plugin
+        rationale: 'Build dependency of maven-invoker.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-clean-plugin
+      maven-common-artifact-filters:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-common-artifact-filters
+        rationale: "Runtime dependency of maven-artifact-transfer,\n     maven-assembly-plugin,\
+          \ maven-dependency-plugin,\n     maven-enforcer, maven-remote-resources-plugin,\n\
+          \     maven-surefire, sisu-mojos.\nBuild dependency of maven-artifact-transfer,\n\
+          \     maven-assembly-plugin, maven-dependency-plugin,\n     maven-enforcer,\
+          \ maven-remote-resources-plugin,\n     maven-surefire, sisu-mojos.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-common-artifact-filters
+      maven-compiler-plugin:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-compiler-plugin
+        rationale: "Runtime dependency of apache-commons-parent,\n     felix-parent,\
+          \ geronimo-parent-poms,\n     glassfish-master-pom, javapackages-tools,\
+          \ xmvn.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-compiler-plugin
+      maven-dependency-analyzer:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-dependency-analyzer
+        rationale: 'Runtime dependency of maven-dependency-plugin. Build dependency
+          of maven-dependency-plugin.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-dependency-analyzer
+      maven-dependency-plugin:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-dependency-plugin
+        rationale: "Build dependency of apache-commons-logging, javamail,\n     maven,\
+          \ maven-surefire, modello, plexus-classworlds,\n     xmvn.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-dependency-plugin
+      maven-dependency-tree:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-dependency-tree
+        rationale: "Runtime dependency of maven-dependency-plugin,\n     maven-enforcer,\
+          \ maven-plugin-bundle,\n     maven-shade-plugin.\nBuild dependency of maven-dependency-plugin,\n\
+          \     maven-enforcer, maven-plugin-bundle,\n     maven-shade-plugin.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-dependency-tree
+      maven-doxia:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-doxia
+        rationale: "Runtime dependency of javacc-maven-plugin,\n     maven-dependency-plugin,\
+          \ maven-doxia-sitetools,\n     maven-invoker-plugin, maven-plugin-tools,\n\
+          \     maven-reporting-api, maven-reporting-impl.\nBuild dependency of javacc-maven-plugin,\n\
+          \     maven-dependency-plugin, maven-doxia-sitetools,\n     maven-invoker-plugin,\
+          \ maven-plugin-tools,\n     maven-reporting-api, maven-reporting-impl.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-doxia
+      maven-doxia-sitetools:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-doxia-sitetools
+        rationale: "Runtime dependency of javacc-maven-plugin,\n     maven-dependency-plugin,\
+          \ maven-invoker-plugin,\n     maven-plugin-tools, maven-reporting-impl,\n\
+          \     maven-surefire.\nBuild dependency of javacc-maven-plugin,\n     maven-dependency-plugin,\
+          \ maven-invoker-plugin,\n     maven-plugin-tools, maven-reporting-impl,\n\
+          \     maven-surefire.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-doxia-sitetools
+      maven-enforcer:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-enforcer
+        rationale: "Runtime dependency of apache-parent, objectweb-pom,\n     plexus-pom.\n\
+          Build dependency of apache-parent, cdi-api, javamail,\n     jboss-interceptors-1.2-api,\
+          \ junit, jvnet-parent,\n     maven-dependency-analyzer, maven-plugin-tools,\
+          \ maven2,\n     objectweb-pom, plexus-archiver, plexus-classworlds,\n  \
+          \   plexus-io, plexus-pom, plexus-utils.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-enforcer
+      maven-file-management:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-file-management
+        rationale: "Runtime dependency of maven-assembly-plugin,\n     maven-dependency-plugin.\n\
+          Build dependency of maven-assembly-plugin,\n     maven-dependency-plugin.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-file-management
+      maven-filtering:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-filtering
+        rationale: "Runtime dependency of maven-assembly-plugin,\n     maven-remote-resources-plugin,\
+          \ maven-resources-plugin.\nBuild dependency of maven-assembly-plugin,\n\
+          \     maven-remote-resources-plugin, maven-resources-plugin.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-filtering
+      maven-install-plugin:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-install-plugin
+        rationale: 'Build dependency of weld-parent, xmvn.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-install-plugin
+      maven-invoker:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-invoker
+        rationale: "Runtime dependency of maven-invoker-plugin,\n     maven-plugin-testing,\
+          \ xmvn.\nBuild dependency of maven-invoker-plugin,\n     maven-plugin-testing,\
+          \ xmvn.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-invoker
+      maven-invoker-plugin:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-invoker-plugin
+        rationale: "Build dependency of maven-dependency-tree,\n     maven-plugin-build-helper,\
+          \ maven-surefire, qdox.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-invoker-plugin
+      maven-jar-plugin:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-jar-plugin
+        rationale: "Runtime dependency of apache-commons-parent,\n     geronimo-parent-poms,\
+          \ httpcomponents-project,\n     javapackages-tools, maven-resolver, xmvn.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-jar-plugin
+      maven-parent:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-parent
+        rationale: "Runtime dependency of maven-doxia, maven-enforcer,\n     maven-plugin-testing,\
+          \ maven-plugin-tools,\n     maven-plugins-pom, maven-resolver, maven-shared,\n\
+          \     maven-wagon.\nBuild dependency of apache-resource-bundles, maven,\n\
+          \     maven-doxia, maven-doxia-sitetools, maven-enforcer,\n     maven-plugin-testing,\
+          \ maven-plugin-tools,\n     maven-plugins-pom, maven-resolver, maven-shared,\n\
+          \     maven-surefire, maven-wagon, maven2.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-parent
+      maven-plugin-build-helper:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-plugin-build-helper
+        rationale: "Runtime dependency of apache-commons-parent,\n     weld-parent.\n\
+          Build dependency of apache-commons-logging,\n     apache-commons-net, apache-commons-parent,\
+          \ cdi-api,\n     easymock, guava20, httpcomponents-client,\n     httpcomponents-core,\
+          \ httpcomponents-project, javamail,\n     maven, maven-surefire, slf4j,\n\
+          \     spec-version-maven-plugin, weld-parent, xmvn.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-plugin-build-helper
+      maven-plugin-bundle:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-plugin-bundle
+        rationale: "Runtime dependency of apache-commons-parent,\n     geronimo-parent-poms,\
+          \ google-guice.\nBuild dependency of apache-commons-compress,\n     apache-commons-parent,\
+          \ assertj-core, beust-jcommander,\n     cdi-api, cglib, easymock, felix-osgi-compendium,\n\
+          \     felix-osgi-core, geronimo-annotation,\n     geronimo-parent-poms,\
+          \ glassfish-annotation-api,\n     glassfish-el, glassfish-jsp-api, glassfish-servlet-api,\n\
+          \     google-guice, guava20, httpcomponents-client,\n     httpcomponents-core,\
+          \ jansi, jansi-native, javamail,\n     javassist, jaxen, jboss-interceptors-1.2-api,\
+          \ jline,\n     jsoup, junit, jzlib, log4j12, maven-resolver,\n     objectweb-asm,\
+          \ objenesis, osgi-annotation,\n     osgi-compendium, osgi-core, plexus-classworlds,\n\
+          \     plexus-containers, plexus-utils, powermock,\n     spec-version-maven-plugin,\
+          \ testng, xbean.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-plugin-bundle
+      maven-plugin-testing:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-plugin-testing
+        rationale: "Runtime dependency of maven-enforcer. Build dependency of maven-clean-plugin,\n\
+          \     maven-common-artifact-filters, maven-dependency-tree,\n     maven-enforcer,\
+          \ maven-install-plugin,\n     maven-invoker-plugin, maven-shared-utils,\n\
+          \     maven-source-plugin.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-plugin-testing
+      maven-plugin-tools:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-plugin-tools
+        rationale: "Runtime dependency of maven-plugins-pom,\n     maven-surefire.\n\
+          Build dependency of aqute-bnd, cal10n,\n     exec-maven-plugin, hawtjni,\
+          \ javacc-maven-plugin,\n     maven-antrun-plugin, maven-assembly-plugin,\n\
+          \     maven-clean-plugin, maven-compiler-plugin,\n     maven-dependency-plugin,\
+          \ maven-enforcer,\n     maven-install-plugin, maven-invoker-plugin,\n  \
+          \   maven-jar-plugin, maven-plugin-build-helper,\n     maven-plugin-bundle,\
+          \ maven-plugin-tools,\n     maven-plugins-pom, maven-remote-resources-plugin,\n\
+          \     maven-reporting-impl, maven-resources-plugin,\n     maven-shade-plugin,\
+          \ maven-source-plugin,\n     maven-surefire, modello, munge-maven-plugin,\n\
+          \     os-maven-plugin, plexus-component-api,\n     plexus-containers, sisu-mojos,\n\
+          \     spec-version-maven-plugin, xmvn.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-plugin-tools
+      maven-plugins-pom:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-plugins-pom
+        rationale: "Build dependency of maven-antrun-plugin,\n     maven-assembly-plugin,\
+          \ maven-clean-plugin,\n     maven-compiler-plugin, maven-dependency-plugin,\n\
+          \     maven-install-plugin, maven-invoker-plugin,\n     maven-jar-plugin,\
+          \ maven-remote-resources-plugin,\n     maven-resources-plugin, maven-shade-plugin,\n\
+          \     maven-source-plugin.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-plugins-pom
+      maven-remote-resources-plugin:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-remote-resources-plugin
+        rationale: "Runtime dependency of apache-parent, google-guice. Build dependency\
+          \ of apache-parent,\n     apache-resource-bundles, easymock,\n     glassfish-annotation-api,\
+          \ glassfish-el,\n     glassfish-legal, google-guice, objenesis.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-remote-resources-plugin
+      maven-reporting-api:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-reporting-api
+        rationale: "Runtime dependency of javacc-maven-plugin,\n     maven-dependency-plugin,\
+          \ maven-doxia-sitetools,\n     maven-invoker-plugin, maven-plugin-tools,\n\
+          \     maven-reporting-impl, maven-surefire.\nBuild dependency of javacc-maven-plugin,\n\
+          \     maven-dependency-plugin, maven-doxia-sitetools,\n     maven-invoker-plugin,\
+          \ maven-plugin-tools,\n     maven-reporting-impl, maven-surefire.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-reporting-api
+      maven-reporting-impl:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-reporting-impl
+        rationale: "Runtime dependency of javacc-maven-plugin,\n     maven-dependency-plugin,\
+          \ maven-invoker-plugin,\n     maven-plugin-tools, maven-surefire.\nBuild\
+          \ dependency of javacc-maven-plugin,\n     maven-dependency-plugin, maven-invoker-plugin,\n\
+          \     maven-plugin-tools, maven-surefire.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-reporting-impl
+      maven-resolver:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-resolver
+        rationale: "Runtime dependency of maven, maven-artifact-transfer,\n     maven-dependency-tree,\
+          \ xmvn.\nBuild dependency of aqute-bnd, maven,\n     maven-artifact-transfer,\
+          \ maven-common-artifact-filters,\n     maven-dependency-tree.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-resolver
+      maven-resources-plugin:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-resources-plugin
+        rationale: 'Runtime dependency of javapackages-tools. Build dependency of
+          plexus-component-api.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-resources-plugin
+      maven-script-interpreter:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-script-interpreter
+        rationale: 'Runtime dependency of maven-invoker-plugin. Build dependency of
+          maven-invoker-plugin.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-script-interpreter
+      maven-shade-plugin:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-shade-plugin
+        rationale: "Build dependency of maven-surefire, maven-wagon,\n     maven2,\
+          \ objectweb-asm, objenesis.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-shade-plugin
+      maven-shared:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-shared
+        rationale: "Build dependency of maven-archiver,\n     maven-artifact-resolver,\
+          \ maven-artifact-transfer,\n     maven-common-artifact-filters,\n     maven-dependency-analyzer,\
+          \ maven-dependency-tree,\n     maven-file-management, maven-filtering, maven-invoker,\n\
+          \     maven-reporting-api, maven-reporting-impl,\n     maven-script-interpreter,\
+          \ maven-shared-incremental,\n     maven-shared-io, maven-shared-utils, maven-verifier.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-shared
+      maven-shared-incremental:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-shared-incremental
+        rationale: 'Runtime dependency of maven-compiler-plugin. Build dependency
+          of maven-compiler-plugin.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-shared-incremental
+      maven-shared-io:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-shared-io
+        rationale: "Runtime dependency of maven-assembly-plugin,\n     maven-file-management.\n\
+          Build dependency of maven-assembly-plugin,\n     maven-file-management.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-shared-io
+      maven-shared-utils:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-shared-utils
+        rationale: "Runtime dependency of maven, maven-archiver,\n     maven-clean-plugin,\
+          \ maven-common-artifact-filters,\n     maven-compiler-plugin, maven-dependency-plugin,\n\
+          \     maven-file-management, maven-filtering,\n     maven-install-plugin,\
+          \ maven-reporting-impl,\n     maven-shared-incremental, maven-shared-io,\n\
+          \     maven-surefire, maven-verifier.\nBuild dependency of maven, maven-archiver,\n\
+          \     maven-clean-plugin, maven-common-artifact-filters,\n     maven-compiler-plugin,\
+          \ maven-file-management,\n     maven-filtering, maven-install-plugin,\n\
+          \     maven-reporting-impl, maven-shared-incremental,\n     maven-shared-io,\
+          \ maven-surefire, maven-verifier.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-shared-utils
+      maven-source-plugin:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-source-plugin
+        rationale: "Runtime dependency of google-guice, jboss-parent,\n     weld-parent.\n\
+          Build dependency of aqute-bnd, cal10n,\n     glassfish-annotation-api, glassfish-jsp-api,\n\
+          \     glassfish-servlet-api, google-guice, javamail,\n     javassist, jboss-interceptors-1.2-api,\
+          \ jboss-parent,\n     jline, jsch, maven-plugin-testing, maven-plugin-tools,\n\
+          \     munge-maven-plugin, slf4j, weld-parent, xbean.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-source-plugin
+      maven-surefire:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-surefire
+        rationale: "Runtime dependency of apache-commons-parent,\n     javapackages-tools,\
+          \ maven-plugin-tools.\nBuild dependency of apache-commons-lang,\n     apache-commons-logging,\
+          \ cdi-api, easymock,\n     glassfish-el, maven-plugin-tools, maven-surefire,\n\
+          \     plexus-languages.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-surefire
+      maven-verifier:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-verifier
+        rationale: 'Runtime dependency of maven-surefire. Build dependency of maven-surefire.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-verifier
+      maven-wagon:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven-wagon
+        rationale: "Runtime dependency of maven, maven-resolver,\n     maven-shared-io,\
+          \ maven2, xmvn.\nBuild dependency of maven, maven-dependency-plugin,\n \
+          \    maven-plugin-testing, maven-resolver, maven-shared-io,\n     maven2.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven-wagon
+      maven2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/maven2
+        rationale: "Runtime dependency of cal10n, exec-maven-plugin,\n     hawtjni,\
+          \ javacc-maven-plugin, maven-antrun-plugin,\n     maven-dependency-analyzer,\
+          \ maven-doxia-sitetools,\n     maven-install-plugin, maven-invoker-plugin,\n\
+          \     maven-plugin-build-helper, maven-plugin-tools,\n     maven-remote-resources-plugin,\
+          \ plexus-containers.\nBuild dependency of cal10n, exec-maven-plugin, hawtjni,\n\
+          \     javacc-maven-plugin, maven-antrun-plugin,\n     maven-artifact-resolver,\
+          \ maven-dependency-analyzer,\n     maven-doxia-sitetools, maven-install-plugin,\n\
+          \     maven-invoker-plugin, maven-plugin-build-helper,\n     maven-plugin-tools,\
+          \ maven-remote-resources-plugin,\n     plexus-containers.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/maven2
+      mockito:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/mockito
+        rationale: "Runtime dependency of assertj-core, felix-parent,\n     powermock.\n\
+          Build dependency of assertj-core,\n     felix-osgi-foundation, felix-parent,\n\
+          \     httpcomponents-client, httpcomponents-core, maven,\n     powermock.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/mockito
+      modello:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/modello
+        rationale: "Build dependency of maven, maven-assembly-plugin,\n     maven-doxia,\
+          \ maven-doxia-sitetools,\n     maven-file-management, maven-invoker-plugin,\n\
+          \     maven-plugin-tools, maven-remote-resources-plugin,\n     maven2, plexus-sec-dispatcher,\
+          \ xmvn.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/modello
+      mojo-parent:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/mojo-parent
+        rationale: "Build dependency of exec-maven-plugin,\n     javacc-maven-plugin,\
+          \ maven-plugin-build-helper.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/mojo-parent
+      munge-maven-plugin:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/munge-maven-plugin
+        rationale: 'Build dependency of google-guice.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/munge-maven-plugin
+      objectweb-asm:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/objectweb-asm
+        rationale: "Runtime dependency of cglib, easymock, hawtjni,\n     jdependency,\
+          \ maven-dependency-analyzer,\n     maven-plugin-tools, maven-shade-plugin,\n\
+          \     plexus-containers, plexus-languages, xbean, xmvn.\nBuild dependency\
+          \ of cglib, easymock, google-guice,\n     hawtjni, jdependency, maven-dependency-analyzer,\n\
+          \     maven-plugin-tools, maven-shade-plugin,\n     plexus-containers, plexus-languages,\
+          \ xbean, xmvn.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/objectweb-asm
+      objectweb-pom:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/objectweb-pom
+        rationale: 'Build dependency of objectweb-asm.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/objectweb-pom
+      objenesis:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/objenesis
+        rationale: 'Runtime dependency of easymock, mockito, powermock. Build dependency
+          of easymock, mockito, powermock.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/objenesis
+      os-maven-plugin:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/os-maven-plugin
+        rationale: 'Module API.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/os-maven-plugin
+      osgi-annotation:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/osgi-annotation
+        rationale: "Runtime dependency of aqute-bnd. Build dependency of aqute-bnd,\
+          \ osgi-compendium,\n     osgi-core.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/osgi-annotation
+      osgi-compendium:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/osgi-compendium
+        rationale: 'Runtime dependency of aqute-bnd. Build dependency of aqute-bnd.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/osgi-compendium
+      osgi-core:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/osgi-core
+        rationale: "Runtime dependency of aqute-bnd, maven-plugin-bundle. Build dependency\
+          \ of aqute-bnd, maven-plugin-bundle,\n     osgi-compendium, sisu.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/osgi-core
+      plexus-ant-factory:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-ant-factory
+        rationale: 'Runtime dependency of maven-plugin-tools. Build dependency of
+          maven-plugin-tools.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-ant-factory
+      plexus-archiver:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-archiver
+        rationale: "Runtime dependency of hawtjni, maven-archiver,\n     maven-assembly-plugin,\
+          \ maven-dependency-plugin,\n     maven-jar-plugin, maven-plugin-testing,\n\
+          \     maven-plugin-tools, maven-source-plugin.\nBuild dependency of hawtjni,\
+          \ maven-archiver,\n     maven-assembly-plugin, maven-dependency-plugin,\n\
+          \     maven-jar-plugin, maven-plugin-testing,\n     maven-plugin-tools,\
+          \ maven-source-plugin.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-archiver
+      plexus-bsh-factory:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-bsh-factory
+        rationale: 'Runtime dependency of maven-plugin-tools. Build dependency of
+          maven-plugin-tools.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-bsh-factory
+      plexus-build-api:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-build-api
+        rationale: "Runtime dependency of aqute-bnd, maven-filtering,\n     maven-plugin-bundle,\
+          \ modello.\nBuild dependency of aqute-bnd, maven-filtering,\n     maven-plugin-bundle,\
+          \ modello.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-build-api
+      plexus-cipher:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-cipher
+        rationale: "Runtime dependency of maven, plexus-sec-dispatcher,\n     xmvn.\n\
+          Build dependency of maven, plexus-sec-dispatcher.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-cipher
+      plexus-classworlds:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-classworlds
+        rationale: "Runtime dependency of maven, maven-dependency-plugin,\n     plexus-bsh-factory,\
+          \ plexus-component-api,\n     plexus-containers, sisu, xmvn.\nBuild dependency\
+          \ of maven, maven-dependency-plugin,\n     maven-resolver, plexus-ant-factory,\
+          \ plexus-bsh-factory,\n     plexus-component-api, plexus-containers, sisu.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-classworlds
+      plexus-cli:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-cli
+        rationale: 'Runtime dependency of plexus-containers. Build dependency of plexus-containers.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-cli
+      plexus-compiler:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-compiler
+        rationale: 'Runtime dependency of maven-compiler-plugin, modello. Build dependency
+          of maven-compiler-plugin, modello.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-compiler
+      plexus-component-api:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-component-api
+        rationale: "Runtime dependency of plexus-interactivity. Build dependency of\
+          \ maven-shared-incremental,\n     plexus-interactivity.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-component-api
+      plexus-component-factories-pom:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-component-factories-pom
+        rationale: 'Build dependency of plexus-ant-factory.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-component-factories-pom
+      plexus-components-pom:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-components-pom
+        rationale: "Runtime dependency of plexus-compiler,\n     plexus-interactivity.\n\
+          Build dependency of plexus-cli, plexus-compiler,\n     plexus-i18n, plexus-interactivity,\n\
+          \     plexus-interpolation, plexus-resources,\n     plexus-velocity.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-components-pom
+      plexus-containers:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-containers
+        rationale: "Runtime dependency of maven, maven-artifact-transfer,\n     maven-dependency-analyzer,\
+          \ maven-dependency-tree,\n     maven-doxia, maven-doxia-sitetools, maven-enforcer,\n\
+          \     maven-invoker, maven-plugin-tools,\n     maven-script-interpreter,\
+          \ maven-shared-incremental,\n     maven-wagon, maven2, modello, plexus-ant-factory,\n\
+          \     plexus-bsh-factory, plexus-cli, plexus-compiler,\n     plexus-component-factories-pom,\
+          \ plexus-components-pom,\n     plexus-i18n, plexus-resources, plexus-velocity,\
+          \ sisu,\n     xmvn.\nBuild dependency of exec-maven-plugin, maven,\n   \
+          \  maven-artifact-resolver, maven-artifact-transfer,\n     maven-assembly-plugin,\
+          \ maven-compiler-plugin,\n     maven-dependency-analyzer, maven-dependency-tree,\n\
+          \     maven-doxia, maven-doxia-sitetools, maven-enforcer,\n     maven-filtering,\
+          \ maven-invoker, maven-plugin-testing,\n     maven-plugin-tools, maven-resolver,\n\
+          \     maven-script-interpreter, maven-shade-plugin,\n     maven-shared-incremental,\
+          \ maven-shared-utils,\n     maven-wagon, maven2, modello, os-maven-plugin,\n\
+          \     plexus-ant-factory, plexus-archiver,\n     plexus-bsh-factory, plexus-build-api,\
+          \ plexus-cli,\n     plexus-compiler, plexus-component-api,\n     plexus-component-factories-pom,\
+          \ plexus-components-pom,\n     plexus-containers, plexus-i18n, plexus-io,\n\
+          \     plexus-languages, plexus-resources,\n     plexus-sec-dispatcher, plexus-velocity,\
+          \ sisu, xmvn.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-containers
+      plexus-i18n:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-i18n
+        rationale: "Runtime dependency of maven-doxia-sitetools,\n     maven-enforcer,\
+          \ maven-invoker-plugin.\nBuild dependency of maven-doxia-sitetools,\n  \
+          \   maven-enforcer, maven-invoker-plugin.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-i18n
+      plexus-interactivity:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-interactivity
+        rationale: 'Build dependency of maven-wagon.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-interactivity
+      plexus-interpolation:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-interpolation
+        rationale: "Runtime dependency of hawtjni, maven, maven-archiver,\n     maven-assembly-plugin,\
+          \ maven-doxia-sitetools,\n     maven-filtering, maven-invoker-plugin,\n\
+          \     maven-remote-resources-plugin, maven-resources-plugin,\n     maven2,\
+          \ xmvn.\nBuild dependency of hawtjni, maven, maven-archiver,\n     maven-assembly-plugin,\
+          \ maven-doxia-sitetools,\n     maven-filtering, maven-invoker-plugin,\n\
+          \     maven-remote-resources-plugin, maven-resources-plugin,\n     maven2.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-interpolation
+      plexus-io:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-io
+        rationale: "Runtime dependency of hawtjni, maven-assembly-plugin,\n     maven-dependency-plugin,\
+          \ plexus-archiver.\nBuild dependency of hawtjni, maven-assembly-plugin,\n\
+          \     maven-dependency-plugin, plexus-archiver.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-io
+      plexus-languages:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-languages
+        rationale: "Runtime dependency of maven-compiler-plugin,\n     maven-surefire.\n\
+          Build dependency of maven-compiler-plugin,\n     maven-surefire.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-languages
+      plexus-pom:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-pom
+        rationale: "Runtime dependency of plexus-component-factories-pom,\n     plexus-components-pom,\
+          \ plexus-containers.\nBuild dependency of plexus-archiver,\n     plexus-classworlds,\
+          \ plexus-component-factories-pom,\n     plexus-components-pom, plexus-containers,\
+          \ plexus-io,\n     plexus-languages, plexus-utils.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-pom
+      plexus-resources:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-resources
+        rationale: "Runtime dependency of maven-remote-resources-plugin,\n     spec-version-maven-plugin.\n\
+          Build dependency of maven-remote-resources-plugin,\n     spec-version-maven-plugin.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-resources
+      plexus-sec-dispatcher:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-sec-dispatcher
+        rationale: 'Runtime dependency of maven, xmvn. Build dependency of maven.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-sec-dispatcher
+      plexus-utils:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-utils
+        rationale: "Runtime dependency of exec-maven-plugin, hawtjni,\n     javacc-maven-plugin,\
+          \ maven, maven-antrun-plugin,\n     maven-archiver, maven-artifact-transfer,\n\
+          \     maven-assembly-plugin, maven-dependency-analyzer,\n     maven-dependency-plugin,\
+          \ maven-doxia,\n     maven-doxia-sitetools, maven-enforcer,\n     maven-file-management,\
+          \ maven-filtering,\n     maven-install-plugin, maven-invoker,\n     maven-invoker-plugin,\
+          \ maven-jar-plugin,\n     maven-plugin-build-helper, maven-plugin-bundle,\n\
+          \     maven-plugin-tools, maven-remote-resources-plugin,\n     maven-reporting-impl,\
+          \ maven-resources-plugin,\n     maven-script-interpreter, maven-shade-plugin,\n\
+          \     maven-shared-io, maven-source-plugin, maven-surefire,\n     maven-wagon,\
+          \ maven2, modello, os-maven-plugin,\n     plexus-ant-factory, plexus-archiver,\n\
+          \     plexus-bsh-factory, plexus-build-api, plexus-cli,\n     plexus-compiler,\
+          \ plexus-containers, plexus-i18n,\n     plexus-interactivity, plexus-io,\
+          \ plexus-resources,\n     plexus-sec-dispatcher, sisu, sisu-mojos, xmvn.\n\
+          Build dependency of exec-maven-plugin, hawtjni,\n     javacc-maven-plugin,\
+          \ maven, maven-antrun-plugin,\n     maven-archiver, maven-artifact-transfer,\n\
+          \     maven-assembly-plugin, maven-dependency-analyzer,\n     maven-dependency-plugin,\
+          \ maven-doxia,\n     maven-doxia-sitetools, maven-enforcer,\n     maven-file-management,\
+          \ maven-filtering,\n     maven-install-plugin, maven-invoker,\n     maven-invoker-plugin,\
+          \ maven-jar-plugin,\n     maven-plugin-build-helper, maven-plugin-bundle,\n\
+          \     maven-plugin-testing, maven-plugin-tools,\n     maven-remote-resources-plugin,\
+          \ maven-reporting-impl,\n     maven-resolver, maven-resources-plugin,\n\
+          \     maven-script-interpreter, maven-shade-plugin,\n     maven-shared-io,\
+          \ maven-source-plugin, maven-surefire,\n     maven-wagon, maven2, modello,\
+          \ os-maven-plugin,\n     plexus-ant-factory, plexus-archiver,\n     plexus-bsh-factory,\
+          \ plexus-build-api, plexus-cli,\n     plexus-compiler, plexus-containers,\
+          \ plexus-i18n,\n     plexus-interactivity, plexus-io, plexus-resources,\n\
+          \     plexus-sec-dispatcher, sisu, sisu-mojos.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-utils
+      plexus-velocity:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/plexus-velocity
+        rationale: "Runtime dependency of maven-doxia-sitetools,\n     maven-plugin-tools.\n\
+          Build dependency of maven-doxia-sitetools,\n     maven-plugin-tools.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/plexus-velocity
+      powermock:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/powermock
+        rationale: 'Build dependency of apache-commons-compress, jline.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/powermock
+      qdox:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/qdox
+        rationale: "Runtime dependency of hamcrest, maven-plugin-tools,\n     plexus-containers,\
+          \ plexus-languages.\nBuild dependency of hamcrest, maven-plugin-tools,\n\
+          \     plexus-containers, plexus-languages.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/qdox
+      regexp:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/regexp
+        rationale: 'Runtime dependency of ant, xalan-j2. Build dependency of ant,
+          xalan-j2.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/regexp
+      sisu:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/sisu
+        rationale: 'Runtime dependency of maven, sisu-mojos, xmvn. Build dependency
+          of maven, maven-resolver, sisu-mojos.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/sisu
+      sisu-mojos:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/sisu-mojos
+        rationale: "Build dependency of maven, maven-resolver,\n     plexus-cipher.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/sisu-mojos
+      slf4j:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/slf4j
+        rationale: "Runtime dependency of aqute-bnd, maven,\n     maven-artifact-transfer,\
+          \ maven-resolver, maven-wagon,\n     sisu-mojos, xbean, xmvn.\nBuild dependency\
+          \ of aqute-bnd, google-guice, maven,\n     maven-artifact-transfer, maven-resolver,\
+          \ maven-wagon,\n     sisu, sisu-mojos, xbean.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/slf4j
+      sonatype-oss-parent:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/sonatype-oss-parent
+        rationale: "Build dependency of apache-ivy, beust-jcommander,\n     cglib,\
+          \ guava20, jaxen, jflex, jline, jsch,\n     os-maven-plugin, powermock,\
+          \ qdox, sisu-mojos, testng.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/sonatype-oss-parent
+      sonatype-plugins-parent:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/sonatype-plugins-parent
+        rationale: 'Build dependency of munge-maven-plugin.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/sonatype-plugins-parent
+      spec-version-maven-plugin:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/spec-version-maven-plugin
+        rationale: 'Build dependency of glassfish-annotation-api.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/spec-version-maven-plugin
+      spice-parent:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/spice-parent
+        rationale: "Build dependency of plexus-build-api, plexus-cipher,\n     plexus-sec-dispatcher.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/spice-parent
+      testng:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/testng
+        rationale: "Runtime dependency of hamcrest, powermock. Build dependency of\
+          \ beust-jcommander, cdi-api,\n     easymock, hamcrest, maven-surefire, powermock,\
+          \ sisu.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/testng
+      velocity:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/velocity
+        rationale: "Runtime dependency of maven-doxia-sitetools,\n     maven-plugin-tools,\
+          \ maven-remote-resources-plugin,\n     plexus-velocity.\nBuild dependency\
+          \ of maven-doxia-sitetools,\n     maven-plugin-tools, maven-remote-resources-plugin,\n\
+          \     plexus-velocity.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/velocity
+      weld-parent:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/weld-parent
+        rationale: 'Build dependency of cdi-api.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/weld-parent
+      xalan-j2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/xalan-j2
+        rationale: "Runtime dependency of ant, maven-doxia-sitetools,\n     xerces-j2,\
+          \ xmlunit.\nBuild dependency of ant, bsf, jdom2,\n     maven-doxia-sitetools,\
+          \ xerces-j2, xmlunit.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/xalan-j2
+      xbean:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/xbean
+        rationale: 'Runtime dependency of hawtjni, plexus-containers. Build dependency
+          of hawtjni, plexus-containers.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/xbean
+      xerces-j2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/xerces-j2
+        rationale: "Runtime dependency of ant-contrib, xalan-j2. Build dependency\
+          \ of ant-contrib, apache-commons-jxpath,\n     jaxen, jdom, jdom2, xalan-j2,\
+          \ xmlunit.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/xerces-j2
+      xml-commons-apis:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/xml-commons-apis
+        rationale: "Runtime dependency of jtidy, maven-doxia-sitetools,\n     xalan-j2,\
+          \ xerces-j2, xmlunit.\nBuild dependency of apache-commons-jxpath, jaxen,\n\
+          \     jdom2, jtidy, maven-doxia-sitetools,\n     plexus-classworlds, xalan-j2,\
+          \ xerces-j2, xmlunit.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/xml-commons-apis
+      xml-commons-resolver:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/xml-commons-resolver
+        rationale: 'Runtime dependency of ant, xerces-j2. Build dependency of ant,
+          xerces-j2.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/xml-commons-resolver
+      xmlunit:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/xmlunit
+        rationale: 'Runtime dependency of maven-doxia. Build dependency of maven,
+          maven-doxia, xmvn.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/xmlunit
+      xmvn:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/xmvn
+        rationale: 'Runtime dependency of javapackages-tools.
+
+          '
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/xmvn
+      xz-java:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/xz-java
+        rationale: "Runtime dependency of ant, plexus-archiver. Build dependency of\
+          \ ant, apache-commons-compress,\n     plexus-archiver.\n"
+        ref: stream-javapackages-tools-201801
+        repository: git://pkgs.devel.redhat.com/rpms/xz-java
+  api:
+    rpms:
+    - ivy-local
+    - javapackages-local
+    - javapackages-tools
+    - maven-local
+    - os-maven-plugin
+  buildopts:
+    rpms:
+      macros: '%_with_xmvn_javadoc 1
+
+        %_without_asciidoc 1
+
+        %_without_avalon 1
+
+        %_without_bouncycastle 1
+
+        %_without_cython 1
+
+        %_without_dafsa 1
+
+        %_without_desktop 1
+
+        %_without_dom4j 1
+
+        %_without_doxygen 1
+
+        %_without_dtd 1
+
+        %_without_eclipse 1
+
+        %_without_ehcache 1
+
+        %_without_emacs 1
+
+        %_without_equinox 1
+
+        %_without_fop 1
+
+        %_without_ftp 1
+
+        %_without_gradle 1
+
+        %_without_groovy 1
+
+        %_without_hadoop 1
+
+        %_without_hsqldb 1
+
+        %_without_itext 1
+
+        %_without_jackson 1
+
+        %_without_jmh 1
+
+        %_without_jna 1
+
+        %_without_jpa 1
+
+        %_without_junit5 1
+
+        %_without_logback 1
+
+        %_without_markdown 1
+
+        %_without_memcached 1
+
+        %_without_memoryfilesystem 1
+
+        %_without_obr 1
+
+        %_without_python 1
+
+        %_without_reporting 1
+
+        %_without_scm 1
+
+        %_without_snakeyaml 1
+
+        %_without_snappy 1
+
+        %_without_spring 1
+
+        %_without_ssh 1
+
+        %_without_testlib 1
+
+        %_without_vfs 1
+
+        '
+  profiles:
+    common:
+      rpms:
+      - javapackages-tools
+  artifacts:
+    rpms:
+    - plexus-cli-javadoc-0:1.6-6.module+el8+2598+06babf2e.noarch
+    - jansi-javadoc-0:1.17.1-1.module+el8+2598+06babf2e.noarch
+    - maven-antrun-plugin-0:1.8-6.module+el8+2598+06babf2e.noarch
+    - ant-apache-oro-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - plexus-containers-container-default-0:1.7.1-8.module+el8+2598+06babf2e.noarch
+    - maven-reporting-impl-0:3.0.0-4.module+el8+2598+06babf2e.noarch
+    - geronimo-jpa-javadoc-0:1.1.1-21.module+el8+2598+06babf2e.noarch
+    - jsr-305-0:0-0.22.20130910svn.module+el8+2598+06babf2e.noarch
+    - objectweb-asm-javadoc-0:6.2-5.module+el8+2598+06babf2e.noarch
+    - maven-resolver-transport-http-1:1.1.1-2.module+el8+2598+06babf2e.noarch
+    - testng-javadoc-0:6.14.3-5.module+el8+2598+06babf2e.noarch
+    - maven-doxia-modules-0:1.7-8.module+el8+2598+06babf2e.noarch
+    - maven-surefire-provider-junit-0:2.22.0-3.module+el8+2598+06babf2e.noarch
+    - xbean-0:4.8-1.module+el8+2598+06babf2e.noarch
+    - guava20-testlib-0:20.0-8.module+el8+2598+06babf2e.noarch
+    - maven-plugin-tools-annotations-0:3.5.1-4.module+el8+2598+06babf2e.noarch
+    - plexus-containers-0:1.7.1-8.module+el8+2598+06babf2e.noarch
+    - hamcrest-core-0:1.3-23.module+el8+2598+06babf2e.noarch
+    - easymock-javadoc-0:3.5-4.module+el8+2598+06babf2e.noarch
+    - geronimo-annotation-0:1.0-23.module+el8+2598+06babf2e.noarch
+    - ant-antlr-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - modello-0:1.9.1-7.module+el8+2598+06babf2e.noarch
+    - velocity-manual-0:1.7-24.module+el8+2598+06babf2e.noarch
+    - apache-commons-exec-javadoc-0:1.3-8.module+el8+2598+06babf2e.noarch
+    - osgi-compendium-0:6.0.0-5.module+el8+2598+06babf2e.noarch
+    - httpcomponents-client-0:4.5.5-4.module+el8+2598+06babf2e.noarch
+    - byaccj-debuginfo-0:1.15-17.module+el8+2598+06babf2e.x86_64
+    - ant-apache-regexp-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - maven-failsafe-plugin-0:2.22.0-3.module+el8+2598+06babf2e.noarch
+    - maven-compiler-plugin-javadoc-0:3.7.0-2.module+el8+2598+06babf2e.noarch
+    - velocity-javadoc-0:1.7-24.module+el8+2598+06babf2e.noarch
+    - jtidy-javadoc-2:1.0-0.28.20100930svn1125.module+el8+2598+06babf2e.noarch
+    - maven-resolver-transport-file-1:1.1.1-2.module+el8+2598+06babf2e.noarch
+    - maven-doxia-module-latex-0:1.7-8.module+el8+2598+06babf2e.noarch
+    - geronimo-jms-javadoc-0:1.1.1-25.module+el8+2598+06babf2e.noarch
+    - xerces-j2-javadoc-0:2.11.0-34.module+el8+2598+06babf2e.noarch
+    - hamcrest-javadoc-0:1.3-23.module+el8+2598+06babf2e.noarch
+    - apache-commons-compress-0:1.18-1.module+el8+2598+06babf2e.noarch
+    - antlr-C++-0:2.7.7-56.module+el8+2598+06babf2e.x86_64
+    - guice-multibindings-0:4.1-11.module+el8+2598+06babf2e.noarch
+    - jdom2-0:2.0.6-12.module+el8+2598+06babf2e.noarch
+    - xalan-j2-javadoc-0:2.7.1-38.module+el8+2598+06babf2e.noarch
+    - maven-resolver-transport-classpath-1:1.1.1-2.module+el8+2598+06babf2e.noarch
+    - maven-shared-0:22-6.module+el8+2598+06babf2e.noarch
+    - ivy-local-0:5.3.0-2.module+el8+2598+06babf2e.noarch
+    - maven-doxia-module-xhtml-0:1.7-8.module+el8+2598+06babf2e.noarch
+    - maven-doxia-module-apt-0:1.7-8.module+el8+2598+06babf2e.noarch
+    - xmvn-tools-pom-0:3.0.0-21.module+el8+2598+06babf2e.noarch
+    - xml-commons-apis-javadoc-0:1.4.01-25.module+el8+2598+06babf2e.noarch
+    - byaccj-0:1.15-17.module+el8+2598+06babf2e.x86_64
+    - xmlunit-0:1.6-7.module+el8+2598+06babf2e.noarch
+    - google-guice-javadoc-0:4.1-11.module+el8+2598+06babf2e.noarch
+    - plexus-containers-javadoc-0:1.7.1-8.module+el8+2598+06babf2e.noarch
+    - xalan-j2-xsltc-0:2.7.1-38.module+el8+2598+06babf2e.noarch
+    - apache-commons-lang3-0:3.7-3.module+el8+2598+06babf2e.noarch
+    - plexus-interactivity-jline-0:1.0-0.27.alpha6.module+el8+2598+06babf2e.noarch
+    - maven-plugin-tools-beanshell-0:3.5.1-4.module+el8+2598+06babf2e.noarch
+    - maven-doxia-javadoc-0:1.7-8.module+el8+2598+06babf2e.noarch
+    - maven-shared-io-javadoc-1:3.0.0-5.module+el8+2598+06babf2e.noarch
+    - osgi-compendium-javadoc-0:6.0.0-5.module+el8+2598+06babf2e.noarch
+    - plexus-interactivity-api-0:1.0-0.27.alpha6.module+el8+2598+06babf2e.noarch
+    - maven-resolver-util-1:1.1.1-2.module+el8+2598+06babf2e.noarch
+    - slf4j-sources-0:1.7.25-4.module+el8+2598+06babf2e.noarch
+    - sisu-inject-1:0.3.3-6.module+el8+2598+06babf2e.noarch
+    - maven-artifact-resolver-javadoc-1:1.0-18.module+el8+2598+06babf2e.noarch
+    - jboss-interceptors-1.2-api-0:1.0.0-8.module+el8+2598+06babf2e.noarch
+    - atinject-0:1-28.20100611svn86.module+el8+2598+06babf2e.noarch
+    - maven-file-management-javadoc-1:3.0.0-5.module+el8+2598+06babf2e.noarch
+    - maven-resolver-javadoc-1:1.1.1-2.module+el8+2598+06babf2e.noarch
+    - apache-ivy-0:2.4.0-14.module+el8+2598+06babf2e.noarch
+    - aqute-bnd-javadoc-0:3.5.0-4.module+el8+2598+06babf2e.noarch
+    - ant-xz-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - ant-javamail-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - jcl-over-slf4j-0:1.7.25-4.module+el8+2598+06babf2e.noarch
+    - glassfish-master-pom-0:8-11.module+el8+2598+06babf2e.noarch
+    - bnd-maven-plugin-0:3.5.0-4.module+el8+2598+06babf2e.noarch
+    - maven-plugin-tools-0:3.5.1-4.module+el8+2598+06babf2e.noarch
+    - maven-doxia-sitetools-javadoc-0:1.7.5-2.module+el8+2598+06babf2e.noarch
+    - junit-javadoc-1:4.12-9.module+el8+2598+06babf2e.noarch
+    - apache-commons-exec-0:1.3-8.module+el8+2598+06babf2e.noarch
+    - maven-plugin-tools-api-0:3.5.1-4.module+el8+2598+06babf2e.noarch
+    - jflex-javadoc-0:1.6.1-12.module+el8+2598+06babf2e.noarch
+    - maven-reporting-api-1:3.0-14.module+el8+2598+06babf2e.noarch
+    - cdi-api-0:1.2-8.module+el8+2598+06babf2e.noarch
+    - guice-jmx-0:4.1-11.module+el8+2598+06babf2e.noarch
+    - powermock-api-mockito-0:1.6.5-9.module+el8+2598+06babf2e.noarch
+    - maven-remote-resources-plugin-0:1.5-2.module+el8+2598+06babf2e.noarch
+    - plexus-compiler-extras-0:2.8.2-2.module+el8+2598+06babf2e.noarch
+    - guice-bom-0:4.1-11.module+el8+2598+06babf2e.noarch
+    - ant-commons-net-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - felix-utils-0:1.10.4-2.module+el8+2598+06babf2e.noarch
+    - ant-contrib-0:1.0-0.32.b3.module+el8+2598+06babf2e.noarch
+    - spec-version-maven-plugin-0:1.2-11.module+el8+2598+06babf2e.noarch
+    - maven2-javadoc-0:2.2.1-59.module+el8+2598+06babf2e.noarch
+    - maven-artifact-transfer-1:0.9.0-4.module+el8+2598+06babf2e.noarch
+    - sisu-mojos-javadoc-0:0.3.1-8.module+el8+2598+06babf2e.noarch
+    - powermock-junit4-0:1.6.5-9.module+el8+2598+06babf2e.noarch
+    - maven-doxia-logging-api-0:1.7-8.module+el8+2598+06babf2e.noarch
+    - glassfish-legal-0:1.1-11.module+el8+2598+06babf2e.noarch
+    - maven-assembly-plugin-0:3.1.0-3.module+el8+2598+06babf2e.noarch
+    - maven-plugin-registry-0:2.2.1-59.module+el8+2598+06babf2e.noarch
+    - jakarta-commons-httpclient-javadoc-1:3.1-28.module+el8+2598+06babf2e.noarch
+    - maven-wagon-provider-api-0:3.1.0-1.module+el8+2598+06babf2e.noarch
+    - jdepend-demo-0:2.9.1-18.module+el8+2598+06babf2e.noarch
+    - xmvn-parent-pom-0:3.0.0-21.module+el8+2598+06babf2e.noarch
+    - apache-commons-beanutils-0:1.9.3-4.module+el8+2598+06babf2e.noarch
+    - powermock-common-0:1.6.5-9.module+el8+2598+06babf2e.noarch
+    - ant-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - guice-servlet-0:4.1-11.module+el8+2598+06babf2e.noarch
+    - javamail-javadoc-0:1.5.2-7.module+el8+2598+06babf2e.noarch
+    - plexus-languages-0:0.9.10-3.module+el8+2598+06babf2e.noarch
+    - maven-assembly-plugin-javadoc-0:3.1.0-3.module+el8+2598+06babf2e.noarch
+    - bsh-manual-0:2.0-13.b6.module+el8+2598+06babf2e.noarch
+    - maven-resolver-1:1.1.1-2.module+el8+2598+06babf2e.noarch
+    - maven-doxia-0:1.7-8.module+el8+2598+06babf2e.noarch
+    - ant-apache-log4j-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - maven-filtering-javadoc-0:3.1.1-5.module+el8+2598+06babf2e.noarch
+    - plexus-component-api-javadoc-0:1.0-0.24.alpha15.module+el8+2598+06babf2e.noarch
+    - apache-commons-lang3-javadoc-0:3.7-3.module+el8+2598+06babf2e.noarch
+    - cglib-javadoc-0:3.2.4-7.module+el8+2598+06babf2e.noarch
+    - plexus-archiver-javadoc-0:3.6.0-1.module+el8+2598+06babf2e.noarch
+    - log4j-over-slf4j-0:1.7.25-4.module+el8+2598+06babf2e.noarch
+    - xml-commons-apis-0:1.4.01-25.module+el8+2598+06babf2e.noarch
+    - xbean-javadoc-0:4.8-1.module+el8+2598+06babf2e.noarch
+    - maven-wagon-javadoc-0:3.1.0-1.module+el8+2598+06babf2e.noarch
+    - slf4j-log4j12-0:1.7.25-4.module+el8+2598+06babf2e.noarch
+    - maven-install-plugin-javadoc-0:2.5.2-7.module+el8+2598+06babf2e.noarch
+    - guice-throwingproviders-0:4.1-11.module+el8+2598+06babf2e.noarch
+    - maven-wagon-file-0:3.1.0-1.module+el8+2598+06babf2e.noarch
+    - spice-parent-0:26-8.module+el8+2598+06babf2e.noarch
+    - maven-script-interpreter-javadoc-0:1.1-11.module+el8+2598+06babf2e.noarch
+    - plexus-resources-0:1.0-0.23.a7.module+el8+2598+06babf2e.noarch
+    - httpcomponents-client-cache-0:4.5.5-4.module+el8+2598+06babf2e.noarch
+    - maven-invoker-0:2.2-7.module+el8+2598+06babf2e.noarch
+    - maven-dependency-tree-0:3.0-5.module+el8+2598+06babf2e.noarch
+    - ant-jsch-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - maven-shade-plugin-0:3.1.0-3.module+el8+2598+06babf2e.noarch
+    - powermock-reflect-0:1.6.5-9.module+el8+2598+06babf2e.noarch
+    - qdox-0:2.0-3.M9.module+el8+2598+06babf2e.noarch
+    - xmvn-subst-0:3.0.0-21.module+el8+2598+06babf2e.noarch
+    - maven-surefire-javadoc-0:2.22.0-3.module+el8+2598+06babf2e.noarch
+    - maven-file-management-1:3.0.0-5.module+el8+2598+06babf2e.noarch
+    - hawtjni-runtime-0:1.16-2.module+el8+2598+06babf2e.noarch
+    - aqute-bndlib-0:3.5.0-4.module+el8+2598+06babf2e.noarch
+    - ant-commons-logging-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - jzlib-demo-0:1.1.3-8.module+el8+2598+06babf2e.noarch
+    - maven-artifact-transfer-javadoc-1:0.9.0-4.module+el8+2598+06babf2e.noarch
+    - plexus-utils-javadoc-0:3.1.0-3.module+el8+2598+06babf2e.noarch
+    - maven-resolver-transport-wagon-1:1.1.1-2.module+el8+2598+06babf2e.noarch
+    - plexus-interactivity-0:1.0-0.27.alpha6.module+el8+2598+06babf2e.noarch
+    - maven-jar-plugin-javadoc-0:3.1.0-1.module+el8+2598+06babf2e.noarch
+    - guice-parent-0:4.1-11.module+el8+2598+06babf2e.noarch
+    - isorelax-1:0-0.23.release20050331.module+el8+2598+06babf2e.noarch
+    - assertj-core-javadoc-0:3.8.0-2.module+el8+2598+06babf2e.noarch
+    - xmvn-connector-aether-0:3.0.0-21.module+el8+2598+06babf2e.noarch
+    - maven-doxia-module-twiki-0:1.7-8.module+el8+2598+06babf2e.noarch
+    - regexp-1:1.5-26.module+el8+2598+06babf2e.noarch
+    - qdox-javadoc-0:2.0-3.M9.module+el8+2598+06babf2e.noarch
+    - javapackages-filesystem-0:5.3.0-2.module+el8+2598+06babf2e.noarch
+    - maven-plugin-testing-javadoc-0:3.3.0-12.module+el8+2598+06babf2e.noarch
+    - python3-javapackages-0:5.3.0-2.module+el8+2598+06babf2e.noarch
+    - maven-source-plugin-javadoc-0:3.0.1-4.module+el8+2598+06babf2e.noarch
+    - apache-commons-logging-0:1.2-13.module+el8+2598+06babf2e.noarch
+    - plexus-component-factories-pom-0:1.0-0.15.alpha11.module+el8+2598+06babf2e.noarch
+    - os-maven-plugin-0:1.2.3-9.module+el8+2598+06babf2e.noarch
+    - felix-osgi-compendium-javadoc-0:1.4.0-26.module+el8+2598+06babf2e.noarch
+    - slf4j-0:1.7.25-4.module+el8+2598+06babf2e.noarch
+    - maven-clean-plugin-0:3.0.0-5.module+el8+2598+06babf2e.noarch
+    - plexus-i18n-0:1.0-0.11.b10.4.module+el8+2598+06babf2e.noarch
+    - plexus-components-pom-0:1.3.1-10.module+el8+2598+06babf2e.noarch
+    - xmvn-bisect-0:3.0.0-21.module+el8+2598+06babf2e.noarch
+    - powermock-testng-0:1.6.5-9.module+el8+2598+06babf2e.noarch
+    - maven-plugin-bundle-0:3.5.0-2.module+el8+2598+06babf2e.noarch
+    - maven-resolver-spi-1:1.1.1-2.module+el8+2598+06babf2e.noarch
+    - xmvn-resolve-0:3.0.0-21.module+el8+2598+06babf2e.noarch
+    - maven-surefire-report-plugin-0:2.22.0-3.module+el8+2598+06babf2e.noarch
+    - maven-enforcer-javadoc-0:1.4.1-8.module+el8+2598+06babf2e.noarch
+    - guice-assistedinject-0:4.1-11.module+el8+2598+06babf2e.noarch
+    - hamcrest-0:1.3-23.module+el8+2598+06babf2e.noarch
+    - jakarta-oro-0:2.0.8-23.module+el8+2598+06babf2e.noarch
+    - maven-surefire-report-parser-0:2.22.0-3.module+el8+2598+06babf2e.noarch
+    - maven-shared-incremental-javadoc-0:1.1-14.module+el8+2598+06babf2e.noarch
+    - sonatype-plugins-parent-0:8-12.module+el8+2598+06babf2e.noarch
+    - antlr-javadoc-0:2.7.7-56.module+el8+2598+06babf2e.noarch
+    - jakarta-commons-httpclient-1:3.1-28.module+el8+2598+06babf2e.noarch
+    - hamcrest-demo-0:1.3-23.module+el8+2598+06babf2e.noarch
+    - plexus-cipher-0:1.7-14.module+el8+2598+06babf2e.noarch
+    - jaxen-0:1.1.6-18.module+el8+2598+06babf2e.noarch
+    - forge-parent-0:38-11.module+el8+2598+06babf2e.noarch
+    - maven-plugin-tools-generators-0:3.5.1-4.module+el8+2598+06babf2e.noarch
+    - maven-jar-plugin-0:3.1.0-1.module+el8+2598+06babf2e.noarch
+    - maven-cal10n-plugin-0:0.8.1-7.module+el8+2598+06babf2e.noarch
+    - xml-commons-resolver-0:1.2-26.module+el8+2598+06babf2e.noarch
+    - maven-doxia-sitetools-0:1.7.5-2.module+el8+2598+06babf2e.noarch
+    - plexus-component-api-0:1.0-0.24.alpha15.module+el8+2598+06babf2e.noarch
+    - jansi-0:1.17.1-1.module+el8+2598+06babf2e.noarch
+    - maven-plugin-plugin-0:3.5.1-4.module+el8+2598+06babf2e.noarch
+    - maven-wagon-http-lightweight-0:3.1.0-1.module+el8+2598+06babf2e.noarch
+    - hawtjni-0:1.16-2.module+el8+2598+06babf2e.noarch
+    - apache-commons-jxpath-0:1.3-29.module+el8+2598+06babf2e.noarch
+    - jakarta-commons-httpclient-demo-1:3.1-28.module+el8+2598+06babf2e.noarch
+    - apache-resource-bundles-0:2-20.module+el8+2598+06babf2e.noarch
+    - maven-project-0:2.2.1-59.module+el8+2598+06babf2e.noarch
+    - bsf-0:2.4.0-30.module+el8+2598+06babf2e.noarch
+    - maven-plugins-pom-0:28-7.module+el8+2598+06babf2e.noarch
+    - maven-doxia-module-confluence-0:1.7-8.module+el8+2598+06babf2e.noarch
+    - apache-commons-compress-javadoc-0:1.18-1.module+el8+2598+06babf2e.noarch
+    - plexus-utils-0:3.1.0-3.module+el8+2598+06babf2e.noarch
+    - osgi-annotation-javadoc-0:6.0.0-7.module+el8+2598+06babf2e.noarch
+    - httpcomponents-client-javadoc-0:4.5.5-4.module+el8+2598+06babf2e.noarch
+    - bsh-javadoc-0:2.0-13.b6.module+el8+2598+06babf2e.noarch
+    - maven-wagon-http-shared-0:3.1.0-1.module+el8+2598+06babf2e.noarch
+    - maven-doxia-test-docs-0:1.7-8.module+el8+2598+06babf2e.noarch
+    - junit-manual-1:4.12-9.module+el8+2598+06babf2e.noarch
+    - maven-lib-1:3.5.4-5.module+el8+2598+06babf2e.noarch
+    - junit-1:4.12-9.module+el8+2598+06babf2e.noarch
+    - jline-0:2.14.6-2.module+el8+2598+06babf2e.noarch
+    - plexus-bsh-factory-0:1.0-0.19.a7.module+el8+2598+06babf2e.noarch
+    - xalan-j2-manual-0:2.7.1-38.module+el8+2598+06babf2e.noarch
+    - aopalliance-javadoc-0:1.0-17.module+el8+2598+06babf2e.noarch
+    - plexus-ant-factory-javadoc-0:1.0-0.20.a2.2.module+el8+2598+06babf2e.noarch
+    - ant-jmf-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - jsoup-0:1.11.3-3.module+el8+2598+06babf2e.noarch
+    - osgi-annotation-0:6.0.0-7.module+el8+2598+06babf2e.noarch
+    - maven-plugin-descriptor-0:2.2.1-59.module+el8+2598+06babf2e.noarch
+    - sisu-mojos-0:0.3.1-8.module+el8+2598+06babf2e.noarch
+    - exec-maven-plugin-0:1.6.0-3.module+el8+2598+06babf2e.noarch
+    - apache-commons-collections-testframework-0:3.2.2-10.module+el8+2598+06babf2e.noarch
+    - powermock-api-easymock-0:1.6.5-9.module+el8+2598+06babf2e.noarch
+    - testng-0:6.14.3-5.module+el8+2598+06babf2e.noarch
+    - antlr-manual-0:2.7.7-56.module+el8+2598+06babf2e.noarch
+    - maven-invoker-plugin-0:1.10-7.module+el8+2598+06babf2e.noarch
+    - geronimo-jpa-0:1.1.1-21.module+el8+2598+06babf2e.noarch
+    - plexus-containers-component-annotations-0:1.7.1-8.module+el8+2598+06babf2e.noarch
+    - plexus-build-api-javadoc-0:0.0.7-20.module+el8+2598+06babf2e.noarch
+    - maven-enforcer-rules-0:1.4.1-8.module+el8+2598+06babf2e.noarch
+    - guice-grapher-0:4.1-11.module+el8+2598+06babf2e.noarch
+    - guava20-0:20.0-8.module+el8+2598+06babf2e.noarch
+    - slf4j-manual-0:1.7.25-4.module+el8+2598+06babf2e.noarch
+    - beust-jcommander-0:1.71-5.module+el8+2598+06babf2e.noarch
+    - maven-dependency-analyzer-0:1.8-2.module+el8+2598+06babf2e.noarch
+    - jsch-javadoc-0:0.1.54-6.module+el8+2598+06babf2e.noarch
+    - ant-testutil-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - jsr-305-javadoc-0:0-0.22.20130910svn.module+el8+2598+06babf2e.noarch
+    - weld-parent-0:34-5.module+el8+2598+06babf2e.noarch
+    - objectweb-asm-0:6.2-5.module+el8+2598+06babf2e.noarch
+    - osgi-core-javadoc-0:6.0.0-6.module+el8+2598+06babf2e.noarch
+    - maven-settings-0:2.2.1-59.module+el8+2598+06babf2e.noarch
+    - maven-shared-incremental-0:1.1-14.module+el8+2598+06babf2e.noarch
+    - assertj-core-0:3.8.0-2.module+el8+2598+06babf2e.noarch
+    - jul-to-slf4j-0:1.7.25-4.module+el8+2598+06babf2e.noarch
+    - maven-script-0:3.5.1-4.module+el8+2598+06babf2e.noarch
+    - maven-resolver-impl-1:1.1.1-2.module+el8+2598+06babf2e.noarch
+    - apache-commons-collections-javadoc-0:3.2.2-10.module+el8+2598+06babf2e.noarch
+    - sonatype-oss-parent-0:7-14.module+el8+2598+06babf2e.noarch
+    - objenesis-0:2.6-2.module+el8+2598+06babf2e.noarch
+    - jdependency-0:1.2-2.module+el8+2598+06babf2e.noarch
+    - maven-artifact-manager-0:2.2.1-59.module+el8+2598+06babf2e.noarch
+    - bsh-0:2.0-13.b6.module+el8+2598+06babf2e.noarch
+    - jboss-parent-0:20-4.module+el8+2598+06babf2e.noarch
+    - maven-script-interpreter-0:1.1-11.module+el8+2598+06babf2e.noarch
+    - plexus-cli-0:1.6-6.module+el8+2598+06babf2e.noarch
+    - maven-clean-plugin-javadoc-0:3.0.0-5.module+el8+2598+06babf2e.noarch
+    - glassfish-servlet-api-0:3.1.0-14.module+el8+2598+06babf2e.noarch
+    - maven-resolver-api-1:1.1.1-2.module+el8+2598+06babf2e.noarch
+    - maven-source-plugin-0:3.0.1-4.module+el8+2598+06babf2e.noarch
+    - maven-wagon-0:3.1.0-1.module+el8+2598+06babf2e.noarch
+    - regexp-javadoc-1:1.5-26.module+el8+2598+06babf2e.noarch
+    - osgi-core-0:6.0.0-6.module+el8+2598+06babf2e.noarch
+    - exec-maven-plugin-javadoc-0:1.6.0-3.module+el8+2598+06babf2e.noarch
+    - maven-shade-plugin-javadoc-0:3.1.0-3.module+el8+2598+06babf2e.noarch
+    - log4j12-0:1.2.17-22.module+el8+2598+06babf2e.noarch
+    - maven-resolver-connector-basic-1:1.1.1-2.module+el8+2598+06babf2e.noarch
+    - maven-javadoc-1:3.5.4-5.module+el8+2598+06babf2e.noarch
+    - apache-commons-codec-javadoc-0:1.11-3.module+el8+2598+06babf2e.noarch
+    - atinject-tck-0:1-28.20100611svn86.module+el8+2598+06babf2e.noarch
+    - hawtjni-javadoc-0:1.16-2.module+el8+2598+06babf2e.noarch
+    - maven-invoker-javadoc-0:2.2-7.module+el8+2598+06babf2e.noarch
+    - os-maven-plugin-javadoc-0:1.2.3-9.module+el8+2598+06babf2e.noarch
+    - maven-shared-utils-javadoc-0:3.2.1-0.1.module+el8+2598+06babf2e.noarch
+    - glassfish-annotation-api-javadoc-0:1.2-13.module+el8+2598+06babf2e.noarch
+    - maven-profile-0:2.2.1-59.module+el8+2598+06babf2e.noarch
+    - maven-wagon-http-0:3.1.0-1.module+el8+2598+06babf2e.noarch
+    - maven-resolver-test-util-1:1.1.1-2.module+el8+2598+06babf2e.noarch
+    - xz-java-javadoc-0:1.8-2.module+el8+2598+06babf2e.noarch
+    - maven-enforcer-plugin-0:1.4.1-8.module+el8+2598+06babf2e.noarch
+    - maven-1:3.5.4-5.module+el8+2598+06babf2e.noarch
+    - maven-doxia-module-fml-0:1.7-8.module+el8+2598+06babf2e.noarch
+    - plexus-compiler-javadoc-0:2.8.2-2.module+el8+2598+06babf2e.noarch
+    - java_cup-1:0.11b-8.module+el8+2598+06babf2e.noarch
+    - maven-compiler-plugin-0:3.7.0-2.module+el8+2598+06babf2e.noarch
+    - cglib-0:3.2.4-7.module+el8+2598+06babf2e.noarch
+    - guava20-javadoc-0:20.0-8.module+el8+2598+06babf2e.noarch
+    - mockito-0:1.10.19-17.module+el8+2598+06babf2e.noarch
+    - maven-dependency-tree-javadoc-0:3.0-5.module+el8+2598+06babf2e.noarch
+    - plexus-resources-javadoc-0:1.0-0.23.a7.module+el8+2598+06babf2e.noarch
+    - jzlib-0:1.1.3-8.module+el8+2598+06babf2e.noarch
+    - plexus-containers-component-metadata-0:1.7.1-8.module+el8+2598+06babf2e.noarch
+    - maven-script-ant-0:3.5.1-4.module+el8+2598+06babf2e.noarch
+    - slf4j-jcl-0:1.7.25-4.module+el8+2598+06babf2e.noarch
+    - javacc-manual-0:7.0.2-6.module+el8+2598+06babf2e.noarch
+    - apache-commons-logging-javadoc-0:1.2-13.module+el8+2598+06babf2e.noarch
+    - javacc-maven-plugin-javadoc-0:2.6-25.module+el8+2598+06babf2e.noarch
+    - maven-artifact-0:2.2.1-59.module+el8+2598+06babf2e.noarch
+    - felix-osgi-foundation-javadoc-0:1.2.0-23.module+el8+2598+06babf2e.noarch
+    - bsf-javadoc-0:2.4.0-30.module+el8+2598+06babf2e.noarch
+    - ant-apache-resolver-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - munge-maven-plugin-0:1.0-11.module+el8+2598+06babf2e.noarch
+    - plexus-build-api-0:0.0.7-20.module+el8+2598+06babf2e.noarch
+    - jdom-javadoc-0:1.1.3-17.module+el8+2598+06babf2e.noarch
+    - plexus-compiler-pom-0:2.8.2-2.module+el8+2598+06babf2e.noarch
+    - javassist-javadoc-0:3.18.1-8.module+el8+2598+06babf2e.noarch
+    - objenesis-javadoc-0:2.6-2.module+el8+2598+06babf2e.noarch
+    - powermock-core-0:1.6.5-9.module+el8+2598+06babf2e.noarch
+    - jakarta-oro-javadoc-0:2.0.8-23.module+el8+2598+06babf2e.noarch
+    - glassfish-el-api-0:3.0.1-0.7.b08.module+el8+2598+06babf2e.noarch
+    - geronimo-parent-poms-0:1.6-25.module+el8+2598+06babf2e.noarch
+    - jdepend-javadoc-0:2.9.1-18.module+el8+2598+06babf2e.noarch
+    - jdom-demo-0:1.1.3-17.module+el8+2598+06babf2e.noarch
+    - cal10n-javadoc-0:0.8.1-7.module+el8+2598+06babf2e.noarch
+    - ant-jdepend-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - jdom-0:1.1.3-17.module+el8+2598+06babf2e.noarch
+    - atinject-javadoc-0:1-28.20100611svn86.module+el8+2598+06babf2e.noarch
+    - apache-parent-0:19-2.module+el8+2598+06babf2e.noarch
+    - ant-contrib-javadoc-0:1.0-0.32.b3.module+el8+2598+06babf2e.noarch
+    - java_cup-javadoc-1:0.11b-8.module+el8+2598+06babf2e.noarch
+    - felix-utils-javadoc-0:1.10.4-2.module+el8+2598+06babf2e.noarch
+    - plexus-languages-javadoc-0:0.9.10-3.module+el8+2598+06babf2e.noarch
+    - apache-commons-cli-javadoc-0:1.4-4.module+el8+2598+06babf2e.noarch
+    - maven-archiver-javadoc-0:3.2.0-2.module+el8+2598+06babf2e.noarch
+    - httpcomponents-core-0:4.4.10-3.module+el8+2598+06babf2e.noarch
+    - glassfish-jsp-api-0:2.3.2-0.9.b01.module+el8+2598+06babf2e.noarch
+    - sisu-plexus-1:0.3.3-6.module+el8+2598+06babf2e.noarch
+    - maven-remote-resources-plugin-javadoc-0:1.5-2.module+el8+2598+06babf2e.noarch
+    - maven-artifact-resolver-1:1.0-18.module+el8+2598+06babf2e.noarch
+    - jdom2-javadoc-0:2.0.6-12.module+el8+2598+06babf2e.noarch
+    - jsoup-javadoc-0:1.11.3-3.module+el8+2598+06babf2e.noarch
+    - maven-plugin-build-helper-javadoc-0:1.9.1-8.module+el8+2598+06babf2e.noarch
+    - plexus-velocity-0:1.2-4.module+el8+2598+06babf2e.noarch
+    - jsch-0:0.1.54-6.module+el8+2598+06babf2e.noarch
+    - plexus-ant-factory-0:1.0-0.20.a2.2.module+el8+2598+06babf2e.noarch
+    - javapackages-local-0:5.3.0-2.module+el8+2598+06babf2e.noarch
+    - google-guice-0:4.1-11.module+el8+2598+06babf2e.noarch
+    - xmvn-minimal-0:3.0.0-21.module+el8+2598+06babf2e.noarch
+    - felix-osgi-core-0:1.4.0-23.module+el8+2598+06babf2e.noarch
+    - apache-commons-net-0:3.6-3.module+el8+2598+06babf2e.noarch
+    - xmvn-install-0:3.0.0-21.module+el8+2598+06babf2e.noarch
+    - maven-surefire-plugin-0:2.22.0-3.module+el8+2598+06babf2e.noarch
+    - xml-commons-resolver-javadoc-0:1.2-26.module+el8+2598+06babf2e.noarch
+    - maven-verifier-javadoc-0:1.6-6.module+el8+2598+06babf2e.noarch
+    - glassfish-annotation-api-0:1.2-13.module+el8+2598+06babf2e.noarch
+    - maven-hawtjni-plugin-0:1.16-2.module+el8+2598+06babf2e.noarch
+    - plexus-classworlds-javadoc-0:2.5.2-9.module+el8+2598+06babf2e.noarch
+    - apache-commons-parent-0:43-2.module+el8+2598+06babf2e.noarch
+    - java_cup-manual-1:0.11b-8.module+el8+2598+06babf2e.noarch
+    - jtidy-2:1.0-0.28.20100930svn1125.module+el8+2598+06babf2e.noarch
+    - cdi-api-javadoc-0:1.2-8.module+el8+2598+06babf2e.noarch
+    - felix-parent-0:4-5.module+el8+2598+06babf2e.noarch
+    - maven-archiver-0:3.2.0-2.module+el8+2598+06babf2e.noarch
+    - plexus-compiler-0:2.8.2-2.module+el8+2598+06babf2e.noarch
+    - ant-manual-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - maven-plugin-build-helper-0:1.9.1-8.module+el8+2598+06babf2e.noarch
+    - xerces-j2-demo-0:2.11.0-34.module+el8+2598+06babf2e.noarch
+    - httpcomponents-project-0:9-2.module+el8+2598+06babf2e.noarch
+    - maven-plugin-bundle-javadoc-0:3.5.0-2.module+el8+2598+06babf2e.noarch
+    - maven-common-artifact-filters-javadoc-0:3.0.1-4.module+el8+2598+06babf2e.noarch
+    - isorelax-javadoc-1:0-0.23.release20050331.module+el8+2598+06babf2e.noarch
+    - geronimo-jms-0:1.1.1-25.module+el8+2598+06babf2e.noarch
+    - javacc-maven-plugin-0:2.6-25.module+el8+2598+06babf2e.noarch
+    - guice-extensions-0:4.1-11.module+el8+2598+06babf2e.noarch
+    - jvnet-parent-0:4-10.module+el8+2598+06babf2e.noarch
+    - mockito-javadoc-0:1.10.19-17.module+el8+2598+06babf2e.noarch
+    - plexus-i18n-javadoc-0:1.0-0.11.b10.4.module+el8+2598+06babf2e.noarch
+    - ant-apache-bcel-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - maven-enforcer-0:1.4.1-8.module+el8+2598+06babf2e.noarch
+    - jdepend-0:2.9.1-18.module+el8+2598+06babf2e.noarch
+    - maven-reporting-api-javadoc-1:3.0-14.module+el8+2598+06babf2e.noarch
+    - xmvn-0:3.0.0-21.module+el8+2598+06babf2e.noarch
+    - objectweb-pom-0:1.5-7.module+el8+2598+06babf2e.noarch
+    - mojo-parent-0:40-6.module+el8+2598+06babf2e.noarch
+    - maven-shared-utils-0:3.2.1-0.1.module+el8+2598+06babf2e.noarch
+    - maven-plugin-tools-javadoc-0:3.5.1-4.module+el8+2598+06babf2e.noarch
+    - ant-lib-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - maven-plugin-testing-tools-0:3.3.0-12.module+el8+2598+06babf2e.noarch
+    - maven-install-plugin-0:2.5.2-7.module+el8+2598+06babf2e.noarch
+    - maven-doxia-module-xdoc-0:1.7-8.module+el8+2598+06babf2e.noarch
+    - maven-doxia-module-rtf-0:1.7-8.module+el8+2598+06babf2e.noarch
+    - apache-ivy-javadoc-0:2.4.0-14.module+el8+2598+06babf2e.noarch
+    - ant-javadoc-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - guice-testlib-0:4.1-11.module+el8+2598+06babf2e.noarch
+    - apache-commons-cli-0:1.4-4.module+el8+2598+06babf2e.noarch
+    - maven-plugin-annotations-0:3.5.1-4.module+el8+2598+06babf2e.noarch
+    - maven-dependency-plugin-javadoc-0:3.0.2-2.module+el8+2598+06babf2e.noarch
+    - maven-monitor-0:2.2.1-59.module+el8+2598+06babf2e.noarch
+    - guice-jndi-0:4.1-11.module+el8+2598+06babf2e.noarch
+    - slf4j-jdk14-0:1.7.25-4.module+el8+2598+06babf2e.noarch
+    - ant-junit-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - xalan-j2-demo-0:2.7.1-38.module+el8+2598+06babf2e.noarch
+    - javacc-0:7.0.2-6.module+el8+2598+06babf2e.noarch
+    - maven-doxia-tests-0:1.7-8.module+el8+2598+06babf2e.noarch
+    - munge-maven-plugin-javadoc-0:1.0-11.module+el8+2598+06babf2e.noarch
+    - plexus-archiver-0:3.6.0-1.module+el8+2598+06babf2e.noarch
+    - plexus-io-javadoc-0:3.0.0-2.module+el8+2598+06babf2e.noarch
+    - httpcomponents-core-javadoc-0:4.4.10-3.module+el8+2598+06babf2e.noarch
+    - xz-java-0:1.8-2.module+el8+2598+06babf2e.noarch
+    - jansi-native-0:1.7-7.module+el8+2598+06babf2e.x86_64
+    - easymock-0:3.5-4.module+el8+2598+06babf2e.noarch
+    - velocity-0:1.7-24.module+el8+2598+06babf2e.noarch
+    - geronimo-annotation-javadoc-0:1.0-23.module+el8+2598+06babf2e.noarch
+    - javacc-javadoc-0:7.0.2-6.module+el8+2598+06babf2e.noarch
+    - plexus-containers-component-javadoc-0:1.7.1-8.module+el8+2598+06babf2e.noarch
+    - maven-resources-plugin-0:3.1.0-3.module+el8+2598+06babf2e.noarch
+    - maven-reporting-impl-javadoc-0:3.0.0-4.module+el8+2598+06babf2e.noarch
+    - glassfish-el-0:3.0.1-0.7.b08.module+el8+2598+06babf2e.noarch
+    - xmlunit-javadoc-0:1.6-7.module+el8+2598+06babf2e.noarch
+    - powermock-javadoc-0:1.6.5-9.module+el8+2598+06babf2e.noarch
+    - jdependency-javadoc-0:1.2-2.module+el8+2598+06babf2e.noarch
+    - jboss-interceptors-1.2-api-javadoc-0:1.0.0-8.module+el8+2598+06babf2e.noarch
+    - apache-commons-io-javadoc-1:2.6-3.module+el8+2598+06babf2e.noarch
+    - apache-commons-lang-javadoc-0:2.6-21.module+el8+2598+06babf2e.noarch
+    - glassfish-servlet-api-javadoc-0:3.1.0-14.module+el8+2598+06babf2e.noarch
+    - javamail-0:1.5.2-7.module+el8+2598+06babf2e.noarch
+    - fusesource-pom-0:1.11-3.module+el8+2598+06babf2e.noarch
+    - slf4j-javadoc-0:1.7.25-4.module+el8+2598+06babf2e.noarch
+    - plexus-classworlds-0:2.5.2-9.module+el8+2598+06babf2e.noarch
+    - felix-osgi-foundation-0:1.2.0-23.module+el8+2598+06babf2e.noarch
+    - log4j12-javadoc-0:1.2.17-22.module+el8+2598+06babf2e.noarch
+    - xmvn-connector-ivy-0:3.0.0-21.module+el8+2598+06babf2e.noarch
+    - bcel-0:6.2-2.module+el8+2598+06babf2e.noarch
+    - maven-wagon-ftp-0:3.1.0-1.module+el8+2598+06babf2e.noarch
+    - jline-javadoc-0:2.14.6-2.module+el8+2598+06babf2e.noarch
+    - xmvn-api-0:3.0.0-21.module+el8+2598+06babf2e.noarch
+    - plexus-cipher-javadoc-0:1.7-14.module+el8+2598+06babf2e.noarch
+    - maven-plugin-testing-harness-0:3.3.0-12.module+el8+2598+06babf2e.noarch
+    - javacc-demo-0:7.0.2-6.module+el8+2598+06babf2e.noarch
+    - plexus-sec-dispatcher-0:1.4-26.module+el8+2598+06babf2e.noarch
+    - beust-jcommander-javadoc-0:1.71-5.module+el8+2598+06babf2e.noarch
+    - cal10n-0:0.8.1-7.module+el8+2598+06babf2e.noarch
+    - maven-plugin-testing-0:3.3.0-12.module+el8+2598+06babf2e.noarch
+    - maven-test-tools-0:3.3.0-12.module+el8+2598+06babf2e.noarch
+    - maven-wagon-providers-0:3.1.0-1.module+el8+2598+06babf2e.noarch
+    - velocity-demo-0:1.7-24.module+el8+2598+06babf2e.noarch
+    - maven-plugin-tools-java-0:3.5.1-4.module+el8+2598+06babf2e.noarch
+    - jaxen-javadoc-0:1.1.6-18.module+el8+2598+06babf2e.noarch
+    - xalan-j2-0:2.7.1-38.module+el8+2598+06babf2e.noarch
+    - maven-resources-plugin-javadoc-0:3.1.0-3.module+el8+2598+06babf2e.noarch
+    - bcel-javadoc-0:6.2-2.module+el8+2598+06babf2e.noarch
+    - javassist-0:3.18.1-8.module+el8+2598+06babf2e.noarch
+    - maven-plugin-tools-javadocs-0:3.5.1-4.module+el8+2598+06babf2e.noarch
+    - maven-shared-io-1:3.0.0-5.module+el8+2598+06babf2e.noarch
+    - glassfish-jsp-api-javadoc-0:2.3.2-0.9.b01.module+el8+2598+06babf2e.noarch
+    - jflex-0:1.6.1-12.module+el8+2598+06babf2e.noarch
+    - apache-commons-lang-0:2.6-21.module+el8+2598+06babf2e.noarch
+    - antlr-tool-0:2.7.7-56.module+el8+2598+06babf2e.noarch
+    - xmvn-mojo-0:3.0.0-21.module+el8+2598+06babf2e.noarch
+    - ant-apache-bsf-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - plexus-interpolation-javadoc-0:1.22-9.module+el8+2598+06babf2e.noarch
+    - jansi-native-javadoc-0:1.7-7.module+el8+2598+06babf2e.noarch
+    - felix-osgi-compendium-0:1.4.0-26.module+el8+2598+06babf2e.noarch
+    - jakarta-commons-httpclient-manual-1:3.1-28.module+el8+2598+06babf2e.noarch
+    - apache-commons-collections-0:3.2.2-10.module+el8+2598+06babf2e.noarch
+    - maven-plugin-tools-model-0:3.5.1-4.module+el8+2598+06babf2e.noarch
+    - maven-enforcer-api-0:1.4.1-8.module+el8+2598+06babf2e.noarch
+    - maven-invoker-plugin-javadoc-0:1.10-7.module+el8+2598+06babf2e.noarch
+    - apache-commons-codec-0:1.11-3.module+el8+2598+06babf2e.noarch
+    - sisu-javadoc-1:0.3.3-6.module+el8+2598+06babf2e.noarch
+    - maven-script-beanshell-0:3.5.1-4.module+el8+2598+06babf2e.noarch
+    - maven-parent-0:27-5.module+el8+2598+06babf2e.noarch
+    - plexus-io-0:3.0.0-2.module+el8+2598+06babf2e.noarch
+    - plexus-bsh-factory-javadoc-0:1.0-0.19.a7.module+el8+2598+06babf2e.noarch
+    - plexus-interpolation-0:1.22-9.module+el8+2598+06babf2e.noarch
+    - apache-commons-jxpath-javadoc-0:1.3-29.module+el8+2598+06babf2e.noarch
+    - maven-common-artifact-filters-0:3.0.1-4.module+el8+2598+06babf2e.noarch
+    - maven-plugin-tools-ant-0:3.5.1-4.module+el8+2598+06babf2e.noarch
+    - plexus-interactivity-javadoc-0:1.0-0.27.alpha6.module+el8+2598+06babf2e.noarch
+    - jzlib-javadoc-0:1.1.3-8.module+el8+2598+06babf2e.noarch
+    - apache-commons-beanutils-javadoc-0:1.9.3-4.module+el8+2598+06babf2e.noarch
+    - maven-dependency-plugin-0:3.0.2-2.module+el8+2598+06babf2e.noarch
+    - maven-doxia-sink-api-0:1.7-8.module+el8+2598+06babf2e.noarch
+    - plexus-pom-0:5.0-2.module+el8+2598+06babf2e.noarch
+    - plexus-sec-dispatcher-javadoc-0:1.4-26.module+el8+2598+06babf2e.noarch
+    - glassfish-el-javadoc-0:3.0.1-0.7.b08.module+el8+2598+06babf2e.noarch
+    - javapackages-tools-0:5.3.0-2.module+el8+2598+06babf2e.noarch
+    - ant-apache-xalan2-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - powermock-api-support-0:1.6.5-9.module+el8+2598+06babf2e.noarch
+    - xerces-j2-0:2.11.0-34.module+el8+2598+06babf2e.noarch
+    - slf4j-ext-0:1.7.25-4.module+el8+2598+06babf2e.noarch
+    - xmvn-javadoc-0:3.0.0-21.module+el8+2598+06babf2e.noarch
+    - maven-antrun-plugin-javadoc-0:1.8-6.module+el8+2598+06babf2e.noarch
+    - maven-dependency-analyzer-javadoc-0:1.8-2.module+el8+2598+06babf2e.noarch
+    - maven-filtering-0:3.1.1-5.module+el8+2598+06babf2e.noarch
+    - felix-osgi-core-javadoc-0:1.4.0-23.module+el8+2598+06babf2e.noarch
+    - spec-version-maven-plugin-javadoc-0:1.2-11.module+el8+2598+06babf2e.noarch
+    - maven-toolchain-0:2.2.1-59.module+el8+2598+06babf2e.noarch
+    - maven-surefire-provider-testng-0:2.22.0-3.module+el8+2598+06babf2e.noarch
+    - maven-surefire-0:2.22.0-3.module+el8+2598+06babf2e.noarch
+    - aopalliance-0:1.0-17.module+el8+2598+06babf2e.noarch
+    - apache-commons-net-javadoc-0:3.6-3.module+el8+2598+06babf2e.noarch
+    - maven-doxia-core-0:1.7-8.module+el8+2598+06babf2e.noarch
+    - ant-swing-0:1.10.5-1.module+el8+2598+06babf2e.noarch
+    - apache-commons-io-1:2.6-3.module+el8+2598+06babf2e.noarch
+    - modello-javadoc-0:1.9.1-7.module+el8+2598+06babf2e.noarch
+    - maven-local-0:5.3.0-2.module+el8+2598+06babf2e.noarch
+    - maven-model-0:2.2.1-59.module+el8+2598+06babf2e.noarch
+    - maven-verifier-0:1.6-6.module+el8+2598+06babf2e.noarch
+    - byaccj-debugsource-0:1.15-17.module+el8+2598+06babf2e.x86_64
+    - jaxen-demo-0:1.1.6-18.module+el8+2598+06babf2e.noarch
+    - maven-doxia-module-docbook-simple-0:1.7-8.module+el8+2598+06babf2e.noarch
+    - plexus-velocity-javadoc-0:1.2-4.module+el8+2598+06babf2e.noarch
+    - aqute-bnd-0:3.5.0-4.module+el8+2598+06babf2e.noarch
+    - xmvn-core-0:3.0.0-21.module+el8+2598+06babf2e.noarch
+    - xml-commons-apis-manual-0:1.4.01-25.module+el8+2598+06babf2e.noarch
+...
