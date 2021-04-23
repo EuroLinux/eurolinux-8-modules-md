@@ -5493,3 +5493,90 @@ data:
     - hawtjni-runtime-0:1.16-1.module+el8+2477+516cbbff.noarch
     - scala-swing-0:2.10.6-14.module+el8+2477+516cbbff.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: go-toolset
+  stream: rhel8
+  version: '8030020201118084734'
+  context: 58e1918e
+  arch: x86_64
+  license:
+    content:
+    - BSD and Public Domain
+    - MIT
+    module:
+    - MIT
+  summary: Go
+  description: Go Tools and libraries
+  dependencies:
+  - buildrequires:
+      go-toolset:
+      - rhel8
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      delve:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 2
+        rationale: A debugger for the Go programming language
+        ref: stream-rhel-8-rhel-8.3.0
+      go-toolset:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Meta package for go-toolset providing scl enable scripts.
+        ref: stream-rhel-8-rhel-8.3.0
+      golang:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: Package providing the Go compiler toolchain.
+        ref: stream-rhel-8-rhel-8.3.0
+  api:
+    rpms:
+    - golang
+  buildopts:
+    rpms:
+      whitelist:
+      - delve
+      - go-toolset
+      - go-toolset-1.10
+      - go-toolset-1.10-golang
+      - go-toolset-golang
+      - golang
+  profiles:
+    common:
+      rpms:
+      - go-toolset
+  artifacts:
+    rpms:
+    - golang-0:1.14.12-1.module+el8.3.0+8784+380394dc.x86_64
+    - delve-debuginfo-0:1.4.1-1.module+el8.3.0+7840+63dfb1ed.x86_64
+    - golang-race-0:1.14.12-1.module+el8.3.0+8784+380394dc.x86_64
+    - golang-misc-0:1.14.12-1.module+el8.3.0+8784+380394dc.noarch
+    - golang-tests-0:1.14.12-1.module+el8.3.0+8784+380394dc.noarch
+    - golang-src-0:1.14.12-1.module+el8.3.0+8784+380394dc.noarch
+    - delve-0:1.4.1-1.module+el8.3.0+7840+63dfb1ed.x86_64
+    - go-toolset-0:1.14.12-1.module+el8.3.0+8784+380394dc.x86_64
+    - golang-bin-0:1.14.12-1.module+el8.3.0+8784+380394dc.x86_64
+    - golang-docs-0:1.14.12-1.module+el8.3.0+8784+380394dc.noarch
+    - delve-debugsource-0:1.4.1-1.module+el8.3.0+7840+63dfb1ed.x86_64
+...
