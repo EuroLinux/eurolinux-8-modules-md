@@ -7132,3 +7132,132 @@ data:
     - lucene-monitor-0:8.4.1-5.module+el8.2.1+7436+4afdca1f.noarch
     - xml-commons-apis-0:1.4.01-31.module+el8.2.1+7436+4afdca1f.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: subversion
+  stream: '1.10'
+  version: '8030020210210135829'
+  context: 4035eae3
+  arch: x86_64
+  license:
+    content:
+    - ASL 2.0
+    - Unicode and MIT
+    module:
+    - MIT
+  summary: Apache Subversion
+  description: Apache Subversion, a Modern Version Control System
+  dependencies:
+  - buildrequires:
+      httpd:
+      - 2.4
+      platform:
+      - el8
+      swig:
+      - 3.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      libserf:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        rationale: Build dependency.
+        ref: stream-v1-rhel-8.3.0
+      subversion:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 20
+        rationale: Module API.
+        ref: stream-1.10-rhel-8.3.0
+      utf8proc:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        rationale: Build dependency.
+        ref: stream-v2-rhel-8.3.0
+  api:
+    rpms:
+    - mod_dav_svn
+    - subversion
+    - subversion-devel
+    - subversion-libs
+  buildopts:
+    rpms:
+      macros: '%_without_kwallet 1
+
+        %_without_python2 1
+
+        %_with_python3 1
+
+        %_without_bdb 1
+
+        %_without_pyswig 1
+
+        '
+  references:
+    documentation: http://subversion.apache.org/docs/
+    tracker: https://issues.apache.org/jira/projects/SVN
+  profiles:
+    common:
+      rpms:
+      - subversion
+      - subversion-libs
+      - subversion-tools
+    server:
+      rpms:
+      - mod_dav_svn
+      - subversion
+      - subversion-libs
+      - subversion-tools
+  filter:
+    rpms:
+    - libserf-devel
+    - python3-subversion
+    - subversion-ruby
+    - utf8proc-devel
+  artifacts:
+    rpms:
+    - mod_dav_svn-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.x86_64
+    - subversion-gnome-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.x86_64
+    - subversion-debuginfo-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.x86_64
+    - libserf-debugsource-0:1.3.9-9.module+el8.3.0+6671+2675c974.x86_64
+    - subversion-devel-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.x86_64
+    - utf8proc-devel-0:2.1.1-5.module+el8.3.0+6671+2675c974.x86_64
+    - subversion-perl-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.x86_64
+    - subversion-perl-debuginfo-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.x86_64
+    - utf8proc-0:2.1.1-5.module+el8.3.0+6671+2675c974.x86_64
+    - subversion-tools-debuginfo-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.x86_64
+    - utf8proc-debuginfo-0:2.1.1-5.module+el8.3.0+6671+2675c974.x86_64
+    - subversion-libs-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.x86_64
+    - subversion-gnome-debuginfo-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.x86_64
+    - subversion-ruby-debuginfo-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.x86_64
+    - subversion-libs-debuginfo-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.x86_64
+    - subversion-devel-debuginfo-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.x86_64
+    - subversion-tools-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.x86_64
+    - subversion-javahl-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.noarch
+    - subversion-ruby-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.x86_64
+    - libserf-debuginfo-0:1.3.9-9.module+el8.3.0+6671+2675c974.x86_64
+    - mod_dav_svn-debuginfo-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.x86_64
+    - libserf-0:1.3.9-9.module+el8.3.0+6671+2675c974.x86_64
+    - utf8proc-debugsource-0:2.1.1-5.module+el8.3.0+6671+2675c974.x86_64
+    - subversion-debugsource-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.x86_64
+    - subversion-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.x86_64
+    - libserf-devel-0:1.3.9-9.module+el8.3.0+6671+2675c974.x86_64
+...
