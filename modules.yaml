@@ -6012,3 +6012,118 @@ data:
     - fuse-overlayfs-debuginfo-0:1.3.0-2.module+el8.3.1+9857+68fb1526.x86_64
     - podman-tests-0:2.2.1-7.module+el8.3.1+9857+68fb1526.x86_64
 ...
+---
+version: 2
+data:
+  name: jmc
+  stream: rhel8
+  version: '8020120200519200924'
+  context: 0660b349
+  arch: x86_64
+  license:
+    content:
+    - ASL 2.0
+    - BSD
+    - BSD and CC0
+    - EPL-2.0 or GPLv2 with exceptions
+    - UPL
+    module:
+    - GPL
+  summary: Java Mission Control is a profiling and diagnostics tool for the Hotspot
+    JVM
+  description: Java Mission Control is a powerful profiler for HotSpot JVMs and has
+    an advanced set of tools that enables efficient and detailed analysis of the extensive
+    data collected by Java Flight Recorder. The tool chain enables developers and
+    administrators to collect and analyze data from Java applications running locally
+    or deployed in production environments.
+  dependencies:
+  - buildrequires:
+      javapackages-tools:
+      - 201801
+      platform:
+      - el8
+      tycho:
+      - rhel8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      HdrHistogram:
+        arches:
+        - x86_64
+        buildorder: 2
+        rationale: 'Dependency of jmc.
+
+          '
+        ref: stream-rhel8-rhel-8.2.1
+      directory-maven-plugin:
+        arches:
+        - x86_64
+        rationale: 'Dependency of jmc and jaf.
+
+          '
+        ref: stream-rhel8-rhel-8.2.1
+      ee4j-parent:
+        arches:
+        - x86_64
+        rationale: 'Dependency of jaf.
+
+          '
+        ref: stream-rhel8-rhel-8.2.1
+      jaf:
+        arches:
+        - x86_64
+        buildorder: 1
+        rationale: 'Dependency of jmc.
+
+          '
+        ref: stream-rhel8-rhel-8.2.1
+      jmc:
+        arches:
+        - x86_64
+        buildorder: 3
+        rationale: 'Standalone application.
+
+          '
+        ref: stream-rhel8-rhel-8.2.1
+      jmc-core:
+        arches:
+        - x86_64
+        buildorder: 1
+        rationale: 'Core API. Dependency of jmc.
+
+          '
+        ref: stream-rhel8-rhel-8.2.1
+      owasp-java-encoder:
+        arches:
+        - x86_64
+        rationale: 'Dependency of jmc-core.
+
+          '
+        ref: stream-rhel8-rhel-8.2.1
+  api:
+    rpms:
+    - jmc-core
+  profiles:
+    common:
+      rpms:
+      - jmc
+    core:
+      rpms:
+      - jmc-core
+  artifacts:
+    rpms:
+    - HdrHistogram-javadoc-0:2.1.11-2.module+el8.2.1+6346+3bc8dea2.noarch
+    - HdrHistogram-0:2.1.11-2.module+el8.2.1+6346+3bc8dea2.noarch
+    - jmc-core-javadoc-0:7.1.1-3.module+el8.2.1+6408+a7ca4662.noarch
+    - owasp-java-encoder-javadoc-0:1.2.2-2.module+el8.1.1+4667+9be46ba3.noarch
+    - jaf-javadoc-0:1.2.1-4.module+el8.2.1+6691+6e8ab5bc.noarch
+    - jmc-0:7.1.1-5.module+el8.2.1+6408+a7ca4662.x86_64
+    - jaf-0:1.2.1-4.module+el8.2.1+6691+6e8ab5bc.noarch
+    - directory-maven-plugin-0:0.3.1-1.module+el8.1.1+4667+9be46ba3.noarch
+    - ee4j-parent-0:1.0.1-1.module+el8.1.1+4667+9be46ba3.noarch
+    - owasp-java-encoder-0:1.2.2-2.module+el8.1.1+4667+9be46ba3.noarch
+    - directory-maven-plugin-javadoc-0:0.3.1-1.module+el8.1.1+4667+9be46ba3.noarch
+    - jmc-core-0:7.1.1-3.module+el8.2.1+6408+a7ca4662.noarch
+...
