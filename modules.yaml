@@ -6591,3 +6591,544 @@ data:
     - skopeo-debuginfo-1:0.1.41-4.module+el8.3.0+10188+4c10031c.x86_64
     - fuse-overlayfs-debugsource-0:0.7.8-1.module+el8.3.0+10188+4c10031c.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: eclipse
+  stream: rhel8
+  version: '8030020201023061315'
+  context: 498c0fee
+  arch: x86_64
+  license:
+    content:
+    - (ASL 2.0 or EPL-1.0) and MIT
+    - (CDDL or GPLv2 with exceptions) and ASL 2.0
+    - (CDDL-1.1 or GPLv2 with exceptions) and ASL 2.0
+    - ASL 2.0
+    - ASL 2.0 and MIT
+    - ASL 2.0 and W3C
+    - ASL 2.0 and W3C and Public Domain
+    - ASL 2.0 or EPL-1.0
+    - BSD
+    - CDDL-1.1 or GPLv2 with exceptions
+    - EPL-1.0
+    - EPL-1.0 or LGPLv2
+    - EPL-2.0
+    - EPL-2.0 and ASL 2.0 and BSD
+    - Public Domain
+    - Unicode and MIT and BSD and Public Domain
+    module:
+    - MIT
+  summary: An open, extensible IDE and application platform
+  description: The Eclipse platform is designed for building integrated development
+    environments (IDEs), desktop applications, and everything in between.
+  dependencies:
+  - buildrequires:
+      eclipse:
+      - rhel8
+      platform:
+      - el8.3.0.z
+      tycho:
+      - rhel8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      apache-commons-compress:
+        arches:
+        - x86_64
+        buildorder: 20
+        rationale: 'Runtime dependency of jgit, jython.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      apache-commons-jxpath:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      apiguardian:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse, junit5.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      batik:
+        arches:
+        - x86_64
+        buildorder: 20
+        rationale: 'Runtime dependency of eclipse.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      eclipse:
+        arches:
+        - aarch64
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 40
+        rationale: 'Module API.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.3.0
+      eclipse-ecf:
+        arches:
+        - aarch64
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 30
+        rationale: 'Runtime dependency of eclipse.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      eclipse-emf:
+        arches:
+        - aarch64
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 20
+        rationale: 'Runtime dependency of eclipse, eclipse-ecf.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      felix-gogo-command:
+        arches:
+        - x86_64
+        buildorder: 20
+        rationale: 'Runtime dependency of eclipse.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      felix-gogo-runtime:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: "Runtime dependency of eclipse, felix-gogo-command,\n     felix-gogo-shell.\n"
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      felix-gogo-shell:
+        arches:
+        - x86_64
+        buildorder: 20
+        rationale: 'Runtime dependency of eclipse.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      felix-scr:
+        arches:
+        - x86_64
+        buildorder: 30
+        rationale: 'Runtime dependency of eclipse.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      glassfish-annotation-api:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      glassfish-el:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse, glassfish-jsp-api.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      glassfish-jsp:
+        arches:
+        - x86_64
+        buildorder: 30
+        rationale: 'Runtime dependency of eclipse.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      glassfish-jsp-api:
+        arches:
+        - x86_64
+        buildorder: 20
+        rationale: 'Runtime dependency of eclipse, glassfish-jsp.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      glassfish-servlet-api:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse, glassfish-jsp-api, jetty.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      google-gson:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: "Runtime dependency of eclipse, eclipse-cdt, jgit,\n     eclipse-m2e-core,\
+          \ eclipse-webtools.\n"
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      hamcrest:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse, junit.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      icu4j:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse, jython.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      jetty:
+        arches:
+        - x86_64
+        buildorder: 20
+        rationale: "Runtime dependency of eclipse, jgit,\n     eclipse-m2e-core, eclipse-webtools.\n"
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      jsch:
+        arches:
+        - x86_64
+        buildorder: 20
+        rationale: 'Runtime dependency of eclipse, jgit.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      junit:
+        arches:
+        - x86_64
+        buildorder: 20
+        rationale: 'Runtime dependency of eclipse, junit5.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      junit5:
+        arches:
+        - x86_64
+        buildorder: 30
+        rationale: 'Runtime dependency of eclipse.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      jzlib:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of jgit, jsch.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      lucene:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse, eclipse-m2e-core, maven-indexer.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      objectweb-asm:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse, eclipse-ecf, jython.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      opentest4j:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse, junit5.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      sat4j:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      univocity-parsers:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of junit5.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      xml-commons-apis:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of batik, eclipse, eclipse-emf.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      xmlgraphics-commons:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of batik.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+      xz-java:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse, apache-commons-compress.
+
+          '
+        ref: stream-eclipse-rhel8-rhel-8.2.1
+  api:
+    rpms:
+    - eclipse-ecf-core
+    - eclipse-ecf-runtime
+    - eclipse-emf-core
+    - eclipse-emf-runtime
+    - eclipse-emf-xsd
+    - eclipse-equinox-osgi
+    - eclipse-jdt
+    - eclipse-p2-discovery
+    - eclipse-pde
+    - eclipse-platform
+    - eclipse-swt
+  buildopts:
+    rpms:
+      macros: '%app_name_prefix Red Hat Eclipse
+
+        %_with_jp_minimal 1
+
+        %_without_contrib_tools 1
+
+        %_without_javahl 1
+
+        %_without_spring 1
+
+        %_without_tests 1
+
+        %_without_reflections 1
+
+        %_without_okcurl 1
+
+        %_without_snappy 1
+
+        %_without_hsqldb 1
+
+        %_without_junit5 1
+
+        '
+  profiles:
+    java:
+      rpms:
+      - eclipse-equinox-osgi
+      - eclipse-jdt
+      - eclipse-pde
+      - eclipse-platform
+      - eclipse-swt
+  filter:
+    rpms:
+    - apache-commons-compress-javadoc
+    - apache-commons-jxpath-javadoc
+    - apache-sshd-javadoc
+    - apiguardian-javadoc
+    - args4j-javadoc
+    - args4j-parent
+    - args4j-tools
+    - batik
+    - batik-demo
+    - batik-javadoc
+    - batik-rasterizer
+    - batik-slideshow
+    - batik-squiggle
+    - batik-svgpp
+    - batik-ttf2svg
+    - bouncycastle-javadoc
+    - eclipse-ecf-sdk
+    - eclipse-emf-sdk
+    - ed25519-java-javadoc
+    - felix-gogo-command-javadoc
+    - felix-gogo-runtime-javadoc
+    - felix-gogo-shell-javadoc
+    - felix-scr-javadoc
+    - glassfish-annotation-api-javadoc
+    - glassfish-el-javadoc
+    - glassfish-jsp-api-javadoc
+    - glassfish-jsp-javadoc
+    - glassfish-servlet-api-javadoc
+    - google-gson-javadoc
+    - hamcrest-demo
+    - hamcrest-javadoc
+    - icu4j-charset
+    - icu4j-javadoc
+    - icu4j-localespi
+    - javaewah-javadoc
+    - jetty
+    - jetty-client
+    - jetty-jaas
+    - jetty-javadoc
+    - jetty-jmx
+    - jetty-webapp
+    - jetty-xml
+    - jsch-javadoc
+    - junit-javadoc
+    - junit-manual
+    - junit5-guide
+    - junit5-javadoc
+    - jzlib-demo
+    - jzlib-javadoc
+    - lucene-backward-codecs
+    - lucene-classification
+    - lucene-codecs
+    - lucene-grouping
+    - lucene-highlighter
+    - lucene-javadoc
+    - lucene-join
+    - lucene-memory
+    - lucene-misc
+    - lucene-monitor
+    - lucene-suggest
+    - objectweb-asm-javadoc
+    - opentest4j-javadoc
+    - univocity-parsers-javadoc
+    - xml-commons-apis-javadoc
+    - xml-commons-apis-manual
+    - xmlgraphics-commons-javadoc
+    - xz-java-javadoc
+  artifacts:
+    rpms:
+    - batik-javadoc-0:1.11-6.module+el8.2.1+7436+4afdca1f.noarch
+    - eclipse-platform-debuginfo-1:4.16-7.module+el8.3.0+8498+807b4491.x86_64
+    - felix-gogo-shell-javadoc-0:1.1.0-5.module+el8.2.1+7436+4afdca1f.noarch
+    - objectweb-asm-0:7.3.1-3.module+el8.2.1+7436+4afdca1f.noarch
+    - google-gson-0:2.8.6-5.module+el8.2.1+7436+4afdca1f.noarch
+    - junit-javadoc-1:4.12-14.module+el8.2.1+7436+4afdca1f.noarch
+    - glassfish-servlet-api-0:3.1.0-19.module+el8.2.1+7436+4afdca1f.noarch
+    - eclipse-equinox-osgi-1:4.16-7.module+el8.3.0+8498+807b4491.x86_64
+    - eclipse-ecf-runtime-0:3.14.8-1.module+el8.3.0+8451+e8177ea0.noarch
+    - eclipse-swt-1:4.16-7.module+el8.3.0+8498+807b4491.x86_64
+    - junit5-javadoc-0:5.6.2-2.module+el8.2.1+7436+4afdca1f.noarch
+    - lucene-sandbox-0:8.4.1-5.module+el8.2.1+7436+4afdca1f.noarch
+    - lucene-queryparser-0:8.4.1-5.module+el8.2.1+7436+4afdca1f.noarch
+    - junit5-0:5.6.2-2.module+el8.2.1+7436+4afdca1f.noarch
+    - jetty-javadoc-0:9.4.30-2.v20200611.module+el8.2.1+7436+4afdca1f.noarch
+    - jsch-javadoc-0:0.1.54-12.module+el8.2.1+7436+4afdca1f.noarch
+    - jetty-io-0:9.4.30-2.v20200611.module+el8.2.1+7436+4afdca1f.noarch
+    - felix-gogo-command-0:1.0.2-11.module+el8.2.1+7436+4afdca1f.noarch
+    - jetty-xml-0:9.4.30-2.v20200611.module+el8.2.1+7436+4afdca1f.noarch
+    - lucene-backward-codecs-0:8.4.1-5.module+el8.2.1+7436+4afdca1f.noarch
+    - xml-commons-apis-javadoc-0:1.4.01-31.module+el8.2.1+7436+4afdca1f.noarch
+    - glassfish-el-0:3.0.1-0.14.b08.module+el8.2.1+7436+4afdca1f.noarch
+    - batik-ttf2svg-0:1.11-6.module+el8.2.1+7436+4afdca1f.noarch
+    - jetty-security-0:9.4.30-2.v20200611.module+el8.2.1+7436+4afdca1f.noarch
+    - jetty-jaas-0:9.4.30-2.v20200611.module+el8.2.1+7436+4afdca1f.noarch
+    - lucene-suggest-0:8.4.1-5.module+el8.2.1+7436+4afdca1f.noarch
+    - lucene-grouping-0:8.4.1-5.module+el8.2.1+7436+4afdca1f.noarch
+    - glassfish-jsp-api-javadoc-0:2.3.3-3.module+el8.2.1+7436+4afdca1f.noarch
+    - univocity-parsers-0:2.8.4-3.module+el8.2.1+7436+4afdca1f.noarch
+    - jetty-jmx-0:9.4.30-2.v20200611.module+el8.2.1+7436+4afdca1f.noarch
+    - glassfish-jsp-0:2.3.4-6.module+el8.2.1+7436+4afdca1f.noarch
+    - apache-commons-compress-0:1.20-3.module+el8.2.1+7436+4afdca1f.noarch
+    - jetty-util-0:9.4.30-2.v20200611.module+el8.2.1+7436+4afdca1f.noarch
+    - batik-css-0:1.11-6.module+el8.2.1+7436+4afdca1f.noarch
+    - google-gson-javadoc-0:2.8.6-5.module+el8.2.1+7436+4afdca1f.noarch
+    - junit-manual-1:4.12-14.module+el8.2.1+7436+4afdca1f.noarch
+    - xmlgraphics-commons-0:2.3-4.module+el8.2.1+7436+4afdca1f.noarch
+    - junit-1:4.12-14.module+el8.2.1+7436+4afdca1f.noarch
+    - hamcrest-0:1.3-29.module+el8.2.1+7436+4afdca1f.noarch
+    - eclipse-swt-debuginfo-1:4.16-7.module+el8.3.0+8498+807b4491.x86_64
+    - xz-java-javadoc-0:1.8-8.module+el8.2.1+7436+4afdca1f.noarch
+    - univocity-parsers-javadoc-0:2.8.4-3.module+el8.2.1+7436+4afdca1f.noarch
+    - jetty-continuation-0:9.4.30-2.v20200611.module+el8.2.1+7436+4afdca1f.noarch
+    - icu4j-1:65.1-3.module+el8.2.1+6727+059d025f.noarch
+    - hamcrest-javadoc-0:1.3-29.module+el8.2.1+7436+4afdca1f.noarch
+    - glassfish-el-javadoc-0:3.0.1-0.14.b08.module+el8.2.1+7436+4afdca1f.noarch
+    - eclipse-p2-discovery-1:4.16-7.module+el8.3.0+8498+807b4491.noarch
+    - apache-commons-jxpath-javadoc-0:1.3-36.module+el8.2.1+7436+4afdca1f.noarch
+    - eclipse-debugsource-1:4.16-7.module+el8.3.0+8498+807b4491.x86_64
+    - batik-rasterizer-0:1.11-6.module+el8.2.1+7436+4afdca1f.noarch
+    - lucene-analyzers-smartcn-0:8.4.1-5.module+el8.2.1+7436+4afdca1f.noarch
+    - glassfish-annotation-api-0:1.3.2-3.module+el8.2.1+6727+059d025f.noarch
+    - apache-commons-jxpath-0:1.3-36.module+el8.2.1+7436+4afdca1f.noarch
+    - batik-demo-0:1.11-6.module+el8.2.1+7436+4afdca1f.noarch
+    - apiguardian-0:1.1.0-4.module+el8.2.1+7436+4afdca1f.noarch
+    - batik-0:1.11-6.module+el8.2.1+7436+4afdca1f.noarch
+    - batik-svgpp-0:1.11-6.module+el8.2.1+7436+4afdca1f.noarch
+    - junit5-guide-0:5.6.2-2.module+el8.2.1+7436+4afdca1f.noarch
+    - felix-scr-javadoc-0:2.1.16-6.module+el8.2.1+7436+4afdca1f.noarch
+    - lucene-javadoc-0:8.4.1-5.module+el8.2.1+7436+4afdca1f.noarch
+    - hamcrest-demo-0:1.3-29.module+el8.2.1+7436+4afdca1f.noarch
+    - lucene-queries-0:8.4.1-5.module+el8.2.1+7436+4afdca1f.noarch
+    - jetty-servlet-0:9.4.30-2.v20200611.module+el8.2.1+7436+4afdca1f.noarch
+    - jzlib-0:1.1.3-14.module+el8.2.1+7436+4afdca1f.noarch
+    - eclipse-ecf-core-0:3.14.8-1.module+el8.3.0+8451+e8177ea0.noarch
+    - jetty-webapp-0:9.4.30-2.v20200611.module+el8.2.1+7436+4afdca1f.noarch
+    - lucene-codecs-0:8.4.1-5.module+el8.2.1+7436+4afdca1f.noarch
+    - glassfish-annotation-api-javadoc-0:1.3.2-3.module+el8.2.1+6727+059d025f.noarch
+    - batik-util-0:1.11-6.module+el8.2.1+7436+4afdca1f.noarch
+    - lucene-classification-0:8.4.1-5.module+el8.2.1+7436+4afdca1f.noarch
+    - batik-squiggle-0:1.11-6.module+el8.2.1+7436+4afdca1f.noarch
+    - lucene-misc-0:8.4.1-5.module+el8.2.1+7436+4afdca1f.noarch
+    - xml-commons-apis-manual-0:1.4.01-31.module+el8.2.1+7436+4afdca1f.noarch
+    - lucene-highlighter-0:8.4.1-5.module+el8.2.1+7436+4afdca1f.noarch
+    - eclipse-emf-sdk-1:2.22.0-1.module+el8.3.0+8451+e8177ea0.noarch
+    - jzlib-demo-0:1.1.3-14.module+el8.2.1+7436+4afdca1f.noarch
+    - xmlgraphics-commons-javadoc-0:2.3-4.module+el8.2.1+7436+4afdca1f.noarch
+    - eclipse-emf-runtime-1:2.22.0-1.module+el8.3.0+8451+e8177ea0.noarch
+    - eclipse-debuginfo-1:4.16-7.module+el8.3.0+8498+807b4491.x86_64
+    - icu4j-javadoc-1:65.1-3.module+el8.2.1+6727+059d025f.noarch
+    - lucene-join-0:8.4.1-5.module+el8.2.1+7436+4afdca1f.noarch
+    - sat4j-0:2.3.5-19.module+el8.2.1+7436+4afdca1f.noarch
+    - xz-java-0:1.8-8.module+el8.2.1+7436+4afdca1f.noarch
+    - apiguardian-javadoc-0:1.1.0-4.module+el8.2.1+7436+4afdca1f.noarch
+    - icu4j-charset-1:65.1-3.module+el8.2.1+6727+059d025f.noarch
+    - glassfish-servlet-api-javadoc-0:3.1.0-19.module+el8.2.1+7436+4afdca1f.noarch
+    - felix-gogo-runtime-javadoc-0:1.1.0-7.module+el8.2.1+7436+4afdca1f.noarch
+    - eclipse-pde-1:4.16-7.module+el8.3.0+8498+807b4491.x86_64
+    - lucene-memory-0:8.4.1-5.module+el8.2.1+7436+4afdca1f.noarch
+    - batik-slideshow-0:1.11-6.module+el8.2.1+7436+4afdca1f.noarch
+    - felix-scr-0:2.1.16-6.module+el8.2.1+7436+4afdca1f.noarch
+    - lucene-0:8.4.1-5.module+el8.2.1+7436+4afdca1f.noarch
+    - jetty-client-0:9.4.30-2.v20200611.module+el8.2.1+7436+4afdca1f.noarch
+    - hamcrest-core-0:1.3-29.module+el8.2.1+7436+4afdca1f.noarch
+    - jetty-server-0:9.4.30-2.v20200611.module+el8.2.1+7436+4afdca1f.noarch
+    - opentest4j-0:1.2.0-2.module+el8.2.1+7436+4afdca1f.noarch
+    - jetty-0:9.4.30-2.v20200611.module+el8.2.1+7436+4afdca1f.noarch
+    - jetty-http-0:9.4.30-2.v20200611.module+el8.2.1+7436+4afdca1f.noarch
+    - glassfish-jsp-javadoc-0:2.3.4-6.module+el8.2.1+7436+4afdca1f.noarch
+    - lucene-analysis-0:8.4.1-5.module+el8.2.1+7436+4afdca1f.noarch
+    - eclipse-emf-core-1:2.22.0-1.module+el8.3.0+8451+e8177ea0.noarch
+    - jzlib-javadoc-0:1.1.3-14.module+el8.2.1+7436+4afdca1f.noarch
+    - glassfish-el-api-0:3.0.1-0.14.b08.module+el8.2.1+7436+4afdca1f.noarch
+    - eclipse-jdt-1:4.16-7.module+el8.3.0+8498+807b4491.noarch
+    - icu4j-localespi-1:65.1-3.module+el8.2.1+6727+059d025f.noarch
+    - glassfish-jsp-api-0:2.3.3-3.module+el8.2.1+7436+4afdca1f.noarch
+    - objectweb-asm-javadoc-0:7.3.1-3.module+el8.2.1+7436+4afdca1f.noarch
+    - felix-gogo-command-javadoc-0:1.0.2-11.module+el8.2.1+7436+4afdca1f.noarch
+    - apache-commons-compress-javadoc-0:1.20-3.module+el8.2.1+7436+4afdca1f.noarch
+    - eclipse-emf-xsd-1:2.22.0-1.module+el8.3.0+8451+e8177ea0.noarch
+    - felix-gogo-runtime-0:1.1.0-7.module+el8.2.1+7436+4afdca1f.noarch
+    - opentest4j-javadoc-0:1.2.0-2.module+el8.2.1+7436+4afdca1f.noarch
+    - eclipse-ecf-sdk-0:3.14.8-1.module+el8.3.0+8451+e8177ea0.noarch
+    - felix-gogo-shell-0:1.1.0-5.module+el8.2.1+7436+4afdca1f.noarch
+    - eclipse-platform-1:4.16-7.module+el8.3.0+8498+807b4491.x86_64
+    - jsch-0:0.1.54-12.module+el8.2.1+7436+4afdca1f.noarch
+    - lucene-monitor-0:8.4.1-5.module+el8.2.1+7436+4afdca1f.noarch
+    - xml-commons-apis-0:1.4.01-31.module+el8.2.1+7436+4afdca1f.noarch
+...
