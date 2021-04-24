@@ -6013,6 +6013,7 @@ data:
     - podman-tests-0:2.2.1-7.module+el8.3.1+9857+68fb1526.x86_64
 ...
 ---
+document: modulemd
 version: 2
 data:
   name: jmc
