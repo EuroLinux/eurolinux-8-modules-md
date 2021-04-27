@@ -5706,11 +5706,11 @@ data:
   artifacts:
     rpms:
     - cjose-0:0.6.1-2.module+el8+2454+f890a43a.x86_64
-    - mod_auth_openidc-debugsource-0:2.3.7-4.module+el8.2.0+6919+ac02cfd2.3.3.x86_64
     - cjose-debugsource-0:0.6.1-2.module+el8+2454+f890a43a.x86_64
-    - mod_auth_openidc-0:2.3.7-4.module+el8.2.0+6919+ac02cfd2.3.3.x86_64
-    - mod_auth_openidc-debuginfo-0:2.3.7-4.module+el8.2.0+6919+ac02cfd2.3.3.x86_64
+    - mod_auth_openidc-debugsource-0:2.3.7-4.module+el8.2.0+6919+ac02cfd2.3.x86_64
     - cjose-devel-0:0.6.1-2.module+el8+2454+f890a43a.x86_64
+    - mod_auth_openidc-debuginfo-0:2.3.7-4.module+el8.2.0+6919+ac02cfd2.3.x86_64
+    - mod_auth_openidc-0:2.3.7-4.module+el8.2.0+6919+ac02cfd2.3.x86_64
     - cjose-debuginfo-0:0.6.1-2.module+el8+2454+f890a43a.x86_64
 ...
 ---
