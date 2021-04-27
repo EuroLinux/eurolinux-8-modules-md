@@ -862,11 +862,12 @@ data:
       - httpd
   artifacts:
     rpms:
+    - mod_http2-0:1.15.7-2.module+el8.3.0+7670+8bf57d29.x86_64
     - mod_ldap-debuginfo-0:2.4.37-30.module+el8.3.0+7001+0766b9e7.x86_64
+    - mod_http2-debugsource-0:1.15.7-2.module+el8.3.0+7670+8bf57d29.x86_64
     - httpd-tools-debuginfo-0:2.4.37-30.module+el8.3.0+7001+0766b9e7.x86_64
     - httpd-filesystem-0:2.4.37-30.module+el8.3.0+7001+0766b9e7.noarch
     - mod_ssl-debuginfo-1:2.4.37-30.module+el8.3.0+7001+0766b9e7.x86_64
-    - mod_http2-debugsource-0:1.15.7-2.el8.x86_64
     - httpd-debuginfo-0:2.4.37-30.module+el8.3.0+7001+0766b9e7.x86_64
     - httpd-manual-0:2.4.37-30.module+el8.3.0+7001+0766b9e7.noarch
     - mod_proxy_html-debuginfo-1:2.4.37-30.module+el8.3.0+7001+0766b9e7.x86_64
@@ -875,7 +876,7 @@ data:
     - mod_session-debuginfo-0:2.4.37-30.module+el8.3.0+7001+0766b9e7.x86_64
     - httpd-tools-0:2.4.37-30.module+el8.3.0+7001+0766b9e7.x86_64
     - httpd-debugsource-0:2.4.37-30.module+el8.3.0+7001+0766b9e7.x86_64
-    - mod_http2-0:1.15.7-2.el8.x86_64
+    - mod_http2-debuginfo-0:1.15.7-2.module+el8.3.0+7670+8bf57d29.x86_64
     - mod_md-debugsource-1:2.0.8-8.module+el8.3.0+6814+67d1e611.x86_64
     - mod_md-debuginfo-1:2.0.8-8.module+el8.3.0+6814+67d1e611.x86_64
     - mod_ldap-0:2.4.37-30.module+el8.3.0+7001+0766b9e7.x86_64
@@ -883,7 +884,6 @@ data:
     - httpd-0:2.4.37-30.module+el8.3.0+7001+0766b9e7.x86_64
     - mod_session-0:2.4.37-30.module+el8.3.0+7001+0766b9e7.x86_64
     - mod_ssl-1:2.4.37-30.module+el8.3.0+7001+0766b9e7.x86_64
-    - mod_http2-debuginfo-0:1.15.7-2.el8.x86_64
 ...
 ---
 document: modulemd
