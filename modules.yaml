@@ -10813,3 +10813,84 @@ data:
     - perl-Net-IDN-Encode-debuginfo-0:2.500-2.module+el8.3.0+6446+594cad75.x86_64
     - perl-IO-Socket-SSL-0:2.066-4.module+el8.3.0+6446+594cad75.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-DBD-SQLite
+  stream: 1.58
+  version: '8030020200313075906'
+  context: 3a70019f
+  arch: x86_64
+  license:
+    content:
+    - (GPL+ or Artistic) and Public Domain
+    module:
+    - MIT
+  summary: SQLite DBI driver
+  description: 'SQLite is a public domain RDBMS database engine that you can find
+    at http://www.hwaci.com/sw/sqlite/. This Perl module provides a SQLite RDBMS module
+    that uses the system SQLite libraries.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - 5.26
+      perl-DBI:
+      - 1.641
+      platform:
+      - el8.3.0
+    requires:
+      perl:
+      - 5.26
+      perl-DBI:
+      - 1.641
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-DBD-SQLite:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: The API.
+        ref: stream-1.58-rhel-8.3.0
+      perl-Test-NoWarnings:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A build-time dependency.
+        ref: stream-1.04-rhel-8.3.0
+  api:
+    rpms:
+    - perl-DBD-SQLite
+  buildopts:
+    rpms:
+      macros: '%_without_perl_Test_NoWarnings_enables_stack_trace 1
+
+        '
+  references:
+    community: http://search.cpan.org/dist/DBD-SQLite/
+  profiles:
+    common:
+      description: DBD-SQLite distribution
+      rpms:
+      - perl-DBD-SQLite
+  filter:
+    rpms:
+    - perl-Test-NoWarnings
+  artifacts:
+    rpms:
+    - perl-Test-NoWarnings-0:1.04-15.module+el8.1.0+2940+f62455ee.noarch
+    - perl-DBD-SQLite-0:1.58-2.module+el8.1.0+2940+f62455ee.x86_64
+    - perl-DBD-SQLite-debugsource-0:1.58-2.module+el8.1.0+2940+f62455ee.x86_64
+    - perl-DBD-SQLite-debuginfo-0:1.58-2.module+el8.1.0+2940+f62455ee.x86_64
+...
