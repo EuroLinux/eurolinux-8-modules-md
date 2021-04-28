@@ -10895,6 +10895,7 @@ data:
     - perl-DBD-SQLite-debuginfo-0:1.58-2.module+el8.1.0+2940+f62455ee.x86_64
 ...
 ---
+document: modulemd
 version: 2
 data:
   name: idm
