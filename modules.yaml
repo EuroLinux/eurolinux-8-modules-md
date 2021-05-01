@@ -11960,3 +11960,100 @@ data:
     rpms:
     - perl-YAML-0:1.24-3.module+el8.1.0+2934+4e5567df.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: freeradius
+  stream: '3.0'
+  version: '8030020200806223029'
+  context: 1e4bbb35
+  arch: x86_64
+  license:
+    content:
+    - GPLv2+ and LGPLv2+
+    module:
+    - GPL
+  summary: High-performance and highly configurable free RADIUS server
+  description: 'The FreeRADIUS Server Project is a high performance and highly configurable
+    GPL''d free RADIUS server. The server is similar in some respects to Livingston''s
+    2.0 server.  While FreeRADIUS started as a variant of the Cistron RADIUS server,
+    they don''t share a lot in common any more. It now has many more features than
+    Cistron or Livingston, and is much more configurable.
+
+    FreeRADIUS is an Internet authentication daemon, which implements the RADIUS protocol,
+    as defined in RFC 2865 (and others). It allows Network Access Servers (NAS boxes)
+    to perform authentication for dial-up users. There are also RADIUS clients available
+    for Web servers, firewalls, Unix logins, and more.  Using RADIUS allows authentication
+    and authorization for a network to be centralized, and minimizes the amount of
+    re-configuration which has to be done when adding or deleting new users.'
+  dependencies:
+  - buildrequires:
+      perl:
+      - 5.26
+      platform:
+      - el8
+    requires:
+      perl:
+      - 5.26
+      platform:
+      - el8
+  components:
+    rpms:
+      freeradius:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        rationale: Provides the FreeRADIUS server
+        ref: stream-3.0-rhel-8.3.0
+  api:
+    rpms:
+    - freeradius
+    - freeradius-devel
+    - freeradius-doc
+    - freeradius-krb5
+    - freeradius-ldap
+    - freeradius-mysql
+    - freeradius-perl
+    - freeradius-postgresql
+    - freeradius-rest
+    - freeradius-sqlite
+    - freeradius-unixODBC
+    - freeradius-utils
+  profiles:
+    server:
+      description: The FreeRADIUS Server
+      rpms:
+      - freeradius
+  artifacts:
+    rpms:
+    - python3-freeradius-debuginfo-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-doc-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-perl-debuginfo-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-ldap-debuginfo-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-sqlite-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-mysql-debuginfo-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-postgresql-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-krb5-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-utils-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-mysql-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-unixODBC-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-debugsource-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-sqlite-debuginfo-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-perl-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-postgresql-debuginfo-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - python3-freeradius-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-unixODBC-debuginfo-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-devel-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-debuginfo-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-utils-debuginfo-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-rest-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-rest-debuginfo-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-ldap-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+    - freeradius-krb5-debuginfo-0:3.0.20-3.module+el8.3.0+7597+67902674.x86_64
+...
