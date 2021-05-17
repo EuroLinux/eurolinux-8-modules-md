@@ -9877,9 +9877,9 @@ data:
     - perl-Test-NoWarnings
   artifacts:
     rpms:
-    - perl-Socket6-0:0.28-6.module+el8.3.0+6446+37a50855.x86_64
-    - perl-Socket6-debugsource-0:0.28-6.module+el8.3.0+6446+37a50855.x86_64
-    - perl-Socket6-debuginfo-0:0.28-6.module+el8.3.0+6446+37a50855.x86_64
+#    - perl-Socket6-0:0.28-6.module+el8.3.0+6446+37a50855.x86_64
+#    - perl-Socket6-debugsource-0:0.28-6.module+el8.3.0+6446+37a50855.x86_64
+#    - perl-Socket6-debuginfo-0:0.28-6.module+el8.3.0+6446+37a50855.x86_64
     - perl-Net-SSLeay-0:1.88-1.module+el8.3.0+6446+37a50855.x86_64
     - perl-Net-SSLeay-debugsource-0:1.88-1.module+el8.3.0+6446+37a50855.x86_64
     - perl-Net-SSLeay-debuginfo-0:1.88-1.module+el8.3.0+6446+37a50855.x86_64
@@ -9892,7 +9892,7 @@ data:
     - perl-Devel-StackTrace-1:2.03-2.module+el8.3.0+6446+37a50855.noarch
     - perl-Test-NoWarnings-0:1.04-15.module+el8.3.0+6446+37a50855.noarch
     - perl-IPC-Run-0:0.99-1.module+el8.3.0+6446+37a50855.noarch
-    - perl-IO-Socket-INET6-0:2.72-12.module+el8.3.0+6446+37a50855.noarch
+#    - perl-IO-Socket-INET6-0:2.72-12.module+el8.3.0+6446+37a50855.noarch
     - perl-Net-IDN-Encode-0:2.500-2.module+el8.3.0+6446+37a50855.x86_64
     - perl-Net-IDN-Encode-debugsource-0:2.500-2.module+el8.3.0+6446+37a50855.x86_64
     - perl-Net-IDN-Encode-debuginfo-0:2.500-2.module+el8.3.0+6446+37a50855.x86_64
@@ -10792,9 +10792,9 @@ data:
     - perl-Test-NoWarnings
   artifacts:
     rpms:
-    - perl-Socket6-0:0.28-6.module+el8.3.0+6446+594cad75.x86_64
-    - perl-Socket6-debugsource-0:0.28-6.module+el8.3.0+6446+594cad75.x86_64
-    - perl-Socket6-debuginfo-0:0.28-6.module+el8.3.0+6446+594cad75.x86_64
+#    - perl-Socket6-0:0.28-6.module+el8.3.0+6446+594cad75.x86_64
+#    - perl-Socket6-debugsource-0:0.28-6.module+el8.3.0+6446+594cad75.x86_64
+#    - perl-Socket6-debuginfo-0:0.28-6.module+el8.3.0+6446+594cad75.x86_64
     - perl-Net-SSLeay-0:1.88-1.module+el8.3.0+6446+594cad75.x86_64
     - perl-Net-SSLeay-debugsource-0:1.88-1.module+el8.3.0+6446+594cad75.x86_64
     - perl-Net-SSLeay-debuginfo-0:1.88-1.module+el8.3.0+6446+594cad75.x86_64
@@ -10807,7 +10807,7 @@ data:
     - perl-Devel-StackTrace-1:2.03-2.module+el8.3.0+6446+594cad75.noarch
     - perl-Test-NoWarnings-0:1.04-15.module+el8.3.0+6446+594cad75.noarch
     - perl-IPC-Run-0:0.99-1.module+el8.3.0+6446+594cad75.noarch
-    - perl-IO-Socket-INET6-0:2.72-12.module+el8.3.0+6446+594cad75.noarch
+#    - perl-IO-Socket-INET6-0:2.72-12.module+el8.3.0+6446+594cad75.noarch
     - perl-Net-IDN-Encode-0:2.500-2.module+el8.3.0+6446+594cad75.x86_64
     - perl-Net-IDN-Encode-debugsource-0:2.500-2.module+el8.3.0+6446+594cad75.x86_64
     - perl-Net-IDN-Encode-debuginfo-0:2.500-2.module+el8.3.0+6446+594cad75.x86_64
