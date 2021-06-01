@@ -2,6 +2,475 @@
 document: modulemd
 version: 2
 data:
+  name: tycho
+  stream: rhel8
+  version: '1111'
+  context: abbb
+  arch: x86_64
+  license:
+    module:
+    - MIT
+  summary: Plugins and extensions for building Eclipse plugins and OSGI bundles with
+    Maven
+  description: 'Tycho is a set of Maven plugins and extensions for building Eclipse
+    plugins and OSGI bundles with Maven. Eclipse plugins and OSGI bundles have their
+    own metadata for expressing dependencies, source folder locations, etc. that are
+    normally found in a Maven POM. Tycho uses native metadata for Eclipse plugins
+    and OSGi bundles and uses the POM to configure and drive the build. Tycho supports
+    bundles, fragments, features, update site projects and RCP applications. Tycho
+    also knows how to run JUnit test plugins using OSGi runtime and there is also
+    support for sharing build results using Maven artifact repositories.
+
+    Tycho plugins introduce new packaging types and the corresponding lifecycle bindings
+    that allow Maven to use OSGi and Eclipse metadata during a Maven build. OSGi rules
+    are used to resolve project dependencies and package visibility restrictions are
+    honored by the OSGi-aware JDT-based compiler plugin. Tycho will use OSGi metadata
+    and OSGi rules to calculate project dependencies dynamically and injects them
+    into the Maven project model at build time. Tycho supports all attributes supported
+    by the Eclipse OSGi resolver (Require-Bundle, Import-Package, Eclipse-GenericRequire,
+    etc). Tycho will use proper classpath access rules during compilation. Tycho supports
+    all project types supported by PDE and will use PDE/JDT project metadata where
+    possible. One important design goal in Tycho is to make sure there is no duplication
+    of metadata between POM and OSGi metadata.'
+  dependencies:
+  - buildrequires:
+      javapackages-tools:
+      - 201801
+      platform:
+      - el8.3.0
+      tycho:
+      - rhel8
+    requires:
+      javapackages-tools:
+      - 201801
+      platform:
+      - el8
+  components:
+    rpms:
+      apache-commons-el:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse. Build dependency of eclipse.
+
+          '
+        ref: 73c188c765cbdb518e89f4fdf4421f9acdd8069b
+      apiguardian:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Build dependency of junit5.
+
+          '
+        ref: 1c5854838390a252016ba1b681c3e20be9afecbb
+      auto:
+        arches:
+        - x86_64
+        buildorder: 20
+        rationale: 'Runtime dependency of cbi-plugins. Build dependency of cbi-plugins.
+
+          '
+        ref: a26fa6c482e3f274d9380ec8961b6823e4b23ba0
+      batik:
+        arches:
+        - x86_64
+        buildorder: 20
+        rationale: 'Runtime dependency of eclipse, tycho. Build dependency of eclipse,
+          tycho.
+
+          '
+        ref: 27b16643afcea32bf9bbbb340ce7d0bb9c91ad9d
+      cbi-plugins:
+        arches:
+        - x86_64
+        buildorder: 50
+        rationale: 'Module API. Build dependency of eclipse.
+
+          '
+        ref: 1493ad6e39077394476acb08b7698fde4a85d5ea
+      decentxml:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of cbi-plugins, tycho. Build dependency of
+          cbi-plugins, tycho.
+
+          '
+        ref: 123ea3dab3936f0ce72d5aa42b155a15231a4a16
+      ecj:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of tycho. Build dependency of glassfish-jsp,
+          tycho.
+
+          '
+        ref: bd3beb85da56da17d680e40e19dffe0ccafe4b82
+      eclipse:
+        arches:
+        - x86_64
+        buildorder: 80
+        rationale: 'Module application.
+
+          '
+        ref: 11dc0f1839ff9e3cd88918db941f434e3222b8fe
+      eclipse-ecf:
+        arches:
+        - x86_64
+        buildorder: 70
+        rationale: 'Runtime dependency of eclipse. Build dependency of eclipse.
+
+          '
+        ref: 402b5ef86ac82b8527502440353488c04f3c7b3f
+      eclipse-emf:
+        arches:
+        - x86_64
+        buildorder: 60
+        rationale: 'Runtime dependency of eclipse. Build dependency of eclipse, eclipse-ecf.
+
+          '
+        ref: 7fec2c24b40c859f4e7997a77d12987a1f3b416e
+      eclipse-license:
+        arches:
+        - x86_64
+        buildorder: 50
+        rationale: 'Build dependency of eclipse, eclipse-ecf.
+
+          '
+        ref: 99ea0762dce631a850a7c405410b601c77fedf35
+      felix-gogo-command:
+        arches:
+        - x86_64
+        buildorder: 30
+        rationale: 'Runtime dependency of eclipse. Build dependency of eclipse.
+
+          '
+        ref: 66c5ca805f9f48fb8904019c646424ee973cced1
+      felix-gogo-parent:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: "Build dependency of felix-gogo-command,\n     felix-gogo-runtime,\
+          \ felix-gogo-shell.\n"
+        ref: 0139b2350a9eb4c91ccb466ce5074302d1a8d04f
+      felix-gogo-runtime:
+        arches:
+        - x86_64
+        buildorder: 20
+        rationale: "Runtime dependency of eclipse, felix-gogo-command,\n     felix-gogo-shell.\n\
+          Build dependency of eclipse, felix-gogo-command,\n     felix-gogo-shell,\
+          \ felix-scr.\n"
+        ref: 314afbcab18cdb1ba4f218d05cd6ddff3afb90f9
+      felix-gogo-shell:
+        arches:
+        - x86_64
+        buildorder: 30
+        rationale: 'Runtime dependency of eclipse. Build dependency of eclipse.
+
+          '
+        ref: 9e3cfdfa64d02abbda98ed733d4deb63b7909cd8
+      felix-scr:
+        arches:
+        - x86_64
+        buildorder: 30
+        rationale: 'Runtime dependency of eclipse, tycho. Build dependency of eclipse,
+          tycho.
+
+          '
+        ref: 3e33d9f5a17267d9b36ede877eb8df8ece936341
+      glassfish-jsp:
+        arches:
+        - x86_64
+        buildorder: 20
+        rationale: 'Runtime dependency of eclipse, tycho. Build dependency of eclipse,
+          tycho.
+
+          '
+        ref: c26768aa09e8b760e8c36539735ad06d919b5981
+      google-gson:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse Build dependency of eclipse
+
+          '
+        ref: 2dc41ac8de20730ace8591693065f39f758c82d8
+      icu4j:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse, tycho. Build dependency of eclipse,
+          tycho.
+
+          '
+        ref: c5f702a4e72885786cb11355f29a28407c22dfce
+      javapoet:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of auto Build dependency of auto
+
+          '
+        ref: d418582a47ee5af2a9dfb8a659b3f10763fae4ca
+      jetty:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse. Build dependency of eclipse.
+
+          '
+        ref: a5b854bac76ad7f420676836cc2b71af4953d9ab
+      junit5:
+        arches:
+        - x86_64
+        buildorder: 20
+        rationale: 'Build dependency of tycho, eclipse.
+
+          '
+        ref: 0f9283f20a9081e6e020e5d74fe65d9b4a352135
+      kxml:
+        arches:
+        - x86_64
+        buildorder: 20
+        rationale: 'Runtime dependency of felix-scr. Build dependency of felix-scr.
+
+          '
+        ref: 34aedd622a1e4526303aaed0fcc71702965d44c4
+      lucene:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse. Build dependency of eclipse.
+
+          '
+        ref: 3451909e6b3e6669438f9487e5b50c0bd75cb535
+      opentest4j:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Build dependency of junit5.
+
+          '
+        ref: 71c3d279c0dd83eca3acf362fd3276b808684a87
+      sac:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse, tycho. Build dependency of eclipse,
+          tycho.
+
+          '
+        ref: 2a18fc5c8881b258148853d45ee306cb0bfae3ef
+      sat4j:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of eclipse, tycho. Build dependency of eclipse,
+          tycho.
+
+          '
+        ref: 95e1cea02add331e4c4d7a937bddf7fc317fb0bc
+      tesla-polyglot:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of tycho-extras. Build dependency of tycho-extras.
+
+          '
+        ref: bc210f3bb0fc1e23c4bd3705138e5081a0863e41
+      tycho:
+        arches:
+        - x86_64
+        buildorder: 40
+        rationale: "Module API. Runtime dependency of cbi-plugins,\n     tycho-extras.\n\
+          Build dependency of cbi-plugins, eclipse, eclipse-ecf,\n     eclipse-emf,\
+          \ eclipse-license,\n     tycho-extras.\n"
+        ref: 35a07c253d334be8ea1478ca33eee2161a02f128
+      tycho-extras:
+        arches:
+        - x86_64
+        buildorder: 50
+        rationale: 'Module API. Build dependency of eclipse, eclipse-ecf, eclipse-emf.
+
+          '
+        ref: 4a48adccbf9778ab9a894cc8b0b21dff75b78ee1
+      univocity-parsers:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Build dependency of junit5.
+
+          '
+        ref: 79d7f75ea45fda2cd5ec9cbb3cf8ecc050626132
+      xml-maven-plugin:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Build dependency of eclipse.
+
+          '
+        ref: 8bbd982a67b229d0d7b07f6845c31be77af8e7ed
+      xmlgraphics-commons:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of batik. Build dependency of batik.
+
+          '
+        ref: 4a021482c412e7cd4a44375a9aa234363d49c1e6
+      xpp3:
+        arches:
+        - x86_64
+        buildorder: 10
+        rationale: 'Runtime dependency of felix-scr, kxml. Build dependency of felix-scr,
+          kxml.
+
+          '
+        ref: 9a6f301add742ba10c9f3c07c3ba92239aea43fe
+  api:
+    rpms:
+    - cbi-plugins
+    - tycho
+    - tycho-extras
+  buildopts:
+    rpms:
+      macros: '%_with_jp_minimal 1
+
+        %_without_contrib_tools 1
+
+        %_without_junit5 1
+
+        '
+  profiles:
+    common:
+      rpms:
+      - tycho
+      - tycho-extras
+  artifacts:
+    rpms:
+    - jetty-io-0:9.4.19-1.v20190610.module+el8.1.1+5566+dec719a4.noarch
+    - tesla-polyglot-0:0.2.1-9.module+el8.1.1+5566+dec719a4.noarch
+    - lucene-javadoc-0:8.1.1-2.module+el8.1.1+5566+dec719a4.noarch
+    - lucene-memory-0:8.1.1-2.module+el8.1.1+5566+dec719a4.noarch
+    - felix-scr-0:2.1.16-1.module+el8.1.1+5566+dec719a4.noarch
+    - junit5-javadoc-0:5.4.0-1.module+el8.1.1+5566+dec719a4.noarch
+    - felix-gogo-parent-0:4-2.module+el8.1.1+5566+dec719a4.noarch
+    - jetty-jmx-0:9.4.19-1.v20190610.module+el8.1.1+5566+dec719a4.noarch
+    - tesla-polyglot-javadoc-0:0.2.1-9.module+el8.1.1+5566+dec719a4.noarch
+    - lucene-0:8.1.1-2.module+el8.1.1+5566+dec719a4.noarch
+    - tesla-polyglot-atom-0:0.2.1-9.module+el8.1.1+5566+dec719a4.noarch
+    - batik-0:1.11-1.module+el8.1.1+5566+dec719a4.noarch
+    - batik-squiggle-0:1.11-1.module+el8.1.1+5566+dec719a4.noarch
+    - lucene-analyzers-smartcn-0:8.1.1-2.module+el8.1.1+5566+dec719a4.noarch
+    - tesla-polyglot-maven-plugin-0:0.2.1-9.module+el8.1.1+5566+dec719a4.noarch
+    - javapoet-0:1.7.0-6.module+el8.1.1+5566+dec719a4.noarch
+    - eclipse-swt-debuginfo-1:4.12-6.module+el8.1.1+5566+dec719a4.x86_64
+    - sac-javadoc-0:1.3-30.module+el8.1.1+5566+dec719a4.noarch
+    - batik-ttf2svg-0:1.11-1.module+el8.1.1+5566+dec719a4.noarch
+    - jetty-util-0:9.4.19-1.v20190610.module+el8.1.1+5566+dec719a4.noarch
+    - tesla-polyglot-xml-0:0.2.1-9.module+el8.1.1+5566+dec719a4.noarch
+    - felix-scr-javadoc-0:2.1.16-1.module+el8.1.1+5566+dec719a4.noarch
+    - eclipse-equinox-osgi-1:4.12-6.module+el8.1.1+5566+dec719a4.x86_64
+    - eclipse-pde-1:4.12-6.module+el8.1.1+5566+dec719a4.x86_64
+    - jetty-servlet-0:9.4.19-1.v20190610.module+el8.1.1+5566+dec719a4.noarch
+    - jetty-http-0:9.4.19-1.v20190610.module+el8.1.1+5566+dec719a4.noarch
+    - lucene-queryparser-0:8.1.1-2.module+el8.1.1+5566+dec719a4.noarch
+    - batik-javadoc-0:1.11-1.module+el8.1.1+5566+dec719a4.noarch
+    - auto-common-0:1.4.1-1.module+el8.1.1+5566+dec719a4.noarch
+    - felix-gogo-runtime-javadoc-0:1.1.0-3.module+el8.1.1+5566+dec719a4.noarch
+    - tycho-javadoc-0:1.4.0-2.module+el8.1.1+5566+dec719a4.noarch
+    - univocity-parsers-javadoc-0:2.5.5-4.module+el8.1.1+5566+dec719a4.noarch
+    - xmlgraphics-commons-0:2.3-1.module+el8.1.1+5566+dec719a4.noarch
+    - lucene-join-0:8.1.1-2.module+el8.1.1+5566+dec719a4.noarch
+    - icu4j-localespi-1:64.2-1.module+el8.1.1+5566+dec719a4.noarch
+    - decentxml-javadoc-0:1.4-19.module+el8.1.1+5566+dec719a4.noarch
+    - tesla-polyglot-common-0:0.2.1-9.module+el8.1.1+5566+dec719a4.noarch
+    - opentest4j-javadoc-0:1.1.1-1.module+el8.1.1+5566+dec719a4.noarch
+    - jetty-javadoc-0:9.4.19-1.v20190610.module+el8.1.1+5566+dec719a4.noarch
+    - eclipse-p2-discovery-1:4.12-6.module+el8.1.1+5566+dec719a4.noarch
+    - xpp3-javadoc-0:1.1.4-20.c.module+el8.1.1+5566+dec719a4.noarch
+    - batik-demo-0:1.11-1.module+el8.1.1+5566+dec719a4.noarch
+    - apiguardian-javadoc-0:1.0.0-3.module+el8.1.1+5566+dec719a4.noarch
+    - glassfish-jsp-javadoc-0:2.3.3-0.14.b02.module+el8.1.1+5566+dec719a4.noarch
+    - kxml-javadoc-0:2.3.0-18.module+el8.1.1+5566+dec719a4.noarch
+    - sat4j-0:2.3.5-15.module+el8.1.1+5566+dec719a4.noarch
+    - eclipse-jdt-1:4.12-6.module+el8.1.1+5566+dec719a4.noarch
+    - xml-maven-plugin-javadoc-0:1.0.2-3.module+el8.1.1+5566+dec719a4.noarch
+    - eclipse-platform-debuginfo-1:4.12-6.module+el8.1.1+5566+dec719a4.x86_64
+    - eclipse-license2-0:2.0.1-7.module+el8.1.1+5566+dec719a4.noarch
+    - google-gson-javadoc-0:2.8.2-3.module+el8.1.1+5566+dec719a4.noarch
+    - ecj-1:4.11-0.1.module+el8.1.1+5566+dec719a4.noarch
+    - kxml-0:2.3.0-18.module+el8.1.1+5566+dec719a4.noarch
+    - eclipse-swt-1:4.12-6.module+el8.1.1+5566+dec719a4.x86_64
+    - opentest4j-0:1.1.1-1.module+el8.1.1+5566+dec719a4.noarch
+    - lucene-sandbox-0:8.1.1-2.module+el8.1.1+5566+dec719a4.noarch
+    - lucene-highlighter-0:8.1.1-2.module+el8.1.1+5566+dec719a4.noarch
+    - javapoet-javadoc-0:1.7.0-6.module+el8.1.1+5566+dec719a4.noarch
+    - glassfish-jsp-0:2.3.3-0.14.b02.module+el8.1.1+5566+dec719a4.noarch
+    - batik-util-0:1.11-1.module+el8.1.1+5566+dec719a4.noarch
+    - auto-service-0:1.4.1-1.module+el8.1.1+5566+dec719a4.noarch
+    - jetty-jaas-0:9.4.19-1.v20190610.module+el8.1.1+5566+dec719a4.noarch
+    - icu4j-javadoc-1:64.2-1.module+el8.1.1+5566+dec719a4.noarch
+    - batik-css-0:1.11-1.module+el8.1.1+5566+dec719a4.noarch
+    - jetty-security-0:9.4.19-1.v20190610.module+el8.1.1+5566+dec719a4.noarch
+    - batik-svgpp-0:1.11-1.module+el8.1.1+5566+dec719a4.noarch
+    - jetty-webapp-0:9.4.19-1.v20190610.module+el8.1.1+5566+dec719a4.noarch
+    - jetty-continuation-0:9.4.19-1.v20190610.module+el8.1.1+5566+dec719a4.noarch
+    - cbi-plugins-javadoc-0:1.1.5-6.module+el8.1.1+5566+dec719a4.noarch
+    - xml-maven-plugin-0:1.0.2-3.module+el8.1.1+5566+dec719a4.noarch
+    - eclipse-emf-core-1:2.18.0-1.module+el8.1.1+5566+dec719a4.noarch
+    - auto-value-0:1.4.1-1.module+el8.1.1+5566+dec719a4.noarch
+    - jetty-server-0:9.4.19-1.v20190610.module+el8.1.1+5566+dec719a4.noarch
+    - eclipse-ecf-runtime-0:3.14.5-3.module+el8.1.1+5566+dec719a4.noarch
+    - univocity-parsers-0:2.5.5-4.module+el8.1.1+5566+dec719a4.noarch
+    - eclipse-ecf-sdk-0:3.14.5-3.module+el8.1.1+5566+dec719a4.noarch
+    - batik-rasterizer-0:1.11-1.module+el8.1.1+5566+dec719a4.noarch
+    - auto-javadoc-0:1.4.1-1.module+el8.1.1+5566+dec719a4.noarch
+    - tesla-polyglot-translate-plugin-0:0.2.1-9.module+el8.1.1+5566+dec719a4.noarch
+    - xpp3-minimal-0:1.1.4-20.c.module+el8.1.1+5566+dec719a4.noarch
+    - apache-commons-el-0:1.0-42.module+el8.1.1+5566+dec719a4.noarch
+    - lucene-misc-0:8.1.1-2.module+el8.1.1+5566+dec719a4.noarch
+    - icu4j-1:64.2-1.module+el8.1.1+5566+dec719a4.noarch
+    - jetty-client-0:9.4.19-1.v20190610.module+el8.1.1+5566+dec719a4.noarch
+    - tycho-extras-javadoc-0:1.4.0-1.module+el8.1.1+5566+dec719a4.noarch
+    - lucene-grouping-0:8.1.1-2.module+el8.1.1+5566+dec719a4.noarch
+    - lucene-backward-codecs-0:8.1.1-2.module+el8.1.1+5566+dec719a4.noarch
+    - eclipse-debugsource-1:4.12-6.module+el8.1.1+5566+dec719a4.x86_64
+    - junit5-0:5.4.0-1.module+el8.1.1+5566+dec719a4.noarch
+    - eclipse-ecf-core-0:3.14.5-3.module+el8.1.1+5566+dec719a4.noarch
+    - eclipse-platform-1:4.12-6.module+el8.1.1+5566+dec719a4.x86_64
+    - xpp3-0:1.1.4-20.c.module+el8.1.1+5566+dec719a4.noarch
+    - eclipse-emf-runtime-0:2.18.0-1.module+el8.1.1+5566+dec719a4.noarch
+    - eclipse-emf-sdk-0:2.18.0-1.module+el8.1.1+5566+dec719a4.noarch
+    - auto-0:1.4.1-1.module+el8.1.1+5566+dec719a4.noarch
+    - felix-gogo-runtime-0:1.1.0-3.module+el8.1.1+5566+dec719a4.noarch
+    - tycho-extras-0:1.4.0-1.module+el8.1.1+5566+dec719a4.noarch
+    - felix-gogo-shell-javadoc-0:1.1.0-2.module+el8.1.1+5566+dec719a4.noarch
+    - google-gson-0:2.8.2-3.module+el8.1.1+5566+dec719a4.noarch
+    - icu4j-charset-1:64.2-1.module+el8.1.1+5566+dec719a4.noarch
+    - decentxml-0:1.4-19.module+el8.1.1+5566+dec719a4.noarch
+    - felix-gogo-shell-0:1.1.0-2.module+el8.1.1+5566+dec719a4.noarch
+    - lucene-analysis-0:8.1.1-2.module+el8.1.1+5566+dec719a4.noarch
+    - batik-slideshow-0:1.11-1.module+el8.1.1+5566+dec719a4.noarch
+    - jetty-xml-0:9.4.19-1.v20190610.module+el8.1.1+5566+dec719a4.noarch
+    - apiguardian-0:1.0.0-3.module+el8.1.1+5566+dec719a4.noarch
+    - junit5-guide-0:5.4.0-1.module+el8.1.1+5566+dec719a4.noarch
+    - felix-gogo-command-javadoc-0:1.0.2-7.module+el8.1.1+5566+dec719a4.noarch
+    - eclipse-debuginfo-1:4.12-6.module+el8.1.1+5566+dec719a4.x86_64
+    - apache-commons-el-javadoc-0:1.0-42.module+el8.1.1+5566+dec719a4.noarch
+    - eclipse-emf-xsd-0:2.18.0-1.module+el8.1.1+5566+dec719a4.noarch
+    - xmlgraphics-commons-javadoc-0:2.3-1.module+el8.1.1+5566+dec719a4.noarch
+    - cbi-plugins-0:1.1.5-6.module+el8.1.1+5566+dec719a4.noarch
+    - lucene-queries-0:8.1.1-2.module+el8.1.1+5566+dec719a4.noarch
+    - tycho-0:1.4.0-2.module+el8.1.1+5566+dec719a4.noarch
+    - sac-0:1.3-30.module+el8.1.1+5566+dec719a4.noarch
+    - eclipse-license1-0:1.0.1-7.module+el8.1.1+5566+dec719a4.noarch
+    - felix-gogo-command-0:1.0.2-7.module+el8.1.1+5566+dec719a4.noarch
+...
+---
+document: modulemd
+version: 2
+data:
   name: mongodb
   stream: 3.6
   version: '8010020191120190538'
@@ -212,4 +681,2582 @@ data:
   artifacts:
     rpms:
     - golang-github-cpuguy83-go-md2man-0:1.0.7-11.module+el8.3.0+6969+d5cdaaaa.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: javapackages-tools
+  stream: 201902
+  version: '20200511202313'
+  context: d91c7a83
+  arch: x86_64
+  license:
+    module:
+    - MIT
+  summary: Tools and macros for Java packaging support
+  description: Java Packages Tools is a collection of tools that make it easier to
+    build RPM packages containing software running on Java platform.
+  dependencies:
+  - buildrequires:
+      javapackages-tools:
+      - 201902
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      ant:
+        rationale: "Runtime dependency of jflex, maven-antrun-plugin,\n     maven-plugin-tools,\
+          \ maven-script-interpreter,\n     plexus-ant-factory.\nBuild dependency\
+          \ of ant, antlr, aopalliance,\n     apache-ivy, bsf, bsh, cglib, isorelax,\
+          \ jakarta-oro,\n     java_cup, javacc, jdepend, jdom, jdom2, jflex, jtidy,\n\
+          \     log4j12, maven-antrun-plugin, maven-plugin-tools,\n     maven-script-interpreter,\
+          \ plexus-ant-factory,\n     plexus-classworlds, regexp, testng, velocity,\
+          \ xalan-j2,\n     xerces-j2, xml-commons-apis, xml-commons-resolver,\n \
+          \    xz-java.\n"
+        ref: stream-javapackages-tools-201902
+      antlr:
+        rationale: 'Runtime dependency of ant. Build dependency of ant, velocity.
+
+          '
+        ref: stream-javapackages-tools-201902
+      aopalliance:
+        rationale: 'Runtime dependency of google-guice. Build dependency of google-guice.
+
+          '
+        ref: stream-javapackages-tools-201902
+      apache-commons-beanutils:
+        rationale: 'Build dependency of apache-commons-jxpath.
+
+          '
+        ref: stream-javapackages-tools-201902
+      apache-commons-cli:
+        rationale: 'Runtime dependency of maven, xmvn. Build dependency of maven.
+
+          '
+        ref: stream-javapackages-tools-201902
+      apache-commons-codec:
+        rationale: "Runtime dependency of httpcomponents-client,\n     maven-artifact-transfer,\
+          \ maven-assembly-plugin,\n     maven-enforcer.\nBuild dependency of httpcomponents-client,\n\
+          \     maven-artifact-transfer, maven-assembly-plugin,\n     maven-enforcer.\n"
+        ref: stream-javapackages-tools-201902
+      apache-commons-collections:
+        rationale: "Runtime dependency of apache-commons-beanutils,\n     maven-dependency-plugin,\
+          \ maven-doxia-sitetools,\n     plexus-velocity, velocity.\nBuild dependency\
+          \ of apache-commons-beanutils,\n     maven-dependency-plugin, maven-doxia-sitetools,\n\
+          \     plexus-velocity, velocity.\n"
+        ref: stream-javapackages-tools-201902
+      apache-commons-compress:
+        rationale: 'Runtime dependency of plexus-archiver, xmvn. Build dependency
+          of plexus-archiver, xmvn.
+
+          '
+        ref: stream-javapackages-tools-201902
+      apache-commons-exec:
+        rationale: 'Runtime dependency of exec-maven-plugin. Build dependency of exec-maven-plugin.
+
+          '
+        ref: stream-javapackages-tools-201902
+      apache-commons-io:
+        rationale: "Runtime dependency of jdependency, maven-archiver,\n     maven-assembly-plugin,\
+          \ maven-dependency-plugin,\n     maven-doxia-sitetools, maven-invoker-plugin,\n\
+          \     maven-plugin-testing, maven-remote-resources-plugin,\n     maven-resources-plugin,\
+          \ maven-shade-plugin,\n     maven-shared-utils, maven-surefire, maven-wagon,\n\
+          \     plexus-io.\nBuild dependency of jdependency, maven-archiver,\n   \
+          \  maven-assembly-plugin, maven-dependency-plugin,\n     maven-doxia-sitetools,\
+          \ maven-invoker-plugin,\n     maven-plugin-testing, maven-remote-resources-plugin,\n\
+          \     maven-resources-plugin, maven-shade-plugin,\n     maven-shared-utils,\
+          \ maven-surefire, maven-wagon,\n     plexus-io.\n"
+        ref: stream-javapackages-tools-201902
+      apache-commons-jxpath:
+        rationale: 'Build dependency of maven.
+
+          '
+        ref: stream-javapackages-tools-201902
+      apache-commons-lang3:
+        rationale: "Runtime dependency of maven, maven-dependency-plugin,\n     maven-doxia,\
+          \ maven-doxia-sitetools, maven-enforcer,\n     maven-surefire, velocity,\
+          \ xmvn.\nBuild dependency of apache-commons-codec, maven,\n     maven-dependency-plugin,\
+          \ maven-doxia,\n     maven-doxia-sitetools, maven-enforcer,\n     maven-shared-utils,\
+          \ maven-surefire, velocity.\n"
+        ref: stream-javapackages-tools-201902
+      apache-commons-logging:
+        rationale: "Runtime dependency of ant, apache-commons-beanutils,\n     bsf,\
+          \ slf4j.\nBuild dependency of ant, apache-commons-beanutils, bsf,\n    \
+          \ httpcomponents-client, httpcomponents-core,\n     plexus-classworlds,\
+          \ slf4j, velocity, xbean.\n"
+        ref: stream-javapackages-tools-201902
+      apache-commons-net:
+        rationale: 'Runtime dependency of ant. Build dependency of ant.
+
+          '
+        ref: stream-javapackages-tools-201902
+      apache-commons-parent:
+        rationale: "Build dependency of apache-commons-beanutils,\n     apache-commons-cli,\
+          \ apache-commons-codec,\n     apache-commons-collections, apache-commons-compress,\n\
+          \     apache-commons-exec, apache-commons-io,\n     apache-commons-jxpath,\
+          \ apache-commons-lang3,\n     apache-commons-logging, apache-commons-net,\
+          \ bcel.\n"
+        ref: stream-javapackages-tools-201902
+      apache-ivy:
+        rationale: 'Runtime dependency of javapackages-tools. Build dependency of
+          xmvn.
+
+          '
+        ref: stream-javapackages-tools-201902
+      apache-parent:
+        rationale: "Runtime dependency of apache-commons-parent,\n     felix-parent,\
+          \ httpcomponents-project, maven-parent.\nBuild dependency of apache-commons-parent,\
+          \ bsf,\n     felix-parent, httpcomponents-project, maven-parent,\n     velocity,\
+          \ xalan-j2, xerces-j2, xml-commons-apis,\n     xml-commons-resolver.\n"
+        ref: stream-javapackages-tools-201902
+      apache-resource-bundles:
+        rationale: "Runtime dependency of apache-parent. Build dependency of apache-parent,\
+          \ easymock,\n     google-guice, objenesis.\n"
+        ref: stream-javapackages-tools-201902
+      apiguardian:
+        rationale: 'Build dependency of junit5.
+
+          '
+        ref: stream-javapackages-tools-201902
+      aqute-bnd:
+        rationale: 'Runtime dependency of maven-plugin-bundle. Build dependency of
+          maven-plugin-bundle.
+
+          '
+        ref: stream-javapackages-tools-201902
+      assertj-core:
+        rationale: 'Runtime dependency of xmlunit. Build dependency of maven-archiver,
+          mockito, xmlunit.
+
+          '
+        ref: stream-javapackages-tools-201902
+      atinject:
+        rationale: "Runtime dependency of cdi-api, google-guice, maven,\n     xmvn.\n\
+          Build dependency of cdi-api, google-guice, maven,\n     maven-resolver,\
+          \ plexus-cipher, plexus-languages, sisu.\n"
+        ref: stream-javapackages-tools-201902
+      bcel:
+        rationale: 'Runtime dependency of ant, xalan-j2. Build dependency of ant,
+          velocity, xalan-j2.
+
+          '
+        ref: stream-javapackages-tools-201902
+      beust-jcommander:
+        rationale: 'Runtime dependency of testng, xmvn. Build dependency of testng,
+          xmvn.
+
+          '
+        ref: stream-javapackages-tools-201902
+      bsf:
+        rationale: 'Runtime dependency of ant. Build dependency of ant, bsh.
+
+          '
+        ref: stream-javapackages-tools-201902
+      bsh:
+        rationale: "Runtime dependency of maven-enforcer,\n     maven-invoker-plugin,\
+          \ maven-plugin-build-helper,\n     maven-plugin-tools, maven-script-interpreter,\n\
+          \     plexus-bsh-factory.\nBuild dependency of maven-enforcer,\n     maven-invoker-plugin,\
+          \ maven-plugin-build-helper,\n     maven-plugin-tools, maven-script-interpreter,\n\
+          \     plexus-bsh-factory, testng.\n"
+        ref: stream-javapackages-tools-201902
+      byaccj:
+        rationale: 'Build dependency of qdox.
+
+          '
+        ref: stream-javapackages-tools-201902
+      byte-buddy:
+        rationale: 'Runtime dependency of assertj-core, mockito. Build dependency
+          of byte-buddy, mockito.
+
+          '
+        ref: stream-javapackages-tools-201902
+      cdi-api:
+        rationale: 'Runtime dependency of sisu. Build dependency of plexus-cipher,
+          sisu.
+
+          '
+        ref: stream-javapackages-tools-201902
+      cglib:
+        rationale: "Runtime dependency of easymock. Build dependency of assertj-core,\
+          \ easymock,\n     google-guice.\n"
+        ref: stream-javapackages-tools-201902
+      easymock:
+        rationale: "Runtime dependency of maven-plugin-testing,\n     maven-plugin-tools.\n\
+          Build dependency of maven-artifact-resolver,\n     maven-common-artifact-filters,\
+          \ maven-plugin-testing,\n     maven-plugin-tools, maven-shared-io, xmvn.\n"
+        ref: stream-javapackages-tools-201902
+      exec-maven-plugin:
+        rationale: 'Build dependency of apache-commons-net, mockito, qdox.
+
+          '
+        ref: stream-javapackages-tools-201902
+      felix-parent:
+        rationale: 'Build dependency of felix-utils, maven-plugin-bundle.
+
+          '
+        ref: stream-javapackages-tools-201902
+      felix-utils:
+        rationale: 'Runtime dependency of maven-plugin-bundle. Build dependency of
+          maven-plugin-bundle.
+
+          '
+        ref: stream-javapackages-tools-201902
+      forge-parent:
+        rationale: "Runtime dependency of sonatype-plugins-parent,\n     spice-parent.\n\
+          Build dependency of sonatype-plugins-parent,\n     spice-parent.\n"
+        ref: stream-javapackages-tools-201902
+      fusesource-pom:
+        rationale: 'Build dependency of jansi.
+
+          '
+        ref: stream-javapackages-tools-201902
+      geronimo-annotation:
+        rationale: 'Runtime dependency of maven. Build dependency of maven.
+
+          '
+        ref: stream-javapackages-tools-201902
+      geronimo-jms:
+        rationale: 'Build dependency of log4j12.
+
+          '
+        ref: stream-javapackages-tools-201902
+      geronimo-parent-poms:
+        rationale: 'Build dependency of geronimo-annotation, geronimo-jms.
+
+          '
+        ref: stream-javapackages-tools-201902
+      glassfish-annotation-api:
+        rationale: 'Build dependency of sisu.
+
+          '
+        ref: stream-javapackages-tools-201902
+      glassfish-legal:
+        rationale: 'Build dependency of glassfish-annotation-api.
+
+          '
+        ref: stream-javapackages-tools-201902
+      glassfish-master-pom:
+        rationale: 'Runtime dependency of glassfish-legal. Build dependency of glassfish-legal.
+
+          '
+        ref: stream-javapackages-tools-201902
+      glassfish-servlet-api:
+        rationale: "Build dependency of apache-commons-logging, bsh,\n     google-guice,\
+          \ osgi-compendium, velocity.\n"
+        ref: stream-javapackages-tools-201902
+      google-guice:
+        rationale: "Runtime dependency of maven, xmvn. Build dependency of maven,\
+          \ maven-resolver, sisu,\n     testng.\n"
+        ref: stream-javapackages-tools-201902
+      guava:
+        rationale: "Runtime dependency of google-guice, maven-shade-plugin,\n    \
+          \ plexus-containers, xmvn.\nBuild dependency of google-guice, maven-shade-plugin,\n\
+          \     plexus-containers.\n"
+        ref: stream-javapackages-tools-201902
+      hamcrest:
+        rationale: "Runtime dependency of junit, xmlunit. Build dependency of ant,\
+          \ junit, maven-resolver,\n     maven-shared-utils, mockito, xmlunit.\n"
+        ref: stream-javapackages-tools-201902
+      httpcomponents-client:
+        rationale: "Runtime dependency of maven-doxia, maven-wagon. Build dependency\
+          \ of apache-ivy, maven-doxia,\n     maven-wagon.\n"
+        ref: stream-javapackages-tools-201902
+      httpcomponents-core:
+        rationale: "Runtime dependency of httpcomponents-client,\n     maven-doxia,\
+          \ maven-wagon.\nBuild dependency of httpcomponents-client, maven-doxia,\n\
+          \     maven-wagon.\n"
+        ref: stream-javapackages-tools-201902
+      httpcomponents-project:
+        rationale: "Build dependency of httpcomponents-client,\n     httpcomponents-core.\n"
+        ref: stream-javapackages-tools-201902
+      isorelax:
+        rationale: 'Build dependency of jdom2.
+
+          '
+        ref: stream-javapackages-tools-201902
+      jakarta-oro:
+        rationale: 'Runtime dependency of ant. Build dependency of ant, apache-ivy,
+          log4j12, velocity.
+
+          '
+        ref: stream-javapackages-tools-201902
+      jansi:
+        rationale: "Runtime dependency of maven. Build dependency of maven, maven-shared-utils,\n\
+          \     maven-surefire.\n"
+        ref: stream-javapackages-tools-201902
+      java_cup:
+        rationale: 'Runtime dependency of jflex, xalan-j2. Build dependency of java_cup,
+          jflex, xalan-j2.
+
+          '
+        ref: stream-javapackages-tools-201902
+      javacc:
+        rationale: 'Runtime dependency of javacc-maven-plugin. Build dependency of
+          bsh, javacc, javacc-maven-plugin.
+
+          '
+        ref: stream-javapackages-tools-201902
+      javacc-maven-plugin:
+        rationale: 'Build dependency of maven-surefire.
+
+          '
+        ref: stream-javapackages-tools-201902
+      javamail:
+        rationale: 'Runtime dependency of ant. Build dependency of ant, log4j12.
+
+          '
+        ref: stream-javapackages-tools-201902
+      javapackages-tools:
+        rationale: "Module API. Runtime dependency of ant, antlr, aopalliance,\n \
+          \    apache-commons-beanutils, apache-commons-cli,\n     apache-commons-codec,\
+          \ apache-commons-collections,\n     apache-commons-compress, apache-commons-exec,\n\
+          \     apache-commons-io, apache-commons-jxpath,\n     apache-commons-lang3,\
+          \ apache-commons-logging,\n     apache-commons-net, apache-commons-parent,\
+          \ apache-ivy,\n     apache-parent, apache-resource-bundles, apiguardian,\n\
+          \     aqute-bnd, assertj-core, atinject, bcel,\n     beust-jcommander, bsf,\
+          \ bsh, byte-buddy, cdi-api, cglib,\n     easymock, exec-maven-plugin, felix-parent,\
+          \ felix-utils,\n     forge-parent, fusesource-pom, geronimo-annotation,\n\
+          \     geronimo-jms, geronimo-parent-poms,\n     glassfish-annotation-api,\
+          \ glassfish-legal,\n     glassfish-master-pom, glassfish-servlet-api,\n\
+          \     google-guice, guava, hamcrest, httpcomponents-client,\n     httpcomponents-core,\
+          \ httpcomponents-project, isorelax,\n     jakarta-oro, jansi, java_cup,\
+          \ javacc,\n     javacc-maven-plugin, javamail, jaxen,\n     jboss-interceptors-1.2-api,\
+          \ jboss-parent, jdepend,\n     jdependency, jdom, jdom2, jflex, jsch, jsoup,\
+          \ jsr-305,\n     jtidy, junit, junit5, jvnet-parent, jzlib, log4j12,\n \
+          \    maven, maven-antrun-plugin, maven-archiver,\n     maven-artifact-resolver,\
+          \ maven-artifact-transfer,\n     maven-assembly-plugin, maven-clean-plugin,\n\
+          \     maven-common-artifact-filters, maven-compiler-plugin,\n     maven-dependency-analyzer,\
+          \ maven-dependency-plugin,\n     maven-dependency-tree, maven-doxia,\n \
+          \    maven-doxia-sitetools, maven-enforcer,\n     maven-file-management,\
+          \ maven-filtering, maven-invoker,\n     maven-invoker-plugin, maven-jar-plugin,\
+          \ maven-mapping,\n     maven-parent, maven-plugin-build-helper,\n     maven-plugin-bundle,\
+          \ maven-plugin-testing,\n     maven-plugin-tools, maven-remote-resources-plugin,\n\
+          \     maven-reporting-api, maven-reporting-impl,\n     maven-resolver, maven-resources-plugin,\n\
+          \     maven-script-interpreter, maven-shade-plugin,\n     maven-shared-incremental,\
+          \ maven-shared-io,\n     maven-shared-utils, maven-source-plugin,\n    \
+          \ maven-surefire, maven-verifier, maven-wagon, maven2,\n     mockito, modello,\
+          \ mojo-parent, munge-maven-plugin,\n     objectweb-asm, objectweb-pom, objenesis,\
+          \ opentest4j,\n     osgi-annotation, osgi-compendium, osgi-core,\n     plexus-ant-factory,\
+          \ plexus-archiver,\n     plexus-bsh-factory, plexus-build-api, plexus-cipher,\n\
+          \     plexus-classworlds, plexus-compiler,\n     plexus-component-api, plexus-component-factories-pom,\n\
+          \     plexus-components-pom, plexus-containers, plexus-i18n,\n     plexus-interpolation,\
+          \ plexus-io, plexus-languages,\n     plexus-pom, plexus-resources, plexus-sec-dispatcher,\n\
+          \     plexus-utils, plexus-velocity, qdox, regexp, sisu,\n     sisu-mojos,\
+          \ slf4j, sonatype-oss-parent,\n     sonatype-plugins-parent, spec-version-maven-plugin,\n\
+          \     spice-parent, testng, univocity-parsers, velocity,\n     weld-parent,\
+          \ xalan-j2, xbean, xerces-j2,\n     xml-commons-apis, xml-commons-resolver,\
+          \ xmlunit, xmvn,\n     xz-java.\nBuild dependency of ant, antlr, aopalliance,\n\
+          \     apache-commons-beanutils, apache-commons-cli,\n     apache-commons-codec,\
+          \ apache-commons-collections,\n     apache-commons-compress, apache-commons-exec,\n\
+          \     apache-commons-io, apache-commons-jxpath,\n     apache-commons-lang3,\
+          \ apache-commons-logging,\n     apache-commons-net, apache-commons-parent,\
+          \ apache-ivy,\n     apache-parent, apache-resource-bundles, apiguardian,\n\
+          \     aqute-bnd, assertj-core, atinject, bcel,\n     beust-jcommander, bsf,\
+          \ bsh, byte-buddy, cdi-api, cglib,\n     easymock, exec-maven-plugin, felix-parent,\
+          \ felix-utils,\n     forge-parent, fusesource-pom, geronimo-annotation,\n\
+          \     geronimo-jms, geronimo-parent-poms,\n     glassfish-annotation-api,\
+          \ glassfish-legal,\n     glassfish-master-pom, glassfish-servlet-api,\n\
+          \     google-guice, guava, hamcrest, httpcomponents-client,\n     httpcomponents-core,\
+          \ httpcomponents-project, isorelax,\n     jakarta-oro, jansi, java_cup,\
+          \ javacc,\n     javacc-maven-plugin, javamail, jaxen,\n     jboss-interceptors-1.2-api,\
+          \ jboss-parent, jdepend,\n     jdependency, jdom, jdom2, jflex, jsch, jsoup,\
+          \ jsr-305,\n     jtidy, junit, junit5, jvnet-parent, jzlib, log4j12,\n \
+          \    maven, maven-antrun-plugin, maven-archiver,\n     maven-artifact-resolver,\
+          \ maven-artifact-transfer,\n     maven-assembly-plugin, maven-clean-plugin,\n\
+          \     maven-common-artifact-filters, maven-compiler-plugin,\n     maven-dependency-analyzer,\
+          \ maven-dependency-plugin,\n     maven-dependency-tree, maven-doxia,\n \
+          \    maven-doxia-sitetools, maven-enforcer,\n     maven-file-management,\
+          \ maven-filtering, maven-invoker,\n     maven-invoker-plugin, maven-jar-plugin,\
+          \ maven-mapping,\n     maven-parent, maven-plugin-build-helper,\n     maven-plugin-bundle,\
+          \ maven-plugin-testing,\n     maven-plugin-tools, maven-remote-resources-plugin,\n\
+          \     maven-reporting-api, maven-reporting-impl,\n     maven-resolver, maven-resources-plugin,\n\
+          \     maven-script-interpreter, maven-shade-plugin,\n     maven-shared-incremental,\
+          \ maven-shared-io,\n     maven-shared-utils, maven-source-plugin,\n    \
+          \ maven-surefire, maven-verifier, maven-wagon, maven2,\n     mockito, modello,\
+          \ mojo-parent, munge-maven-plugin,\n     objectweb-asm, objectweb-pom, objenesis,\
+          \ opentest4j,\n     osgi-annotation, osgi-compendium, osgi-core,\n     plexus-ant-factory,\
+          \ plexus-archiver,\n     plexus-bsh-factory, plexus-build-api, plexus-cipher,\n\
+          \     plexus-classworlds, plexus-compiler,\n     plexus-component-api, plexus-component-factories-pom,\n\
+          \     plexus-components-pom, plexus-containers, plexus-i18n,\n     plexus-interpolation,\
+          \ plexus-io, plexus-languages,\n     plexus-pom, plexus-resources, plexus-sec-dispatcher,\n\
+          \     plexus-utils, plexus-velocity, qdox, regexp, sisu,\n     sisu-mojos,\
+          \ slf4j, sonatype-oss-parent,\n     sonatype-plugins-parent, spec-version-maven-plugin,\n\
+          \     spice-parent, testng, univocity-parsers, velocity,\n     weld-parent,\
+          \ xalan-j2, xbean, xerces-j2,\n     xml-commons-apis, xml-commons-resolver,\
+          \ xmlunit, xmvn,\n     xz-java.\n"
+        ref: stream-javapackages-tools-201902
+      jaxen:
+        rationale: 'Build dependency of jdom, jdom2, velocity.
+
+          '
+        ref: stream-javapackages-tools-201902
+      jboss-interceptors-1.2-api:
+        rationale: 'Build dependency of cdi-api.
+
+          '
+        ref: stream-javapackages-tools-201902
+      jboss-parent:
+        rationale: 'Build dependency of jboss-interceptors-1.2-api.
+
+          '
+        ref: stream-javapackages-tools-201902
+      jdepend:
+        rationale: 'Runtime dependency of ant. Build dependency of ant.
+
+          '
+        ref: stream-javapackages-tools-201902
+      jdependency:
+        rationale: 'Runtime dependency of maven-shade-plugin. Build dependency of
+          maven-shade-plugin.
+
+          '
+        ref: stream-javapackages-tools-201902
+      jdom:
+        rationale: "Build dependency of apache-commons-jxpath, jaxen,\n     maven-shade-plugin,\
+          \ velocity.\n"
+        ref: stream-javapackages-tools-201902
+      jdom2:
+        rationale: "Runtime dependency of maven-shade-plugin,\n     plexus-containers.\n\
+          Build dependency of plexus-containers.\n"
+        ref: stream-javapackages-tools-201902
+      jflex:
+        rationale: 'Build dependency of java_cup, jflex, qdox.
+
+          '
+        ref: stream-javapackages-tools-201902
+      jsch:
+        rationale: 'Runtime dependency of ant. Build dependency of ant.
+
+          '
+        ref: stream-javapackages-tools-201902
+      jsoup:
+        rationale: 'Runtime dependency of maven-wagon, modello. Build dependency of
+          maven-wagon, modello.
+
+          '
+        ref: stream-javapackages-tools-201902
+      jsr-305:
+        rationale: "Runtime dependency of google-guice, guava. Build dependency of\
+          \ guava, maven-assembly-plugin,\n     maven-enforcer, maven-filtering, maven-shared-utils,\n\
+          \     maven-surefire, plexus-archiver, plexus-io, testng.\n"
+        ref: stream-javapackages-tools-201902
+      jtidy:
+        rationale: 'Runtime dependency of maven-plugin-tools. Build dependency of
+          maven-plugin-tools.
+
+          '
+        ref: stream-javapackages-tools-201902
+      junit:
+        rationale: "Runtime dependency of ant, atinject, guava, hamcrest,\n     junit5,\
+          \ maven-verifier, modello, plexus-pom, xmlunit.\nBuild dependency of ant,\
+          \ apache-commons-cli,\n     apache-commons-codec, apache-commons-collections,\n\
+          \     apache-commons-compress, apache-commons-exec,\n     apache-commons-io,\
+          \ apache-commons-jxpath,\n     apache-commons-logging, apache-commons-net,\n\
+          \     assertj-core, atinject, bsh, byte-buddy, easymock,\n     felix-utils,\
+          \ guava, hamcrest, httpcomponents-client,\n     httpcomponents-core, jansi,\
+          \ javacc-maven-plugin,\n     javamail, jdependency, jflex, jtidy, junit5,\
+          \ log4j12,\n     maven, maven-archiver, maven-artifact-resolver,\n     maven-artifact-transfer,\
+          \ maven-clean-plugin,\n     maven-common-artifact-filters, maven-doxia,\n\
+          \     maven-file-management, maven-invoker,\n     maven-invoker-plugin,\
+          \ maven-mapping,\n     maven-plugin-testing, maven-remote-resources-plugin,\n\
+          \     maven-reporting-impl, maven-resolver,\n     maven-script-interpreter,\
+          \ maven-shared-io,\n     maven-shared-utils, maven-source-plugin,\n    \
+          \ maven-surefire, maven-verifier, mockito, modello,\n     munge-maven-plugin,\
+          \ opentest4j, plexus-archiver,\n     plexus-cipher, plexus-containers, plexus-interpolation,\n\
+          \     plexus-io, plexus-sec-dispatcher, sisu, sisu-mojos,\n     spec-version-maven-plugin,\
+          \ testng, velocity, xbean,\n     xmlunit.\n"
+        ref: stream-javapackages-tools-201902
+      junit5:
+        rationale: "Runtime dependency of ant, maven-surefire. Build dependency of\
+          \ ant, assertj-core, maven-surefire,\n     xmvn.\n"
+        ref: stream-javapackages-tools-201902
+      jvnet-parent:
+        rationale: "Build dependency of glassfish-annotation-api,\n     glassfish-servlet-api,\
+          \ javamail,\n     spec-version-maven-plugin.\n"
+        ref: stream-javapackages-tools-201902
+      jzlib:
+        rationale: 'Runtime dependency of jsch. Build dependency of jsch.
+
+          '
+        ref: stream-javapackages-tools-201902
+      log4j12:
+        rationale: "Runtime dependency of ant, slf4j. Build dependency of ant, apache-commons-logging,\
+          \ jdom2,\n     jtidy, slf4j, velocity, xbean.\n"
+        ref: stream-javapackages-tools-201902
+      maven:
+        rationale: "Runtime dependency of byte-buddy, exec-maven-plugin,\n     javacc-maven-plugin,\
+          \ maven-antrun-plugin,\n     maven-archiver, maven-artifact-resolver,\n\
+          \     maven-artifact-transfer, maven-assembly-plugin,\n     maven-clean-plugin,\
+          \ maven-common-artifact-filters,\n     maven-compiler-plugin, maven-dependency-analyzer,\n\
+          \     maven-dependency-plugin, maven-doxia-sitetools,\n     maven-enforcer,\
+          \ maven-file-management, maven-filtering,\n     maven-invoker-plugin, maven-jar-plugin,\
+          \ maven-mapping,\n     maven-plugin-build-helper, maven-plugin-bundle,\n\
+          \     maven-plugin-tools, maven-remote-resources-plugin,\n     maven-reporting-impl,\
+          \ maven-resources-plugin,\n     maven-script-interpreter, maven-shade-plugin,\n\
+          \     maven-shared-incremental, maven-shared-io,\n     maven-source-plugin,\
+          \ maven2, modello,\n     munge-maven-plugin, plexus-containers, sisu-mojos,\n\
+          \     spec-version-maven-plugin, xmvn.\nBuild dependency of aqute-bnd, byte-buddy,\n\
+          \     exec-maven-plugin, javacc-maven-plugin,\n     maven-antrun-plugin,\
+          \ maven-archiver,\n     maven-artifact-resolver, maven-artifact-transfer,\n\
+          \     maven-assembly-plugin, maven-clean-plugin,\n     maven-common-artifact-filters,\
+          \ maven-compiler-plugin,\n     maven-dependency-analyzer, maven-dependency-plugin,\n\
+          \     maven-dependency-tree, maven-doxia-sitetools,\n     maven-enforcer,\
+          \ maven-file-management, maven-filtering,\n     maven-invoker-plugin, maven-jar-plugin,\
+          \ maven-mapping,\n     maven-plugin-build-helper, maven-plugin-bundle,\n\
+          \     maven-plugin-testing, maven-plugin-tools,\n     maven-remote-resources-plugin,\
+          \ maven-reporting-impl,\n     maven-resources-plugin, maven-script-interpreter,\n\
+          \     maven-shade-plugin, maven-shared-incremental,\n     maven-shared-io,\
+          \ maven-shared-utils,\n     maven-source-plugin, maven-surefire, modello,\n\
+          \     munge-maven-plugin, plexus-containers, sisu-mojos,\n     spec-version-maven-plugin,\
+          \ xmvn.\n"
+        ref: stream-javapackages-tools-201902
+      maven-antrun-plugin:
+        rationale: "Runtime dependency of apache-commons-parent. Build dependency\
+          \ of apache-commons-cli,\n     apache-commons-collections, apache-commons-compress,\n\
+          \     apache-commons-exec, apache-commons-io,\n     apache-commons-lang3,\
+          \ apache-commons-net,\n     apache-commons-parent, jdependency, log4j12,\n\
+          \     maven-invoker, slf4j.\n"
+        ref: stream-javapackages-tools-201902
+      maven-archiver:
+        rationale: "Runtime dependency of maven-assembly-plugin,\n     maven-jar-plugin,\
+          \ maven-plugin-bundle,\n     maven-source-plugin.\nBuild dependency of maven-assembly-plugin,\n\
+          \     maven-jar-plugin, maven-plugin-bundle,\n     maven-source-plugin.\n"
+        ref: stream-javapackages-tools-201902
+      maven-artifact-resolver:
+        rationale: 'Runtime dependency of maven-remote-resources-plugin. Build dependency
+          of maven-remote-resources-plugin.
+
+          '
+        ref: stream-javapackages-tools-201902
+      maven-artifact-transfer:
+        rationale: "Runtime dependency of maven-assembly-plugin,\n     maven-dependency-plugin,\
+          \ maven-enforcer,\n     maven-invoker-plugin, maven-shade-plugin.\nBuild\
+          \ dependency of maven-assembly-plugin,\n     maven-dependency-plugin, maven-enforcer,\n\
+          \     maven-invoker-plugin, maven-shade-plugin.\n"
+        ref: stream-javapackages-tools-201902
+      maven-assembly-plugin:
+        rationale: "Runtime dependency of apache-commons-parent. Build dependency\
+          \ of apache-commons-jxpath,\n     apache-commons-parent, jaxen, log4j12,\
+          \ maven,\n     maven-surefire, qdox, xmvn.\n"
+        ref: stream-javapackages-tools-201902
+      maven-clean-plugin:
+        rationale: 'Build dependency of maven-invoker.
+
+          '
+        ref: stream-javapackages-tools-201902
+      maven-common-artifact-filters:
+        rationale: "Runtime dependency of maven-artifact-transfer,\n     maven-assembly-plugin,\
+          \ maven-dependency-plugin,\n     maven-enforcer, maven-remote-resources-plugin,\n\
+          \     maven-surefire, sisu-mojos.\nBuild dependency of maven-artifact-transfer,\n\
+          \     maven-assembly-plugin, maven-dependency-plugin,\n     maven-enforcer,\
+          \ maven-remote-resources-plugin,\n     maven-surefire, sisu-mojos.\n"
+        ref: stream-javapackages-tools-201902
+      maven-compiler-plugin:
+        rationale: "Runtime dependency of apache-commons-parent,\n     geronimo-parent-poms,\
+          \ glassfish-master-pom,\n     javapackages-tools, xmvn.\n"
+        ref: stream-javapackages-tools-201902
+      maven-dependency-analyzer:
+        rationale: 'Runtime dependency of maven-dependency-plugin. Build dependency
+          of maven-dependency-plugin.
+
+          '
+        ref: stream-javapackages-tools-201902
+      maven-dependency-plugin:
+        rationale: "Build dependency of apache-commons-logging, javamail,\n     maven,\
+          \ maven-surefire, modello, plexus-classworlds.\n"
+        ref: stream-javapackages-tools-201902
+      maven-dependency-tree:
+        rationale: "Runtime dependency of maven-dependency-plugin,\n     maven-enforcer,\
+          \ maven-plugin-bundle,\n     maven-shade-plugin.\nBuild dependency of maven-dependency-plugin,\n\
+          \     maven-enforcer, maven-plugin-bundle,\n     maven-shade-plugin.\n"
+        ref: stream-javapackages-tools-201902
+      maven-doxia:
+        rationale: "Runtime dependency of javacc-maven-plugin,\n     maven-dependency-plugin,\
+          \ maven-doxia-sitetools,\n     maven-invoker-plugin, maven-plugin-tools,\n\
+          \     maven-reporting-api, maven-reporting-impl.\nBuild dependency of javacc-maven-plugin,\n\
+          \     maven-dependency-plugin, maven-doxia-sitetools,\n     maven-invoker-plugin,\
+          \ maven-plugin-tools,\n     maven-reporting-api, maven-reporting-impl.\n"
+        ref: stream-javapackages-tools-201902
+      maven-doxia-sitetools:
+        rationale: "Runtime dependency of javacc-maven-plugin,\n     maven-dependency-plugin,\
+          \ maven-invoker-plugin,\n     maven-plugin-tools, maven-reporting-impl.\n\
+          Build dependency of javacc-maven-plugin,\n     maven-dependency-plugin,\
+          \ maven-invoker-plugin,\n     maven-plugin-tools, maven-reporting-impl.\n"
+        ref: stream-javapackages-tools-201902
+      maven-enforcer:
+        rationale: "Runtime dependency of apache-parent, maven-parent,\n     objectweb-pom.\n\
+          Build dependency of apache-parent, cdi-api, guava,\n     javamail, junit,\
+          \ maven-dependency-analyzer,\n     maven-enforcer, maven-invoker-plugin,\
+          \ maven-parent,\n     maven-plugin-tools, maven2, objectweb-pom,\n     plexus-archiver,\
+          \ plexus-classworlds, plexus-io,\n     plexus-utils.\n"
+        ref: stream-javapackages-tools-201902
+      maven-file-management:
+        rationale: "Runtime dependency of maven-assembly-plugin,\n     maven-dependency-plugin,\
+          \ maven-jar-plugin.\nBuild dependency of maven-assembly-plugin,\n     maven-dependency-plugin,\
+          \ maven-jar-plugin.\n"
+        ref: stream-javapackages-tools-201902
+      maven-filtering:
+        rationale: "Runtime dependency of maven-assembly-plugin,\n     maven-remote-resources-plugin,\
+          \ maven-resources-plugin.\nBuild dependency of maven-assembly-plugin,\n\
+          \     maven-remote-resources-plugin, maven-resources-plugin.\n"
+        ref: stream-javapackages-tools-201902
+      maven-invoker:
+        rationale: "Runtime dependency of maven-invoker-plugin,\n     maven-plugin-testing,\
+          \ xmvn.\nBuild dependency of maven-invoker-plugin,\n     maven-plugin-testing,\
+          \ xmvn.\n"
+        ref: stream-javapackages-tools-201902
+      maven-invoker-plugin:
+        rationale: "Build dependency of maven-dependency-tree,\n     maven-plugin-build-helper,\
+          \ qdox.\n"
+        ref: stream-javapackages-tools-201902
+      maven-jar-plugin:
+        rationale: "Runtime dependency of apache-commons-parent,\n     geronimo-parent-poms,\
+          \ httpcomponents-project,\n     javapackages-tools, xmvn.\n"
+        ref: stream-javapackages-tools-201902
+      maven-mapping:
+        rationale: 'Runtime dependency of aqute-bnd. Build dependency of aqute-bnd.
+
+          '
+        ref: stream-javapackages-tools-201902
+      maven-parent:
+        rationale: "Runtime dependency of maven-doxia, maven-enforcer,\n     maven-plugin-testing,\
+          \ maven-plugin-tools.\nBuild dependency of apache-resource-bundles, maven,\n\
+          \     maven-antrun-plugin, maven-archiver,\n     maven-artifact-resolver,\
+          \ maven-artifact-transfer,\n     maven-assembly-plugin, maven-clean-plugin,\n\
+          \     maven-common-artifact-filters, maven-compiler-plugin,\n     maven-dependency-analyzer,\
+          \ maven-dependency-plugin,\n     maven-dependency-tree, maven-doxia,\n \
+          \    maven-doxia-sitetools, maven-enforcer,\n     maven-file-management,\
+          \ maven-filtering, maven-invoker,\n     maven-invoker-plugin, maven-jar-plugin,\
+          \ maven-mapping,\n     maven-plugin-testing, maven-plugin-tools,\n     maven-remote-resources-plugin,\
+          \ maven-reporting-api,\n     maven-reporting-impl, maven-resolver,\n   \
+          \  maven-resources-plugin, maven-script-interpreter,\n     maven-shade-plugin,\
+          \ maven-shared-incremental,\n     maven-shared-io, maven-shared-utils,\n\
+          \     maven-source-plugin, maven-surefire, maven-verifier,\n     maven-wagon,\
+          \ maven2.\n"
+        ref: stream-javapackages-tools-201902
+      maven-plugin-build-helper:
+        rationale: "Runtime dependency of apache-commons-parent,\n     byte-buddy,\
+          \ weld-parent.\nBuild dependency of apache-commons-logging,\n     apache-commons-net,\
+          \ apache-commons-parent, byte-buddy,\n     cdi-api, easymock, google-guice,\
+          \ httpcomponents-client,\n     httpcomponents-core, httpcomponents-project,\
+          \ javamail,\n     maven, slf4j, spec-version-maven-plugin, weld-parent,\n\
+          \     xmvn.\n"
+        ref: stream-javapackages-tools-201902
+      maven-plugin-bundle:
+        rationale: "Runtime dependency of apache-commons-parent,\n     geronimo-parent-poms,\
+          \ google-guice, xmlunit.\nBuild dependency of apache-commons-compress,\n\
+          \     apache-commons-parent, assertj-core, beust-jcommander,\n     byte-buddy,\
+          \ cdi-api, cglib, easymock,\n     geronimo-annotation, geronimo-parent-poms,\n\
+          \     glassfish-annotation-api, glassfish-servlet-api,\n     google-guice,\
+          \ guava, httpcomponents-client,\n     httpcomponents-core, jansi, javamail,\
+          \ jaxen,\n     jboss-interceptors-1.2-api, jsoup, junit, junit5,\n     jzlib,\
+          \ log4j12, maven-resolver, mockito, objectweb-asm,\n     objenesis, osgi-annotation,\
+          \ osgi-compendium, osgi-core,\n     plexus-classworlds, plexus-containers,\n\
+          \     plexus-interpolation, plexus-utils,\n     spec-version-maven-plugin,\
+          \ testng, univocity-parsers,\n     xbean, xmlunit.\n"
+        ref: stream-javapackages-tools-201902
+      maven-plugin-testing:
+        rationale: "Build dependency of byte-buddy, maven-clean-plugin,\n     maven-common-artifact-filters,\
+          \ maven-dependency-tree,\n     maven-invoker-plugin, maven-mapping,\n  \
+          \   maven-remote-resources-plugin, maven-shared-utils,\n     maven-source-plugin.\n"
+        ref: stream-javapackages-tools-201902
+      maven-plugin-tools:
+        rationale: "Runtime dependency of maven-parent. Build dependency of aqute-bnd,\
+          \ byte-buddy,\n     exec-maven-plugin, javacc-maven-plugin,\n     maven-antrun-plugin,\
+          \ maven-assembly-plugin,\n     maven-clean-plugin, maven-compiler-plugin,\n\
+          \     maven-dependency-plugin, maven-enforcer,\n     maven-invoker-plugin,\
+          \ maven-jar-plugin, maven-parent,\n     maven-plugin-build-helper, maven-plugin-bundle,\n\
+          \     maven-plugin-tools, maven-remote-resources-plugin,\n     maven-reporting-impl,\
+          \ maven-resources-plugin,\n     maven-shade-plugin, maven-source-plugin,\n\
+          \     maven-surefire, modello, munge-maven-plugin,\n     plexus-containers,\
+          \ sisu-mojos,\n     spec-version-maven-plugin, xmvn.\n"
+        ref: stream-javapackages-tools-201902
+      maven-remote-resources-plugin:
+        rationale: "Runtime dependency of apache-parent, google-guice. Build dependency\
+          \ of apache-parent,\n     apache-resource-bundles, easymock,\n     glassfish-annotation-api,\
+          \ glassfish-legal,\n     google-guice, maven-parent, objenesis.\n"
+        ref: stream-javapackages-tools-201902
+      maven-reporting-api:
+        rationale: "Runtime dependency of javacc-maven-plugin,\n     maven-dependency-plugin,\
+          \ maven-doxia-sitetools,\n     maven-invoker-plugin, maven-plugin-bundle,\n\
+          \     maven-plugin-tools, maven-reporting-impl.\nBuild dependency of javacc-maven-plugin,\n\
+          \     maven-dependency-plugin, maven-doxia-sitetools,\n     maven-invoker-plugin,\
+          \ maven-plugin-tools,\n     maven-reporting-impl.\n"
+        ref: stream-javapackages-tools-201902
+      maven-reporting-impl:
+        rationale: "Runtime dependency of javacc-maven-plugin,\n     maven-dependency-plugin,\
+          \ maven-invoker-plugin,\n     maven-plugin-tools.\nBuild dependency of javacc-maven-plugin,\n\
+          \     maven-dependency-plugin, maven-invoker-plugin,\n     maven-plugin-tools.\n"
+        ref: stream-javapackages-tools-201902
+      maven-resolver:
+        rationale: "Runtime dependency of byte-buddy, maven,\n     maven-artifact-transfer,\
+          \ maven-dependency-tree, xmvn.\nBuild dependency of aqute-bnd, byte-buddy,\
+          \ maven,\n     maven-artifact-transfer, maven-common-artifact-filters,\n\
+          \     maven-dependency-tree, xmvn.\n"
+        ref: stream-javapackages-tools-201902
+      maven-resources-plugin:
+        rationale: 'Runtime dependency of javapackages-tools.
+
+          '
+        ref: stream-javapackages-tools-201902
+      maven-script-interpreter:
+        rationale: 'Runtime dependency of maven-invoker-plugin. Build dependency of
+          maven-invoker-plugin.
+
+          '
+        ref: stream-javapackages-tools-201902
+      maven-shade-plugin:
+        rationale: "Build dependency of maven-surefire, maven2,\n     objectweb-asm,\
+          \ xmlunit.\n"
+        ref: stream-javapackages-tools-201902
+      maven-shared-incremental:
+        rationale: 'Runtime dependency of maven-compiler-plugin. Build dependency
+          of maven-compiler-plugin.
+
+          '
+        ref: stream-javapackages-tools-201902
+      maven-shared-io:
+        rationale: "Runtime dependency of maven-assembly-plugin,\n     maven-file-management.\n\
+          Build dependency of maven-assembly-plugin,\n     maven-file-management.\n"
+        ref: stream-javapackages-tools-201902
+      maven-shared-utils:
+        rationale: "Runtime dependency of maven, maven-archiver,\n     maven-clean-plugin,\
+          \ maven-common-artifact-filters,\n     maven-compiler-plugin, maven-dependency-plugin,\n\
+          \     maven-file-management, maven-filtering, maven-invoker,\n     maven-invoker-plugin,\
+          \ maven-jar-plugin,\n     maven-reporting-impl, maven-script-interpreter,\n\
+          \     maven-shared-incremental, maven-shared-io,\n     maven-surefire, maven-verifier.\n\
+          Build dependency of maven, maven-archiver,\n     maven-clean-plugin, maven-common-artifact-filters,\n\
+          \     maven-compiler-plugin, maven-dependency-plugin,\n     maven-file-management,\
+          \ maven-filtering,\n     maven-invoker-plugin, maven-reporting-impl,\n \
+          \    maven-script-interpreter, maven-shared-incremental,\n     maven-shared-io,\
+          \ maven-surefire, maven-verifier.\n"
+        ref: stream-javapackages-tools-201902
+      maven-source-plugin:
+        rationale: "Runtime dependency of google-guice, jboss-parent,\n     weld-parent.\n\
+          Build dependency of aqute-bnd,\n     glassfish-annotation-api, glassfish-servlet-api,\n\
+          \     google-guice, javamail, jboss-interceptors-1.2-api,\n     jboss-parent,\
+          \ jsch, maven-plugin-testing,\n     maven-plugin-tools, munge-maven-plugin,\
+          \ slf4j,\n     univocity-parsers, weld-parent.\n"
+        ref: stream-javapackages-tools-201902
+      maven-surefire:
+        rationale: "Runtime dependency of apache-commons-parent,\n     javapackages-tools,\
+          \ maven-plugin-tools.\nBuild dependency of apache-commons-logging, cdi-api,\n\
+          \     easymock, maven, maven-plugin-tools, maven-surefire,\n     plexus-languages.\n"
+        ref: stream-javapackages-tools-201902
+      maven-verifier:
+        rationale: 'Build dependency of maven-remote-resources-plugin.
+
+          '
+        ref: stream-javapackages-tools-201902
+      maven-wagon:
+        rationale: "Runtime dependency of maven, maven-resolver,\n     maven-shared-io,\
+          \ maven2, xmvn.\nBuild dependency of maven, maven-plugin-testing,\n    \
+          \ maven-remote-resources-plugin, maven-resolver,\n     maven-shared-io,\
+          \ maven2.\n"
+        ref: stream-javapackages-tools-201902
+      maven2:
+        rationale: "Runtime dependency of exec-maven-plugin,\n     javacc-maven-plugin,\
+          \ maven-antrun-plugin,\n     maven-dependency-analyzer, maven-doxia-sitetools,\n\
+          \     maven-plugin-build-helper, maven-surefire,\n     spec-version-maven-plugin.\n\
+          Build dependency of exec-maven-plugin,\n     javacc-maven-plugin, maven-antrun-plugin,\n\
+          \     maven-artifact-resolver, maven-dependency-analyzer,\n     maven-doxia-sitetools,\
+          \ maven-plugin-build-helper,\n     maven-surefire.\n"
+        ref: stream-javapackages-tools-201902
+      mockito:
+        rationale: "Runtime dependency of assertj-core. Build dependency of apache-commons-compress,\n\
+          \     assertj-core, byte-buddy, felix-utils,\n     httpcomponents-client,\
+          \ httpcomponents-core, maven,\n     maven-artifact-transfer, maven-invoker-plugin,\n\
+          \     maven-resolver, xmlunit.\n"
+        ref: stream-javapackages-tools-201902
+      modello:
+        rationale: "Build dependency of maven, maven-assembly-plugin,\n     maven-doxia,\
+          \ maven-doxia-sitetools,\n     maven-file-management, maven-invoker-plugin,\n\
+          \     maven-plugin-tools, maven-remote-resources-plugin,\n     maven2, plexus-sec-dispatcher,\
+          \ xmvn.\n"
+        ref: stream-javapackages-tools-201902
+      mojo-parent:
+        rationale: "Build dependency of exec-maven-plugin,\n     javacc-maven-plugin,\
+          \ maven-plugin-build-helper.\n"
+        ref: stream-javapackages-tools-201902
+      munge-maven-plugin:
+        rationale: 'Build dependency of google-guice.
+
+          '
+        ref: stream-javapackages-tools-201902
+      objectweb-asm:
+        rationale: "Runtime dependency of byte-buddy, cglib, easymock,\n     jdependency,\
+          \ maven-dependency-analyzer,\n     maven-plugin-tools, maven-shade-plugin,\
+          \ mockito,\n     plexus-containers, plexus-languages, xmvn.\nBuild dependency\
+          \ of byte-buddy, cglib, easymock,\n     google-guice, jdependency, maven-dependency-analyzer,\n\
+          \     maven-plugin-tools, maven-shade-plugin, mockito,\n     objectweb-asm,\
+          \ plexus-containers, plexus-languages,\n     xbean, xmvn.\n"
+        ref: stream-javapackages-tools-201902
+      objectweb-pom:
+        rationale: 'Build dependency of objectweb-asm.
+
+          '
+        ref: stream-javapackages-tools-201902
+      objenesis:
+        rationale: 'Runtime dependency of easymock, mockito. Build dependency of easymock,
+          mockito.
+
+          '
+        ref: stream-javapackages-tools-201902
+      opentest4j:
+        rationale: 'Runtime dependency of junit5, mockito. Build dependency of junit5,
+          mockito.
+
+          '
+        ref: stream-javapackages-tools-201902
+      osgi-annotation:
+        rationale: "Runtime dependency of aqute-bnd. Build dependency of aqute-bnd,\
+          \ osgi-compendium,\n     osgi-core.\n"
+        ref: stream-javapackages-tools-201902
+      osgi-compendium:
+        rationale: 'Runtime dependency of aqute-bnd. Build dependency of aqute-bnd,
+          felix-utils.
+
+          '
+        ref: stream-javapackages-tools-201902
+      osgi-core:
+        rationale: "Runtime dependency of aqute-bnd, maven-plugin-bundle. Build dependency\
+          \ of apache-commons-compress, aqute-bnd,\n     felix-utils, maven-plugin-bundle,\
+          \ osgi-compendium,\n     sisu.\n"
+        ref: stream-javapackages-tools-201902
+      plexus-ant-factory:
+        rationale: 'Runtime dependency of maven-plugin-tools. Build dependency of
+          maven-plugin-tools.
+
+          '
+        ref: stream-javapackages-tools-201902
+      plexus-archiver:
+        rationale: "Runtime dependency of maven-archiver,\n     maven-assembly-plugin,\
+          \ maven-dependency-plugin,\n     maven-jar-plugin, maven-plugin-testing,\n\
+          \     maven-plugin-tools, maven-source-plugin.\nBuild dependency of maven-archiver,\n\
+          \     maven-assembly-plugin, maven-dependency-plugin,\n     maven-jar-plugin,\
+          \ maven-plugin-testing,\n     maven-plugin-tools, maven-source-plugin.\n"
+        ref: stream-javapackages-tools-201902
+      plexus-bsh-factory:
+        rationale: 'Runtime dependency of maven-plugin-tools. Build dependency of
+          maven-plugin-tools.
+
+          '
+        ref: stream-javapackages-tools-201902
+      plexus-build-api:
+        rationale: "Runtime dependency of aqute-bnd, maven-filtering,\n     maven-plugin-bundle,\
+          \ modello.\nBuild dependency of aqute-bnd, maven-filtering,\n     maven-plugin-bundle,\
+          \ modello.\n"
+        ref: stream-javapackages-tools-201902
+      plexus-cipher:
+        rationale: "Runtime dependency of maven, plexus-sec-dispatcher,\n     xmvn.\n\
+          Build dependency of maven, plexus-sec-dispatcher.\n"
+        ref: stream-javapackages-tools-201902
+      plexus-classworlds:
+        rationale: "Runtime dependency of maven, maven-dependency-plugin,\n     plexus-bsh-factory,\
+          \ plexus-component-api,\n     plexus-containers, sisu, xmvn.\nBuild dependency\
+          \ of maven, maven-dependency-plugin,\n     maven-resolver, plexus-bsh-factory,\n\
+          \     plexus-component-api, plexus-containers, sisu, xmvn.\n"
+        ref: stream-javapackages-tools-201902
+      plexus-compiler:
+        rationale: 'Runtime dependency of maven-compiler-plugin, modello. Build dependency
+          of maven-compiler-plugin, modello.
+
+          '
+        ref: stream-javapackages-tools-201902
+      plexus-component-api:
+        rationale: 'Build dependency of maven-shared-incremental.
+
+          '
+        ref: stream-javapackages-tools-201902
+      plexus-component-factories-pom:
+        rationale: 'Build dependency of plexus-ant-factory.
+
+          '
+        ref: stream-javapackages-tools-201902
+      plexus-components-pom:
+        rationale: "Runtime dependency of plexus-compiler. Build dependency of plexus-compiler,\
+          \ plexus-i18n,\n     plexus-interpolation, plexus-resources,\n     plexus-velocity.\n"
+        ref: stream-javapackages-tools-201902
+      plexus-containers:
+        rationale: "Runtime dependency of maven, maven-artifact-transfer,\n     maven-dependency-analyzer,\
+          \ maven-dependency-tree,\n     maven-doxia, maven-doxia-sitetools, maven-enforcer,\n\
+          \     maven-invoker, maven-parent, maven-plugin-tools,\n     maven-script-interpreter,\
+          \ maven-shared-incremental,\n     maven2, modello, plexus-ant-factory,\n\
+          \     plexus-bsh-factory, plexus-compiler,\n     plexus-component-factories-pom,\
+          \ plexus-components-pom,\n     plexus-i18n, plexus-resources, plexus-velocity,\
+          \ sisu,\n     xmvn.\nBuild dependency of exec-maven-plugin, maven,\n   \
+          \  maven-artifact-resolver, maven-artifact-transfer,\n     maven-assembly-plugin,\
+          \ maven-compiler-plugin,\n     maven-dependency-analyzer, maven-dependency-tree,\n\
+          \     maven-doxia, maven-doxia-sitetools, maven-enforcer,\n     maven-filtering,\
+          \ maven-invoker, maven-parent,\n     maven-plugin-testing, maven-plugin-tools,\n\
+          \     maven-script-interpreter, maven-shade-plugin,\n     maven-shared-incremental,\
+          \ maven-shared-utils,\n     maven-wagon, maven2, modello, plexus-ant-factory,\n\
+          \     plexus-archiver, plexus-bsh-factory, plexus-build-api,\n     plexus-compiler,\
+          \ plexus-component-api,\n     plexus-component-factories-pom, plexus-components-pom,\n\
+          \     plexus-i18n, plexus-io, plexus-languages,\n     plexus-resources,\
+          \ plexus-sec-dispatcher,\n     plexus-velocity, sisu, xmvn.\n"
+        ref: stream-javapackages-tools-201902
+      plexus-i18n:
+        rationale: "Runtime dependency of maven-doxia-sitetools,\n     maven-invoker-plugin.\n\
+          Build dependency of maven-doxia-sitetools,\n     maven-invoker-plugin.\n"
+        ref: stream-javapackages-tools-201902
+      plexus-interpolation:
+        rationale: "Runtime dependency of maven, maven-archiver,\n     maven-assembly-plugin,\
+          \ maven-doxia-sitetools,\n     maven-filtering, maven-invoker-plugin, maven-mapping,\n\
+          \     maven-remote-resources-plugin, maven-resources-plugin,\n     maven2,\
+          \ xmvn.\nBuild dependency of maven, maven-archiver,\n     maven-assembly-plugin,\
+          \ maven-doxia-sitetools,\n     maven-filtering, maven-invoker-plugin, maven-mapping,\n\
+          \     maven-remote-resources-plugin, maven-resources-plugin,\n     maven2.\n"
+        ref: stream-javapackages-tools-201902
+      plexus-io:
+        rationale: "Runtime dependency of maven-assembly-plugin,\n     maven-dependency-plugin,\
+          \ plexus-archiver.\nBuild dependency of maven-assembly-plugin,\n     maven-dependency-plugin,\
+          \ plexus-archiver.\n"
+        ref: stream-javapackages-tools-201902
+      plexus-languages:
+        rationale: "Runtime dependency of maven-compiler-plugin,\n     maven-surefire.\n\
+          Build dependency of maven-compiler-plugin,\n     maven-surefire.\n"
+        ref: stream-javapackages-tools-201902
+      plexus-pom:
+        rationale: "Runtime dependency of plexus-component-factories-pom,\n     plexus-components-pom,\
+          \ plexus-containers.\nBuild dependency of plexus-archiver,\n     plexus-classworlds,\
+          \ plexus-component-factories-pom,\n     plexus-components-pom, plexus-containers,\
+          \ plexus-io,\n     plexus-languages, plexus-utils.\n"
+        ref: stream-javapackages-tools-201902
+      plexus-resources:
+        rationale: "Runtime dependency of maven-remote-resources-plugin,\n     spec-version-maven-plugin.\n\
+          Build dependency of maven-remote-resources-plugin,\n     spec-version-maven-plugin.\n"
+        ref: stream-javapackages-tools-201902
+      plexus-sec-dispatcher:
+        rationale: 'Runtime dependency of maven, xmvn. Build dependency of maven.
+
+          '
+        ref: stream-javapackages-tools-201902
+      plexus-utils:
+        rationale: "Runtime dependency of exec-maven-plugin,\n     javacc-maven-plugin,\
+          \ maven, maven-antrun-plugin,\n     maven-archiver, maven-artifact-transfer,\n\
+          \     maven-assembly-plugin, maven-dependency-analyzer,\n     maven-dependency-plugin,\
+          \ maven-doxia,\n     maven-doxia-sitetools, maven-enforcer,\n     maven-file-management,\
+          \ maven-filtering,\n     maven-invoker-plugin, maven-jar-plugin,\n     maven-plugin-build-helper,\
+          \ maven-plugin-bundle,\n     maven-plugin-tools, maven-remote-resources-plugin,\n\
+          \     maven-reporting-impl, maven-resources-plugin,\n     maven-shade-plugin,\
+          \ maven-shared-io, maven-wagon,\n     maven2, modello, plexus-ant-factory,\
+          \ plexus-archiver,\n     plexus-bsh-factory, plexus-build-api, plexus-compiler,\n\
+          \     plexus-containers, plexus-i18n, plexus-io,\n     plexus-resources,\
+          \ plexus-sec-dispatcher, sisu,\n     sisu-mojos, xmvn.\nBuild dependency\
+          \ of exec-maven-plugin,\n     javacc-maven-plugin, maven, maven-antrun-plugin,\n\
+          \     maven-archiver, maven-artifact-transfer,\n     maven-assembly-plugin,\
+          \ maven-dependency-analyzer,\n     maven-dependency-plugin, maven-doxia,\n\
+          \     maven-doxia-sitetools, maven-enforcer,\n     maven-file-management,\
+          \ maven-filtering, maven-invoker,\n     maven-invoker-plugin, maven-jar-plugin,\n\
+          \     maven-plugin-build-helper, maven-plugin-bundle,\n     maven-plugin-testing,\
+          \ maven-plugin-tools,\n     maven-remote-resources-plugin, maven-reporting-impl,\n\
+          \     maven-resolver, maven-resources-plugin,\n     maven-shade-plugin,\
+          \ maven-shared-io, maven-wagon,\n     maven2, modello, plexus-ant-factory,\
+          \ plexus-archiver,\n     plexus-bsh-factory, plexus-build-api, plexus-compiler,\n\
+          \     plexus-containers, plexus-i18n, plexus-io,\n     plexus-resources,\
+          \ plexus-sec-dispatcher, sisu,\n     sisu-mojos, xmvn.\n"
+        ref: stream-javapackages-tools-201902
+      plexus-velocity:
+        rationale: "Runtime dependency of maven-doxia-sitetools,\n     maven-plugin-tools.\n\
+          Build dependency of maven-doxia-sitetools,\n     maven-plugin-tools.\n"
+        ref: stream-javapackages-tools-201902
+      qdox:
+        rationale: "Runtime dependency of maven-plugin-tools,\n     plexus-containers,\
+          \ plexus-languages.\nBuild dependency of maven-plugin-tools,\n     plexus-containers,\
+          \ plexus-languages.\n"
+        ref: stream-javapackages-tools-201902
+      regexp:
+        rationale: 'Runtime dependency of ant, xalan-j2. Build dependency of ant,
+          xalan-j2.
+
+          '
+        ref: stream-javapackages-tools-201902
+      sisu:
+        rationale: 'Runtime dependency of maven, sisu-mojos, xmvn. Build dependency
+          of maven, maven-resolver, sisu-mojos.
+
+          '
+        ref: stream-javapackages-tools-201902
+      sisu-mojos:
+        rationale: "Build dependency of maven, maven-resolver,\n     plexus-cipher.\n"
+        ref: stream-javapackages-tools-201902
+      slf4j:
+        rationale: "Runtime dependency of aqute-bnd, maven,\n     maven-artifact-transfer,\
+          \ maven-plugin-bundle,\n     maven-resolver, maven-wagon, sisu-mojos, xmvn.\n\
+          Build dependency of aqute-bnd, google-guice, jtidy,\n     maven, maven-artifact-transfer,\
+          \ maven-resolver,\n     maven-wagon, sisu, sisu-mojos, xmvn.\n"
+        ref: stream-javapackages-tools-201902
+      sonatype-oss-parent:
+        rationale: "Build dependency of beust-jcommander, cglib, guava,\n     jflex,\
+          \ jsch, qdox, sisu-mojos, testng.\n"
+        ref: stream-javapackages-tools-201902
+      sonatype-plugins-parent:
+        rationale: 'Build dependency of munge-maven-plugin.
+
+          '
+        ref: stream-javapackages-tools-201902
+      spec-version-maven-plugin:
+        rationale: 'Build dependency of glassfish-annotation-api.
+
+          '
+        ref: stream-javapackages-tools-201902
+      spice-parent:
+        rationale: "Build dependency of plexus-build-api, plexus-cipher,\n     plexus-sec-dispatcher.\n"
+        ref: stream-javapackages-tools-201902
+      testng:
+        rationale: "Build dependency of beust-jcommander, cdi-api,\n     easymock,\
+          \ maven-surefire, sisu.\n"
+        ref: stream-javapackages-tools-201902
+      univocity-parsers:
+        rationale: 'Runtime dependency of junit5. Build dependency of junit5.
+
+          '
+        ref: stream-javapackages-tools-201902
+      velocity:
+        rationale: "Runtime dependency of maven-doxia-sitetools,\n     maven-plugin-tools,\
+          \ maven-remote-resources-plugin,\n     plexus-velocity.\nBuild dependency\
+          \ of maven-doxia-sitetools,\n     maven-plugin-tools, maven-remote-resources-plugin,\n\
+          \     plexus-velocity.\n"
+        ref: stream-javapackages-tools-201902
+      weld-parent:
+        rationale: 'Build dependency of cdi-api.
+
+          '
+        ref: stream-javapackages-tools-201902
+      xalan-j2:
+        rationale: "Runtime dependency of ant, maven-doxia-sitetools,\n     xerces-j2.\n\
+          Build dependency of ant, bsf, jdom2,\n     maven-doxia-sitetools, xerces-j2.\n"
+        ref: stream-javapackages-tools-201902
+      xbean:
+        rationale: 'Runtime dependency of plexus-containers. Build dependency of plexus-containers.
+
+          '
+        ref: stream-javapackages-tools-201902
+      xerces-j2:
+        rationale: "Runtime dependency of xalan-j2. Build dependency of apache-commons-jxpath,\
+          \ jaxen, jdom,\n     jdom2, xalan-j2.\n"
+        ref: stream-javapackages-tools-201902
+      xml-commons-apis:
+        rationale: "Runtime dependency of maven-doxia-sitetools, xalan-j2,\n     xerces-j2.\n\
+          Build dependency of apache-commons-jxpath, jaxen,\n     jdom2, maven-doxia-sitetools,\
+          \ plexus-classworlds,\n     xalan-j2, xerces-j2.\n"
+        ref: stream-javapackages-tools-201902
+      xml-commons-resolver:
+        rationale: 'Runtime dependency of ant, xerces-j2. Build dependency of ant,
+          xerces-j2.
+
+          '
+        ref: stream-javapackages-tools-201902
+      xmlunit:
+        rationale: 'Build dependency of maven, maven-doxia, xmvn.
+
+          '
+        ref: stream-javapackages-tools-201902
+      xmvn:
+        rationale: 'Runtime dependency of javapackages-tools.
+
+          '
+        ref: stream-javapackages-tools-201902
+      xz-java:
+        rationale: "Runtime dependency of ant, plexus-archiver. Build dependency of\
+          \ ant, apache-commons-compress,\n     plexus-archiver.\n"
+        ref: stream-javapackages-tools-201902
+  api:
+    rpms:
+    - ivy-local
+    - javapackages-local
+    - javapackages-tools
+    - maven-local
+  profiles:
+    default:
+      rpms:
+      - javapackages-tools
+  artifacts:
+    rpms:
+    - xbean-javadoc-0:4.14-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - bcel-0:6.4.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-classworlds-javadoc-0:2.6.0-3.sdl8.20191120.0703.git.3658c50.noarch
+    - ant-apache-regexp-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - xmlunit-core-0:2.6.3-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-invoker-plugin-0:3.2.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-resources-plugin-javadoc-0:3.1.0-5.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-ant-factory-0:1.0~alpha.2.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-mapping-0:3.0.0-9.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-exec-javadoc-0:1.3-10.module+el8.2.0+4938+c0cffa5b.noarch
+    - mojo-parent-0:40-8.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-plugin-testing-0:3.3.0-14.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-plugin-tools-ant-0:3.6.0-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-resource-bundles-0:2-22.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-bsh-factory-0:1.0~alpha.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-invoker-javadoc-0:3.0.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-javadoc-1:3.6.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - geronimo-parent-poms-0:1.6-27.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-plugin-tools-model-0:3.6.0-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-shared-utils-javadoc-0:3.2.1-0.3.sdl8.20191120.0657.git.d32376c.noarch
+    - plexus-utils-javadoc-0:3.3.0-2.sdl8.20191120.0705.git.38a5ef1.noarch
+    - maven-project-0:2.2.1-64.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-cli-0:1.4-6.sdl8.20191120.0628.git.fa0d78c.noarch
+    - plexus-resources-javadoc-0:1.1.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - xz-java-0:1.8-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-classworlds-0:2.6.0-3.sdl8.20191120.0703.git.3658c50.noarch
+    - jsoup-javadoc-0:1.12.1-2.sdl8.20191120.0644.git.d7def71.noarch
+    - cdi-api-0:2.0.1-2.sdl8.20191120.0633.git.4f61245.noarch
+    - maven2-javadoc-0:2.2.1-64.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-collections-0:3.2.2-13.module+el8.2.0+4938+c0cffa5b.noarch
+    - hamcrest-javadoc-0:2.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-wagon-javadoc-0:3.3.3-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - ant-apache-resolver-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - isorelax-javadoc-1:0-0.25.release20050331.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-surefire-0:3.0.0~M3-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-plugin-tools-annotations-0:3.6.0-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - guice-servlet-0:4.2.2-3.sdl8.20191120.0638.git.54302a1.noarch
+    - modello-javadoc-0:1.11-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - geronimo-annotation-javadoc-0:1.0-25.sdl8.20191120.0636.git.0c10115.noarch
+    - xz-java-javadoc-0:1.8-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - xml-commons-apis-javadoc-0:1.4.01-27.module+el8.2.0+4938+c0cffa5b.noarch
+    - guice-throwingproviders-0:4.2.2-3.sdl8.20191120.0638.git.54302a1.noarch
+    - spec-version-maven-plugin-javadoc-0:1.2-13.module+el8.2.0+4938+c0cffa5b.noarch
+    - sisu-0:0.3.4-1.sdl8.20191120.0707.git.a9ccd00.noarch
+    - plexus-languages-javadoc-0:0.9.10-5.module+el8.2.0+4938+c0cffa5b.noarch
+    - ant-commons-net-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - bsf-0:2.4.0-32.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-resolver-0:1.4.1-2.sdl8.20191120.0654.git.b684915.noarch
+    - testng-0:7.0.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - ant-javamail-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - bsh-javadoc-0:2.0~b6-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - javacc-maven-plugin-0:2.6-27.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-artifact-transfer-javadoc-1:0.11.0-1.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-failsafe-plugin-0:3.0.0~M3-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - xmvn-tools-pom-0:4.0.0~20191028.da67577-3.module+el8.2.0+5555+73059ce4.noarch
+    - maven-resolver-javadoc-0:1.4.1-2.sdl8.20191120.0654.git.b684915.noarch
+    - maven-jar-plugin-javadoc-0:3.1.2-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-assembly-plugin-javadoc-0:3.1.1-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - byte-buddy-agent-0:1.10.1-2.module+el8.2.0+5087+846a1d03.noarch
+    - xmlunit-matchers-0:2.6.3-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - spec-version-maven-plugin-0:1.2-13.module+el8.2.0+4938+c0cffa5b.noarch
+    - javamail-0:1.6.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - xmlunit-legacy-0:2.6.3-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-compress-0:1.19-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-plugin-build-helper-0:1.9.1-10.module+el8.2.0+4938+c0cffa5b.noarch
+    - guava-testlib-0:28.1-2.sdl8.20191120.0638.git.ca85071.noarch
+    - sisu-mojos-javadoc-0:0.3.4-1.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-doxia-sitetools-javadoc-0:1.9.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - sonatype-plugins-parent-0:8-14.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-antrun-plugin-0:1.8-8.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-plugin-tools-beanshell-0:3.6.0-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - velocity-javadoc-0:1.7-26.module+el8.2.0+4938+c0cffa5b.noarch
+    - xalan-j2-xsltc-0:2.7.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-collections-javadoc-0:3.2.2-13.module+el8.2.0+4938+c0cffa5b.noarch
+    - ant-jdepend-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-assembly-plugin-0:3.1.1-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-monitor-0:2.2.1-64.module+el8.2.0+4938+c0cffa5b.noarch
+    - osgi-compendium-0:7.0.0-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - log4j-over-slf4j-0:1.7.28-2.sdl8.20191120.0707.git.96388bb.noarch
+    - maven-plugin-testing-javadoc-0:3.3.0-14.module+el8.2.0+4938+c0cffa5b.noarch
+    - qdox-0:2.0~M10-2.module+el8.2.0+4948+b44bb64e.noarch
+    - easymock-0:4.0.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - sonatype-oss-parent-0:7-16.module+el8.2.0+4938+c0cffa5b.noarch
+    - guice-assistedinject-0:4.2.2-3.sdl8.20191120.0638.git.54302a1.noarch
+    - beust-jcommander-0:1.78-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-plugin-registry-0:2.2.1-64.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-build-api-javadoc-0:0.0.7-22.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-exec-0:1.3-10.module+el8.2.0+4938+c0cffa5b.noarch
+    - guice-bom-0:4.2.2-3.sdl8.20191120.0638.git.54302a1.noarch
+    - maven-plugin-build-helper-javadoc-0:1.9.1-10.module+el8.2.0+4938+c0cffa5b.noarch
+    - slf4j-log4j12-0:1.7.28-2.sdl8.20191120.0707.git.96388bb.noarch
+    - antlr-C++-0:2.7.7-58.module+el8.2.0+4938+c0cffa5b.x86_64
+    - maven-local-0:5.3.1-7.module+el8.2.0+5555+73059ce4.noarch
+    - plexus-containers-component-annotations-0:2.0.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-shared-io-1:3.0.0-7.module+el8.2.0+4938+c0cffa5b.noarch
+    - xmvn-subst-0:4.0.0~20191028.da67577-3.module+el8.2.0+5555+73059ce4.noarch
+    - xmlunit-javadoc-0:2.6.3-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - jvnet-parent-0:5-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - regexp-javadoc-1:1.5-28.module+el8.2.0+4938+c0cffa5b.noarch
+    - byaccj-debugsource-0:1.15-19.module+el8.2.0+4948+b44bb64e.x86_64
+    - ant-apache-bsf-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - exec-maven-plugin-javadoc-0:1.6.0-5.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-doxia-modules-0:1.9-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - objectweb-asm-0:7.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - bsh-0:2.0~b6-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - slf4j-manual-0:1.7.28-2.sdl8.20191120.0707.git.96388bb.noarch
+    - plexus-ant-factory-javadoc-0:1.0~alpha.2.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - atinject-javadoc-0:1-30.20100611svn86.sdl8.20191120.0628.git.7f42990.noarch
+    - xalan-j2-manual-0:2.7.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - bcel-javadoc-0:6.4.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-cipher-0:1.7-16.sdl8.20191120.0702.git.45dd6de.noarch
+    - maven-doxia-module-rtf-0:1.9-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - guice-extensions-0:4.2.2-3.sdl8.20191120.0638.git.54302a1.noarch
+    - velocity-manual-0:1.7-26.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-utils-0:3.3.0-2.sdl8.20191120.0705.git.38a5ef1.noarch
+    - byaccj-0:1.15-19.module+el8.2.0+4948+b44bb64e.x86_64
+    - xbean-0:4.14-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-enforcer-javadoc-0:3.0.0~M2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - univocity-parsers-0:2.8.3-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - aqute-bnd-0:4.3.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-artifact-resolver-javadoc-1:1.0-20.module+el8.2.0+4938+c0cffa5b.noarch
+    - velocity-0:1.7-26.module+el8.2.0+4938+c0cffa5b.noarch
+    - exec-maven-plugin-0:1.6.0-5.module+el8.2.0+4938+c0cffa5b.noarch
+    - javapackages-filesystem-0:5.3.1-7.module+el8.2.0+5555+73059ce4.noarch
+    - apache-commons-beanutils-0:1.9.4-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - ant-javadoc-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - jaxen-javadoc-0:1.2.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - ant-jmf-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - jdependency-0:1.2-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-enforcer-rules-0:3.0.0~M2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - opentest4j-0:1.2.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - javapackages-config-maven-3.6-0:5.3.1-7.module+el8.2.0+5555+73059ce4.noarch
+    - jsr-305-javadoc-0:0-0.24.20130910svn.sdl8.20191120.0645.git.70095c8.noarch
+    - maven-doxia-sitetools-0:1.9.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - easymock-javadoc-0:4.0.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - beust-jcommander-javadoc-0:1.78-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - ant-manual-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-resources-plugin-0:3.1.0-5.module+el8.2.0+4938+c0cffa5b.noarch
+    - jtidy-2:1.0-0.32.20101207svn1261.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-containers-0:2.0.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-profile-0:2.2.1-64.module+el8.2.0+4938+c0cffa5b.noarch
+    - javacc-0:7.0.4-5.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-io-javadoc-0:3.2.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-reporting-impl-javadoc-0:3.0.0-6.module+el8.2.0+4938+c0cffa5b.noarch
+    - slf4j-jcl-0:1.7.28-2.sdl8.20191120.0707.git.96388bb.noarch
+    - plexus-compiler-extras-0:2.8.5-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - byaccj-debuginfo-0:1.15-19.module+el8.2.0+4948+b44bb64e.x86_64
+    - ant-junit5-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-lib-1:3.6.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-resources-0:1.1.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - sisu-javadoc-0:0.3.4-1.sdl8.20191120.0707.git.a9ccd00.noarch
+    - maven-plugin-testing-harness-0:3.3.0-14.module+el8.2.0+4938+c0cffa5b.noarch
+    - aqute-bndlib-0:4.3.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-lang3-0:3.9-3.sdl8.20191120.0628.git.0bd4038.noarch
+    - ant-apache-xalan2-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - junit-javadoc-0:4.12-11.module+el8.2.0+4938+c0cffa5b.noarch
+    - guava-javadoc-0:28.1-2.sdl8.20191120.0638.git.ca85071.noarch
+    - maven-dependency-plugin-javadoc-0:3.1.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - aopalliance-0:1.0-19.sdl8.20191120.0628.git.1359628.noarch
+    - maven-surefire-javadoc-0:3.0.0~M3-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - qdox-javadoc-0:2.0~M10-2.module+el8.2.0+4948+b44bb64e.noarch
+    - xml-commons-resolver-0:1.2-28.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-dependency-analyzer-0:1.11.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - aopalliance-javadoc-0:1.0-19.sdl8.20191120.0628.git.1359628.noarch
+    - xmvn-connector-aether-0:4.0.0~20191028.da67577-3.module+el8.2.0+5555+73059ce4.noarch
+    - osgi-core-javadoc-0:7.0.0-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - slf4j-javadoc-0:1.7.28-2.sdl8.20191120.0707.git.96388bb.noarch
+    - apiguardian-javadoc-0:1.1.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - log4j12-javadoc-0:1.2.17-24.module+el8.2.0+4938+c0cffa5b.noarch
+    - jzlib-demo-0:1.1.3-10.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-filtering-javadoc-0:3.1.1-7.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-dependency-plugin-0:3.1.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-containers-javadoc-0:2.0.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - apiguardian-0:1.1.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-settings-0:2.2.1-64.module+el8.2.0+4938+c0cffa5b.noarch
+    - jtidy-javadoc-2:1.0-0.32.20101207svn1261.module+el8.2.0+4938+c0cffa5b.noarch
+    - cglib-javadoc-0:3.3.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-common-artifact-filters-javadoc-0:3.1.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - guice-jmx-0:4.2.2-3.sdl8.20191120.0638.git.54302a1.noarch
+    - maven-surefire-provider-testng-0:3.0.0~M3-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-remote-resources-plugin-javadoc-0:1.6.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-artifact-transfer-1:0.11.0-1.module+el8.2.0+4938+c0cffa5b.noarch
+    - jakarta-oro-0:2.0.8-25.module+el8.2.0+4938+c0cffa5b.noarch
+    - felix-utils-javadoc-0:1.11.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-net-javadoc-0:3.6-5.module+el8.2.0+4938+c0cffa5b.noarch
+    - junit-0:4.12-11.module+el8.2.0+4938+c0cffa5b.noarch
+    - atinject-0:1-30.20100611svn86.sdl8.20191120.0628.git.7f42990.noarch
+    - plexus-compiler-javadoc-0:2.8.5-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - xml-commons-apis-manual-0:1.4.01-27.module+el8.2.0+4938+c0cffa5b.noarch
+    - xmvn-api-0:4.0.0~20191028.da67577-3.module+el8.2.0+5555+73059ce4.noarch
+    - maven-shared-incremental-0:1.1-16.module+el8.2.0+4938+c0cffa5b.noarch
+    - felix-parent-0:6-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - assertj-core-0:3.13.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - jsch-javadoc-0:0.1.55-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-compiler-0:2.8.5-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - junit-manual-0:4.12-11.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-script-beanshell-0:3.6.0-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-reporting-api-1:3.0-16.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-plugin-descriptor-0:2.2.1-64.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-containers-component-metadata-0:2.0.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-test-tools-0:3.3.0-14.module+el8.2.0+4938+c0cffa5b.noarch
+    - fusesource-pom-0:1.12-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - guice-jndi-0:4.2.2-3.sdl8.20191120.0638.git.54302a1.noarch
+    - xmlunit-placeholders-0:2.6.3-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-parent-0:21-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-local-openjdk8-0:5.3.1-7.module+el8.2.0+5555+73059ce4.noarch
+    - guice-grapher-0:4.2.2-3.sdl8.20191120.0638.git.54302a1.noarch
+    - maven-mapping-javadoc-0:3.0.0-9.module+el8.2.0+4938+c0cffa5b.noarch
+    - antlr-manual-0:2.7.7-58.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-i18n-javadoc-0:1.0~beta.10-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - osgi-core-0:7.0.0-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-compiler-pom-0:2.8.5-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-plugin-tools-java-0:3.6.0-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-doxia-logging-api-0:1.9-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - xmvn-javadoc-0:4.0.0~20191028.da67577-3.module+el8.2.0+5555+73059ce4.noarch
+    - plexus-sec-dispatcher-javadoc-0:1.4-28.sdl8.20191120.0704.git.d19d527.noarch
+    - maven-doxia-module-xhtml-0:1.9-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-plugin-tools-generators-0:3.6.0-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-plugin-tools-0:3.6.0-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - jboss-interceptors-1.2-api-0:1.0.0-11.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-invoker-0:3.0.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - guava-0:28.1-2.sdl8.20191120.0638.git.ca85071.noarch
+    - maven-verifier-0:1.6-8.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-artifact-0:2.2.1-64.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-component-api-javadoc-0:1.0~alpha.15-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-reporting-api-javadoc-1:3.0-16.module+el8.2.0+4938+c0cffa5b.noarch
+    - jsoup-0:1.12.1-2.sdl8.20191120.0644.git.d7def71.noarch
+    - plexus-archiver-0:4.2.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-io-0:3.2.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - jdependency-javadoc-0:1.2-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-languages-0:0.9.10-5.module+el8.2.0+4938+c0cffa5b.noarch
+    - ant-jsch-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-doxia-javadoc-0:1.9-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - xmvn-install-0:4.0.0~20191028.da67577-3.module+el8.2.0+5555+73059ce4.noarch
+    - univocity-parsers-javadoc-0:2.8.3-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - jaxen-0:1.2.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-script-ant-0:3.6.0-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-source-plugin-javadoc-0:3.1.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - javacc-maven-plugin-javadoc-0:2.6-27.module+el8.2.0+4938+c0cffa5b.noarch
+    - byte-buddy-parent-0:1.10.1-2.module+el8.2.0+5087+846a1d03.noarch
+    - bnd-maven-plugin-0:4.3.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - jsr-305-0:0-0.24.20130910svn.sdl8.20191120.0645.git.70095c8.noarch
+    - maven-plugin-tools-javadocs-0:3.6.0-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-plugin-tools-api-0:3.6.0-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-plugin-bundle-javadoc-0:4.2.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-component-api-0:1.0~alpha.15-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - osgi-compendium-javadoc-0:7.0.0-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-1:3.6.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - javamail-javadoc-0:1.6.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - ant-junit-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - mockito-0:3.1.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-ivy-0:2.5.0~rc1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-codec-0:1.13-2.sdl8.20191120.0628.git.e2fb8b7.noarch
+    - google-guice-javadoc-0:4.2.2-3.sdl8.20191120.0638.git.54302a1.noarch
+    - maven-antrun-plugin-javadoc-0:1.8-8.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-reporting-impl-0:3.0.0-6.module+el8.2.0+4938+c0cffa5b.noarch
+    - guice-multibindings-0:4.2.2-3.sdl8.20191120.0638.git.54302a1.noarch
+    - log4j12-0:1.2.17-24.module+el8.2.0+4938+c0cffa5b.noarch
+    - jboss-parent-0:20-6.module+el8.2.0+4938+c0cffa5b.noarch
+    - forge-parent-0:38-13.module+el8.2.0+4938+c0cffa5b.noarch
+    - antlr-tool-0:2.7.7-58.module+el8.2.0+4938+c0cffa5b.noarch
+    - httpcomponents-core-0:4.4.12-2.sdl8.20191120.0639.git.8bdac8f.noarch
+    - plexus-archiver-javadoc-0:4.2.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - glassfish-servlet-api-0:4.0.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - byte-buddy-javadoc-0:1.10.1-2.module+el8.2.0+5087+846a1d03.noarch
+    - antlr-javadoc-0:2.7.7-58.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-surefire-provider-junit-0:3.0.0~M3-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-jxpath-javadoc-0:1.3-31.module+el8.2.0+4938+c0cffa5b.noarch
+    - regexp-1:1.5-28.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-plugin-testing-tools-0:3.3.0-14.module+el8.2.0+4938+c0cffa5b.noarch
+    - glassfish-annotation-api-0:1.2-15.module+el8.2.0+4938+c0cffa5b.noarch
+    - jdepend-javadoc-0:2.9.1-20.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-build-api-0:0.0.7-22.module+el8.2.0+4938+c0cffa5b.noarch
+    - osgi-annotation-javadoc-0:7.0.0-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - cglib-0:3.3.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - xmlunit-assertj-0:2.6.3-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-model-0:2.2.1-64.module+el8.2.0+4938+c0cffa5b.noarch
+    - osgi-annotation-0:7.0.0-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-parent-0:49-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - jsch-0:0.1.55-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-file-management-javadoc-1:3.0.0-7.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-doxia-module-twiki-0:1.9-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-interpolation-javadoc-0:1.26-2.sdl8.20191120.0703.git.f1e9baa.noarch
+    - opentest4j-javadoc-0:1.2.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-toolchain-0:2.2.1-64.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-shared-utils-0:3.2.1-0.3.sdl8.20191120.0657.git.d32376c.noarch
+    - plexus-i18n-0:1.0~beta.10-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - spice-parent-0:26-10.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-compress-javadoc-0:1.19-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-shade-plugin-javadoc-0:3.2.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - slf4j-sources-0:1.7.28-2.sdl8.20191120.0707.git.96388bb.noarch
+    - maven-archiver-0:3.4.0-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - glassfish-servlet-api-javadoc-0:4.0.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - glassfish-legal-0:1.1-13.module+el8.2.0+4938+c0cffa5b.noarch
+    - xmvn-parent-pom-0:4.0.0~20191028.da67577-3.module+el8.2.0+5555+73059ce4.noarch
+    - maven-script-0:3.6.0-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-doxia-module-confluence-0:1.9-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - slf4j-jdk14-0:1.7.28-2.sdl8.20191120.0707.git.96388bb.noarch
+    - xmvn-resolve-0:4.0.0~20191028.da67577-3.module+el8.2.0+5555+73059ce4.noarch
+    - maven-compiler-plugin-javadoc-0:3.8.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-net-0:3.6-5.module+el8.2.0+4938+c0cffa5b.noarch
+    - slf4j-0:1.7.28-2.sdl8.20191120.0707.git.96388bb.noarch
+    - xmvn-core-0:4.0.0~20191028.da67577-3.module+el8.2.0+5555+73059ce4.noarch
+    - maven-plugin-annotations-0:3.6.0-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - junit5-guide-0:5.5.2-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - ant-swing-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - ant-xz-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - xmvn-0:4.0.0~20191028.da67577-3.module+el8.2.0+5555+73059ce4.noarch
+    - xml-commons-apis-0:1.4.01-27.module+el8.2.0+4938+c0cffa5b.noarch
+    - jdom-demo-0:1.1.3-19.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-artifact-manager-0:2.2.1-64.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-io-1:2.6-5.sdl8.20191120.0628.git.9317d85.noarch
+    - apache-commons-logging-javadoc-0:1.2-15.module+el8.2.0+4948+b44bb64e.noarch
+    - maven-enforcer-0:3.0.0~M2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - jflex-javadoc-0:1.7.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-compiler-plugin-0:3.8.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - byte-buddy-0:1.10.1-2.module+el8.2.0+5087+846a1d03.noarch
+    - httpcomponents-client-javadoc-0:4.5.10-2.sdl8.20191120.0639.git.48ebbe0.noarch
+    - ant-lib-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - jflex-0:1.7.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - ivy-local-0:5.3.1-7.module+el8.2.0+5555+73059ce4.noarch
+    - weld-parent-0:39-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-codec-javadoc-0:1.13-2.sdl8.20191120.0628.git.e2fb8b7.noarch
+    - maven-plugin-bundle-0:4.2.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - velocity-demo-0:1.7-26.module+el8.2.0+4938+c0cffa5b.noarch
+    - jzlib-javadoc-0:1.1.3-10.module+el8.2.0+4938+c0cffa5b.noarch
+    - hamcrest-0:2.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-cli-javadoc-0:1.4-6.sdl8.20191120.0628.git.fa0d78c.noarch
+    - xerces-j2-demo-0:2.12.0-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - xmvn-connector-ivy-0:4.0.0~20191028.da67577-3.module+el8.2.0+5555+73059ce4.noarch
+    - ant-imageio-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-logging-0:1.2-15.module+el8.2.0+4948+b44bb64e.noarch
+    - maven-script-interpreter-javadoc-0:1.2-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - java_cup-1:0.11b-10.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-doxia-sink-api-0:1.9-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - glassfish-annotation-api-javadoc-0:1.2-15.module+el8.2.0+4938+c0cffa5b.noarch
+    - xmvn-minimal-0:4.0.0~20191028.da67577-3.module+el8.2.0+5555+73059ce4.noarch
+    - guice-parent-0:4.2.2-3.sdl8.20191120.0638.git.54302a1.noarch
+    - plexus-velocity-0:1.2-6.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-shared-io-javadoc-1:3.0.0-7.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-pom-0:5.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - objenesis-0:3.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - jcl-over-slf4j-0:1.7.28-2.sdl8.20191120.0707.git.96388bb.noarch
+    - maven-script-interpreter-0:1.2-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-artifact-resolver-1:1.0-20.module+el8.2.0+4938+c0cffa5b.noarch
+    - httpcomponents-project-0:11-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - aqute-bnd-javadoc-0:4.3.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - glassfish-master-pom-0:8-13.module+el8.2.0+4938+c0cffa5b.noarch
+    - java_cup-manual-1:0.11b-10.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-doxia-module-fml-0:1.9-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-ivy-javadoc-0:2.5.0~rc1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-file-management-1:3.0.0-7.module+el8.2.0+4938+c0cffa5b.noarch
+    - xml-commons-resolver-javadoc-0:1.2-28.module+el8.2.0+4938+c0cffa5b.noarch
+    - isorelax-1:0-0.25.release20050331.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-io-javadoc-1:2.6-5.sdl8.20191120.0628.git.9317d85.noarch
+    - maven-wagon-0:3.3.3-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-component-factories-pom-0:1.0~alpha.11-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-shade-plugin-0:3.2.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - mockito-javadoc-0:3.1.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - jboss-interceptors-1.2-api-javadoc-0:1.0.0-11.module+el8.2.0+4938+c0cffa5b.noarch
+    - javapackages-tools-0:5.3.1-7.module+el8.2.0+5555+73059ce4.noarch
+    - maven-invoker-plugin-javadoc-0:3.2.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - java_cup-javadoc-1:0.11b-10.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-dependency-tree-javadoc-0:3.0.1-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-lang3-javadoc-0:3.9-3.sdl8.20191120.0628.git.0bd4038.noarch
+    - felix-utils-0:1.11.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - testng-javadoc-0:7.0.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-doxia-test-docs-0:1.9-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-components-pom-0:4.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-surefire-plugin-0:3.0.0~M3-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - ant-antlr-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - jdom2-javadoc-0:2.0.6-14.module+el8.2.0+4938+c0cffa5b.noarch
+    - jaxen-demo-0:1.2.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - jansi-0:1.18-3.sdl8.20191120.0639.git.1b5987f.noarch
+    - munge-maven-plugin-0:1.0-13.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-containers-container-default-0:2.0.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - assertj-core-javadoc-0:3.13.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - geronimo-jms-javadoc-0:1.1.1-27.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-beanutils-javadoc-0:1.9.4-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-enforcer-plugin-0:3.0.0~M2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-plugin-plugin-0:3.6.0-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - javapackages-local-0:5.3.1-7.module+el8.2.0+5555+73059ce4.noarch
+    - jansi-javadoc-0:1.18-3.sdl8.20191120.0639.git.1b5987f.noarch
+    - maven-doxia-module-latex-0:1.9-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-common-artifact-filters-0:3.1.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-filtering-0:3.1.1-7.module+el8.2.0+4938+c0cffa5b.noarch
+    - objenesis-javadoc-0:3.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-parent-0:33-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - jdepend-demo-0:2.9.1-20.module+el8.2.0+4938+c0cffa5b.noarch
+    - httpcomponents-core-javadoc-0:4.4.12-2.sdl8.20191120.0639.git.8bdac8f.noarch
+    - javacc-javadoc-0:7.0.4-5.module+el8.2.0+4938+c0cffa5b.noarch
+    - jdom2-0:2.0.6-14.module+el8.2.0+4938+c0cffa5b.noarch
+    - atinject-tck-0:1-30.20100611svn86.sdl8.20191120.0628.git.7f42990.noarch
+    - apache-commons-jxpath-0:1.3-31.module+el8.2.0+4938+c0cffa5b.noarch
+    - objectweb-pom-0:1.5-9.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-dependency-analyzer-javadoc-0:1.11.1-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - geronimo-jms-0:1.1.1-27.module+el8.2.0+4938+c0cffa5b.noarch
+    - bsh-manual-0:2.0~b6-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - ant-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-remote-resources-plugin-0:1.6.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - google-guice-0:4.2.2-3.sdl8.20191120.0638.git.54302a1.noarch
+    - jdom-0:1.1.3-19.module+el8.2.0+4938+c0cffa5b.noarch
+    - xmlunit-0:2.6.3-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - munge-maven-plugin-javadoc-0:1.0-13.module+el8.2.0+4938+c0cffa5b.noarch
+    - ant-testutil-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-doxia-module-xdoc-0:1.9-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - httpcomponents-client-0:4.5.10-2.sdl8.20191120.0639.git.48ebbe0.noarch
+    - plexus-cipher-javadoc-0:1.7-16.sdl8.20191120.0702.git.45dd6de.noarch
+    - xerces-j2-0:2.12.0-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - apache-commons-collections-testframework-0:3.2.2-13.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-enforcer-api-0:3.0.0~M2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-doxia-0:1.9-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-velocity-javadoc-0:1.2-6.module+el8.2.0+4938+c0cffa5b.noarch
+    - jakarta-oro-javadoc-0:2.0.8-25.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-clean-plugin-0:3.1.0-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - jdepend-0:2.9.1-20.module+el8.2.0+4938+c0cffa5b.noarch
+    - jdom-javadoc-0:1.1.3-19.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-verifier-javadoc-0:1.6-8.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-sec-dispatcher-0:1.4-28.sdl8.20191120.0704.git.d19d527.noarch
+    - junit5-javadoc-0:5.5.2-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - geronimo-annotation-0:1.0-25.sdl8.20191120.0636.git.0c10115.noarch
+    - junit5-0:5.5.2-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-doxia-core-0:1.9-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - byte-buddy-maven-plugin-0:1.10.1-2.module+el8.2.0+5087+846a1d03.noarch
+    - xalan-j2-0:2.7.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - ant-apache-oro-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-bsh-factory-javadoc-0:1.0~alpha.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - cdi-api-javadoc-0:2.0.1-2.sdl8.20191120.0633.git.4f61245.noarch
+    - maven-shared-incremental-javadoc-0:1.1-16.module+el8.2.0+4938+c0cffa5b.noarch
+    - ant-commons-logging-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - ant-apache-bcel-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-surefire-provider-junit5-0:3.0.0~M3-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-doxia-module-apt-0:1.9-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - javacc-demo-0:7.0.4-5.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-doxia-module-xhtml5-0:1.9-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - objectweb-asm-javadoc-0:7.2-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-source-plugin-0:3.1.0-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-archiver-javadoc-0:3.4.0-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-jar-plugin-0:3.1.2-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - xmvn-mojo-0:4.0.0~20191028.da67577-3.module+el8.2.0+5555+73059ce4.noarch
+    - jul-to-slf4j-0:1.7.28-2.sdl8.20191120.0707.git.96388bb.noarch
+    - modello-0:1.11-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - sisu-mojos-0:0.3.4-1.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-doxia-module-docbook-simple-0:1.9-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - plexus-interpolation-0:1.26-2.sdl8.20191120.0703.git.f1e9baa.noarch
+    - maven-clean-plugin-javadoc-0:3.1.0-4.module+el8.2.0+4938+c0cffa5b.noarch
+    - maven-dependency-tree-0:3.0.1-3.module+el8.2.0+4938+c0cffa5b.noarch
+    - ant-apache-log4j-0:1.10.7-2.module+el8.2.0+4938+c0cffa5b.noarch
+    - xmvn-bisect-0:4.0.0~20191028.da67577-3.module+el8.2.0+5555+73059ce4.noarch
+    - jzlib-0:1.1.3-10.module+el8.2.0+4938+c0cffa5b.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-YAML-bootstrap
+  stream: '1.24'
+  version: '1000'
+  context: '1000'
+  arch: x86_64
+  license:
+    module:
+    - MIT
+  summary: Helper module for boostrapping YAML
+  description: 'This module is not intended for general use. It''s a helper module
+    for bootstrapping YAML module.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl: []
+      platform:
+      - el8
+    requires:
+      perl: []
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-Spiffy:
+        buildorder: 1
+        rationale: build dependency.
+        ref: 99b6a420e73a9c3850a51ee1e104ea73eb2e493a
+      perl-Test-Base:
+        buildorder: 3
+        rationale: build dependency.
+        ref: 012d92a0a4eb44db6cdb5df67fcfc64155a97015
+      perl-Test-Deep:
+        buildorder: 2
+        rationale: build dependency.
+        ref: c9a2090a088e44cd7b8b2c4bfd52b0b4ad9b96df
+      perl-Test-YAML:
+        buildorder: 4
+        rationale: build dependency.
+        ref: 95189d28d4089ac878d7f6ef2e1f5d32a01df4f7
+      perl-YAML:
+        buildorder: 0
+        rationale: build dependency.
+        ref: 9d3213c5e002029676df383aa86d8265fd93e0e3
+  buildopts:
+    rpms:
+      macros: '%perl_bootstrap 1
+
+        %_with_perl_YAML_enables_test 1
+
+        %_without_perl_Test_Base_enables_diff 1
+
+        %_without_perl_Test_Base_enables_extra_test 1
+
+        %_without_perl_Test_Base_enables_network 1
+
+        '
+  references:
+    community: https://metacpan.org/release/YAML
+  artifacts:
+    rpms:
+    - perl-YAML-0:1.24-2.module_el8.3.0+438+8fe6e941.noarch
+    - perl-Test-Deep-0:1.127-4.module_el8.3.0+438+8fe6e941.noarch
+    - perl-Spiffy-0:0.46-10.module_el8.3.0+438+8fe6e941.noarch
+    - perl-Test-Base-0:0.89-3.module_el8.3.0+438+8fe6e941.noarch
+    - perl-Test-YAML-0:1.06-7.module_el8.3.0+438+8fe6e941.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-bootstrap
+  stream: '5.30'
+  version: '111'
+  context: '111'
+  arch: x86_64
+  license:
+    module:
+    - MIT
+  summary: Perl bootstrap module for bootstrapping Perl module
+  description: 'This is the Perl interpreter and a set of modules written in Perl
+    language intended for bootstrapping the perl module. This module disables some
+    optional tests to limit amount of components. This module is not intended for
+    public use. It''s an intermediate step for building perl module.
+
+    '
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.3.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      perl:
+        rationale: The Perl interpreter.
+        ref: 04bfb0ed520b5a72ffa8ab4b4b888ed9895f8e03
+      perl-Algorithm-Diff:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 321369c231f028c38d1a0abbf53d0718d2d02b85
+      perl-Archive-Tar:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: cac9d99f95d3cae91381d500ba0c1dc6e6d59577
+      perl-Archive-Zip:
+        buildorder: 6
+        rationale: A build dependency.
+        ref: 13a936d13c1008f61696b9b5c52804075071d835
+      perl-CPAN:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 7bfa2dc30704791d9d3fc29e9be11166d7e73ce4
+      perl-CPAN-DistnameInfo:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 75ad2262cbe66eb032fb7927461cc21a896c3b64
+      perl-CPAN-Meta:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: ab832ae70451a439b9857db399cae8395fa3da18
+      perl-CPAN-Meta-Requirements:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: ac0e9624cef427a39e60084ff722531d70e1a89a
+      perl-CPAN-Meta-YAML:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 1d7d1b86615dad81f329dd679d5d92831073a1c0
+      perl-Capture-Tiny:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: cd39d3b82457466580a2c31b496b70e8c76dda76
+      perl-Carp:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 68c56420dfb9db24e90918a4b62a9051a8c33982
+      perl-Compress-Bzip2:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 59cc11d2ebcb50ea80a3eee8dcd993f333368566
+      perl-Compress-Raw-Bzip2:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: a4d04a2d231f7513b8b1003781371a413256da89
+      perl-Compress-Raw-Zlib:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 061206001fd12e0ea9caac8b17878e88894bea81
+      perl-Config-Perl-V:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 56aad323fba02e8324a43953fc6beb16863a18c3
+      perl-DB_File:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: ccccf9153f9494c631c8c42880a40111e755e1ea
+      perl-Data-Dumper:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 0ac5810fbf1742332f7d0c8e0e30842be8732741
+      perl-Data-OptList:
+        buildorder: 4
+        rationale: A build dependency.
+        ref: d06391f37a5549a00e2a10d2520248aee1a7629a
+      perl-Data-Section:
+        buildorder: 6
+        rationale: A build dependency.
+        ref: c13954ca541f8a951a365262662366ab6ff61be2
+      perl-Devel-PPPort:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 8fd5dbffe8015b5fa52a28ef8145397d95423550
+      perl-Devel-Size:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 241139b2d61d747badd851a09c72b3fb482f82fc
+      perl-Digest:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 5d83fa44ee537ba33a00c75071e3f5950bc9017d
+      perl-Digest-MD5:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: c69a190c502dc9d3e3f41aed51ea00dd02f1a2a8
+      perl-Digest-SHA:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 407146f0cfaefc491269e3dbe5d666ea3e08a50b
+      perl-Encode:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 5d802cd02fca980d3fd3270472f42fc46ff0c110
+      perl-Env:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 5065423f583bb547db0385a7e5ffa69ca05ba3ad
+      perl-Exporter:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 429fd7724ac94d5943efc984e51afa4b39c09412
+      perl-ExtUtils-CBuilder:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 12be4d463a40acde1f6bb112d2cbfe0557260c93
+      perl-ExtUtils-Install:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 0bbd452551de29f72d3bd2e290bd412ac8b3d596
+      perl-ExtUtils-MakeMaker:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 20dfcf8af791e80d9770072de595560511f5e275
+      perl-ExtUtils-Manifest:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: b3813b810ca05c985a01fd171d698c55e7e6c940
+      perl-ExtUtils-ParseXS:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 2a1a1153686b5f758aae71ccc33be3071400a96d
+      perl-Fedora-VSP:
+        buildorder: 1
+        rationale: A build dependency.
+        ref: 27dc817114ce8dbb7716841218184b8f6c3a97d8
+      perl-File-Fetch:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 70d73676739c3b80faa7e33bfe9e1c48e405ec27
+      perl-File-HomeDir:
+        buildorder: 4
+        rationale: A build dependency.
+        ref: 35912f387528cb915a302e63f4c8bf7d62c98061
+      perl-File-Path:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 9052775ffd19d288a80153e66e870312ce7e41f9
+      perl-File-Temp:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: af726744406c0028451580a31ba5aec0a9a13cbf
+      perl-File-Which:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 0b7252ec62fc9418e55fabaff1cffb72e4e855d4
+      perl-Filter:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 668523388f8c5814206f5ae2ae1cca72a5fac728
+      perl-Filter-Simple:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: ba0fb4f331f8655e7e57c122eff3c8695c1081d9
+      perl-Getopt-Long:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 54945a3e35e12aca0e73734807fe94a75a29ecb7
+      perl-HTTP-Tiny:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 19748f75772055991b27f1758b6fac112a14e296
+      perl-IO-Compress:
+        buildorder: 4
+        rationale: A build dependency.
+        ref: ce45f091e5322279cdbd0f5e97dbcc004f35eb8b
+      perl-IO-Socket-IP:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: fa8890fde26190b7d5ada3ab6e22d01826921f11
+      perl-IPC-Cmd:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: bf035fa611f1f6506238be8c6c706fa91808f370
+      perl-IPC-SysV:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: c7aa64ada5cc5afe6f9c1a9134ffafee746d3514
+      perl-IPC-System-Simple:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 78bf46996796b8ca32ed826219227e41329170a1
+      perl-Importer:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 707c670e9921d4caeb75e113082fd3cbf7524ef5
+      perl-JSON-PP:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 662d543bc69a51eb6199c37649e22ae86d8b1156
+      perl-Locale-Maketext:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 83cb50a1b57c356600f8a955d2d3f3dff373d75e
+      perl-MIME-Base64:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 3919c7ff02b5eeea78d5a9c2c98c8b1dc61f4fbc
+      perl-MRO-Compat:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: e3122a788d21deb4b30efcd4ee4d1b8ec0b3bee3
+      perl-Math-BigInt:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 84c1bef021fac656d726b7a850aab13f086e0bd0
+      perl-Math-BigInt-FastCalc:
+        buildorder: 4
+        rationale: A build dependency.
+        ref: 3351ade965d1a69e82638d6fcd376a5ed3187779
+      perl-Math-BigRat:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: b0b691f8239d0fa9c0dc038a71d08919691e26ac
+      perl-Module-Build:
+        buildorder: 4
+        rationale: A build dependency.
+        ref: c8c36f8cd7165646d9c7ff3f699ccb530b8fc5a3
+      perl-Module-CoreList:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 71d9257e332fc458992fee3c30b6d085bca08f72
+      perl-Module-Load:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: c1c4759b601a02cc06ec32cec2e6207d2c466693
+      perl-Module-Load-Conditional:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 89ddbfd6b111988bb108862b34c3bac73b4ff526
+      perl-Module-Metadata:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: cf9590278c9efbba0e1b9c051b6d64d76bc7b9ec
+      perl-Object-HashBase:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 50cdf26f19bb9290097d84cdda8fbee1bc1c438f
+      perl-Package-Generator:
+        buildorder: 4
+        rationale: A build dependency.
+        ref: 1c2c16e387e902210e9d91cec2a86b1a3eb9deea
+      perl-Params-Check:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: fd650a6907879283d03b40228fdaae39f9546dc0
+      perl-Params-Util:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: fc4113b324bd50bda9a0754339fae5805e026f38
+      perl-PathTools:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 8b84fd2710ba06a048b856a4991ef257763a975d
+      perl-Perl-OSType:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 9c40a2bd9b43f45d69723459a6b31586b295b565
+      perl-PerlIO-via-QuotedPrint:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 675e55e56e56fa55d9baf6c6ee746846b56b8fbf
+      perl-Pod-Checker:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 009ce1585c95aa56412014614896e13484463a88
+      perl-Pod-Escapes:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 152014a8f10317fc73c6fd8fa93e130567380e2e
+      perl-Pod-Parser:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 08ee227da5f3226bd5a6de1a127ba737173e8c80
+      perl-Pod-Perldoc:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 7eb4c53a5747ced9c61e1751807cd1d0cc9731a8
+      perl-Pod-Simple:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: d10f928fbb313bd2b14dd27d69d680a6b25f3b6c
+      perl-Pod-Usage:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 6645a0d2352b6ef8733053088088794fd4369b11
+      perl-SUPER:
+        buildorder: 4
+        rationale: A build dependency.
+        ref: f15f1e763b0c84a59a8524baf2f4058addefd7f7
+      perl-Scalar-List-Utils:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 54f5bbf9fd11ce3238ad6c43ff718498fc60b88f
+      perl-Socket:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 29e1e809038e4939b53a8592d1d72f54f92362d3
+      perl-Software-License:
+        buildorder: 7
+        rationale: A build dependency.
+        ref: 5e68a6ab09c5c624e27da545e6860cfc3f28735e
+      perl-Storable:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 1659b41898b55eeda1a38013524f37a3b63fe796
+      perl-Sub-Exporter:
+        buildorder: 5
+        rationale: A build dependency.
+        ref: 128f994ece456060bf187e8fd469305007cd6145
+      perl-Sub-Identify:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: abd52d80f740efeb62d1480abdee8c66b5b3e0a7
+      perl-Sub-Install:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 7eb9c6f18d348dc26492a27e5f2d2bfc8b7f335d
+      perl-Sys-Syslog:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: f0e8970643ee3266da4590d792c979b9356a7e5d
+      perl-Term-ANSIColor:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: c64688a4cf14d9c197b09ceea9da4788da9adb59
+      perl-Term-Cap:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 058425b348bc6e8db7e285aa452ffe63cb779b93
+      perl-Term-Size-Any:
+        buildorder: 4
+        rationale: A build dependency.
+        ref: 56bbc0917c814600a473014f03c33536199bd47a
+      perl-Term-Size-Perl:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 0855473084fa88f24f6c990bd5c62e7af4e4c3dd
+      perl-Term-Table:
+        buildorder: 5
+        rationale: A build dependency.
+        ref: 26cb864cee790d78580a40f5842587b948294375
+      perl-Test-FailWarnings:
+        buildorder: 4
+        rationale: A build dependency.
+        ref: 9d7cd90fe4e0f2da77f452ab29bb226020414b10
+      perl-Test-Harness:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: ca1bc646c064a48c534bbb1e845a8fd831a4b2a9
+      perl-Test-MockModule:
+        buildorder: 5
+        rationale: A build dependency.
+        ref: 77f6dbf3ff9b8997cc791f12f5018fbffb5a8e2c
+      perl-Test-Needs:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 58c0ecde9f3a7c01048816fe3cc133b9f4a5b968
+      perl-Test-NoWarnings:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 7ab4a745bffefc821d69bc831a4be6a91118c15e
+      perl-Test-Simple:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 3de21c287eb1f463972fe5476ea52e3c966f9b62
+      perl-Test-Warnings:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 41c1c4145b149b9fb058f2165d61d518f199bfe6
+      perl-Text-Balanced:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 31448ad1405fad29bc1f650d35cf36642ab08a31
+      perl-Text-Diff:
+        buildorder: 4
+        rationale: A build dependency.
+        ref: 9a69322ab587d9437e0125927344fbd3f373e06c
+      perl-Text-Glob:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 5d0a3405ee842e1bd827fc3191ae4bb411b9449d
+      perl-Text-ParseWords:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 45b7feced565e36bdab9582cbdc165195ca32b34
+      perl-Text-Tabs+Wrap:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 5056a159a27a41976554cfe9b6ae29e03f22052e
+      perl-Text-Template:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 9faa4a680acbcfdf1c1a7e57cd64c1636c393cbf
+      perl-Thread-Queue:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 518af4d9b9471060a6313b682287968b5a181ee4
+      perl-Time-HiRes:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: df8d025d6746ae8df71009e812f951dce8c9cc7b
+      perl-Time-Local:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: e3bdc2122efb8cb97950601a180eea365cc65585
+      perl-Try-Tiny:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 337d768ff2b8018fba0a272869565b1f1d3dfd61
+      perl-URI:
+        buildorder: 4
+        rationale: A build dependency.
+        ref: 6de62ac9f5ac40ae832933aef0bd574bed5d3e31
+      perl-Unicode-Collate:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: c24793f4b8b67fd87fbd62074e77bfc8340acdc3
+      perl-Unicode-Normalize:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 289f608ed6a1331618c9b9968052682ef8f775f9
+      perl-autodie:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: aab37b72c49fcdf45cb0d5fa0c29983d5a0474db
+      perl-bignum:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: dba5f5c6fb0492a665a1eb36c032fa51a481d58b
+      perl-constant:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 8cb929527c2887fcaa14f814ab0ad13becea286d
+      perl-experimental:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: ea2b4cef473539fda134daf9b3c9d18add79cbf4
+      perl-generators:
+        buildorder: 2
+        rationale: A build dependency.
+        ref: e155905193724d4d1ba3b8102413fb24866d7b62
+      perl-inc-latest:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 5d646ac439171f9f58b18dc4f204743d70ffc4d4
+      perl-libnet:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 10ae741dbf5e6d89470a572b01bfa5b8ca0af00a
+      perl-local-lib:
+        buildorder: 5
+        rationale: A build dependency.
+        ref: 90d788860e30697ce0f8e36283cd938e59df9cf5
+      perl-parent:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 8b5913aeb0aea2e84db62b38a2139c59004d7f50
+      perl-perlfaq:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 39ed9068d5b0c003ce65d909f8d75be123399c17
+      perl-podlators:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: 984c5da7a4a68b3b5aaae9db87e071819dbb10e2
+      perl-threads:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: dce970f6427cbfc0bd078d869550a6164621d796
+      perl-threads-shared:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: f5aac1e693fe3a3587dd13b525c7c675fa2f0689
+      perl-version:
+        buildorder: 3
+        rationale: A build dependency.
+        ref: a0365378afb906080cf85680242890e9d16df6a8
+  buildopts:
+    rpms:
+      macros: '%perl_bootstrap 1
+
+        %_with_perl_enables_groff 1
+
+        %_without_perl_enables_syslog_test 1
+
+        %_with_perl_enables_systemtap 1
+
+        %_without_perl_enables_tcsh 1
+
+        %_without_perl_Archive_Tar_enables_optional_test 1
+
+        %_without_perl_autodie_enables_optional_test 1
+
+        %_without_perl_B_Debug_enables_optional_test 1
+
+        %_without_perl_Compress_Bzip2_enables_optional_test 1
+
+        %_without_perl_Compress_Raw_Bzip2_enables_optional_test 1
+
+        %_without_perl_Compress_Raw_Zlib_enables_optional_test 1
+
+        %_without_perl_constant_enables_optional_test 1
+
+        %_without_perl_CPAN_enables_optional_test 1
+
+        %_without_perl_CPAN_Meta_Requirements_enables_optional_test 1
+
+        %_without_perl_CPAN_Meta_YAML_enables_extra_test 1
+
+        %_without_perl_Data_OptList_enables_extra_test 1
+
+        %_without_perl_Data_Section_enables_extra_test 1
+
+        %_without_perl_Data_Section_enables_optional_test 1
+
+        %_without_perl_DB_File_enables_optional_test 1
+
+        %_without_perl_Devel_PPPort_enables_optional_test 1
+
+        %_without_perl_Devel_Size_enables_optional_test 1
+
+        %_without_perl_Digest_SHA_enables_optional_test 1
+
+        %_without_perl_Exporter_enables_optional_test 1
+
+        %_without_perl_ExtUtils_Install_enables_optional_test 1
+
+        %_without_perl_Filter_enables_optional_test 1
+
+        %_without_perl_IO_Compress_enables_optional_test 1
+
+        %_without_perl_IO_Socket_IP_enables_optional_test 1
+
+        %_without_perl_IPC_Cmd_enables_IPC_Run 1
+
+        %_without_perl_IPC_System_Simple_enables_optional_test 1
+
+        %_without_perl_IPC_SysV_enables_optional_test 1
+
+        %_without_perl_JSON_PP_enables_optional_test 1
+
+        %_without_perl_libnet_enables_ssl 1
+
+        %_without_perl_Locale_Maketext_enables_optional_test 1
+
+        %_without_perl_LWP_MediaTypes_enables_mailcap 1
+
+        %_without_perl_Module_Build_enables_optional_test 1
+
+        %_without_perl_Module_CoreList_enables_optional_test 1
+
+        %_without_perl_Package_Generator_enables_extra_test 1
+
+        %_without_perl_Perl_OSType_enables_optional_test 1
+
+        %_without_perl_Pod_Parser_enables_optional_test 1
+
+        %_without_perl_Pod_Perldoc_enables_tk_test 1
+
+        %_without_perl_Pod_Simple_enables_optional_test 1
+
+        %_without_perl_Software_License_enables_extra_test 1
+
+        %_without_perl_Software_License_enables_optional_test 1
+
+        %_without_perl_Sub_Exporter_enables_extra_test 1
+
+        %_without_perl_Sub_Identify_enables_optional_test 1
+
+        %_without_perl_Sub_Install_enables_optional_test 1
+
+        %_without_perl_Sys_Syslog_enables_optional_test 1
+
+        %_without_perl_Term_Size_Any_enabels_optional_test 1
+
+        %_with_perl_Term_Table_enables_terminal 1
+
+        %_without_perl_Term_Table_enables_unicode 1
+
+        %_without_perl_Test_Harness_enables_optional_test 1
+
+        %_without_perl_Test_MockModule_enables_optional_test 1
+
+        %_without_perl_Test_NoWarnings_enables_stack_trace 1
+
+        %_without_perl_Test_Simple_enables_optional_test 1
+
+        %_without_perl_Test_Warnings_enables_optional_test 1
+
+        %_without_perl_Text_Template_enables_optional_test 1
+
+        %_without_perl_Try_Tiny_enables_optional_test 1
+
+        %_without_perl_URI_enables_Business_ISBN 1
+
+        %_without_perl_version_enables_optional_test 1
+
+        '
+  references:
+    community: https://fedoraproject.org/wiki/Modularity
+    documentation: https://fedoraproject.org/wiki/Fedora_Packaging_Guidelines_for_Modules
+    tracker: https://bugzilla.redhat.com/buglist.cgi?classification=Red%20Hat&component=perl-bootstrap-5.30-module&product=Red%20Hat%20Enterprise%20Linux%208
+  artifacts:
+    rpms:
+    - perl-Math-BigInt-FastCalc-0:0.500.800-450.module_el8.3+boostrap1.x86_64
+    - perl-Perl-OSType-0:1.010-397.module_el8.3+boostrap1.noarch
+    - perl-File-Path-0:2.16-439.module_el8.3+boostrap1.noarch
+    - perl-Exporter-0:5.73-450.module_el8.3+boostrap1.noarch
+    - perl-Data-Dumper-0:2.174-450.module_el8.3+boostrap1.x86_64
+    - perl-Sys-Syslog-debugsource-0:0.36-1.module_el8.3+boostrap1.x86_64
+    - perl-ExtUtils-ParseXS-1:3.40-450.module_el8.3+boostrap1.noarch
+    - perl-Thread-Queue-0:3.13-450.module_el8.3+boostrap1.noarch
+    - perl-Data-OptList-0:0.110-7.module_el8.3+boostrap1.noarch
+    - perl-version-debugsource-7:0.99.24-441.module_el8.3+boostrap1.x86_64
+    - perl-Locale-Maketext-0:1.29-450.module_el8.3+boostrap1.noarch
+    - perl-ExtUtils-MakeMaker-2:7.34-450.module_el8.3+boostrap1.noarch
+    - perl-Sub-Identify-debugsource-0:0.14-7.module_el8.3+boostrap1.x86_64
+    - perl-Encode-devel-4:3.01-450.module_el8.3+boostrap1.noarch
+    - perl-PathTools-0:3.78-439.module_el8.3+boostrap1.x86_64
+    - perl-Digest-MD5-0:2.55-397.module_el8.3+boostrap1.x86_64
+    - perl-Encode-4:3.01-439.module_el8.3+boostrap1.x86_64
+    - perl-version-7:0.99.24-441.module_el8.3+boostrap1.x86_64
+    - perl-Storable-debuginfo-1:3.15-450.module_el8.3+boostrap1.x86_64
+    - perl-Time-HiRes-debuginfo-0:1.9760-450.module_el8.3+boostrap1.x86_64
+    - perl-Params-Util-debugsource-0:1.07-23.module_el8.3+boostrap1.x86_64
+    - perl-Unicode-Collate-debugsource-0:1.27-439.module_el8.3+boostrap1.x86_64
+    - perl-Digest-SHA-debuginfo-1:6.02-2.module_el8.3+boostrap1.x86_64
+    - perl-Pod-Escapes-1:1.07-450.module_el8.3+boostrap1.noarch
+    - perl-Errno-0:1.30-450.module_el8.3+boostrap1.x86_64
+    - perl-Unicode-Collate-0:1.27-450.module_el8.3+boostrap1.x86_64
+    - perl-Encode-debuginfo-4:3.01-450.module_el8.3+boostrap1.x86_64
+    - perl-Importer-0:0.025-6.module_el8.3+boostrap1.noarch
+    - perl-IPC-Cmd-2:1.02-450.module_el8.3+boostrap1.noarch
+    - perl-Params-Util-0:1.07-23.module_el8.3+boostrap1.x86_64
+    - perl-ExtUtils-MakeMaker-2:7.42-1.module_el8.3+boostrap1.noarch
+    - perl-HTTP-Tiny-0:0.076-450.module_el8.3+boostrap1.noarch
+    - perl-Sys-Syslog-debuginfo-0:0.35-450.module_el8.3+boostrap1.x86_64
+    - perl-Scalar-List-Utils-debuginfo-3:1.53-439.module_el8.3+boostrap1.x86_64
+    - perl-DB_File-0:1.852-4.module_el8.3+boostrap1.x86_64
+    - perl-Compress-Raw-Bzip2-0:2.084-450.module_el8.3+boostrap1.x86_64
+    - perl-Term-Cap-0:1.17-396.module_el8.3+boostrap1.noarch
+    - perl-open-0:1.11-450.module_el8.3+boostrap1.noarch
+    - perl-experimental-0:0.020-439.module_el8.3+boostrap1.noarch
+    - perl-Math-BigInt-FastCalc-debuginfo-0:0.500.900-1.module_el8.3+boostrap1.x86_64
+    - perl-utils-0:5.30.1-450.module_el8.3+boostrap1.noarch
+    - perl-Compress-Raw-Zlib-0:2.093-1.module_el8.3+boostrap1.x86_64
+    - perl-ExtUtils-CBuilder-1:0.280231-450.module_el8.3+boostrap1.noarch
+    - perl-Compress-Raw-Bzip2-debuginfo-0:2.084-450.module_el8.3+boostrap1.x86_64
+    - perl-ExtUtils-Command-1:7.34-450.module_el8.3+boostrap1.noarch
+    - perl-Unicode-Collate-0:1.27-439.module_el8.3+boostrap1.x86_64
+    - perl-Algorithm-Diff-0:1.1903-10.module_el8.3+boostrap1.noarch
+    - perl-MIME-Base64-debuginfo-0:3.15-1001.module_el8.3+boostrap1.x86_64
+    - perl-IPC-SysV-0:2.07-398.module_el8.3+boostrap1.x86_64
+    - perl-Digest-SHA-debuginfo-1:6.02-450.module_el8.3+boostrap1.x86_64
+    - perl-libs-debuginfo-4:5.30.1-450.module_el8.3+boostrap1.x86_64
+    - perl-Math-BigInt-1:1.9998.16-450.module_el8.3+boostrap1.noarch
+    - perl-Digest-SHA-1:6.02-2.module_el8.3+boostrap1.x86_64
+    - perl-Pod-Simple-1:3.40-1.module_el8.3+boostrap1.noarch
+    - perl-Config-Perl-V-0:0.32-441.module_el8.3+boostrap1.noarch
+    - perl-Locale-Maketext-0:1.29-440.module_el8.3+boostrap1.noarch
+    - perl-ExtUtils-Embed-0:1.35-450.module_el8.3+boostrap1.noarch
+    - perl-CPAN-Meta-YAML-0:0.018-1001.module_el8.3+boostrap1.noarch
+    - perl-Encode-devel-4:3.01-439.module_el8.3+boostrap1.x86_64
+    - perl-Digest-SHA-1:6.02-450.module_el8.3+boostrap1.x86_64
+    - perl-Env-0:1.04-396.module_el8.3+boostrap1.noarch
+    - perl-Devel-Size-debugsource-0:0.83-3.module_el8.3+boostrap1.x86_64
+    - perl-Encode-debugsource-4:3.01-439.module_el8.3+boostrap1.x86_64
+    - perl-Term-ANSIColor-0:4.06-397.module_el8.3+boostrap1.noarch
+    - perl-CPAN-DistnameInfo-0:0.12-13.module_el8.3+boostrap1.noarch
+    - perl-encoding-4:2.22-439.module_el8.3+boostrap1.x86_64
+    - perl-Memoize-0:1.03-450.module_el8.3+boostrap1.noarch
+    - perl-Package-Generator-0:1.106-12.module_el8.3+boostrap1.noarch
+    - perl-Carp-0:1.50-439.module_el8.3+boostrap1.noarch
+    - perl-Module-Loaded-1:0.08-450.module_el8.3+boostrap1.noarch
+    - perl-ExtUtils-Command-2:7.42-1.module_el8.3+boostrap1.noarch
+    - perl-Math-BigRat-0:0.2614-2.module_el8.3+boostrap1.noarch
+    - perl-Env-0:1.04-450.module_el8.3+boostrap1.noarch
+    - perl-SelfLoader-0:1.25-450.module_el8.3+boostrap1.noarch
+    - perl-Time-HiRes-debugsource-0:1.9760-439.module_el8.3+boostrap1.x86_64
+    - perl-threads-shared-debuginfo-0:1.60-440.module_el8.3+boostrap1.x86_64
+    - perl-Term-Size-Any-0:0.002-29.module_el8.3+boostrap1.noarch
+    - perl-PathTools-debuginfo-0:3.78-439.module_el8.3+boostrap1.x86_64
+    - perl-IO-debuginfo-0:1.40-450.module_el8.3+boostrap1.x86_64
+    - perl-experimental-0:0.020-450.module_el8.3+boostrap1.noarch
+    - perl-Unicode-Normalize-0:1.26-450.module_el8.3+boostrap1.x86_64
+    - perl-threads-1:2.22-450.module_el8.3+boostrap1.x86_64
+    - perl-IPC-SysV-0:2.07-450.module_el8.3+boostrap1.x86_64
+    - perl-Module-CoreList-1:5.20191220-1.module_el8.3+boostrap1.noarch
+    - perl-DB_File-0:1.843-450.module_el8.3+boostrap1.x86_64
+    - perl-Software-License-0:0.103014-5.module_el8.3+boostrap1.noarch
+    - perl-File-Path-0:2.16-450.module_el8.3+boostrap1.noarch
+    - perl-Compress-Raw-Zlib-debugsource-0:2.093-1.module_el8.3+boostrap1.x86_64
+    - perl-threads-shared-debugsource-0:1.60-440.module_el8.3+boostrap1.x86_64
+    - perl-Term-Cap-0:1.17-450.module_el8.3+boostrap1.noarch
+    - perl-IO-Socket-IP-0:0.39-450.module_el8.3+boostrap1.noarch
+    - perl-Params-Util-debuginfo-0:1.07-23.module_el8.3+boostrap1.x86_64
+    - perl-perlfaq-0:5.20190126-450.module_el8.3+boostrap1.noarch
+    - perl-Module-CoreList-tools-1:5.20191110-450.module_el8.3+boostrap1.noarch
+    - perl-Test-NoWarnings-0:1.04-16.module_el8.3+boostrap1.noarch
+    - perl-IPC-SysV-debuginfo-0:2.07-398.module_el8.3+boostrap1.x86_64
+    - perl-threads-shared-debuginfo-0:1.60-450.module_el8.3+boostrap1.x86_64
+    - perl-Math-Complex-0:1.59-450.module_el8.3+boostrap1.noarch
+    - perl-CPAN-Meta-YAML-0:0.018-450.module_el8.3+boostrap1.noarch
+    - perl-MIME-Base64-0:3.15-1001.module_el8.3+boostrap1.x86_64
+    - perl-Module-Load-Conditional-0:0.70-1.module_el8.3+boostrap1.noarch
+    - perl-Filter-Simple-0:0.95-450.module_el8.3+boostrap1.noarch
+    - perl-Unicode-Normalize-debugsource-0:1.26-439.module_el8.3+boostrap1.x86_64
+    - perl-Module-Metadata-0:1.000036-450.module_el8.3+boostrap1.noarch
+    - perl-Archive-Tar-0:2.32-440.module_el8.3+boostrap1.noarch
+    - perl-CPAN-0:2.22-450.module_el8.3+boostrap1.noarch
+    - perl-PerlIO-via-QuotedPrint-0:0.08-450.module_el8.3+boostrap1.noarch
+    - perl-IPC-SysV-debugsource-0:2.07-398.module_el8.3+boostrap1.x86_64
+    - perl-MIME-Base64-debuginfo-0:3.15-450.module_el8.3+boostrap1.x86_64
+    - perl-Math-BigInt-FastCalc-debugsource-0:0.500.900-1.module_el8.3+boostrap1.x86_64
+    - perl-Data-Dumper-debugsource-0:2.174-440.module_el8.3+boostrap1.x86_64
+    - perl-Devel-PPPort-debugsource-0:3.56-1.module_el8.3+boostrap1.x86_64
+    - perl-Test-Simple-3:1.302170-1.module_el8.3+boostrap1.noarch
+    - perl-libnetcfg-4:5.30.1-450.module_el8.3+boostrap1.noarch
+    - perl-autodie-0:2.29-1001.module_el8.3+boostrap1.noarch
+    - perl-CPAN-Meta-Requirements-0:2.140-450.module_el8.3+boostrap1.noarch
+    - perl-Time-Local-2:1.280-450.module_el8.3+boostrap1.noarch
+    - perl-ExtUtils-Miniperl-0:1.09-450.module_el8.3+boostrap1.noarch
+    - perl-Text-ParseWords-0:3.30-450.module_el8.3+boostrap1.noarch
+    - perl-ExtUtils-Install-0:2.14-440.module_el8.3+boostrap1.noarch
+    - perl-Net-Ping-0:2.71-450.module_el8.3+boostrap1.noarch
+    - perl-Storable-debuginfo-1:3.15-442.module_el8.3+boostrap1.x86_64
+    - perl-Devel-Peek-0:1.28-450.module_el8.3+boostrap1.x86_64
+    - perl-encoding-4:2.22-450.module_el8.3+boostrap1.x86_64
+    - perl-Math-BigInt-FastCalc-0:0.500.900-1.module_el8.3+boostrap1.x86_64
+    - perl-CPAN-Meta-0:2.150010-450.module_el8.3+boostrap1.noarch
+    - perl-Params-Check-1:0.38-450.module_el8.3+boostrap1.noarch
+    - perl-perlfaq-0:5.20191102-1.module_el8.3+boostrap1.noarch
+    - perl-Encode-4:3.01-450.module_el8.3+boostrap1.x86_64
+    - perl-DB_File-debugsource-0:1.852-4.module_el8.3+boostrap1.x86_64
+    - perl-autodie-0:2.29-450.module_el8.3+boostrap1.noarch
+    - perl-Text-Balanced-0:2.03-450.module_el8.3+boostrap1.noarch
+    - perl-Devel-Peek-debuginfo-0:1.28-450.module_el8.3+boostrap1.x86_64
+    - perl-interpreter-debuginfo-4:5.30.1-450.module_el8.3+boostrap1.x86_64
+    - perl-Digest-MD5-debuginfo-0:2.55-397.module_el8.3+boostrap1.x86_64
+    - perl-Pod-Escapes-1:1.07-396.module_el8.3+boostrap1.noarch
+    - perl-libnet-0:3.11-4.module_el8.3+boostrap1.noarch
+    - perl-bignum-0:0.51-450.module_el8.3+boostrap1.noarch
+    - perl-threads-debuginfo-1:2.22-450.module_el8.3+boostrap1.x86_64
+    - perl-Filter-debuginfo-2:1.59-440.module_el8.3+boostrap1.x86_64
+    - perl-Socket-debuginfo-4:2.029-4.module_el8.3+boostrap1.x86_64
+    - perl-Pod-Simple-1:3.35-450.module_el8.3+boostrap1.noarch
+    - perl-HTTP-Tiny-0:0.076-439.module_el8.3+boostrap1.noarch
+    - perl-Text-Tabs+Wrap-0:2013.0523-450.module_el8.3+boostrap1.noarch
+    - perl-Test-Harness-1:3.42-2.module_el8.3+boostrap1.noarch
+    - perl-Locale-Maketext-Simple-1:0.21-450.module_el8.3+boostrap1.noarch
+    - perl-Digest-MD5-debugsource-0:2.55-397.module_el8.3+boostrap1.x86_64
+    - perl-File-Temp-1:0.230.900-450.module_el8.3+boostrap1.noarch
+    - perl-Devel-PPPort-0:3.52-450.module_el8.3+boostrap1.x86_64
+    - perl-Math-BigRat-0:0.2614-450.module_el8.3+boostrap1.noarch
+    - perl-JSON-PP-1:4.04-2.module_el8.3+boostrap1.noarch
+    - perl-threads-shared-0:1.60-440.module_el8.3+boostrap1.x86_64
+    - perl-constant-0:1.33-450.module_el8.3+boostrap1.noarch
+    - perl-Filter-2:1.59-440.module_el8.3+boostrap1.x86_64
+    - perl-IO-Zlib-1:1.10-450.module_el8.3+boostrap1.noarch
+    - perl-threads-shared-0:1.60-450.module_el8.3+boostrap1.x86_64
+    - perl-SUPER-0:1.20190531-3.module_el8.3+boostrap1.noarch
+    - perl-Compress-Raw-Zlib-0:2.084-450.module_el8.3+boostrap1.x86_64
+    - perl-ExtUtils-Manifest-1:1.72-450.module_el8.3+boostrap1.noarch
+    - perl-Storable-debugsource-1:3.15-442.module_el8.3+boostrap1.x86_64
+    - perl-Sys-Syslog-0:0.36-1.module_el8.3+boostrap1.x86_64
+    - perl-parent-1:0.237-2.module_el8.3+boostrap1.noarch
+    - perl-MRO-Compat-0:0.13-5.module_el8.3+boostrap1.noarch
+    - perl-libs-4:5.30.1-450.module_el8.3+boostrap1.x86_64
+    - perl-DB_File-debuginfo-0:1.852-4.module_el8.3+boostrap1.x86_64
+    - perl-IPC-Cmd-2:1.04-2.module_el8.3+boostrap1.noarch
+    - perl-generators-0:1.11-4.module_el8.3+boostrap1.noarch
+    - perl-Devel-PPPort-0:3.56-1.module_el8.3+boostrap1.x86_64
+    - perl-Data-Dumper-0:2.174-440.module_el8.3+boostrap1.x86_64
+    - perl-Scalar-List-Utils-debuginfo-3:1.50-450.module_el8.3+boostrap1.x86_64
+    - perl-Compress-Raw-Zlib-debuginfo-0:2.084-450.module_el8.3+boostrap1.x86_64
+    - perl-Digest-0:1.17-396.module_el8.3+boostrap1.noarch
+    - perl-Fedora-VSP-0:0.001-10.module_el8.3+boostrap1.noarch
+    - perl-Devel-Size-debuginfo-0:0.83-3.module_el8.3+boostrap1.x86_64
+    - perl-Sys-Syslog-0:0.35-450.module_el8.3+boostrap1.x86_64
+    - perl-bignum-0:0.51-439.module_el8.3+boostrap1.noarch
+    - perl-Socket-debugsource-4:2.029-4.module_el8.3+boostrap1.x86_64
+    - perl-Params-Check-1:0.38-396.module_el8.3+boostrap1.noarch
+    - perl-Socket-debuginfo-4:2.027-450.module_el8.3+boostrap1.x86_64
+    - perl-Module-Load-1:0.34-439.module_el8.3+boostrap1.noarch
+    - perl-Getopt-Long-1:2.50-450.module_el8.3+boostrap1.noarch
+    - perl-4:5.30.1-450.module_el8.3+boostrap1.x86_64
+    - perl-IO-0:1.40-450.module_el8.3+boostrap1.x86_64
+    - perl-Thread-Queue-0:3.13-2.module_el8.3+boostrap1.noarch
+    - perl-File-Fetch-0:0.56-450.module_el8.3+boostrap1.noarch
+    - perl-Filter-2:1.59-450.module_el8.3+boostrap1.x86_64
+    - perl-Test-Warnings-0:0.028-1.module_el8.3+boostrap1.noarch
+    - perl-File-HomeDir-0:1.004-6.module_el8.3+boostrap1.noarch
+    - perl-Pod-Usage-4:1.69-450.module_el8.3+boostrap1.noarch
+    - perl-version-7:0.99.24-450.module_el8.3+boostrap1.noarch
+    - perl-Config-Perl-V-0:0.32-450.module_el8.3+boostrap1.noarch
+    - perl-PathTools-debugsource-0:3.78-439.module_el8.3+boostrap1.x86_64
+    - perl-Time-HiRes-0:1.9760-439.module_el8.3+boostrap1.x86_64
+    - perl-Scalar-List-Utils-debugsource-3:1.53-439.module_el8.3+boostrap1.x86_64
+    - perl-IO-Compress-0:2.084-450.module_el8.3+boostrap1.noarch
+    - perl-Devel-SelfStubber-0:1.06-450.module_el8.3+boostrap1.noarch
+    - perl-Test-FailWarnings-0:0.008-13.module_el8.3+boostrap1.noarch
+    - perl-podlators-1:4.12-2.module_el8.3+boostrap1.noarch
+    - perl-Math-BigInt-1:1.9998.18-1.module_el8.3+boostrap1.noarch
+    - perl-macros-4:5.30.1-450.module_el8.3+boostrap1.x86_64
+    - perl-Sub-Identify-debuginfo-0:0.14-7.module_el8.3+boostrap1.x86_64
+    - perl-File-Fetch-0:0.56-3.module_el8.3+boostrap1.noarch
+    - perl-Term-ANSIColor-0:4.06-450.module_el8.3+boostrap1.noarch
+    - perl-Text-Tabs+Wrap-0:2013.0523-396.module_el8.3+boostrap1.noarch
+    - perl-Exporter-0:5.73-440.module_el8.3+boostrap1.noarch
+    - perl-Devel-PPPort-debuginfo-0:3.56-1.module_el8.3+boostrap1.x86_64
+    - perl-inc-latest-2:0.500-10.module_el8.3+boostrap1.noarch
+    - perl-debugsource-4:5.30.1-450.module_el8.3+boostrap1.x86_64
+    - perl-Digest-0:1.17-450.module_el8.3+boostrap1.noarch
+    - perl-Compress-Bzip2-0:2.26-7.module_el8.3+boostrap1.x86_64
+    - perl-Data-Dumper-debuginfo-0:2.174-440.module_el8.3+boostrap1.x86_64
+    - perl-Module-Build-2:0.42.29-4.module_el8.3+boostrap1.noarch
+    - perl-ExtUtils-MM-Utils-2:7.42-1.module_el8.3+boostrap1.noarch
+    - perl-Module-Load-Conditional-0:0.68-450.module_el8.3+boostrap1.noarch
+    - perl-Carp-0:1.50-450.module_el8.3+boostrap1.noarch
+    - perl-Compress-Raw-Bzip2-0:2.093-1.module_el8.3+boostrap1.x86_64
+    - perl-Digest-MD5-debuginfo-0:2.55-450.module_el8.3+boostrap1.x86_64
+    - perl-Module-CoreList-1:5.20191110-450.module_el8.3+boostrap1.noarch
+    - perl-Object-HashBase-tools-0:0.008-1.module_el8.3+boostrap1.noarch
+    - perl-local-lib-0:2.000024-7.module_el8.3+boostrap1.noarch
+    - perl-JSON-PP-1:4.02-450.module_el8.3+boostrap1.noarch
+    - perl-homedir-0:2.000024-7.module_el8.3+boostrap1.noarch
+    - perl-ExtUtils-CBuilder-1:0.280231-439.module_el8.3+boostrap1.noarch
+    - perl-Time-Local-1:1.280-2.module_el8.3+boostrap1.noarch
+    - perl-Pod-Checker-4:1.73-450.module_el8.3+boostrap1.noarch
+    - perl-IPC-System-Simple-0:1.25-18.module_el8.3+boostrap1.noarch
+    - perl-IPC-SysV-debuginfo-0:2.07-450.module_el8.3+boostrap1.x86_64
+    - perl-Test-Simple-3:1.302162-450.module_el8.3+boostrap1.noarch
+    - perl-ExtUtils-ParseXS-1:3.40-439.module_el8.3+boostrap1.noarch
+    - perl-ExtUtils-MM-Utils-1:7.34-450.module_el8.3+boostrap1.noarch
+    - perl-interpreter-4:5.30.1-450.module_el8.3+boostrap1.x86_64
+    - perl-Pod-Perldoc-0:3.28.01-442.module_el8.3+boostrap1.noarch
+    - perl-CPAN-Meta-0:2.150010-397.module_el8.3+boostrap1.noarch
+    - perl-Time-Piece-debuginfo-0:1.33-450.module_el8.3+boostrap1.x86_64
+    - perl-constant-0:1.33-1001.module_el8.3+boostrap1.noarch
+    - perl-Module-CoreList-tools-1:5.20191220-1.module_el8.3+boostrap1.noarch
+    - perl-PathTools-0:3.78-450.module_el8.3+boostrap1.x86_64
+    - perl-Time-HiRes-0:1.9760-450.module_el8.3+boostrap1.x86_64
+    - perl-Pod-Checker-4:1.73-396.module_el8.3+boostrap1.noarch
+    - perl-Unicode-Normalize-debuginfo-0:1.26-450.module_el8.3+boostrap1.x86_64
+    - perl-Data-Section-0:0.200007-8.module_el8.3+boostrap1.noarch
+    - perl-ExtUtils-Manifest-1:1.72-438.module_el8.3+boostrap1.noarch
+    - perl-Attribute-Handlers-0:1.01-450.module_el8.3+boostrap1.noarch
+    - perl-DB_File-debuginfo-0:1.843-450.module_el8.3+boostrap1.x86_64
+    - perl-Filter-debuginfo-2:1.59-450.module_el8.3+boostrap1.x86_64
+    - perl-Getopt-Long-1:2.51-1.module_el8.3+boostrap1.noarch
+    - perl-Pod-Perldoc-0:3.28.01-450.module_el8.3+boostrap1.noarch
+    - perl-Sub-Exporter-0:0.987-16.module_el8.3+boostrap1.noarch
+    - perl-URI-0:1.76-5.module_el8.3+boostrap1.noarch
+    - perl-Object-HashBase-0:0.008-1.module_el8.3+boostrap1.noarch
+    - perl-podlators-1:4.11-450.module_el8.3+boostrap1.noarch
+    - perl-PathTools-debuginfo-0:3.78-450.module_el8.3+boostrap1.x86_64
+    - perl-Archive-Tar-0:2.32-450.module_el8.3+boostrap1.noarch
+    - perl-Digest-MD5-0:2.55-450.module_el8.3+boostrap1.x86_64
+    - perl-Unicode-Normalize-debuginfo-0:1.26-439.module_el8.3+boostrap1.x86_64
+    - perl-PerlIO-via-QuotedPrint-0:0.08-396.module_el8.3+boostrap1.noarch
+    - perl-Encode-debuginfo-4:3.01-439.module_el8.3+boostrap1.x86_64
+    - perl-Test-Needs-0:0.002006-3.module_el8.3+boostrap1.noarch
+    - perl-devel-4:5.30.1-450.module_el8.3+boostrap1.x86_64
+    - perl-MIME-Base64-0:3.15-450.module_el8.3+boostrap1.x86_64
+    - perl-Compress-Bzip2-debugsource-0:2.26-7.module_el8.3+boostrap1.x86_64
+    - perl-Unicode-Normalize-0:1.26-439.module_el8.3+boostrap1.x86_64
+    - perl-IO-Socket-IP-0:0.39-6.module_el8.3+boostrap1.noarch
+    - perl-File-Which-0:1.23-4.module_el8.3+boostrap1.noarch
+    - perl-Pod-Usage-4:1.69-396.module_el8.3+boostrap1.noarch
+    - perl-debuginfo-4:5.30.1-450.module_el8.3+boostrap1.x86_64
+    - perl-Unicode-Collate-debuginfo-0:1.27-439.module_el8.3+boostrap1.x86_64
+    - perl-threads-1:2.22-439.module_el8.3+boostrap1.x86_64
+    - perl-Text-Glob-0:0.11-5.module_el8.3+boostrap1.noarch
+    - perl-Socket-4:2.027-450.module_el8.3+boostrap1.x86_64
+    - perl-Data-Dumper-debuginfo-0:2.174-450.module_el8.3+boostrap1.x86_64
+    - perl-Test-0:1.31-450.module_el8.3+boostrap1.noarch
+    - perl-Module-Metadata-0:1.000037-1.module_el8.3+boostrap1.noarch
+    - perl-Math-BigInt-FastCalc-debuginfo-0:0.500.800-450.module_el8.3+boostrap1.x86_64
+    - perl-Compress-Raw-Bzip2-debuginfo-0:2.093-1.module_el8.3+boostrap1.x86_64
+    - perl-Devel-Size-0:0.83-3.module_el8.3+boostrap1.x86_64
+    - perl-CPAN-Meta-Requirements-0:2.140-397.module_el8.3+boostrap1.noarch
+    - perl-parent-1:0.237-450.module_el8.3+boostrap1.noarch
+    - perl-Compress-Raw-Bzip2-debugsource-0:2.093-1.module_el8.3+boostrap1.x86_64
+    - perl-Text-Template-0:1.58-1.module_el8.3+boostrap1.noarch
+    - perl-Test-MockModule-0:0.170.0-4.module_el8.3+boostrap1.noarch
+    - perl-Storable-1:3.15-442.module_el8.3+boostrap1.x86_64
+    - perl-Scalar-List-Utils-3:1.50-450.module_el8.3+boostrap1.x86_64
+    - perl-tests-4:5.30.1-450.module_el8.3+boostrap1.x86_64
+    - perl-Time-Piece-0:1.33-450.module_el8.3+boostrap1.x86_64
+    - perl-Try-Tiny-0:0.30-7.module_el8.3+boostrap1.noarch
+    - perl-Scalar-List-Utils-3:1.53-439.module_el8.3+boostrap1.x86_64
+    - perl-Digest-SHA-debugsource-1:6.02-2.module_el8.3+boostrap1.x86_64
+    - perl-Sub-Identify-0:0.14-7.module_el8.3+boostrap1.x86_64
+    - perl-File-Temp-1:0.230.900-439.module_el8.3+boostrap1.noarch
+    - perl-ExtUtils-Install-0:2.14-450.module_el8.3+boostrap1.noarch
+    - perl-Pod-Html-0:1.24-450.module_el8.3+boostrap1.noarch
+    - perl-CPAN-0:2.27-2.module_el8.3+boostrap1.noarch
+    - perl-Text-Diff-0:1.45-7.module_el8.3+boostrap1.noarch
+    - perl-libnet-0:3.11-450.module_el8.3+boostrap1.noarch
+    - perl-threads-debugsource-1:2.22-439.module_el8.3+boostrap1.x86_64
+    - perl-Filter-Simple-0:0.95-439.module_el8.3+boostrap1.noarch
+    - perl-Sub-Install-0:0.928-15.module_el8.3+boostrap1.noarch
+    - perl-Text-Balanced-0:2.03-396.module_el8.3+boostrap1.noarch
+    - perl-Term-Table-0:0.015-2.module_el8.3+boostrap1.noarch
+    - perl-Perl-OSType-0:1.010-450.module_el8.3+boostrap1.noarch
+    - perl-Term-Size-Perl-0:0.031-6.module_el8.3+boostrap1.x86_64
+    - perl-Storable-1:3.15-450.module_el8.3+boostrap1.x86_64
+    - perl-Archive-Zip-0:1.67-1.module_el8.3+boostrap1.noarch
+    - perl-Unicode-Collate-debuginfo-0:1.27-450.module_el8.3+boostrap1.x86_64
+    - perl-MIME-Base64-debugsource-0:3.15-1001.module_el8.3+boostrap1.x86_64
+    - perl-version-debuginfo-7:0.99.24-441.module_el8.3+boostrap1.x86_64
+    - perl-threads-debuginfo-1:2.22-439.module_el8.3+boostrap1.x86_64
+    - perl-Time-HiRes-debuginfo-0:1.9760-439.module_el8.3+boostrap1.x86_64
+    - perl-Pod-Parser-0:1.63-1001.module_el8.3+boostrap1.noarch
+    - perl-Module-Load-1:0.34-450.module_el8.3+boostrap1.noarch
+    - perl-Pod-Parser-0:1.63-450.module_el8.3+boostrap1.noarch
+    - perl-Filter-debugsource-2:1.59-440.module_el8.3+boostrap1.x86_64
+    - perl-Socket-4:2.029-4.module_el8.3+boostrap1.x86_64
+    - perl-Test-Harness-1:3.42-450.module_el8.3+boostrap1.noarch
+    - perl-Compress-Bzip2-debuginfo-0:2.26-7.module_el8.3+boostrap1.x86_64
+    - perl-Text-ParseWords-0:3.30-396.module_el8.3+boostrap1.noarch
+    - perl-IO-Compress-0:2.093-1.module_el8.3+boostrap1.noarch
+    - perl-Compress-Raw-Zlib-debuginfo-0:2.093-1.module_el8.3+boostrap1.x86_64
+    - perl-Sys-Syslog-debuginfo-0:0.36-1.module_el8.3+boostrap1.x86_64
+    - perl-Capture-Tiny-0:0.48-6.module_el8.3+boostrap1.noarch
 ...
