@@ -13867,3 +13867,59 @@ data:
     - perl-Net-SSLeay-debuginfo-0:1.88-1.module+el8.3.0+6452+449fe210.x86_64
     - perl-IO-Tty-debugsource-0:1.12-11.module+el8.3.0+6452+449fe210.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-FCGI
+  stream: 0.78
+  version: '8030020200313080105'
+  context: 2fbcbb20
+  arch: x86_64
+  license:
+    content:
+    - OML
+    module:
+    - MIT
+  summary: FastCGI Perl bindings
+  description: 'This allows you to write a FastCGI client in the Perl language.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - 5.3
+      platform:
+      - el8.3.0
+    requires:
+      perl:
+      - 5.3
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-FCGI:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: The API.
+        ref: stream-0.78-rhel-8.3.0
+  api:
+    rpms:
+    - perl-FCGI
+  references:
+    community: https://metacpan.org/release/FCGI
+  profiles:
+    common:
+      description: FCGI distribution
+      rpms:
+      - perl-FCGI
+  artifacts:
+    rpms:
+    - perl-FCGI-debugsource-1:0.78-11.module+el8.2.0+4272+7e8d9407.x86_64
+    - perl-FCGI-1:0.78-11.module+el8.2.0+4272+7e8d9407.x86_64
+    - perl-FCGI-debuginfo-1:0.78-11.module+el8.2.0+4272+7e8d9407.x86_64
+...
