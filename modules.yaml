@@ -12197,3 +12197,1494 @@ data:
     - perl-String-ShellQuote-0:1.04-24.module+el8.1.0+2942+5e3df93c.noarch
     - perl-Module-CPANfile-0:1.1002-7.module+el8.1.0+2942+5e3df93c.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: perl
+  stream: '5.30'
+  version: '8030020200609055348'
+  context: 568f3a16
+  arch: x86_64
+  license:
+    content:
+    - (GPL+ or Artistic) and (GPLv2+ or Artistic) and BSD and Public Domain and UCD
+    - (GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT
+    - (GPL+ or Artistic) and Artistic 2.0 and UCD
+    - (GPL+ or Artistic) and BSD
+    - (GPL+ or Artistic) and CC0 and Public Domain
+    - (GPL+ or Artistic) and FSFAP
+    - (GPL+ or Artistic) and HSRL and MIT and UCD
+    - (GPL+ or Artistic) and MIT
+    - (GPL+ or Artistic) and Public Domain
+    - (GPL+ or Artistic) and UCD
+    - (GPL+ or Artistic) and Unicode
+    - (GPL+ or Artistic) and zlib
+    - ASL 2.0
+    - GPL+
+    - GPL+ or Artistic
+    - GPLv2+ or Artistic
+    - GPLv3+
+    - MIT
+    - TTWL
+    module:
+    - MIT
+  summary: Practical Extraction and Report Language
+  description: 'Perl is a high-level programming language with roots in C, sed, awk
+    and shell scripting. Perl is good at handling processes and files, and is especially
+    good at handling text. Perl''s hallmarks are practicality and efficiency. While
+    it is used to do a lot of different things, Perl''s most common applications are
+    system administration utilities and web programming.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl-bootstrap:
+      - 5.3
+      platform:
+      - el8.3.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      perl:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: The Perl interpreter.
+        ref: stream-5.30-rhel-8.3.0
+      perl-Algorithm-Diff:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-1.1903-rhel-8.3.0
+      perl-Archive-Tar:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-2.32-rhel-8.3.0
+      perl-Archive-Zip:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-1.67-rhel-8.3.0
+      perl-CPAN:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-2.26-rhel-8.3.0
+      perl-CPAN-DistnameInfo:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-0.12-rhel-8.3.0
+      perl-CPAN-Meta:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-2.150010-rhel-8.3.0
+      perl-CPAN-Meta-Requirements:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-2.140-rhel-8.3.0
+      perl-CPAN-Meta-YAML:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.018-rhel-8.3.0
+      perl-Carp:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.50-rhel-8.3.0
+      perl-Compress-Bzip2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-2.26-rhel-8.3.0
+      perl-Compress-Raw-Bzip2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-2.086-rhel-8.3.0
+      perl-Compress-Raw-Zlib:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-2.086-rhel-8.3.0
+      perl-Config-Perl-V:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.32-rhel-8.3.0
+      perl-DB_File:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.852-rhel-8.3.0
+      perl-Data-Dumper:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-2.173-rhel-8.3.0
+      perl-Data-OptList:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-0.110-rhel-8.3.0
+      perl-Data-Section:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-0.200007-rhel-8.3.0
+      perl-Devel-PPPort:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-3.56-rhel-8.3.0
+      perl-Devel-Size:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-0.83-rhel-8.3.0
+      perl-Digest:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.17-rhel-8.3.0
+      perl-Digest-MD5:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-2.55-rhel-8.3.0
+      perl-Digest-SHA:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-6.01-rhel-8.3.0
+      perl-Encode:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-3.01-rhel-8.3.0
+      perl-Env:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.04-rhel-8.3.0
+      perl-Exporter:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-5.73-rhel-8.3.0
+      perl-ExtUtils-CBuilder:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.280231-rhel-8.3.0
+      perl-ExtUtils-Install:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-2.14-rhel-8.3.0
+      perl-ExtUtils-MakeMaker:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-7.36-rhel-8.3.0
+      perl-ExtUtils-Manifest:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.72-rhel-8.3.0
+      perl-ExtUtils-ParseXS:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-3.40-rhel-8.3.0
+      perl-Fedora-VSP:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-0.001-rhel-8.3.0
+      perl-File-Fetch:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.56-rhel-8.3.0
+      perl-File-HomeDir:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-1.004-rhel-8.3.0
+      perl-File-Path:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-2.16-rhel-8.3.0
+      perl-File-Temp:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.230.900-rhel-8.3.0
+      perl-File-Which:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-1.23-rhel-8.3.0
+      perl-Filter:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.59-rhel-8.3.0
+      perl-Filter-Simple:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.95-rhel-8.3.0
+      perl-Getopt-Long:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-2.50-rhel-8.3.0
+      perl-HTTP-Tiny:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.076-rhel-8.3.0
+      perl-IO-Compress:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-2.093-rhel-8.3.0
+      perl-IO-Socket-IP:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.39-rhel-8.3.0
+      perl-IPC-Cmd:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.00-rhel-8.3.0
+      perl-IPC-SysV:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-2.07-rhel-8.3.0
+      perl-IPC-System-Simple:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-1.25-rhel-8.3.0
+      perl-Importer:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-0.025-rhel-8.3.0
+      perl-JSON-PP:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-4.04-rhel-8.3.0
+      perl-Locale-Maketext:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.29-rhel-8.3.0
+      perl-MIME-Base64:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-3.15-rhel-8.3.0
+      perl-MRO-Compat:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-0.13-rhel-8.3.0
+      perl-Math-BigInt:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.9998.18-rhel-8.3.0
+      perl-Math-BigInt-FastCalc:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.5009-rhel-8.3.0
+      perl-Math-BigRat:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.2613-rhel-8.3.0
+      perl-Module-Build:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-0.42.29-rhel-8.3.0
+      perl-Module-CoreList:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-5.20190620-rhel-8.3.0
+      perl-Module-Load:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.34-rhel-8.3.0
+      perl-Module-Load-Conditional:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.70-rhel-8.3.0
+      perl-Module-Metadata:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.000036-rhel-8.3.0
+      perl-Object-HashBase:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-0.008-rhel-8.3.0
+      perl-Package-Generator:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-1.106-rhel-8.3.0
+      perl-Params-Check:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.38-rhel-8.3.0
+      perl-Params-Util:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-1.07-rhel-8.3.0
+      perl-PathTools:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-3.78-rhel-8.3.0
+      perl-Perl-OSType:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.010-rhel-8.3.0
+      perl-PerlIO-via-QuotedPrint:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.08-rhel-8.3.0
+      perl-Pod-Checker:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.73-rhel-8.3.0
+      perl-Pod-Escapes:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.07-rhel-8.3.0
+      perl-Pod-Parser:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.63-rhel-8.3.0
+      perl-Pod-Perldoc:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-3.28.01-rhel-8.3.0
+      perl-Pod-Simple:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-3.40-rhel-8.3.0
+      perl-Pod-Usage:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.69-rhel-8.3.0
+      perl-Scalar-List-Utils:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.50-rhel-8.3.0
+      perl-Socket:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-2.029-rhel-8.3.0
+      perl-Software-License:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-0.103014-rhel-8.3.0
+      perl-Storable:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-3.15-rhel-8.3.0
+      perl-Sub-Exporter:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-0.987-rhel-8.3.0
+      perl-Sub-Install:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-0.928-rhel-8.3.0
+      perl-Sys-Syslog:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.36-rhel-8.3.0
+      perl-Term-ANSIColor:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-4.06-rhel-8.3.0
+      perl-Term-Cap:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.17-rhel-8.3.0
+      perl-Term-Table:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-0.015-rhel-8.3.0
+      perl-Test-Harness:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-3.41-rhel-8.3.0
+      perl-Test-Simple:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.302170-rhel-8.3.0
+      perl-Text-Balanced:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-2.03-rhel-8.3.0
+      perl-Text-Diff:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-1.45-rhel-8.3.0
+      perl-Text-Glob:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-0.11-rhel-8.3.0
+      perl-Text-ParseWords:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-3.30-rhel-8.3.0
+      perl-Text-Tabs+Wrap:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-2013.0523-rhel-8.3.0
+      perl-Text-Template:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-1.55-rhel-8.3.0
+      perl-Thread-Queue:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-3.12-rhel-8.3.0
+      perl-Time-HiRes:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.9760-rhel-8.3.0
+      perl-Time-Local:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.250-rhel-8.3.0
+      perl-URI:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-1.76-rhel-8.3.0
+      perl-Unicode-Collate:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.27-rhel-8.3.0
+      perl-Unicode-Normalize:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.26-rhel-8.3.0
+      perl-autodie:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-2.29-rhel-8.3.0
+      perl-bignum:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.51-rhel-8.3.0
+      perl-constant:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.33-rhel-8.3.0
+      perl-experimental:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.020-rhel-8.3.0
+      perl-generators:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A developmental support.
+        ref: stream-1.11-rhel-8.3.0
+      perl-inc-latest:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-0.500-rhel-8.3.0
+      perl-libnet:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-3.11-rhel-8.3.0
+      perl-local-lib:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-2.000024-rhel-8.3.0
+      perl-parent:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.236-rhel-8.3.0
+      perl-perlfaq:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-5.20190126-rhel-8.3.0
+      perl-podlators:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-4.12-rhel-8.3.0
+      perl-threads:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-2.22-rhel-8.3.0
+      perl-threads-shared:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-1.60-rhel-8.3.0
+      perl-version:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Core Perl API.
+        ref: stream-0.99.18-perl-5.30-rhel-8.3.0
+  api:
+    rpms:
+    - perl
+    - perl-Archive-Tar
+    - perl-Attribute-Handlers
+    - perl-CPAN
+    - perl-CPAN-Meta
+    - perl-CPAN-Meta-Requirements
+    - perl-CPAN-Meta-YAML
+    - perl-Carp
+    - perl-Compress-Raw-Bzip2
+    - perl-Compress-Raw-Zlib
+    - perl-Config-Perl-V
+    - perl-DB_File
+    - perl-Data-Dumper
+    - perl-Devel-PPPort
+    - perl-Devel-Peek
+    - perl-Devel-SelfStubber
+    - perl-Digest
+    - perl-Digest-MD5
+    - perl-Digest-SHA
+    - perl-Encode
+    - perl-Encode-devel
+    - perl-Env
+    - perl-Errno
+    - perl-Exporter
+    - perl-ExtUtils-CBuilder
+    - perl-ExtUtils-Command
+    - perl-ExtUtils-Embed
+    - perl-ExtUtils-Install
+    - perl-ExtUtils-MakeMaker
+    - perl-ExtUtils-Manifest
+    - perl-ExtUtils-Miniperl
+    - perl-ExtUtils-ParseXS
+    - perl-File-Fetch
+    - perl-File-Path
+    - perl-File-Temp
+    - perl-Filter
+    - perl-Filter-Simple
+    - perl-Getopt-Long
+    - perl-HTTP-Tiny
+    - perl-IO
+    - perl-IO-Compress
+    - perl-IO-Socket-IP
+    - perl-IO-Zlib
+    - perl-IPC-Cmd
+    - perl-IPC-SysV
+    - perl-JSON-PP
+    - perl-Locale-Maketext
+    - perl-Locale-Maketext-Simple
+    - perl-MIME-Base64
+    - perl-Math-BigInt
+    - perl-Math-BigInt-FastCalc
+    - perl-Math-BigRat
+    - perl-Math-Complex
+    - perl-Memoize
+    - perl-Module-CoreList
+    - perl-Module-CoreList-tools
+    - perl-Module-Load
+    - perl-Module-Load-Conditional
+    - perl-Module-Loaded
+    - perl-Module-Metadata
+    - perl-Net-Ping
+    - perl-Params-Check
+    - perl-PathTools
+    - perl-Perl-OSType
+    - perl-PerlIO-via-QuotedPrint
+    - perl-Pod-Checker
+    - perl-Pod-Escapes
+    - perl-Pod-Html
+    - perl-Pod-Parser
+    - perl-Pod-Perldoc
+    - perl-Pod-Simple
+    - perl-Pod-Usage
+    - perl-Scalar-List-Utils
+    - perl-SelfLoader
+    - perl-Socket
+    - perl-Storable
+    - perl-Sys-Syslog
+    - perl-Term-ANSIColor
+    - perl-Term-Cap
+    - perl-Test
+    - perl-Test-Harness
+    - perl-Test-Simple
+    - perl-Text-Balanced
+    - perl-Text-ParseWords
+    - perl-Text-Tabs+Wrap
+    - perl-Thread-Queue
+    - perl-Time-HiRes
+    - perl-Time-Local
+    - perl-Time-Piece
+    - perl-Unicode-Collate
+    - perl-Unicode-Normalize
+    - perl-autodie
+    - perl-bignum
+    - perl-constant
+    - perl-devel
+    - perl-encoding
+    - perl-experimental
+    - perl-generators
+    - perl-interpreter
+    - perl-libnet
+    - perl-libnetcfg
+    - perl-libs
+    - perl-macros
+    - perl-open
+    - perl-parent
+    - perl-perlfaq
+    - perl-podlators
+    - perl-tests
+    - perl-threads
+    - perl-threads-shared
+    - perl-utils
+    - perl-version
+  buildopts:
+    rpms:
+      macros: '%_with_perl_enables_groff 1
+
+        %_without_perl_enables_syslog_test 1
+
+        %_with_perl_enables_systemtap 1
+
+        %_without_perl_enables_tcsh 1
+
+        %_without_perl_Archive_Tar_enables_optional_test 1
+
+        %_without_perl_autodie_enables_optional_test 1
+
+        %_without_perl_B_Debug_enables_optional_test 1
+
+        %_without_perl_Compress_Bzip2_enables_optional_test 1
+
+        %_without_perl_Compress_Raw_Bzip2_enables_optional_test 1
+
+        %_without_perl_Compress_Raw_Zlib_enables_optional_test 1
+
+        %_without_perl_constant_enables_optional_test 1
+
+        %_without_perl_CPAN_enables_optional_test 1
+
+        %_without_perl_CPAN_Meta_Requirements_enables_optional_test 1
+
+        %_without_perl_CPAN_Meta_YAML_enables_extra_test 1
+
+        %_without_perl_Data_OptList_enables_extra_test 1
+
+        %_without_perl_Data_Section_enables_extra_test 1
+
+        %_without_perl_Data_Section_enables_optional_test 1
+
+        %_without_perl_DB_File_enables_optional_test 1
+
+        %_without_perl_Devel_PPPort_enables_optional_test 1
+
+        %_without_perl_Devel_Size_enables_optional_test 1
+
+        %_without_perl_Digest_SHA_enables_optional_test 1
+
+        %_without_perl_Exporter_enables_optional_test 1
+
+        %_without_perl_ExtUtils_Install_enables_optional_test 1
+
+        %_without_perl_Filter_enables_optional_test 1
+
+        %_without_perl_IO_Compress_enables_optional_test 1
+
+        %_without_perl_IO_Socket_IP_enables_optional_test 1
+
+        %_without_perl_IPC_Cmd_enables_IPC_Run 1
+
+        %_without_perl_IPC_System_Simple_enables_optional_test 1
+
+        %_without_perl_IPC_SysV_enables_optional_test 1
+
+        %_without_perl_JSON_PP_enables_optional_test 1
+
+        %_without_perl_libnet_enables_ssl 1
+
+        %_without_perl_Locale_Maketext_enables_optional_test 1
+
+        %_without_perl_LWP_MediaTypes_enables_mailcap 1
+
+        %_without_perl_Module_Build_enables_optional_test 1
+
+        %_without_perl_Module_CoreList_enables_optional_test 1
+
+        %_without_perl_Package_Generator_enables_extra_test 1
+
+        %_without_perl_Perl_OSType_enables_optional_test 1
+
+        %_without_perl_Pod_Parser_enables_optional_test 1
+
+        %_without_perl_Pod_Perldoc_enables_tk_test 1
+
+        %_without_perl_Pod_Simple_enables_optional_test 1
+
+        %_without_perl_Software_License_enables_extra_test 1
+
+        %_without_perl_Software_License_enables_optional_test 1
+
+        %_without_perl_Sub_Exporter_enables_extra_test 1
+
+        %_without_perl_Sub_Identify_enables_optional_test 1
+
+        %_without_perl_Sub_Install_enables_optional_test 1
+
+        %_without_perl_Sys_Syslog_enables_optional_test 1
+
+        %_without_perl_Term_Size_Any_enabels_optional_test 1
+
+        %_with_perl_Term_Table_enables_terminal 1
+
+        %_without_perl_Term_Table_enables_unicode 1
+
+        %_without_perl_Test_Harness_enables_optional_test 1
+
+        %_without_perl_Test_MockModule_enables_optional_test 1
+
+        %_without_perl_Test_NoWarnings_enables_stack_trace 1
+
+        %_without_perl_Test_Simple_enables_optional_test 1
+
+        %_without_perl_Test_Warnings_enables_optional_test 1
+
+        %_without_perl_Text_Template_enables_optional_test 1
+
+        %_without_perl_Try_Tiny_enables_optional_test 1
+
+        %_without_perl_URI_enables_Business_ISBN 1
+
+        %_without_perl_version_enables_optional_test 1
+
+        '
+  references:
+    community: https://www.perl.org/
+    documentation: https://www.perl.org/docs.html
+    tracker: https://bugzilla.redhat.com/buglist.cgi?classification=Red%20Hat&component=perl-5.30-module&product=Red%20Hat%20Enterprise%20Linux%208
+  profiles:
+    common:
+      description: Interpreter and all Perl modules bundled within upstream Perl.
+      rpms:
+      - perl
+    minimal:
+      description: Only the interpreter as a standalone executable.
+      rpms:
+      - perl-interpreter
+  artifacts:
+    rpms:
+    - perl-threads-shared-debuginfo-0:1.60-440.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Pod-Usage-4:1.69-396.module+el8.3.0+6718+7f269185.noarch
+    - perl-Compress-Bzip2-debuginfo-0:2.26-7.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Scalar-List-Utils-debugsource-3:1.53-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Text-Tabs+Wrap-0:2013.0523-396.module+el8.3.0+6718+7f269185.noarch
+    - perl-Digest-SHA-debuginfo-1:6.02-2.module+el8.3.0+6718+7f269185.x86_64
+    - perl-tests-4:5.30.1-451.module+el8.3.0+6961+31ca2e7a.x86_64
+    - perl-Storable-1:3.15-442.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Text-Template-0:1.58-1.module+el8.3.0+6718+7f269185.noarch
+    - perl-version-debuginfo-7:0.99.24-441.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Encode-debuginfo-4:3.01-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Math-BigInt-FastCalc-debugsource-0:0.500.900-1.module+el8.3.0+6718+7f269185.x86_64
+    - perl-PerlIO-via-QuotedPrint-0:0.08-396.module+el8.3.0+6718+7f269185.noarch
+    - perl-utils-0:5.30.1-451.module+el8.3.0+6961+31ca2e7a.noarch
+    - perl-Config-Perl-V-0:0.32-441.module+el8.3.0+6718+7f269185.noarch
+    - perl-Pod-Escapes-1:1.07-396.module+el8.3.0+6718+7f269185.noarch
+    - perl-bignum-0:0.51-439.module+el8.3.0+6718+7f269185.noarch
+    - perl-Compress-Bzip2-0:2.26-7.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Locale-Maketext-0:1.29-440.module+el8.3.0+6718+7f269185.noarch
+    - perl-Math-BigInt-FastCalc-0:0.500.900-1.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Compress-Raw-Zlib-debugsource-0:2.093-1.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Time-Piece-0:1.33-451.module+el8.3.0+6961+31ca2e7a.x86_64
+    - perl-homedir-0:2.000024-7.module+el8.3.0+6718+7f269185.noarch
+    - perl-Devel-Peek-0:1.28-451.module+el8.3.0+6961+31ca2e7a.x86_64
+    - perl-Scalar-List-Utils-3:1.53-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-IO-Compress-0:2.093-1.module+el8.3.0+6718+7f269185.noarch
+    - perl-ExtUtils-Install-0:2.14-440.module+el8.3.0+6718+7f269185.noarch
+    - perl-Pod-Simple-1:3.40-1.module+el8.3.0+6718+7f269185.noarch
+    - perl-Params-Util-debugsource-0:1.07-23.module+el8.3.0+6718+7f269185.x86_64
+    - perl-interpreter-debuginfo-4:5.30.1-451.module+el8.3.0+6961+31ca2e7a.x86_64
+    - perl-threads-shared-debugsource-0:1.60-440.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Digest-MD5-debuginfo-0:2.55-397.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Devel-PPPort-0:3.56-1.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Digest-MD5-0:2.55-397.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Unicode-Normalize-debuginfo-0:1.26-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-PathTools-debuginfo-0:3.78-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Pod-Parser-0:1.63-1001.module+el8.3.0+6718+7f269185.noarch
+    - perl-IO-Socket-IP-0:0.39-6.module+el8.3.0+6718+7f269185.noarch
+    - perl-Unicode-Normalize-0:1.26-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-File-Path-0:2.16-439.module+el8.3.0+6718+7f269185.noarch
+    - perl-Unicode-Collate-0:1.27-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Filter-Simple-0:0.95-439.module+el8.3.0+6718+7f269185.noarch
+    - perl-Object-HashBase-tools-0:0.008-1.module+el8.3.0+6718+7f269185.noarch
+    - perl-Term-Table-0:0.015-2.module+el8.3.0+6718+7f269185.noarch
+    - perl-perlfaq-0:5.20191102-1.module+el8.3.0+6718+7f269185.noarch
+    - perl-Data-Section-0:0.200007-8.module+el8.3.0+6718+7f269185.noarch
+    - perl-ExtUtils-Manifest-1:1.72-438.module+el8.3.0+6718+7f269185.noarch
+    - perl-Text-Glob-0:0.11-5.module+el8.3.0+6718+7f269185.noarch
+    - perl-ExtUtils-MakeMaker-2:7.42-1.module+el8.3.0+6718+7f269185.noarch
+    - perl-Encode-4:3.01-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-local-lib-0:2.000024-7.module+el8.3.0+6718+7f269185.noarch
+    - perl-MIME-Base64-debugsource-0:3.15-1001.module+el8.3.0+6718+7f269185.x86_64
+    - perl-IO-debuginfo-0:1.40-451.module+el8.3.0+6961+31ca2e7a.x86_64
+    - perl-CPAN-DistnameInfo-0:0.12-13.module+el8.3.0+6718+7f269185.noarch
+    - perl-Socket-debuginfo-4:2.029-4.module+el8.3.0+6718+7f269185.x86_64
+    - perl-JSON-PP-1:4.04-2.module+el8.3.0+6718+7f269185.noarch
+    - perl-Data-Dumper-debugsource-0:2.174-440.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Carp-0:1.50-439.module+el8.3.0+6718+7f269185.noarch
+    - perl-Memoize-0:1.03-451.module+el8.3.0+6961+31ca2e7a.noarch
+    - perl-Archive-Tar-0:2.32-440.module+el8.3.0+6718+7f269185.noarch
+    - perl-Math-BigRat-0:0.2614-2.module+el8.3.0+6718+7f269185.noarch
+    - perl-threads-shared-0:1.60-440.module+el8.3.0+6718+7f269185.x86_64
+    - perl-threads-1:2.22-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-MRO-Compat-0:0.13-5.module+el8.3.0+6718+7f269185.noarch
+    - perl-CPAN-Meta-0:2.150010-397.module+el8.3.0+6718+7f269185.noarch
+    - perl-Attribute-Handlers-0:1.01-451.module+el8.3.0+6961+31ca2e7a.noarch
+    - perl-PathTools-0:3.78-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Errno-0:1.30-451.module+el8.3.0+6961+31ca2e7a.x86_64
+    - perl-IPC-SysV-0:2.07-398.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Package-Generator-0:1.106-12.module+el8.3.0+6718+7f269185.noarch
+    - perl-Module-Build-2:0.42.29-4.module+el8.3.0+6718+7f269185.noarch
+    - perl-CPAN-Meta-YAML-0:0.018-1001.module+el8.3.0+6718+7f269185.noarch
+    - perl-debugsource-4:5.30.1-451.module+el8.3.0+6961+31ca2e7a.x86_64
+    - perl-libs-4:5.30.1-451.module+el8.3.0+6961+31ca2e7a.x86_64
+    - perl-Software-License-0:0.103014-5.module+el8.3.0+6718+7f269185.noarch
+    - perl-Net-Ping-0:2.71-451.module+el8.3.0+6961+31ca2e7a.noarch
+    - perl-Digest-SHA-1:6.02-2.module+el8.3.0+6718+7f269185.x86_64
+    - perl-PathTools-debugsource-0:3.78-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-IO-Zlib-1:1.10-451.module+el8.3.0+6961+31ca2e7a.noarch
+    - perl-Data-OptList-0:0.110-7.module+el8.3.0+6718+7f269185.noarch
+    - perl-Archive-Zip-0:1.67-1.module+el8.3.0+6718+7f269185.noarch
+    - perl-Digest-SHA-debugsource-1:6.02-2.module+el8.3.0+6718+7f269185.x86_64
+    - perl-File-Fetch-0:0.56-3.module+el8.3.0+6718+7f269185.noarch
+    - perl-Params-Check-1:0.38-396.module+el8.3.0+6718+7f269185.noarch
+    - perl-threads-debuginfo-1:2.22-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-autodie-0:2.29-1001.module+el8.3.0+6718+7f269185.noarch
+    - perl-MIME-Base64-0:3.15-1001.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Devel-SelfStubber-0:1.06-451.module+el8.3.0+6961+31ca2e7a.noarch
+    - perl-ExtUtils-Embed-0:1.35-451.module+el8.3.0+6961+31ca2e7a.noarch
+    - perl-Digest-0:1.17-396.module+el8.3.0+6718+7f269185.noarch
+    - perl-libnet-0:3.11-4.module+el8.3.0+6718+7f269185.noarch
+    - perl-Devel-Peek-debuginfo-0:1.28-451.module+el8.3.0+6961+31ca2e7a.x86_64
+    - perl-Devel-Size-debugsource-0:0.83-3.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Params-Util-debuginfo-0:1.07-23.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Test-Harness-1:3.42-2.module+el8.3.0+6718+7f269185.noarch
+    - perl-Pod-Perldoc-0:3.28.01-442.module+el8.3.0+6718+7f269185.noarch
+    - perl-Compress-Raw-Bzip2-debuginfo-0:2.093-1.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Devel-PPPort-debuginfo-0:3.56-1.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Unicode-Collate-debuginfo-0:1.27-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Module-Load-Conditional-0:0.70-1.module+el8.3.0+6718+7f269185.noarch
+    - perl-Pod-Checker-4:1.73-396.module+el8.3.0+6718+7f269185.noarch
+    - perl-DB_File-debugsource-0:1.852-4.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Object-HashBase-0:0.008-1.module+el8.3.0+6718+7f269185.noarch
+    - perl-Unicode-Collate-debugsource-0:1.27-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Fedora-VSP-0:0.001-10.module+el8.3.0+6718+7f269185.noarch
+    - perl-ExtUtils-ParseXS-1:3.40-439.module+el8.3.0+6718+7f269185.noarch
+    - perl-Math-BigInt-FastCalc-debuginfo-0:0.500.900-1.module+el8.3.0+6718+7f269185.x86_64
+    - perl-libnetcfg-4:5.30.1-451.module+el8.3.0+6961+31ca2e7a.noarch
+    - perl-threads-debugsource-1:2.22-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Socket-debugsource-4:2.029-4.module+el8.3.0+6718+7f269185.x86_64
+    - perl-DB_File-debuginfo-0:1.852-4.module+el8.3.0+6718+7f269185.x86_64
+    - perl-constant-0:1.33-1001.module+el8.3.0+6718+7f269185.noarch
+    - perl-open-0:1.11-451.module+el8.3.0+6961+31ca2e7a.noarch
+    - perl-Data-Dumper-0:2.174-440.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Env-0:1.04-396.module+el8.3.0+6718+7f269185.noarch
+    - perl-File-HomeDir-0:1.004-6.module+el8.3.0+6718+7f269185.noarch
+    - perl-Term-ANSIColor-0:4.06-397.module+el8.3.0+6718+7f269185.noarch
+    - perl-Filter-debugsource-2:1.59-440.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Term-Cap-0:1.17-396.module+el8.3.0+6718+7f269185.noarch
+    - perl-Time-HiRes-0:1.9760-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Storable-debuginfo-1:3.15-442.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Sub-Install-0:0.928-15.module+el8.3.0+6718+7f269185.noarch
+    - perl-Text-ParseWords-0:3.30-396.module+el8.3.0+6718+7f269185.noarch
+    - perl-Compress-Bzip2-debugsource-0:2.26-7.module+el8.3.0+6718+7f269185.x86_64
+    - perl-CPAN-Meta-Requirements-0:2.140-397.module+el8.3.0+6718+7f269185.noarch
+    - perl-Module-CoreList-1:5.20191220-1.module+el8.3.0+6718+7f269185.noarch
+    - perl-Params-Util-0:1.07-23.module+el8.3.0+6718+7f269185.x86_64
+    - perl-ExtUtils-Command-2:7.42-1.module+el8.3.0+6718+7f269185.noarch
+    - perl-IO-0:1.40-451.module+el8.3.0+6961+31ca2e7a.x86_64
+    - perl-ExtUtils-MM-Utils-2:7.42-1.module+el8.3.0+6718+7f269185.noarch
+    - perl-Time-HiRes-debugsource-0:1.9760-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Text-Balanced-0:2.03-396.module+el8.3.0+6718+7f269185.noarch
+    - perl-Test-0:1.31-451.module+el8.3.0+6961+31ca2e7a.noarch
+    - perl-IPC-Cmd-2:1.04-2.module+el8.3.0+6718+7f269185.noarch
+    - perl-ExtUtils-CBuilder-1:0.280231-439.module+el8.3.0+6718+7f269185.noarch
+    - perl-Text-Diff-0:1.45-7.module+el8.3.0+6718+7f269185.noarch
+    - perl-Time-Piece-debuginfo-0:1.33-451.module+el8.3.0+6961+31ca2e7a.x86_64
+    - perl-4:5.30.1-451.module+el8.3.0+6961+31ca2e7a.x86_64
+    - perl-File-Temp-1:0.230.900-439.module+el8.3.0+6718+7f269185.noarch
+    - perl-devel-4:5.30.1-451.module+el8.3.0+6961+31ca2e7a.x86_64
+    - perl-IPC-System-Simple-0:1.25-18.module+el8.3.0+6718+7f269185.noarch
+    - perl-IPC-SysV-debugsource-0:2.07-398.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Compress-Raw-Bzip2-0:2.093-1.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Exporter-0:5.73-440.module+el8.3.0+6718+7f269185.noarch
+    - perl-Scalar-List-Utils-debuginfo-3:1.53-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Sys-Syslog-debugsource-0:0.36-1.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Data-Dumper-debuginfo-0:2.174-440.module+el8.3.0+6718+7f269185.x86_64
+    - perl-macros-4:5.30.1-451.module+el8.3.0+6961+31ca2e7a.x86_64
+    - perl-Time-HiRes-debuginfo-0:1.9760-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Module-Metadata-0:1.000037-1.module+el8.3.0+6718+7f269185.noarch
+    - perl-debuginfo-4:5.30.1-451.module+el8.3.0+6961+31ca2e7a.x86_64
+    - perl-Sub-Exporter-0:0.987-16.module+el8.3.0+6718+7f269185.noarch
+    - perl-Unicode-Normalize-debugsource-0:1.26-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-DB_File-0:1.852-4.module+el8.3.0+6718+7f269185.x86_64
+    - perl-IPC-SysV-debuginfo-0:2.07-398.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Module-Loaded-1:0.08-451.module+el8.3.0+6961+31ca2e7a.noarch
+    - perl-Encode-devel-4:3.01-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-CPAN-0:2.27-2.module+el8.3.0+6718+7f269185.noarch
+    - perl-Digest-MD5-debugsource-0:2.55-397.module+el8.3.0+6718+7f269185.x86_64
+    - perl-interpreter-4:5.30.1-451.module+el8.3.0+6961+31ca2e7a.x86_64
+    - perl-version-7:0.99.24-441.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Storable-debugsource-1:3.15-442.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Compress-Raw-Zlib-debuginfo-0:2.093-1.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Filter-2:1.59-440.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Module-Load-1:0.34-439.module+el8.3.0+6718+7f269185.noarch
+    - perl-Test-Simple-3:1.302170-1.module+el8.3.0+6718+7f269185.noarch
+    - perl-Math-Complex-0:1.59-451.module+el8.3.0+6961+31ca2e7a.noarch
+    - perl-Sys-Syslog-debuginfo-0:0.36-1.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Compress-Raw-Bzip2-debugsource-0:2.093-1.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Algorithm-Diff-0:1.1903-10.module+el8.3.0+6718+7f269185.noarch
+    - perl-SelfLoader-0:1.25-451.module+el8.3.0+6961+31ca2e7a.noarch
+    - perl-File-Which-0:1.23-4.module+el8.3.0+6718+7f269185.noarch
+    - perl-Encode-debugsource-4:3.01-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Devel-Size-debuginfo-0:0.83-3.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Module-CoreList-tools-1:5.20191220-1.module+el8.3.0+6718+7f269185.noarch
+    - perl-Devel-Size-0:0.83-3.module+el8.3.0+6718+7f269185.x86_64
+    - perl-MIME-Base64-debuginfo-0:3.15-1001.module+el8.3.0+6718+7f269185.x86_64
+    - perl-parent-1:0.237-2.module+el8.3.0+6718+7f269185.noarch
+    - perl-Math-BigInt-1:1.9998.18-1.module+el8.3.0+6718+7f269185.noarch
+    - perl-HTTP-Tiny-0:0.076-439.module+el8.3.0+6718+7f269185.noarch
+    - perl-encoding-4:2.22-439.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Thread-Queue-0:3.13-2.module+el8.3.0+6718+7f269185.noarch
+    - perl-Perl-OSType-0:1.010-397.module+el8.3.0+6718+7f269185.noarch
+    - perl-Filter-debuginfo-2:1.59-440.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Getopt-Long-1:2.51-1.module+el8.3.0+6718+7f269185.noarch
+    - perl-Compress-Raw-Zlib-0:2.093-1.module+el8.3.0+6718+7f269185.x86_64
+    - perl-inc-latest-2:0.500-10.module+el8.3.0+6718+7f269185.noarch
+    - perl-Pod-Html-0:1.24-451.module+el8.3.0+6961+31ca2e7a.noarch
+    - perl-libs-debuginfo-4:5.30.1-451.module+el8.3.0+6961+31ca2e7a.x86_64
+    - perl-Sys-Syslog-0:0.36-1.module+el8.3.0+6718+7f269185.x86_64
+    - perl-experimental-0:0.020-439.module+el8.3.0+6718+7f269185.noarch
+    - perl-Time-Local-1:1.280-2.module+el8.3.0+6718+7f269185.noarch
+    - perl-podlators-1:4.12-2.module+el8.3.0+6718+7f269185.noarch
+    - perl-generators-0:1.11-4.module+el8.3.0+6718+7f269185.noarch
+    - perl-ExtUtils-Miniperl-0:1.09-451.module+el8.3.0+6961+31ca2e7a.noarch
+    - perl-Devel-PPPort-debugsource-0:3.56-1.module+el8.3.0+6718+7f269185.x86_64
+    - perl-Locale-Maketext-Simple-1:0.21-451.module+el8.3.0+6961+31ca2e7a.noarch
+    - perl-Importer-0:0.025-6.module+el8.3.0+6718+7f269185.noarch
+    - perl-URI-0:1.76-5.module+el8.3.0+6718+7f269185.noarch
+    - perl-Socket-4:2.029-4.module+el8.3.0+6718+7f269185.x86_64
+    - perl-version-debugsource-7:0.99.24-441.module+el8.3.0+6718+7f269185.x86_64
+...
