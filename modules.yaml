@@ -240,3 +240,779 @@ data:
     - python-virtualenv-doc-0:15.1.0-19.module+el8.1.0+3514+14e79d98.noarch
     - python3-virtualenv-0:15.1.0-19.module+el8.1.0+3514+14e79d98.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: perl
+  stream: 5.26
+  version: 820181219174508
+  context: 9edba152
+  arch: i686
+  summary: Practical Extraction and Report Language
+  description: >
+    Perl is a high-level programming language with roots in C, sed, awk and shell
+    scripting. Perl is good at handling processes and files, and is especially good
+    at handling text. Perl's hallmarks are practicality and efficiency. While it is
+    used to do a lot of different things, Perl's most common applications are system
+    administration utilities and web programming.
+  license:
+    module:
+    - MIT
+  xmd:
+    mbs:
+      mse: TRUE
+      scmurl: git://pkgs.devel.redhat.com/modules/perl?#e712dc415d7660fc59a5b68c48ddcdad76c4d575
+      commit: e712dc415d7660fc59a5b68c48ddcdad76c4d575
+      buildrequires:
+        platform:
+          stream_collision_modules: 
+          stream: el8
+          ref: virtual
+          filtered_rpms: []
+          ursine_rpms: 
+          koji_tag: module-rhel-8.0.0-build
+          version: 2
+          context: 00000000
+  dependencies:
+  - buildrequires:
+      platform: el8
+    requires:
+      platform: el8
+  references:
+    community: https://docs.pagure.org/modularity/
+  profiles:
+    common:
+      description: Interpreter and all Perl modules bundled within upstream Perl.
+      rpms:
+      - perl
+    minimal:
+      description: Only the interpreter as a standalone executable.
+      rpms:
+      - perl-interpreter
+  api:
+    rpms:
+    - perl
+    - perl-Archive-Tar
+    - perl-Attribute-Handlers
+    - perl-B-Debug
+    - perl-CPAN
+    - perl-CPAN-Meta
+    - perl-CPAN-Meta-Requirements
+    - perl-CPAN-Meta-YAML
+    - perl-Carp
+    - perl-Compress-Raw-Bzip2
+    - perl-Compress-Raw-Zlib
+    - perl-Config-Perl-V
+    - perl-DB_File
+    - perl-Data-Dumper
+    - perl-Devel-PPPort
+    - perl-Devel-Peek
+    - perl-Devel-SelfStubber
+    - perl-Digest
+    - perl-Digest-MD5
+    - perl-Digest-SHA
+    - perl-Encode
+    - perl-Encode-devel
+    - perl-Env
+    - perl-Errno
+    - perl-Exporter
+    - perl-ExtUtils-CBuilder
+    - perl-ExtUtils-Command
+    - perl-ExtUtils-Embed
+    - perl-ExtUtils-Install
+    - perl-ExtUtils-MM-Utils
+    - perl-ExtUtils-MakeMaker
+    - perl-ExtUtils-Manifest
+    - perl-ExtUtils-Miniperl
+    - perl-ExtUtils-ParseXS
+    - perl-File-Fetch
+    - perl-File-Path
+    - perl-File-Temp
+    - perl-Filter
+    - perl-Filter-Simple
+    - perl-Getopt-Long
+    - perl-HTTP-Tiny
+    - perl-IO
+    - perl-IO-Compress
+    - perl-IO-Socket-IP
+    - perl-IO-Zlib
+    - perl-IPC-Cmd
+    - perl-IPC-SysV
+    - perl-JSON-PP
+    - perl-Locale-Codes
+    - perl-Locale-Maketext
+    - perl-Locale-Maketext-Simple
+    - perl-MIME-Base64
+    - perl-Math-BigInt
+    - perl-Math-BigInt-FastCalc
+    - perl-Math-BigRat
+    - perl-Math-Complex
+    - perl-Memoize
+    - perl-Module-CoreList
+    - perl-Module-CoreList-tools
+    - perl-Module-Load
+    - perl-Module-Load-Conditional
+    - perl-Module-Loaded
+    - perl-Module-Metadata
+    - perl-Net-Ping
+    - perl-Params-Check
+    - perl-PathTools
+    - perl-Perl-OSType
+    - perl-PerlIO-via-QuotedPrint
+    - perl-Pod-Checker
+    - perl-Pod-Escapes
+    - perl-Pod-Html
+    - perl-Pod-Parser
+    - perl-Pod-Perldoc
+    - perl-Pod-Simple
+    - perl-Pod-Usage
+    - perl-Scalar-List-Utils
+    - perl-SelfLoader
+    - perl-Socket
+    - perl-Storable
+    - perl-Sys-Syslog
+    - perl-Term-ANSIColor
+    - perl-Term-Cap
+    - perl-Test
+    - perl-Test-Harness
+    - perl-Test-Simple
+    - perl-Text-Balanced
+    - perl-Text-ParseWords
+    - perl-Text-Tabs+Wrap
+    - perl-Thread-Queue
+    - perl-Time-HiRes
+    - perl-Time-Local
+    - perl-Time-Piece
+    - perl-Unicode-Collate
+    - perl-Unicode-Normalize
+    - perl-autodie
+    - perl-bignum
+    - perl-constant
+    - perl-devel
+    - perl-encoding
+    - perl-experimental
+    - perl-generators
+    - perl-interpreter
+    - perl-libnet
+    - perl-libnetcfg
+    - perl-libs
+    - perl-macros
+    - perl-open
+    - perl-parent
+    - perl-perlfaq
+    - perl-podlators
+    - perl-tests
+    - perl-threads
+    - perl-threads-shared
+    - perl-utils
+    - perl-version
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-IO-Socket-SSL
+  stream: 2.066
+  version: '8030020200430120526'
+  context: 1e4bbb35
+  arch: i686
+  license:
+    content:
+    - (GPL+ or Artistic) and MPLv2.0
+    - Artistic 2.0
+    module:
+    - MIT
+  summary: Perl library for transparent TLS
+  description: 'IO::Socket::SSL is a drop-in replacement for IO::Socket::IP that uses
+    TLS to encrypt data before it is transferred to a remote server or client. IO::Socket::SSL
+    supports all the extra features that one needs to write a full-featured TLS client
+    or server application like multiple TLS contexts, cipher selection, certificate
+    verification, and TLS version selection. Net::SSLeay offers some high level convenience
+    functions for accessing web pages on TLS servers, a sslcat() function for writing
+    your own clients, and finally access to the API of OpenSSL library so you can
+    write servers or clients for more complicated applications.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - 5.26
+      platform:
+      - el8
+    requires:
+      perl:
+      - 5.26
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-Devel-StackTrace:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A build dependency.
+        ref: stream-2.03-rhel-8.3.0
+      perl-IO-Socket-INET6:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: A build dependency.
+        ref: stream-2.72-rhel-8.3.0
+      perl-IO-Socket-SSL:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 3
+        rationale: The API.
+        ref: stream-2.066-rhel-8.3.0
+      perl-IO-Tty:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A build dependency.
+        ref: stream-1.12-rhel-8.3.0
+      perl-IPC-Run:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: A build dependency.
+        ref: stream-0.96-rhel-8.3.0
+      perl-Net-IDN-Encode:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 2
+        rationale: A build dependency.
+        ref: stream-2.400-rhel-8.3.0
+      perl-Net-LibIDN:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A build dependency.
+        ref: stream-0.12-rhel-8.3.0
+      perl-Net-SSLeay:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: The API.
+        ref: stream-1.88-rhel-8.3.0
+      perl-Socket6:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A build dependency.
+        ref: stream-0.28-rhel-8.3.0
+      perl-Test-NoWarnings:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: A build dependency.
+        ref: stream-1.04-rhel-8.3.0
+  api:
+    rpms:
+    - perl-IO-Socket-SSL
+    - perl-Net-SSLeay
+  references:
+    community: https://metacpan.org/release/IO-Socket-SSL
+  profiles:
+    common:
+      description: IO::Socket::SSL and Net::SSLeay
+      rpms:
+      - perl-IO-Socket-SSL
+      - perl-Net-SSLeay
+  filter:
+    rpms:
+    - perl-Devel-StackTrace
+    - perl-IO-Socket-INET6
+    - perl-IO-Tty
+    - perl-IPC-Run
+    - perl-Net-IDN-Encode
+    - perl-Net-LibIDN
+    - perl-Socket6
+    - perl-Test-NoWarnings
+  artifacts:
+    rpms:
+    - perl-Socket6-0:0.28-6.module+el8.3.0+6446+594cad75.i686
+    - perl-Net-SSLeay-0:1.88-1.module+el8.3.0+6446+594cad75.i686
+    - perl-Net-LibIDN-0:0.12-35.module+el8.3.0+6446+594cad75.i686
+    - perl-IO-Tty-0:1.12-11.module+el8.3.0+6446+594cad75.i686
+    - perl-Devel-StackTrace-1:2.03-2.module+el8.3.0+6446+594cad75.noarch
+    - perl-Test-NoWarnings-0:1.04-15.module+el8.3.0+6446+594cad75.noarch
+    - perl-IPC-Run-0:0.99-1.module+el8.3.0+6446+594cad75.noarch
+    - perl-IO-Socket-INET6-0:2.72-12.module+el8.3.0+6446+594cad75.noarch
+    - perl-Net-IDN-Encode-0:2.500-2.module+el8.3.0+6446+594cad75.i686
+    - perl-IO-Socket-SSL-0:2.066-4.module+el8.3.0+6446+594cad75.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-libwww-perl
+  stream: 6.34
+  version: '8030020200428102957'
+  context: b967a9a2
+  arch: i686
+  license:
+    content:
+    - (GPL+ or Artistic) and Public Domain
+    - GPL+ or Artistic
+    - MIT
+    - MPLv2.0
+    module:
+    - MIT
+  summary: A Perl interface to the World-Wide Web
+  description: 'The libwww-perl collection is a set of Perl modules which provide
+    a simple and consistent application programming interface to the World-Wide Web.
+    The main focus of the library is to provide classes and functions that enable
+    you to write WWW clients. The library also contains modules that are of more general
+    use and even classes that help you implement simple HTTP servers. LWP::Protocol::https
+    adds a support for an HTTPS protocol.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - 5.26
+      perl-IO-Socket-SSL:
+      - 2.066
+      platform:
+      - el8.3.0
+    requires:
+      perl:
+      - 5.26
+      perl-IO-Socket-SSL:
+      - 2.066
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-Data-Dump:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time depenedency.
+        ref: stream-1.23-rhel-8.3.0
+      perl-Digest-HMAC:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: A run-time dependency.
+        ref: stream-1.03-rhel-8.3.0
+      perl-Digest-SHA1:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A build dependency.
+        ref: stream-2.13-rhel-8.3.0
+      perl-Encode-Locale:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-1.05-rhel-8.3.0
+      perl-File-Listing:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: A run-time dependency.
+        ref: stream-6.04-rhel-8.3.0
+      perl-HTML-Parser:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 2
+        rationale: A run-time dependency.
+        ref: stream-3.72-rhel-8.3.0
+      perl-HTML-Tagset:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-3.20-rhel-8.3.0
+      perl-HTTP-Cookies:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 2
+        rationale: A run-time dependency.
+        ref: stream-6.04-rhel-8.3.0
+      perl-HTTP-Daemon:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 2
+        rationale: A build dependency.
+        ref: stream-6.01-rhel-8.3.0
+      perl-HTTP-Date:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-6.02-rhel-8.3.0
+      perl-HTTP-Message:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: A run-time dependency.
+        ref: stream-6.15-rhel-8.3.0
+      perl-HTTP-Negotiate:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 2
+        rationale: A run-time dependency.
+        ref: stream-6.01-rhel-8.3.0
+      perl-IO-HTML:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-1.001-rhel-8.3.0
+      perl-LWP-MediaTypes:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-6.02-rhel-8.3.0
+      perl-LWP-Protocol-https:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 4
+        rationale: The API.
+        ref: stream-6.07-rhel-8.3.0
+      perl-Mozilla-CA:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-20160104-rhel-8.3.0
+      perl-NTLM:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 2
+        rationale: A run-time dependency.
+        ref: stream-1.09-rhel-8.3.0
+      perl-Net-HTTP:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-6.17-rhel-8.3.0
+      perl-Test-Fatal:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: A build dependency.
+        ref: stream-0.014-rhel-8.3.0
+      perl-Test-Pod:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A build dependency.
+        ref: stream-1.51-rhel-8.3.0
+      perl-Test-RequiresInternet:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A build dependency.
+        ref: stream-0.05-rhel-8.3.0
+      perl-TimeDate:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-2.30-rhel-8.3.0
+      perl-Try-Tiny:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-0.30-rhel-8.3.0
+      perl-WWW-RobotRules:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-6.02-rhel-8.3.0
+      perl-libwww-perl:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 3
+        rationale: The API.
+        ref: stream-6.34-rhel-8.3.0
+  api:
+    rpms:
+    - perl-LWP-Protocol-https
+    - perl-libwww-perl
+  buildopts:
+    rpms:
+      macros: '%_without_perl_HTML_Tagset_enables_optional_test 1
+
+        %_without_perl_Test_Fatal_enables_extra_test 1
+
+        %_without_perl_Test_Fatal_enables_optional_test 1
+
+        '
+  references:
+    community: https://metacpan.org/release/libwww-perl
+  profiles:
+    common:
+      description: LWP with HTTPS support
+      rpms:
+      - perl-LWP-Protocol-https
+      - perl-libwww-perl
+  filter:
+    rpms:
+    - perl-Digest-SHA1
+    - perl-HTTP-Daemon
+    - perl-Test-Fatal
+    - perl-Test-Pod
+    - perl-Test-RequiresInternet
+  artifacts:
+    rpms:
+    - perl-WWW-RobotRules-0:6.02-18.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-Try-Tiny-0:0.30-7.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-TimeDate-1:2.30-15.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-Test-RequiresInternet-0:0.05-15.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-Test-Pod-0:1.51-8.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-Net-HTTP-0:6.17-2.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-Mozilla-CA-0:20160104-7.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-LWP-MediaTypes-0:6.02-15.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-IO-HTML-0:1.001-11.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-HTTP-Date-0:6.02-19.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-HTML-Tagset-0:3.20-34.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-Encode-Locale-0:1.05-10.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-Digest-SHA1-0:2.13-23.module+el8.3.0+6498+9eecfe51.i686
+    - perl-Digest-SHA1-debugsource-0:2.13-23.module+el8.3.0+6498+9eecfe51.i686
+    - perl-Digest-SHA1-debuginfo-0:2.13-23.module+el8.3.0+6498+9eecfe51.i686
+    - perl-Data-Dump-0:1.23-7.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-Test-Fatal-0:0.014-9.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-HTTP-Message-0:6.18-1.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-File-Listing-0:6.04-17.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-Digest-HMAC-0:1.03-17.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-NTLM-0:1.09-17.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-HTTP-Negotiate-0:6.01-19.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-HTTP-Daemon-0:6.01-23.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-HTTP-Cookies-0:6.04-2.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-HTML-Parser-0:3.72-15.module+el8.3.0+6498+9eecfe51.i686
+    - perl-HTML-Parser-debugsource-0:3.72-15.module+el8.3.0+6498+9eecfe51.i686
+    - perl-HTML-Parser-debuginfo-0:3.72-15.module+el8.3.0+6498+9eecfe51.i686
+    - perl-libwww-perl-0:6.34-1.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-LWP-Protocol-https-0:6.07-4.module+el8.3.0+6498+9eecfe51.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: rust-toolset
+  stream: rhel8
+  version: '8030120201026160241'
+  context: bed47151
+  arch: i686
+  license:
+    content:
+    - (ASL 2.0 or MIT) and (BSD and MIT)
+    - ASL 2.0 or MIT
+    module:
+    - MIT
+  summary: Rust
+  description: Rust Toolset
+  dependencies:
+  - buildrequires:
+      llvm-toolset:
+      - rhel8
+      platform:
+      - el8.3.1
+      rust-toolset:
+      - rhel8
+    requires:
+      llvm-toolset:
+      - rhel8
+      platform:
+      - el8
+  components:
+    rpms:
+      rust:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Rust compiler and tools
+        ref: stream-rhel-8-rhel-8.3.1
+      rust-toolset:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Meta package for rust-toolset.
+        ref: stream-rhel-8-rhel-8.3.1
+  api:
+    rpms:
+    - cargo
+    - cargo-doc
+    - clippy
+    - rls
+    - rust
+    - rust-analysis
+    - rust-doc
+    - rust-gdb
+    - rust-lldb
+    - rust-src
+    - rust-std-static
+    - rust-toolset
+    - rustfmt
+  profiles:
+    common:
+      rpms:
+      - rust-toolset
+  artifacts:
+    rpms:
+    - rust-0:1.47.0-1.module_el8.3.0+702+c3b74dac.i686
+    - cargo-0:1.47.0-1.module_el8.3.0+702+c3b74dac.i686
+    - rustfmt-0:1.47.0-1.module_el8.3.0+702+c3b74dac.i686
+    - rust-lldb-0:1.47.0-1.module_el8.3.0+702+c3b74dac.noarch
+    - rust-gdb-0:1.47.0-1.module_el8.3.0+702+c3b74dac.noarch
+    - rls-0:1.47.0-1.module_el8.3.0+702+c3b74dac.i686
+    - clippy-0:1.47.0-1.module_el8.3.0+702+c3b74dac.i686
+    - rust-std-static-0:1.47.0-1.module_el8.3.0+702+c3b74dac.i686
+    - rust-toolset-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.i686
+    - rust-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.i686
+    - rust-std-static-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.i686
+    - rust-debugger-common-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.noarch
+    - rust-gdb-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.noarch
+    - rust-lldb-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.noarch
+    - rust-doc-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.i686
+    - cargo-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.i686
+    - cargo-doc-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.noarch
+    - rustfmt-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.i686
+    - rls-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.i686
+    - clippy-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.i686
+    - rust-src-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.noarch
+    - rust-analysis-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.i686
+    - rust-debugsource-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.i686
+    - rust-debuginfo-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.i686
+    - cargo-debuginfo-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.i686
+    - rustfmt-debuginfo-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.i686
+    - rls-debuginfo-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.i686
+    - clippy-debuginfo-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.i686
+...
