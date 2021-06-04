@@ -14123,3 +14123,84 @@ data:
     - perl-DBD-MySQL-debuginfo-0:4.046-3.module+el8.2.0+4259+1ed9a454.x86_64
     - perl-DBD-MySQL-debugsource-0:4.046-3.module+el8.2.0+4259+1ed9a454.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-DBD-SQLite
+  stream: '1.58'
+  version: '8030020200313075906'
+  context: caf6787c
+  arch: x86_64
+  license:
+    content:
+    - (GPL+ or Artistic) and Public Domain
+    module:
+    - MIT
+  summary: SQLite DBI driver
+  description: 'SQLite is a public domain RDBMS database engine that you can find
+    at http://www.hwaci.com/sw/sqlite/. This Perl module provides a SQLite RDBMS module
+    that uses the system SQLite libraries.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.30'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8.3.0
+    requires:
+      perl:
+      - '5.30'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-DBD-SQLite:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: The API.
+        ref: stream-1.58-rhel-8.3.0
+      perl-Test-NoWarnings:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A build-time dependency.
+        ref: stream-1.04-rhel-8.3.0
+  api:
+    rpms:
+    - perl-DBD-SQLite
+  buildopts:
+    rpms:
+      macros: '%_without_perl_Test_NoWarnings_enables_stack_trace 1
+
+        '
+  references:
+    community: http://search.cpan.org/dist/DBD-SQLite/
+  profiles:
+    common:
+      description: DBD-SQLite distribution
+      rpms:
+      - perl-DBD-SQLite
+  filter:
+    rpms:
+    - perl-Test-NoWarnings
+  artifacts:
+    rpms:
+    - perl-Test-NoWarnings-0:1.04-15.module+el8.2.0+4265+ff794501.noarch
+    - perl-DBD-SQLite-debuginfo-0:1.58-2.module+el8.2.0+4265+ff794501.x86_64
+    - perl-DBD-SQLite-0:1.58-2.module+el8.2.0+4265+ff794501.x86_64
+    - perl-DBD-SQLite-debugsource-0:1.58-2.module+el8.2.0+4265+ff794501.x86_64
+...
