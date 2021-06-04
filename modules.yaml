@@ -1016,3 +1016,227 @@ data:
     - rls-debuginfo-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.i686
     - clippy-debuginfo-0:1.47.0-1.module+el8.3.1+8546+07bf6eb2.i686
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: gimp
+  stream: '2.8'
+  version: '820181213135540'
+  context: 77fc8825
+  arch: i686
+  license:
+    content:
+    - GPLv3+ and GPLv3
+    - LGPLv2+
+    - LGPLv2+, MIT
+    - LGPLv3+
+    - MPLv1.1 or LGPLv2
+    module:
+    - MIT
+  summary: gimp module
+  description: 'GIMP (GNU Image Manipulation Program) is a powerful image composition
+    and
+
+    editing program, which can be extremely useful for creating logos and other
+
+    graphics for webpages. '
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+      python27:
+      - 2.7
+    requires:
+      platform:
+      - el8
+      python27:
+      - 2.7
+  components:
+    rpms:
+      gimp:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/gimp
+        rationale: GIMP Module.
+        ref: stream-2.8
+        repository: git://pkgs.devel.redhat.com/rpms/gimp
+      pygobject2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/pygobject2
+        rationale: GIMP Module dependency
+        ref: stream-2.28.7
+        repository: git://pkgs.devel.redhat.com/rpms/pygobject2
+      pygtk2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 5
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/pygtk2
+        rationale: GIMP Module dependency
+        ref: stream-2.24
+        repository: git://pkgs.devel.redhat.com/rpms/pygtk2
+      python2-pycairo:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 3
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/python2-pycairo
+        rationale: Python2 binding required by pygtk2
+        ref: stream-python2
+        repository: git://pkgs.devel.redhat.com/rpms/python2-pycairo
+  api:
+    rpms:
+    - gimp
+    - gimp-devel
+    - gimp-devel-tools
+    - gimp-libs
+  references:
+    community: https://www.gimp.org/develop/
+    documentation: https://www.gimp.org/docs/
+    tracker: https://www.gimp.org/bugs/
+  profiles:
+    common:
+      rpms:
+      - gimp
+    devel:
+      rpms:
+      - gimp-devel
+      - gimp-devel-tools
+  artifacts:
+    rpms:
+    - pygobject2-0:2.28.7-4.module+el8+2760+3d7d61b2.i686
+    - pygobject2-codegen-0:2.28.7-4.module+el8+2760+3d7d61b2.i686
+    - pygobject2-devel-0:2.28.7-4.module+el8+2760+3d7d61b2.i686
+    - pygobject2-doc-0:2.28.7-4.module+el8+2760+3d7d61b2.i686
+    - pygobject2-debugsource-0:2.28.7-4.module+el8+2760+3d7d61b2.i686
+    - pygobject2-debuginfo-0:2.28.7-4.module+el8+2760+3d7d61b2.i686
+    - python2-cairo-0:1.16.3-6.module+el8+2760+3d7d61b2.i686
+    - python2-cairo-devel-0:1.16.3-6.module+el8+2760+3d7d61b2.i686
+    - python2-pycairo-debugsource-0:1.16.3-6.module+el8+2760+3d7d61b2.i686
+    - python2-cairo-debuginfo-0:1.16.3-6.module+el8+2760+3d7d61b2.i686
+    - pygtk2-0:2.24.0-24.module+el8+2760+3d7d61b2.i686
+    - pygtk2-codegen-0:2.24.0-24.module+el8+2760+3d7d61b2.i686
+    - pygtk2-devel-0:2.24.0-24.module+el8+2760+3d7d61b2.i686
+    - pygtk2-doc-0:2.24.0-24.module+el8+2760+3d7d61b2.noarch
+    - pygtk2-debugsource-0:2.24.0-24.module+el8+2760+3d7d61b2.i686
+    - pygtk2-debuginfo-0:2.24.0-24.module+el8+2760+3d7d61b2.i686
+    - gimp-2:2.8.22-15.module+el8+2760+3d7d61b2.i686
+    - gimp-libs-2:2.8.22-15.module+el8+2760+3d7d61b2.i686
+    - gimp-devel-2:2.8.22-15.module+el8+2760+3d7d61b2.i686
+    - gimp-devel-tools-2:2.8.22-15.module+el8+2760+3d7d61b2.i686
+    - gimp-debugsource-2:2.8.22-15.module+el8+2760+3d7d61b2.i686
+    - gimp-debuginfo-2:2.8.22-15.module+el8+2760+3d7d61b2.i686
+    - gimp-libs-debuginfo-2:2.8.22-15.module+el8+2760+3d7d61b2.i686
+    - gimp-devel-tools-debuginfo-2:2.8.22-15.module+el8+2760+3d7d61b2.i686
+...
+---
+document: modulemd
+version: 2
+data:
+  name: swig
+  stream: 3.0
+  version: '8030020200407110056'
+  context: 30b713e6
+  arch: i686
+  license:
+    content:
+    - BSD
+    - GPLv3+ and BSD
+    module:
+    - MIT
+  summary: Connects C/C++/Objective C to some high-level programming languages
+  description: 'Simplified Wrapper and Interface Generator (SWIG) is a software development
+    tool for connecting C, C++ and Objective C programs with a variety of high-level
+    programming languages. SWIG is primarily used with Perl, Python and Tcl/TK, but
+    it has also been extended to Java, Eiffel and Guile. SWIG is normally used to
+    create high-level interpreted programming environments, systems integration, and
+    as a tool for building user interfaces
+
+    '
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      swig:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: SWIG package
+        ref: stream-3.0-rhel-8.3.0
+  api:
+    rpms:
+    - swig
+    - swig-doc
+    - swig-gdb
+  buildopts:
+    rpms:
+      macros: '%golang 0
+
+        %guile 0
+
+        %javalang 0
+
+        %lualang 0
+
+        %octave 0
+
+        %phplang 0
+
+        %python2lang 0
+
+        %Rlang 0
+
+        %rubylang 0
+
+        %tcl 0
+
+        %_without_build_ccache_swig 1
+
+        '
+  references:
+    community: http://swig.org/
+    documentation: http://swig.org/doc.html
+    tracker: http://bugzilla.redhat.com
+  profiles:
+    common:
+      rpms:
+      - swig
+    complete:
+      rpms:
+      - swig
+      - swig-doc
+      - swig-gdb
+  artifacts:
+    rpms:
+    - swig-0:3.0.12-19.module+el8.3.0+6248+838326ab.i686
+    - swig-doc-0:3.0.12-19.module+el8.3.0+6248+838326ab.noarch
+    - swig-gdb-0:3.0.12-19.module+el8.3.0+6248+838326ab.i686
+    - swig-debugsource-0:3.0.12-19.module+el8.3.0+6248+838326ab.i686
+    - swig-debuginfo-0:3.0.12-19.module+el8.3.0+6248+838326ab.i686
+...
