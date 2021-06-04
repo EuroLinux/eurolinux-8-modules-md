@@ -12240,7 +12240,7 @@ data:
   dependencies:
   - buildrequires:
       perl-bootstrap:
-      - 5.3
+      - 5.30
       platform:
       - el8.3.0
     requires:
@@ -13717,12 +13717,12 @@ data:
   dependencies:
   - buildrequires:
       perl:
-      - 5.3
+      - 5.30
       platform:
       - el8
     requires:
       perl:
-      - 5.3
+      - 5.30
       platform:
       - el8
   components:
@@ -13998,7 +13998,7 @@ data:
     - perl-DBI-debuginfo-0:1.641-3.module+el8.3.0+6481+49275ac5.x86_64
 ...
 ---
-ocument: modulemd
+document: modulemd
 version: 2
 data:
   name: perl-DBD-Pg
@@ -14059,4 +14059,67 @@ data:
     - perl-DBD-Pg-debuginfo-0:3.7.4-4.module+el8.3.0+6565+c57d755d.x86_64
     - perl-DBD-Pg-0:3.7.4-4.module+el8.3.0+6565+c57d755d.x86_64
     - perl-DBD-Pg-debugsource-0:3.7.4-4.module+el8.3.0+6565+c57d755d.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-DBD-MySQL
+  stream: '4.046'
+  version: '8030020200511061544'
+  context: caf6787c
+  arch: x86_64
+  license:
+    content:
+    - GPL+ or Artistic
+    module:
+    - MIT
+  summary: A MySQL interface for Perl
+  description: 'DBD::mysql is the Perl5 Database Interface driver for the MySQL database.
+    In other words: DBD::mysql is an interface between the Perl programming language
+    and the MySQL programming API that comes with the MySQL relational database management
+    system.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.30'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8.3.0
+    requires:
+      perl:
+      - '5.30'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-DBD-MySQL:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: The API.
+        ref: stream-4.046-rhel-8.3.0
+  api:
+    rpms:
+    - perl-DBD-MySQL
+  references:
+    community: http://search.cpan.org/dist/DBD-mysql/
+  profiles:
+    common:
+      description: DBD-mysql distribution
+      rpms:
+      - perl-DBD-MySQL
+  artifacts:
+    rpms:
+    - perl-DBD-MySQL-0:4.046-3.module+el8.2.0+4259+1ed9a454.x86_64
+    - perl-DBD-MySQL-debuginfo-0:4.046-3.module+el8.2.0+4259+1ed9a454.x86_64
+    - perl-DBD-MySQL-debugsource-0:4.046-3.module+el8.2.0+4259+1ed9a454.x86_64
 ...
