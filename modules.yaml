@@ -3260,3 +3260,1257 @@ data:
     - perl-Sys-Syslog-debuginfo-0:0.36-1.module_el8.3+boostrap1.x86_64
     - perl-Capture-Tiny-0:0.48-6.module_el8.3+boostrap1.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-bootstrap
+  stream: '5.24'
+  version: '111'
+  context: '111'
+  arch: x86_64
+  license:
+    module:
+    - MIT
+  summary: Perl bootstrap module for bootrapping Perl module
+  description: 'This is the Perl interpreter and a set of modules written in Perl
+    language intended for bootstrapping the perl module. This module disables some
+    optional tests to limit amount of components. This module is not intended for
+    public use. It''''s an intermediate step for building perl module.
+
+    '
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.1.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      perl:
+        buildorder: '1'
+        rationale: The Perl interpreter.
+        ref: 81c3becb2ecf0f51910b7821e3de66842779986b
+      perl-Algorithm-Diff:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 45c377e4361ad6e7cf6836be462bfd4e6470262e
+      perl-Archive-Tar:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 533cd419334f5c4d06efc1650a106e4db333e319
+      perl-Archive-Zip:
+        buildorder: '8'
+        rationale: build dependency.
+        ref: 39728d18f28c78d1ec647eee4f959e27f037f0d5
+      perl-Authen-SASL:
+        buildorder: '6'
+        rationale: build dependency.
+        ref: abdb9f5cd4a8d4878711c0fafcbba76baf7e40cb
+      perl-B-Debug:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 7cb63fe210ba120c75524d885fe69bb37aa4905d
+      perl-BSD-Resource:
+        buildorder: '7'
+        rationale: build dependency.
+        ref: 34e264124bd3f35b3fa46982f84fa5374c7a00d6
+      perl-CGI:
+        buildorder: '6'
+        rationale: build dependency.
+        ref: 33dc8afa5a7fb93d4c48602102eedb8b9fee6721
+      perl-CPAN:
+        buildorder: '6'
+        rationale: build dependency.
+        ref: 9d5d878683e792da1cb7b193dc7b2bbdb8d08e46
+      perl-CPAN-Meta:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: e3d7a3e70cd80a7121148cd41e69ef87c56e27cf
+      perl-CPAN-Meta-Check:
+        buildorder: '10'
+        rationale: build dependency.
+        ref: 2e843cc551f0aa8bea7462a521497e1b0ec4ca9e
+      perl-CPAN-Meta-Requirements:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 693320f5feacf14a880afc3cd1a2e97a0f846c35
+      perl-CPAN-Meta-YAML:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: a91f8c55c9c98d94d10bf8a117d9d5b01a2bb31c
+      perl-Capture-Tiny:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 3f78a452a0b65d325878b14817219f64152657e0
+      perl-Carp:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 4d1f096d37554ececd7d00d13e647b0a9d20ccce
+      perl-Class-XSAccessor:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: ab29f3dd3b53269c1cec535d1d430caa7f16868b
+      perl-Compress-Bzip2:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 1e28e28b344e657c3b02628db06c55d53a9d668f
+      perl-Compress-Raw-Bzip2:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 2e56c645cf8ad967ecf4da3d2220877b20f24821
+      perl-Compress-Raw-Zlib:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: a395d7b73402a5ca71de3be814b4cdc1231e4175
+      perl-Config-Perl-V:
+        buildorder: '6'
+        rationale: build dependency.
+        ref: bedb732d5d0a71f2b16726934ed6ee4d68adec0d
+      perl-DB_File:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: a9f3ac13341060bd79d803dcd6d285552f0aaf3b
+      perl-Data-Dumper:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 3853731fe21442340efb7997c6bc78f7a05dcf19
+      perl-Data-OptList:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: 8d27971532f8c54704f0ab4cc8f6c8f86b9df8dc
+      perl-Data-Section:
+        buildorder: '7'
+        rationale: build dependency.
+        ref: 918fffc12606d11a1b8cc0ff8fb32f8e0cd7b7ac
+      perl-Devel-Leak:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: be3b5c9a92807956b39ccab32939c18a3883eda0
+      perl-Devel-PPPort:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 51fa7cf847dca879ffae72d30c7f6206311ab00e
+      perl-Devel-Size:
+        buildorder: '7'
+        rationale: build dependency.
+        ref: abf7ee5dd1a73d7cee2b6710ea62f86204b17376
+      perl-Devel-StackTrace:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: d8a062c2b14c021b263e63fb22b2ad6064373045
+      perl-Devel-Symdump:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 70a7f9e93d38e1fae9107b1644d58976447d1093
+      perl-Digest:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 17103feae6055e0a6dc0fe196323939aa38e2193
+      perl-Digest-HMAC:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: af0db2fac4de9f1b2406ef8cf84d0843747443d3
+      perl-Digest-MD5:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 542a3f7224d3ff3ceda99bd044e0241668d75acf
+      perl-Digest-SHA:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 1e4def61db6f75ca7759a8134727974c357984fe
+      perl-Digest-SHA1:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 5441a08b973b503bcb99aa56b64f74ff1fde7ec4
+      perl-Encode:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 2c2eb4e810b5a72b73636c9ffcc19a55b5cc3b91
+      perl-Encode-Locale:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: d2a41e27a4fbcf9b36a96da4edaa1a731ab9b2a7
+      perl-Env:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 7457cef739627e524be33f43702993c8d9dc429e
+      perl-Expect:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: a66383eb88cb78670bdf35af302f339712eb7934
+      perl-Exporter:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 68fc5afe1a74339da52143b84147aa403cc8573a
+      perl-ExtUtils-CBuilder:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 9eca037b2a0ca5425c5eb309cb4bf23a06c9434f
+      perl-ExtUtils-Install:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 2108bd56db1f82d134e6e4fd4c8f65cba74908c7
+      perl-ExtUtils-MakeMaker:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 44f22e7b933ea7ae60ea565d111ca9d873042345
+      perl-ExtUtils-Manifest:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: ff5b882489e99656126ca6d8bcd82f65295b037b
+      perl-ExtUtils-ParseXS:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 3c2829b72b1de196434323c6a7c3d447caf23aa0
+      perl-Fedora-VSP:
+        buildorder: '2'
+        rationale: RPM dependency generator.
+        ref: 901401291ed3df191b1cf52ea3c5a66dd6e9589c
+      perl-File-Fetch:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: e8ba05380d67b7c6d4635b9b2ad92bd76796ef76
+      perl-File-Find-Object:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: ae4f9ddb26ad8c861336a17aa42b37fa8c5a9a86
+      perl-File-Find-Object-Rule:
+        buildorder: '6'
+        rationale: build dependency.
+        ref: 29c10f3a8d27818a96beafcb170108fd7b28b4ae
+      perl-File-Find-Rule:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: 4c3281160c62bcfe0bd67fd675851b85a6fdbd2f
+      perl-File-Find-Rule-Perl:
+        buildorder: '6'
+        rationale: build dependency.
+        ref: 13e5183783986f437a1cbe5379a77cce31e9c470
+      perl-File-HomeDir:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: c84b4d4cf7bcb494c5a4e73f8f2b8293bbaca931
+      perl-File-Path:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 217608778e67e0b37749c27c42dcd99c13266410
+      perl-File-Slurp-Tiny:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: dacb5043de25b649fa72eb1fcc66e7910700a8e4
+      perl-File-Temp:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: b30a3c5316dcd171d13ff4cb32d0767017c02f09
+      perl-File-Which:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 06cd1c7cc15fe853705c8967e79f24c4bd39c190
+      perl-Filter:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 19ea551ebc50b5eb61397dae103a3d0f07de1f95
+      perl-Filter-Simple:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: a0d653783787d44bda7407e671e9da8da5a58955
+      perl-GSSAPI:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 256f6b1b8a3e1e46f75c7173aa313901b7380a2e
+      perl-Getopt-Long:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: ec9e11f357162bb7126d45d7ea193349c71e7e6c
+      perl-HTML-Parser:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: b0ba9ff122c56fd13914d9b1b18663f4788e8ce3
+      perl-HTML-Tagset:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 894fb12911c85fe2e1e36e95bbaf08cd06abd6cd
+      perl-HTTP-Date:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 1393a8cdc98aa5a56e8308cf9cea4a8c323c0d93
+      perl-HTTP-Message:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: 6a807323f4efa8ef703656c9af2a6cac609f218e
+      perl-HTTP-Tiny:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: f7700ed5b7f99b9ab9d7e15ebb874f00b6ad25fe
+      perl-IO-Compress:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: 76661e2f442535350111f96888c1f0cd19440e6a
+      perl-IO-HTML:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: bcac64d0f06719f909cc5bc75e18f30b57c667d3
+      perl-IO-Socket-INET6:
+        buildorder: '8'
+        rationale: build dependency.
+        ref: f760d942358efe717e0330090ec40e1413d7ff92
+      perl-IO-Socket-IP:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: dd6f9be4fe3c51b36082446db3c632384560b973
+      perl-IO-Socket-SSL:
+        buildorder: '9'
+        rationale: build dependency.
+        ref: 8952aeb0d6d8cd7aa84166080163b50bd34d54aa
+      perl-IO-String:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 91075ef8f31c555e1f7ed392ac2694b559286ce7
+      perl-IO-Tty:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: e407ae1bbc8caa3d94f750ff50114ce973039d07
+      perl-IPC-Cmd:
+        buildorder: '6'
+        rationale: build dependency.
+        ref: 435230aa9405f37b587be4b36fdfe264bc1e3703
+      perl-IPC-Run:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: 940eb96b494130f6df133daedc5eb3402e5cf45c
+      perl-IPC-SysV:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: b8bbe80b1c72fd48708c9b7444d4d56bb783a5bf
+      perl-IPC-System-Simple:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 40d9e886519482ee7c524270467fae8c63cc54df
+      perl-Import-Into:
+        buildorder: '8'
+        rationale: build dependency.
+        ref: 22d2e7c015525d407846fff146de572abfa7020c
+      perl-JSON-PP:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 8d3b7be8f9764ed08b879e2e22caeebe9b82ccc0
+      perl-LWP-MediaTypes:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: e0b9ffe9101d161b3bc31c7b1425ecc231095d8f
+      perl-Locale-Codes:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: c0be05ef1ec0e549b5d5d666f124ed7c4c8170de
+      perl-Locale-Maketext:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 0134c7c6c8dd33afc8c890394f2f8ac3c34466e2
+      perl-MIME-Base64:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 9e36fc1cf470da0b9c0efa8602259c7dbf57fb7f
+      perl-MRO-Compat:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: d299f3c4b7c2937efef5f12e60f6ceaceb569c50
+      perl-Math-BigInt:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: b7c34d994488010cfdd557384f5f47300a1391ae
+      perl-Math-BigInt-FastCalc:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: 5c9278f7bdc3f9ea128f6abcb019cc54e0843205
+      perl-Math-BigRat:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: 61a8e732e0e0fe22ae8e5c7240be6e81773a6876
+      perl-Mixin-Linewise:
+        buildorder: '7'
+        rationale: build dependency.
+        ref: 57e384f1240057a552dfa91cc64e39f50c0e303a
+      perl-Module-Build:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: 95016aaf4fdeb5a0f023f8d7c33174d71443c31b
+      perl-Module-CoreList:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 3038bc2ad9c00e2272f8a603c01bd56abba83567
+      perl-Module-Load:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 72f791dbeebf214837a6b39d6c40e89b52e60917
+      perl-Module-Load-Conditional:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: d0ac4169882627f8b6925df74f732f818a95f8ba
+      perl-Module-Metadata:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 48e842f1d79a9f59adbd4644ff6301cfeba53f26
+      perl-Module-Runtime:
+        buildorder: '7'
+        rationale: build dependency.
+        ref: e16f4657ef0de0cc14b86bfd1418052fcadb408c
+      perl-Net-IDN-Encode:
+        buildorder: '7'
+        rationale: build dependency.
+        ref: ca22ed176cc9f48bb3b2cec6e99bfe5911a2bbf5
+      perl-Net-LibIDN:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: e5c5ec830ce90021586a53b9d2ce8e32ae22054b
+      perl-Net-SSLeay:
+        buildorder: '6'
+        rationale: build dependency.
+        ref: 20bab0b1267a65ed1f42c26f34579602181fd537
+      perl-Number-Compare:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: c5dfcef8b5194a5ad5e0f6b5a85cef97adefbed6
+      perl-Package-Generator:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: d4f27741c462874e7a7f5d9a7bda4de95cd80c51
+      perl-Params-Check:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: c3f48611cba09813c89064e8278c0422126d1e1a
+      perl-Params-Util:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: b06b59c64aa7c37c03fab8ac815dc10b21c0bf2a
+      perl-PathTools:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 7f497f0f16378519e1207dc29430dc60b3d59fe5
+      perl-Perl-OSType:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: f330dfbba52bc0163cb81f040c1a1a70b3b26636
+      perl-Perl-Version:
+        buildorder: '7'
+        rationale: build dependency.
+        ref: fefa9ceaa20c68afb4f6c545743ff2c2e9f7e811
+      perl-PerlIO-utf8_strict:
+        buildorder: '6'
+        rationale: build dependency.
+        ref: c764654d5b3d2ee3e27b3ccf574f98f894b796bc
+      perl-PerlIO-via-QuotedPrint:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 65ef11e76c2c4b61765a2b70e2fcdd5d5bec6631
+      perl-Pod-Checker:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 3e57079363a817a1ce58c4eac717853faaab1ab5
+      perl-Pod-Coverage:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: dedb07c38c79b78269840756e2ce161d8a7f0d70
+      perl-Pod-Coverage-TrustPod:
+        buildorder: '9'
+        rationale: build dependency.
+        ref: 6725fd099dd77e003abed011c93223bee0f865b5
+      perl-Pod-Escapes:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 5b2a4acc0314e1e8cf23b65afbbdcba72959cf46
+      perl-Pod-Eventual:
+        buildorder: '8'
+        rationale: build dependency.
+        ref: 9e01142334d3a1e78d19bd991797730da1f3a147
+      perl-Pod-Parser:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 8f71252e67c17c40f5bb20dcad55740d44d77f5a
+      perl-Pod-Perldoc:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: bfc3409d869120c5944e3d79606e1bfbdf472b44
+      perl-Pod-Simple:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 6a68b5909ea43d43591b4195ad7585daac1a9949
+      perl-Pod-Usage:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 4666dea9c6fddb5bac4b6c6a06224a5b52ebea49
+      perl-SUPER:
+        buildorder: '6'
+        rationale: build dependency.
+        ref: 2bca0142a9ffc4c9926102bb811a6fb708aab60e
+      perl-Scalar-List-Utils:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 06175196580d528443b31cdc6d1ecd6b905ab582
+      perl-Socket:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 67bf4437ee5e8e0a58cea9cf4bae43950c07d06f
+      perl-Socket6:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 6200efba855b43a068ba2bb1e049db84272c137a
+      perl-Software-License:
+        buildorder: '12'
+        rationale: build dependency.
+        ref: 690971c8851eafdb243f544a551f307a6da48dec
+      perl-Sort-Versions:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 6e9e671779be7417da9763ef7408c73c8bb57788
+      perl-Storable:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 1a4ac96f97238150145c7c75b3238890298113b8
+      perl-Sub-Exporter:
+        buildorder: '6'
+        rationale: build dependency.
+        ref: 47bfd0fcd781dcaf187ab33f73fcb2bd8b237359
+      perl-Sub-Identify:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: 519acd60daf74960dc2ae244ddadea76ab0deaa2
+      perl-Sub-Install:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: ae18c335ed644b2b76b0b75b9a2640e00531fa4f
+      perl-Sub-Uplevel:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 31e8ab9b8dfb506f7f0d98d1794c5b4f8923c6cc
+      perl-Sys-Syslog:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: a00ad090108c5272d8ed9fcde0203db2d1c624f0
+      perl-Term-ANSIColor:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: 07bfccae4985a129fa0ddebdb3eb33630fc66c7b
+      perl-Term-Cap:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 8c8c12673e93b4b2098eb38ffe3e34c13d9c7394
+      perl-TermReadKey:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: c100694d9f34a5cca3202f133b0981d3e337d6e1
+      perl-Test-CPAN-Meta:
+        buildorder: '7'
+        rationale: build dependency.
+        ref: 02c2b8679dc0104420005da048aa00c0bcfdfafd
+      perl-Test-Deep:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 74c7b8f0f9fc9f3b410917fe7cea83ebebc37b21
+      perl-Test-Exception:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: 32ec1be64bc822125dc695466ae5b7b08e05c977
+      perl-Test-FailWarnings:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: 68a68901c53a099f801c2a3020706c14571458b2
+      perl-Test-Harness:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: daf58ad0608b4da1f2c84a9fe993e88caed491e8
+      perl-Test-MockModule:
+        buildorder: '7'
+        rationale: build dependency.
+        ref: a2cb846750f7af0b45be1cd0a779bad615fc7985
+      perl-Test-NoWarnings:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: 2e86dc9358339558c512ffb7e3a83254c38f351d
+      perl-Test-Output:
+        buildorder: '7'
+        rationale: build dependency.
+        ref: 7d0ffe7af7c5d084c40a57c7d12e8ef812c7d95a
+      perl-Test-Pod:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: f401fbe36fb940383ca75a681d54ef61e5ebd9da
+      perl-Test-Pod-Coverage:
+        buildorder: '6'
+        rationale: build dependency.
+        ref: 49e46ad92ba571a1f6fda3f927e66a3745226b5c
+      perl-Test-Portability-Files:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 6581023b75f48bc8be8e1c231fc5a00d8196f3dd
+      perl-Test-Simple:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 87d030e702596ccec972cc4bc657b640cb0b9f3a
+      perl-Test-Taint:
+        buildorder: '7'
+        rationale: build dependency.
+        ref: 0ef3cd6c007c5414018564095cce460fe2e228af
+      perl-Test-TrailingSpace:
+        buildorder: '7'
+        rationale: build dependency.
+        ref: ad125d034203ba89016aa6739312dfe1caad0202
+      perl-Test-Version:
+        buildorder: '7'
+        rationale: build dependency.
+        ref: 702a675244b13df3e637ec35ef4ef55343794dd1
+      perl-Test-Warn:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: 70cfcc6e225e8829711f783432eded63c174d9ae
+      perl-Text-Balanced:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 38e2605079bd5a9eb81f4688fab765b046ed1a8d
+      perl-Text-Diff:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: 8abf6a086e590385020e8bf6c08890da3ca9815d
+      perl-Text-Glob:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: d3af94383b5c95045ff30086987aa173a1f6820c
+      perl-Text-Levenshtein-Damerau-XS:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: f0a9abbed8307d065b43da22c8c2bb6e455a7b3c
+      perl-Text-ParseWords:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: b7bd4abdf5d895a11452ac5aa7d1a9ff9d1413a1
+      perl-Text-Tabs+Wrap:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 845e079640870d34686693c4692ec47fba253ef9
+      perl-Text-Template:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: b5c357c9fa8bf665640ca142aa83e310941e94eb
+      perl-Thread-Queue:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 2b4b0f4e1819c3ad090bf25a4800219057724ac9
+      perl-Tie-IxHash:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 254500e84fee3c85877644d97bfcab45a5067843
+      perl-Time-HiRes:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: bda833ab1cdff549149c0b0ae1566d707a0b62cc
+      perl-Time-Local:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 738b8e1472539f8ae817545c1a902c98eb6fa3af
+      perl-TimeDate:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 105cd952606fe7a63b82550a397ffde6305dafd2
+      perl-Try-Tiny:
+        buildorder: '11'
+        rationale: build dependency.
+        ref: 887862d1bcd64c50987c0856fd4edb6fa70fba7c
+      perl-URI:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 40642e14272b28449b9997247df7781fb3d01579
+      perl-Unicode-Collate:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 5a0819d60aadbb9722e99e174f38a3a2b57fc00e
+      perl-Unicode-Normalize:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 98d343997c52875711d6174004a764bdeeb7c511
+      perl-YAML:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 61691ebe8393f9aeb3d4b9e01ca884cbd6a53e0b
+      perl-YAML-Syck:
+        buildorder: '8'
+        rationale: build dependency.
+        ref: 2e6e4576bea3d96a6908bf0c66e16382792304bf
+      perl-accessors:
+        buildorder: '6'
+        rationale: build dependency.
+        ref: f44002355cca0c42b27da131928bf1380e132412
+      perl-autodie:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: e763fc28acaafd8ee46960aff910a9d0f2396010
+      perl-bignum:
+        buildorder: '5'
+        rationale: build dependency.
+        ref: af42289dfb20bdfd660de4bb6eede15130f2e695
+      perl-constant:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 64337f9cf1eefed14205370e24dbba3b54a53c99
+      perl-experimental:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 94f7567615a09dcf92728f811685d242dfc6a6c9
+      perl-generators:
+        buildorder: '3'
+        rationale: RPM dependency generator.
+        ref: d01556d6807c227a5c1521c2ee85eda4ed78dabf
+      perl-inc-latest:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 37caac4aead2879513ac363d471dc758dfaa2ea8
+      perl-libnet:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 418dc8c5990021a5f7ca44b10d2152c52fc3c285
+      perl-local-lib:
+        buildorder: '6'
+        rationale: build dependency.
+        ref: 5ca64fc458a9d09ccf06e92b46527481b3404c4e
+      perl-parent:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 47aeaa48bc9ecb4f08f1359b0beb9509eff9cd5f
+      perl-perlfaq:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 9da8bdc8de5a034194c0359ac5869b9cc9a1bbf3
+      perl-podlators:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 34457982733204939fb04478694ede8f57ebfae0
+      perl-threads:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: b16b78c3fb7cf54ec90093beb085da32caabd6a9
+      perl-threads-shared:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 1069b3321c9e20998c02bba58ffafb0b78aa7ad3
+      perl-version:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: c49be0dd13f9eb4323860f43710daa1cc0bdbca9
+  buildopts:
+    rpms:
+      macros: '%perl_bootstrap 1
+
+        %_with_perl_enables_groff 1
+
+        %_without_perl_enables_syslog_test 1
+
+        %_with_perl_enables_systemtap 1
+
+        %_without_perl_enables_tcsh 1
+
+        %_without_perl_Archive_Tar_enables_optional_test 1
+
+        %_without_perl_autodie_enables_optional_test 1
+
+        %_without_perl_BSD_Resource_enables_optional_test 1
+
+        %_without_perl_Compress_Bzip2_enables_optional_test 1
+
+        %_without_perl_Compress_Raw_Bzip2_enables_optional_test 1
+
+        %_without_perl_constant_enables_optional_test 1
+
+        %_without_perl_CPAN_Meta_Check_enables_extra_test 1
+
+        %_without_perl_CPAN_Meta_Requirements_enables_optional_test 1
+
+        %_without_perl_CPAN_Meta_YAML_enables_extra_test 1
+
+        %_without_perl_Data_OptList_enables_extra_test 1
+
+        %_without_perl_Data_OptList_enables_optional_test 1
+
+        %_without_perl_DB_File_enables_optional_test 1
+
+        %_without_perl_Devel_Size_enables_optional_test 1
+
+        %_with_perl_Digest_SHA_enables_digest_base 1
+
+        %_without_perl_Digest_SHA_enables_optional_test 1
+
+        %_without_perl_Exporter_enables_optional_test 1
+
+        %_without_perl_File_Find_Object_Rule_enables_optional_test 1
+
+        %_without_perl_Filter_enables_optional_test 1
+
+        %_without_perl_HTML_Tagset_enables_optional_test 1
+
+        %_without_perl_IO_Compress_enables_optional_test 1
+
+        %_without_perl_IO_Socket_INET6_enables_optional_test 1
+
+        %_without_perl_IO_Socket_IP_enables_optional_test 1
+
+        %_without_perl_IPC_System_Simple_enables_optional_test 1
+
+        %_without_perl_IPC_SysV_enables_optional_test 1
+
+        %_without_perl_libnet_enables_optional_test 1
+
+        %_without_perl_Locale_Maketext_enables_optional_test 1
+
+        %_without_perl_LWP_MediaTypes_enables_mailcap 1
+
+        %_without_perl_Math_BigInt_enables_optional_test 1
+
+        %_without_perl_Module_Build_enables_optional_test 1
+
+        %_without_perl_Package_Generator_enables_extra_test 1
+
+        %_without_perl_Perl_OSType_enables_optional_test 1
+
+        %_without_perl_Pod_Parser_enables_optional_test 1
+
+        %_without_perl_Pod_Perldoc_enables_tk_test 1
+
+        %_without_perl_Software_License_enables_optional_test 1
+
+        %_without_perl_Sub_Exporter_enables_extra_test 1
+
+        %_without_perl_Sub_Identify_enables_optional_test 1
+
+        %_without_perl_Sub_Install_enables_optional_test 1
+
+        %_without_perl_Sys_Syslog_enables_optional_test 1
+
+        %_without_perl_Term_ANSIColor_enables_optional_test 1
+
+        %_without_perl_Test_Harness_enables_optional_test 1
+
+        %_without_perl_Test_NoWarnings_enables_stack_trace 1
+
+        %_without_perl_Tie_IxHash_enables_optional_test 1
+
+        %_without_perl_URI_enables_Business_ISBN 1
+
+        %_without_perl_YAML_Syck_enables_optional_test 1
+
+        %_without_perl_version_enables_optional_test 1
+
+        '
+  references:
+    community: https://fedoraproject.org/wiki/Modularity
+  artifacts:
+    rpms:
+    - perl-Compress-Raw-Zlib-debuginfo-0:2.069-398.module_el8.3+boostrrap524.x86_64
+    - perl-Text-Template-0:1.47-1.module_el8.3+boostrrap524.noarch
+    - perl-URI-0:1.71-6.module_el8.3+boostrrap524.noarch
+    - perl-TermReadKey-debuginfo-0:2.37-2.module_el8.3+boostrrap524.x86_64
+    - perl-Filter-2:1.58-2.module_el8.3+boostrrap524.x86_64
+    - perl-Test-Deep-0:1.127-4.module_el8.3+boostrrap524.noarch
+    - perl-Net-LibIDN-0:0.12-29.module_el8.3+boostrrap524.x86_64
+    - perl-Storable-debuginfo-1:2.56-398.module_el8.3+boostrrap524.x86_64
+    - perl-parent-1:0.237-1.module_el8.3+boostrrap524.noarch
+    - perl-Env-0:1.04-398.module_el8.3+boostrrap524.noarch
+    - perl-Devel-PPPort-debuginfo-0:3.36-5.module_el8.3+boostrrap524.x86_64
+    - perl-Tie-IxHash-0:1.23-13.module_el8.3+boostrrap524.noarch
+    - perl-ExtUtils-Miniperl-0:1.05-398.module_el8.3+boostrrap524.noarch
+    - perl-core-0:5.24.4-398.module_el8.3+boostrrap524.x86_64
+    - perl-Attribute-Handlers-0:0.99-398.module_el8.3+boostrrap524.noarch
+    - perl-Math-BigInt-FastCalc-debuginfo-0:0.400-398.module_el8.3+boostrrap524.x86_64
+    - perl-version-debuginfo-6:0.99.24-1.module_el8.3+boostrrap524.x86_64
+    - perl-ExtUtils-Embed-0:1.33-398.module_el8.3+boostrrap524.noarch
+    - perl-IPC-Cmd-1:0.92-398.module_el8.3+boostrrap524.noarch
+    - perl-Compress-Raw-Bzip2-debuginfo-0:2.069-398.module_el8.3+boostrrap524.x86_64
+    - perl-Encode-devel-4:2.80-398.module_el8.3+boostrrap524.noarch
+    - perl-Carp-0:1.40-398.module_el8.3+boostrrap524.noarch
+    - perl-Module-CoreList-1:5.20180414-1.module_el8.3+boostrrap524.noarch
+    - perl-threads-shared-0:1.51-398.module_el8.3+boostrrap524.x86_64
+    - perl-Time-Piece-0:1.31-398.module_el8.3+boostrrap524.x86_64
+    - perl-SUPER-0:1.20141117-10.module_el8.3+boostrrap524.noarch
+    - perl-Math-BigInt-FastCalc-debuginfo-0:0.500.600-6.module_el8.3+boostrrap524.x86_64
+    - perl-MIME-Base64-debuginfo-0:3.15-398.module_el8.3+boostrrap524.x86_64
+    - perl-ExtUtils-Manifest-0:1.70-398.module_el8.3+boostrrap524.noarch
+    - perl-HTTP-Date-0:6.02-18.module_el8.3+boostrrap524.noarch
+    - perl-Locale-Codes-0:3.42-2.module_el8.3+boostrrap524.noarch
+    - perl-Data-Dumper-debugsource-0:2.161-4.module_el8.3+boostrrap524.x86_64
+    - perl-Config-Perl-V-0:0.27-2.module_el8.3+boostrrap524.noarch
+    - perl-Net-SSLeay-debugsource-0:1.85-6.module_el8.3+boostrrap524.x86_64
+    - perl-Scalar-List-Utils-debugsource-3:1.48-1.module_el8.3+boostrrap524.x86_64
+    - perl-TimeDate-1:2.30-13.module_el8.3+boostrrap524.noarch
+    - perl-Scalar-List-Utils-debuginfo-3:1.48-1.module_el8.3+boostrrap524.x86_64
+    - perl-Devel-StackTrace-1:2.03-2.module_el8.3+boostrrap524.noarch
+    - perl-IPC-SysV-0:2.07-397.module_el8.3+boostrrap524.x86_64
+    - perl-Devel-Leak-0:0.03-32.module_el8.3+boostrrap524.x86_64
+    - perl-Math-BigInt-1:1.9998.11-5.module_el8.3+boostrrap524.noarch
+    - perl-MIME-Base64-0:3.15-398.module_el8.3+boostrrap524.x86_64
+    - perl-HTML-Parser-0:3.72-14.module_el8.3+boostrrap524.x86_64
+    - perl-Perl-OSType-0:1.009-398.module_el8.3+boostrrap524.noarch
+    - perl-Text-Tabs+Wrap-0:2013.0523-398.module_el8.3+boostrrap524.noarch
+    - perl-Unicode-Normalize-0:1.25-1000.module_el8.3+boostrrap524.x86_64
+    - perl-MIME-Base64-0:3.15-1000.module_el8.3+boostrrap524.x86_64
+    - perl-Digest-MD5-0:2.54-398.module_el8.3+boostrrap524.x86_64
+    - perl-Try-Tiny-0:0.28-2.module_el8.3+boostrrap524.noarch
+    - perl-Digest-SHA-debugsource-1:6.02-1.module_el8.3+boostrrap524.x86_64
+    - perl-Time-Local-0:1.2300-398.module_el8.3+boostrrap524.noarch
+    - perl-Expect-0:1.35-4.module_el8.3+boostrrap524.noarch
+    - perl-CPAN-Meta-0:2.150010-396.module_el8.3+boostrrap524.noarch
+    - perl-Module-Metadata-0:1.000031-398.module_el8.3+boostrrap524.noarch
+    - perl-File-Path-0:2.12-398.module_el8.3+boostrrap524.noarch
+    - perl-podlators-0:4.07-398.module_el8.3+boostrrap524.noarch
+    - perl-PerlIO-utf8_strict-debuginfo-0:0.007-5.module_el8.3+boostrrap524.x86_64
+    - perl-Compress-Raw-Zlib-0:2.074-1.module_el8.3+boostrrap524.x86_64
+    - perl-Pod-Perldoc-0:3.28-396.module_el8.3+boostrrap524.noarch
+    - perl-Locale-Maketext-0:1.26-398.module_el8.3+boostrrap524.noarch
+    - perl-Encode-debuginfo-4:2.88-6.module_el8.3+boostrrap524.x86_64
+    - perl-Digest-SHA1-debugsource-0:2.13-19.module_el8.3+boostrrap524.x86_64
+    - perl-experimental-0:0.016-398.module_el8.3+boostrrap524.noarch
+    - perl-DB_File-debuginfo-0:1.835-398.module_el8.3+boostrrap524.x86_64
+    - perl-Module-CoreList-tools-1:5.20180414-398.module_el8.3+boostrrap524.noarch
+    - perl-IO-debuginfo-0:1.36-398.module_el8.3+boostrrap524.x86_64
+    - perl-Algorithm-Diff-0:1.1903-9.module_el8.3+boostrrap524.noarch
+    - perl-Socket6-debuginfo-0:0.28-6.module_el8.3+boostrrap524.x86_64
+    - perl-Time-HiRes-debuginfo-0:1.9741-398.module_el8.3+boostrrap524.x86_64
+    - perl-Pod-Usage-4:1.69-395.module_el8.3+boostrrap524.noarch
+    - perl-HTTP-Tiny-0:0.074-1.module_el8.3+boostrrap524.noarch
+    - perl-File-Find-Object-0:0.3.2-5.module_el8.3+boostrrap524.noarch
+    - perl-Term-ANSIColor-0:4.04-398.module_el8.3+boostrrap524.noarch
+    - perl-threads-shared-0:1.58-2.module_el8.3+boostrrap524.x86_64
+    - perl-Test-Taint-debuginfo-0:1.06-19.module_el8.3+boostrrap524.x86_64
+    - perl-experimental-0:0.019-2.module_el8.3+boostrrap524.noarch
+    - perl-Digest-MD5-0:2.55-396.module_el8.3+boostrrap524.x86_64
+    - perl-Archive-Tar-0:2.30-1.module_el8.3+boostrrap524.noarch
+    - perl-Test-Harness-0:3.36-398.module_el8.3+boostrrap524.noarch
+    - perl-Perl-OSType-0:1.010-396.module_el8.3+boostrrap524.noarch
+    - perl-Getopt-Long-0:2.49.1-2.module_el8.3+boostrrap524.noarch
+    - perl-Net-IDN-Encode-debuginfo-0:2.400-6.module_el8.3+boostrrap524.x86_64
+    - perl-Digest-SHA-1:5.95-398.module_el8.3+boostrrap524.x86_64
+    - perl-Digest-SHA1-debuginfo-0:2.13-19.module_el8.3+boostrrap524.x86_64
+    - perl-Test-TrailingSpace-0:0.0301-5.module_el8.3+boostrrap524.noarch
+    - perl-Socket-debuginfo-4:2.020-398.module_el8.3+boostrrap524.x86_64
+    - perl-SelfLoader-0:1.23-398.module_el8.3+boostrrap524.noarch
+    - perl-Time-Piece-debuginfo-0:1.31-398.module_el8.3+boostrrap524.x86_64
+    - perl-Pod-Parser-0:1.63-398.module_el8.3+boostrrap524.noarch
+    - perl-MIME-Base64-debugsource-0:3.15-1000.module_el8.3+boostrrap524.x86_64
+    - perl-File-Fetch-0:0.48-398.module_el8.3+boostrrap524.noarch
+    - perl-Exporter-0:5.72-398.module_el8.3+boostrrap524.noarch
+    - perl-macros-4:5.24.4-398.module_el8.3+boostrrap524.x86_64
+    - perl-CPAN-Meta-YAML-0:0.018-398.module_el8.3+boostrrap524.noarch
+    - perl-TermReadKey-debugsource-0:2.37-2.module_el8.3+boostrrap524.x86_64
+    - perl-HTML-Tagset-0:3.20-33.module_el8.3+boostrrap524.noarch
+    - perl-Class-XSAccessor-debuginfo-0:1.19-14.module_el8.3+boostrrap524.x86_64
+    - perl-Socket-debugsource-4:2.027-2.module_el8.3+boostrrap524.x86_64
+    - perl-File-Temp-0:0.230.400-398.module_el8.3+boostrrap524.noarch
+    - perl-Scalar-List-Utils-3:1.48-1.module_el8.3+boostrrap524.x86_64
+    - perl-Filter-Simple-0:0.92-366.module_el8.3+boostrrap524.noarch
+    - perl-ExtUtils-Install-0:2.04-398.module_el8.3+boostrrap524.noarch
+    - perl-File-HomeDir-0:1.00-13.module_el8.3+boostrrap524.noarch
+    - perl-libnetcfg-4:5.24.4-398.module_el8.3+boostrrap524.noarch
+    - perl-YAML-0:1.23-1.module_el8.3+boostrrap524.noarch
+    - perl-ExtUtils-MM-Utils-0:7.11-398.module_el8.3+boostrrap524.noarch
+    - perl-libs-4:5.24.4-398.module_el8.3+boostrrap524.x86_64
+    - perl-parent-1:0.234-398.module_el8.3+boostrrap524.noarch
+    - perl-PathTools-0:3.63-367.module_el8.3+boostrrap524.x86_64
+    - perl-File-Fetch-0:0.56-2.module_el8.3+boostrrap524.noarch
+    - perl-Params-Check-1:0.38-398.module_el8.3+boostrrap524.noarch
+    - perl-Storable-1:2.56-368.module_el8.3+boostrrap524.x86_64
+    - perl-Class-XSAccessor-debugsource-0:1.19-14.module_el8.3+boostrrap524.x86_64
+    - perl-autodie-0:2.29-398.module_el8.3+boostrrap524.noarch
+    - perl-Carp-0:1.40-366.module_el8.3+boostrrap524.noarch
+    - perl-PerlIO-utf8_strict-0:0.007-5.module_el8.3+boostrrap524.x86_64
+    - perl-Module-Runtime-0:0.015-1.module_el8.3+boostrrap524.noarch
+    - perl-Time-Local-1:1.280-1.module_el8.3+boostrrap524.noarch
+    - perl-Sys-Syslog-debuginfo-0:0.35-397.module_el8.3+boostrrap524.x86_64
+    - perl-PerlIO-via-QuotedPrint-0:0.08-395.module_el8.3+boostrrap524.noarch
+    - perl-GSSAPI-0:0.28-18.module_el8.3+boostrrap524.x86_64
+    - perl-Test-Simple-0:1.001014-398.module_el8.3+boostrrap524.noarch
+    - perl-Term-Cap-0:1.17-395.module_el8.3+boostrrap524.noarch
+    - perl-IO-Tty-debugsource-0:1.12-11.module_el8.3+boostrrap524.x86_64
+    - perl-Exporter-0:5.72-1000.module_el8.3+boostrrap524.noarch
+    - perl-Module-Build-2:0.42.24-5.module_el8.3+boostrrap524.noarch
+    - perl-DB_File-debugsource-0:1.842-1.module_el8.3+boostrrap524.x86_64
+    - perl-Memoize-0:1.03-398.module_el8.3+boostrrap524.noarch
+    - perl-File-Which-0:1.21-3.module_el8.3+boostrrap524.noarch
+    - perl-HTTP-Message-0:6.11-4.module_el8.3+boostrrap524.noarch
+    - perl-Filter-Simple-0:0.92-398.module_el8.3+boostrrap524.noarch
+    - perl-Storable-debugsource-1:2.56-368.module_el8.3+boostrrap524.x86_64
+    - perl-Sys-Syslog-debuginfo-0:0.33-398.module_el8.3+boostrrap524.x86_64
+    - perl-Digest-0:1.17-395.module_el8.3+boostrrap524.noarch
+    - perl-Devel-Leak-debugsource-0:0.03-32.module_el8.3+boostrrap524.x86_64
+    - perl-Test-Portability-Files-0:0.07-2.module_el8.3+boostrrap524.noarch
+    - perl-Digest-HMAC-0:1.03-14.module_el8.3+boostrrap524.noarch
+    - perl-debugsource-4:5.24.4-398.module_el8.3+boostrrap524.x86_64
+    - perl-threads-shared-debugsource-0:1.58-2.module_el8.3+boostrrap524.x86_64
+    - perl-Unicode-Normalize-debuginfo-0:1.25-398.module_el8.3+boostrrap524.x86_64
+    - perl-Test-MockModule-0:0.11-4.module_el8.3+boostrrap524.noarch
+    - perl-Test-Pod-Coverage-0:1.10-10.module_el8.3+boostrrap524.noarch
+    - perl-HTML-Parser-debugsource-0:3.72-14.module_el8.3+boostrrap524.x86_64
+    - perl-constant-0:1.33-1000.module_el8.3+boostrrap524.noarch
+    - perl-Data-Dumper-0:2.161-4.module_el8.3+boostrrap524.x86_64
+    - perl-Encode-debugsource-4:2.88-6.module_el8.3+boostrrap524.x86_64
+    - perl-Fedora-VSP-0:0.001-9.module_el8.3+boostrrap524.noarch
+    - perl-Sub-Uplevel-1:0.2800-4.module_el8.3+boostrrap524.noarch
+    - perl-Devel-PPPort-debugsource-0:3.36-5.module_el8.3+boostrrap524.x86_64
+    - perl-autodie-0:2.29-1000.module_el8.3+boostrrap524.noarch
+    - perl-local-lib-0:2.000023-1.module_el8.3+boostrrap524.noarch
+    - perl-accessors-0:1.01-21.module_el8.3+boostrrap524.noarch
+    - perl-IO-Zlib-1:1.10-398.module_el8.3+boostrrap524.noarch
+    - perl-Digest-MD5-debugsource-0:2.55-396.module_el8.3+boostrrap524.x86_64
+    - perl-Locale-Maketext-Simple-1:0.21-398.module_el8.3+boostrrap524.noarch
+    - perl-Test-Exception-0:0.43-7.module_el8.3+boostrrap524.noarch
+    - perl-CPAN-Meta-YAML-0:0.018-1000.module_el8.3+boostrrap524.noarch
+    - perl-Devel-Leak-debuginfo-0:0.03-32.module_el8.3+boostrrap524.x86_64
+    - perl-libnet-0:3.08-398.module_el8.3+boostrrap524.noarch
+    - perl-generators-0:1.10-7.module_el8.3+boostrrap524.noarch
+    - perl-Compress-Bzip2-debugsource-0:2.26-6.module_el8.3+boostrrap524.x86_64
+    - perl-libs-debuginfo-4:5.24.4-398.module_el8.3+boostrrap524.x86_64
+    - perl-YAML-Syck-0:1.30-5.module_el8.3+boostrrap524.x86_64
+    - perl-Pod-Usage-4:1.68-398.module_el8.3+boostrrap524.noarch
+    - perl-Locale-Maketext-0:1.28-396.module_el8.3+boostrrap524.noarch
+    - perl-Encode-4:2.80-398.module_el8.3+boostrrap524.x86_64
+    - perl-Sort-Versions-0:1.62-8.module_el8.3+boostrrap524.noarch
+    - perl-Test-FailWarnings-0:0.008-12.module_el8.3+boostrrap524.noarch
+    - perl-PathTools-debuginfo-0:3.63-398.module_el8.3+boostrrap524.x86_64
+    - perl-bignum-0:0.49-2.module_el8.3+boostrrap524.noarch
+    - perl-Encode-devel-4:2.88-6.module_el8.3+boostrrap524.x86_64
+    - perl-HTTP-Tiny-0:0.056-398.module_el8.3+boostrrap524.noarch
+    - perl-Time-HiRes-debugsource-0:1.9753-1.module_el8.3+boostrrap524.x86_64
+    - perl-Term-Cap-0:1.17-398.module_el8.3+boostrrap524.noarch
+    - perl-Test-Taint-debugsource-0:1.06-19.module_el8.3+boostrrap524.x86_64
+    - perl-Devel-Symdump-1:2.18-5.module_el8.3+boostrrap524.noarch
+    - perl-Package-Generator-0:1.106-11.module_el8.3+boostrrap524.noarch
+    - perl-Socket6-0:0.28-6.module_el8.3+boostrrap524.x86_64
+    - perl-ExtUtils-Manifest-0:1.70-395.module_el8.3+boostrrap524.noarch
+    - perl-threads-debugsource-1:2.21-2.module_el8.3+boostrrap524.x86_64
+    - perl-IO-String-0:1.08-31.module_el8.3+boostrrap524.noarch
+    - perl-Compress-Raw-Bzip2-0:2.069-398.module_el8.3+boostrrap524.x86_64
+    - perl-LWP-MediaTypes-0:6.02-14.module_el8.3+boostrrap524.noarch
+    - perl-Pod-Simple-1:3.32-398.module_el8.3+boostrrap524.noarch
+    - perl-Params-Util-debuginfo-0:1.07-22.module_el8.3+boostrrap524.x86_64
+    - perl-JSON-PP-0:2.94000-1.module_el8.3+boostrrap524.noarch
+    - perl-Params-Util-debugsource-0:1.07-22.module_el8.3+boostrrap524.x86_64
+    - perl-CGI-0:4.36-1.module_el8.3+boostrrap524.noarch
+    - perl-IO-Compress-0:2.074-1.module_el8.3+boostrrap524.noarch
+    - perl-Config-Perl-V-0:0.25-398.module_el8.3+boostrrap524.noarch
+    - perl-Authen-SASL-0:2.16-9.module_el8.3+boostrrap524.noarch
+    - perl-Module-Metadata-0:1.000033-395.module_el8.3+boostrrap524.noarch
+    - perl-DB_File-0:1.835-398.module_el8.3+boostrrap524.x86_64
+    - perl-Thread-Queue-0:3.09-398.module_el8.3+boostrrap524.noarch
+    - perl-Module-Loaded-1:0.08-398.module_el8.3+boostrrap524.noarch
+    - perl-Filter-debugsource-2:1.58-2.module_el8.3+boostrrap524.x86_64
+    - perl-Test-Harness-1:3.42-1.module_el8.3+boostrrap524.noarch
+    - perl-IO-Compress-0:2.069-398.module_el8.3+boostrrap524.noarch
+    - perl-Perl-Version-0:1.013-9.module_el8.3+boostrrap524.noarch
+    - perl-Pod-Coverage-0:0.23-14.module_el8.3+boostrrap524.noarch
+    - perl-Mixin-Linewise-0:0.108-9.module_el8.3+boostrrap524.noarch
+    - perl-Text-ParseWords-0:3.30-398.module_el8.3+boostrrap524.noarch
+    - perl-CPAN-Meta-Check-0:0.014-5.module_el8.3+boostrrap524.noarch
+    - perl-Pod-Eventual-0:0.094001-9.module_el8.3+boostrrap524.noarch
+    - perl-Math-BigRat-0:0.2614-1.module_el8.3+boostrrap524.noarch
+    - perl-Compress-Bzip2-0:2.26-6.module_el8.3+boostrrap524.x86_64
+    - perl-Storable-1:2.56-398.module_el8.3+boostrrap524.x86_64
+    - perl-Sub-Identify-debuginfo-0:0.14-6.module_el8.3+boostrrap524.x86_64
+    - perl-Text-Diff-0:1.44-3.module_el8.3+boostrrap524.noarch
+    - perl-Test-CPAN-Meta-0:0.25-12.module_el8.3+boostrrap524.noarch
+    - perl-threads-shared-debuginfo-0:1.58-2.module_el8.3+boostrrap524.x86_64
+    - perl-IPC-Run-0:0.99-1.module_el8.3+boostrrap524.noarch
+    - perl-Text-Levenshtein-Damerau-XS-0:3.2-1.module_el8.3+boostrrap524.x86_64
+    - perl-B-Debug-0:1.23-398.module_el8.3+boostrrap524.noarch
+    - perl-Net-LibIDN-debugsource-0:0.12-29.module_el8.3+boostrrap524.x86_64
+    - perl-BSD-Resource-debugsource-0:1.291.100-5.module_el8.3+boostrrap524.x86_64
+    - perl-ExtUtils-ParseXS-1:3.31-398.module_el8.3+boostrrap524.noarch
+    - perl-Compress-Raw-Zlib-0:2.069-398.module_el8.3+boostrrap524.x86_64
+    - perl-Sub-Exporter-0:0.987-15.module_el8.3+boostrrap524.noarch
+    - perl-PerlIO-utf8_strict-debugsource-0:0.007-5.module_el8.3+boostrrap524.x86_64
+    - perl-debuginfo-4:5.24.4-398.module_el8.3+boostrrap524.x86_64
+    - perl-Pod-Escapes-1:1.07-395.module_el8.3+boostrrap524.noarch
+    - perl-Filter-debuginfo-2:1.58-2.module_el8.3+boostrrap524.x86_64
+    - perl-Sub-Identify-0:0.14-6.module_el8.3+boostrrap524.x86_64
+    - perl-Devel-Size-0:0.81-2.module_el8.3+boostrrap524.x86_64
+    - perl-Net-Ping-0:2.43-398.module_el8.3+boostrrap524.noarch
+    - perl-IO-Tty-0:1.12-11.module_el8.3+boostrrap524.x86_64
+    - perl-homedir-0:2.000023-1.module_el8.3+boostrrap524.noarch
+    - perl-Errno-0:1.25-398.module_el8.3+boostrrap524.x86_64
+    - perl-MIME-Base64-debuginfo-0:3.15-1000.module_el8.3+boostrrap524.x86_64
+    - perl-Unicode-Normalize-debugsource-0:1.25-1000.module_el8.3+boostrrap524.x86_64
+    - perl-Devel-Peek-debuginfo-0:1.23-398.module_el8.3+boostrrap524.x86_64
+    - perl-version-5:0.99.16-398.module_el8.3+boostrrap524.noarch
+    - perl-File-Temp-0:0.230.600-1.module_el8.3+boostrrap524.noarch
+    - perl-version-6:0.99.24-1.module_el8.3+boostrrap524.x86_64
+    - perl-tests-4:5.24.4-398.module_el8.3+boostrrap524.x86_64
+    - perl-Module-Load-1:0.32-395.module_el8.3+boostrrap524.noarch
+    - perl-IPC-SysV-debuginfo-0:2.06-398.module_el8.3+boostrrap524.x86_64
+    - perl-Encode-Locale-0:1.05-9.module_el8.3+boostrrap524.noarch
+    - perl-inc-latest-2:0.500-9.module_el8.3+boostrrap524.noarch
+    - perl-perlfaq-0:5.20180605-1.module_el8.3+boostrrap524.noarch
+    - perl-Unicode-Normalize-debuginfo-0:1.25-1000.module_el8.3+boostrrap524.x86_64
+    - perl-Text-Balanced-0:2.03-395.module_el8.3+boostrrap524.noarch
+    - perl-Digest-SHA-debuginfo-1:5.95-398.module_el8.3+boostrrap524.x86_64
+    - perl-Unicode-Collate-debuginfo-0:1.14-398.module_el8.3+boostrrap524.x86_64
+    - perl-Compress-Raw-Zlib-debuginfo-0:2.074-1.module_el8.3+boostrrap524.x86_64
+    - perl-IO-Tty-debuginfo-0:1.12-11.module_el8.3+boostrrap524.x86_64
+    - perl-MRO-Compat-0:0.13-4.module_el8.3+boostrrap524.noarch
+    - perl-Data-Dumper-debuginfo-0:2.160-398.module_el8.3+boostrrap524.x86_64
+    - perl-Devel-Size-debugsource-0:0.81-2.module_el8.3+boostrrap524.x86_64
+    - perl-Compress-Raw-Zlib-debugsource-0:2.074-1.module_el8.3+boostrrap524.x86_64
+    - perl-B-Debug-0:1.24-2.module_el8.3+boostrrap524.noarch
+    - perl-Test-Version-0:2.05-2.module_el8.3+boostrrap524.noarch
+    - perl-encoding-4:2.17-398.module_el8.3+boostrrap524.x86_64
+    - perl-Net-SSLeay-debuginfo-0:1.85-6.module_el8.3+boostrrap524.x86_64
+    - perl-threads-debuginfo-1:2.21-2.module_el8.3+boostrrap524.x86_64
+    - perl-Locale-Codes-0:3.25-398.module_el8.3+boostrrap524.noarch
+    - perl-IPC-Cmd-1:0.98-1.module_el8.3+boostrrap524.noarch
+    - perl-CPAN-0:2.16-1.module_el8.3+boostrrap524.noarch
+    - perl-Test-Warn-0:0.32-5.module_el8.3+boostrrap524.noarch
+    - perl-CPAN-0:2.11-398.module_el8.3+boostrrap524.noarch
+    - perl-Archive-Zip-0:1.59-4.module_el8.3+boostrrap524.noarch
+    - perl-version-debugsource-6:0.99.24-1.module_el8.3+boostrrap524.x86_64
+    - perl-constant-0:1.33-398.module_el8.3+boostrrap524.noarch
+    - perl-Filter-2:1.55-398.module_el8.3+boostrrap524.x86_64
+    - perl-perlfaq-0:5.021010-398.module_el8.3+boostrrap524.noarch
+    - perl-GSSAPI-debugsource-0:0.28-18.module_el8.3+boostrrap524.x86_64
+    - perl-Net-IDN-Encode-0:2.400-6.module_el8.3+boostrrap524.x86_64
+    - perl-Socket-debuginfo-4:2.027-2.module_el8.3+boostrrap524.x86_64
+    - perl-Pod-Checker-4:1.73-395.module_el8.3+boostrrap524.noarch
+    - perl-Math-BigInt-0:1.9997.15-398.module_el8.3+boostrrap524.noarch
+    - perl-IPC-SysV-debugsource-0:2.07-397.module_el8.3+boostrrap524.x86_64
+    - perl-Test-0:1.28-398.module_el8.3+boostrrap524.noarch
+    - perl-CPAN-Meta-Requirements-0:2.132-398.module_el8.3+boostrrap524.noarch
+    - perl-Socket-4:2.020-398.module_el8.3+boostrrap524.x86_64
+    - perl-ExtUtils-Command-0:7.10-398.module_el8.3+boostrrap524.noarch
+    - perl-Data-Dumper-0:2.160-398.module_el8.3+boostrrap524.x86_64
+    - perl-Encode-4:2.88-6.module_el8.3+boostrrap524.x86_64
+    - perl-ExtUtils-ParseXS-1:3.31-368.module_el8.3+boostrrap524.noarch
+    - perl-Digest-SHA1-0:2.13-19.module_el8.3+boostrrap524.x86_64
+    - perl-JSON-PP-0:2.27300-398.module_el8.3+boostrrap524.noarch
+    - perl-Pod-Html-0:1.22.01-398.module_el8.3+boostrrap524.noarch
+    - perl-threads-1:2.07-398.module_el8.3+boostrrap524.x86_64
+    - perl-utils-0:5.24.4-398.module_el8.3+boostrrap524.noarch
+    - perl-IPC-SysV-0:2.06-398.module_el8.3+boostrrap524.x86_64
+    - perl-Unicode-Collate-0:1.14-398.module_el8.3+boostrrap524.x86_64
+    - perl-Time-HiRes-0:1.9741-398.module_el8.3+boostrrap524.x86_64
+    - perl-Parse-CPAN-Meta-1:1.4417-398.module_el8.3+boostrrap524.noarch
+    - perl-Import-Into-0:1.002005-7.module_el8.3+boostrrap524.noarch
+    - perl-threads-shared-debuginfo-0:1.51-398.module_el8.3+boostrrap524.x86_64
+    - perl-Unicode-Collate-debugsource-0:1.20-1.module_el8.3+boostrrap524.x86_64
+    - perl-PerlIO-via-QuotedPrint-0:0.08-398.module_el8.3+boostrrap524.noarch
+    - perl-CPAN-Meta-0:2.150005-398.module_el8.3+boostrrap524.noarch
+    - perl-Module-CoreList-1:5.20180414-398.module_el8.3+boostrrap524.noarch
+    - perl-Scalar-List-Utils-debuginfo-3:1.42-398.module_el8.3+boostrrap524.x86_64
+    - perl-Term-ANSIColor-0:4.06-396.module_el8.3+boostrrap524.noarch
+    - perl-File-Find-Rule-0:0.34-8.module_el8.3+boostrrap524.noarch
+    - perl-Math-Complex-0:1.59-398.module_el8.3+boostrrap524.noarch
+    - perl-Scalar-List-Utils-3:1.42-398.module_el8.3+boostrrap524.x86_64
+    - perl-Digest-MD5-debuginfo-0:2.55-396.module_el8.3+boostrrap524.x86_64
+    - perl-threads-debuginfo-1:2.07-398.module_el8.3+boostrrap524.x86_64
+    - perl-Text-Levenshtein-Damerau-XS-debugsource-0:3.2-1.module_el8.3+boostrrap524.x86_64
+    - perl-Software-License-0:0.103012-4.module_el8.3+boostrrap524.noarch
+    - perl-Devel-PPPort-0:3.32-398.module_el8.3+boostrrap524.x86_64
+    - perl-Text-Tabs+Wrap-0:2013.0523-395.module_el8.3+boostrrap524.noarch
+    - perl-Test-Simple-1:1.302086-1.module_el8.3+boostrrap524.noarch
+    - perl-Text-Levenshtein-Damerau-XS-debuginfo-0:3.2-1.module_el8.3+boostrrap524.x86_64
+    - perl-Test-Output-0:1.03-8.module_el8.3+boostrrap524.noarch
+    - perl-IO-Socket-IP-0:0.39-5.module_el8.3+boostrrap524.noarch
+    - perl-File-Find-Rule-Perl-0:1.15-10.module_el8.3+boostrrap524.noarch
+    - perl-HTML-Parser-debuginfo-0:3.72-14.module_el8.3+boostrrap524.x86_64
+    - perl-Net-SSLeay-0:1.85-6.module_el8.3+boostrrap524.x86_64
+    - perl-devel-4:5.24.4-398.module_el8.3+boostrrap524.x86_64
+    - perl-BSD-Resource-debuginfo-0:1.291.100-5.module_el8.3+boostrrap524.x86_64
+    - perl-Devel-Peek-0:1.23-398.module_el8.3+boostrrap524.x86_64
+    - perl-Text-ParseWords-0:3.30-395.module_el8.3+boostrrap524.noarch
+    - perl-IO-Socket-IP-0:0.37-398.module_el8.3+boostrrap524.noarch
+    - perl-Test-NoWarnings-0:1.04-15.module_el8.3+boostrrap524.noarch
+    - perl-Devel-PPPort-0:3.36-5.module_el8.3+boostrrap524.x86_64
+    - perl-Encode-debuginfo-4:2.80-398.module_el8.3+boostrrap524.x86_64
+    - perl-PathTools-debugsource-0:3.63-367.module_el8.3+boostrrap524.x86_64
+    - perl-Module-Load-Conditional-0:0.68-395.module_el8.3+boostrrap524.noarch
+    - perl-Archive-Tar-0:2.04-398.module_el8.3+boostrrap524.noarch
+    - perl-Thread-Queue-0:3.13-1.module_el8.3+boostrrap524.noarch
+    - perl-Sys-Syslog-0:0.35-397.module_el8.3+boostrrap524.x86_64
+    - perl-Sub-Install-0:0.928-14.module_el8.3+boostrrap524.noarch
+    - perl-Digest-0:1.17-398.module_el8.3+boostrrap524.noarch
+    - perl-encoding-4:2.19-6.module_el8.3+boostrrap524.x86_64
+    - perl-IPC-System-Simple-0:1.25-17.module_el8.3+boostrrap524.noarch
+    - perl-Digest-SHA-debuginfo-1:6.02-1.module_el8.3+boostrrap524.x86_64
+    - perl-Pod-Checker-4:1.60-398.module_el8.3+boostrrap524.noarch
+    - perl-PathTools-0:3.63-398.module_el8.3+boostrrap524.x86_64
+    - perl-File-Path-0:2.12-367.module_el8.3+boostrrap524.noarch
+    - perl-Text-Glob-0:0.11-4.module_el8.3+boostrrap524.noarch
+    - perl-podlators-0:4.09-3.module_el8.3+boostrrap524.noarch
+    - perl-IO-0:1.36-398.module_el8.3+boostrrap524.x86_64
+    - perl-Compress-Raw-Bzip2-debuginfo-0:2.074-1.module_el8.3+boostrrap524.x86_64
+    - perl-Module-CoreList-tools-1:5.20180414-1.module_el8.3+boostrrap524.noarch
+    - perl-ExtUtils-MakeMaker-0:7.24-3.module_el8.3+boostrrap524.noarch
+    - perl-GSSAPI-debuginfo-0:0.28-18.module_el8.3+boostrrap524.x86_64
+    - perl-Net-LibIDN-debuginfo-0:0.12-29.module_el8.3+boostrrap524.x86_64
+    - perl-Math-BigRat-0:0.2608.02-398.module_el8.3+boostrrap524.noarch
+    - perl-IO-Socket-SSL-0:2.060-2.module_el8.3+boostrrap524.noarch
+    - perl-Storable-debuginfo-1:2.56-368.module_el8.3+boostrrap524.x86_64
+    - perl-Params-Util-0:1.07-22.module_el8.3+boostrrap524.x86_64
+    - perl-bignum-0:0.42-398.module_el8.3+boostrrap524.noarch
+    - perl-Socket-4:2.027-2.module_el8.3+boostrrap524.x86_64
+    - perl-Sys-Syslog-0:0.33-398.module_el8.3+boostrrap524.x86_64
+    - perl-Filter-debuginfo-2:1.55-398.module_el8.3+boostrrap524.x86_64
+    - perl-Module-Load-Conditional-0:0.64-398.module_el8.3+boostrrap524.noarch
+    - perl-ExtUtils-MM-Utils-0:7.24-3.module_el8.3+boostrrap524.noarch
+    - perl-Net-IDN-Encode-debugsource-0:2.400-6.module_el8.3+boostrrap524.x86_64
+    - perl-Compress-Raw-Bzip2-0:2.074-1.module_el8.3+boostrrap524.x86_64
+    - perl-Digest-SHA-1:6.02-1.module_el8.3+boostrrap524.x86_64
+    - perl-File-Slurp-Tiny-0:0.004-7.module_el8.3+boostrrap524.noarch
+    - perl-Number-Compare-0:0.03-19.module_el8.3+boostrrap524.noarch
+    - perl-ExtUtils-Install-0:2.04-367.module_el8.3+boostrrap524.noarch
+    - perl-Pod-Escapes-1:1.07-398.module_el8.3+boostrrap524.noarch
+    - perl-Devel-Size-debuginfo-0:0.81-2.module_el8.3+boostrrap524.x86_64
+    - perl-Unicode-Normalize-0:1.25-398.module_el8.3+boostrrap524.x86_64
+    - perl-Socket6-debugsource-0:0.28-6.module_el8.3+boostrrap524.x86_64
+    - perl-open-0:1.10-398.module_el8.3+boostrrap524.noarch
+    - perl-DB_File-0:1.842-1.module_el8.3+boostrrap524.x86_64
+    - perl-Unicode-Collate-debuginfo-0:1.20-1.module_el8.3+boostrrap524.x86_64
+    - perl-Devel-SelfStubber-0:1.05-398.module_el8.3+boostrrap524.noarch
+    - perl-Math-BigInt-FastCalc-debugsource-0:0.500.600-6.module_el8.3+boostrrap524.x86_64
+    - perl-IO-Socket-INET6-0:2.72-12.module_el8.3+boostrrap524.noarch
+    - perl-Pod-Coverage-TrustPod-0:0.100003-6.module_el8.3+boostrrap524.noarch
+    - perl-ExtUtils-Command-0:7.24-3.module_el8.3+boostrrap524.noarch
+    - perl-ExtUtils-CBuilder-1:0.280225-366.module_el8.3+boostrrap524.noarch
+    - perl-File-Find-Object-Rule-0:0.0306-6.module_el8.3+boostrrap524.noarch
+    - perl-YAML-Syck-debugsource-0:1.30-5.module_el8.3+boostrrap524.x86_64
+    - perl-Data-Section-0:0.200006-8.module_el8.3+boostrrap524.noarch
+    - perl-Math-BigInt-FastCalc-0:0.400-398.module_el8.3+boostrrap524.x86_64
+    - perl-DB_File-debuginfo-0:1.842-1.module_el8.3+boostrrap524.x86_64
+    - perl-Capture-Tiny-0:0.46-4.module_el8.3+boostrrap524.noarch
+    - perl-BSD-Resource-0:1.291.100-5.module_el8.3+boostrrap524.x86_64
+    - perl-Params-Check-1:0.38-395.module_el8.3+boostrrap524.noarch
+    - perl-Sys-Syslog-debugsource-0:0.35-397.module_el8.3+boostrrap524.x86_64
+    - perl-Digest-MD5-debuginfo-0:2.54-398.module_el8.3+boostrrap524.x86_64
+    - perl-Getopt-Long-0:2.48-398.module_el8.3+boostrrap524.noarch
+    - perl-Math-BigInt-FastCalc-0:0.500.600-6.module_el8.3+boostrrap524.x86_64
+    - perl-Pod-Simple-1:3.35-395.module_el8.3+boostrrap524.noarch
+    - perl-Time-HiRes-0:1.9753-1.module_el8.3+boostrrap524.x86_64
+    - perl-Text-Balanced-0:2.03-398.module_el8.3+boostrrap524.noarch
+    - perl-Test-Pod-0:1.51-8.module_el8.3+boostrrap524.noarch
+    - perl-Env-0:1.04-395.module_el8.3+boostrrap524.noarch
+    - perl-4:5.24.4-398.module_el8.3+boostrrap524.x86_64
+    - perl-CPAN-Meta-Requirements-0:2.140-396.module_el8.3+boostrrap524.noarch
+    - perl-Compress-Bzip2-debuginfo-0:2.26-6.module_el8.3+boostrrap524.x86_64
+    - perl-threads-1:2.21-2.module_el8.3+boostrrap524.x86_64
+    - perl-Test-Taint-0:1.06-19.module_el8.3+boostrrap524.x86_64
+    - perl-Class-XSAccessor-0:1.19-14.module_el8.3+boostrrap524.x86_64
+    - perl-Data-Dumper-debuginfo-0:2.161-4.module_el8.3+boostrrap524.x86_64
+    - perl-ExtUtils-CBuilder-1:0.280225-398.module_el8.3+boostrrap524.noarch
+    - perl-ExtUtils-MakeMaker-0:7.10-398.module_el8.3+boostrrap524.noarch
+    - perl-Unicode-Collate-0:1.20-1.module_el8.3+boostrrap524.x86_64
+    - perl-Time-HiRes-debuginfo-0:1.9753-1.module_el8.3+boostrrap524.x86_64
+    - perl-Pod-Perldoc-0:3.25-398.module_el8.3+boostrrap524.noarch
+    - perl-Sub-Identify-debugsource-0:0.14-6.module_el8.3+boostrrap524.x86_64
+    - perl-Data-OptList-0:0.110-6.module_el8.3+boostrrap524.noarch
+    - perl-Pod-Parser-0:1.63-1000.module_el8.3+boostrrap524.noarch
+    - perl-PathTools-debuginfo-0:3.63-367.module_el8.3+boostrrap524.x86_64
+    - perl-Compress-Raw-Bzip2-debugsource-0:2.074-1.module_el8.3+boostrrap524.x86_64
+    - perl-IO-HTML-0:1.001-10.module_el8.3+boostrrap524.noarch
+    - perl-libnet-0:3.11-3.module_el8.3+boostrrap524.noarch
+    - perl-Module-Load-1:0.32-398.module_el8.3+boostrrap524.noarch
+    - perl-IPC-SysV-debuginfo-0:2.07-397.module_el8.3+boostrrap524.x86_64
+    - perl-TermReadKey-0:2.37-2.module_el8.3+boostrrap524.x86_64
+    - perl-YAML-Syck-debuginfo-0:1.30-5.module_el8.3+boostrrap524.x86_64
+...
