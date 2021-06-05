@@ -15950,3 +15950,68 @@ data:
     - perl-Attribute-Handlers-0:0.99-404.module+el8.1.0+2926+ce7246ad.noarch
     - perl-Sub-Exporter-0:0.987-16.module+el8.1.0+2926+ce7246ad.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-YAML
+  stream: '1.24'
+  version: '8030020200313080146'
+  context: a6d43775
+  arch: x86_64
+  license:
+    content:
+    - GPL+ or Artistic
+    module:
+    - MIT
+  summary: Perl parser for YAML
+  description: 'The YAML.pm module implements a YAML Loader and Dumper based on the
+    YAML 1.0 specification. YAML is a generic data serialization language that is
+    optimized for human readability. It can be used to express the data structures
+    of most modern programming languages, including Perl. For information on the YAML
+    syntax, please refer to the YAML specification.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.30'
+      perl-YAML-bootstrap:
+      - '1.24'
+      platform:
+      - el8.3.0
+    requires:
+      perl:
+      - '5.30'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-YAML:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: The API.
+        ref: stream-1.24-rhel-8.3.0
+  api:
+    rpms:
+    - perl-YAML
+  buildopts:
+    rpms:
+      macros: '%_with_perl_YAML_enables_test 1
+
+        '
+  references:
+    community: https://metacpan.org/release/YAML
+  profiles:
+    common:
+      description: YAML distribution
+      rpms:
+      - perl-YAML
+  artifacts:
+    rpms:
+    - perl-YAML-0:1.24-3.module+el8.2.0+4275+eae590e8.noarch
+...
