@@ -16155,3 +16155,59 @@ data:
     - perl-Module-CPANfile-0:1.1002-7.module+el8.2.0+4278+abcfa81a.noarch
     - perl-CPAN-Meta-Check-0:0.014-6.module+el8.2.0+4278+abcfa81a.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-FCGI
+  stream: '0.78'
+  version: '8030020200313080105'
+  context: ea09926d
+  arch: x86_64
+  license:
+    content:
+    - OML
+    module:
+    - MIT
+  summary: FastCGI Perl bindings
+  description: 'This allows you to write a FastCGI client in the Perl language.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.24'
+      platform:
+      - el8.3.0
+    requires:
+      perl:
+      - '5.24'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-FCGI:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: The API.
+        ref: stream-0.78-rhel-8.3.0
+  api:
+    rpms:
+    - perl-FCGI
+  references:
+    community: https://metacpan.org/release/FCGI
+  profiles:
+    common:
+      description: FCGI distribution
+      rpms:
+      - perl-FCGI
+  artifacts:
+    rpms:
+    - perl-FCGI-1:0.78-11.module+el8.1.0+2932+c27421ac.x86_64
+    - perl-FCGI-debuginfo-1:0.78-11.module+el8.1.0+2932+c27421ac.x86_64
+    - perl-FCGI-debugsource-1:0.78-11.module+el8.1.0+2932+c27421ac.x86_64
+...
