@@ -4585,3 +4585,74 @@ data:
     - perl-Test-Deep-0:1.127-4.module_el8.3.0+perlyaml530+bootstrap.noarch
     - perl-Test-Base-0:0.89-3.module_el8.3.0+perlyaml530+bootstrap.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-YAML-bootstrap
+  stream: '1.24'
+  version: '1524'
+  context: '1524'
+  arch: x86_64
+  license:
+    module:
+    - MIT
+  summary: Helper module for boostrapping YAML
+  description: 'This module is not intended for general use. It''s a helper module
+    for bootstrapping YAML module.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl: []
+      platform:
+      - el8
+    requires:
+      perl: []
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-Spiffy:
+        buildorder: '1'
+        rationale: build dependency.
+        ref: 99b6a420e73a9c3850a51ee1e104ea73eb2e493a
+      perl-Test-Base:
+        buildorder: '3'
+        rationale: build dependency.
+        ref: 012d92a0a4eb44db6cdb5df67fcfc64155a97015
+      perl-Test-Deep:
+        buildorder: '2'
+        rationale: build dependency.
+        ref: c9a2090a088e44cd7b8b2c4bfd52b0b4ad9b96df
+      perl-Test-YAML:
+        buildorder: '4'
+        rationale: build dependency.
+        ref: 95189d28d4089ac878d7f6ef2e1f5d32a01df4f7
+      perl-YAML:
+        buildorder: '0'
+        rationale: build dependency.
+        ref: 9d3213c5e002029676df383aa86d8265fd93e0e3
+  buildopts:
+    rpms:
+      macros: '%perl_bootstrap 1
+
+        %_with_perl_YAML_enables_test 1
+
+        %_without_perl_Test_Base_enables_diff 1
+
+        %_without_perl_Test_Base_enables_extra_test 1
+
+        %_without_perl_Test_Base_enables_network 1
+
+        '
+  references:
+    community: https://metacpan.org/release/YAML
+  artifacts:
+    rpms:
+    - perl-Test-YAML-0:1.06-7.module_el8.3.0+perlyaml530+bootstrap.noarch
+    - perl-YAML-0:1.24-2.module_el8.3.0+perlyaml530+bootstrap.noarch
+    - perl-Spiffy-0:0.46-10.module_el8.3.0+perlyaml530+bootstrap.noarch
+    - perl-Test-Deep-0:1.127-4.module_el8.3.0+perlyaml530+bootstrap.noarch
+    - perl-Test-Base-0:0.89-3.module_el8.3.0+perlyaml530+bootstrap.noarch
+...
