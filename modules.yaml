@@ -16947,3 +16947,66 @@ data:
     - perl-HTML-Parser-debuginfo-0:3.72-15.module+el8.3.0+6498+31ea7642.x86_64
     - perl-HTML-Tagset-0:3.20-34.module+el8.3.0+6498+31ea7642.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-DBD-Pg
+  stream: '3.7'
+  version: '8030020200313075823'
+  context: 98a3c9d0
+  arch: x86_64
+  license:
+    content:
+    - GPLv2+ or Artistic
+    module:
+    - MIT
+  summary: A PostgreSQL interface for Perl
+  description: 'DBD::Pg is a Perl module that works with the DBI module to provide
+    access to PostgreSQL databases.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.24'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8.3.0
+      postgresql:
+      - '10'
+    requires:
+      perl:
+      - '5.24'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-DBD-Pg:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: The API.
+        ref: stream-3.7-rhel-8.3.0
+  api:
+    rpms:
+    - perl-DBD-Pg
+  references:
+    community: http://search.cpan.org/dist/DBD-Pg/
+  profiles:
+    common:
+      description: DBD-Pg distribution
+      rpms:
+      - perl-DBD-Pg
+  artifacts:
+    rpms:
+    - perl-DBD-Pg-0:3.7.4-4.module+el8.3.0+6565+7d8e397c.x86_64
+    - perl-DBD-Pg-debugsource-0:3.7.4-4.module+el8.3.0+6565+7d8e397c.x86_64
+    - perl-DBD-Pg-debuginfo-0:3.7.4-4.module+el8.3.0+6565+7d8e397c.x86_64
+...
