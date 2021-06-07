@@ -17097,3 +17097,143 @@ data:
     - php-mbstring-0:7.2.11-1.module+el8+2561+1aca3413.x86_64
     - libzip-debugsource-0:1.5.1-1.module+el8+2561+1aca3413.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-App-cpanminus
+  stream: '1.7044'
+  version: '8030020200313075600'
+  context: fd8d351b
+  arch: x86_64
+  license:
+    content:
+    - (GPL+ or Artistic) and GPLv2+
+    - ASL 2.0
+    - GPL+ or Artistic
+    module:
+    - MIT
+  summary: Get, unpack, build and install CPAN modules
+  description: 'This is a CPAN client that requires zero configuration, and stands
+    alone but it''s maintainable and extensible with plug-ins and friendly to shell
+    scripting.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.24'
+      platform:
+      - el8.3.0
+    requires:
+      perl:
+      - '5.24'
+      perl-YAML: []
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-App-cpanminus:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: The API.
+        ref: stream-1.7044-rhel-8.3.0
+      perl-CPAN-DistnameInfo:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Run-time dependency.
+        ref: stream-0.12-rhel-8.3.0
+      perl-CPAN-Meta-Check:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Run-time dependency.
+        ref: stream-0.014-rhel-8.3.0
+      perl-File-pushd:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Run-time dependency.
+        ref: stream-1.014-rhel-8.3.0
+      perl-Module-CPANfile:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Run-time dependency.
+        ref: stream-1.1002-rhel-8.3.0
+      perl-Parse-PMFile:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Run-time dependency.
+        ref: stream-0.41-rhel-8.3.0
+      perl-String-ShellQuote:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Run-time dependency.
+        ref: stream-1.04-rhel-8.3.0
+      perl-Test-Deep:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Build-time dependency.
+        ref: stream-1.127-rhel-8.3.0
+  api:
+    rpms:
+    - perl-App-cpanminus
+  buildopts:
+    rpms:
+      macros: '%_without_perl_CPAN_Meta_Check_enables_extra_test 1
+
+        '
+  references:
+    community: https://metacpan.org/release/App-cpanminus
+  profiles:
+    common:
+      description: App-cpanminus distribution
+      rpms:
+      - perl-App-cpanminus
+  filter:
+    rpms:
+    - perl-CPAN-DistnameInfo-dummy
+    - perl-Test-Deep
+  artifacts:
+    rpms:
+    - perl-Module-CPANfile-0:1.1002-7.module+el8.1.0+2942+110089f5.noarch
+    - perl-Test-Deep-0:1.127-4.module+el8.2.0+4278+3c6cbe3c.noarch
+    - perl-Parse-PMFile-0:0.41-7.module+el8.1.0+2942+110089f5.noarch
+    - perl-CPAN-Meta-Check-0:0.014-6.module+el8.1.0+2942+110089f5.noarch
+    - perl-File-pushd-0:1.014-6.module+el8.1.0+2942+110089f5.noarch
+    - perl-CPAN-DistnameInfo-0:0.12-13.module+el8.2.0+4278+3c6cbe3c.noarch
+    - perl-App-cpanminus-0:1.7044-5.module+el8.1.0+2942+110089f5.noarch
+    - perl-String-ShellQuote-0:1.04-24.module+el8.1.0+2942+110089f5.noarch
+...
