@@ -2126,7 +2126,7 @@ data:
   stream: '1.10'
   version: '820181213135032'
   context: 5ea3b708
-  arch: x86_64
+  arch:  i686
   license:
     content:
     - ASL 2.0
@@ -2305,7 +2305,7 @@ data:
   stream: '201801'
   version: '820181213140046'
   context: 302ab70f
-  arch: x86_64
+  arch: i686
   license:
     content:
     - BSD
