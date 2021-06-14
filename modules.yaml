@@ -1932,3 +1932,437 @@ data:
     - rubygem-mysql2-debuginfo-0:0.5.3-1.module+el8.3.0+7192+4e3a532a.i686
     - rubygem-bigdecimal-0:2.0.0-133.module+el8.3.0+7192+4e3a532a.i686
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: llvm-toolset
+  stream: rhel8
+  version: '8030020200820174250'
+  context: 30b713e6
+  arch: i686
+  license:
+    content:
+    - NCSA
+    - NCSA and MIT
+    - NCSA or MIT
+    module:
+    - MIT
+  summary: LLVM
+  description: LLVM Tools and libraries
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.3.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      clang:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        multilib:
+        - x86_64
+        rationale: clang tools and libraries
+        ref: stream-rhel-8-rhel-8.3.0
+      compiler-rt:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        multilib:
+        - x86_64
+        rationale: LLVM compiler intrinsic and sanitizer libraries
+        ref: stream-rhel-8-rhel-8.3.0
+      libomp:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        multilib:
+        - x86_64
+        rationale: LLVM OpenMP runtime
+        ref: stream-rhel-8-rhel-8.3.0
+      lld:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        multilib:
+        - x86_64
+        rationale: LLVM linker
+        ref: stream-rhel-8-rhel-8.3.0
+      lldb:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        multilib:
+        - x86_64
+        rationale: lldb debugger
+        ref: stream-rhel-8-rhel-8.3.0
+      llvm:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        multilib:
+        - x86_64
+        rationale: LLVM tools and libraries
+        ref: stream-rhel-8-rhel-8.3.0
+      llvm-toolset:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        multilib:
+        - x86_64
+        rationale: Meta package for llvm-toolset providing scl enable scripts.
+        ref: stream-rhel-8-rhel-8.3.0
+      python-lit:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Lit test runner for LLVM
+        ref: stream-rhel-8-rhel-8.3.0
+  api:
+    rpms:
+    - clang
+    - clang-analyzer
+    - clang-devel
+    - clang-libs
+    - clang-tools-extra
+    - git-clang-format
+    - lld
+    - lld-libs
+    - lldb
+    - lldb-devel
+    - llvm
+    - llvm-devel
+    - llvm-libs
+  profiles:
+    common:
+      rpms:
+      - llvm-toolset
+  artifacts:
+    rpms:
+    - llvm-devel-0:10.0.1-3.module+el8.3.0+7719+53d428de.i686
+    - libomp-test-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - libomp-debuginfo-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - clang-tools-extra-debuginfo-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - lld-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - llvm-debugsource-0:10.0.1-3.module+el8.3.0+7719+53d428de.i686
+    - python3-lit-0:0.10.0-1.module+el8.3.0+6367+3467b552.noarch
+    - lld-debuginfo-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - clang-libs-debuginfo-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - clang-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - llvm-libs-debuginfo-0:10.0.1-3.module+el8.3.0+7719+53d428de.i686
+    - clang-analyzer-0:10.0.1-1.module+el8.3.0+7459+90c24896.noarch
+    - libomp-devel-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - compiler-rt-debugsource-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - libomp-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - clang-tools-extra-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - git-clang-format-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - lldb-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - lld-devel-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - llvm-doc-0:10.0.1-3.module+el8.3.0+7719+53d428de.noarch
+    - llvm-test-debuginfo-0:10.0.1-3.module+el8.3.0+7719+53d428de.i686
+    - lld-libs-debuginfo-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - llvm-googletest-0:10.0.1-3.module+el8.3.0+7719+53d428de.i686
+    - python3-lldb-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - lld-debugsource-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - python3-clang-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - compiler-rt-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - clang-debuginfo-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - lld-libs-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - lldb-devel-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - llvm-toolset-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - clang-devel-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - llvm-devel-debuginfo-0:10.0.1-3.module+el8.3.0+7719+53d428de.i686
+    - llvm-debuginfo-0:10.0.1-3.module+el8.3.0+7719+53d428de.i686
+    - llvm-static-0:10.0.1-3.module+el8.3.0+7719+53d428de.i686
+    - compiler-rt-debuginfo-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - clang-debugsource-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - llvm-0:10.0.1-3.module+el8.3.0+7719+53d428de.i686
+    - llvm-libs-0:10.0.1-3.module+el8.3.0+7719+53d428de.i686
+    - llvm-test-0:10.0.1-3.module+el8.3.0+7719+53d428de.i686
+    - libomp-debugsource-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - clang-libs-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - lldb-debugsource-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - lldb-debuginfo-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - lld-test-debuginfo-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+    - lld-test-0:10.0.1-1.module+el8.3.0+7459+90c24896.i686
+...
+---
+document: modulemd
+version: 2
+data:
+  name: ant
+  stream: '1.10'
+  version: '820181213135032'
+  context: 5ea3b708
+  arch: x86_64
+  license:
+    content:
+    - ASL 2.0
+    module:
+    - MIT
+  summary: Java build tool
+  description: Apache Ant is a Java library and command-line tool whose mission is
+    to drive processes described in build files as targets and extension points dependent
+    upon each other. The main known usage of Ant is the build of Java applications.
+    Ant supplies a number of built-in tasks allowing to compile, assemble, test and
+    run Java applications. Ant can also be used effectively to build non Java applications,
+    for instance C or C++ applications. More generally, Ant can be used to pilot any
+    type of process which can be described in terms of targets and tasks.
+  dependencies:
+  - buildrequires:
+      javapackages-tools:
+      - 201801
+      platform:
+      - el8
+    requires:
+      platform: []
+  components:
+    rpms:
+      ant:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 10
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/ant
+        rationale: 'Module API.
+
+          '
+        ref: stream-ant-1.10
+        repository: git://pkgs.devel.redhat.com/rpms/ant
+  api:
+    rpms:
+    - ant
+  buildopts:
+    rpms:
+      macros: '%_with_xmvn_javadoc 1
+
+        %_without_asciidoc 1
+
+        %_without_avalon 1
+
+        %_without_bouncycastle 1
+
+        %_without_cython 1
+
+        %_without_dafsa 1
+
+        %_without_desktop 1
+
+        %_without_doxygen 1
+
+        %_without_dtd 1
+
+        %_without_eclipse 1
+
+        %_without_ehcache 1
+
+        %_without_emacs 1
+
+        %_without_equinox 1
+
+        %_without_fop 1
+
+        %_without_ftp 1
+
+        %_without_gradle 1
+
+        %_without_groovy 1
+
+        %_without_hadoop 1
+
+        %_without_hsqldb 1
+
+        %_without_itext 1
+
+        %_without_jackson 1
+
+        %_without_jmh 1
+
+        %_without_jna 1
+
+        %_without_jpa 1
+
+        %_without_junit5 1
+
+        %_without_logback 1
+
+        %_without_markdown 1
+
+        %_without_memcached 1
+
+        %_without_memoryfilesystem 1
+
+        %_without_obr 1
+
+        %_without_python 1
+
+        %_without_reporting 1
+
+        %_without_scm 1
+
+        %_without_snappy 1
+
+        %_without_spring 1
+
+        %_without_ssh 1
+
+        %_without_testlib 1
+
+        '
+  references:
+    community: https://ant.apache.org/
+  profiles:
+    common:
+      rpms:
+      - ant
+  filter:
+    rpms:
+    - ant-antlr
+    - ant-apache-bcel
+    - ant-apache-bsf
+    - ant-apache-log4j
+    - ant-apache-oro
+    - ant-apache-regexp
+    - ant-apache-resolver
+    - ant-apache-xalan2
+    - ant-commons-logging
+    - ant-commons-net
+    - ant-javadoc
+    - ant-javamail
+    - ant-jdepend
+    - ant-jmf
+    - ant-jsch
+    - ant-junit
+    - ant-manual
+    - ant-swing
+    - ant-testutil
+    - ant-xz
+  artifacts:
+    rpms:
+    - ant-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-javamail-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-xalan2-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-manual-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-commons-net-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-regexp-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-antlr-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-resolver-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-commons-logging-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-swing-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-junit-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-lib-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-log4j-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-javadoc-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-xz-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-jdepend-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-testutil-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-jsch-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-bcel-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-jmf-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-bsf-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-oro-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: javapackages-runtime
+  stream: '201801'
+  version: '820181213140046'
+  context: 302ab70f
+  arch: x86_64
+  license:
+    content:
+    - BSD
+    module:
+    - MIT
+  summary: Basic runtime utilities to support Java applications
+  description: This module contains basic filesystem layout and runtime utilities
+    used to support system applications written in JVM languages.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform: []
+  components:
+    rpms:
+      javapackages-tools:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/javapackages-tools
+        rationale: 'Module API.
+
+          '
+        ref: stream-javapackages-runtime-201801
+        repository: git://pkgs.devel.redhat.com/rpms/javapackages-tools
+  api:
+    rpms:
+    - javapackages-filesystem
+    - javapackages-tools
+  buildopts:
+    rpms:
+      macros: '%_without_asciidoc 1
+
+        %_without_gradle 1
+
+        '
+  profiles:
+    common:
+      rpms:
+      - javapackages-filesystem
+      - javapackages-tools
+  filter:
+    rpms:
+    - ivy-local
+    - javapackages-local
+    - maven-local
+    - python3-javapackages
+  artifacts:
+    rpms:
+    - python3-javapackages-0:5.3.0-1.module+el8+2447+6f56d9a6.noarch
+    - javapackages-filesystem-0:5.3.0-1.module+el8+2447+6f56d9a6.noarch
+    - maven-local-0:5.3.0-1.module+el8+2447+6f56d9a6.noarch
+    - javapackages-local-0:5.3.0-1.module+el8+2447+6f56d9a6.noarch
+    - javapackages-tools-0:5.3.0-1.module+el8+2447+6f56d9a6.noarch
+    - ivy-local-0:5.3.0-1.module+el8+2447+6f56d9a6.noarch
+...
