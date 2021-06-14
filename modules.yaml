@@ -7457,6 +7457,7 @@ data:
     - rubygem-openssl-debuginfo-0:2.1.2-133.module+el8.3.0+7192+4e3a532a.x86_64
     - rubygem-minitest-0:5.13.0-133.module+el8.3.0+7192+4e3a532a.noarch
     - rubygem-openssl-0:2.1.2-133.module+el8.3.0+7192+4e3a532a.x86_64
+    - rubygem-openssl-0:2.1.2-133.module+el8.3.0+7192+4e3a532a.i686
     - rubygem-mongo-doc-0:2.11.3-1.module+el8.3.0+7192+4e3a532a.noarch
     - rubygem-rdoc-0:6.2.1-133.module+el8.3.0+7192+4e3a532a.noarch
     - ruby-doc-0:2.7.1-133.module+el8.3.0+7192+4e3a532a.noarch
