@@ -3734,13 +3734,16 @@ data:
     - ocaml-hivex-0:1.3.18-20.module+el8.3.0+6423+e4cb6418.i686
     - ocaml-hivex-0:1.3.18-20.module+el8.3.0+6423+e4cb6418.x86_64
     - ocaml-hivex-debuginfo-0:1.3.18-20.module+el8.3.0+6423+e4cb6418.i686
+    - ocaml-hivex-debuginfo-0:1.3.18-20.module+el8.3.0+6423+e4cb6418.x86_64
     - ocaml-hivex-devel-0:1.3.18-20.module+el8.3.0+6423+e4cb6418.i686
     - ocaml-hivex-devel-0:1.3.18-20.module+el8.3.0+6423+e4cb6418.x86_64
     - ocaml-libguestfs-1:1.40.2-25.module+el8.3.0+7421+642fe24f.x86_64
     - ocaml-libguestfs-devel-1:1.40.2-25.module+el8.3.0+7421+642fe24f.x86_64
+    - ocaml-libguestfs-debuginfo-1:1.40.2-25.module+el8.3.0+7421+642fe24f.x86_64
     - ocaml-libnbd-0:1.2.2-1.module+el8.3.0+7353+9de0a3cc.i686
     - ocaml-libnbd-0:1.2.2-1.module+el8.3.0+7353+9de0a3cc.x86_64
     - ocaml-libnbd-debuginfo-0:1.2.2-1.module+el8.3.0+7353+9de0a3cc.i686
+    - ocaml-libnbd-debuginfo-0:1.2.2-1.module+el8.3.0+7353+9de0a3cc.x86_64
     - ocaml-libnbd-devel-0:1.2.2-1.module+el8.3.0+7353+9de0a3cc.i686
     - ocaml-libnbd-devel-0:1.2.2-1.module+el8.3.0+7353+9de0a3cc.x86_64
     - perl-Sys-Virt-0:6.0.0-1.module+el8.3.0+6423+e4cb6418.i686
@@ -3759,4 +3762,5 @@ data:
     - sgabios-1:0.20170427git-3.module+el8.1.0+4066+0f1aadab.i686
     - sgabios-bin-1:0.20170427git-3.module+el8.1.0+4066+0f1aadab.noarch
     - qemu-kvm-tests-15:4.2.0-34.module+el8.3.0+10437+1ca0c2ba.5.x86_64
+    - qemu-kvm-tests-debuginfo-15:4.2.0-34.module+el8.3.0+10437+1ca0c2ba.5.x86_64
 ...
