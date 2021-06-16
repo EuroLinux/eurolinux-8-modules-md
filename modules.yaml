@@ -3528,7 +3528,7 @@ data:
   stream: '10.3'
   version: '8030020210324132345'
   context: 229f0a1c
-  arch: x86_64
+  arch: i686
   license:
     content:
     - Boost
