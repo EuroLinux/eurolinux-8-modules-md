@@ -3520,3 +3520,125 @@ data:
     - libnbd-debugsource-0:1.2.2-1.module+el8.3.0+7353+9de0a3cc.i686
     - libvirt-libs-0:6.0.0-28.1.module+el8.3.0+10448+0c705bc6.i686
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: mariadb-devel
+  stream: '10.3'
+  version: '8030020210324132345'
+  context: 229f0a1c
+  arch: x86_64
+  license:
+    content:
+    - Boost
+    - GPLv2
+    - GPLv2 with exceptions and LGPLv2 and BSD
+    - LGPLv2+
+    module:
+    - MIT
+  summary: MariaDB Module
+  description: MariaDB is a community developed branch of MySQL. MariaDB is a multi-user,
+    multi-threaded SQL database server. It is a client/server implementation consisting
+    of a server daemon (mysqld) and many different client programs and libraries.
+    The base package contains the standard MariaDB/MySQL client programs and generic
+    MySQL files.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.3.0.z
+    requires:
+      mariadb:
+      - '10.3'
+      platform:
+      - el8
+  components:
+    rpms:
+      Judy:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '4'
+        rationale: MariaDB dependency for OQgraph computation engine
+        ref: stream-mariadb-10.3-rhel-8.3.0
+      asio:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '12'
+        rationale: Galera dependency for asynchronous I/O operation
+        ref: stream-mariadb-10.3-rhel-8.3.0
+      galera:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '16'
+        rationale: Galera package for MariaDB server replication
+        ref: stream-10.3-rhel-8.3.0
+      mariadb:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '8'
+        rationale: MariaDB package
+        ref: stream-10.3-rhel-8.3.0
+  buildopts:
+    rpms:
+      macros: '%runselftest 1
+
+        %ignore_testsuite_result 0
+
+        '
+  references:
+    community: http://mariadb.org
+    documentation: https://mariadb.com/kb/en/library/documentation/
+    tracker: http://bugzilla.redhat.com
+  filter:
+    rpms:
+    - Judy-devel
+    - asio-devel
+  artifacts:
+    rpms:
+    - mariadb-server-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - mariadb-test-debuginfo-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - mariadb-server-utils-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - mariadb-embedded-debuginfo-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - mariadb-gssapi-server-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - mariadb-errmsg-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - mariadb-oqgraph-engine-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - mariadb-embedded-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - galera-0:25.3.32-1.module+el8.3.0+10472+7adc332a.i686
+    - mariadb-server-utils-debuginfo-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - mariadb-devel-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - mariadb-server-galera-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - mariadb-backup-debuginfo-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - galera-debuginfo-0:25.3.32-1.module+el8.3.0+10472+7adc332a.i686
+    - mariadb-backup-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - asio-devel-0:1.10.8-7.module+el8+2765+cfa4f87b.i686
+    - mariadb-gssapi-server-debuginfo-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - Judy-0:1.0.5-18.module+el8+2765+cfa4f87b.i686
+    - mariadb-server-debuginfo-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - mariadb-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - mariadb-embedded-devel-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - mariadb-oqgraph-engine-debuginfo-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - Judy-debuginfo-0:1.0.5-18.module+el8+2765+cfa4f87b.i686
+    - mariadb-common-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - mariadb-debugsource-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - galera-debugsource-0:25.3.32-1.module+el8.3.0+10472+7adc332a.i686
+    - Judy-debugsource-0:1.0.5-18.module+el8+2765+cfa4f87b.i686
+    - mariadb-debuginfo-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - mariadb-test-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
+    - Judy-devel-0:1.0.5-18.module+el8+2765+cfa4f87b.i686
+...
