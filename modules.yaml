@@ -17431,3 +17431,97 @@ data:
     - nodejs-debuginfo-1:14.16.0-2.module+el8.3.0+10180+b92e1eb6.x86_64
     - nodejs-nodemon-0:2.0.3-1.module+el8.3.0+6519+9f98ed83.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: inkscape
+  stream: 0.92.3
+  version: '8040020201209081344'
+  context: 6435bff4
+  arch: x86_64
+  license:
+    content:
+    - ASL 2.0
+    - GPLv2+ and CC-BY
+    module:
+    - GPL-2.0
+  summary: Vector-based drawing program using SVG
+  description: 'Inkscape is a vector graphics editor, with capabilities similar to
+
+    Illustrator, CorelDraw, or Xara X, using the W3C standard Scalable Vector
+
+    Graphics (SVG) file format.  It is therefore a very useful tool for web
+
+    designers and as an interchange format for desktop publishing.
+
+
+    Inkscape supports many advanced SVG features (markers, clones, alpha
+
+    blending, etc.) and great care is taken in designing a streamlined
+
+    interface. It is very easy to edit nodes, perform complex path operations,
+
+    trace bitmaps and much more.'
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+      python27:
+      - '2.7'
+    requires:
+      platform:
+      - el8
+      python27:
+      - '2.7'
+  components:
+    rpms:
+      inkscape:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Module API.
+        ref: stream-0.92.3-rhel-8.4.0
+      python-scour:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Runtime requirement of inkscape, should not be in API.
+        ref: stream-0.35-rhel-8.4.0
+  api:
+    rpms:
+    - inkscape
+  buildopts:
+    rpms:
+      macros: '%_with_python2 1
+
+        '
+  references:
+    documentation: https://inkscape.org/en/learn/
+    tracker: https://bugs.launchpad.net/inkscape
+  profiles:
+    common:
+      rpms:
+      - inkscape
+  filter:
+    rpms:
+    - python3-*
+    - python3-dns
+    - python3-scour
+  artifacts:
+    rpms:
+    - python2-scour-0:0.35-9.module+el8.1.0+3666+f1394dd4.noarch
+    - python3-scour-0:0.35-9.module+el8.1.0+3666+f1394dd4.noarch
+    - inkscape-0:0.92.3-13.module+el8.4.0+9084+d4695395.x86_64
+    - inkscape-view-0:0.92.3-13.module+el8.4.0+9084+d4695395.x86_64
+    - inkscape-docs-0:0.92.3-13.module+el8.4.0+9084+d4695395.x86_64
+    - inkscape-debugsource-0:0.92.3-13.module+el8.4.0+9084+d4695395.x86_64
+    - inkscape-debuginfo-0:0.92.3-13.module+el8.4.0+9084+d4695395.x86_64
+    - inkscape-view-debuginfo-0:0.92.3-13.module+el8.4.0+9084+d4695395.x86_64
+...
