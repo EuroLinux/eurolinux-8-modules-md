@@ -17591,3 +17591,57 @@ data:
     - squid-debugsource-7:4.11-4.module+el8.4.0+10676+a969168e.2.x86_64
     - squid-debuginfo-7:4.11-4.module+el8.4.0+10676+a969168e.2.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: redis
+  stream: '6'
+  version: '8040020210512055424'
+  context: 522a0ee4
+  arch: x86_64
+  license:
+    content:
+    - BSD and MIT
+    - CC-BY-SA
+    module:
+    - GPLv2+
+  summary: Redis persistent key-value database
+  description: redis 6 module
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      redis:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Module API.
+        ref: stream-6-rhel-8.4.0
+  api:
+    rpms:
+    - redis
+  references:
+    documentation: https://redis.io/documentation
+    tracker: https://github.com/antirez/redis/issues
+  profiles:
+    common:
+      rpms:
+      - redis
+  artifacts:
+    rpms:
+    - redis-0:6.0.9-3.module+el8.4.0+10984+ed187465.x86_64
+    - redis-devel-0:6.0.9-3.module+el8.4.0+10984+ed187465.x86_64
+    - redis-doc-0:6.0.9-3.module+el8.4.0+10984+ed187465.noarch
+    - redis-debugsource-0:6.0.9-3.module+el8.4.0+10984+ed187465.x86_64
+    - redis-debuginfo-0:6.0.9-3.module+el8.4.0+10984+ed187465.x86_64
+...
