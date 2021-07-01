@@ -18218,3 +18218,111 @@ data:
     - mailman-debugsource-3:2.1.29-11.module+el8.4.0+8277+5e2c6e6e.x86_64
     - mailman-debuginfo-3:2.1.29-11.module+el8.4.0+8277+5e2c6e6e.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: postgresql
+  stream: '12'
+  version: '8040020210604112312'
+  context: 522a0ee4
+  arch: x86_64
+  license:
+    content:
+    - MIT
+    - PostgreSQL
+    module:
+    - MIT
+  summary: PostgreSQL server and client module
+  description: PostgreSQL is an advanced Object-Relational database management system
+    (DBMS). The postgresql-server package contains the programs needed to create and
+    run a PostgreSQL server, which will in turn allow you to create and maintain PostgreSQL
+    databases. The base postgresql package contains the client programs that you'll
+    need to access a PostgreSQL DBMS server.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      pgaudit:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: pgaudit extension
+        ref: stream-12-rhel-8.4.0
+      postgres-decoderbufs:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: postgres-decoderbufs extension
+        ref: stream-12-rhel-8.4.0
+      postgresql:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Module API.
+        ref: stream-12-rhel-8.4.0
+  api:
+    rpms:
+    - postgresql
+    - postgresql-server
+  references:
+    community: https://www.postgresql.org
+    documentation: https://www.postgresql.org/docs/12/index.html
+    tracker: http://bugzilla.redhat.com
+  profiles:
+    client:
+      rpms:
+      - postgresql
+    server:
+      rpms:
+      - postgresql-server
+  artifacts:
+    rpms:
+    - postgresql-docs-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-upgrade-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgres-decoderbufs-debugsource-0:0.10.0-2.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-upgrade-devel-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-server-devel-debuginfo-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgres-decoderbufs-debuginfo-0:0.10.0-2.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-docs-debuginfo-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-upgrade-devel-debuginfo-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-server-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgres-decoderbufs-0:0.10.0-2.module+el8.4.0+11288+c193d6d7.x86_64
+    - pgaudit-0:1.4.0-6.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-server-devel-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-plpython3-debuginfo-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-server-debuginfo-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-test-debuginfo-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-pltcl-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-debuginfo-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - pgaudit-debugsource-0:1.4.0-6.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-test-rpm-macros-0:12.7-1.module+el8.4.0+11288+c193d6d7.noarch
+    - postgresql-debugsource-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-plpython3-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-plperl-debuginfo-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-test-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-upgrade-debuginfo-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-contrib-debuginfo-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-pltcl-debuginfo-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-contrib-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-plperl-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - pgaudit-debuginfo-0:1.4.0-6.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-static-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+    - postgresql-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
+...
