@@ -18326,3 +18326,143 @@ data:
     - postgresql-static-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
     - postgresql-0:12.7-1.module+el8.4.0+11288+c193d6d7.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: jmc
+  stream: rhel8
+  version: '8040020210304170237'
+  context: deb7c738
+  arch: x86_64
+  license:
+    content:
+    - ASL 2.0
+    - ASL 2.0 and (BSD and GPLv2+)
+    - BSD
+    - BSD and CC0
+    - EPL-2.0 or GPLv2 with exceptions
+    - UPL
+    module:
+    - GPL
+  summary: Java Mission Control is a profiling and diagnostics tool for the Hotspot
+    JVM
+  description: Java Mission Control is a powerful profiler for HotSpot JVMs and has
+    an advanced set of tools that enables efficient and detailed analysis of the extensive
+    data collected by Java Flight Recorder. The tool chain enables developers and
+    administrators to collect and analyze data from Java applications running locally
+    or deployed in production environments.
+  dependencies:
+  - buildrequires:
+      javapackages-tools:
+      - '201801'
+      platform:
+      - el8
+      tycho:
+      - rhel8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      HdrHistogram:
+        arches:
+        - x86_64
+        buildorder: '2'
+        rationale: 'Dependency of jmc.
+
+          '
+        ref: stream-rhel8-rhel-8.4.0
+      directory-maven-plugin:
+        arches:
+        - x86_64
+        rationale: 'Dependency of jmc and jaf.
+
+          '
+        ref: stream-rhel8-rhel-8.4.0
+      ee4j-parent:
+        arches:
+        - x86_64
+        rationale: 'Dependency of jaf.
+
+          '
+        ref: stream-rhel8-rhel-8.4.0
+      jaf:
+        arches:
+        - x86_64
+        buildorder: '1'
+        rationale: 'Dependency of jmc.
+
+          '
+        ref: stream-rhel8-rhel-8.4.0
+      jmc:
+        arches:
+        - x86_64
+        buildorder: '3'
+        rationale: 'Standalone application.
+
+          '
+        ref: stream-rhel8-rhel-8.4.0
+      jmc-core:
+        arches:
+        - x86_64
+        buildorder: '2'
+        rationale: 'Core API. Dependency of jmc.
+
+          '
+        ref: stream-rhel8-rhel-8.4.0
+      lz4-java:
+        arches:
+        - x86_64
+        buildorder: '1'
+        rationale: 'Dependency of jmc-core
+
+          '
+        ref: stream-rhel8-rhel-8.4.0
+      mvel:
+        arches:
+        - x86_64
+        rationale: 'Dependency of lz4-java.
+
+          '
+        ref: stream-rhel8-rhel-8.4.0
+      owasp-java-encoder:
+        arches:
+        - x86_64
+        rationale: 'Dependency of jmc-core.
+
+          '
+        ref: stream-rhel8-rhel-8.4.0
+  api:
+    rpms:
+    - jmc-core
+  profiles:
+    common:
+      rpms:
+      - jmc
+    core:
+      rpms:
+      - jmc-core
+  filter:
+    rpms:
+    - mvel
+    - mvel-javadoc
+  artifacts:
+    rpms:
+    - owasp-java-encoder-0:1.2.2-3.module+el8.4.0+10229+75da8244.noarch
+    - owasp-java-encoder-javadoc-0:1.2.2-3.module+el8.4.0+10229+75da8244.noarch
+    - mvel-0:2.4.10-3.module+el8.4.0+10229+75da8244.noarch
+    - mvel-javadoc-0:2.4.10-3.module+el8.4.0+10229+75da8244.noarch
+    - ee4j-parent-0:1.0.1-2.module+el8.4.0+10229+75da8244.noarch
+    - directory-maven-plugin-0:0.3.1-2.module+el8.4.0+10229+75da8244.noarch
+    - directory-maven-plugin-javadoc-0:0.3.1-2.module+el8.4.0+10229+75da8244.noarch
+    - lz4-java-0:1.7.1-14.module+el8.4.0+10097+8ec6ff4d.x86_64
+    - lz4-java-javadoc-0:1.7.1-14.module+el8.4.0+10097+8ec6ff4d.noarch
+    - jaf-0:1.2.1-5.module+el8.4.0+10229+75da8244.noarch
+    - jaf-javadoc-0:1.2.1-5.module+el8.4.0+10229+75da8244.noarch
+    - jmc-core-0:8.0.0-2.module+el8.4.0+10229+75da8244.noarch
+    - jmc-core-javadoc-0:8.0.0-2.module+el8.4.0+10229+75da8244.noarch
+    - HdrHistogram-0:2.1.11-3.module+el8.4.0+10229+75da8244.noarch
+    - HdrHistogram-javadoc-0:2.1.11-3.module+el8.4.0+10229+75da8244.noarch
+    - jmc-0:8.0.0-8.module+el8.4.0+10229+75da8244.x86_64
+...
