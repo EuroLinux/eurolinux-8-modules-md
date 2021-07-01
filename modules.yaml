@@ -18160,3 +18160,61 @@ data:
     - Judy-debugsource-0:1.0.5-18.module+el8.4.0+9031+9abc7af9.x86_64
     - galera-debuginfo-0:26.4.7-1.module+el8.4.0+10457+88cd7ba1.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: mailman
+  stream: '2.1'
+  version: '8040020200930071637'
+  context: 6435bff4
+  arch: x86_64
+  license:
+    content:
+    - GPLv2+
+    module:
+    - MIT
+  summary: Electronic mail discussion and e-newsletter lists managing software
+  description: An initial version of the mailman mailing list management software
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+      python27:
+      - '2.7'
+    requires:
+      platform:
+      - el8
+      python27:
+      - '2.7'
+  components:
+    rpms:
+      mailman:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Module API.
+        ref: stream-2.1-rhel-8.4.0
+  api:
+    rpms:
+    - mailman
+  references:
+    documentation: https://launchpad.net/mailman
+    tracker: https://bugs.launchpad.net/mailman
+  profiles:
+    common:
+      rpms:
+      - mailman
+  filter:
+    rpms:
+    - python3-dns
+  artifacts:
+    rpms:
+    - mailman-3:2.1.29-11.module+el8.4.0+8277+5e2c6e6e.x86_64
+    - mailman-debugsource-3:2.1.29-11.module+el8.4.0+8277+5e2c6e6e.x86_64
+    - mailman-debuginfo-3:2.1.29-11.module+el8.4.0+8277+5e2c6e6e.x86_64
+...
