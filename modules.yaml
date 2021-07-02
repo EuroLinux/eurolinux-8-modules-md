@@ -19762,3 +19762,79 @@ data:
     - rubygem-mysql2-debugsource-0:0.4.10-4.module+el8.1.0+3656+f80bfa1d.x86_64
     - ruby-irb-0:2.5.9-107.module+el8.4.0+10822+fe4fffb1.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: nginx
+  stream: '1.18'
+  version: '8040020210526100943'
+  context: 522a0ee4
+  arch: x86_64
+  license:
+    content:
+    - BSD
+    module:
+    - MIT
+  summary: nginx webserver
+  description: nginx 1.18 webserver module
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.4.0.z
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      nginx:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Module API.
+        ref: stream-1.18-rhel-8.4.0
+  api:
+    rpms:
+    - nginx
+    - nginx-all-modules
+    - nginx-filesystem
+    - nginx-mod-http-image-filter
+    - nginx-mod-http-perl
+    - nginx-mod-http-xslt-filter
+    - nginx-mod-mail
+    - nginx-mod-stream
+  references:
+    documentation: http://nginx.org/en/docs/
+    tracker: https://trac.nginx.org/nginx/
+  profiles:
+    common:
+      rpms:
+      - nginx
+      - nginx-all-modules
+      - nginx-filesystem
+      - nginx-mod-http-image-filter
+      - nginx-mod-http-perl
+      - nginx-mod-http-xslt-filter
+      - nginx-mod-mail
+      - nginx-mod-stream
+  artifacts:
+    rpms:
+    - nginx-debugsource-1:1.18.0-3.module+el8.4.0+11152+f736ed63.1.x86_64
+    - nginx-mod-http-image-filter-1:1.18.0-3.module+el8.4.0+11152+f736ed63.1.x86_64
+    - nginx-mod-http-xslt-filter-debuginfo-1:1.18.0-3.module+el8.4.0+11152+f736ed63.1.x86_64
+    - nginx-filesystem-1:1.18.0-3.module+el8.4.0+11152+f736ed63.1.noarch
+    - nginx-mod-http-perl-debuginfo-1:1.18.0-3.module+el8.4.0+11152+f736ed63.1.x86_64
+    - nginx-mod-stream-debuginfo-1:1.18.0-3.module+el8.4.0+11152+f736ed63.1.x86_64
+    - nginx-mod-mail-1:1.18.0-3.module+el8.4.0+11152+f736ed63.1.x86_64
+    - nginx-debuginfo-1:1.18.0-3.module+el8.4.0+11152+f736ed63.1.x86_64
+    - nginx-mod-http-perl-1:1.18.0-3.module+el8.4.0+11152+f736ed63.1.x86_64
+    - nginx-all-modules-1:1.18.0-3.module+el8.4.0+11152+f736ed63.1.noarch
+    - nginx-mod-http-image-filter-debuginfo-1:1.18.0-3.module+el8.4.0+11152+f736ed63.1.x86_64
+    - nginx-mod-mail-debuginfo-1:1.18.0-3.module+el8.4.0+11152+f736ed63.1.x86_64
+    - nginx-1:1.18.0-3.module+el8.4.0+11152+f736ed63.1.x86_64
+    - nginx-mod-http-xslt-filter-1:1.18.0-3.module+el8.4.0+11152+f736ed63.1.x86_64
+    - nginx-mod-stream-1:1.18.0-3.module+el8.4.0+11152+f736ed63.1.x86_64
+...
