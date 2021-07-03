@@ -3044,3 +3044,188 @@ data:
     - rubygems-0:3.1.6-136.module+el8.4.0+10728+4c884998.noarch
     - rubygems-devel-0:3.1.6-136.module+el8.4.0+10728+4c884998.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: llvm-toolset
+  stream: rhel8
+  version: '8040020210219122224'
+  context: 9f9e2e7e
+  arch: i686
+  license:
+    content:
+    - NCSA
+    - NCSA and MIT
+    - NCSA or MIT
+    module:
+    - MIT
+  summary: LLVM
+  description: LLVM Tools and libraries
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.4.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      clang:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        multilib:
+        - x86_64
+        rationale: clang tools and libraries
+        ref: stream-rhel-8-rhel-8.4.0
+      compiler-rt:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        multilib:
+        - x86_64
+        rationale: LLVM compiler intrinsic and sanitizer libraries
+        ref: stream-rhel-8-rhel-8.4.0
+      libomp:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        multilib:
+        - x86_64
+        rationale: LLVM OpenMP runtime
+        ref: stream-rhel-8-rhel-8.4.0
+      lld:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        multilib:
+        - x86_64
+        rationale: LLVM linker
+        ref: stream-rhel-8-rhel-8.4.0
+      lldb:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        multilib:
+        - x86_64
+        rationale: lldb debugger
+        ref: stream-rhel-8-rhel-8.4.0
+      llvm:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        multilib:
+        - x86_64
+        rationale: LLVM tools and libraries
+        ref: stream-rhel-8-rhel-8.4.0
+      llvm-toolset:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        multilib:
+        - x86_64
+        rationale: Meta package for llvm-toolset providing scl enable scripts.
+        ref: stream-rhel-8-rhel-8.4.0
+      python-lit:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Lit test runner for LLVM
+        ref: stream-rhel-8-rhel-8.4.0
+  api:
+    rpms:
+    - clang
+    - clang-analyzer
+    - clang-devel
+    - clang-libs
+    - clang-tools-extra
+    - git-clang-format
+    - lld
+    - lld-libs
+    - lldb
+    - lldb-devel
+    - llvm
+    - llvm-devel
+    - llvm-libs
+  profiles:
+    common:
+      rpms:
+      - llvm-toolset
+  artifacts:
+    rpms:
+    - llvm-test-debuginfo-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - clang-devel-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - clang-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - lld-libs-debuginfo-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
+    - clang-analyzer-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.noarch
+    - libomp-test-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - lldb-debugsource-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - compiler-rt-debugsource-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-test-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-libs-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-devel-debuginfo-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - python3-clang-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - libomp-devel-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - clang-tools-extra-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - clang-libs-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-static-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - libomp-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - clang-libs-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - clang-debugsource-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - lldb-devel-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-doc-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.noarch
+    - llvm-googletest-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - libomp-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - compiler-rt-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - compiler-rt-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-toolset-0:11.0.0-1.module+el8.4.0+8724+f6b3479d.i686
+    - libomp-debugsource-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - lld-libs-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
+    - clang-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - lldb-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - lld-devel-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
+    - python3-lit-0:0.11.0-1.module+el8.4.0+8598+a071fcd5.noarch
+    - lld-test-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
+    - lld-test-debuginfo-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
+    - llvm-debugsource-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - clang-tools-extra-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-libs-debuginfo-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - lld-debugsource-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
+    - llvm-debuginfo-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - lldb-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-devel-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - python3-lldb-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - lld-debuginfo-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
+    - lld-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
+    - git-clang-format-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+...
