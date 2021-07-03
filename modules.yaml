@@ -19519,52 +19519,84 @@ data:
       - llvm-toolset
   artifacts:
     rpms:
-    - libomp-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - lldb-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - lld-debugsource-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
-    - lldb-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - lld-libs-debuginfo-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
-    - llvm-debugsource-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
-    - libomp-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - clang-analyzer-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.noarch
-    - clang-debugsource-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - git-clang-format-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - compiler-rt-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - lld-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
-    - lld-devel-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
-    - python3-clang-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - lld-test-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
-    - clang-devel-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
     - clang-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - clang-libs-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - libomp-debugsource-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - lldb-devel-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - clang-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - clang-analyzer-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.noarch
     - clang-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - lld-libs-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
-    - llvm-libs-debuginfo-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
-    - compiler-rt-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - lld-debuginfo-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
-    - llvm-devel-debuginfo-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
-    - llvm-test-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
-    - llvm-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
-    - llvm-doc-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.noarch
-    - clang-tools-extra-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - llvm-devel-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
-    - python3-lldb-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - lldb-debugsource-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - python3-lit-0:0.11.0-1.module+el8.4.0+8598+a071fcd5.noarch
-    - compiler-rt-debugsource-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - llvm-toolset-0:11.0.0-1.module+el8.4.0+8724+f6b3479d.x86_64
+    - clang-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - clang-debugsource-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - clang-debugsource-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - clang-devel-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - clang-devel-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - clang-libs-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - clang-libs-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
     - clang-libs-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - lld-test-debuginfo-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
-    - llvm-test-debuginfo-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
-    - llvm-static-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
+    - clang-libs-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - clang-tools-extra-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - clang-tools-extra-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
     - clang-tools-extra-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - llvm-googletest-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
-    - libomp-test-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
-    - llvm-debuginfo-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
-    - llvm-libs-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
+    - compiler-rt-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - compiler-rt-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - compiler-rt-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - compiler-rt-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - compiler-rt-debugsource-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - compiler-rt-debugsource-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - git-clang-format-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - git-clang-format-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - libomp-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - libomp-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - libomp-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - libomp-debugsource-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
     - libomp-devel-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - libomp-devel-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - libomp-test-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - libomp-test-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - lld-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
+    - lld-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
+    - lld-debuginfo-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
+    - lld-debugsource-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
+    - lld-devel-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
+    - lld-devel-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
+    - lld-libs-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
+    - lld-libs-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
+    - lld-libs-debuginfo-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
+    - lld-test-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
+    - lld-test-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
+    - lld-test-debuginfo-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
+    - lldb-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - lldb-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - lldb-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - lldb-debugsource-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - lldb-devel-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - lldb-devel-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
+    - llvm-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-debuginfo-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
+    - llvm-debugsource-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
+    - llvm-devel-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
+    - llvm-devel-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-devel-debuginfo-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
+    - llvm-devel-debuginfo-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-doc-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.noarch
+    - llvm-googletest-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
+    - llvm-googletest-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-libs-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
+    - llvm-libs-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-libs-debuginfo-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
+    - llvm-libs-debuginfo-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-static-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
+    - llvm-static-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-test-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
+    - llvm-test-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-test-debuginfo-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
+    - llvm-test-debuginfo-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
+    - llvm-toolset-0:11.0.0-1.module+el8.4.0+8724+f6b3479d.x86_64
+    - llvm-toolset-0:11.0.0-1.module+el8.4.0+8724+f6b3479d.i686
+    - python3-clang-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - python3-clang-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
+    - python3-lit-0:0.11.0-1.module+el8.4.0+8598+a071fcd5.noarch
+    - python3-lldb-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - python3-lldb-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
 ...
 ---
 document: modulemd
