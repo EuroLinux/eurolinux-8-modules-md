@@ -21845,3 +21845,102 @@ data:
     - python36-rpm-macros-0:3.6.8-2.module+el8.1.0+3334+5cb623d7.noarch
     - scipy-debugsource-0:1.0.0-20.module+el8.1.0+3334+5cb623d7.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: pki-core
+  stream: '10.6'
+  version: '8040020210519185901'
+  context: 17df0a3f
+  arch: x86_64
+  license:
+    content:
+    - GPLv2 and LGPLv2
+    - LGPLv2+
+    - MPLv1.1 or GPLv2+ or LGPLv2+
+    module:
+    - MIT
+  summary: PKI Core module for PKI 10.6 or later
+  description: A module for PKI Core packages for PKI version 10.6 or later.
+  dependencies:
+  - buildrequires:
+      golang-ecosystem:
+      - '1.0'
+      pki-deps:
+      - '10.6'
+      platform:
+      - el8
+    requires:
+      pki-deps:
+      - '10.6'
+      platform:
+      - el8
+  components:
+    rpms:
+      jss:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: JSS packages
+        ref: stream-pki-10.6-rhel-8.4.0
+      ldapjdk:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: LDAP JDK packages
+        ref: stream-pki-10.6-rhel-8.4.0
+      pki-core:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        rationale: PKI Core packages
+        ref: stream-pki-10.6-rhel-8.4.0
+      tomcatjss:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: TomcatJSS packages
+        ref: stream-pki-10.6-rhel-8.4.0
+  references:
+    community: https://www.dogtagpki.org
+    documentation: https://www.dogtagpki.org
+    tracker: https://github.com/dogtagpki/pki/issues
+  artifacts:
+    rpms:
+    - jss-debuginfo-0:4.8.1-2.module+el8.4.0+10451+3e5b5448.x86_64
+    - pki-ca-0:10.10.5-3.module+el8.4.0+11039+635979e4.noarch
+    - tomcatjss-0:7.6.1-1.module+el8.4.0+8778+d07929ff.noarch
+    - pki-symkey-debuginfo-0:10.10.5-3.module+el8.4.0+11039+635979e4.x86_64
+    - pki-tools-0:10.10.5-3.module+el8.4.0+11039+635979e4.x86_64
+    - python3-pki-0:10.10.5-3.module+el8.4.0+11039+635979e4.noarch
+    - pki-base-java-0:10.10.5-3.module+el8.4.0+11039+635979e4.noarch
+    - ldapjdk-0:4.22.0-1.module+el8.3.0+6784+6e1e4c62.noarch
+    - ldapjdk-javadoc-0:4.22.0-1.module+el8.3.0+6784+6e1e4c62.noarch
+    - jss-0:4.8.1-2.module+el8.4.0+10451+3e5b5448.x86_64
+    - pki-server-0:10.10.5-3.module+el8.4.0+11039+635979e4.noarch
+    - pki-base-0:10.10.5-3.module+el8.4.0+11039+635979e4.noarch
+    - pki-acme-0:10.10.5-3.module+el8.4.0+11039+635979e4.noarch
+    - pki-core-debuginfo-0:10.10.5-3.module+el8.4.0+11039+635979e4.x86_64
+    - pki-core-debugsource-0:10.10.5-3.module+el8.4.0+11039+635979e4.x86_64
+    - jss-debugsource-0:4.8.1-2.module+el8.4.0+10451+3e5b5448.x86_64
+    - pki-symkey-0:10.10.5-3.module+el8.4.0+11039+635979e4.x86_64
+    - pki-kra-0:10.10.5-3.module+el8.4.0+11039+635979e4.noarch
+    - pki-tools-debuginfo-0:10.10.5-3.module+el8.4.0+11039+635979e4.x86_64
+    - jss-javadoc-0:4.8.1-2.module+el8.4.0+10451+3e5b5448.x86_64
+...
