@@ -19546,7 +19546,9 @@ data:
     - libomp-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
     - libomp-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
     - libomp-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - libomp-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
     - libomp-debugsource-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - libomp-debugsource-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
     - libomp-devel-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
     - libomp-devel-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
     - libomp-test-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
@@ -19554,25 +19556,33 @@ data:
     - lld-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
     - lld-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
     - lld-debuginfo-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
+    - lld-debuginfo-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
     - lld-debugsource-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
+    - lld-debugsource-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
     - lld-devel-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
     - lld-devel-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
     - lld-libs-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
     - lld-libs-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
     - lld-libs-debuginfo-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
+    - lld-libs-debuginfo-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
     - lld-test-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
     - lld-test-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
     - lld-test-debuginfo-0:11.0.0-3.module+el8.4.0+8719+b61528dc.x86_64
+    - lld-test-debuginfo-0:11.0.0-3.module+el8.4.0+8719+b61528dc.i686
     - lldb-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
     - lldb-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
     - lldb-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - lldb-debuginfo-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
     - lldb-debugsource-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
+    - lldb-debugsource-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
     - lldb-devel-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.x86_64
     - lldb-devel-0:11.0.0-1.module+el8.4.0+8598+a071fcd5.i686
     - llvm-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
     - llvm-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
     - llvm-debuginfo-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
+    - llvm-debuginfo-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
     - llvm-debugsource-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
+    - llvm-debugsource-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
     - llvm-devel-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
     - llvm-devel-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.i686
     - llvm-devel-debuginfo-0:11.0.0-2.module+el8.4.0+8598+a071fcd5.x86_64
