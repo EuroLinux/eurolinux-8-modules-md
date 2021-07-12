@@ -25058,6 +25058,7 @@ data:
     - buildah-debuginfo-0:1.19.7-2.module+el8.4.0+11311+9da8acfb.x86_64
     - buildah-tests-debuginfo-0:1.19.7-2.module+el8.4.0+11311+9da8acfb.x86_64
 ...
+---
 document: modulemd
 version: 2
 data:
