@@ -25504,7 +25504,7 @@ data:
       httpd:
       - '2.4'
       platform:
-      - el8.4.0
+      - el8
       python39:
       - 3.9-bootstrap
       swig:
