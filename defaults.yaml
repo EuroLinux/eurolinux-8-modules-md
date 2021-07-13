@@ -371,9 +371,9 @@ data:
   stream: rhel8
   profiles:
     1.0: [common]
+    rhel8: [common]
     2.0: [common]
     3.0: [common]
-    rhel8: [common]
 ...
 ---
 document: modulemd-defaults
