@@ -26516,14 +26516,14 @@ data:
       - go-toolset
   artifacts:
     rpms:
-    - go-toolset-0:1.15.14-1.el8.x86_64
-    - golang-0:1.15.14-1.el8.x86_64
-    - golang-docs-0:1.15.14-1.el8.noarch
-    - golang-misc-0:1.15.14-1.el8.noarch
-    - golang-tests-0:1.15.14-1.el8.noarch
-    - golang-src-0:1.15.14-1.el8.noarch
-    - golang-bin-0:1.15.14-1.el8.x86_64
-    - golang-race-0:1.15.14-1.el8.x86_64
+    - go-toolset-0:1.15.14-1.module+el8.4.0+11833+614b07b8.x86_64
+    - golang-0:1.15.14-1.module+el8.4.0+11833+614b07b8.x86_64
+    - golang-docs-0:1.15.14-1.module+el8.4.0+11833+614b07b8.noarch
+    - golang-misc-0:1.15.14-1.module+el8.4.0+11833+614b07b8.noarch
+    - golang-tests-0:1.15.14-1.module+el8.4.0+11833+614b07b8.noarch
+    - golang-src-0:1.15.14-1.module+el8.4.0+11833+614b07b8.noarch
+    - golang-bin-0:1.15.14-1.module+el8.4.0+11833+614b07b8.x86_64
+    - golang-race-0:1.15.14-1.module+el8.4.0+11833+614b07b8.x86_64
     - delve-0:1.5.0-2.module+el8.4.0+8864+58b0fcdb.x86_64
     - delve-debuginfo-0:1.5.0-2.module+el8.4.0+8864+58b0fcdb.x86_64
     - delve-debugsource-0:1.5.0-2.module+el8.4.0+8864+58b0fcdb.x86_64
