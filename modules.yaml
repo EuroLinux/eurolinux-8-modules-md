@@ -26528,3 +26528,57 @@ data:
     - delve-debuginfo-0:1.5.0-2.module+el8.4.0+8864+58b0fcdb.x86_64
     - delve-debugsource-0:1.5.0-2.module+el8.4.0+8864+58b0fcdb.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: 389-ds
+  stream: '1.4'
+  version: '8040020210721074904'
+  context: 96015a92
+  arch: x86_64
+  license:
+    content:
+    - GPLv3+
+    module:
+    - MIT
+  summary: 389 Directory Server (base)
+  description: 389 Directory Server is an LDAPv3 compliant server.  The base package
+    includes the LDAP server and command line utilities for server administration.
+  dependencies:
+  - buildrequires:
+      nodejs:
+      - '10'
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      389-ds-base:
+        arches:
+        - aarch64
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Package in api
+        ref: stream-1.4-rhel-8.4.0
+  filter:
+    rpms:
+    - cockpit-389-ds
+  artifacts:
+    rpms:
+    - 389-ds-base-0:1.4.3.16-19.module+el8.4.0+11894+f5bb5c43.x86_64
+    - 389-ds-base-libs-0:1.4.3.16-19.module+el8.4.0+11894+f5bb5c43.x86_64
+    - 389-ds-base-legacy-tools-0:1.4.3.16-19.module+el8.4.0+11894+f5bb5c43.x86_64
+    - 389-ds-base-devel-0:1.4.3.16-19.module+el8.4.0+11894+f5bb5c43.x86_64
+    - 389-ds-base-snmp-0:1.4.3.16-19.module+el8.4.0+11894+f5bb5c43.x86_64
+    - python3-lib389-0:1.4.3.16-19.module+el8.4.0+11894+f5bb5c43.noarch
+    - cockpit-389-ds-0:1.4.3.16-19.module+el8.4.0+11894+f5bb5c43.noarch
+    - 389-ds-base-debugsource-0:1.4.3.16-19.module+el8.4.0+11894+f5bb5c43.x86_64
+    - 389-ds-base-debuginfo-0:1.4.3.16-19.module+el8.4.0+11894+f5bb5c43.x86_64
+    - 389-ds-base-libs-debuginfo-0:1.4.3.16-19.module+el8.4.0+11894+f5bb5c43.x86_64
+    - 389-ds-base-legacy-tools-debuginfo-0:1.4.3.16-19.module+el8.4.0+11894+f5bb5c43.x86_64
+    - 389-ds-base-snmp-debuginfo-0:1.4.3.16-19.module+el8.4.0+11894+f5bb5c43.x86_64
+...
