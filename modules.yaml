@@ -26997,16 +26997,20 @@ data:
   artifacts:
     rpms:
     - ruby-0:2.7.4-137.module+el8.4.0+12025+f744ca41.x86_64
+    - ruby-0:2.7.4-137.module+el8.4.0+12025+f744ca41.i686
     - ruby-debuginfo-0:2.7.4-137.module+el8.4.0+12025+f744ca41.x86_64
     - ruby-debugsource-0:2.7.4-137.module+el8.4.0+12025+f744ca41.x86_64
     - ruby-default-gems-0:2.7.4-137.module+el8.4.0+12025+f744ca41.noarch
     - ruby-devel-0:2.7.4-137.module+el8.4.0+12025+f744ca41.x86_64
+    - ruby-devel-0:2.7.4-137.module+el8.4.0+12025+f744ca41.i686
     - ruby-doc-0:2.7.4-137.module+el8.4.0+12025+f744ca41.noarch
     - ruby-libs-0:2.7.4-137.module+el8.4.0+12025+f744ca41.x86_64
+    - ruby-libs-0:2.7.4-137.module+el8.4.0+12025+f744ca41.i686
     - ruby-libs-debuginfo-0:2.7.4-137.module+el8.4.0+12025+f744ca41.x86_64
     - rubygem-abrt-0:0.4.0-1.module+el8.3.0+7192+4e3a532a.noarch
     - rubygem-abrt-doc-0:0.4.0-1.module+el8.3.0+7192+4e3a532a.noarch
     - rubygem-bigdecimal-0:2.0.0-137.module+el8.4.0+12025+f744ca41.x86_64
+    - rubygem-bigdecimal-0:2.0.0-137.module+el8.4.0+12025+f744ca41.i686
     - rubygem-bigdecimal-debuginfo-0:2.0.0-137.module+el8.4.0+12025+f744ca41.x86_64
     - rubygem-bson-0:4.8.1-1.module+el8.3.0+7192+4e3a532a.x86_64
     - rubygem-bson-debuginfo-0:4.8.1-1.module+el8.3.0+7192+4e3a532a.x86_64
@@ -27014,9 +27018,11 @@ data:
     - rubygem-bson-doc-0:4.8.1-1.module+el8.3.0+7192+4e3a532a.noarch
     - rubygem-bundler-0:2.2.24-137.module+el8.4.0+12025+f744ca41.noarch
     - rubygem-io-console-0:0.5.6-137.module+el8.4.0+12025+f744ca41.x86_64
+    - rubygem-io-console-0:0.5.6-137.module+el8.4.0+12025+f744ca41.i686
     - rubygem-io-console-debuginfo-0:0.5.6-137.module+el8.4.0+12025+f744ca41.x86_64
     - rubygem-irb-0:1.2.6-137.module+el8.4.0+12025+f744ca41.noarch
     - rubygem-json-0:2.3.0-137.module+el8.4.0+12025+f744ca41.x86_64
+    - rubygem-json-0:2.3.0-137.module+el8.4.0+12025+f744ca41.i686
     - rubygem-json-debuginfo-0:2.3.0-137.module+el8.4.0+12025+f744ca41.x86_64
     - rubygem-minitest-0:5.13.0-137.module+el8.4.0+12025+f744ca41.noarch
     - rubygem-mongo-0:2.11.3-1.module+el8.3.0+7192+4e3a532a.noarch
@@ -27027,6 +27033,7 @@ data:
     - rubygem-mysql2-doc-0:0.5.3-1.module+el8.3.0+7192+4e3a532a.noarch
     - rubygem-net-telnet-0:0.2.0-137.module+el8.4.0+12025+f744ca41.noarch
     - rubygem-openssl-0:2.1.2-137.module+el8.4.0+12025+f744ca41.x86_64
+    - rubygem-openssl-0:2.1.2-137.module+el8.4.0+12025+f744ca41.i686
     - rubygem-openssl-debuginfo-0:2.1.2-137.module+el8.4.0+12025+f744ca41.x86_64
     - rubygem-pg-0:1.2.3-1.module+el8.3.0+7192+4e3a532a.x86_64
     - rubygem-pg-debuginfo-0:1.2.3-1.module+el8.3.0+7192+4e3a532a.x86_64
@@ -27034,6 +27041,7 @@ data:
     - rubygem-pg-doc-0:1.2.3-1.module+el8.3.0+7192+4e3a532a.noarch
     - rubygem-power_assert-0:1.1.7-137.module+el8.4.0+12025+f744ca41.noarch
     - rubygem-psych-0:3.1.0-137.module+el8.4.0+12025+f744ca41.x86_64
+    - rubygem-psych-0:3.1.0-137.module+el8.4.0+12025+f744ca41.i686
     - rubygem-psych-debuginfo-0:3.1.0-137.module+el8.4.0+12025+f744ca41.x86_64
     - rubygem-rake-0:13.0.1-137.module+el8.4.0+12025+f744ca41.noarch
     - rubygem-rdoc-0:6.2.1.1-137.module+el8.4.0+12025+f744ca41.noarch
