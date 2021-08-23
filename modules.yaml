@@ -3548,8 +3548,6 @@ data:
       platform:
       - el8.3.0.z
     requires:
-      mariadb:
-      - '10.3'
       platform:
       - el8
   components:
@@ -3641,4 +3639,420 @@ data:
     - mariadb-debuginfo-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
     - mariadb-test-3:10.3.28-1.module+el8.3.0+10472+7adc332a.i686
     - Judy-devel-0:1.0.5-18.module+el8+2765+cfa4f87b.i686
+...
+---
+document: modulemd
+version: 2
+data:
+  name: python38-devel
+  stream: '3.8'
+  version: '8040020210420090415'
+  context: 6dfe838a
+  arch: x86_64
+  license:
+    content:
+    - BSD or ASL 2.0
+    - MIT
+    - MIT and Public Domain
+    module:
+    - MIT
+  summary: Python programming language, version 3.8
+  description: 'This module gives users access to the internal Python 3.8 in RHEL8,
+    as
+
+    well as provides some additional Python packages the users might need.
+
+    In addition to these you can install any python3-* package available
+
+    in RHEL and use it with Python from this module.'
+  dependencies:
+  - buildrequires:
+      httpd:
+      - '2.4'
+      platform:
+      - el8
+      python38:
+      - '3.8'
+      swig:
+      - '3.0'
+    requires:
+      platform:
+      - el8
+      python38:
+      - '3.8'
+  components:
+    rpms:
+      Cython:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-0.29.14-rhel-8.4.0
+      PyYAML:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-5.3.1-rhel-8.4.0
+      babel:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-2.7.0-rhel-8.4.0
+      mod_wsgi:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-4.6.8-rhel-8.4.0
+      numpy:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-1.17.3-rhel-8.4.0
+      pytest:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-4.6.6-rhel-8.4.0
+      python-PyMySQL:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-0.10.1-python38-rhel-8.4.0
+      python-asn1crypto:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-1.2.0-rhel-8.4.0
+      python-atomicwrites:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-1.3.0-rhel-8.4.0
+      python-attrs:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-19.3.0-rhel-8.4.0
+      python-cffi:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-1.13.2-rhel-8.4.0
+      python-chardet:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-3.0.4-python38-rhel-8.4.0
+      python-cryptography:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-2.8-rhel-8.4.0
+      python-idna:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-2.8-rhel-8.4.0
+      python-jinja2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-2.10.3-rhel-8.4.0
+      python-lxml:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-4.4.1-rhel-8.4.0
+      python-markupsafe:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-1.1.1-rhel-8.4.0
+      python-more-itertools:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-7.2.0-rhel-8.4.0
+      python-packaging:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-19.2-rhel-8.4.0
+      python-pluggy:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-0.13.0-rhel-8.4.0
+      python-ply:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-3.11-rhel-8.4.0
+      python-psutil:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-5.6.4-rhel-8.4.0
+      python-psycopg2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-2.8.4-rhel-8.4.0
+      python-py:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-1.8.0-rhel-8.4.0
+      python-pycparser:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-2.19-rhel-8.4.0
+      python-pysocks:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-1.7.1-rhel-8.4.0
+      python-requests:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-2.22.0-rhel-8.4.0
+      python-urllib3:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-1.25.7-rhel-8.4.0
+      python-wcwidth:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-0.1.7-rhel-8.4.0
+      python-wheel:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Packaging tool
+        ref: stream-0.33.6-rhel-8.4.0
+      python38:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: The main Python interpreter
+        ref: stream-3.8-rhel-8.4.0
+      python3x-pip:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Packaging tool
+        ref: stream-19.3.1-rhel-8.4.0
+      python3x-pyparsing:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-2.4.5-rhel-8.4.0
+      python3x-setuptools:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Packaging tool
+        ref: stream-41.6.0-rhel-8.4.0
+      python3x-six:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-1.12.0-rhel-8.4.0
+      pytz:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-2019.3-rhel-8.4.0
+      scipy:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python component
+        ref: stream-1.3.1-rhel-8.4.0
+  buildopts:
+    rpms:
+      macros: '# === Bootstrap phase 3/4 ===
+
+        #
+
+        %python3_pkgversion 38
+
+        %_without_python2 1
+
+        # py, pyparsing, atomicwrites, packaging, pytest
+
+        %_without_docs 1
+
+        '
+  references:
+    community: https://www.python.org/
+    documentation: https://docs.python.org/3.8/
+  filter:
+    rpms:
+    - python38-atomicwrites
+    - python38-attrs
+    - python38-more-itertools
+    - python38-packaging
+    - python38-pluggy
+    - python38-py
+    - python38-pyparsing
+    - python38-pytest
+    - python38-wcwidth
+  artifacts:
+    rpms:
+    - python38-pyparsing-0:2.4.5-3.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-wcwidth-0:0.1.7-16.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-py-0:1.8.0-8.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-pluggy-0:0.13.0-3.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-packaging-0:19.2-3.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-more-itertools-0:7.2.0-5.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-attrs-0:19.3.0-3.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-atomicwrites-0:1.3.0-8.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-pytest-0:4.6.6-3.module+el8.4.0+8888+89bc7e79.noarch
 ...
