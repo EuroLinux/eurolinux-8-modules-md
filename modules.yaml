@@ -27142,6 +27142,7 @@ data:
     - rust-gdb-0:1.52.1-1.module+el8.4.0+11282+0729bac9.noarch
     - rust-analysis-0:1.52.1-1.module+el8.4.0+11282+0729bac9.x86_64
 ...
+---
 document: modulemd
 version: 2
 data:
