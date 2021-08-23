@@ -27050,3 +27050,95 @@ data:
     - rubygems-0:3.1.6-137.module+el8.4.0+12025+f744ca41.noarch
     - rubygems-devel-0:3.1.6-137.module+el8.4.0+12025+f744ca41.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: rust-toolset
+  stream: rhel8
+  version: '8040020210603202531'
+  context: 2daa1a95
+  arch: x86_64
+  license:
+    content:
+    - (ASL 2.0 or MIT) and (BSD and MIT)
+    - ASL 2.0 or MIT
+    module:
+    - MIT
+  summary: Rust
+  description: Rust Toolset
+  dependencies:
+  - buildrequires:
+      llvm-toolset:
+      - rhel8
+      platform:
+      - el8
+      rust-toolset:
+      - rhel8
+    requires:
+      llvm-toolset:
+      - rhel8
+      platform:
+      - el8
+  components:
+    rpms:
+      rust:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Rust compiler and tools
+        ref: stream-rhel-8-rhel-8.4.0
+      rust-toolset:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Meta package for rust-toolset.
+        ref: stream-rhel-8-rhel-8.4.0
+  api:
+    rpms:
+    - cargo
+    - cargo-doc
+    - clippy
+    - rls
+    - rust
+    - rust-analysis
+    - rust-doc
+    - rust-gdb
+    - rust-lldb
+    - rust-src
+    - rust-std-static
+    - rust-toolset
+    - rustfmt
+  profiles:
+    common:
+      rpms:
+      - rust-toolset
+  artifacts:
+    rpms:
+    - rust-debuginfo-0:1.52.1-1.module+el8.4.0+11282+0729bac9.x86_64
+    - clippy-0:1.52.1-1.module+el8.4.0+11282+0729bac9.x86_64
+    - cargo-debuginfo-0:1.52.1-1.module+el8.4.0+11282+0729bac9.x86_64
+    - rls-0:1.52.1-1.module+el8.4.0+11282+0729bac9.x86_64
+    - rust-doc-0:1.52.1-1.module+el8.4.0+11282+0729bac9.x86_64
+    - rustfmt-0:1.52.1-1.module+el8.4.0+11282+0729bac9.x86_64
+    - rust-toolset-0:1.52.1-1.module+el8.4.0+11282+0729bac9.x86_64
+    - rust-lldb-0:1.52.1-1.module+el8.4.0+11282+0729bac9.noarch
+    - rust-debugsource-0:1.52.1-1.module+el8.4.0+11282+0729bac9.x86_64
+    - cargo-doc-0:1.52.1-1.module+el8.4.0+11282+0729bac9.noarch
+    - rustfmt-debuginfo-0:1.52.1-1.module+el8.4.0+11282+0729bac9.x86_64
+    - clippy-debuginfo-0:1.52.1-1.module+el8.4.0+11282+0729bac9.x86_64
+    - rust-std-static-0:1.52.1-1.module+el8.4.0+11282+0729bac9.x86_64
+    - rust-0:1.52.1-1.module+el8.4.0+11282+0729bac9.x86_64
+    - rust-src-0:1.52.1-1.module+el8.4.0+11282+0729bac9.noarch
+    - cargo-0:1.52.1-1.module+el8.4.0+11282+0729bac9.x86_64
+    - rust-debugger-common-0:1.52.1-1.module+el8.4.0+11282+0729bac9.noarch
+    - rls-debuginfo-0:1.52.1-1.module+el8.4.0+11282+0729bac9.x86_64
+    - rust-gdb-0:1.52.1-1.module+el8.4.0+11282+0729bac9.noarch
+    - rust-analysis-0:1.52.1-1.module+el8.4.0+11282+0729bac9.x86_64
+...
