@@ -6,7 +6,7 @@ data:
   stream: '2.4'
   version: '8040020210127115317'
   context: 9f9e2e7e
-  arch: x86_64
+  arch: aarch64
   license:
     content:
     - ASL 2.0
@@ -112,7 +112,7 @@ data:
   stream: '5'
   version: '8000020190711140130'
   context: f8e95b4e
-  arch: x86_64
+  arch: aarch64
   license:
     content:
     - BSD and MIT
@@ -171,7 +171,7 @@ data:
   stream: '6'
   version: '8040020210512055424'
   context: 522a0ee4
-  arch: x86_64
+  arch: aarch64
   license:
     content:
     - BSD and MIT
@@ -225,7 +225,7 @@ data:
   stream: '201801'
   version: '820181213140046'
   context: 302ab70f
-  arch: x86_64
+  arch: aarch64
   license:
     content:
     - BSD
@@ -294,7 +294,7 @@ data:
   stream: '9.6'
   version: '8040020210602182503'
   context: 522a0ee4
-  arch: x86_64
+  arch: aarch64
   license:
     content:
     - PostgreSQL
@@ -371,7 +371,7 @@ data:
   stream: '13'
   version: '8040020210602192705'
   context: 522a0ee4
-  arch: x86_64
+  arch: aarch64
   license:
     content:
     - MIT
@@ -479,7 +479,7 @@ data:
   stream: '12'
   version: '8040020210604112312'
   context: 522a0ee4
-  arch: x86_64
+  arch: aarch64
   license:
     content:
     - MIT
@@ -587,7 +587,7 @@ data:
   stream: '4'
   version: '8040020210420090912'
   context: 522a0ee4
-  arch: x86_64
+  arch: aarch64
   license:
     content:
     - BSD
@@ -653,7 +653,7 @@ data:
   stream: '8.0'
   version: '8020020200828111438'
   context: 4cda2c84
-  arch: x86_64
+  arch: aarch64
   license:
     content:
     - BSD or LGPLv2+ or GPL+
@@ -766,4 +766,428 @@ data:
     - mysql-server-debuginfo-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
     - mysql-devel-debuginfo-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
     - mysql-test-debuginfo-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: nodejs
+  stream: '10'
+  version: '8030020210225164533'
+  context: 229f0a1c
+  arch: aarch64
+  license:
+    content:
+    - MIT
+    - MIT and ASL 2.0 and ISC and BSD
+    module:
+    - MIT
+  summary: Javascript runtime
+  description: Node.js is a platform built on Chrome's JavaScript runtime for easily
+    building fast, scalable network applications. Node.js uses an event-driven, non-blocking
+    I/O model that makes it lightweight and efficient, perfect for data-intensive
+    real-time applications that run across distributed devices.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      nodejs:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        rationale: Javascript runtime and npm package manager.
+        ref: stream-10-rhel-8.3.0
+      nodejs-nodemon:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '200'
+        rationale: Simple monitor script for use during development of a node.js app
+        ref: stream-rhel-8.0-rhel-8.3.0
+      nodejs-packaging:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '100'
+        rationale: RPM Macros and Utilities for Node.js Packaging
+        ref: stream-rhel-8.0-rhel-8.3.0
+  api:
+    rpms:
+    - nodejs
+    - nodejs-devel
+    - npm
+  buildopts:
+    rpms:
+      macros: '%_with_bootstrap 1
+
+        '
+  references:
+    community: http://nodejs.org
+    documentation: http://nodejs.org/en/docs
+    tracker: https://github.com/nodejs/node/issues
+  profiles:
+    common:
+      rpms:
+      - nodejs
+      - npm
+    development:
+      rpms:
+      - nodejs
+      - nodejs-devel
+      - npm
+    minimal:
+      rpms:
+      - nodejs
+    s2i:
+      rpms:
+      - nodejs
+      - nodejs-nodemon
+      - npm
+  artifacts:
+    rpms:
+    - nodejs-1:10.24.0-1.module+el8.3.0+10166+b07ac28e.aarch64
+    - nodejs-devel-1:10.24.0-1.module+el8.3.0+10166+b07ac28e.aarch64
+    - nodejs-full-i18n-1:10.24.0-1.module+el8.3.0+10166+b07ac28e.aarch64
+    - npm-1:6.14.11-1.10.24.0.1.module+el8.3.0+10166+b07ac28e.aarch64
+    - nodejs-docs-1:10.24.0-1.module+el8.3.0+10166+b07ac28e.noarch
+    - nodejs-debugsource-1:10.24.0-1.module+el8.3.0+10166+b07ac28e.aarch64
+    - nodejs-debuginfo-1:10.24.0-1.module+el8.3.0+10166+b07ac28e.aarch64
+    - nodejs-packaging-0:17-3.module+el8+2873+aa7dfd9a.noarch
+    - nodejs-nodemon-0:1.18.3-1.module+el8+2632+6c5111ed.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: php
+  stream: '7.2'
+  version: '8020020191108065827'
+  context: 2c7ca891
+  arch: aarch64
+  license:
+    content:
+    - BSD
+    - BSD and LGPLv3+
+    - PHP
+    - PHP and BSD
+    - PHP and LGPLv2 and OpenLDAP
+    - PHP and LGPLv2+
+    - PHP and Zend and BSD and MIT and ASL 1.0
+    module:
+    - GPLv2+
+  summary: PHP scripting language
+  description: php 7.2 module
+  dependencies:
+  - buildrequires:
+      httpd:
+      - '2.4'
+      nginx:
+      - '1.14'
+      platform:
+      - el8
+    requires:
+      httpd:
+      - '2.4'
+      nginx: []
+      platform:
+      - el8
+  components:
+    rpms:
+      libzip:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: ZIP library
+        ref: stream-php-7.2-rhel-8.2.0
+      php:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Module API.
+        ref: stream-7.2-rhel-8.2.0
+      php-pear:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        rationale: Extension management
+        ref: stream-php-7.2-rhel-8.2.0
+      php-pecl-apcu:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: APCu extension
+        ref: stream-php-7.2-rhel-8.2.0
+      php-pecl-zip:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: ZIP extension
+        ref: stream-php-7.2-rhel-8.2.0
+  api:
+    rpms:
+    - php-fpm
+  references:
+    documentation: http://php.net/
+    tracker: https://bugs.php.net/
+  profiles:
+    common:
+      rpms:
+      - php-cli
+      - php-common
+      - php-fpm
+      - php-json
+      - php-mbstring
+      - php-xml
+    devel:
+      rpms:
+      - libzip
+      - php-cli
+      - php-common
+      - php-devel
+      - php-fpm
+      - php-json
+      - php-mbstring
+      - php-pear
+      - php-pecl-zip
+      - php-process
+      - php-xml
+    minimal:
+      rpms:
+      - php-cli
+      - php-common
+  artifacts:
+    rpms:
+    - php-process-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-soap-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-gmp-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-pdo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-pecl-apcu-debuginfo-0:5.1.12-2.module+el8.1.0+3202+af5476b9.aarch64
+    - php-mysqlnd-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-dba-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-intl-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-xmlrpc-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-fpm-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-enchant-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - libzip-devel-0:1.5.1-2.module+el8.1.0+3202+af5476b9.aarch64
+    - php-pecl-apcu-debugsource-0:5.1.12-2.module+el8.1.0+3202+af5476b9.aarch64
+    - php-xmlrpc-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-pecl-zip-debugsource-0:1.15.3-1.module+el8.1.0+3186+20164e6f.aarch64
+    - php-json-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-mbstring-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-mysqlnd-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-mbstring-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-recode-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - libzip-tools-0:1.5.1-2.module+el8.1.0+3202+af5476b9.aarch64
+    - php-dbg-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-pear-1:1.10.5-9.module+el8.1.0+3202+af5476b9.noarch
+    - php-gmp-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - libzip-tools-debuginfo-0:1.5.1-2.module+el8.1.0+3202+af5476b9.aarch64
+    - php-opcache-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-dbg-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-pecl-apcu-devel-0:5.1.12-2.module+el8.1.0+3202+af5476b9.aarch64
+    - php-pecl-zip-0:1.15.3-1.module+el8.1.0+3186+20164e6f.aarch64
+    - php-snmp-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-intl-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-odbc-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-ldap-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-bcmath-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-pecl-apcu-0:5.1.12-2.module+el8.1.0+3202+af5476b9.aarch64
+    - php-odbc-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-gd-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-pgsql-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-common-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-pdo-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-embedded-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-soap-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-opcache-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-embedded-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-debugsource-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-ldap-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-pgsql-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - libzip-0:1.5.1-2.module+el8.1.0+3202+af5476b9.aarch64
+    - libzip-debugsource-0:1.5.1-2.module+el8.1.0+3202+af5476b9.aarch64
+    - php-devel-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - apcu-panel-0:5.1.12-2.module+el8.1.0+3202+af5476b9.noarch
+    - libzip-debuginfo-0:1.5.1-2.module+el8.1.0+3202+af5476b9.aarch64
+    - php-enchant-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-snmp-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-dba-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-pecl-zip-debuginfo-0:1.15.3-1.module+el8.1.0+3186+20164e6f.aarch64
+    - php-xml-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-xml-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-recode-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-json-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-fpm-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-cli-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-process-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-cli-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-bcmath-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-gd-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-common-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: subversion
+  stream: '1.10'
+  version: '8030020210210135829'
+  context: 4035eae3
+  arch: aarch64
+  license:
+    content:
+    - ASL 2.0
+    - Unicode and MIT
+    module:
+    - MIT
+  summary: Apache Subversion
+  description: Apache Subversion, a Modern Version Control System
+  dependencies:
+  - buildrequires:
+      httpd:
+      - '2.4'
+      platform:
+      - el8
+      swig:
+      - '3.0'
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      libserf:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        rationale: Build dependency.
+        ref: stream-v1-rhel-8.3.0
+      subversion:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '20'
+        rationale: Module API.
+        ref: stream-1.10-rhel-8.3.0
+      utf8proc:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        rationale: Build dependency.
+        ref: stream-v2-rhel-8.3.0
+  api:
+    rpms:
+    - mod_dav_svn
+    - subversion
+    - subversion-devel
+    - subversion-libs
+  buildopts:
+    rpms:
+      macros: '%_without_kwallet 1
+
+        %_without_python2 1
+
+        %_with_python3 1
+
+        %_without_bdb 1
+
+        %_without_pyswig 1
+
+        '
+  references:
+    documentation: http://subversion.apache.org/docs/
+    tracker: https://issues.apache.org/jira/projects/SVN
+  profiles:
+    common:
+      rpms:
+      - subversion
+      - subversion-libs
+      - subversion-tools
+    server:
+      rpms:
+      - mod_dav_svn
+      - subversion
+      - subversion-libs
+      - subversion-tools
+  filter:
+    rpms:
+    - libserf-devel
+    - python3-subversion
+    - subversion-ruby
+    - utf8proc-devel
+  artifacts:
+    rpms:
+    - utf8proc-0:2.1.1-5.module+el8.3.0+6671+2675c974.aarch64
+    - utf8proc-devel-0:2.1.1-5.module+el8.3.0+6671+2675c974.aarch64
+    - utf8proc-debugsource-0:2.1.1-5.module+el8.3.0+6671+2675c974.aarch64
+    - utf8proc-debuginfo-0:2.1.1-5.module+el8.3.0+6671+2675c974.aarch64
+    - libserf-0:1.3.9-9.module+el8.3.0+6671+2675c974.aarch64
+    - libserf-devel-0:1.3.9-9.module+el8.3.0+6671+2675c974.aarch64
+    - libserf-debugsource-0:1.3.9-9.module+el8.3.0+6671+2675c974.aarch64
+    - libserf-debuginfo-0:1.3.9-9.module+el8.3.0+6671+2675c974.aarch64
+    - subversion-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.aarch64
+    - subversion-libs-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.aarch64
+    - subversion-devel-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.aarch64
+    - subversion-gnome-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.aarch64
+    - mod_dav_svn-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.aarch64
+    - subversion-perl-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.aarch64
+    - subversion-javahl-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.noarch
+    - subversion-ruby-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.aarch64
+    - subversion-tools-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.aarch64
+    - subversion-debugsource-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.aarch64
+    - subversion-debuginfo-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.aarch64
+    - subversion-libs-debuginfo-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.aarch64
+    - subversion-devel-debuginfo-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.aarch64
+    - subversion-gnome-debuginfo-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.aarch64
+    - mod_dav_svn-debuginfo-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.aarch64
+    - subversion-perl-debuginfo-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.aarch64
+    - subversion-ruby-debuginfo-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.aarch64
+    - subversion-tools-debuginfo-0:1.10.2-4.module+el8.3.0+9886+ac338b6d.aarch64
 ...
