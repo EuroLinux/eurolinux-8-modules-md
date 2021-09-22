@@ -1820,3 +1820,133 @@ data:
     - resteasy-0:3.0.26-6.module+el8.4.0+8891+bb8828ef.noarch
     - resteasy-javadoc-0:3.0.26-6.module+el8.4.0+8891+bb8828ef.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: subversion
+  stream: '1.14'
+  version: '8040020210210122209'
+  context: 4d97b3c8
+  arch: aarch64
+  license:
+    content:
+    - ASL 2.0
+    - Unicode and MIT
+    module:
+    - MIT
+  summary: Apache Subversion
+  description: Apache Subversion, a Modern Version Control System
+  dependencies:
+  - buildrequires:
+      httpd:
+      - '2.4'
+      platform:
+      - el8
+      swig:
+      - '4.0'
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      libserf:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        rationale: Build dependency.
+        ref: stream-v1-rhel-8.4.0
+      subversion:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '20'
+        rationale: Module API.
+        ref: stream-1.14-rhel-8.4.0
+      utf8proc:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        rationale: Build dependency.
+        ref: stream-v2-rhel-8.4.0
+  api:
+    rpms:
+    - mod_dav_svn
+    - subversion
+    - subversion-devel
+    - subversion-libs
+  buildopts:
+    rpms:
+      macros: '%_without_kwallet 1
+
+        %_without_python2 1
+
+        %_with_python3 1
+
+        %_without_bdb 1
+
+        %_with_pyswig 1
+
+        '
+  references:
+    documentation: http://subversion.apache.org/docs/
+    tracker: https://issues.apache.org/jira/projects/SVN
+  profiles:
+    common:
+      rpms:
+      - subversion
+      - subversion-libs
+      - subversion-tools
+    server:
+      rpms:
+      - mod_dav_svn
+      - subversion
+      - subversion-libs
+      - subversion-tools
+  filter:
+    rpms:
+    - libserf-devel
+    - subversion-ruby
+    - utf8proc-devel
+  artifacts:
+    rpms:
+    - subversion-devel-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - utf8proc-debuginfo-0:2.1.1-5.module+el8.4.0+8637+d3bad2c2.aarch64
+    - subversion-perl-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - utf8proc-debugsource-0:2.1.1-5.module+el8.4.0+8637+d3bad2c2.aarch64
+    - subversion-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-devel-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-debugsource-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - utf8proc-devel-0:2.1.1-5.module+el8.4.0+8637+d3bad2c2.aarch64
+    - subversion-gnome-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - python3-subversion-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - libserf-0:1.3.9-9.module+el8.4.0+8637+d3bad2c2.aarch64
+    - subversion-tools-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-javahl-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.noarch
+    - subversion-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - libserf-debugsource-0:1.3.9-9.module+el8.4.0+8637+d3bad2c2.aarch64
+    - libserf-devel-0:1.3.9-9.module+el8.4.0+8637+d3bad2c2.aarch64
+    - subversion-ruby-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-gnome-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-tools-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - python3-subversion-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-ruby-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-libs-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - utf8proc-0:2.1.1-5.module+el8.4.0+8637+d3bad2c2.aarch64
+    - mod_dav_svn-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-libs-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - mod_dav_svn-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-perl-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - libserf-debuginfo-0:1.3.9-9.module+el8.4.0+8637+d3bad2c2.aarch64
+...
