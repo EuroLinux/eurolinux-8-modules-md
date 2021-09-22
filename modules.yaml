@@ -645,3 +645,125 @@ data:
     - squid-debugsource-7:4.11-4.module+el8.4.0+10676+a969168e.2.aarch64
     - squid-debuginfo-7:4.11-4.module+el8.4.0+10676+a969168e.2.aarch64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: mysql
+  stream: '8.0'
+  version: '8020020200828111438'
+  context: 4cda2c84
+  arch: x86_64
+  license:
+    content:
+    - BSD or LGPLv2+ or GPL+
+    - GPLv2 with exceptions and LGPLv2 and BSD
+    - mecab-ipadic
+    module:
+    - MIT
+  summary: MySQL Module
+  description: MySQL is a multi-user, multi-threaded SQL database server. MySQL is
+    a client/server implementation consisting of a server daemon (mysqld) and many
+    different client programs and libraries. The base package contains the standard
+    MySQL client programs and generic MySQL files.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      mecab:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '8'
+        rationale: A dependency of mysql
+        ref: stream-8.0-rhel-8.2.0
+      mecab-ipadic:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '9'
+        rationale: A dictionary for mecab
+        ref: stream-8.0-rhel-8.2.0
+      mysql:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        rationale: MySQL server package
+        ref: stream-8.0-rhel-8.2.0
+      rapidjson:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '7'
+        rationale: A build-time only dependency of mysql
+        ref: dbf36eb90
+  api:
+    rpms:
+    - mysql
+    - mysql-server
+  buildopts:
+    rpms:
+      macros: '%runselftest 1
+
+        %check_testsuite 1
+
+        '
+  references:
+    community: https://dev.mysql.com/
+    documentation: https://dev.mysql.com/doc/refman/8.0/en/
+    tracker: http://bugzilla.redhat.com/
+  profiles:
+    client:
+      rpms:
+      - mysql
+    server:
+      rpms:
+      - mysql-server
+  filter:
+    rpms:
+    - mecab-devel
+    - rapidjson
+    - rapidjson-devel
+    - rapidjson-doc
+  artifacts:
+    rpms:
+    - rapidjson-devel-0:1.1.0-3.module+el8.2.0+7855+47abd494.noarch
+    - rapidjson-doc-0:1.1.0-3.module+el8.2.0+7855+47abd494.noarch
+    - mecab-0:0.996-1.module+el8.0.0+3898+e09bb8de.9.aarch64
+    - mecab-devel-0:0.996-1.module+el8.0.0+3898+e09bb8de.9.aarch64
+    - mecab-debugsource-0:0.996-1.module+el8.0.0+3898+e09bb8de.9.aarch64
+    - mecab-debuginfo-0:0.996-1.module+el8.0.0+3898+e09bb8de.9.aarch64
+    - mecab-ipadic-0:2.7.0.20070801-16.module+el8.0.0+3898+e09bb8de.aarch64
+    - mecab-ipadic-EUCJP-0:2.7.0.20070801-16.module+el8.0.0+3898+e09bb8de.aarch64
+    - mysql-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-libs-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-common-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-errmsg-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-server-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-devel-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-test-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-debugsource-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-debuginfo-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-libs-debuginfo-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-server-debuginfo-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-devel-debuginfo-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-test-debuginfo-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+...
