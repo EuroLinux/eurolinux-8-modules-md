@@ -1950,3 +1950,920 @@ data:
     - subversion-perl-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
     - libserf-debuginfo-0:1.3.9-9.module+el8.4.0+8637+d3bad2c2.aarch64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: gimp
+  stream: '2.8'
+  version: '820181213135540'
+  context: 77fc8825
+  arch: aarch64
+  license:
+    content:
+    - GPLv3+ and GPLv3
+    - LGPLv2+
+    - LGPLv2+, MIT
+    - LGPLv3+
+    - MPLv1.1 or LGPLv2
+    module:
+    - MIT
+  summary: gimp module
+  description: 'GIMP (GNU Image Manipulation Program) is a powerful image composition
+    and
+
+    editing program, which can be extremely useful for creating logos and other
+
+    graphics for webpages. '
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+      python27:
+      - '2.7'
+    requires:
+      platform:
+      - el8
+      python27:
+      - '2.7'
+  components:
+    rpms:
+      gimp:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/gimp
+        rationale: GIMP Module.
+        ref: stream-2.8
+        repository: git://pkgs.devel.redhat.com/rpms/gimp
+      pygobject2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/pygobject2
+        rationale: GIMP Module dependency
+        ref: stream-2.28.7
+        repository: git://pkgs.devel.redhat.com/rpms/pygobject2
+      pygtk2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '5'
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/pygtk2
+        rationale: GIMP Module dependency
+        ref: stream-2.24
+        repository: git://pkgs.devel.redhat.com/rpms/pygtk2
+      python2-pycairo:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/python2-pycairo
+        rationale: Python2 binding required by pygtk2
+        ref: stream-python2
+        repository: git://pkgs.devel.redhat.com/rpms/python2-pycairo
+  api:
+    rpms:
+    - gimp
+    - gimp-devel
+    - gimp-devel-tools
+    - gimp-libs
+  references:
+    community: https://www.gimp.org/develop/
+    documentation: https://www.gimp.org/docs/
+    tracker: https://www.gimp.org/bugs/
+  profiles:
+    common:
+      rpms:
+      - gimp
+    devel:
+      rpms:
+      - gimp-devel
+      - gimp-devel-tools
+  artifacts:
+    rpms:
+    - python2-pycairo-debugsource-0:1.16.3-6.module+el8+2760+3d7d61b2.aarch64
+    - pygobject2-doc-0:2.28.7-4.module+el8+2760+3d7d61b2.aarch64
+    - python2-cairo-devel-0:1.16.3-6.module+el8+2760+3d7d61b2.aarch64
+    - gimp-devel-tools-2:2.8.22-15.module+el8+2760+3d7d61b2.aarch64
+    - pygobject2-devel-0:2.28.7-4.module+el8+2760+3d7d61b2.aarch64
+    - gimp-devel-tools-debuginfo-2:2.8.22-15.module+el8+2760+3d7d61b2.aarch64
+    - pygobject2-0:2.28.7-4.module+el8+2760+3d7d61b2.aarch64
+    - pygobject2-debuginfo-0:2.28.7-4.module+el8+2760+3d7d61b2.aarch64
+    - pygtk2-0:2.24.0-24.module+el8+2760+3d7d61b2.aarch64
+    - pygtk2-debuginfo-0:2.24.0-24.module+el8+2760+3d7d61b2.aarch64
+    - gimp-devel-2:2.8.22-15.module+el8+2760+3d7d61b2.aarch64
+    - pygobject2-codegen-0:2.28.7-4.module+el8+2760+3d7d61b2.aarch64
+    - gimp-libs-debuginfo-2:2.8.22-15.module+el8+2760+3d7d61b2.aarch64
+    - gimp-debugsource-2:2.8.22-15.module+el8+2760+3d7d61b2.aarch64
+    - gimp-libs-2:2.8.22-15.module+el8+2760+3d7d61b2.aarch64
+    - pygtk2-debugsource-0:2.24.0-24.module+el8+2760+3d7d61b2.aarch64
+    - pygtk2-devel-0:2.24.0-24.module+el8+2760+3d7d61b2.aarch64
+    - pygtk2-doc-0:2.24.0-24.module+el8+2760+3d7d61b2.noarch
+    - python2-cairo-0:1.16.3-6.module+el8+2760+3d7d61b2.aarch64
+    - pygtk2-codegen-0:2.24.0-24.module+el8+2760+3d7d61b2.aarch64
+    - gimp-debuginfo-2:2.8.22-15.module+el8+2760+3d7d61b2.aarch64
+    - pygobject2-debugsource-0:2.28.7-4.module+el8+2760+3d7d61b2.aarch64
+    - python2-cairo-debuginfo-0:1.16.3-6.module+el8+2760+3d7d61b2.aarch64
+    - gimp-2:2.8.22-15.module+el8+2760+3d7d61b2.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: rust-toolset
+  stream: rhel8
+  version: '8040020210603202531'
+  context: 2daa1a95
+  arch: x86_64
+  license:
+    content:
+    - (ASL 2.0 or MIT) and (BSD and MIT)
+    - ASL 2.0 or MIT
+    module:
+    - MIT
+  summary: Rust
+  description: Rust Toolset
+  dependencies:
+  - buildrequires:
+      llvm-toolset:
+      - rhel8
+      platform:
+      - el8
+      rust-toolset:
+      - rhel8
+    requires:
+      llvm-toolset:
+      - rhel8
+      platform:
+      - el8
+  components:
+    rpms:
+      rust:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Rust compiler and tools
+        ref: stream-rhel-8-rhel-8.4.0
+      rust-toolset:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Meta package for rust-toolset.
+        ref: stream-rhel-8-rhel-8.4.0
+  api:
+    rpms:
+    - cargo
+    - cargo-doc
+    - clippy
+    - rls
+    - rust
+    - rust-analysis
+    - rust-doc
+    - rust-gdb
+    - rust-lldb
+    - rust-src
+    - rust-std-static
+    - rust-toolset
+    - rustfmt
+  profiles:
+    common:
+      rpms:
+      - rust-toolset
+  artifacts:
+    rpms:
+    - rust-toolset-0:1.52.1-1.module+el8.4.0+11282+0729bac9.aarch64
+    - rust-0:1.52.1-1.module+el8.4.0+11282+0729bac9.aarch64
+    - rust-std-static-0:1.52.1-1.module+el8.4.0+11282+0729bac9.aarch64
+    - rust-debugger-common-0:1.52.1-1.module+el8.4.0+11282+0729bac9.noarch
+    - rust-gdb-0:1.52.1-1.module+el8.4.0+11282+0729bac9.noarch
+    - rust-lldb-0:1.52.1-1.module+el8.4.0+11282+0729bac9.noarch
+    - rust-doc-0:1.52.1-1.module+el8.4.0+11282+0729bac9.aarch64
+    - cargo-0:1.52.1-1.module+el8.4.0+11282+0729bac9.aarch64
+    - cargo-doc-0:1.52.1-1.module+el8.4.0+11282+0729bac9.noarch
+    - rustfmt-0:1.52.1-1.module+el8.4.0+11282+0729bac9.aarch64
+    - rls-0:1.52.1-1.module+el8.4.0+11282+0729bac9.aarch64
+    - clippy-0:1.52.1-1.module+el8.4.0+11282+0729bac9.aarch64
+    - rust-src-0:1.52.1-1.module+el8.4.0+11282+0729bac9.noarch
+    - rust-analysis-0:1.52.1-1.module+el8.4.0+11282+0729bac9.aarch64
+    - rust-debugsource-0:1.52.1-1.module+el8.4.0+11282+0729bac9.aarch64
+    - rust-debuginfo-0:1.52.1-1.module+el8.4.0+11282+0729bac9.aarch64
+    - cargo-debuginfo-0:1.52.1-1.module+el8.4.0+11282+0729bac9.aarch64
+    - rustfmt-debuginfo-0:1.52.1-1.module+el8.4.0+11282+0729bac9.aarch64
+    - rls-debuginfo-0:1.52.1-1.module+el8.4.0+11282+0729bac9.aarch64
+    - clippy-debuginfo-0:1.52.1-1.module+el8.4.0+11282+0729bac9.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: scala
+  stream: '2.10'
+  version: '820181213143541'
+  context: 2b79a98f
+  arch: aarch64
+  license:
+    content:
+    - ASL 2.0
+    - ASL 2.0 and EPL and BSD
+    - BSD
+    - BSD and CC0 and Public Domain
+    module:
+    - MIT
+  summary: A hybrid functional/object-oriented language for the JVM
+  description: Scala is a general purpose programming language designed to express
+    common programming patterns in a concise, elegant, and type-safe way. It smoothly
+    integrates features of object-oriented and functional languages. It is also fully
+    interoperable with Java.
+  dependencies:
+  - buildrequires:
+      javapackages-tools:
+      - '201801'
+      platform:
+      - el8
+      scala:
+      - '2.10'
+    requires:
+      platform: []
+  components:
+    rpms:
+      hawtjni:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/hawtjni
+        rationale: 'Runtime dependency of jansi, jansi-native.
+
+          '
+        ref: stream-scala-2.10
+        repository: git://pkgs.devel.redhat.com/rpms/hawtjni
+      jansi:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '30'
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jansi
+        rationale: 'Runtime dependency of jline, scala.
+
+          '
+        ref: stream-scala-2.10
+        repository: git://pkgs.devel.redhat.com/rpms/jansi
+      jansi-native:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '20'
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jansi-native
+        rationale: 'Runtime dependency of jansi.
+
+          '
+        ref: stream-scala-2.10
+        repository: git://pkgs.devel.redhat.com/rpms/jansi-native
+      jline:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '40'
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jline
+        rationale: 'Runtime dependency of scala.
+
+          '
+        ref: stream-scala-2.10
+        repository: git://pkgs.devel.redhat.com/rpms/jline
+      scala:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '50'
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/scala
+        rationale: 'Module API.
+
+          '
+        ref: stream-scala-2.10
+        repository: git://pkgs.devel.redhat.com/rpms/scala
+  api:
+    rpms:
+    - scala
+    - scala-apidoc
+    - scala-swing
+  buildopts:
+    rpms:
+      macros: '%_with_xmvn_javadoc 1
+
+        %_without_asciidoc 1
+
+        %_without_avalon 1
+
+        %_without_bouncycastle 1
+
+        %_without_cython 1
+
+        %_without_dafsa 1
+
+        %_without_desktop 1
+
+        %_without_doxygen 1
+
+        %_without_dtd 1
+
+        %_without_eclipse 1
+
+        %_without_ehcache 1
+
+        %_without_emacs 1
+
+        %_without_equinox 1
+
+        %_without_fop 1
+
+        %_without_ftp 1
+
+        %_without_gradle 1
+
+        %_without_groovy 1
+
+        %_without_hadoop 1
+
+        %_without_hsqldb 1
+
+        %_without_itext 1
+
+        %_without_jackson 1
+
+        %_without_jmh 1
+
+        %_without_jna 1
+
+        %_without_jpa 1
+
+        %_without_junit5 1
+
+        %_without_logback 1
+
+        %_without_markdown 1
+
+        %_without_memcached 1
+
+        %_without_memoryfilesystem 1
+
+        %_without_obr 1
+
+        %_without_python 1
+
+        %_without_reporting 1
+
+        %_without_scm 1
+
+        %_without_snappy 1
+
+        %_without_spring 1
+
+        %_without_ssh 1
+
+        %_without_testlib 1
+
+        '
+  profiles:
+    common:
+      rpms:
+      - scala
+  filter:
+    rpms:
+    - ant-scala
+    - hawtjni
+    - hawtjni-javadoc
+    - jansi-javadoc
+    - jansi-native-javadoc
+    - jline-javadoc
+    - maven-hawtjni-plugin
+  artifacts:
+    rpms:
+    - hawtjni-0:1.16-1.module+el8+2477+516cbbff.noarch
+    - hawtjni-javadoc-0:1.16-1.module+el8+2477+516cbbff.noarch
+    - hawtjni-runtime-0:1.16-1.module+el8+2477+516cbbff.noarch
+    - maven-hawtjni-plugin-0:1.16-1.module+el8+2477+516cbbff.noarch
+    - jansi-native-0:1.7-5.module+el8+2477+516cbbff.aarch64
+    - jansi-native-javadoc-0:1.7-5.module+el8+2477+516cbbff.noarch
+    - jansi-0:1.17.1-1.module+el8+2477+516cbbff.noarch
+    - jansi-javadoc-0:1.17.1-1.module+el8+2477+516cbbff.noarch
+    - jline-0:2.14.6-2.module+el8+2477+516cbbff.noarch
+    - jline-javadoc-0:2.14.6-2.module+el8+2477+516cbbff.noarch
+    - scala-0:2.10.6-14.module+el8+2477+516cbbff.noarch
+    - scala-apidoc-0:2.10.6-14.module+el8+2477+516cbbff.noarch
+    - scala-swing-0:2.10.6-14.module+el8+2477+516cbbff.noarch
+    - ant-scala-0:2.10.6-14.module+el8+2477+516cbbff.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: python27
+  stream: 2.7
+  version: 8040020210122160212
+  context: cdb2db54
+  arch: aarch64
+  summary: Python programming language, version 2.7
+  description: >-
+    This module provides the Python 2.7 interpreter and additional Python
+
+    packages the users might need.
+  license:
+    module:
+    - MIT
+    content:
+    - ASL 2.0
+    - ASL 2.0 and MIT
+    - ASL 2.0 and MIT and (MIT or GPL)
+    - BSD
+    - BSD and Boost and Public Domain
+    - BSD and Python
+    - BSD and Python and Unicode
+    - LGPLv2
+    - LGPLv2+ and Public Domain
+    - LGPLv3+ with exceptions
+    - MIT
+    - MIT and Public Domain
+    - MIT and Python and ASL 2.0 and BSD and ISC and LGPLv2 and MPLv2.0 and (ASL 2.0
+      or BSD)
+    - Public Domain
+    - Public Domain and BSD and Python and GPLv3+
+    - Python
+  dependencies:
+  - buildrequires:
+      platform: [el8.4.0]
+      python27: [2.7]
+    requires:
+      platform: [el8]
+  references:
+    community: https://www.python.org/
+    documentation: https://docs.python.org/2.7/
+  profiles:
+    common:
+      rpms:
+      - python2
+      - python2-libs
+      - python2-pip
+      - python2-setuptools
+  api:
+    rpms:
+    - babel
+    - python-sqlalchemy-doc
+    - python2
+    - python2-Cython
+    - python2-PyMySQL
+    - python2-attrs
+    - python2-babel
+    - python2-backports
+    - python2-backports-ssl_match_hostname
+    - python2-bson
+    - python2-chardet
+    - python2-coverage
+    - python2-debug
+    - python2-devel
+    - python2-dns
+    - python2-docs
+    - python2-docs-info
+    - python2-docutils
+    - python2-funcsigs
+    - python2-idna
+    - python2-ipaddress
+    - python2-jinja2
+    - python2-libs
+    - python2-lxml
+    - python2-markupsafe
+    - python2-mock
+    - python2-nose
+    - python2-numpy
+    - python2-numpy-doc
+    - python2-numpy-f2py
+    - python2-pip
+    - python2-pluggy
+    - python2-psycopg2
+    - python2-psycopg2-debug
+    - python2-psycopg2-tests
+    - python2-py
+    - python2-pygments
+    - python2-pymongo
+    - python2-pymongo-gridfs
+    - python2-pysocks
+    - python2-pytest
+    - python2-pytest-mock
+    - python2-pytz
+    - python2-pyyaml
+    - python2-requests
+    - python2-rpm-macros
+    - python2-scipy
+    - python2-setuptools
+    - python2-setuptools_scm
+    - python2-six
+    - python2-sqlalchemy
+    - python2-test
+    - python2-tkinter
+    - python2-tools
+    - python2-urllib3
+    - python2-virtualenv
+    - python2-wheel
+  filter:
+    rpms:
+    - python3-Cython
+    - python3-PyMySQL
+    - python3-PyYAML
+    - python3-attrs
+    - python3-babel
+    - python3-bson
+    - python3-chardet
+    - python3-coverage
+    - python3-docutils
+    - python3-idna
+    - python3-jinja2
+    - python3-markupsafe
+    - python3-mock
+    - python3-nose
+    - python3-numpy
+    - python3-numpy-doc
+    - python3-numpy-f2py
+    - python3-pluggy
+    - python3-psycopg2
+    - python3-psycopg2-debug
+    - python3-psycopg2-tests
+    - python3-py
+    - python3-pygments
+    - python3-pymongo
+    - python3-pymongo-gridfs
+    - python3-pysocks
+    - python3-pytest
+    - python3-pytest-mock
+    - python3-pytz
+    - python3-requests
+    - python3-scipy
+    - python3-setuptools_scm
+    - python3-six
+    - python3-sqlalchemy
+    - python3-urllib3
+    - python3-virtualenv
+  buildopts:
+    rpms:
+      macros: |
+        # Note that we cannot disable building of all Python 3 subpackages,
+        # because python2-devel (needed to build all Python 2 packages)
+        # has a runtime dependency on python3-rpm-generators, and that
+        # package requires python3-setuptools at runtime. By rebuilding
+        # python-setuptools SRPM with only python2, we overshadow the
+        # already built python3 subpackage and it is no longer
+        # available for python3-rpm-generators when building python-pip
+        # (or any other Python package).
+        # We can disable Python 3 in all packages but ...
+        %_without_python3 1
+        # ... we have to have a way to enable some of them as described
+        # above. With this macro, we can add some module-specific
+        # conditions for python3-* subpackages and other special cases.
+        # %_with_python27_module 1
+
+        # for: python-jinja2
+        %_with_python2 1
+
+        # to solve circular dependency between pytest and [attrs, pluggy]
+        # %_without_tests 1
+  components:
+    rpms:
+      Cython:
+        rationale: Language for writing Python extension modules. Build dependency
+          of numpy and PyYAML
+        ref: stream-0.28.1-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      PyYAML:
+        rationale: YAML parser and emitter for Python
+        ref: stream-3.12-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      babel:
+        rationale: Tools for internationalizing Python applications
+        ref: stream-2.5.1-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      numpy:
+        rationale: A fast multidimensional array facility for Python
+        ref: stream-1.14.2-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      pytest:
+        rationale: Simple powerful testing with Python
+        ref: stream-3.4.2-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-PyMySQL:
+        rationale: Python adapter for the MySQL/MariaDB databases
+        ref: stream-0.8.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-attrs:
+        rationale: Python attributes without boilerplate
+        ref: stream-17.4.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-backports:
+        rationale: Namespace for backported Python features
+        ref: stream-1.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-backports-ssl_match_hostname:
+        rationale: The ssl.match_hostname() function from Python 3. Dependency of
+          urllib3/requests.
+        ref: stream-3.5.0.1-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-chardet:
+        rationale: Character encoding auto-detection in Python. Dependency of requests.
+        ref: stream-3.0.4-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-coverage:
+        rationale: Code coverage testing module for Python
+        ref: stream-4.5.1-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-dns:
+        rationale: DNS toolkit for Python. Useful package for IPA and mailman.
+        ref: stream-1.15.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-docs:
+        rationale: Documentation for Python
+        ref: stream-2.7-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-docutils:
+        rationale: System for processing plaintext documentation
+        ref: stream-0.14-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-funcsigs:
+        rationale: Python function signatures from PEP362 for Python 2.6, 2.7 and
+          3.2+. Dependency of Pytest and mock.
+        ref: stream-1.0.2-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-idna:
+        rationale: Internationalized Domain Names in Applications (IDNA). Dependency
+          of requests.
+        ref: stream-2.5-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-ipaddress:
+        rationale: Port of the python 3.3+ ipaddress module to 2.6+. Dependency of
+          urllib3/requests.
+        ref: stream-1.0.18-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-jinja2:
+        rationale: General purpose template engine
+        ref: stream-2.10-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-lxml:
+        rationale: XML processing library
+        ref: stream-4.2.3-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-markupsafe:
+        rationale: Implements a XML/HTML/XHTML Markup safe string for Python
+        ref: stream-0.23-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-mock:
+        rationale: A Python Mocking and Patching Library for Testing
+        ref: stream-2.0.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-nose:
+        rationale: Discovery-based unit test extension for Python
+        ref: stream-1.3.7-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-pluggy:
+        rationale: The plugin manager stripped of pytest specific details
+        ref: stream-0.6.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-psycopg2:
+        rationale: Python adapter for the PostgreSQL database
+        ref: stream-2.7.4-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-py:
+        rationale: Library with cross-python path, ini-parsing, io, code, log facilities
+        ref: stream-1.5.3-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-pygments:
+        rationale: Syntax highlighting engine written in Python
+        ref: stream-2.2.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-pymongo:
+        rationale: Python driver for MongoDB
+        ref: stream-3.6.1-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-pysocks:
+        rationale: A Python SOCKS client module. Dependency of urllib3/requests.
+        ref: stream-1.6.8-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-pytest-mock:
+        rationale: Thin-wrapper around the mock package for easier use with py.test.
+          Build dependency of requests.
+        ref: stream-1.9.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-requests:
+        rationale: HTTP library, written in Python, for human beings
+        ref: stream-2.20.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-setuptools_scm:
+        rationale: Blessed package to manage your versions by scm tags. Build dependency
+          of pytest and pytest-mock.
+        ref: stream-1.15.7-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-sqlalchemy:
+        rationale: Modular and flexible ORM library for python
+        ref: stream-1.3.2-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-urllib3:
+        rationale: Python HTTP library with thread-safe connection pooling and file
+          post. Dependency of requests.
+        ref: stream-1.23-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-virtualenv:
+        rationale: Tool to create isolated Python environments
+        ref: stream-15.1.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python-wheel:
+        rationale: Used for unbundling of pip and setuptools
+        ref: stream-0.30.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python2:
+        rationale: Main Python language interpreter
+        ref: stream-2.7-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python2-pip:
+        rationale: Python Packaging ecosystem
+        ref: stream-9.0.3-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python2-rpm-macros:
+        rationale: Python 2 RPM macros - dependency of python2-devel
+        ref: stream-python27-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python2-setuptools:
+        rationale: Python Packaging ecosystem
+        ref: stream-39.0.1-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      python2-six:
+        rationale: Python 2 and 3 compatibility utilities
+        ref: stream-1.11.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      pytz:
+        rationale: Runtime requires of babel, and python2-babel
+        ref: stream-2017.2-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      scipy:
+        rationale: Scientific Tools for Python
+        ref: stream-1.0.0-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+  artifacts:
+    rpms:
+    - Cython-0:0.28.1-7.module+el8.1.0+3111+de3f2d8e.src
+    - Cython-debugsource-0:0.28.1-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - PyYAML-0:3.12-16.module+el8.1.0+3111+de3f2d8e.src
+    - PyYAML-debugsource-0:3.12-16.module+el8.1.0+3111+de3f2d8e.aarch64
+    - babel-0:2.5.1-9.module+el8.1.0+3111+de3f2d8e.noarch
+    - babel-0:2.5.1-9.module+el8.1.0+3111+de3f2d8e.src
+    - numpy-1:1.14.2-16.module+el8.4.0+9406+221a4565.src
+    - numpy-debugsource-1:1.14.2-16.module+el8.4.0+9406+221a4565.aarch64
+    - pytest-0:3.4.2-13.module+el8.1.0+3111+de3f2d8e.src
+    - python-PyMySQL-0:0.8.0-10.module+el8.1.0+3111+de3f2d8e.src
+    - python-attrs-0:17.4.0-10.module+el8.1.0+3111+de3f2d8e.src
+    - python-backports-0:1.0-16.module+el8.4.0+9193+f3daf6ef.src
+    - python-backports-ssl_match_hostname-0:3.5.0.1-12.module+el8.4.0+9193+f3daf6ef.src
+    - python-chardet-0:3.0.4-10.module+el8.1.0+3111+de3f2d8e.src
+    - python-coverage-0:4.5.1-4.module+el8.1.0+3111+de3f2d8e.src
+    - python-coverage-debugsource-0:4.5.1-4.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python-dns-0:1.15.0-10.module+el8.1.0+3111+de3f2d8e.src
+    - python-docs-0:2.7.16-2.module+el8.1.0+3111+de3f2d8e.src
+    - python-docutils-0:0.14-12.module+el8.1.0+3111+de3f2d8e.src
+    - python-funcsigs-0:1.0.2-13.module+el8.1.0+3111+de3f2d8e.src
+    - python-idna-0:2.5-7.module+el8.1.0+3111+de3f2d8e.src
+    - python-ipaddress-0:1.0.18-6.module+el8.1.0+3111+de3f2d8e.src
+    - python-jinja2-0:2.10-8.module+el8.1.0+3111+de3f2d8e.src
+    - python-lxml-0:4.2.3-4.module+el8.4.0+9319+a932af88.src
+    - python-lxml-debugsource-0:4.2.3-4.module+el8.4.0+9319+a932af88.aarch64
+    - python-markupsafe-0:0.23-19.module+el8.1.0+3111+de3f2d8e.src
+    - python-mock-0:2.0.0-13.module+el8.1.0+3111+de3f2d8e.src
+    - python-nose-0:1.3.7-30.module+el8.1.0+3111+de3f2d8e.src
+    - python-nose-docs-0:1.3.7-30.module+el8.1.0+3111+de3f2d8e.noarch
+    - python-pluggy-0:0.6.0-8.module+el8.1.0+3111+de3f2d8e.src
+    - python-psycopg2-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.src
+    - python-psycopg2-debuginfo-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python-psycopg2-debugsource-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python-psycopg2-doc-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python-py-0:1.5.3-6.module+el8.1.0+3111+de3f2d8e.src
+    - python-pygments-0:2.2.0-20.module+el8.1.0+3111+de3f2d8e.src
+    - python-pymongo-0:3.6.1-11.module+el8.1.0+3446+c3d52da3.src
+    - python-pymongo-debuginfo-0:3.6.1-11.module+el8.1.0+3446+c3d52da3.aarch64
+    - python-pymongo-debugsource-0:3.6.1-11.module+el8.1.0+3446+c3d52da3.aarch64
+    - python-pysocks-0:1.6.8-6.module+el8.1.0+3111+de3f2d8e.src
+    - python-pytest-mock-0:1.9.0-4.module+el8.1.0+3111+de3f2d8e.src
+    - python-requests-0:2.20.0-3.module+el8.2.0+4577+feefd9b8.src
+    - python-setuptools_scm-0:1.15.7-6.module+el8.1.0+3111+de3f2d8e.src
+    - python-sqlalchemy-0:1.3.2-2.module+el8.3.0+6647+8d010749.src
+    - python-sqlalchemy-doc-0:1.3.2-2.module+el8.3.0+6647+8d010749.noarch
+    - python-urllib3-0:1.24.2-3.module+el8.4.0+9193+f3daf6ef.src
+    - python-virtualenv-0:15.1.0-19.module+el8.1.0+3507+d69c168d.src
+    - python-wheel-1:0.31.1-2.module+el8.1.0+3725+aac5cd17.src
+    - python2-0:2.7.18-4.module+el8.4.0+9577+0b56c8de.src
+    - python2-0:2.7.18-4.module+el8.4.0+9577+0b56c8de.aarch64
+    - python2-Cython-0:0.28.1-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-Cython-debuginfo-0:0.28.1-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-PyMySQL-0:0.8.0-10.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-attrs-0:17.4.0-10.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-babel-0:2.5.1-9.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-backports-0:1.0-16.module+el8.4.0+9193+f3daf6ef.aarch64
+    - python2-backports-ssl_match_hostname-0:3.5.0.1-12.module+el8.4.0+9193+f3daf6ef.noarch
+    - python2-bson-0:3.6.1-11.module+el8.1.0+3446+c3d52da3.aarch64
+    - python2-bson-debuginfo-0:3.6.1-11.module+el8.1.0+3446+c3d52da3.aarch64
+    - python2-chardet-0:3.0.4-10.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-coverage-0:4.5.1-4.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-coverage-debuginfo-0:4.5.1-4.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-debug-0:2.7.18-4.module+el8.4.0+9577+0b56c8de.aarch64
+    - python2-debuginfo-0:2.7.18-4.module+el8.4.0+9577+0b56c8de.aarch64
+    - python2-debugsource-0:2.7.18-4.module+el8.4.0+9577+0b56c8de.aarch64
+    - python2-devel-0:2.7.18-4.module+el8.4.0+9577+0b56c8de.aarch64
+    - python2-dns-0:1.15.0-10.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-docs-0:2.7.16-2.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-docs-info-0:2.7.16-2.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-docutils-0:0.14-12.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-funcsigs-0:1.0.2-13.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-idna-0:2.5-7.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-ipaddress-0:1.0.18-6.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-jinja2-0:2.10-8.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-libs-0:2.7.18-4.module+el8.4.0+9577+0b56c8de.aarch64
+    - python2-lxml-0:4.2.3-4.module+el8.4.0+9319+a932af88.aarch64
+    - python2-lxml-debuginfo-0:4.2.3-4.module+el8.4.0+9319+a932af88.aarch64
+    - python2-markupsafe-0:0.23-19.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-mock-0:2.0.0-13.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-nose-0:1.3.7-30.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-numpy-1:1.14.2-16.module+el8.4.0+9406+221a4565.aarch64
+    - python2-numpy-debuginfo-1:1.14.2-16.module+el8.4.0+9406+221a4565.aarch64
+    - python2-numpy-doc-1:1.14.2-16.module+el8.4.0+9406+221a4565.noarch
+    - python2-numpy-f2py-1:1.14.2-16.module+el8.4.0+9406+221a4565.aarch64
+    - python2-pip-0:9.0.3-18.module+el8.3.0+7707+eb4bba01.noarch
+    - python2-pip-0:9.0.3-18.module+el8.3.0+7707+eb4bba01.src
+    - python2-pip-wheel-0:9.0.3-18.module+el8.3.0+7707+eb4bba01.noarch
+    - python2-pluggy-0:0.6.0-8.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-psycopg2-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-psycopg2-debug-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-psycopg2-debug-debuginfo-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-psycopg2-debuginfo-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-psycopg2-tests-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-py-0:1.5.3-6.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-pygments-0:2.2.0-20.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-pymongo-0:3.6.1-11.module+el8.1.0+3446+c3d52da3.aarch64
+    - python2-pymongo-debuginfo-0:3.6.1-11.module+el8.1.0+3446+c3d52da3.aarch64
+    - python2-pymongo-gridfs-0:3.6.1-11.module+el8.1.0+3446+c3d52da3.aarch64
+    - python2-pysocks-0:1.6.8-6.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-pytest-0:3.4.2-13.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-pytest-mock-0:1.9.0-4.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-pytz-0:2017.2-12.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-pyyaml-0:3.12-16.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-pyyaml-debuginfo-0:3.12-16.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-requests-0:2.20.0-3.module+el8.2.0+4577+feefd9b8.noarch
+    - python2-rpm-macros-0:3-38.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-rpm-macros-0:3-38.module+el8.1.0+3111+de3f2d8e.src
+    - python2-scipy-0:1.0.0-20.module+el8.1.0+3323+7ac3e00f.aarch64
+    - python2-scipy-debuginfo-0:1.0.0-20.module+el8.1.0+3323+7ac3e00f.aarch64
+    - python2-setuptools-0:39.0.1-13.module+el8.4.0+9442+27d0e81c.noarch
+    - python2-setuptools-0:39.0.1-13.module+el8.4.0+9442+27d0e81c.src
+    - python2-setuptools-wheel-0:39.0.1-13.module+el8.4.0+9442+27d0e81c.noarch
+    - python2-setuptools_scm-0:1.15.7-6.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-six-0:1.11.0-6.module+el8.4.0+9287+299307c7.noarch
+    - python2-six-0:1.11.0-6.module+el8.4.0+9287+299307c7.src
+    - python2-sqlalchemy-0:1.3.2-2.module+el8.3.0+6647+8d010749.aarch64
+    - python2-test-0:2.7.18-4.module+el8.4.0+9577+0b56c8de.aarch64
+    - python2-tkinter-0:2.7.18-4.module+el8.4.0+9577+0b56c8de.aarch64
+    - python2-tools-0:2.7.18-4.module+el8.4.0+9577+0b56c8de.aarch64
+    - python2-urllib3-0:1.24.2-3.module+el8.4.0+9193+f3daf6ef.noarch
+    - python2-virtualenv-0:15.1.0-19.module+el8.1.0+3507+d69c168d.noarch
+    - python2-wheel-1:0.31.1-2.module+el8.1.0+3725+aac5cd17.noarch
+    - python2-wheel-wheel-1:0.31.1-2.module+el8.1.0+3725+aac5cd17.noarch
+    - pytz-0:2017.2-12.module+el8.1.0+3111+de3f2d8e.src
+    - scipy-0:1.0.0-20.module+el8.1.0+3323+7ac3e00f.src
+    - scipy-debugsource-0:1.0.0-20.module+el8.1.0+3323+7ac3e00f.aarch64
+...
