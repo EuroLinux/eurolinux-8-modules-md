@@ -3553,3 +3553,96 @@ data:
     - nginx-mod-mail-debuginfo-1:1.16.1-2.module+el8.4.0+11155+68135136.1.aarch64
     - nginx-mod-stream-debuginfo-1:1.16.1-2.module+el8.4.0+11155+68135136.1.aarch64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: swig
+  stream: '3.0'
+  version: '8030020200407110056'
+  context: 30b713e6
+  arch: aarch64
+  license:
+    content:
+    - BSD
+    - GPLv3+ and BSD
+    module:
+    - MIT
+  summary: Connects C/C++/Objective C to some high-level programming languages
+  description: 'Simplified Wrapper and Interface Generator (SWIG) is a software development
+    tool for connecting C, C++ and Objective C programs with a variety of high-level
+    programming languages. SWIG is primarily used with Perl, Python and Tcl/TK, but
+    it has also been extended to Java, Eiffel and Guile. SWIG is normally used to
+    create high-level interpreted programming environments, systems integration, and
+    as a tool for building user interfaces
+
+    '
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      swig:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: SWIG package
+        ref: stream-3.0-rhel-8.3.0
+  api:
+    rpms:
+    - swig
+    - swig-doc
+    - swig-gdb
+  buildopts:
+    rpms:
+      macros: '%golang 0
+
+        %guile 0
+
+        %javalang 0
+
+        %lualang 0
+
+        %octave 0
+
+        %phplang 0
+
+        %python2lang 0
+
+        %Rlang 0
+
+        %rubylang 0
+
+        %tcl 0
+
+        %_without_build_ccache_swig 1
+
+        '
+  references:
+    community: http://swig.org/
+    documentation: http://swig.org/doc.html
+    tracker: http://bugzilla.redhat.com
+  profiles:
+    common:
+      rpms:
+      - swig
+    complete:
+      rpms:
+      - swig
+      - swig-doc
+      - swig-gdb
+  artifacts:
+    rpms:
+    - swig-0:3.0.12-19.module+el8.3.0+6248+838326ab.aarch64
+    - swig-doc-0:3.0.12-19.module+el8.3.0+6248+838326ab.noarch
+    - swig-gdb-0:3.0.12-19.module+el8.3.0+6248+838326ab.aarch64
+    - swig-debugsource-0:3.0.12-19.module+el8.3.0+6248+838326ab.aarch64
+    - swig-debuginfo-0:3.0.12-19.module+el8.3.0+6248+838326ab.aarch64
+...
