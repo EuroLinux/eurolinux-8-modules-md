@@ -3733,3 +3733,575 @@ data:
     - swig-debugsource-0:4.0.2-3.module+el8.4.0+8303+4bdcb5c6.aarch64
     - swig-debuginfo-0:4.0.2-3.module+el8.4.0+8303+4bdcb5c6.aarch64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: php
+  stream: '7.4'
+  version: '8030020200615123046'
+  context: eb6bdfed
+  arch: aarch64
+  license:
+    content:
+    - BSD
+    - BSD and LGPLv3+
+    - PHP
+    - PHP and BSD
+    - PHP and LGPLv2 and OpenLDAP
+    - PHP and LGPLv2+
+    - PHP and Zend and BSD and MIT and ASL 1.0 and NCSA
+    - PHP and Zend and BSD and MIT and ASL 1.0 and NCSA and PostgreSQL
+    module:
+    - GPLv2+
+  summary: PHP scripting language
+  description: php 7.4 module
+  dependencies:
+  - buildrequires:
+      httpd:
+      - '2.4'
+      nginx:
+      - '1.14'
+      platform:
+      - el8
+    requires:
+      httpd:
+      - '2.4'
+      nginx: []
+      platform:
+      - el8
+  components:
+    rpms:
+      libzip:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: ZIP library
+        ref: stream-php-7.4-rhel-8.3.0
+      php:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Module API.
+        ref: stream-7.4-rhel-8.3.0
+      php-pear:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        rationale: Extension management
+        ref: stream-php-7.4-rhel-8.3.0
+      php-pecl-apcu:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: APCu extension
+        ref: stream-php-7.4-rhel-8.3.0
+      php-pecl-rrd:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: RRD extension
+        ref: stream-php-7.4-rhel-8.3.0
+      php-pecl-xdebug:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: Xdebug extension
+        ref: stream-php-7.4-rhel-8.3.0
+      php-pecl-zip:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: ZIP extension
+        ref: stream-php-7.4-rhel-8.3.0
+  api:
+    rpms:
+    - php-fpm
+  references:
+    documentation: http://php.net/
+    tracker: https://bugs.php.net/
+  profiles:
+    common:
+      rpms:
+      - php-cli
+      - php-common
+      - php-fpm
+      - php-json
+      - php-mbstring
+      - php-xml
+    devel:
+      rpms:
+      - libzip
+      - php-cli
+      - php-common
+      - php-devel
+      - php-fpm
+      - php-json
+      - php-mbstring
+      - php-pear
+      - php-pecl-zip
+      - php-process
+      - php-xml
+    minimal:
+      rpms:
+      - php-cli
+      - php-common
+  artifacts:
+    rpms:
+    - php-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-cli-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-dbg-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-fpm-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-common-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-devel-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-opcache-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-ldap-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-pdo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-mysqlnd-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-pgsql-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-process-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-odbc-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-soap-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-snmp-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-xml-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-xmlrpc-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-mbstring-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-gd-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-bcmath-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-gmp-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-dba-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-embedded-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-intl-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-enchant-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-json-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-ffi-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-debugsource-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-cli-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-dbg-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-fpm-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-common-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-opcache-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-ldap-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-pdo-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-mysqlnd-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-pgsql-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-process-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-odbc-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-soap-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-snmp-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-xml-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-xmlrpc-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-mbstring-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-gd-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-bcmath-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-gmp-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-dba-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-embedded-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-intl-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-enchant-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-json-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - php-ffi-debuginfo-0:7.4.6-4.module+el8.3.0+7002+2eb69d76.aarch64
+    - libzip-0:1.6.1-1.module+el8.3.0+6678+b09f589e.aarch64
+    - libzip-devel-0:1.6.1-1.module+el8.3.0+6678+b09f589e.aarch64
+    - libzip-tools-0:1.6.1-1.module+el8.3.0+6678+b09f589e.aarch64
+    - libzip-debugsource-0:1.6.1-1.module+el8.3.0+6678+b09f589e.aarch64
+    - libzip-debuginfo-0:1.6.1-1.module+el8.3.0+6678+b09f589e.aarch64
+    - libzip-tools-debuginfo-0:1.6.1-1.module+el8.3.0+6678+b09f589e.aarch64
+    - php-pear-1:1.10.12-1.module+el8.3.0+6678+b09f589e.noarch
+    - php-pecl-zip-0:1.18.2-1.module+el8.3.0+6678+b09f589e.aarch64
+    - php-pecl-zip-debugsource-0:1.18.2-1.module+el8.3.0+6678+b09f589e.aarch64
+    - php-pecl-zip-debuginfo-0:1.18.2-1.module+el8.3.0+6678+b09f589e.aarch64
+    - php-pecl-xdebug-0:2.9.5-1.module+el8.3.0+6678+b09f589e.aarch64
+    - php-pecl-xdebug-debugsource-0:2.9.5-1.module+el8.3.0+6678+b09f589e.aarch64
+    - php-pecl-xdebug-debuginfo-0:2.9.5-1.module+el8.3.0+6678+b09f589e.aarch64
+    - php-pecl-rrd-0:2.0.1-1.module+el8.3.0+6678+b09f589e.aarch64
+    - php-pecl-rrd-debugsource-0:2.0.1-1.module+el8.3.0+6678+b09f589e.aarch64
+    - php-pecl-rrd-debuginfo-0:2.0.1-1.module+el8.3.0+6678+b09f589e.aarch64
+    - php-pecl-apcu-0:5.1.18-1.module+el8.3.0+6678+b09f589e.aarch64
+    - php-pecl-apcu-devel-0:5.1.18-1.module+el8.3.0+6678+b09f589e.aarch64
+    - apcu-panel-0:5.1.18-1.module+el8.3.0+6678+b09f589e.noarch
+    - php-pecl-apcu-debugsource-0:5.1.18-1.module+el8.3.0+6678+b09f589e.aarch64
+    - php-pecl-apcu-debuginfo-0:5.1.18-1.module+el8.3.0+6678+b09f589e.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: php
+  stream: '7.3'
+  version: '8020020200715124551'
+  context: ceb1cf90
+  arch: aarch64
+  license:
+    content:
+    - BSD
+    - BSD and LGPLv3+
+    - PHP
+    - PHP and BSD
+    - PHP and LGPLv2 and OpenLDAP
+    - PHP and LGPLv2+
+    - PHP and Zend and BSD and MIT and ASL 1.0 and NCSA
+    - PHP and Zend and BSD and MIT and ASL 1.0 and NCSA and PostgreSQL
+    module:
+    - GPLv2+
+  summary: PHP scripting language
+  description: php 7.3 module
+  dependencies:
+  - buildrequires:
+      httpd:
+      - '2.4'
+      nginx:
+      - '1.14'
+      platform:
+      - el8
+    requires:
+      httpd:
+      - '2.4'
+      nginx: []
+      platform:
+      - el8
+  components:
+    rpms:
+      libzip:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: ZIP library
+        ref: stream-php-7.3-rhel-8.2.0
+      php:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Module API.
+        ref: stream-7.3-rhel-8.2.0
+      php-pear:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        rationale: Extension management
+        ref: stream-php-7.3-rhel-8.2.0
+      php-pecl-apcu:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: APCu extension
+        ref: stream-php-7.3-rhel-8.2.0
+      php-pecl-rrd:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: RRD extension
+        ref: stream-php-7.3-rhel-8.2.0
+      php-pecl-xdebug:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: Xdebug extension
+        ref: stream-php-7.3-rhel-8.2.0
+      php-pecl-zip:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: ZIP extension
+        ref: stream-php-7.3-rhel-8.2.0
+  api:
+    rpms:
+    - php-fpm
+  references:
+    documentation: http://php.net/
+    tracker: https://bugs.php.net/
+  profiles:
+    common:
+      rpms:
+      - php-cli
+      - php-common
+      - php-fpm
+      - php-json
+      - php-mbstring
+      - php-xml
+    devel:
+      rpms:
+      - libzip
+      - php-cli
+      - php-common
+      - php-devel
+      - php-fpm
+      - php-json
+      - php-mbstring
+      - php-pear
+      - php-pecl-zip
+      - php-process
+      - php-xml
+    minimal:
+      rpms:
+      - php-cli
+      - php-common
+  artifacts:
+    rpms:
+    - php-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-cli-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-dbg-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-fpm-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-common-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-devel-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-opcache-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-ldap-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-pdo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-mysqlnd-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-pgsql-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-process-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-odbc-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-soap-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-snmp-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-xml-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-xmlrpc-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-mbstring-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-gd-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-bcmath-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-gmp-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-dba-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-embedded-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-recode-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-intl-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-enchant-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-json-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-debugsource-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-cli-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-dbg-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-fpm-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-common-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-opcache-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-ldap-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-pdo-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-mysqlnd-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-pgsql-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-process-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-odbc-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-soap-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-snmp-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-xml-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-xmlrpc-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-mbstring-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-gd-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-bcmath-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-gmp-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-dba-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-embedded-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-recode-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-intl-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-enchant-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - php-json-debuginfo-0:7.3.20-1.module+el8.2.0+7373+b272fdef.aarch64
+    - libzip-0:1.5.2-1.module+el8.1.0+3189+a1bff096.aarch64
+    - libzip-devel-0:1.5.2-1.module+el8.1.0+3189+a1bff096.aarch64
+    - libzip-tools-0:1.5.2-1.module+el8.1.0+3189+a1bff096.aarch64
+    - libzip-debugsource-0:1.5.2-1.module+el8.1.0+3189+a1bff096.aarch64
+    - libzip-debuginfo-0:1.5.2-1.module+el8.1.0+3189+a1bff096.aarch64
+    - libzip-tools-debuginfo-0:1.5.2-1.module+el8.1.0+3189+a1bff096.aarch64
+    - php-pear-1:1.10.9-1.module+el8.1.0+3189+a1bff096.noarch
+    - php-pecl-zip-0:1.15.4-1.module+el8.1.0+3189+a1bff096.aarch64
+    - php-pecl-zip-debugsource-0:1.15.4-1.module+el8.1.0+3189+a1bff096.aarch64
+    - php-pecl-zip-debuginfo-0:1.15.4-1.module+el8.1.0+3189+a1bff096.aarch64
+    - php-pecl-xdebug-0:2.8.0-1.module+el8.2.0+4968+1d5097db.aarch64
+    - php-pecl-xdebug-debugsource-0:2.8.0-1.module+el8.2.0+4968+1d5097db.aarch64
+    - php-pecl-xdebug-debuginfo-0:2.8.0-1.module+el8.2.0+4968+1d5097db.aarch64
+    - php-pecl-rrd-0:2.0.1-1.module+el8.2.0+4968+1d5097db.aarch64
+    - php-pecl-rrd-debugsource-0:2.0.1-1.module+el8.2.0+4968+1d5097db.aarch64
+    - php-pecl-rrd-debuginfo-0:2.0.1-1.module+el8.2.0+4968+1d5097db.aarch64
+    - php-pecl-apcu-0:5.1.17-1.module+el8.1.0+3189+a1bff096.aarch64
+    - php-pecl-apcu-devel-0:5.1.17-1.module+el8.1.0+3189+a1bff096.aarch64
+    - apcu-panel-0:5.1.17-1.module+el8.1.0+3189+a1bff096.noarch
+    - php-pecl-apcu-debugsource-0:5.1.17-1.module+el8.1.0+3189+a1bff096.aarch64
+    - php-pecl-apcu-debuginfo-0:5.1.17-1.module+el8.1.0+3189+a1bff096.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: mariadb
+  stream: '10.3'
+  version: '8030020210324132345'
+  context: 229f0a1c
+  arch: aarch64
+  license:
+    content:
+    - GPLv2
+    - GPLv2 with exceptions and LGPLv2 and BSD
+    - LGPLv2+
+    module:
+    - MIT
+  summary: MariaDB Module
+  description: MariaDB is a community developed branch of MySQL. MariaDB is a multi-user,
+    multi-threaded SQL database server. It is a client/server implementation consisting
+    of a server daemon (mysqld) and many different client programs and libraries.
+    The base package contains the standard MariaDB/MySQL client programs and generic
+    MySQL files.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.3.0.z
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      Judy:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '4'
+        rationale: MariaDB dependency for OQgraph computation engine
+        ref: stream-mariadb-10.3-rhel-8.3.0
+      asio:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '12'
+        rationale: Galera dependency for asynchronous I/O operation
+        ref: stream-mariadb-10.3-rhel-8.3.0
+      galera:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '16'
+        rationale: Galera package for MariaDB server replication
+        ref: stream-10.3-rhel-8.3.0
+      mariadb:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '8'
+        rationale: MariaDB package
+        ref: stream-10.3-rhel-8.3.0
+  api:
+    rpms:
+    - mariadb
+    - mariadb-server
+  buildopts:
+    rpms:
+      macros: '%runselftest 1
+
+        %ignore_testsuite_result 0
+
+        '
+  references:
+    community: http://mariadb.org
+    documentation: https://mariadb.com/kb/en/library/documentation/
+    tracker: http://bugzilla.redhat.com
+  profiles:
+    client:
+      rpms:
+      - mariadb
+    galera:
+      rpms:
+      - mariadb-server
+      - mariadb-server-galera
+    server:
+      rpms:
+      - mariadb-server
+  filter:
+    rpms:
+    - Judy-devel
+    - asio-devel
+  artifacts:
+    rpms:
+    - Judy-0:1.0.5-18.module+el8+2765+cfa4f87b.aarch64
+    - Judy-devel-0:1.0.5-18.module+el8+2765+cfa4f87b.aarch64
+    - Judy-debugsource-0:1.0.5-18.module+el8+2765+cfa4f87b.aarch64
+    - Judy-debuginfo-0:1.0.5-18.module+el8+2765+cfa4f87b.aarch64
+    - mariadb-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-common-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-errmsg-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-server-galera-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-server-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-oqgraph-engine-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-backup-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-gssapi-server-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-server-utils-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-devel-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-embedded-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-embedded-devel-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-test-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-debugsource-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-debuginfo-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-server-debuginfo-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-oqgraph-engine-debuginfo-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-backup-debuginfo-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-gssapi-server-debuginfo-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-server-utils-debuginfo-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-embedded-debuginfo-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - mariadb-test-debuginfo-3:10.3.28-1.module+el8.3.0+10472+7adc332a.aarch64
+    - asio-devel-0:1.10.8-7.module+el8+2765+cfa4f87b.aarch64
+    - galera-0:25.3.32-1.module+el8.3.0+10472+7adc332a.aarch64
+    - galera-debugsource-0:25.3.32-1.module+el8.3.0+10472+7adc332a.aarch64
+    - galera-debuginfo-0:25.3.32-1.module+el8.3.0+10472+7adc332a.aarch64
+...
