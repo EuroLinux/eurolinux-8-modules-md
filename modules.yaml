@@ -4693,3 +4693,1097 @@ data:
     - slirp4netns-debugsource-0:1.1.8-1.module+el8.4.0+11822+6cc1e7d7.aarch64
     - slirp4netns-debuginfo-0:1.1.8-1.module+el8.4.0+11822+6cc1e7d7.aarch64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: container-tools
+  stream: '3.0'
+  version: '8040020210608070614'
+  context: c0c392d5
+  arch: aarch64
+  license:
+    content:
+    - ASL 2.0
+    - ASL 2.0 and GPLv3+
+    - BSD and MIT
+    - GPLv2
+    - GPLv2+
+    - GPLv3+
+    - LGPLv2+
+    module:
+    - MIT
+  summary: Stable versions of podman 3.0, buildah 1.19, skopeo 1.2, runc, conmon,
+    etc as well as dependencies such as container-selinux built and tested together,
+    and supported as documented on the Application Stream lifecycle page.
+  description: 'Stable versions of podman 3.0, buildah 1.19, skopeo 1.2, runc, conmon,
+    CRIU, Udica, etc as well as dependencies such as container-selinux built and tested
+    together. Released with RHEL 8.4 and supported for 24 months. During the support
+    lifecycle, back ports of important, critical vulnerabilities (CVEs, RHSAs) and
+    bug fixes (RHBAs) are provided to this stream, and versions do not move forward.
+    For more information see: https://access.redhat.com/support/policy/updates/containertools'
+  dependencies:
+  - buildrequires:
+      go-toolset:
+      - rhel8
+      golang-ecosystem:
+      - '1.0'
+      platform:
+      - el8.4.0.z
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      buildah:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.4.0
+      cockpit-podman:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.4.0
+      conmon:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.4.0
+      container-selinux:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.4.0
+      containernetworking-plugins:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.4.0
+      criu:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.4.0
+      crun:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.4.0
+      fuse-overlayfs:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.4.0
+      libslirp:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '-1'
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.4.0
+      oci-seccomp-bpf-hook:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.4.0
+      podman:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.4.0
+      runc:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.4.0
+      skopeo:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.4.0
+      slirp4netns:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.4.0
+      toolbox:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.4.0
+      udica:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.4.0
+  api:
+    rpms:
+    - buildah
+    - conmon
+    - container-selinux
+    - containernetworking-plugins
+    - containers-common
+    - fuse-overlayfs
+    - libslirp
+    - podman
+    - podman-docker
+    - podman-manpages
+    - podman-remote
+    - runc
+    - skopeo
+    - slirp4netns
+  buildopts:
+    rpms:
+      macros: '%_with_ignore_tests 1
+
+        '
+  references:
+    community: https://github.com/projectatomic
+    documentation: https://projectatomic.io
+    tracker: https://github.com/projectatomic
+  profiles:
+    common:
+      rpms:
+      - buildah
+      - cockpit-podman
+      - conmon
+      - container-selinux
+      - containernetworking-plugins
+      - criu
+      - crun
+      - fuse-overlayfs
+      - libslirp
+      - podman
+      - runc
+      - skopeo
+      - slirp4netns
+      - toolbox
+      - udica
+  artifacts:
+    rpms:
+    - libslirp-0:4.3.1-1.module+el8.4.0+11310+8c67a752.aarch64
+    - libslirp-devel-0:4.3.1-1.module+el8.4.0+11310+8c67a752.aarch64
+    - libslirp-debugsource-0:4.3.1-1.module+el8.4.0+11310+8c67a752.aarch64
+    - libslirp-debuginfo-0:4.3.1-1.module+el8.4.0+11310+8c67a752.aarch64
+    - udica-0:0.2.4-1.module+el8.4.0+11310+8c67a752.noarch
+    - toolbox-0:0.0.8-1.module+el8.4.0+11310+8c67a752.noarch
+    - slirp4netns-0:1.1.8-1.module+el8.4.0+11310+8c67a752.aarch64
+    - slirp4netns-debugsource-0:1.1.8-1.module+el8.4.0+11310+8c67a752.aarch64
+    - slirp4netns-debuginfo-0:1.1.8-1.module+el8.4.0+11310+8c67a752.aarch64
+    - skopeo-1:1.2.2-7.module+el8.4.0+11310+8c67a752.aarch64
+    - containers-common-1:1.2.2-7.module+el8.4.0+11310+8c67a752.aarch64
+    - skopeo-tests-1:1.2.2-7.module+el8.4.0+11310+8c67a752.aarch64
+    - skopeo-debugsource-1:1.2.2-7.module+el8.4.0+11310+8c67a752.aarch64
+    - skopeo-debuginfo-1:1.2.2-7.module+el8.4.0+11310+8c67a752.aarch64
+    - runc-0:1.0.0-71.rc92.module+el8.4.0+11310+8c67a752.aarch64
+    - runc-debugsource-0:1.0.0-71.rc92.module+el8.4.0+11310+8c67a752.aarch64
+    - runc-debuginfo-0:1.0.0-71.rc92.module+el8.4.0+11310+8c67a752.aarch64
+    - podman-0:3.0.1-6.module+el8.4.0+11310+8c67a752.aarch64
+    - podman-docker-0:3.0.1-6.module+el8.4.0+11310+8c67a752.noarch
+    - podman-remote-0:3.0.1-6.module+el8.4.0+11310+8c67a752.aarch64
+    - podman-catatonit-0:3.0.1-6.module+el8.4.0+11310+8c67a752.aarch64
+    - podman-plugins-0:3.0.1-6.module+el8.4.0+11310+8c67a752.aarch64
+    - podman-tests-0:3.0.1-6.module+el8.4.0+11310+8c67a752.aarch64
+    - podman-debugsource-0:3.0.1-6.module+el8.4.0+11310+8c67a752.aarch64
+    - podman-debuginfo-0:3.0.1-6.module+el8.4.0+11310+8c67a752.aarch64
+    - podman-remote-debuginfo-0:3.0.1-6.module+el8.4.0+11310+8c67a752.aarch64
+    - podman-catatonit-debuginfo-0:3.0.1-6.module+el8.4.0+11310+8c67a752.aarch64
+    - podman-plugins-debuginfo-0:3.0.1-6.module+el8.4.0+11310+8c67a752.aarch64
+    - oci-seccomp-bpf-hook-0:1.2.0-1.module+el8.4.0+11310+8c67a752.aarch64
+    - oci-seccomp-bpf-hook-debugsource-0:1.2.0-1.module+el8.4.0+11310+8c67a752.aarch64
+    - oci-seccomp-bpf-hook-debuginfo-0:1.2.0-1.module+el8.4.0+11310+8c67a752.aarch64
+    - fuse-overlayfs-0:1.4.0-2.module+el8.4.0+11310+8c67a752.aarch64
+    - fuse-overlayfs-debugsource-0:1.4.0-2.module+el8.4.0+11310+8c67a752.aarch64
+    - fuse-overlayfs-debuginfo-0:1.4.0-2.module+el8.4.0+11310+8c67a752.aarch64
+    - crun-0:0.18-2.module+el8.4.0+11310+8c67a752.aarch64
+    - crun-debugsource-0:0.18-2.module+el8.4.0+11310+8c67a752.aarch64
+    - crun-debuginfo-0:0.18-2.module+el8.4.0+11310+8c67a752.aarch64
+    - criu-0:3.15-1.module+el8.4.0+11310+8c67a752.aarch64
+    - python3-criu-0:3.15-1.module+el8.4.0+11310+8c67a752.aarch64
+    - crit-0:3.15-1.module+el8.4.0+11310+8c67a752.aarch64
+    - criu-debugsource-0:3.15-1.module+el8.4.0+11310+8c67a752.aarch64
+    - criu-debuginfo-0:3.15-1.module+el8.4.0+11310+8c67a752.aarch64
+    - containernetworking-plugins-0:0.9.1-1.module+el8.4.0+11310+8c67a752.aarch64
+    - containernetworking-plugins-debugsource-0:0.9.1-1.module+el8.4.0+11310+8c67a752.aarch64
+    - containernetworking-plugins-debuginfo-0:0.9.1-1.module+el8.4.0+11310+8c67a752.aarch64
+    - container-selinux-2:2.158.0-1.module+el8.4.0+11310+8c67a752.noarch
+    - conmon-2:2.0.26-1.module+el8.4.0+11310+8c67a752.aarch64
+    - conmon-debugsource-2:2.0.26-1.module+el8.4.0+11310+8c67a752.aarch64
+    - conmon-debuginfo-2:2.0.26-1.module+el8.4.0+11310+8c67a752.aarch64
+    - cockpit-podman-0:29-2.module+el8.4.0+11310+8c67a752.noarch
+    - buildah-0:1.19.7-1.module+el8.4.0+11310+8c67a752.aarch64
+    - buildah-tests-0:1.19.7-1.module+el8.4.0+11310+8c67a752.aarch64
+    - buildah-debugsource-0:1.19.7-1.module+el8.4.0+11310+8c67a752.aarch64
+    - buildah-debuginfo-0:1.19.7-1.module+el8.4.0+11310+8c67a752.aarch64
+    - buildah-tests-debuginfo-0:1.19.7-1.module+el8.4.0+11310+8c67a752.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-App-cpanminus
+  stream: 1.7044
+  version: '8030020200313075600'
+  context: 09acf126
+  arch: aarch64
+  license:
+    content:
+    - (GPL+ or Artistic) and GPLv2+
+    - ASL 2.0
+    - GPL+ or Artistic
+    module:
+    - MIT
+  summary: Get, unpack, build and install CPAN modules
+  description: 'This is a CPAN client that requires zero configuration, and stands
+    alone but it''s maintainable and extensible with plug-ins and friendly to shell
+    scripting.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - 5.26
+      platform:
+      - el8.3.0
+    requires:
+      perl:
+      - 5.26
+      perl-YAML: []
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-App-cpanminus:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: The API.
+        ref: stream-1.7044-rhel-8.3.0
+      perl-CPAN-DistnameInfo:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Run-time dependency.
+        ref: stream-0.12-rhel-8.3.0
+      perl-CPAN-Meta-Check:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: Run-time dependency.
+        ref: stream-0.014-rhel-8.3.0
+      perl-File-pushd:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Run-time dependency.
+        ref: stream-1.014-rhel-8.3.0
+      perl-Module-CPANfile:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Run-time dependency.
+        ref: stream-1.1002-rhel-8.3.0
+      perl-Parse-PMFile:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Run-time dependency.
+        ref: stream-0.41-rhel-8.3.0
+      perl-String-ShellQuote:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Run-time dependency.
+        ref: stream-1.04-rhel-8.3.0
+      perl-Test-Deep:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Build-time dependency.
+        ref: stream-1.127-rhel-8.3.0
+  api:
+    rpms:
+    - perl-App-cpanminus
+  buildopts:
+    rpms:
+      macros: '%_without_perl_CPAN_Meta_Check_enables_extra_test 1
+
+        '
+  references:
+    community: https://metacpan.org/release/App-cpanminus
+  profiles:
+    common:
+      description: App-cpanminus distribution
+      rpms:
+      - perl-App-cpanminus
+  filter:
+    rpms:
+    - perl-CPAN-DistnameInfo-dummy
+    - perl-Test-Deep
+  artifacts:
+    rpms:
+    - perl-Test-Deep-0:1.127-4.module+el8.2.0+4278+29f88ddb.noarch
+    - perl-CPAN-DistnameInfo-0:0.12-13.module+el8.2.0+4278+29f88ddb.noarch
+    - perl-App-cpanminus-0:1.7044-5.module+el8.1.0+2942+5e3df93c.noarch
+    - perl-Parse-PMFile-0:0.41-7.module+el8.1.0+2942+5e3df93c.noarch
+    - perl-File-pushd-0:1.014-6.module+el8.1.0+2942+5e3df93c.noarch
+    - perl-CPAN-Meta-Check-0:0.014-6.module+el8.1.0+2942+5e3df93c.noarch
+    - perl-String-ShellQuote-0:1.04-24.module+el8.1.0+2942+5e3df93c.noarch
+    - perl-Module-CPANfile-0:1.1002-7.module+el8.1.0+2942+5e3df93c.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl
+  stream: 5.26
+  version: 820181219174508
+  context: 9edba152
+  arch: aarch64
+  summary: Practical Extraction and Report Language
+  description: >
+    Perl is a high-level programming language with roots in C, sed, awk and shell
+    scripting. Perl is good at handling processes and files, and is especially good
+    at handling text. Perl's hallmarks are practicality and efficiency. While it is
+    used to do a lot of different things, Perl's most common applications are system
+    administration utilities and web programming.
+  license:
+    module:
+    - MIT
+  xmd:
+    mbs:
+      mse: TRUE
+      scmurl: git://pkgs.devel.redhat.com/modules/perl?#e712dc415d7660fc59a5b68c48ddcdad76c4d575
+      commit: e712dc415d7660fc59a5b68c48ddcdad76c4d575
+      buildrequires:
+        platform:
+          stream_collision_modules: 
+          stream: el8
+          ref: virtual
+          filtered_rpms: []
+          ursine_rpms: 
+          koji_tag: module-rhel-8.0.0-build
+          version: 2
+          context: 00000000
+  dependencies:
+  - buildrequires:
+      platform: [el8]
+    requires:
+      platform: [el8]
+  references:
+    community: https://docs.pagure.org/modularity/
+  profiles:
+    common:
+      description: Interpreter and all Perl modules bundled within upstream Perl.
+      rpms:
+      - perl
+    minimal:
+      description: Only the interpreter as a standalone executable.
+      rpms:
+      - perl-interpreter
+  api:
+    rpms:
+    - perl
+    - perl-Archive-Tar
+    - perl-Attribute-Handlers
+    - perl-B-Debug
+    - perl-CPAN
+    - perl-CPAN-Meta
+    - perl-CPAN-Meta-Requirements
+    - perl-CPAN-Meta-YAML
+    - perl-Carp
+    - perl-Compress-Raw-Bzip2
+    - perl-Compress-Raw-Zlib
+    - perl-Config-Perl-V
+    - perl-DB_File
+    - perl-Data-Dumper
+    - perl-Devel-PPPort
+    - perl-Devel-Peek
+    - perl-Devel-SelfStubber
+    - perl-Digest
+    - perl-Digest-MD5
+    - perl-Digest-SHA
+    - perl-Encode
+    - perl-Encode-devel
+    - perl-Env
+    - perl-Errno
+    - perl-Exporter
+    - perl-ExtUtils-CBuilder
+    - perl-ExtUtils-Command
+    - perl-ExtUtils-Embed
+    - perl-ExtUtils-Install
+    - perl-ExtUtils-MM-Utils
+    - perl-ExtUtils-MakeMaker
+    - perl-ExtUtils-Manifest
+    - perl-ExtUtils-Miniperl
+    - perl-ExtUtils-ParseXS
+    - perl-File-Fetch
+    - perl-File-Path
+    - perl-File-Temp
+    - perl-Filter
+    - perl-Filter-Simple
+    - perl-Getopt-Long
+    - perl-HTTP-Tiny
+    - perl-IO
+    - perl-IO-Compress
+    - perl-IO-Socket-IP
+    - perl-IO-Zlib
+    - perl-IPC-Cmd
+    - perl-IPC-SysV
+    - perl-JSON-PP
+    - perl-Locale-Codes
+    - perl-Locale-Maketext
+    - perl-Locale-Maketext-Simple
+    - perl-MIME-Base64
+    - perl-Math-BigInt
+    - perl-Math-BigInt-FastCalc
+    - perl-Math-BigRat
+    - perl-Math-Complex
+    - perl-Memoize
+    - perl-Module-CoreList
+    - perl-Module-CoreList-tools
+    - perl-Module-Load
+    - perl-Module-Load-Conditional
+    - perl-Module-Loaded
+    - perl-Module-Metadata
+    - perl-Net-Ping
+    - perl-Params-Check
+    - perl-PathTools
+    - perl-Perl-OSType
+    - perl-PerlIO-via-QuotedPrint
+    - perl-Pod-Checker
+    - perl-Pod-Escapes
+    - perl-Pod-Html
+    - perl-Pod-Parser
+    - perl-Pod-Perldoc
+    - perl-Pod-Simple
+    - perl-Pod-Usage
+    - perl-Scalar-List-Utils
+    - perl-SelfLoader
+    - perl-Socket
+    - perl-Storable
+    - perl-Sys-Syslog
+    - perl-Term-ANSIColor
+    - perl-Term-Cap
+    - perl-Test
+    - perl-Test-Harness
+    - perl-Test-Simple
+    - perl-Text-Balanced
+    - perl-Text-ParseWords
+    - perl-Text-Tabs+Wrap
+    - perl-Thread-Queue
+    - perl-Time-HiRes
+    - perl-Time-Local
+    - perl-Time-Piece
+    - perl-Unicode-Collate
+    - perl-Unicode-Normalize
+    - perl-autodie
+    - perl-bignum
+    - perl-constant
+    - perl-devel
+    - perl-encoding
+    - perl-experimental
+    - perl-generators
+    - perl-interpreter
+    - perl-libnet
+    - perl-libnetcfg
+    - perl-libs
+    - perl-macros
+    - perl-open
+    - perl-parent
+    - perl-perlfaq
+    - perl-podlators
+    - perl-tests
+    - perl-threads
+    - perl-threads-shared
+    - perl-utils
+    - perl-version
+...
+---
+document: modulemd
+version: 2
+data:
+  name: php
+  stream: '7.2'
+  version: '8020020191108065827'
+  context: 2c7ca891
+  arch: aarch64
+  license:
+    content:
+    - BSD
+    - BSD and LGPLv3+
+    - PHP
+    - PHP and BSD
+    - PHP and LGPLv2 and OpenLDAP
+    - PHP and LGPLv2+
+    - PHP and Zend and BSD and MIT and ASL 1.0
+    module:
+    - GPLv2+
+  summary: PHP scripting language
+  description: php 7.2 module
+  dependencies:
+  - buildrequires:
+      httpd:
+      - '2.4'
+      nginx:
+      - '1.14'
+      platform:
+      - el8.2.0
+    requires:
+      httpd:
+      - '2.4'
+      nginx: []
+      platform:
+      - el8
+  components:
+    rpms:
+      libzip:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: ZIP library
+        ref: stream-php-7.2-rhel-8.2.0
+      php:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Module API.
+        ref: stream-7.2-rhel-8.2.0
+      php-pear:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        rationale: Extension management
+        ref: stream-php-7.2-rhel-8.2.0
+      php-pecl-apcu:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: APCu extension
+        ref: stream-php-7.2-rhel-8.2.0
+      php-pecl-zip:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: ZIP extension
+        ref: stream-php-7.2-rhel-8.2.0
+  api:
+    rpms:
+    - php-fpm
+  references:
+    documentation: http://php.net/
+    tracker: https://bugs.php.net/
+  profiles:
+    common:
+      rpms:
+      - php-cli
+      - php-common
+      - php-fpm
+      - php-json
+      - php-mbstring
+      - php-xml
+    devel:
+      rpms:
+      - libzip
+      - php-cli
+      - php-common
+      - php-devel
+      - php-fpm
+      - php-json
+      - php-mbstring
+      - php-pear
+      - php-pecl-zip
+      - php-process
+      - php-xml
+    minimal:
+      rpms:
+      - php-cli
+      - php-common
+  artifacts:
+    rpms:
+    - php-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-cli-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-dbg-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-fpm-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-common-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-devel-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-opcache-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-ldap-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-pdo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-mysqlnd-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-pgsql-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-process-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-odbc-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-soap-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-snmp-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-xml-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-xmlrpc-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-mbstring-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-gd-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-bcmath-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-gmp-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-dba-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-embedded-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-recode-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-intl-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-enchant-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-json-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-debugsource-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-cli-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-dbg-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-fpm-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-common-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-opcache-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-ldap-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-pdo-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-mysqlnd-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-pgsql-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-process-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-odbc-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-soap-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-snmp-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-xml-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-xmlrpc-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-mbstring-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-gd-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-bcmath-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-gmp-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-dba-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-embedded-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-recode-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-intl-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-enchant-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - php-json-debuginfo-0:7.2.24-1.module+el8.2.0+4601+7c76a223.aarch64
+    - libzip-0:1.5.1-2.module+el8.1.0+3202+af5476b9.aarch64
+    - libzip-devel-0:1.5.1-2.module+el8.1.0+3202+af5476b9.aarch64
+    - libzip-tools-0:1.5.1-2.module+el8.1.0+3202+af5476b9.aarch64
+    - libzip-debugsource-0:1.5.1-2.module+el8.1.0+3202+af5476b9.aarch64
+    - libzip-debuginfo-0:1.5.1-2.module+el8.1.0+3202+af5476b9.aarch64
+    - libzip-tools-debuginfo-0:1.5.1-2.module+el8.1.0+3202+af5476b9.aarch64
+    - php-pear-1:1.10.5-9.module+el8.1.0+3202+af5476b9.noarch
+    - php-pecl-zip-0:1.15.3-1.module+el8.1.0+3186+20164e6f.aarch64
+    - php-pecl-zip-debugsource-0:1.15.3-1.module+el8.1.0+3186+20164e6f.aarch64
+    - php-pecl-zip-debuginfo-0:1.15.3-1.module+el8.1.0+3186+20164e6f.aarch64
+    - php-pecl-apcu-0:5.1.12-2.module+el8.1.0+3202+af5476b9.aarch64
+    - php-pecl-apcu-devel-0:5.1.12-2.module+el8.1.0+3202+af5476b9.aarch64
+    - apcu-panel-0:5.1.12-2.module+el8.1.0+3202+af5476b9.noarch
+    - php-pecl-apcu-debugsource-0:5.1.12-2.module+el8.1.0+3202+af5476b9.aarch64
+    - php-pecl-apcu-debuginfo-0:5.1.12-2.module+el8.1.0+3202+af5476b9.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-YAML
+  stream: 1.24
+  version: '8030020200313080146'
+  context: f01fa41a
+  arch: aarch64
+  license:
+    content:
+    - GPL+ or Artistic
+    module:
+    - MIT
+  summary: Perl parser for YAML
+  description: 'The YAML.pm module implements a YAML Loader and Dumper based on the
+    YAML 1.0 specification. YAML is a generic data serialization language that is
+    optimized for human readability. It can be used to express the data structures
+    of most modern programming languages, including Perl. For information on the YAML
+    syntax, please refer to the YAML specification.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - 5.26
+      perl-YAML-bootstrap:
+      - 1.24
+      platform:
+      - el8.3.0
+    requires:
+      perl:
+      - 5.26
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-YAML:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: The API.
+        ref: stream-1.24-rhel-8.3.0
+  api:
+    rpms:
+    - perl-YAML
+  buildopts:
+    rpms:
+      macros: '%_with_perl_YAML_enables_test 1
+
+        '
+  references:
+    community: https://metacpan.org/release/YAML
+  profiles:
+    common:
+      description: YAML distribution
+      rpms:
+      - perl-YAML
+  artifacts:
+    rpms:
+    - perl-YAML-0:1.24-3.module+el8.1.0+2934+4e5567df.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: redis
+  stream: '5'
+  version: '8000020190711140130'
+  context: f8e95b4e
+  arch: aarch64
+  license:
+    content:
+    - BSD and MIT
+    - CC-BY-SA
+    module:
+    - GPLv2+
+  summary: Redis persistent key-value database
+  description: redis 5 module
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      redis:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Module API.
+        ref: stream-5.0-rhel-8.0.0
+  api:
+    rpms:
+    - redis
+  buildopts:
+    rpms:
+      macros: '%_without_redistrib 1
+
+        '
+  references:
+    documentation: https://redis.io/documentation
+    tracker: https://github.com/antirez/redis/issues
+  profiles:
+    common:
+      rpms:
+      - redis
+  artifacts:
+    rpms:
+    - redis-0:5.0.3-2.module+el8.0.0.z+3657+acb471dc.aarch64
+    - redis-devel-0:5.0.3-2.module+el8.0.0.z+3657+acb471dc.aarch64
+    - redis-doc-0:5.0.3-2.module+el8.0.0.z+3657+acb471dc.noarch
+    - redis-debugsource-0:5.0.3-2.module+el8.0.0.z+3657+acb471dc.aarch64
+    - redis-debuginfo-0:5.0.3-2.module+el8.0.0.z+3657+acb471dc.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: mercurial
+  stream: '4.8'
+  version: '820190108205035'
+  context: 77fc8825
+  arch: aarch64
+  license:
+    content:
+    - GPLv2+
+    module:
+    - MIT
+  summary: Mercurial -- a distributed SCM
+  description: Mercurial is a fast, lightweight source control management system designed
+    for efficient handling of very large distributed projects.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+      python27:
+      - '2.7'
+    requires:
+      platform:
+      - el8
+      python27:
+      - '2.7'
+  components:
+    rpms:
+      mercurial:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/mercurial
+        rationale: Mercurial -- a distributed SCM
+        ref: stream-mercurial-4.8
+        repository: git://pkgs.devel.redhat.com/rpms/mercurial
+  api:
+    rpms:
+    - mercurial
+    - mercurial-hgk
+  references:
+    community: https://www.mercurial-scm.org/
+    documentation: https://www.mercurial-scm.org/guide
+    tracker: https://www.mercurial-scm.org/wiki/BugTracker
+  profiles:
+    common:
+      rpms:
+      - mercurial
+  artifacts:
+    rpms:
+    - mercurial-0:4.8.2-1.module+el8+2647+365c7305.aarch64
+    - mercurial-hgk-0:4.8.2-1.module+el8+2647+365c7305.aarch64
+    - mercurial-debugsource-0:4.8.2-1.module+el8+2647+365c7305.aarch64
+    - mercurial-debuginfo-0:4.8.2-1.module+el8+2647+365c7305.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: mysql
+  stream: '8.0'
+  version: '8020020200828111438'
+  context: 4cda2c84
+  arch: aarch64
+  license:
+    content:
+    - BSD or LGPLv2+ or GPL+
+    - GPLv2 with exceptions and LGPLv2 and BSD
+    - mecab-ipadic
+    module:
+    - MIT
+  summary: MySQL Module
+  description: MySQL is a multi-user, multi-threaded SQL database server. MySQL is
+    a client/server implementation consisting of a server daemon (mysqld) and many
+    different client programs and libraries. The base package contains the standard
+    MySQL client programs and generic MySQL files.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      mecab:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '8'
+        rationale: A dependency of mysql
+        ref: stream-8.0-rhel-8.2.0
+      mecab-ipadic:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '9'
+        rationale: A dictionary for mecab
+        ref: stream-8.0-rhel-8.2.0
+      mysql:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        rationale: MySQL server package
+        ref: stream-8.0-rhel-8.2.0
+      rapidjson:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '7'
+        rationale: A build-time only dependency of mysql
+        ref: dbf36eb90
+  api:
+    rpms:
+    - mysql
+    - mysql-server
+  buildopts:
+    rpms:
+      macros: '%runselftest 1
+
+        %check_testsuite 1
+
+        '
+  references:
+    community: https://dev.mysql.com/
+    documentation: https://dev.mysql.com/doc/refman/8.0/en/
+    tracker: http://bugzilla.redhat.com/
+  profiles:
+    client:
+      rpms:
+      - mysql
+    server:
+      rpms:
+      - mysql-server
+  filter:
+    rpms:
+    - mecab-devel
+    - rapidjson
+    - rapidjson-devel
+    - rapidjson-doc
+  artifacts:
+    rpms:
+    - rapidjson-devel-0:1.1.0-3.module+el8.2.0+7855+47abd494.noarch
+    - rapidjson-doc-0:1.1.0-3.module+el8.2.0+7855+47abd494.noarch
+    - mecab-0:0.996-1.module+el8.0.0+3898+e09bb8de.9.aarch64
+    - mecab-devel-0:0.996-1.module+el8.0.0+3898+e09bb8de.9.aarch64
+    - mecab-debugsource-0:0.996-1.module+el8.0.0+3898+e09bb8de.9.aarch64
+    - mecab-debuginfo-0:0.996-1.module+el8.0.0+3898+e09bb8de.9.aarch64
+    - mecab-ipadic-0:2.7.0.20070801-16.module+el8.0.0+3898+e09bb8de.aarch64
+    - mecab-ipadic-EUCJP-0:2.7.0.20070801-16.module+el8.0.0+3898+e09bb8de.aarch64
+    - mysql-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-libs-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-common-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-errmsg-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-server-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-devel-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-test-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-debugsource-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-debuginfo-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-libs-debuginfo-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-server-debuginfo-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-devel-debuginfo-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+    - mysql-test-debuginfo-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
+...
