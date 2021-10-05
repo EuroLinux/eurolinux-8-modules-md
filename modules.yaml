@@ -5787,3 +5787,1963 @@ data:
     - mysql-devel-debuginfo-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
     - mysql-test-debuginfo-0:8.0.21-1.module+el8.2.0+7855+47abd494.aarch64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: virt
+  stream: rhel
+  version: '8040020210721215855'
+  context: 522a0ee4
+  arch: aarch64
+  license:
+    content:
+    - ASL 2.0
+    - BSD
+    - GPLv2 and GPLv2+ and CC-BY
+    - GPLv2+
+    - GPLv2+ or Artistic
+    - LGPLv2
+    - LGPLv2+
+    - LGPLv2+ and BSD
+    - LGPLv3
+    module:
+    - MIT
+  summary: Virtualization module
+  description: A virtualization module
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.4.0.z
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      hivex:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: libguestfs dep
+        ref: stream-rhel-rhel-8.4.0
+      libguestfs:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '4'
+        rationale: Primary module content
+        ref: stream-rhel-rhel-8.4.0
+      libguestfs-winsupport:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '5'
+        rationale: Primary module content
+        ref: stream-rhel-rhel-8.4.0
+      libiscsi:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: qemu-kvm dep
+        ref: stream-rhel-rhel-8.4.0
+      libnbd:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Primary module content
+        ref: stream-rhel-rhel-8.4.0
+      libvirt:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: Primary module content
+        ref: stream-rhel-rhel-8.4.0
+      libvirt-dbus:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '4'
+        rationale: libvirt-dbus is part of the virtualization module
+        ref: stream-rhel-rhel-8.4.0
+      libvirt-python:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '4'
+        rationale: Primary module content
+        ref: stream-rhel-rhel-8.4.0
+      nbdkit:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '5'
+        rationale: Primary module content
+        ref: stream-rhel-rhel-8.4.0
+      netcf:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: libvirt dep
+        ref: stream-rhel-rhel-8.4.0
+      perl-Sys-Virt:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '4'
+        rationale: Primary module content
+        ref: stream-rhel-rhel-8.4.0
+      qemu-kvm:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        rationale: Primary module content
+        ref: stream-rhel-rhel-8.4.0
+      supermin:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        rationale: libguestfs dep
+        ref: stream-rhel-rhel-8.4.0
+  profiles:
+    common:
+      rpms:
+      - libguestfs
+      - libvirt-client
+      - libvirt-daemon-config-network
+      - libvirt-daemon-kvm
+  filter:
+    rpms:
+    - ocaml-hivex
+    - ocaml-hivex-debuginfo
+    - ocaml-hivex-devel
+    - ocaml-libguestfs
+    - ocaml-libguestfs-debuginfo
+    - ocaml-libguestfs-devel
+    - ocaml-libnbd
+    - ocaml-libnbd-debuginfo
+    - ocaml-libnbd-devel
+    - qemu-kvm-tests
+    - qemu-kvm-tests-debuginfo
+  artifacts:
+    rpms:
+    - netcf-0:0.2.8-12.module+el8.1.0+4066+0f1aadab.aarch64
+    - netcf-devel-0:0.2.8-12.module+el8.1.0+4066+0f1aadab.aarch64
+    - netcf-libs-0:0.2.8-12.module+el8.1.0+4066+0f1aadab.aarch64
+    - netcf-debugsource-0:0.2.8-12.module+el8.1.0+4066+0f1aadab.aarch64
+    - netcf-debuginfo-0:0.2.8-12.module+el8.1.0+4066+0f1aadab.aarch64
+    - netcf-libs-debuginfo-0:0.2.8-12.module+el8.1.0+4066+0f1aadab.aarch64
+    - libnbd-0:1.2.2-1.module+el8.3.0+7353+9de0a3cc.aarch64
+    - libnbd-devel-0:1.2.2-1.module+el8.3.0+7353+9de0a3cc.aarch64
+    - ocaml-libnbd-0:1.2.2-1.module+el8.3.0+7353+9de0a3cc.aarch64
+    - ocaml-libnbd-devel-0:1.2.2-1.module+el8.3.0+7353+9de0a3cc.aarch64
+    - python3-libnbd-0:1.2.2-1.module+el8.3.0+7353+9de0a3cc.aarch64
+    - nbdfuse-0:1.2.2-1.module+el8.3.0+7353+9de0a3cc.aarch64
+    - libnbd-debugsource-0:1.2.2-1.module+el8.3.0+7353+9de0a3cc.aarch64
+    - libnbd-debuginfo-0:1.2.2-1.module+el8.3.0+7353+9de0a3cc.aarch64
+    - ocaml-libnbd-debuginfo-0:1.2.2-1.module+el8.3.0+7353+9de0a3cc.aarch64
+    - python3-libnbd-debuginfo-0:1.2.2-1.module+el8.3.0+7353+9de0a3cc.aarch64
+    - nbdfuse-debuginfo-0:1.2.2-1.module+el8.3.0+7353+9de0a3cc.aarch64
+    - libiscsi-0:1.18.0-8.module+el8.1.0+4066+0f1aadab.aarch64
+    - libiscsi-debugsource-0:1.18.0-8.module+el8.1.0+4066+0f1aadab.aarch64
+    - libiscsi-utils-0:1.18.0-8.module+el8.1.0+4066+0f1aadab.aarch64
+    - libiscsi-devel-0:1.18.0-8.module+el8.1.0+4066+0f1aadab.aarch64
+    - libiscsi-debuginfo-0:1.18.0-8.module+el8.1.0+4066+0f1aadab.aarch64
+    - libiscsi-utils-debuginfo-0:1.18.0-8.module+el8.1.0+4066+0f1aadab.aarch64
+    - hivex-0:1.3.18-21.module+el8.4.0+10770+19c037f9.aarch64
+    - hivex-devel-0:1.3.18-21.module+el8.4.0+10770+19c037f9.aarch64
+    - ocaml-hivex-0:1.3.18-21.module+el8.4.0+10770+19c037f9.aarch64
+    - ocaml-hivex-devel-0:1.3.18-21.module+el8.4.0+10770+19c037f9.aarch64
+    - perl-hivex-0:1.3.18-21.module+el8.4.0+10770+19c037f9.aarch64
+    - python3-hivex-0:1.3.18-21.module+el8.4.0+10770+19c037f9.aarch64
+    - ruby-hivex-0:1.3.18-21.module+el8.4.0+10770+19c037f9.aarch64
+    - hivex-debugsource-0:1.3.18-21.module+el8.4.0+10770+19c037f9.aarch64
+    - hivex-debuginfo-0:1.3.18-21.module+el8.4.0+10770+19c037f9.aarch64
+    - ocaml-hivex-debuginfo-0:1.3.18-21.module+el8.4.0+10770+19c037f9.aarch64
+    - perl-hivex-debuginfo-0:1.3.18-21.module+el8.4.0+10770+19c037f9.aarch64
+    - python3-hivex-debuginfo-0:1.3.18-21.module+el8.4.0+10770+19c037f9.aarch64
+    - ruby-hivex-debuginfo-0:1.3.18-21.module+el8.4.0+10770+19c037f9.aarch64
+    - supermin-0:5.1.19-10.module+el8.3.0+6423+e4cb6418.aarch64
+    - supermin-devel-0:5.1.19-10.module+el8.3.0+6423+e4cb6418.aarch64
+    - supermin-debugsource-0:5.1.19-10.module+el8.3.0+6423+e4cb6418.aarch64
+    - supermin-debuginfo-0:5.1.19-10.module+el8.3.0+6423+e4cb6418.aarch64
+    - qemu-kvm-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-kvm-core-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-img-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-kvm-common-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-guest-agent-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-kvm-tests-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-kvm-block-curl-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-kvm-block-iscsi-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-kvm-block-rbd-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-kvm-block-ssh-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-kvm-debugsource-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-kvm-debuginfo-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-kvm-core-debuginfo-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-img-debuginfo-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-kvm-common-debuginfo-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-guest-agent-debuginfo-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-kvm-tests-debuginfo-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-kvm-block-curl-debuginfo-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-kvm-block-iscsi-debuginfo-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-kvm-block-rbd-debuginfo-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - qemu-kvm-block-ssh-debuginfo-15:4.2.0-48.module+el8.4.0+11909+3300d70f.3.aarch64
+    - libvirt-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-docs-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-config-network-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-config-nwfilter-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-network-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-nwfilter-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-nodedev-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-interface-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-secret-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-core-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-logical-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-disk-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-scsi-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-iscsi-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-iscsi-direct-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-mpath-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-gluster-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-rbd-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-qemu-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-kvm-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-client-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-libs-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-admin-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-bash-completion-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-devel-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-lock-sanlock-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-nss-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-debugsource-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-network-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-nwfilter-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-nodedev-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-interface-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-secret-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-core-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-logical-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-disk-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-scsi-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-iscsi-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-iscsi-direct-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-mpath-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-gluster-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-storage-rbd-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-daemon-driver-qemu-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-client-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-libs-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-admin-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-lock-sanlock-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - libvirt-nss-debuginfo-0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef.aarch64
+    - perl-Sys-Virt-0:6.0.0-1.module+el8.3.0+6423+e4cb6418.aarch64
+    - perl-Sys-Virt-debugsource-0:6.0.0-1.module+el8.3.0+6423+e4cb6418.aarch64
+    - perl-Sys-Virt-debuginfo-0:6.0.0-1.module+el8.3.0+6423+e4cb6418.aarch64
+    - python3-libvirt-0:6.0.0-1.module+el8.3.0+6423+e4cb6418.aarch64
+    - libvirt-python-debugsource-0:6.0.0-1.module+el8.3.0+6423+e4cb6418.aarch64
+    - python3-libvirt-debuginfo-0:6.0.0-1.module+el8.3.0+6423+e4cb6418.aarch64
+    - libvirt-dbus-0:1.3.0-2.module+el8.3.0+6423+e4cb6418.aarch64
+    - libvirt-dbus-debugsource-0:1.3.0-2.module+el8.3.0+6423+e4cb6418.aarch64
+    - libvirt-dbus-debuginfo-0:1.3.0-2.module+el8.3.0+6423+e4cb6418.aarch64
+    - libguestfs-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-benchmarking-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-devel-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-gfs2-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-rescue-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-rsync-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-xfs-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-inspect-icons-1:1.40.2-27.module+el8.4.0+9282+0bdec052.noarch
+    - libguestfs-tools-c-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-tools-1:1.40.2-27.module+el8.4.0+9282+0bdec052.noarch
+    - virt-dib-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-bash-completion-1:1.40.2-27.module+el8.4.0+9282+0bdec052.noarch
+    - ocaml-libguestfs-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - ocaml-libguestfs-devel-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - perl-Sys-Guestfs-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - python3-libguestfs-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - ruby-libguestfs-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-java-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-java-devel-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-javadoc-1:1.40.2-27.module+el8.4.0+9282+0bdec052.noarch
+    - lua-guestfs-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-gobject-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-gobject-devel-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-man-pages-ja-1:1.40.2-27.module+el8.4.0+9282+0bdec052.noarch
+    - libguestfs-man-pages-uk-1:1.40.2-27.module+el8.4.0+9282+0bdec052.noarch
+    - libguestfs-debugsource-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-debuginfo-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-benchmarking-debuginfo-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-tools-c-debuginfo-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - virt-dib-debuginfo-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - ocaml-libguestfs-debuginfo-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - perl-Sys-Guestfs-debuginfo-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - python3-libguestfs-debuginfo-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - ruby-libguestfs-debuginfo-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-java-debuginfo-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - lua-guestfs-debuginfo-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - libguestfs-gobject-debuginfo-1:1.40.2-27.module+el8.4.0+9282+0bdec052.aarch64
+    - nbdkit-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-server-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-basic-plugins-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-example-plugins-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-curl-plugin-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-gzip-plugin-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-linuxdisk-plugin-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-python-plugin-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-ssh-plugin-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-basic-filters-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-xz-filter-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-devel-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-bash-completion-0:1.16.2-4.module+el8.3.0+6922+fd575af8.noarch
+    - nbdkit-debugsource-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-debuginfo-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-server-debuginfo-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-basic-plugins-debuginfo-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-example-plugins-debuginfo-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-curl-plugin-debuginfo-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-gzip-plugin-debuginfo-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-linuxdisk-plugin-debuginfo-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-python-plugin-debuginfo-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-ssh-plugin-debuginfo-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-basic-filters-debuginfo-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - nbdkit-xz-filter-debuginfo-0:1.16.2-4.module+el8.3.0+6922+fd575af8.aarch64
+    - libguestfs-winsupport-0:8.2-1.module+el8.3.0+6423+e4cb6418.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: pki-deps
+  stream: '10.6'
+  version: '8040020201130152515'
+  context: 9f9e2e7e
+  arch: aarch64
+  license:
+    content:
+    - ASL 1.1 and ASL 2.0
+    - ASL 2.0
+    - ASL 2.0 and (ASL 2.0 or LGPLv2+)
+    - ASL 2.0 and LGPLv2+
+    - ASL 2.0 and W3C
+    - ASL 2.0 and W3C and Public Domain
+    - BSD
+    - CDDL or GPLv2 with exception
+    - CDDL-1.0 or GPLv2 with exceptions
+    - CDDL-1.1 and GPLv2 with exceptions
+    - CDDL-1.1 or GPLv2
+    - CDDL-1.1 or GPLv2 with exceptions
+    - MIT and ASL 2.0
+    - MPLv1.1 or LGPLv2+ or ASL 2.0
+    - MPLv2.0 or GPLv2+ or LGPLv2+
+    module:
+    - MIT
+  summary: PKI Dependencies module for PKI 10.6 or later
+  description: A module to contain dependencies for PKI version 10.6 or later.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.4.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      apache-commons-collections:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Apache Commons Collections packages
+        ref: stream-javapackages-tools-201801-rhel-8.4.0
+      apache-commons-lang:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Apache Commons Lang packages
+        ref: stream-javapackages-tools-201801-rhel-8.4.0
+      apache-commons-net:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Apache Commons Net packages
+        ref: stream-javapackages-tools-201801-rhel-8.4.0
+      bea-stax:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: BEA StAX packages
+        ref: stream-javapackages-tools-201801-rhel-8.4.0
+      fasterxml-oss-parent:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: FasterXML parent pom BuildRequired by jackson-parent.
+        ref: stream-rhel-8.1.0-rhel-8.4.0
+      glassfish-fastinfoset:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '4'
+        rationale: Fast XML Information Set package Requires xmlstreambuffer, xsom.
+        ref: stream-pki-10.6-rhel-8.4.0
+      glassfish-jax-rs-api:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: GlassFish JAX-RS API packages
+        ref: stream-pki-10.6-rhel-8.4.0
+      glassfish-jaxb:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '5'
+        rationale: JAXB Reference Implementation BuildRequires istack-commons. Requires
+          glassfish-fastinfoset, glassfish-jaxb-api.
+        ref: stream-pki-10.6-rhel-8.4.0
+      glassfish-jaxb-api:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: GlassFish JAXB API packages
+        ref: stream-javapackages-tools-201801-rhel-8.4.0
+      jackson-annotations:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '13'
+        rationale: Jackson Annotations packages
+        ref: stream-pki-10.6-rhel-8.4.0
+      jackson-bom:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '11'
+        rationale: Jackson Bill-of-Materials POM packages
+        ref: stream-pki-10.6-rhel-8.4.0
+      jackson-core:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '12'
+        rationale: Jackson Core packages
+        ref: stream-pki-10.6-rhel-8.4.0
+      jackson-databind:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '14'
+        rationale: Jackson Data-binding packages
+        ref: stream-pki-10.6-rhel-8.4.0
+      jackson-jaxrs-providers:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '16'
+        rationale: Jackson JAX-RS Providers packages
+        ref: stream-pki-10.6-rhel-8.4.0
+      jackson-module-jaxb-annotations:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '15'
+        rationale: Jackson JAXB Annotations packages
+        ref: stream-pki-10.6-rhel-8.4.0
+      jackson-parent:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        rationale: Jackson Parent POM packages BuildRequires fasterxml-oss-parent.
+        ref: stream-pki-10.6-rhel-8.4.0
+      jakarta-commons-httpclient:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Jakarta Commons HTTPClient packages
+        ref: stream-javapackages-tools-201801-rhel-8.4.0
+      javassist:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Javassist packages
+        ref: stream-javapackages-tools-201801-rhel-8.4.0
+      msv:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Multi-Schema Validator Requires relaxngDatatype.
+        ref: stream-javapackages-tools-201801-rhel-8.4.0
+      pki-servlet-engine:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: PKI Servlet Engine packages
+        ref: stream-pki-10.6-rhel-8.4.0
+      python-nss:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python binding for NSS Provides python-nss for pki-base-java.
+        ref: stream-pki-10.6-rhel-8.4.0
+      relaxngDatatype:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: RELAX NG packages
+        ref: stream-javapackages-tools-201801-rhel-8.4.0
+      relaxngcc:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        rationale: RELAX NG Compiler Compiler Requires msv.
+        ref: stream-rhel-8.0.0-rhel-8.4.0
+      resteasy:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '17'
+        rationale: RESTEasy packages
+        ref: stream-pki-10.6-rhel-8.4.0
+      slf4j:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Simple Logging Facade for Java Provides slf4j and slf4j-jdk14 for
+          pki-base-java.
+        ref: stream-maven-3.5-rhel-8.4.0
+      stax-ex:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        rationale: StAX API extensions Requires bea-stax.
+        ref: stream-pki-10.6-rhel-8.4.0
+      velocity:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Velocity packages
+        ref: stream-javapackages-tools-201801-rhel-8.4.0
+      xalan-j2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Xalan packages Provides xalan-j2 for pki-base-java.
+        ref: stream-javapackages-tools-201801-rhel-8.4.0
+      xerces-j2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Xerces packages
+        ref: stream-javapackages-tools-201801-rhel-8.4.0
+      xml-commons-apis:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: XML Commons APIs packages
+        ref: stream-javapackages-tools-201801-rhel-8.4.0
+      xml-commons-resolver:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: XML Commons Resolver packages
+        ref: stream-javapackages-tools-201801-rhel-8.4.0
+      xml-stylebook:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: XML Stylebook packages
+        ref: stream-javapackages-tools-201801-rhel-8.4.0
+      xmlstreambuffer:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: XML Stream Buffer package Requires stax-ex.
+        ref: stream-pki-10.6-rhel-8.4.0
+      xsom:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: XML Schema Object Model (XSOM) Requires relaxngcc.
+        ref: stream-rhel-8.0.0-rhel-8.4.0
+  buildopts:
+    rpms:
+      macros: '%_with_xmvn_javadoc 1
+
+        %_without_asciidoc 1
+
+        %_without_avalon 1
+
+        %_without_bouncycastle 1
+
+        %_without_cython 1
+
+        %_without_dafsa 1
+
+        %_without_desktop 1
+
+        %_without_doxygen 1
+
+        %_without_dtd 1
+
+        %_without_eclipse 1
+
+        %_without_ehcache 1
+
+        %_without_emacs 1
+
+        %_without_equinox 1
+
+        %_without_fop 1
+
+        %_without_ftp 1
+
+        %_without_gradle 1
+
+        %_without_groovy 1
+
+        %_without_hadoop 1
+
+        %_without_hsqldb 1
+
+        %_without_itext 1
+
+        %_without_jackson 1
+
+        %_without_jmh 1
+
+        %_without_jna 1
+
+        %_without_jpa 1
+
+        %_without_junit5 1
+
+        %_without_logback 1
+
+        %_without_markdown 1
+
+        %_without_memcached 1
+
+        %_without_memoryfilesystem 1
+
+        %_without_obr 1
+
+        %_without_python 1
+
+        %_without_reporting 1
+
+        %_without_scm 1
+
+        %_without_snappy 1
+
+        %_without_spring 1
+
+        %_without_ssh 1
+
+        %_without_testlib 1
+
+        '
+  references:
+    community: http://www.dogtagpki.org
+    documentation: http://www.dogtagpki.org
+    tracker: https://pagure.io/dogtagpki/issues
+  filter:
+    rpms:
+    - apache-commons-collections-javadoc
+    - apache-commons-collections-testframework
+    - apache-commons-lang-javadoc
+    - apache-commons-net-javadoc
+    - bea-stax
+    - bea-stax-javadoc
+    - fasterxml-oss-parent
+    - glassfish-fastinfoset-javadoc
+    - glassfish-jax-rs-api
+    - glassfish-jax-rs-api-javadoc
+    - glassfish-jaxb
+    - glassfish-jaxb-api-javadoc
+    - glassfish-jaxb-bom
+    - glassfish-jaxb-bom-ext
+    - glassfish-jaxb-codemodel
+    - glassfish-jaxb-codemodel-annotation-compiler
+    - glassfish-jaxb-codemodel-parent
+    - glassfish-jaxb-external-parent
+    - glassfish-jaxb-parent
+    - glassfish-jaxb-rngom
+    - glassfish-jaxb-runtime-parent
+    - glassfish-jaxb-txw-parent
+    - jackson-annotations-javadoc
+    - jackson-bom
+    - jackson-core-javadoc
+    - jackson-databind-javadoc
+    - jackson-jaxrs-providers-datatypes
+    - jackson-jaxrs-providers-javadoc
+    - jackson-jaxrs-providers-parent
+    - jackson-module-jaxb-annotations-javadoc
+    - jackson-parent
+    - jakarta-commons-httpclient-demo
+    - jakarta-commons-httpclient-javadoc
+    - jakarta-commons-httpclient-manual
+    - jcl-over-slf4j
+    - jul-to-slf4j
+    - log4j-over-slf4j
+    - msv-demo
+    - msv-javadoc
+    - msv-manual
+    - msv-msv
+    - msv-rngconv
+    - msv-xmlgen
+    - msv-xsdlib
+    - relaxngDatatype-javadoc
+    - relaxngcc
+    - relaxngcc-javadoc
+    - resteasy-javadoc
+    - slf4j-ext
+    - slf4j-javadoc
+    - slf4j-jcl
+    - slf4j-log4j12
+    - slf4j-manual
+    - slf4j-sources
+    - stax-ex-javadoc
+    - velocity-demo
+    - velocity-javadoc
+    - velocity-manual
+    - xalan-j2-demo
+    - xalan-j2-javadoc
+    - xalan-j2-manual
+    - xalan-j2-xsltc
+    - xerces-j2-demo
+    - xerces-j2-javadoc
+    - xml-commons-apis-javadoc
+    - xml-commons-apis-manual
+    - xml-commons-resolver-javadoc
+    - xml-stylebook
+    - xml-stylebook-demo
+    - xml-stylebook-javadoc
+    - xmlstreambuffer-javadoc
+    - xsom-javadoc
+  artifacts:
+    rpms:
+    - xml-stylebook-0:1.0-0.25.b3_xalan2.svn313293.module+el8.3.0+6805+72837426.noarch
+    - xml-stylebook-javadoc-0:1.0-0.25.b3_xalan2.svn313293.module+el8.3.0+6805+72837426.noarch
+    - xml-stylebook-demo-0:1.0-0.25.b3_xalan2.svn313293.module+el8.3.0+6805+72837426.noarch
+    - xml-commons-resolver-0:1.2-26.module+el8.1.0+3366+6dfb954c.noarch
+    - xml-commons-resolver-javadoc-0:1.2-26.module+el8.1.0+3366+6dfb954c.noarch
+    - xml-commons-apis-0:1.4.01-25.module+el8.1.0+3366+6dfb954c.noarch
+    - xml-commons-apis-manual-0:1.4.01-25.module+el8.1.0+3366+6dfb954c.noarch
+    - xml-commons-apis-javadoc-0:1.4.01-25.module+el8.1.0+3366+6dfb954c.noarch
+    - xerces-j2-0:2.11.0-34.module+el8.1.0+3366+6dfb954c.noarch
+    - xerces-j2-javadoc-0:2.11.0-34.module+el8.1.0+3366+6dfb954c.noarch
+    - xerces-j2-demo-0:2.11.0-34.module+el8.1.0+3366+6dfb954c.noarch
+    - velocity-0:1.7-24.module+el8.1.0+3366+6dfb954c.noarch
+    - velocity-manual-0:1.7-24.module+el8.1.0+3366+6dfb954c.noarch
+    - velocity-javadoc-0:1.7-24.module+el8.1.0+3366+6dfb954c.noarch
+    - velocity-demo-0:1.7-24.module+el8.1.0+3366+6dfb954c.noarch
+    - slf4j-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - slf4j-javadoc-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - slf4j-manual-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - slf4j-jdk14-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - slf4j-log4j12-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - slf4j-jcl-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - slf4j-ext-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - jcl-over-slf4j-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - log4j-over-slf4j-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - jul-to-slf4j-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - slf4j-sources-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - relaxngDatatype-0:2011.1-7.module+el8.1.0+3366+6dfb954c.noarch
+    - relaxngDatatype-javadoc-0:2011.1-7.module+el8.1.0+3366+6dfb954c.noarch
+    - python3-nss-0:1.0.1-10.module+el8.1.0+3366+6dfb954c.aarch64
+    - python-nss-doc-0:1.0.1-10.module+el8.1.0+3366+6dfb954c.aarch64
+    - python-nss-debugsource-0:1.0.1-10.module+el8.1.0+3366+6dfb954c.aarch64
+    - python3-nss-debuginfo-0:1.0.1-10.module+el8.1.0+3366+6dfb954c.aarch64
+    - pki-servlet-engine-1:9.0.30-1.module+el8.3.0+6730+8f9c6254.noarch
+    - pki-servlet-4.0-api-1:9.0.30-1.module+el8.3.0+6730+8f9c6254.noarch
+    - javassist-0:3.18.1-8.module+el8.1.0+3366+6dfb954c.noarch
+    - javassist-javadoc-0:3.18.1-8.module+el8.1.0+3366+6dfb954c.noarch
+    - bea-stax-0:1.2.0-16.module+el8.1.0+3366+6dfb954c.noarch
+    - jakarta-commons-httpclient-1:3.1-28.module+el8.1.0+3366+6dfb954c.noarch
+    - jakarta-commons-httpclient-javadoc-1:3.1-28.module+el8.1.0+3366+6dfb954c.noarch
+    - jakarta-commons-httpclient-demo-1:3.1-28.module+el8.1.0+3366+6dfb954c.noarch
+    - jakarta-commons-httpclient-manual-1:3.1-28.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-api-0:2.2.12-8.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-api-javadoc-0:2.2.12-8.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jax-rs-api-0:2.0.1-6.module+el8.3.0+6805+72837426.noarch
+    - glassfish-jax-rs-api-javadoc-0:2.0.1-6.module+el8.3.0+6805+72837426.noarch
+    - fasterxml-oss-parent-0:26-6.module+el8.3.0+6805+72837426.noarch
+    - bea-stax-api-0:1.2.0-16.module+el8.1.0+3366+6dfb954c.noarch
+    - bea-stax-javadoc-0:1.2.0-16.module+el8.1.0+3366+6dfb954c.noarch
+    - apache-commons-net-0:3.6-3.module+el8.3.0+6805+72837426.noarch
+    - apache-commons-net-javadoc-0:3.6-3.module+el8.3.0+6805+72837426.noarch
+    - apache-commons-lang-0:2.6-21.module+el8.1.0+3366+6dfb954c.noarch
+    - apache-commons-lang-javadoc-0:2.6-21.module+el8.1.0+3366+6dfb954c.noarch
+    - apache-commons-collections-0:3.2.2-10.module+el8.1.0+3366+6dfb954c.noarch
+    - apache-commons-collections-testframework-0:3.2.2-10.module+el8.1.0+3366+6dfb954c.noarch
+    - apache-commons-collections-javadoc-0:3.2.2-10.module+el8.1.0+3366+6dfb954c.noarch
+    - xalan-j2-0:2.7.1-38.module+el8.1.0+3366+6dfb954c.noarch
+    - xalan-j2-xsltc-0:2.7.1-38.module+el8.1.0+3366+6dfb954c.noarch
+    - xalan-j2-manual-0:2.7.1-38.module+el8.1.0+3366+6dfb954c.noarch
+    - xalan-j2-javadoc-0:2.7.1-38.module+el8.1.0+3366+6dfb954c.noarch
+    - xalan-j2-demo-0:2.7.1-38.module+el8.1.0+3366+6dfb954c.noarch
+    - msv-msv-1:2013.6.1-11.module+el8.3.0+6805+72837426.noarch
+    - msv-rngconv-1:2013.6.1-11.module+el8.3.0+6805+72837426.noarch
+    - msv-xmlgen-1:2013.6.1-11.module+el8.3.0+6805+72837426.noarch
+    - msv-xsdlib-1:2013.6.1-11.module+el8.3.0+6805+72837426.noarch
+    - msv-javadoc-1:2013.6.1-11.module+el8.3.0+6805+72837426.noarch
+    - msv-manual-1:2013.6.1-11.module+el8.3.0+6805+72837426.noarch
+    - msv-demo-1:2013.6.1-11.module+el8.3.0+6805+72837426.noarch
+    - stax-ex-0:1.7.7-8.module+el8.2.0+5723+4574fbff.noarch
+    - stax-ex-javadoc-0:1.7.7-8.module+el8.2.0+5723+4574fbff.noarch
+    - relaxngcc-0:1.12-14.module+el8.3.0+6805+72837426.noarch
+    - relaxngcc-javadoc-0:1.12-14.module+el8.3.0+6805+72837426.noarch
+    - xsom-0:0-19.20110809svn.module+el8.1.0+3366+6dfb954c.noarch
+    - xsom-javadoc-0:0-19.20110809svn.module+el8.1.0+3366+6dfb954c.noarch
+    - xmlstreambuffer-0:1.5.4-8.module+el8.2.0+5723+4574fbff.noarch
+    - xmlstreambuffer-javadoc-0:1.5.4-8.module+el8.2.0+5723+4574fbff.noarch
+    - glassfish-fastinfoset-0:1.2.13-9.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-fastinfoset-javadoc-0:1.2.13-9.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-codemodel-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-codemodel-annotation-compiler-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-bom-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-bom-ext-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-codemodel-parent-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-core-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-external-parent-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-parent-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-runtime-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-runtime-parent-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-txw-parent-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-rngom-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-txw2-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - jackson-parent-0:2.10-1.module+el8.3.0+6805+72837426.noarch
+    - jackson-bom-0:2.10.0-1.module+el8.3.0+6805+72837426.noarch
+    - jackson-core-0:2.10.0-1.module+el8.2.0+5059+3eb3af25.noarch
+    - jackson-core-javadoc-0:2.10.0-1.module+el8.2.0+5059+3eb3af25.noarch
+    - jackson-annotations-0:2.10.0-1.module+el8.2.0+5059+3eb3af25.noarch
+    - jackson-annotations-javadoc-0:2.10.0-1.module+el8.2.0+5059+3eb3af25.noarch
+    - jackson-databind-0:2.10.0-1.module+el8.2.0+5059+3eb3af25.noarch
+    - jackson-databind-javadoc-0:2.10.0-1.module+el8.2.0+5059+3eb3af25.noarch
+    - jackson-module-jaxb-annotations-0:2.7.6-4.module+el8.1.0+3366+6dfb954c.noarch
+    - jackson-module-jaxb-annotations-javadoc-0:2.7.6-4.module+el8.1.0+3366+6dfb954c.noarch
+    - jackson-jaxrs-providers-0:2.9.9-1.module+el8.1.0+3832+9784644d.noarch
+    - jackson-jaxrs-json-provider-0:2.9.9-1.module+el8.1.0+3832+9784644d.noarch
+    - jackson-jaxrs-providers-datatypes-0:2.9.9-1.module+el8.1.0+3832+9784644d.noarch
+    - jackson-jaxrs-providers-parent-0:2.9.9-1.module+el8.1.0+3832+9784644d.noarch
+    - jackson-jaxrs-providers-javadoc-0:2.9.9-1.module+el8.1.0+3832+9784644d.noarch
+    - resteasy-0:3.0.26-6.module+el8.4.0+8891+bb8828ef.noarch
+    - resteasy-javadoc-0:3.0.26-6.module+el8.4.0+8891+bb8828ef.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: redis
+  stream: '6'
+  version: '8040020210512055424'
+  context: 522a0ee4
+  arch: aarch64
+  license:
+    content:
+    - BSD and MIT
+    - CC-BY-SA
+    module:
+    - GPLv2+
+  summary: Redis persistent key-value database
+  description: redis 6 module
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      redis:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Module API.
+        ref: stream-6-rhel-8.4.0
+  api:
+    rpms:
+    - redis
+  references:
+    documentation: https://redis.io/documentation
+    tracker: https://github.com/antirez/redis/issues
+  profiles:
+    common:
+      rpms:
+      - redis
+  artifacts:
+    rpms:
+    - redis-0:6.0.9-3.module+el8.4.0+10984+ed187465.aarch64
+    - redis-devel-0:6.0.9-3.module+el8.4.0+10984+ed187465.aarch64
+    - redis-doc-0:6.0.9-3.module+el8.4.0+10984+ed187465.noarch
+    - redis-debugsource-0:6.0.9-3.module+el8.4.0+10984+ed187465.aarch64
+    - redis-debuginfo-0:6.0.9-3.module+el8.4.0+10984+ed187465.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: ruby
+  stream: '2.5'
+  version: '8040020200923213910'
+  context: 522a0ee4
+  arch: aarch64
+  license:
+    content:
+    - (BSD or Ruby) and PostgreSQL
+    - (Ruby or BSD) and (Ruby or BSD or Python) and (Ruby or BSD or LGPLv2+)
+    - (Ruby or BSD) and Public Domain and MIT and CC0 and zlib and UCD
+    - (Ruby or GPLv2) and UCD
+    - ASL 2.0
+    - GPLv2 and Ruby and MIT and OFL
+    - MIT
+    - Ruby or BSD
+    - Ruby or MIT
+    module:
+    - MIT
+  summary: An interpreter of object-oriented scripting language
+  description: Ruby is the interpreted scripting language for quick and easy object-oriented
+    programming.  It has many features to process text files and to do system management
+    tasks (as in Perl).  It is simple, straight-forward, and extensible.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.4.0.z
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      ruby:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '101'
+        multilib:
+        - x86_64
+        rationale: An interpreter of object-oriented scripting language
+        ref: stream-ruby-2.5-rhel-8.4.0
+      rubygem-abrt:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '102'
+        rationale: ABRT support for Ruby
+        ref: stream-ruby-2.5-rhel-8.4.0
+      rubygem-bson:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '102'
+        rationale: Ruby Implementation of the BSON specification
+        ref: stream-ruby-2.5-rhel-8.4.0
+      rubygem-bundler:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '102'
+        rationale: Library and utilities to manage a Ruby application's gem dependencies
+        ref: stream-ruby-2.5-rhel-8.4.0
+      rubygem-mongo:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '103'
+        rationale: Ruby driver for MongoDB
+        ref: stream-ruby-2.5-rhel-8.4.0
+      rubygem-mysql2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '102'
+        rationale: A simple, fast Mysql library for Ruby, binding to libmysql
+        ref: stream-ruby-2.5-rhel-8.4.0
+      rubygem-pg:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '102'
+        rationale: A Ruby interface to the PostgreSQL RDBMS
+        ref: stream-ruby-2.5-rhel-8.4.0
+  api:
+    rpms:
+    - ruby
+    - ruby-devel
+    - ruby-irb
+    - ruby-libs
+    - rubygem-abrt
+    - rubygem-bigdecimal
+    - rubygem-bson
+    - rubygem-bundler
+    - rubygem-did_you_mean
+    - rubygem-io-console
+    - rubygem-json
+    - rubygem-minitest
+    - rubygem-mongo
+    - rubygem-mysql2
+    - rubygem-net-telnet
+    - rubygem-openssl
+    - rubygem-pg
+    - rubygem-power_assert
+    - rubygem-psych
+    - rubygem-rake
+    - rubygem-rdoc
+    - rubygem-test-unit
+    - rubygem-xmlrpc
+    - rubygems
+    - rubygems-devel
+  buildopts:
+    rpms:
+      macros: '%_without_rubypick 1
+
+        '
+  references:
+    community: http://ruby-lang.org/
+    documentation: https://www.ruby-lang.org/en/documentation/
+    tracker: https://bugs.ruby-lang.org/
+  profiles:
+    common:
+      rpms:
+      - ruby
+  artifacts:
+    rpms:
+    - ruby-0:2.5.9-107.module+el8.4.0+10822+fe4fffb1.aarch64
+    - ruby-devel-0:2.5.9-107.module+el8.4.0+10822+fe4fffb1.aarch64
+    - ruby-libs-0:2.5.9-107.module+el8.4.0+10822+fe4fffb1.aarch64
+    - rubygems-0:2.7.6.3-107.module+el8.4.0+10822+fe4fffb1.noarch
+    - rubygems-devel-0:2.7.6.3-107.module+el8.4.0+10822+fe4fffb1.noarch
+    - rubygem-rake-0:12.3.3-107.module+el8.4.0+10822+fe4fffb1.noarch
+    - ruby-irb-0:2.5.9-107.module+el8.4.0+10822+fe4fffb1.noarch
+    - rubygem-rdoc-0:6.0.1.1-107.module+el8.4.0+10822+fe4fffb1.noarch
+    - ruby-doc-0:2.5.9-107.module+el8.4.0+10822+fe4fffb1.noarch
+    - rubygem-bigdecimal-0:1.3.4-107.module+el8.4.0+10822+fe4fffb1.aarch64
+    - rubygem-did_you_mean-0:1.2.0-107.module+el8.4.0+10822+fe4fffb1.noarch
+    - rubygem-io-console-0:0.4.6-107.module+el8.4.0+10822+fe4fffb1.aarch64
+    - rubygem-json-0:2.1.0-107.module+el8.4.0+10822+fe4fffb1.aarch64
+    - rubygem-minitest-0:5.10.3-107.module+el8.4.0+10822+fe4fffb1.noarch
+    - rubygem-openssl-0:2.1.2-107.module+el8.4.0+10822+fe4fffb1.aarch64
+    - rubygem-power_assert-0:1.1.1-107.module+el8.4.0+10822+fe4fffb1.noarch
+    - rubygem-psych-0:3.0.2-107.module+el8.4.0+10822+fe4fffb1.aarch64
+    - rubygem-net-telnet-0:0.1.1-107.module+el8.4.0+10822+fe4fffb1.noarch
+    - rubygem-test-unit-0:3.2.7-107.module+el8.4.0+10822+fe4fffb1.noarch
+    - rubygem-xmlrpc-0:0.3.0-107.module+el8.4.0+10822+fe4fffb1.noarch
+    - ruby-debugsource-0:2.5.9-107.module+el8.4.0+10822+fe4fffb1.aarch64
+    - ruby-debuginfo-0:2.5.9-107.module+el8.4.0+10822+fe4fffb1.aarch64
+    - ruby-libs-debuginfo-0:2.5.9-107.module+el8.4.0+10822+fe4fffb1.aarch64
+    - rubygem-bigdecimal-debuginfo-0:1.3.4-107.module+el8.4.0+10822+fe4fffb1.aarch64
+    - rubygem-io-console-debuginfo-0:0.4.6-107.module+el8.4.0+10822+fe4fffb1.aarch64
+    - rubygem-json-debuginfo-0:2.1.0-107.module+el8.4.0+10822+fe4fffb1.aarch64
+    - rubygem-openssl-debuginfo-0:2.1.2-107.module+el8.4.0+10822+fe4fffb1.aarch64
+    - rubygem-psych-debuginfo-0:3.0.2-107.module+el8.4.0+10822+fe4fffb1.aarch64
+    - rubygem-pg-0:1.0.0-2.module+el8.1.0+3656+f80bfa1d.aarch64
+    - rubygem-pg-doc-0:1.0.0-2.module+el8.1.0+3656+f80bfa1d.noarch
+    - rubygem-pg-debugsource-0:1.0.0-2.module+el8.1.0+3656+f80bfa1d.aarch64
+    - rubygem-pg-debuginfo-0:1.0.0-2.module+el8.1.0+3656+f80bfa1d.aarch64
+    - rubygem-mysql2-0:0.4.10-4.module+el8.1.0+3656+f80bfa1d.aarch64
+    - rubygem-mysql2-doc-0:0.4.10-4.module+el8.1.0+3656+f80bfa1d.noarch
+    - rubygem-mysql2-debugsource-0:0.4.10-4.module+el8.1.0+3656+f80bfa1d.aarch64
+    - rubygem-mysql2-debuginfo-0:0.4.10-4.module+el8.1.0+3656+f80bfa1d.aarch64
+    - rubygem-bundler-0:1.16.1-3.module+el8.1.0+3656+f80bfa1d.noarch
+    - rubygem-bundler-doc-0:1.16.1-3.module+el8.1.0+3656+f80bfa1d.noarch
+    - rubygem-bson-0:4.3.0-2.module+el8.1.0+3656+f80bfa1d.aarch64
+    - rubygem-bson-doc-0:4.3.0-2.module+el8.1.0+3656+f80bfa1d.noarch
+    - rubygem-bson-debugsource-0:4.3.0-2.module+el8.1.0+3656+f80bfa1d.aarch64
+    - rubygem-bson-debuginfo-0:4.3.0-2.module+el8.1.0+3656+f80bfa1d.aarch64
+    - rubygem-abrt-0:0.3.0-4.module+el8.1.0+3656+f80bfa1d.noarch
+    - rubygem-abrt-doc-0:0.3.0-4.module+el8.1.0+3656+f80bfa1d.noarch
+    - rubygem-mongo-0:2.5.1-2.module+el8.1.0+3656+f80bfa1d.noarch
+    - rubygem-mongo-doc-0:2.5.1-2.module+el8.1.0+3656+f80bfa1d.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: scala
+  stream: '2.10'
+  version: '820181213143541'
+  context: 2b79a98f
+  arch: aarch64
+  license:
+    content:
+    - ASL 2.0
+    - ASL 2.0 and EPL and BSD
+    - BSD
+    - BSD and CC0 and Public Domain
+    module:
+    - MIT
+  summary: A hybrid functional/object-oriented language for the JVM
+  description: Scala is a general purpose programming language designed to express
+    common programming patterns in a concise, elegant, and type-safe way. It smoothly
+    integrates features of object-oriented and functional languages. It is also fully
+    interoperable with Java.
+  dependencies:
+  - buildrequires:
+      javapackages-tools:
+      - '201801'
+      platform:
+      - el8
+      scala:
+      - '2.10'
+    requires:
+      platform: []
+  components:
+    rpms:
+      hawtjni:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/hawtjni
+        rationale: 'Runtime dependency of jansi, jansi-native.
+
+          '
+        ref: stream-scala-2.10
+        repository: git://pkgs.devel.redhat.com/rpms/hawtjni
+      jansi:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '30'
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jansi
+        rationale: 'Runtime dependency of jline, scala.
+
+          '
+        ref: stream-scala-2.10
+        repository: git://pkgs.devel.redhat.com/rpms/jansi
+      jansi-native:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '20'
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jansi-native
+        rationale: 'Runtime dependency of jansi.
+
+          '
+        ref: stream-scala-2.10
+        repository: git://pkgs.devel.redhat.com/rpms/jansi-native
+      jline:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '40'
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/jline
+        rationale: 'Runtime dependency of scala.
+
+          '
+        ref: stream-scala-2.10
+        repository: git://pkgs.devel.redhat.com/rpms/jline
+      scala:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '50'
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/scala
+        rationale: 'Module API.
+
+          '
+        ref: stream-scala-2.10
+        repository: git://pkgs.devel.redhat.com/rpms/scala
+  api:
+    rpms:
+    - scala
+    - scala-apidoc
+    - scala-swing
+  buildopts:
+    rpms:
+      macros: '%_with_xmvn_javadoc 1
+
+        %_without_asciidoc 1
+
+        %_without_avalon 1
+
+        %_without_bouncycastle 1
+
+        %_without_cython 1
+
+        %_without_dafsa 1
+
+        %_without_desktop 1
+
+        %_without_doxygen 1
+
+        %_without_dtd 1
+
+        %_without_eclipse 1
+
+        %_without_ehcache 1
+
+        %_without_emacs 1
+
+        %_without_equinox 1
+
+        %_without_fop 1
+
+        %_without_ftp 1
+
+        %_without_gradle 1
+
+        %_without_groovy 1
+
+        %_without_hadoop 1
+
+        %_without_hsqldb 1
+
+        %_without_itext 1
+
+        %_without_jackson 1
+
+        %_without_jmh 1
+
+        %_without_jna 1
+
+        %_without_jpa 1
+
+        %_without_junit5 1
+
+        %_without_logback 1
+
+        %_without_markdown 1
+
+        %_without_memcached 1
+
+        %_without_memoryfilesystem 1
+
+        %_without_obr 1
+
+        %_without_python 1
+
+        %_without_reporting 1
+
+        %_without_scm 1
+
+        %_without_snappy 1
+
+        %_without_spring 1
+
+        %_without_ssh 1
+
+        %_without_testlib 1
+
+        '
+  profiles:
+    common:
+      rpms:
+      - scala
+  filter:
+    rpms:
+    - ant-scala
+    - hawtjni
+    - hawtjni-javadoc
+    - jansi-javadoc
+    - jansi-native-javadoc
+    - jline-javadoc
+    - maven-hawtjni-plugin
+  artifacts:
+    rpms:
+    - hawtjni-0:1.16-1.module+el8+2477+516cbbff.noarch
+    - hawtjni-javadoc-0:1.16-1.module+el8+2477+516cbbff.noarch
+    - hawtjni-runtime-0:1.16-1.module+el8+2477+516cbbff.noarch
+    - maven-hawtjni-plugin-0:1.16-1.module+el8+2477+516cbbff.noarch
+    - jansi-native-0:1.7-5.module+el8+2477+516cbbff.aarch64
+    - jansi-native-javadoc-0:1.7-5.module+el8+2477+516cbbff.noarch
+    - jansi-0:1.17.1-1.module+el8+2477+516cbbff.noarch
+    - jansi-javadoc-0:1.17.1-1.module+el8+2477+516cbbff.noarch
+    - jline-0:2.14.6-2.module+el8+2477+516cbbff.noarch
+    - jline-javadoc-0:2.14.6-2.module+el8+2477+516cbbff.noarch
+    - scala-0:2.10.6-14.module+el8+2477+516cbbff.noarch
+    - scala-apidoc-0:2.10.6-14.module+el8+2477+516cbbff.noarch
+    - scala-swing-0:2.10.6-14.module+el8+2477+516cbbff.noarch
+    - ant-scala-0:2.10.6-14.module+el8+2477+516cbbff.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: subversion
+  stream: '1.14'
+  version: '8040020210210122209'
+  context: 4d97b3c8
+  arch: aarch64
+  license:
+    content:
+    - ASL 2.0
+    - Unicode and MIT
+    module:
+    - MIT
+  summary: Apache Subversion
+  description: Apache Subversion, a Modern Version Control System
+  dependencies:
+  - buildrequires:
+      httpd:
+      - '2.4'
+      platform:
+      - el8
+      swig:
+      - '4.0'
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      libserf:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        rationale: Build dependency.
+        ref: stream-v1-rhel-8.4.0
+      subversion:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '20'
+        rationale: Module API.
+        ref: stream-1.14-rhel-8.4.0
+      utf8proc:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        rationale: Build dependency.
+        ref: stream-v2-rhel-8.4.0
+  api:
+    rpms:
+    - mod_dav_svn
+    - subversion
+    - subversion-devel
+    - subversion-libs
+  buildopts:
+    rpms:
+      macros: '%_without_kwallet 1
+
+        %_without_python2 1
+
+        %_with_python3 1
+
+        %_without_bdb 1
+
+        %_with_pyswig 1
+
+        '
+  references:
+    documentation: http://subversion.apache.org/docs/
+    tracker: https://issues.apache.org/jira/projects/SVN
+  profiles:
+    common:
+      rpms:
+      - subversion
+      - subversion-libs
+      - subversion-tools
+    server:
+      rpms:
+      - mod_dav_svn
+      - subversion
+      - subversion-libs
+      - subversion-tools
+  filter:
+    rpms:
+    - libserf-devel
+    - subversion-ruby
+    - utf8proc-devel
+  artifacts:
+    rpms:
+    - utf8proc-0:2.1.1-5.module+el8.4.0+8637+d3bad2c2.aarch64
+    - utf8proc-devel-0:2.1.1-5.module+el8.4.0+8637+d3bad2c2.aarch64
+    - utf8proc-debugsource-0:2.1.1-5.module+el8.4.0+8637+d3bad2c2.aarch64
+    - utf8proc-debuginfo-0:2.1.1-5.module+el8.4.0+8637+d3bad2c2.aarch64
+    - libserf-0:1.3.9-9.module+el8.4.0+8637+d3bad2c2.aarch64
+    - libserf-devel-0:1.3.9-9.module+el8.4.0+8637+d3bad2c2.aarch64
+    - libserf-debugsource-0:1.3.9-9.module+el8.4.0+8637+d3bad2c2.aarch64
+    - libserf-debuginfo-0:1.3.9-9.module+el8.4.0+8637+d3bad2c2.aarch64
+    - subversion-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-libs-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - python3-subversion-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-devel-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-gnome-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - mod_dav_svn-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-perl-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-javahl-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.noarch
+    - subversion-ruby-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-tools-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-debugsource-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-libs-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - python3-subversion-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-devel-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-gnome-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - mod_dav_svn-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-perl-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-ruby-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+    - subversion-tools-debuginfo-0:1.14.1-1.module+el8.4.0+9885+2150d1b0.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: ruby
+  stream: '2.6'
+  version: '8040020210430142949'
+  context: 522a0ee4
+  arch: aarch64
+  license:
+    content:
+    - (BSD or Ruby) and PostgreSQL
+    - (Ruby or BSD) and (Ruby or BSD or Python) and (Ruby or BSD or LGPLv2+)
+    - (Ruby or BSD) and Public Domain and MIT and CC0 and zlib and UCD
+    - (Ruby or GPLv2) and UCD
+    - ASL 2.0
+    - GPLv2 and Ruby and MIT and OFL
+    - MIT
+    - Ruby or BSD
+    - Ruby or MIT
+    module:
+    - MIT
+  summary: An interpreter of object-oriented scripting language
+  description: Ruby is the interpreted scripting language for quick and easy object-oriented
+    programming.  It has many features to process text files and to do system management
+    tasks (as in Perl).  It is simple, straight-forward, and extensible.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.4.0.z
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      ruby:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '101'
+        multilib:
+        - x86_64
+        rationale: An interpreter of object-oriented scripting language
+        ref: stream-ruby-2.6-rhel-8.4.0
+      rubygem-abrt:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '102'
+        rationale: ABRT support for Ruby
+        ref: stream-ruby-2.6-rhel-8.4.0
+      rubygem-bson:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '102'
+        rationale: Ruby Implementation of the BSON specification
+        ref: stream-ruby-2.6-rhel-8.4.0
+      rubygem-mongo:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '103'
+        rationale: Ruby driver for MongoDB
+        ref: stream-ruby-2.6-rhel-8.4.0
+      rubygem-mysql2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '102'
+        rationale: A simple, fast Mysql library for Ruby, binding to libmysql
+        ref: stream-ruby-2.6-rhel-8.4.0
+      rubygem-pg:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '102'
+        rationale: A Ruby interface to the PostgreSQL RDBMS
+        ref: stream-ruby-2.6-rhel-8.4.0
+  api:
+    rpms:
+    - ruby
+    - ruby-devel
+    - ruby-libs
+    - rubygem-abrt
+    - rubygem-bigdecimal
+    - rubygem-bson
+    - rubygem-bundler
+    - rubygem-did_you_mean
+    - rubygem-io-console
+    - rubygem-irb
+    - rubygem-json
+    - rubygem-minitest
+    - rubygem-mongo
+    - rubygem-mysql2
+    - rubygem-net-telnet
+    - rubygem-openssl
+    - rubygem-pg
+    - rubygem-power_assert
+    - rubygem-psych
+    - rubygem-rake
+    - rubygem-rdoc
+    - rubygem-test-unit
+    - rubygem-xmlrpc
+    - rubygems
+    - rubygems-devel
+  buildopts:
+    rpms:
+      macros: '%_without_rubypick 1
+
+        '
+  references:
+    community: http://ruby-lang.org/
+    documentation: https://www.ruby-lang.org/en/documentation/
+    tracker: https://bugs.ruby-lang.org/
+  profiles:
+    common:
+      rpms:
+      - ruby
+  artifacts:
+    rpms:
+    - ruby-0:2.6.7-107.module+el8.4.0+10830+bbd85cce.aarch64
+    - ruby-devel-0:2.6.7-107.module+el8.4.0+10830+bbd85cce.aarch64
+    - ruby-libs-0:2.6.7-107.module+el8.4.0+10830+bbd85cce.aarch64
+    - rubygems-0:3.0.3.1-107.module+el8.4.0+10830+bbd85cce.noarch
+    - rubygems-devel-0:3.0.3.1-107.module+el8.4.0+10830+bbd85cce.noarch
+    - rubygem-rake-0:12.3.3-107.module+el8.4.0+10830+bbd85cce.noarch
+    - rubygem-irb-0:1.0.0-107.module+el8.4.0+10830+bbd85cce.noarch
+    - rubygem-rdoc-0:6.1.2-107.module+el8.4.0+10830+bbd85cce.noarch
+    - ruby-doc-0:2.6.7-107.module+el8.4.0+10830+bbd85cce.noarch
+    - rubygem-bigdecimal-0:1.4.1-107.module+el8.4.0+10830+bbd85cce.aarch64
+    - rubygem-did_you_mean-0:1.3.0-107.module+el8.4.0+10830+bbd85cce.noarch
+    - rubygem-io-console-0:0.4.7-107.module+el8.4.0+10830+bbd85cce.aarch64
+    - rubygem-json-0:2.1.0-107.module+el8.4.0+10830+bbd85cce.aarch64
+    - rubygem-minitest-0:5.11.3-107.module+el8.4.0+10830+bbd85cce.noarch
+    - rubygem-openssl-0:2.1.2-107.module+el8.4.0+10830+bbd85cce.aarch64
+    - rubygem-power_assert-0:1.1.3-107.module+el8.4.0+10830+bbd85cce.noarch
+    - rubygem-psych-0:3.1.0-107.module+el8.4.0+10830+bbd85cce.aarch64
+    - rubygem-net-telnet-0:0.2.0-107.module+el8.4.0+10830+bbd85cce.noarch
+    - rubygem-test-unit-0:3.2.9-107.module+el8.4.0+10830+bbd85cce.noarch
+    - rubygem-xmlrpc-0:0.3.0-107.module+el8.4.0+10830+bbd85cce.noarch
+    - rubygem-bundler-0:1.17.2-107.module+el8.4.0+10830+bbd85cce.noarch
+    - ruby-debugsource-0:2.6.7-107.module+el8.4.0+10830+bbd85cce.aarch64
+    - ruby-debuginfo-0:2.6.7-107.module+el8.4.0+10830+bbd85cce.aarch64
+    - ruby-libs-debuginfo-0:2.6.7-107.module+el8.4.0+10830+bbd85cce.aarch64
+    - rubygem-bigdecimal-debuginfo-0:1.4.1-107.module+el8.4.0+10830+bbd85cce.aarch64
+    - rubygem-io-console-debuginfo-0:0.4.7-107.module+el8.4.0+10830+bbd85cce.aarch64
+    - rubygem-json-debuginfo-0:2.1.0-107.module+el8.4.0+10830+bbd85cce.aarch64
+    - rubygem-openssl-debuginfo-0:2.1.2-107.module+el8.4.0+10830+bbd85cce.aarch64
+    - rubygem-psych-debuginfo-0:3.1.0-107.module+el8.4.0+10830+bbd85cce.aarch64
+    - rubygem-pg-0:1.1.4-1.module+el8.1.0+3653+beb38eb0.aarch64
+    - rubygem-pg-doc-0:1.1.4-1.module+el8.1.0+3653+beb38eb0.noarch
+    - rubygem-pg-debugsource-0:1.1.4-1.module+el8.1.0+3653+beb38eb0.aarch64
+    - rubygem-pg-debuginfo-0:1.1.4-1.module+el8.1.0+3653+beb38eb0.aarch64
+    - rubygem-mysql2-0:0.5.2-1.module+el8.1.0+3653+beb38eb0.aarch64
+    - rubygem-mysql2-doc-0:0.5.2-1.module+el8.1.0+3653+beb38eb0.noarch
+    - rubygem-mysql2-debugsource-0:0.5.2-1.module+el8.1.0+3653+beb38eb0.aarch64
+    - rubygem-mysql2-debuginfo-0:0.5.2-1.module+el8.1.0+3653+beb38eb0.aarch64
+    - rubygem-bson-0:4.5.0-1.module+el8.1.0+3653+beb38eb0.aarch64
+    - rubygem-bson-doc-0:4.5.0-1.module+el8.1.0+3653+beb38eb0.noarch
+    - rubygem-bson-debugsource-0:4.5.0-1.module+el8.1.0+3653+beb38eb0.aarch64
+    - rubygem-bson-debuginfo-0:4.5.0-1.module+el8.1.0+3653+beb38eb0.aarch64
+    - rubygem-abrt-0:0.3.0-4.module+el8.1.0+3653+beb38eb0.noarch
+    - rubygem-abrt-doc-0:0.3.0-4.module+el8.1.0+3653+beb38eb0.noarch
+    - rubygem-mongo-0:2.8.0-1.module+el8.1.0+3653+beb38eb0.noarch
+    - rubygem-mongo-doc-0:2.8.0-1.module+el8.1.0+3653+beb38eb0.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: ant
+  stream: '1.10'
+  version: '820181213135032'
+  context: 5ea3b708
+  arch: aarch64
+  license:
+    content:
+    - ASL 2.0
+    module:
+    - MIT
+  summary: Java build tool
+  description: Apache Ant is a Java library and command-line tool whose mission is
+    to drive processes described in build files as targets and extension points dependent
+    upon each other. The main known usage of Ant is the build of Java applications.
+    Ant supplies a number of built-in tasks allowing to compile, assemble, test and
+    run Java applications. Ant can also be used effectively to build non Java applications,
+    for instance C or C++ applications. More generally, Ant can be used to pilot any
+    type of process which can be described in terms of targets and tasks.
+  dependencies:
+  - buildrequires:
+      javapackages-tools:
+      - '201801'
+      platform:
+      - el8
+    requires:
+      platform: []
+  components:
+    rpms:
+      ant:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        cache: http://pkgs.devel.redhat.com/repo/pkgs/ant
+        rationale: 'Module API.
+
+          '
+        ref: stream-ant-1.10
+        repository: git://pkgs.devel.redhat.com/rpms/ant
+  api:
+    rpms:
+    - ant
+  buildopts:
+    rpms:
+      macros: '%_with_xmvn_javadoc 1
+
+        %_without_asciidoc 1
+
+        %_without_avalon 1
+
+        %_without_bouncycastle 1
+
+        %_without_cython 1
+
+        %_without_dafsa 1
+
+        %_without_desktop 1
+
+        %_without_doxygen 1
+
+        %_without_dtd 1
+
+        %_without_eclipse 1
+
+        %_without_ehcache 1
+
+        %_without_emacs 1
+
+        %_without_equinox 1
+
+        %_without_fop 1
+
+        %_without_ftp 1
+
+        %_without_gradle 1
+
+        %_without_groovy 1
+
+        %_without_hadoop 1
+
+        %_without_hsqldb 1
+
+        %_without_itext 1
+
+        %_without_jackson 1
+
+        %_without_jmh 1
+
+        %_without_jna 1
+
+        %_without_jpa 1
+
+        %_without_junit5 1
+
+        %_without_logback 1
+
+        %_without_markdown 1
+
+        %_without_memcached 1
+
+        %_without_memoryfilesystem 1
+
+        %_without_obr 1
+
+        %_without_python 1
+
+        %_without_reporting 1
+
+        %_without_scm 1
+
+        %_without_snappy 1
+
+        %_without_spring 1
+
+        %_without_ssh 1
+
+        %_without_testlib 1
+
+        '
+  references:
+    community: https://ant.apache.org/
+  profiles:
+    common:
+      rpms:
+      - ant
+  filter:
+    rpms:
+    - ant-antlr
+    - ant-apache-bcel
+    - ant-apache-bsf
+    - ant-apache-log4j
+    - ant-apache-oro
+    - ant-apache-regexp
+    - ant-apache-resolver
+    - ant-apache-xalan2
+    - ant-commons-logging
+    - ant-commons-net
+    - ant-javadoc
+    - ant-javamail
+    - ant-jdepend
+    - ant-jmf
+    - ant-jsch
+    - ant-junit
+    - ant-manual
+    - ant-swing
+    - ant-testutil
+    - ant-xz
+  artifacts:
+    rpms:
+    - ant-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-lib-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-jmf-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-swing-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-antlr-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-bsf-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-resolver-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-commons-logging-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-commons-net-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-bcel-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-log4j-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-oro-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-regexp-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-apache-xalan2-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-javamail-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-jdepend-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-jsch-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-junit-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-testutil-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-xz-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-manual-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+    - ant-javadoc-0:1.10.5-1.module+el8+2438+c99a8a1e.noarch
+...
