@@ -210,6 +210,11 @@ data:
       - nginx-mod-stream
   artifacts:
     rpms:
+    - nginx-1:1.16.1-2.module+el8.4.0+11155+68135136.1.aarch64
+    - nginx-all-modules-1:1.16.1-2.module+el8.4.0+11155+68135136.1.noarch
+    - nginx-filesystem-1:1.16.1-2.module+el8.4.0+11155+68135136.1.noarch
+    - nginx-mod-http-image-filter-1:1.16.1-2.module+el8.4.0+11155+68135136.1.aarch64
+    - nginx-mod-http-perl-1:1.16.1-2.module+el8.4.0+11155+68135136.1.aarch64
     - nginx-mod-http-xslt-filter-1:1.16.1-2.module+el8.4.0+11155+68135136.1.aarch64
     - nginx-mod-mail-1:1.16.1-2.module+el8.4.0+11155+68135136.1.aarch64
     - nginx-mod-stream-1:1.16.1-2.module+el8.4.0+11155+68135136.1.aarch64
