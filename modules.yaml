@@ -10156,3 +10156,61 @@ data:
     - spacewalk-koan-0:2.8.6-6.module+el8.1.0+3115+d1f204ad.noarch
     - python3-spacewalk-koan-0:2.8.6-6.module+el8.1.0+3115+d1f204ad.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: mailman
+  stream: '2.1'
+  version: '8040020200930071637'
+  context: 6435bff4
+  arch: aarch64
+  license:
+    content:
+    - GPLv2+
+    module:
+    - MIT
+  summary: Electronic mail discussion and e-newsletter lists managing software
+  description: An initial version of the mailman mailing list management software
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8
+      python27:
+      - '2.7'
+    requires:
+      platform:
+      - el8
+      python27:
+      - '2.7'
+  components:
+    rpms:
+      mailman:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Module API.
+        ref: stream-2.1-rhel-8.4.0
+  api:
+    rpms:
+    - mailman
+  references:
+    documentation: https://launchpad.net/mailman
+    tracker: https://bugs.launchpad.net/mailman
+  profiles:
+    common:
+      rpms:
+      - mailman
+  filter:
+    rpms:
+    - python3-dns
+  artifacts:
+    rpms:
+    - mailman-3:2.1.29-11.module+el8.4.0+8277+5e2c6e6e.aarch64
+    - mailman-debugsource-3:2.1.29-11.module+el8.4.0+8277+5e2c6e6e.aarch64
+    - mailman-debuginfo-3:2.1.29-11.module+el8.4.0+8277+5e2c6e6e.aarch64
+...
