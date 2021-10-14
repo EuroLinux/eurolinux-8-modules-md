@@ -14785,80 +14785,6 @@ data:
   name: perl-DBI
   stream: '1.641'
   version: '8030020200505125553'
-  context: ea09926d
-  arch: aarch64
-  license:
-    content:
-    - GPL+ or Artistic
-    module:
-    - MIT
-  summary: A database access API for Perl
-  description: 'DBI is a database access Application Programming Interface (API) for
-    the Perl language. The DBI API specification defines a set of functions, variables
-    and conventions that provide a consistent database interface independent of the
-    actual database being used.
-
-    '
-  dependencies:
-  - buildrequires:
-      perl:
-      - '5.24'
-      platform:
-      - el8.3.0
-    requires:
-      perl:
-      - '5.24'
-      platform:
-      - el8
-  components:
-    rpms:
-      perl-DBI:
-        arches:
-        - aarch64
-        - i686
-        - ppc64le
-        - s390x
-        - x86_64
-        rationale: The API.
-        ref: stream-1.641-rhel-8.3.0
-  api:
-    rpms:
-    - perl-DBI
-  buildopts:
-    rpms:
-      macros: '%_without_perl_DBI_enables_Clone 1
-
-        %_without_perl_DBI_enables_coro 1
-
-        %_without_perl_DBI_enables_DB_File 1
-
-        %_without_perl_DBI_enables_MLDBM 1
-
-        %_without_perl_DBI_enables_optional_test 1
-
-        %_without_perl_DBI_enables_SQL_Statement 1
-
-        '
-  references:
-    community: http://dbi.perl.org/
-  profiles:
-    common:
-      description: DBI distribution
-      rpms:
-      - perl-DBI
-  artifacts:
-    rpms:
-    - perl-DBI-0:1.641-3.module+el8.3.0+6481+a42b6048.aarch64
-    - perl-DBI-debugsource-0:1.641-3.module+el8.3.0+6481+a42b6048.aarch64
-    - perl-DBI-debuginfo-0:1.641-3.module+el8.3.0+6481+a42b6048.aarch64
-...
----
-document: modulemd
-version: 2
-data:
-  name: perl-DBI
-  stream: '1.641'
-  version: '8030020200505125553'
   context: 2fbcbb20
   arch: aarch64
   license:
@@ -14925,4 +14851,204 @@ data:
     - perl-DBI-0:1.641-3.module+el8.3.0+6481+49275ac5.aarch64
     - perl-DBI-debugsource-0:1.641-3.module+el8.3.0+6481+49275ac5.aarch64
     - perl-DBI-debuginfo-0:1.641-3.module+el8.3.0+6481+49275ac5.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-DBD-SQLite
+  stream: '1.58'
+  version: '8030020200313075906'
+  context: caf6787c
+  arch: aarch64
+  license:
+    content:
+    - (GPL+ or Artistic) and Public Domain
+    module:
+    - MIT
+  summary: SQLite DBI driver
+  description: 'SQLite is a public domain RDBMS database engine that you can find
+    at http://www.hwaci.com/sw/sqlite/. This Perl module provides a SQLite RDBMS module
+    that uses the system SQLite libraries.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.30'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8.3.0
+    requires:
+      perl:
+      - '5.30'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-DBD-SQLite:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: The API.
+        ref: stream-1.58-rhel-8.3.0
+      perl-Test-NoWarnings:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A build-time dependency.
+        ref: stream-1.04-rhel-8.3.0
+  api:
+    rpms:
+    - perl-DBD-SQLite
+  buildopts:
+    rpms:
+      macros: '%_without_perl_Test_NoWarnings_enables_stack_trace 1
+
+        '
+  references:
+    community: http://search.cpan.org/dist/DBD-SQLite/
+  profiles:
+    common:
+      description: DBD-SQLite distribution
+      rpms:
+      - perl-DBD-SQLite
+  filter:
+    rpms:
+    - perl-Test-NoWarnings
+  artifacts:
+    rpms:
+    - perl-Test-NoWarnings-0:1.04-15.module+el8.2.0+4265+ff794501.noarch
+    - perl-DBD-SQLite-0:1.58-2.module+el8.2.0+4265+ff794501.aarch64
+    - perl-DBD-SQLite-debugsource-0:1.58-2.module+el8.2.0+4265+ff794501.aarch64
+    - perl-DBD-SQLite-debuginfo-0:1.58-2.module+el8.2.0+4265+ff794501.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-FCGI
+  stream: '0.78'
+  version: '8030020200313080105'
+  context: 2fbcbb20
+  arch: aarch64
+  license:
+    content:
+    - OML
+    module:
+    - MIT
+  summary: FastCGI Perl bindings
+  description: 'This allows you to write a FastCGI client in the Perl language.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.30'
+      platform:
+      - el8.3.0
+    requires:
+      perl:
+      - '5.30'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-FCGI:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: The API.
+        ref: stream-0.78-rhel-8.3.0
+  api:
+    rpms:
+    - perl-FCGI
+  references:
+    community: https://metacpan.org/release/FCGI
+  profiles:
+    common:
+      description: FCGI distribution
+      rpms:
+      - perl-FCGI
+  artifacts:
+    rpms:
+    - perl-FCGI-1:0.78-11.module+el8.2.0+4272+7e8d9407.aarch64
+    - perl-FCGI-debugsource-1:0.78-11.module+el8.2.0+4272+7e8d9407.aarch64
+    - perl-FCGI-debuginfo-1:0.78-11.module+el8.2.0+4272+7e8d9407.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-DBD-MySQL
+  stream: '4.046'
+  version: '8030020200511061544'
+  context: caf6787c
+  arch: aarch64
+  license:
+    content:
+    - GPL+ or Artistic
+    module:
+    - MIT
+  summary: A MySQL interface for Perl
+  description: 'DBD::mysql is the Perl5 Database Interface driver for the MySQL database.
+    In other words: DBD::mysql is an interface between the Perl programming language
+    and the MySQL programming API that comes with the MySQL relational database management
+    system.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.30'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8.3.0
+    requires:
+      perl:
+      - '5.30'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-DBD-MySQL:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: The API.
+        ref: stream-4.046-rhel-8.3.0
+  api:
+    rpms:
+    - perl-DBD-MySQL
+  references:
+    community: http://search.cpan.org/dist/DBD-mysql/
+  profiles:
+    common:
+      description: DBD-mysql distribution
+      rpms:
+      - perl-DBD-MySQL
+  artifacts:
+    rpms:
+    - perl-DBD-MySQL-0:4.046-3.module+el8.2.0+4259+1ed9a454.aarch64
+    - perl-DBD-MySQL-debugsource-0:4.046-3.module+el8.2.0+4259+1ed9a454.aarch64
+    - perl-DBD-MySQL-debuginfo-0:4.046-3.module+el8.2.0+4259+1ed9a454.aarch64
 ...
