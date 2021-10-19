@@ -3955,7 +3955,7 @@ data:
   stream: "3.9"
   version: 8040020210325151438
   context: f1d9d306
-  arch: x86_64
+  arch: aarch64
   summary: Python programming language, version 3.9
   description: >-
     This module gives users access to the internal Python 3.9 in RHEL8, as
