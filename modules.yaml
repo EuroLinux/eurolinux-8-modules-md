@@ -16403,3 +16403,147 @@ data:
     - perl-DBI-debugsource-0:1.641-3.module+el8.3.0+6481+a42b6048.aarch64
     - perl-DBI-debuginfo-0:1.641-3.module+el8.3.0+6481+a42b6048.aarch64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-DBD-SQLite
+  stream: '1.58'
+  version: '8030020200313075906'
+  context: cccafca5
+  arch: aarch64
+  license:
+    content:
+    - (GPL+ or Artistic) and Public Domain
+    module:
+    - MIT
+  summary: SQLite DBI driver
+  description: 'SQLite is a public domain RDBMS database engine that you can find
+    at http://www.hwaci.com/sw/sqlite/. This Perl module provides a SQLite RDBMS module
+    that uses the system SQLite libraries.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.24'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8.3.0
+    requires:
+      perl:
+      - '5.24'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-DBD-SQLite:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: The API.
+        ref: stream-1.58-rhel-8.3.0
+      perl-Test-NoWarnings:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A build-time dependency.
+        ref: stream-1.04-rhel-8.3.0
+  api:
+    rpms:
+    - perl-DBD-SQLite
+  buildopts:
+    rpms:
+      macros: '%_without_perl_Test_NoWarnings_enables_stack_trace 1
+
+        '
+  references:
+    community: http://search.cpan.org/dist/DBD-SQLite/
+  profiles:
+    common:
+      description: DBD-SQLite distribution
+      rpms:
+      - perl-DBD-SQLite
+  filter:
+    rpms:
+    - perl-Test-NoWarnings
+  artifacts:
+    rpms:
+    - perl-Test-NoWarnings-0:1.04-15.module+el8.1.0+2940+55ca6856.noarch
+    - perl-DBD-SQLite-0:1.58-2.module+el8.1.0+2940+55ca6856.aarch64
+    - perl-DBD-SQLite-debugsource-0:1.58-2.module+el8.1.0+2940+55ca6856.aarch64
+    - perl-DBD-SQLite-debuginfo-0:1.58-2.module+el8.1.0+2940+55ca6856.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-DBD-Pg
+  stream: '3.7'
+  version: '8030020200313075823'
+  context: 98a3c9d0
+  arch: aarch64
+  license:
+    content:
+    - GPLv2+ or Artistic
+    module:
+    - MIT
+  summary: A PostgreSQL interface for Perl
+  description: 'DBD::Pg is a Perl module that works with the DBI module to provide
+    access to PostgreSQL databases.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.24'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8.3.0
+      postgresql:
+      - '10'
+    requires:
+      perl:
+      - '5.24'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-DBD-Pg:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: The API.
+        ref: stream-3.7-rhel-8.3.0
+  api:
+    rpms:
+    - perl-DBD-Pg
+  references:
+    community: http://search.cpan.org/dist/DBD-Pg/
+  profiles:
+    common:
+      description: DBD-Pg distribution
+      rpms:
+      - perl-DBD-Pg
+  artifacts:
+    rpms:
+    - perl-DBD-Pg-0:3.7.4-4.module+el8.3.0+6565+7d8e397c.aarch64
+    - perl-DBD-Pg-debugsource-0:3.7.4-4.module+el8.3.0+6565+7d8e397c.aarch64
+    - perl-DBD-Pg-debuginfo-0:3.7.4-4.module+el8.3.0+6565+7d8e397c.aarch64
+...
