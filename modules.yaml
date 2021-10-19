@@ -17454,3 +17454,182 @@ data:
     rpms:
     - perl-YAML-0:1.24-3.module+el8.1.0+2934+dec45db7.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-IO-Socket-SSL
+  stream: '2.066'
+  version: '8030020200430120526'
+  context: 1e4bbb35
+  arch: aarch64
+  license:
+    content:
+    - (GPL+ or Artistic) and MPLv2.0
+    - Artistic 2.0
+    module:
+    - MIT
+  summary: Perl library for transparent TLS
+  description: 'IO::Socket::SSL is a drop-in replacement for IO::Socket::IP that uses
+    TLS to encrypt data before it is transferred to a remote server or client. IO::Socket::SSL
+    supports all the extra features that one needs to write a full-featured TLS client
+    or server application like multiple TLS contexts, cipher selection, certificate
+    verification, and TLS version selection. Net::SSLeay offers some high level convenience
+    functions for accessing web pages on TLS servers, a sslcat() function for writing
+    your own clients, and finally access to the API of OpenSSL library so you can
+    write servers or clients for more complicated applications.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.26'
+      platform:
+      - el8.3.0
+    requires:
+      perl:
+      - '5.26'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-Devel-StackTrace:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A build dependency.
+        ref: stream-2.03-rhel-8.3.0
+      perl-IO-Socket-INET6:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: A build dependency.
+        ref: stream-2.72-rhel-8.3.0
+      perl-IO-Socket-SSL:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: The API.
+        ref: stream-2.066-rhel-8.3.0
+      perl-IO-Tty:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A build dependency.
+        ref: stream-1.12-rhel-8.3.0
+      perl-IPC-Run:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: A build dependency.
+        ref: stream-0.96-rhel-8.3.0
+      perl-Net-IDN-Encode:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        rationale: A build dependency.
+        ref: stream-2.400-rhel-8.3.0
+      perl-Net-LibIDN:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A build dependency.
+        ref: stream-0.12-rhel-8.3.0
+      perl-Net-SSLeay:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: The API.
+        ref: stream-1.88-rhel-8.3.0
+      perl-Socket6:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A build dependency.
+        ref: stream-0.28-rhel-8.3.0
+      perl-Test-NoWarnings:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: A build dependency.
+        ref: stream-1.04-rhel-8.3.0
+  api:
+    rpms:
+    - perl-IO-Socket-SSL
+    - perl-Net-SSLeay
+  references:
+    community: https://metacpan.org/release/IO-Socket-SSL
+  profiles:
+    common:
+      description: IO::Socket::SSL and Net::SSLeay
+      rpms:
+      - perl-IO-Socket-SSL
+      - perl-Net-SSLeay
+  filter:
+    rpms:
+    - perl-Devel-StackTrace
+    - perl-IO-Socket-INET6
+    - perl-IO-Tty
+    - perl-IPC-Run
+    - perl-Net-IDN-Encode
+    - perl-Net-LibIDN
+    - perl-Socket6
+    - perl-Test-NoWarnings
+  artifacts:
+    rpms:
+    - perl-Socket6-0:0.28-6.module+el8.3.0+6446+594cad75.aarch64
+    - perl-Socket6-debugsource-0:0.28-6.module+el8.3.0+6446+594cad75.aarch64
+    - perl-Socket6-debuginfo-0:0.28-6.module+el8.3.0+6446+594cad75.aarch64
+    - perl-Net-SSLeay-0:1.88-1.module+el8.3.0+6446+594cad75.aarch64
+    - perl-Net-SSLeay-debugsource-0:1.88-1.module+el8.3.0+6446+594cad75.aarch64
+    - perl-Net-SSLeay-debuginfo-0:1.88-1.module+el8.3.0+6446+594cad75.aarch64
+    - perl-Net-LibIDN-0:0.12-35.module+el8.3.0+6446+594cad75.aarch64
+    - perl-Net-LibIDN-debugsource-0:0.12-35.module+el8.3.0+6446+594cad75.aarch64
+    - perl-Net-LibIDN-debuginfo-0:0.12-35.module+el8.3.0+6446+594cad75.aarch64
+    - perl-IO-Tty-0:1.12-11.module+el8.3.0+6446+594cad75.aarch64
+    - perl-IO-Tty-debugsource-0:1.12-11.module+el8.3.0+6446+594cad75.aarch64
+    - perl-IO-Tty-debuginfo-0:1.12-11.module+el8.3.0+6446+594cad75.aarch64
+    - perl-Devel-StackTrace-1:2.03-2.module+el8.3.0+6446+594cad75.noarch
+    - perl-Test-NoWarnings-0:1.04-15.module+el8.3.0+6446+594cad75.noarch
+    - perl-IPC-Run-0:0.99-1.module+el8.3.0+6446+594cad75.noarch
+    - perl-IO-Socket-INET6-0:2.72-12.module+el8.3.0+6446+594cad75.noarch
+    - perl-Net-IDN-Encode-0:2.500-2.module+el8.3.0+6446+594cad75.aarch64
+    - perl-Net-IDN-Encode-debugsource-0:2.500-2.module+el8.3.0+6446+594cad75.aarch64
+    - perl-Net-IDN-Encode-debuginfo-0:2.500-2.module+el8.3.0+6446+594cad75.aarch64
+    - perl-IO-Socket-SSL-0:2.066-4.module+el8.3.0+6446+594cad75.noarch
+...
