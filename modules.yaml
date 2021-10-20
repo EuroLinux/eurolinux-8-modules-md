@@ -28653,3 +28653,62 @@ data:
     - mod_ssl-1:2.4.37-39.module+el8.4.0+12865+a7065a39.1.x86_64
     - mod_ssl-debuginfo-1:2.4.37-39.module+el8.4.0+12865+a7065a39.1.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: redis
+  stream: '5'
+  version: '8040020211011074037'
+  context: 522a0ee4
+  arch: x86_64
+  license:
+    content:
+    - BSD and MIT
+    - CC-BY-SA
+    module:
+    - GPLv2+
+  summary: Redis persistent key-value database
+  description: redis 5 module
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.4.0.z
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      redis:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Module API.
+        ref: stream-5.0-rhel-8.4.0
+  api:
+    rpms:
+    - redis
+  buildopts:
+    rpms:
+      macros: '%_without_redistrib 1
+
+        '
+  references:
+    documentation: https://redis.io/documentation
+    tracker: https://github.com/antirez/redis/issues
+  profiles:
+    common:
+      rpms:
+      - redis
+  artifacts:
+    rpms:
+    - redis-debuginfo-0:5.0.3-5.module+el8.4.0+12927+b9845322.x86_64
+    - redis-debugsource-0:5.0.3-5.module+el8.4.0+12927+b9845322.x86_64
+    - redis-devel-0:5.0.3-5.module+el8.4.0+12927+b9845322.x86_64
+    - redis-0:5.0.3-5.module+el8.4.0+12927+b9845322.x86_64
+    - redis-doc-0:5.0.3-5.module+el8.4.0+12927+b9845322.noarch
+...
