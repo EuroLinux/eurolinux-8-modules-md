@@ -29595,3 +29595,787 @@ data:
     - nginx-mod-mail-1:1.20.0-2.module+el8.5.0+12317+1b759a19.x86_64
     - nginx-mod-mail-debuginfo-1:1.20.0-2.module+el8.5.0+12317+1b759a19.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: ruby
+  stream: '3.0'
+  version: '8050020211006085658'
+  context: b4937e53
+  arch: x86_64
+  license:
+    content:
+    - (BSD or Ruby) and PostgreSQL
+    - (Ruby or BSD) and (Ruby or BSD or Python) and (Ruby or BSD or LGPLv2+)
+    - (Ruby or BSD) and Public Domain and MIT and CC0 and zlib and UCD
+    - (Ruby or GPLv2) and UCD
+    - BSD
+    - GPLv2 and Ruby and MIT and OFL
+    - MIT
+    - Ruby or BSD
+    - Ruby or MIT
+    module:
+    - MIT
+  summary: An interpreter of object-oriented scripting language
+  description: Ruby is the interpreted scripting language for quick and easy object-oriented
+    programming.  It has many features to process text files and to do system management
+    tasks (as in Perl).  It is simple, straight-forward, and extensible.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.5.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      ruby:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '101'
+        multilib:
+        - x86_64
+        rationale: An interpreter of object-oriented scripting language
+        ref: stream-ruby-3.0-rhel-8.5.0
+      rubygem-abrt:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '102'
+        rationale: ABRT support for Ruby
+        ref: stream-ruby-3.0-rhel-8.5.0
+      rubygem-mysql2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '102'
+        rationale: A simple, fast Mysql library for Ruby, binding to libmysql
+        ref: stream-ruby-3.0-rhel-8.5.0
+      rubygem-pg:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '102'
+        rationale: A Ruby interface to the PostgreSQL RDBMS
+        ref: stream-ruby-3.0-rhel-8.5.0
+  api:
+    rpms:
+    - ruby
+    - ruby-default-gems
+    - ruby-devel
+    - ruby-libs
+    - rubygem-abrt
+    - rubygem-bigdecimal
+    - rubygem-bundler
+    - rubygem-io-console
+    - rubygem-irb
+    - rubygem-json
+    - rubygem-minitest
+    - rubygem-mysql2
+    - rubygem-net-telnet
+    - rubygem-openssl
+    - rubygem-pg
+    - rubygem-power_assert
+    - rubygem-psych
+    - rubygem-rake
+    - rubygem-rdoc
+    - rubygem-test-unit
+    - rubygem-xmlrpc
+    - rubygems
+    - rubygems-devel
+  references:
+    community: http://ruby-lang.org/
+    documentation: https://www.ruby-lang.org/en/documentation/
+    tracker: https://bugs.ruby-lang.org/
+  profiles:
+    common:
+      rpms:
+      - ruby
+  artifacts:
+    rpms:
+    - rubygem-rexml-0:3.2.5-140.module+el8.5.0+12856+0c654ebc.noarch
+    - rubygem-abrt-0:0.4.0-1.module+el8.5.0+11580+845038eb.noarch
+    - rubygem-pg-debugsource-0:1.2.3-1.module+el8.5.0+11580+845038eb.x86_64
+    - rubygem-rake-0:13.0.3-140.module+el8.5.0+12856+0c654ebc.noarch
+    - rubygems-0:3.2.22-140.module+el8.5.0+12856+0c654ebc.noarch
+    - rubygems-devel-0:3.2.22-140.module+el8.5.0+12856+0c654ebc.noarch
+    - ruby-libs-0:3.0.2-140.module+el8.5.0+12856+0c654ebc.x86_64
+    - rubygem-io-console-debuginfo-0:0.5.7-140.module+el8.5.0+12856+0c654ebc.x86_64
+    - rubygem-mysql2-doc-0:0.5.3-1.module+el8.5.0+11580+845038eb.noarch
+    - rubygem-bigdecimal-0:3.0.0-140.module+el8.5.0+12856+0c654ebc.x86_64
+    - rubygem-abrt-doc-0:0.4.0-1.module+el8.5.0+11580+845038eb.noarch
+    - rubygem-minitest-0:5.14.2-140.module+el8.5.0+12856+0c654ebc.noarch
+    - ruby-debuginfo-0:3.0.2-140.module+el8.5.0+12856+0c654ebc.x86_64
+    - rubygem-psych-0:3.3.0-140.module+el8.5.0+12856+0c654ebc.x86_64
+    - ruby-libs-debuginfo-0:3.0.2-140.module+el8.5.0+12856+0c654ebc.x86_64
+    - rubygem-test-unit-0:3.3.7-140.module+el8.5.0+12856+0c654ebc.noarch
+    - rubygem-pg-doc-0:1.2.3-1.module+el8.5.0+11580+845038eb.noarch
+    - rubygem-power_assert-0:1.2.0-140.module+el8.5.0+12856+0c654ebc.noarch
+    - rubygem-io-console-0:0.5.7-140.module+el8.5.0+12856+0c654ebc.x86_64
+    - ruby-devel-0:3.0.2-140.module+el8.5.0+12856+0c654ebc.x86_64
+    - rubygem-pg-debuginfo-0:1.2.3-1.module+el8.5.0+11580+845038eb.x86_64
+    - ruby-0:3.0.2-140.module+el8.5.0+12856+0c654ebc.x86_64
+    - ruby-debugsource-0:3.0.2-140.module+el8.5.0+12856+0c654ebc.x86_64
+    - rubygem-mysql2-debuginfo-0:0.5.3-1.module+el8.5.0+11580+845038eb.x86_64
+    - rubygem-mysql2-0:0.5.3-1.module+el8.5.0+11580+845038eb.x86_64
+    - rubygem-typeprof-0:0.12.0-140.module+el8.5.0+12856+0c654ebc.noarch
+    - rubygem-json-0:2.5.1-140.module+el8.5.0+12856+0c654ebc.x86_64
+    - rubygem-rdoc-0:6.3.1-140.module+el8.5.0+12856+0c654ebc.noarch
+    - ruby-doc-0:3.0.2-140.module+el8.5.0+12856+0c654ebc.noarch
+    - rubygem-pg-0:1.2.3-1.module+el8.5.0+11580+845038eb.x86_64
+    - rubygem-bigdecimal-debuginfo-0:3.0.0-140.module+el8.5.0+12856+0c654ebc.x86_64
+    - rubygem-mysql2-debugsource-0:0.5.3-1.module+el8.5.0+11580+845038eb.x86_64
+    - rubygem-rss-0:0.2.9-140.module+el8.5.0+12856+0c654ebc.noarch
+    - rubygem-bundler-0:2.2.22-140.module+el8.5.0+12856+0c654ebc.noarch
+    - rubygem-irb-0:1.3.5-140.module+el8.5.0+12856+0c654ebc.noarch
+    - rubygem-psych-debuginfo-0:3.3.0-140.module+el8.5.0+12856+0c654ebc.x86_64
+    - ruby-default-gems-0:3.0.2-140.module+el8.5.0+12856+0c654ebc.noarch
+    - rubygem-json-debuginfo-0:2.5.1-140.module+el8.5.0+12856+0c654ebc.x86_64
+    - rubygem-rbs-0:1.0.4-140.module+el8.5.0+12856+0c654ebc.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: nodejs
+  stream: '16'
+  version: '8050020210916144425'
+  context: b4937e53
+  arch: x86_64
+  license:
+    content:
+    - MIT
+    - MIT and ASL 2.0 and ISC and BSD
+    module:
+    - MIT
+  summary: Javascript runtime
+  description: Node.js is a platform built on Chrome's JavaScript runtime for easily
+    building fast, scalable network applications. Node.js uses an event-driven, non-blocking
+    I/O model that makes it lightweight and efficient, perfect for data-intensive
+    real-time applications that run across distributed devices.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.5.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      nodejs:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '100'
+        rationale: Javascript runtime and npm package manager.
+        ref: stream-16-rhel-8.5.0
+      nodejs-nodemon:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '200'
+        rationale: Simple monitor script for use during development of a node.js app
+        ref: stream-16-rhel-8.5.0
+      nodejs-packaging:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        rationale: RPM Macros and Utilities for Node.js Packaging
+        ref: stream-16-rhel-8.5.0
+  api:
+    rpms:
+    - nodejs
+    - nodejs-devel
+    - npm
+  buildopts:
+    rpms:
+      macros: '%_with_bootstrap 1
+
+        '
+  references:
+    community: http://nodejs.org
+    documentation: http://nodejs.org/en/docs
+    tracker: https://github.com/nodejs/node/issues
+  profiles:
+    common:
+      rpms:
+      - nodejs
+      - npm
+    development:
+      rpms:
+      - nodejs
+      - nodejs-devel
+      - npm
+    minimal:
+      rpms:
+      - nodejs
+    s2i:
+      rpms:
+      - nodejs
+      - nodejs-nodemon
+      - npm
+  artifacts:
+    rpms:
+    - nodejs-debugsource-1:16.8.0-1.module+el8.5.0+12644+fdab02ff.x86_64
+    - nodejs-docs-1:16.8.0-1.module+el8.5.0+12644+fdab02ff.noarch
+    - nodejs-devel-1:16.8.0-1.module+el8.5.0+12644+fdab02ff.x86_64
+    - npm-1:7.21.0-1.16.8.0.1.module+el8.5.0+12644+fdab02ff.x86_64
+    - nodejs-1:16.8.0-1.module+el8.5.0+12644+fdab02ff.x86_64
+    - nodejs-full-i18n-1:16.8.0-1.module+el8.5.0+12644+fdab02ff.x86_64
+    - nodejs-debuginfo-1:16.8.0-1.module+el8.5.0+12644+fdab02ff.x86_64
+    - nodejs-nodemon-0:2.0.7-1.module+el8.5.0+10992+fac5fe06.noarch
+    - nodejs-packaging-0:25-1.module+el8.5.0+10992+fac5fe06.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: 389-ds
+  stream: '1.4'
+  version: '8050020210826134823'
+  context: 1a75f91c
+  arch: x86_64
+  license:
+    content:
+    - GPLv3+
+    module:
+    - MIT
+  summary: 389 Directory Server (base)
+  description: 389 Directory Server is an LDAPv3 compliant server.  The base package
+    includes the LDAP server and command line utilities for server administration.
+  dependencies:
+  - buildrequires:
+      llvm-toolset:
+      - rhel8
+      nodejs:
+      - '10'
+      platform:
+      - el8.5.0
+      rust-toolset:
+      - rhel8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      389-ds-base:
+        arches:
+        - aarch64
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Package in api
+        ref: stream-1.4-rhel-8.5.0
+  filter:
+    rpms:
+    - cockpit-389-ds
+  artifacts:
+    rpms:
+    - 389-ds-base-legacy-tools-debuginfo-0:1.4.3.23-10.module+el8.5.0+12398+47000435.x86_64
+    - 389-ds-base-libs-0:1.4.3.23-10.module+el8.5.0+12398+47000435.x86_64
+    - 389-ds-base-snmp-debuginfo-0:1.4.3.23-10.module+el8.5.0+12398+47000435.x86_64
+    - 389-ds-base-debuginfo-0:1.4.3.23-10.module+el8.5.0+12398+47000435.x86_64
+    - 389-ds-base-0:1.4.3.23-10.module+el8.5.0+12398+47000435.x86_64
+    - 389-ds-base-libs-debuginfo-0:1.4.3.23-10.module+el8.5.0+12398+47000435.x86_64
+    - 389-ds-base-snmp-0:1.4.3.23-10.module+el8.5.0+12398+47000435.x86_64
+    - cockpit-389-ds-0:1.4.3.23-10.module+el8.5.0+12398+47000435.noarch
+    - 389-ds-base-devel-0:1.4.3.23-10.module+el8.5.0+12398+47000435.x86_64
+    - python3-lib389-0:1.4.3.23-10.module+el8.5.0+12398+47000435.noarch
+    - 389-ds-base-debugsource-0:1.4.3.23-10.module+el8.5.0+12398+47000435.x86_64
+    - 389-ds-base-legacy-tools-0:1.4.3.23-10.module+el8.5.0+12398+47000435.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: varnish
+  stream: '6'
+  version: '8050020210726171112'
+  context: b4937e53
+  arch: x86_64
+  license:
+    content:
+    - BSD
+    module:
+    - MIT
+  summary: Varnish HTTP cache
+  description: Varnish Cache web application accelerator
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.5.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      varnish:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Module API.
+        ref: stream-6-rhel-8.5.0
+      varnish-modules:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Extension modules.
+        ref: stream-6-rhel-8.5.0
+  api:
+    rpms:
+    - varnish
+    - varnish-modules
+  buildopts:
+    rpms:
+      macros: '%_without_python2 1
+
+        %_with_python3 1
+
+        '
+  references:
+    documentation: http://varnish-cache.org/docs/
+    tracker: https://github.com/varnishcache/varnish-cache/issues
+  profiles:
+    common:
+      rpms:
+      - varnish
+      - varnish-modules
+  artifacts:
+    rpms:
+    - varnish-docs-0:6.0.8-1.module+el8.5.0+11919+2c98a2b6.x86_64
+    - varnish-0:6.0.8-1.module+el8.5.0+11919+2c98a2b6.x86_64
+    - varnish-modules-0:0.15.0-6.module+el8.5.0+11976+0b4af72d.x86_64
+    - varnish-modules-debugsource-0:0.15.0-6.module+el8.5.0+11976+0b4af72d.x86_64
+    - varnish-modules-debuginfo-0:0.15.0-6.module+el8.5.0+11976+0b4af72d.x86_64
+    - varnish-devel-0:6.0.8-1.module+el8.5.0+11919+2c98a2b6.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: freeradius
+  stream: '3.0'
+  version: '8050020210803082559'
+  context: ab0f257b
+  arch: x86_64
+  license:
+    content:
+    - GPLv2+ and LGPLv2+
+    module:
+    - GPL
+  summary: High-performance and highly configurable free RADIUS server
+  description: 'The FreeRADIUS Server Project is a high performance and highly configurable
+    GPL''d free RADIUS server. The server is similar in some respects to Livingston''s
+    2.0 server.  While FreeRADIUS started as a variant of the Cistron RADIUS server,
+    they don''t share a lot in common any more. It now has many more features than
+    Cistron or Livingston, and is much more configurable.
+
+    FreeRADIUS is an Internet authentication daemon, which implements the RADIUS protocol,
+    as defined in RFC 2865 (and others). It allows Network Access Servers (NAS boxes)
+    to perform authentication for dial-up users. There are also RADIUS clients available
+    for Web servers, firewalls, Unix logins, and more.  Using RADIUS allows authentication
+    and authorization for a network to be centralized, and minimizes the amount of
+    re-configuration which has to be done when adding or deleting new users.'
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.26'
+      platform:
+      - el8.5.0
+    requires:
+      perl:
+      - '5.26'
+      platform:
+      - el8
+  components:
+    rpms:
+      freeradius:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        rationale: Provides the FreeRADIUS server
+        ref: stream-3.0-rhel-8.5.0
+  api:
+    rpms:
+    - freeradius
+    - freeradius-devel
+    - freeradius-doc
+    - freeradius-krb5
+    - freeradius-ldap
+    - freeradius-mysql
+    - freeradius-perl
+    - freeradius-postgresql
+    - freeradius-rest
+    - freeradius-sqlite
+    - freeradius-unixODBC
+    - freeradius-utils
+  profiles:
+    server:
+      description: The FreeRADIUS Server
+      rpms:
+      - freeradius
+  artifacts:
+    rpms:
+    - freeradius-rest-debuginfo-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-devel-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-rest-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-ldap-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-ldap-debuginfo-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-perl-debuginfo-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-krb5-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - python3-freeradius-debuginfo-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-krb5-debuginfo-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-mysql-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-mysql-debuginfo-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-sqlite-debuginfo-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-utils-debuginfo-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-postgresql-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-perl-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-unixODBC-debuginfo-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-doc-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-utils-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-postgresql-debuginfo-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-sqlite-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - python3-freeradius-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-unixODBC-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-debuginfo-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+    - freeradius-debugsource-0:3.0.20-9.module+el8.5.0+12103+998f1584.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: pki-core
+  stream: '10.6'
+  version: '8050020210924095114'
+  context: 01d2cef5
+  arch: x86_64
+  license:
+    content:
+    - GPLv2 and LGPLv2
+    - LGPLv2+
+    - MPLv1.1 or GPLv2+ or LGPLv2+
+    module:
+    - MIT
+  summary: PKI Core module for PKI 10.6 or later
+  description: A module for PKI Core packages for PKI version 10.6 or later.
+  dependencies:
+  - buildrequires:
+      golang-ecosystem:
+      - '1.0'
+      pki-deps:
+      - '10.6'
+      platform:
+      - el8.5.0
+    requires:
+      pki-deps:
+      - '10.6'
+      platform:
+      - el8
+  components:
+    rpms:
+      jss:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: JSS packages
+        ref: stream-pki-10.6-rhel-8.5.0
+      ldapjdk:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: LDAP JDK packages
+        ref: stream-pki-10.6-rhel-8.5.0
+      pki-core:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        rationale: PKI Core packages
+        ref: stream-pki-10.6-rhel-8.5.0
+      tomcatjss:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: TomcatJSS packages
+        ref: stream-pki-10.6-rhel-8.5.0
+  references:
+    community: https://www.dogtagpki.org
+    documentation: https://www.dogtagpki.org
+    tracker: https://github.com/dogtagpki/pki/issues
+  artifacts:
+    rpms:
+    - pki-server-0:10.11.2-2.module+el8.5.0+12735+8eb38ccc.noarch
+    - pki-tools-0:10.11.2-2.module+el8.5.0+12735+8eb38ccc.x86_64
+    - pki-core-debugsource-0:10.11.2-2.module+el8.5.0+12735+8eb38ccc.x86_64
+    - pki-kra-0:10.11.2-2.module+el8.5.0+12735+8eb38ccc.noarch
+    - pki-symkey-0:10.11.2-2.module+el8.5.0+12735+8eb38ccc.x86_64
+    - jss-debugsource-0:4.9.1-1.module+el8.5.0+12710+1c6f9ceb.x86_64
+    - ldapjdk-javadoc-0:4.23.0-1.module+el8.5.0+11983+6ba118b4.noarch
+    - pki-base-java-0:10.11.2-2.module+el8.5.0+12735+8eb38ccc.noarch
+    - pki-symkey-debuginfo-0:10.11.2-2.module+el8.5.0+12735+8eb38ccc.x86_64
+    - ldapjdk-0:4.23.0-1.module+el8.5.0+11983+6ba118b4.noarch
+    - pki-core-debuginfo-0:10.11.2-2.module+el8.5.0+12735+8eb38ccc.x86_64
+    - python3-pki-0:10.11.2-2.module+el8.5.0+12735+8eb38ccc.noarch
+    - jss-debuginfo-0:4.9.1-1.module+el8.5.0+12710+1c6f9ceb.x86_64
+    - jss-javadoc-0:4.9.1-1.module+el8.5.0+12710+1c6f9ceb.x86_64
+    - pki-tools-debuginfo-0:10.11.2-2.module+el8.5.0+12735+8eb38ccc.x86_64
+    - pki-acme-0:10.11.2-2.module+el8.5.0+12735+8eb38ccc.noarch
+    - pki-ca-0:10.11.2-2.module+el8.5.0+12735+8eb38ccc.noarch
+    - tomcatjss-0:7.7.0-1.module+el8.5.0+11983+6ba118b4.noarch
+    - pki-base-0:10.11.2-2.module+el8.5.0+12735+8eb38ccc.noarch
+    - jss-0:4.9.1-1.module+el8.5.0+12710+1c6f9ceb.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: postgresql
+  stream: '10'
+  version: '8050020210716113442'
+  context: b4937e53
+  arch: x86_64
+  license:
+    content:
+    - PostgreSQL
+    module:
+    - MIT
+  summary: PostgreSQL server and client module
+  description: PostgreSQL is an advanced Object-Relational database management system
+    (DBMS). The postgresql-server package contains the programs needed to create and
+    run a PostgreSQL server, which will in turn allow you to create and maintain PostgreSQL
+    databases. The base postgresql package contains the client programs that you'll
+    need to access a PostgreSQL DBMS server.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.5.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      postgresql:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Module API.
+        ref: stream-10-rhel-8.5.0
+  api:
+    rpms:
+    - postgresql
+    - postgresql-server
+  references:
+    community: https://www.postgresql.org
+    documentation: https://www.postgresql.org/docs/10/index.html
+    tracker: http://bugzilla.redhat.com
+  profiles:
+    client:
+      rpms:
+      - postgresql
+    server:
+      rpms:
+      - postgresql-server
+  artifacts:
+    rpms:
+    - postgresql-server-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-plpython3-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-test-rpm-macros-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-server-devel-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-contrib-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-static-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-server-devel-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-server-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-debugsource-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-pltcl-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-plperl-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-upgrade-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-plpython3-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-plperl-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-upgrade-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-test-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-docs-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-contrib-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-test-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-docs-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-upgrade-devel-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-upgrade-devel-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+    - postgresql-pltcl-0:10.17-2.module+el8.5.0+11838+8dca950a.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: postgresql
+  stream: '13'
+  version: '8050020210716085012'
+  context: b4937e53
+  arch: x86_64
+  license:
+    content:
+    - BSD
+    - MIT
+    - PostgreSQL
+    module:
+    - MIT
+  summary: PostgreSQL server and client module
+  description: PostgreSQL is an advanced Object-Relational database management system
+    (DBMS). The postgresql-server package contains the programs needed to create and
+    run a PostgreSQL server, which will in turn allow you to create and maintain PostgreSQL
+    databases. The base postgresql package contains the client programs that you'll
+    need to access a PostgreSQL DBMS server.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.5.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      pg_repack:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: pg_repack extension
+        ref: stream-13-rhel-8.5.0
+      pgaudit:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: pgaudit extension
+        ref: stream-13-rhel-8.5.0
+      postgres-decoderbufs:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: postgres-decoderbufs extension
+        ref: stream-13-rhel-8.5.0
+      postgresql:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Module API.
+        ref: stream-13-rhel-8.5.0
+  api:
+    rpms:
+    - postgresql
+    - postgresql-server
+  references:
+    community: https://www.postgresql.org
+    documentation: https://www.postgresql.org/docs/13/index.html
+    tracker: http://bugzilla.redhat.com
+  profiles:
+    client:
+      rpms:
+      - postgresql
+    server:
+      rpms:
+      - postgresql-server
+  artifacts:
+    rpms:
+    - pgaudit-0:1.5.0-1.module+el8.4.0+8873+b821c30a.x86_64
+    - pgaudit-debuginfo-0:1.5.0-1.module+el8.4.0+8873+b821c30a.x86_64
+    - pgaudit-debugsource-0:1.5.0-1.module+el8.4.0+8873+b821c30a.x86_64
+    - pg_repack-0:1.4.6-3.module+el8.5.0+11357+bcc62552.x86_64
+    - pg_repack-debuginfo-0:1.4.6-3.module+el8.5.0+11357+bcc62552.x86_64
+    - pg_repack-debugsource-0:1.4.6-3.module+el8.5.0+11357+bcc62552.x86_64
+    - postgres-decoderbufs-0:0.10.0-2.module+el8.4.0+8873+b821c30a.x86_64
+    - postgres-decoderbufs-debuginfo-0:0.10.0-2.module+el8.4.0+8873+b821c30a.x86_64
+    - postgres-decoderbufs-debugsource-0:0.10.0-2.module+el8.4.0+8873+b821c30a.x86_64
+    - postgresql-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-contrib-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-contrib-debuginfo-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-debuginfo-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-debugsource-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-docs-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-docs-debuginfo-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-plperl-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-plperl-debuginfo-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-plpython3-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-plpython3-debuginfo-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-pltcl-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-pltcl-debuginfo-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-server-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-server-debuginfo-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-server-devel-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-server-devel-debuginfo-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-static-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-test-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-test-debuginfo-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-test-rpm-macros-0:13.3-2.module+el8.5.0+11832+e924f9ed.noarch
+    - postgresql-upgrade-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-upgrade-debuginfo-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-upgrade-devel-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+    - postgresql-upgrade-devel-debuginfo-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
+...
