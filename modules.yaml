@@ -30379,3 +30379,403 @@ data:
     - postgresql-upgrade-devel-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
     - postgresql-upgrade-devel-debuginfo-0:13.3-2.module+el8.5.0+11832+e924f9ed.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: postgresql
+  stream: '12'
+  version: '8050020210715095825'
+  context: b4937e53
+  arch: x86_64
+  license:
+    content:
+    - BSD
+    - MIT
+    - PostgreSQL
+    module:
+    - MIT
+  summary: PostgreSQL server and client module
+  description: PostgreSQL is an advanced Object-Relational database management system
+    (DBMS). The postgresql-server package contains the programs needed to create and
+    run a PostgreSQL server, which will in turn allow you to create and maintain PostgreSQL
+    databases. The base postgresql package contains the client programs that you'll
+    need to access a PostgreSQL DBMS server.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.5.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      pg_repack:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: pg_repack extension
+        ref: stream-12-rhel-8.5.0
+      pgaudit:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: pgaudit extension
+        ref: stream-12-rhel-8.5.0
+      postgres-decoderbufs:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: postgres-decoderbufs extension
+        ref: stream-12-rhel-8.5.0
+      postgresql:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Module API.
+        ref: stream-12-rhel-8.5.0
+  api:
+    rpms:
+    - postgresql
+    - postgresql-server
+  references:
+    community: https://www.postgresql.org
+    documentation: https://www.postgresql.org/docs/12/index.html
+    tracker: http://bugzilla.redhat.com
+  profiles:
+    client:
+      rpms:
+      - postgresql
+    server:
+      rpms:
+      - postgresql-server
+  artifacts:
+    rpms:
+    - postgresql-pltcl-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgresql-plperl-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgresql-debugsource-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgresql-plperl-debuginfo-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgresql-docs-debuginfo-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgres-decoderbufs-debugsource-0:0.10.0-2.module+el8.5.0+11354+78b3c9c5.x86_64
+    - postgresql-debuginfo-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgresql-server-debuginfo-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgresql-server-devel-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgresql-test-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgresql-server-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgresql-test-debuginfo-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgresql-upgrade-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - pgaudit-debuginfo-0:1.4.0-5.module+el8.5.0+11354+78b3c9c5.x86_64
+    - postgresql-plpython3-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgresql-upgrade-devel-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgresql-pltcl-debuginfo-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgresql-upgrade-devel-debuginfo-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgresql-static-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgresql-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgres-decoderbufs-0:0.10.0-2.module+el8.5.0+11354+78b3c9c5.x86_64
+    - postgresql-server-devel-debuginfo-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - pg_repack-debuginfo-0:1.4.6-3.module+el8.5.0+11354+78b3c9c5.x86_64
+    - postgresql-contrib-debuginfo-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - pg_repack-0:1.4.6-3.module+el8.5.0+11354+78b3c9c5.x86_64
+    - postgresql-contrib-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgresql-upgrade-debuginfo-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - postgresql-plpython3-debuginfo-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - pg_repack-debugsource-0:1.4.6-3.module+el8.5.0+11354+78b3c9c5.x86_64
+    - postgres-decoderbufs-debuginfo-0:0.10.0-2.module+el8.5.0+11354+78b3c9c5.x86_64
+    - postgresql-test-rpm-macros-0:12.7-2.module+el8.5.0+11804+86306fc7.noarch
+    - postgresql-docs-0:12.7-2.module+el8.5.0+11804+86306fc7.x86_64
+    - pgaudit-0:1.4.0-5.module+el8.5.0+11354+78b3c9c5.x86_64
+    - pgaudit-debugsource-0:1.4.0-5.module+el8.5.0+11354+78b3c9c5.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: mailman
+  stream: '2.1'
+  version: '8050020210427120019'
+  context: fd901a62
+  arch: x86_64
+  license:
+    content:
+    - GPLv2+
+    module:
+    - MIT
+  summary: Electronic mail discussion and e-newsletter lists managing software
+  description: An initial version of the mailman mailing list management software
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.5.0
+      python27:
+      - '2.7'
+    requires:
+      platform:
+      - el8
+      python27:
+      - '2.7'
+  components:
+    rpms:
+      mailman:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Module API.
+        ref: stream-2.1-rhel-8.5.0
+  api:
+    rpms:
+    - mailman
+  references:
+    documentation: https://launchpad.net/mailman
+    tracker: https://bugs.launchpad.net/mailman
+  profiles:
+    common:
+      rpms:
+      - mailman
+  filter:
+    rpms:
+    - python3-dns
+  artifacts:
+    rpms:
+    - mailman-debugsource-3:2.1.29-12.module+el8.5.0+10790+91ddbebd.x86_64
+    - mailman-3:2.1.29-12.module+el8.5.0+10790+91ddbebd.x86_64
+    - mailman-debuginfo-3:2.1.29-12.module+el8.5.0+10790+91ddbebd.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: php
+  stream: '7.4'
+  version: '8050020210526053050'
+  context: 3e6e7e84
+  arch: x86_64
+  license:
+    content:
+    - BSD
+    - BSD and LGPLv3+
+    - PHP
+    - PHP and BSD
+    - PHP and LGPLv2 and OpenLDAP
+    - PHP and LGPLv2+
+    - PHP and Zend and BSD and MIT and ASL 1.0 and NCSA
+    - PHP and Zend and BSD and MIT and ASL 1.0 and NCSA and PostgreSQL
+    module:
+    - GPLv2+
+  summary: PHP scripting language
+  description: php 7.4 module
+  dependencies:
+  - buildrequires:
+      httpd:
+      - '2.4'
+      nginx:
+      - '1.14'
+      platform:
+      - el8.5.0
+    requires:
+      httpd:
+      - '2.4'
+      nginx: []
+      platform:
+      - el8
+  components:
+    rpms:
+      libzip:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: ZIP library
+        ref: stream-php-7.4-rhel-8.5.0
+      php:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Module API.
+        ref: stream-7.4-rhel-8.5.0
+      php-pear:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        rationale: Extension management
+        ref: stream-php-7.4-rhel-8.5.0
+      php-pecl-apcu:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: APCu extension
+        ref: stream-php-7.4-rhel-8.5.0
+      php-pecl-rrd:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: RRD extension
+        ref: stream-php-7.4-rhel-8.5.0
+      php-pecl-xdebug:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: Xdebug extension
+        ref: stream-php-7.4-rhel-8.5.0
+      php-pecl-zip:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: ZIP extension
+        ref: stream-php-7.4-rhel-8.5.0
+  api:
+    rpms:
+    - php-fpm
+  references:
+    documentation: http://php.net/
+    tracker: https://bugs.php.net/
+  profiles:
+    common:
+      rpms:
+      - php-cli
+      - php-common
+      - php-fpm
+      - php-json
+      - php-mbstring
+      - php-xml
+    devel:
+      rpms:
+      - libzip
+      - php-cli
+      - php-common
+      - php-devel
+      - php-fpm
+      - php-json
+      - php-mbstring
+      - php-pear
+      - php-pecl-zip
+      - php-process
+      - php-xml
+    minimal:
+      rpms:
+      - php-cli
+      - php-common
+  artifacts:
+    rpms:
+    - apcu-panel-0:5.1.18-1.module+el8.3.0+6678+b09f589e.noarch
+    - libzip-0:1.6.1-1.module+el8.3.0+6678+b09f589e.x86_64
+    - libzip-debuginfo-0:1.6.1-1.module+el8.3.0+6678+b09f589e.x86_64
+    - libzip-debugsource-0:1.6.1-1.module+el8.3.0+6678+b09f589e.x86_64
+    - libzip-devel-0:1.6.1-1.module+el8.3.0+6678+b09f589e.x86_64
+    - libzip-tools-0:1.6.1-1.module+el8.3.0+6678+b09f589e.x86_64
+    - libzip-tools-debuginfo-0:1.6.1-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-bcmath-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-bcmath-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-cli-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-cli-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-common-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-common-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-dba-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-dba-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-dbg-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-dbg-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-debugsource-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-devel-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-embedded-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-embedded-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-enchant-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-enchant-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-ffi-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-ffi-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-fpm-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-fpm-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-gd-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-gd-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-gmp-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-gmp-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-intl-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-intl-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-json-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-json-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-ldap-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-ldap-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-mbstring-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-mbstring-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-mysqlnd-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-mysqlnd-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-odbc-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-odbc-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-opcache-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-opcache-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-pdo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-pdo-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-pear-1:1.10.12-1.module+el8.3.0+6678+b09f589e.noarch
+    - php-pecl-apcu-0:5.1.18-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-apcu-debuginfo-0:5.1.18-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-apcu-debugsource-0:5.1.18-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-apcu-devel-0:5.1.18-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-rrd-0:2.0.1-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-rrd-debuginfo-0:2.0.1-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-rrd-debugsource-0:2.0.1-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-xdebug-0:2.9.5-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-xdebug-debuginfo-0:2.9.5-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-xdebug-debugsource-0:2.9.5-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-zip-0:1.18.2-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-zip-debuginfo-0:1.18.2-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-zip-debugsource-0:1.18.2-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pgsql-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-pgsql-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-process-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-process-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-snmp-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-snmp-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-soap-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-soap-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-xml-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-xml-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-xmlrpc-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+    - php-xmlrpc-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.x86_64
+...
+
