@@ -32599,3 +32599,90 @@ data:
     - python36-rpm-macros-0:3.6.8-38.module+el8.5.0+12207+5c5719bc.noarch
     - scipy-debugsource-0:1.0.0-21.module+el8.5.0+10916+41bd434d.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: go-toolset
+  stream: rhel8
+  version: '8050020210817155413'
+  context: 8aa62369
+  arch: x86_64
+  license:
+    content:
+    - BSD and Public Domain
+    - MIT
+    module:
+    - MIT
+  summary: Go
+  description: Go Tools and libraries
+  dependencies:
+  - buildrequires:
+      go-toolset:
+      - rhel8
+      platform:
+      - el8.5.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      delve:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        rationale: A debugger for the Go programming language
+        ref: stream-rhel-8-rhel-8.5.0
+      go-toolset:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Meta package for go-toolset providing scl enable scripts.
+        ref: stream-rhel-8-rhel-8.5.0
+      golang:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Package providing the Go compiler toolchain.
+        ref: stream-rhel-8-rhel-8.5.0
+  api:
+    rpms:
+    - golang
+  buildopts:
+    rpms:
+      whitelist:
+      - delve
+      - go-toolset
+      - go-toolset-1.10
+      - go-toolset-1.10-golang
+      - go-toolset-golang
+      - golang
+  profiles:
+    common:
+      rpms:
+      - go-toolset
+  artifacts:
+    rpms:
+    - golang-docs-0:1.16.7-1.module+el8.5.0+12246+1aac4e3f.noarch
+    - delve-debugsource-0:1.6.0-1.module+el8.5.0+10379+d6b83bd0.x86_64
+    - delve-0:1.6.0-1.module+el8.5.0+10379+d6b83bd0.x86_64
+    - golang-src-0:1.16.7-1.module+el8.5.0+12246+1aac4e3f.noarch
+    - golang-tests-0:1.16.7-1.module+el8.5.0+12246+1aac4e3f.noarch
+    - golang-misc-0:1.16.7-1.module+el8.5.0+12246+1aac4e3f.noarch
+    - golang-race-0:1.16.7-1.module+el8.5.0+12246+1aac4e3f.x86_64
+    - golang-bin-0:1.16.7-1.module+el8.5.0+12246+1aac4e3f.x86_64
+    - go-toolset-0:1.16.7-1.module+el8.5.0+12246+1aac4e3f.x86_64
+    - delve-debuginfo-0:1.6.0-1.module+el8.5.0+10379+d6b83bd0.x86_64
+    - golang-0:1.16.7-1.module+el8.5.0+12246+1aac4e3f.x86_64
+...
