@@ -32337,3 +32337,265 @@ data:
     - python38-wheel-wheel-0:0.33.6-6.module+el8.5.0+12205+a865257a.noarch
     - scipy-debugsource-0:1.3.1-4.module+el8.4.0+8888+89bc7e79.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: python36
+  stream: '3.6'
+  version: '8050020210811103506'
+  context: 982725ab
+  arch: x86_64
+  license:
+    content:
+    - ASL 2.0
+    - ASL 2.0 and MIT
+    - BSD
+    - BSD and Boost and Public Domain
+    - BSD and LGPLv2+
+    - LGPLv2+ and Public Domain
+    - MIT
+    - Public Domain and BSD and Python and GPLv3+
+    - Python
+    module:
+    - MIT
+  summary: Python programming language, version 3.6
+  description: 'This module gives users access to the internal Python 3.6 in RHEL8,
+    as
+
+    well as provides some additional Python packages the users might need.
+
+    In addition to these you can install any python3-* package available
+
+    in RHEL and use it with Python from this module.'
+  dependencies:
+  - buildrequires:
+      mongodb:
+      - '3.6'
+      platform:
+      - el8.5.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      python-PyMySQL:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '20'
+        rationale: Python adapter for the MySQL/MariaDB databases
+        ref: stream-0.10.1-python36-rhel-8.5.0
+      python-distro:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '20'
+        rationale: Linux Distribution - a Linux OS platform information API
+        ref: stream-1.4-rhel-8.5.0
+      python-docs:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '20'
+        rationale: Documentation for Python
+        ref: stream-3.6-rhel-8.5.0
+      python-docutils:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '20'
+        rationale: System for processing plaintext documentation
+        ref: stream-0.14-rhel-8.5.0
+      python-nose:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '20'
+        rationale: Discovery-based unit test extension for Python
+        ref: stream-1.3.7-rhel-8.5.0
+      python-pygments:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '20'
+        rationale: Syntax highlighting engine written in Python
+        ref: stream-2.2.0-rhel-8.5.0
+      python-pymongo:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '20'
+        rationale: Python driver for MongoDB
+        ref: stream-3.6.1-rhel-8.5.0
+      python-sqlalchemy:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '20'
+        rationale: Modular and flexible ORM library for python
+        ref: stream-1.3.2-rhel-8.5.0
+      python-virtualenv:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '30'
+        rationale: Tool to create isolated Python environments
+        ref: stream-15.1.0-rhel-8.5.0
+      python-wheel:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '20'
+        rationale: Built-package format for Python
+        ref: stream-0.30.0-rhel-8.5.0
+      python36:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        rationale: Contains the symlink to the platform-python interpreter. Also contains
+          python36-rpm-macros needed to build the remaining packages.
+        ref: stream-3.6-rhel-8.5.0
+      scipy:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '20'
+        rationale: Scientific Tools for Python
+        ref: stream-1.0.0-rhel-8.5.0
+  api:
+    rpms:
+    - python-sqlalchemy-doc
+    - python-virtualenv-doc
+    - python3-PyMySQL
+    - python3-bson
+    - python3-distro
+    - python3-docs
+    - python3-docutils
+    - python3-nose
+    - python3-pygments
+    - python3-pymongo
+    - python3-pymongo-gridfs
+    - python3-scipy
+    - python3-sqlalchemy
+    - python3-virtualenv
+    - python3-wheel
+    - python36
+    - python36-debug
+    - python36-devel
+    - python36-rpm-macros
+  buildopts:
+    rpms:
+      macros: '%_without_python2 1
+
+
+        # For packages depending on python36, so that they
+
+        # BuildRequire python36-devel/debug/rpm-macros instead of python3-*
+
+        #
+
+        # This won''t be necessary for python37 and later. There we can
+
+        # set %{python3_pkgversion}, because all packages will need to
+
+        # have the pythonXY prefix. Whereas for Python 3.6 the packages
+
+        # are split between non-modular RHEL and the python36 module,
+
+        # and so it was easier and less confusing to keep the prefix at
+
+        # python3- except for the devel/debug/rpm/macros packages.
+
+        %_with_python36_module 1
+
+        '
+  references:
+    community: https://www.python.org/
+    documentation: https://docs.python.org/3.6/
+  profiles:
+    build:
+      rpms:
+      - python36
+      - python36-devel
+      - python36-rpm-macros
+    common:
+      rpms:
+      - python36
+  filter:
+    rpms:
+    - python2-PyMySQL
+    - python2-docutils
+    - python2-nose
+    - python2-pygments
+    - python2-scipy
+    - python2-sqlalchemy
+    - python2-virtualenv
+  artifacts:
+    rpms:
+    - python-nose-docs-0:1.3.7-31.module+el8.5.0+12207+5c5719bc.noarch
+    - python-pymongo-debuginfo-0:3.7.0-1.module+el8.4.0+9670+1849b5f9.x86_64
+    - python-pymongo-debugsource-0:3.7.0-1.module+el8.4.0+9670+1849b5f9.x86_64
+    - python-pymongo-doc-0:3.7.0-1.module+el8.4.0+9670+1849b5f9.noarch
+    - python-sqlalchemy-doc-0:1.3.2-2.module+el8.3.0+6646+6b4b10ec.noarch
+    - python-virtualenv-doc-0:15.1.0-21.module+el8.5.0+12207+5c5719bc.noarch
+    - python3-PyMySQL-0:0.10.1-2.module+el8.4.0+9657+a4b6a102.noarch
+    - python3-bson-0:3.7.0-1.module+el8.4.0+9670+1849b5f9.x86_64
+    - python3-bson-debuginfo-0:3.7.0-1.module+el8.4.0+9670+1849b5f9.x86_64
+    - python3-distro-0:1.4.0-2.module+el8.1.0+3334+5cb623d7.noarch
+    - python3-docs-0:3.6.7-2.module+el8.1.0+3334+5cb623d7.noarch
+    - python3-docutils-0:0.14-12.module+el8.1.0+3334+5cb623d7.noarch
+    - python3-nose-0:1.3.7-31.module+el8.5.0+12207+5c5719bc.noarch
+    - python3-pygments-0:2.2.0-22.module+el8.5.0+10789+e4939b94.noarch
+    - python3-pymongo-0:3.7.0-1.module+el8.4.0+9670+1849b5f9.x86_64
+    - python3-pymongo-debuginfo-0:3.7.0-1.module+el8.4.0+9670+1849b5f9.x86_64
+    - python3-pymongo-gridfs-0:3.7.0-1.module+el8.4.0+9670+1849b5f9.x86_64
+    - python3-scipy-0:1.0.0-21.module+el8.5.0+10916+41bd434d.x86_64
+    - python3-scipy-debuginfo-0:1.0.0-21.module+el8.5.0+10916+41bd434d.x86_64
+    - python3-sqlalchemy-0:1.3.2-2.module+el8.3.0+6646+6b4b10ec.x86_64
+    - python3-virtualenv-0:15.1.0-21.module+el8.5.0+12207+5c5719bc.noarch
+    - python3-wheel-1:0.31.1-3.module+el8.5.0+12207+5c5719bc.noarch
+    - python3-wheel-wheel-1:0.31.1-3.module+el8.5.0+12207+5c5719bc.noarch
+    - python36-0:3.6.8-38.module+el8.5.0+12207+5c5719bc.x86_64
+    - python36-debug-0:3.6.8-38.module+el8.5.0+12207+5c5719bc.x86_64
+    - python36-devel-0:3.6.8-38.module+el8.5.0+12207+5c5719bc.x86_64
+    - python36-rpm-macros-0:3.6.8-38.module+el8.5.0+12207+5c5719bc.noarch
+    - scipy-debugsource-0:1.0.0-21.module+el8.5.0+10916+41bd434d.x86_64
+...
