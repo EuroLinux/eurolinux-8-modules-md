@@ -32686,3 +32686,96 @@ data:
     - delve-debuginfo-0:1.6.0-1.module+el8.5.0+10379+d6b83bd0.x86_64
     - golang-0:1.16.7-1.module+el8.5.0+12246+1aac4e3f.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: rust-toolset
+  stream: rhel8
+  version: '8050020211027231136'
+  context: 5c15747c
+  arch: x86_64
+  license:
+    content:
+    - (ASL 2.0 or MIT) and (BSD and MIT)
+    - ASL 2.0 or MIT
+    module:
+    - MIT
+  summary: Rust
+  description: Rust Toolset
+  dependencies:
+  - buildrequires:
+      llvm-toolset:
+      - rhel8
+      platform:
+      - el8.5.0.z
+      rust-toolset:
+      - rhel8
+    requires:
+      llvm-toolset:
+      - rhel8
+      platform:
+      - el8
+  components:
+    rpms:
+      rust:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Rust compiler and tools
+        ref: stream-rhel-8-rhel-8.5.0
+      rust-toolset:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Meta package for rust-toolset.
+        ref: stream-rhel-8-rhel-8.5.0
+  api:
+    rpms:
+    - cargo
+    - cargo-doc
+    - clippy
+    - rls
+    - rust
+    - rust-analysis
+    - rust-doc
+    - rust-gdb
+    - rust-lldb
+    - rust-src
+    - rust-std-static
+    - rust-toolset
+    - rustfmt
+  profiles:
+    common:
+      rpms:
+      - rust-toolset
+  artifacts:
+    rpms:
+    - clippy-debuginfo-0:1.54.0-3.module+el8.5.0+13074+d655d86c.x86_64
+    - cargo-debuginfo-0:1.54.0-3.module+el8.5.0+13074+d655d86c.x86_64
+    - rust-analysis-0:1.54.0-3.module+el8.5.0+13074+d655d86c.x86_64
+    - rls-debuginfo-0:1.54.0-3.module+el8.5.0+13074+d655d86c.x86_64
+    - rust-gdb-0:1.54.0-3.module+el8.5.0+13074+d655d86c.noarch
+    - rustfmt-debuginfo-0:1.54.0-3.module+el8.5.0+13074+d655d86c.x86_64
+    - rls-0:1.54.0-3.module+el8.5.0+13074+d655d86c.x86_64
+    - rust-debugger-common-0:1.54.0-3.module+el8.5.0+13074+d655d86c.noarch
+    - rust-toolset-0:1.54.0-1.module+el8.5.0+12195+effd8a03.x86_64
+    - clippy-0:1.54.0-3.module+el8.5.0+13074+d655d86c.x86_64
+    - rust-lldb-0:1.54.0-3.module+el8.5.0+13074+d655d86c.noarch
+    - cargo-doc-0:1.54.0-3.module+el8.5.0+13074+d655d86c.noarch
+    - rust-src-0:1.54.0-3.module+el8.5.0+13074+d655d86c.noarch
+    - rust-0:1.54.0-3.module+el8.5.0+13074+d655d86c.x86_64
+    - rust-std-static-wasm32-unknown-unknown-0:1.54.0-3.module+el8.5.0+13074+d655d86c.x86_64
+    - cargo-0:1.54.0-3.module+el8.5.0+13074+d655d86c.x86_64
+    - rust-debuginfo-0:1.54.0-3.module+el8.5.0+13074+d655d86c.x86_64
+    - rust-std-static-0:1.54.0-3.module+el8.5.0+13074+d655d86c.x86_64
+    - rust-doc-0:1.54.0-3.module+el8.5.0+13074+d655d86c.x86_64
+    - rustfmt-0:1.54.0-3.module+el8.5.0+13074+d655d86c.x86_64
+    - rust-debugsource-0:1.54.0-3.module+el8.5.0+13074+d655d86c.x86_64
+...
