@@ -30844,3 +30844,864 @@ data:
     - squid-debugsource-7:4.15-1.module+el8.5.0+11469+24c223d9.x86_64
     - squid-debuginfo-7:4.15-1.module+el8.5.0+11469+24c223d9.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: pki-deps
+  stream: '10.6'
+  version: '8050020210611200146'
+  context: b4937e53
+  arch: x86_64
+  license:
+    content:
+    - ASL 1.1 and ASL 2.0
+    - ASL 2.0
+    - ASL 2.0 and (ASL 2.0 or LGPLv2+)
+    - ASL 2.0 and LGPLv2+
+    - ASL 2.0 and W3C
+    - ASL 2.0 and W3C and Public Domain
+    - BSD
+    - CDDL or GPLv2 with exception
+    - CDDL-1.0 or GPLv2 with exceptions
+    - CDDL-1.1 and GPLv2 with exceptions
+    - CDDL-1.1 or GPLv2
+    - CDDL-1.1 or GPLv2 with exceptions
+    - MIT and ASL 2.0
+    - MPLv1.1 or LGPLv2+ or ASL 2.0
+    - MPLv2.0 or GPLv2+ or LGPLv2+
+    module:
+    - MIT
+  summary: PKI Dependencies module for PKI 10.6 or later
+  description: A module to contain dependencies for PKI version 10.6 or later.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.5.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      apache-commons-collections:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Apache Commons Collections packages
+        ref: stream-javapackages-tools-201801-rhel-8.5.0
+      apache-commons-lang:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Apache Commons Lang packages
+        ref: stream-javapackages-tools-201801-rhel-8.5.0
+      apache-commons-net:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Apache Commons Net packages
+        ref: stream-javapackages-tools-201801-rhel-8.5.0
+      bea-stax:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: BEA StAX packages
+        ref: stream-javapackages-tools-201801-rhel-8.5.0
+      fasterxml-oss-parent:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: FasterXML parent pom BuildRequired by jackson-parent.
+        ref: stream-rhel-8.1.0-rhel-8.5.0
+      glassfish-fastinfoset:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '4'
+        rationale: Fast XML Information Set package Requires xmlstreambuffer, xsom.
+        ref: stream-pki-10.6-rhel-8.5.0
+      glassfish-jax-rs-api:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: GlassFish JAX-RS API packages
+        ref: stream-pki-10.6-rhel-8.5.0
+      glassfish-jaxb:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '5'
+        rationale: JAXB Reference Implementation BuildRequires istack-commons. Requires
+          glassfish-fastinfoset, glassfish-jaxb-api.
+        ref: stream-pki-10.6-rhel-8.5.0
+      glassfish-jaxb-api:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: GlassFish JAXB API packages
+        ref: stream-javapackages-tools-201801-rhel-8.5.0
+      jackson-annotations:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '13'
+        rationale: Jackson Annotations packages
+        ref: stream-pki-10.6-rhel-8.5.0
+      jackson-bom:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '11'
+        rationale: Jackson Bill-of-Materials POM packages
+        ref: stream-pki-10.6-rhel-8.5.0
+      jackson-core:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '12'
+        rationale: Jackson Core packages
+        ref: stream-pki-10.6-rhel-8.5.0
+      jackson-databind:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '14'
+        rationale: Jackson Data-binding packages
+        ref: stream-pki-10.6-rhel-8.5.0
+      jackson-jaxrs-providers:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '16'
+        rationale: Jackson JAX-RS Providers packages
+        ref: stream-pki-10.6-rhel-8.5.0
+      jackson-module-jaxb-annotations:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '15'
+        rationale: Jackson JAXB Annotations packages
+        ref: stream-pki-10.6-rhel-8.5.0
+      jackson-parent:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        rationale: Jackson Parent POM packages BuildRequires fasterxml-oss-parent.
+        ref: stream-pki-10.6-rhel-8.5.0
+      jakarta-commons-httpclient:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Jakarta Commons HTTPClient packages
+        ref: stream-javapackages-tools-201801-rhel-8.5.0
+      javassist:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Javassist packages
+        ref: stream-javapackages-tools-201801-rhel-8.5.0
+      msv:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Multi-Schema Validator Requires relaxngDatatype.
+        ref: stream-javapackages-tools-201801-rhel-8.5.0
+      pki-servlet-engine:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: PKI Servlet Engine packages
+        ref: stream-pki-10.6-rhel-8.5.0
+      python-nss:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Python binding for NSS Provides python-nss for pki-base-java.
+        ref: stream-pki-10.6-rhel-8.5.0
+      relaxngDatatype:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: RELAX NG packages
+        ref: stream-javapackages-tools-201801-rhel-8.5.0
+      relaxngcc:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        rationale: RELAX NG Compiler Compiler Requires msv.
+        ref: stream-rhel-8.0.0-rhel-8.5.0
+      resteasy:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '17'
+        rationale: RESTEasy packages
+        ref: stream-pki-10.6-rhel-8.5.0
+      slf4j:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Simple Logging Facade for Java Provides slf4j and slf4j-jdk14 for
+          pki-base-java.
+        ref: stream-maven-3.5-rhel-8.5.0
+      stax-ex:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        rationale: StAX API extensions Requires bea-stax.
+        ref: stream-pki-10.6-rhel-8.5.0
+      velocity:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Velocity packages
+        ref: stream-javapackages-tools-201801-rhel-8.5.0
+      xalan-j2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Xalan packages Provides xalan-j2 for pki-base-java.
+        ref: stream-javapackages-tools-201801-rhel-8.5.0
+      xerces-j2:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Xerces packages
+        ref: stream-javapackages-tools-201801-rhel-8.5.0
+      xml-commons-apis:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: XML Commons APIs packages
+        ref: stream-javapackages-tools-201801-rhel-8.5.0
+      xml-commons-resolver:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: XML Commons Resolver packages
+        ref: stream-javapackages-tools-201801-rhel-8.5.0
+      xml-stylebook:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: XML Stylebook packages
+        ref: stream-javapackages-tools-201801-rhel-8.5.0
+      xmlstreambuffer:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: XML Stream Buffer package Requires stax-ex.
+        ref: stream-pki-10.6-rhel-8.5.0
+      xsom:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '3'
+        rationale: XML Schema Object Model (XSOM) Requires relaxngcc.
+        ref: stream-rhel-8.0.0-rhel-8.5.0
+  buildopts:
+    rpms:
+      macros: '%_with_xmvn_javadoc 1
+
+        %_without_asciidoc 1
+
+        %_without_avalon 1
+
+        %_without_bouncycastle 1
+
+        %_without_cython 1
+
+        %_without_dafsa 1
+
+        %_without_desktop 1
+
+        %_without_doxygen 1
+
+        %_without_dtd 1
+
+        %_without_eclipse 1
+
+        %_without_ehcache 1
+
+        %_without_emacs 1
+
+        %_without_equinox 1
+
+        %_without_fop 1
+
+        %_without_ftp 1
+
+        %_without_gradle 1
+
+        %_without_groovy 1
+
+        %_without_hadoop 1
+
+        %_without_hsqldb 1
+
+        %_without_itext 1
+
+        %_without_jackson 1
+
+        %_without_jmh 1
+
+        %_without_jna 1
+
+        %_without_jpa 1
+
+        %_without_junit5 1
+
+        %_without_logback 1
+
+        %_without_markdown 1
+
+        %_without_memcached 1
+
+        %_without_memoryfilesystem 1
+
+        %_without_obr 1
+
+        %_without_python 1
+
+        %_without_reporting 1
+
+        %_without_scm 1
+
+        %_without_snappy 1
+
+        %_without_spring 1
+
+        %_without_ssh 1
+
+        %_without_testlib 1
+
+        '
+  references:
+    community: http://www.dogtagpki.org
+    documentation: http://www.dogtagpki.org
+    tracker: https://pagure.io/dogtagpki/issues
+  filter:
+    rpms:
+    - apache-commons-collections-javadoc
+    - apache-commons-collections-testframework
+    - apache-commons-lang-javadoc
+    - apache-commons-net-javadoc
+    - bea-stax
+    - bea-stax-javadoc
+    - fasterxml-oss-parent
+    - glassfish-fastinfoset-javadoc
+    - glassfish-jax-rs-api
+    - glassfish-jax-rs-api-javadoc
+    - glassfish-jaxb
+    - glassfish-jaxb-api-javadoc
+    - glassfish-jaxb-bom
+    - glassfish-jaxb-bom-ext
+    - glassfish-jaxb-codemodel
+    - glassfish-jaxb-codemodel-annotation-compiler
+    - glassfish-jaxb-codemodel-parent
+    - glassfish-jaxb-external-parent
+    - glassfish-jaxb-parent
+    - glassfish-jaxb-rngom
+    - glassfish-jaxb-runtime-parent
+    - glassfish-jaxb-txw-parent
+    - jackson-annotations-javadoc
+    - jackson-bom
+    - jackson-core-javadoc
+    - jackson-databind-javadoc
+    - jackson-jaxrs-providers-datatypes
+    - jackson-jaxrs-providers-javadoc
+    - jackson-jaxrs-providers-parent
+    - jackson-module-jaxb-annotations-javadoc
+    - jackson-parent
+    - jakarta-commons-httpclient-demo
+    - jakarta-commons-httpclient-javadoc
+    - jakarta-commons-httpclient-manual
+    - jcl-over-slf4j
+    - jul-to-slf4j
+    - log4j-over-slf4j
+    - msv-demo
+    - msv-javadoc
+    - msv-manual
+    - msv-msv
+    - msv-rngconv
+    - msv-xmlgen
+    - msv-xsdlib
+    - relaxngDatatype-javadoc
+    - relaxngcc
+    - relaxngcc-javadoc
+    - resteasy-javadoc
+    - slf4j-ext
+    - slf4j-javadoc
+    - slf4j-jcl
+    - slf4j-log4j12
+    - slf4j-manual
+    - slf4j-sources
+    - stax-ex-javadoc
+    - velocity-demo
+    - velocity-javadoc
+    - velocity-manual
+    - xalan-j2-demo
+    - xalan-j2-javadoc
+    - xalan-j2-manual
+    - xalan-j2-xsltc
+    - xerces-j2-demo
+    - xerces-j2-javadoc
+    - xml-commons-apis-javadoc
+    - xml-commons-apis-manual
+    - xml-commons-resolver-javadoc
+    - xml-stylebook
+    - xml-stylebook-demo
+    - xml-stylebook-javadoc
+    - xmlstreambuffer-javadoc
+    - xsom-javadoc
+  artifacts:
+    rpms:
+    - apache-commons-collections-0:3.2.2-10.module+el8.1.0+3366+6dfb954c.noarch
+    - apache-commons-collections-javadoc-0:3.2.2-10.module+el8.1.0+3366+6dfb954c.noarch
+    - apache-commons-collections-testframework-0:3.2.2-10.module+el8.1.0+3366+6dfb954c.noarch
+    - apache-commons-lang-0:2.6-21.module+el8.1.0+3366+6dfb954c.noarch
+    - apache-commons-lang-javadoc-0:2.6-21.module+el8.1.0+3366+6dfb954c.noarch
+    - apache-commons-net-0:3.6-3.module+el8.3.0+6805+72837426.noarch
+    - apache-commons-net-javadoc-0:3.6-3.module+el8.3.0+6805+72837426.noarch
+    - bea-stax-0:1.2.0-16.module+el8.1.0+3366+6dfb954c.noarch
+    - bea-stax-api-0:1.2.0-16.module+el8.1.0+3366+6dfb954c.noarch
+    - bea-stax-javadoc-0:1.2.0-16.module+el8.1.0+3366+6dfb954c.noarch
+    - fasterxml-oss-parent-0:26-6.module+el8.3.0+6805+72837426.noarch
+    - glassfish-fastinfoset-0:1.2.13-9.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-fastinfoset-javadoc-0:1.2.13-9.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jax-rs-api-0:2.0.1-6.module+el8.3.0+6805+72837426.noarch
+    - glassfish-jax-rs-api-javadoc-0:2.0.1-6.module+el8.3.0+6805+72837426.noarch
+    - glassfish-jaxb-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-api-0:2.2.12-8.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-api-javadoc-0:2.2.12-8.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-bom-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-bom-ext-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-codemodel-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-codemodel-annotation-compiler-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-codemodel-parent-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-core-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-external-parent-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-parent-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-rngom-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-runtime-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-runtime-parent-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-txw-parent-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - glassfish-jaxb-txw2-0:2.2.11-11.module+el8.1.0+3366+6dfb954c.noarch
+    - jackson-annotations-0:2.10.0-1.module+el8.2.0+5059+3eb3af25.noarch
+    - jackson-annotations-javadoc-0:2.10.0-1.module+el8.2.0+5059+3eb3af25.noarch
+    - jackson-bom-0:2.10.0-1.module+el8.3.0+6805+72837426.noarch
+    - jackson-core-0:2.10.0-1.module+el8.2.0+5059+3eb3af25.noarch
+    - jackson-core-javadoc-0:2.10.0-1.module+el8.2.0+5059+3eb3af25.noarch
+    - jackson-databind-0:2.10.0-1.module+el8.2.0+5059+3eb3af25.noarch
+    - jackson-databind-javadoc-0:2.10.0-1.module+el8.2.0+5059+3eb3af25.noarch
+    - jackson-jaxrs-json-provider-0:2.9.9-1.module+el8.1.0+3832+9784644d.noarch
+    - jackson-jaxrs-providers-0:2.9.9-1.module+el8.1.0+3832+9784644d.noarch
+    - jackson-jaxrs-providers-datatypes-0:2.9.9-1.module+el8.1.0+3832+9784644d.noarch
+    - jackson-jaxrs-providers-javadoc-0:2.9.9-1.module+el8.1.0+3832+9784644d.noarch
+    - jackson-jaxrs-providers-parent-0:2.9.9-1.module+el8.1.0+3832+9784644d.noarch
+    - jackson-module-jaxb-annotations-0:2.7.6-4.module+el8.1.0+3366+6dfb954c.noarch
+    - jackson-module-jaxb-annotations-javadoc-0:2.7.6-4.module+el8.1.0+3366+6dfb954c.noarch
+    - jackson-parent-0:2.10-1.module+el8.3.0+6805+72837426.noarch
+    - jakarta-commons-httpclient-1:3.1-28.module+el8.1.0+3366+6dfb954c.noarch
+    - jakarta-commons-httpclient-demo-1:3.1-28.module+el8.1.0+3366+6dfb954c.noarch
+    - jakarta-commons-httpclient-javadoc-1:3.1-28.module+el8.1.0+3366+6dfb954c.noarch
+    - jakarta-commons-httpclient-manual-1:3.1-28.module+el8.1.0+3366+6dfb954c.noarch
+    - javassist-0:3.18.1-8.module+el8.1.0+3366+6dfb954c.noarch
+    - javassist-javadoc-0:3.18.1-8.module+el8.1.0+3366+6dfb954c.noarch
+    - jcl-over-slf4j-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - jul-to-slf4j-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - log4j-over-slf4j-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - msv-demo-1:2013.6.1-11.module+el8.3.0+6805+72837426.noarch
+    - msv-javadoc-1:2013.6.1-11.module+el8.3.0+6805+72837426.noarch
+    - msv-manual-1:2013.6.1-11.module+el8.3.0+6805+72837426.noarch
+    - msv-msv-1:2013.6.1-11.module+el8.3.0+6805+72837426.noarch
+    - msv-rngconv-1:2013.6.1-11.module+el8.3.0+6805+72837426.noarch
+    - msv-xmlgen-1:2013.6.1-11.module+el8.3.0+6805+72837426.noarch
+    - msv-xsdlib-1:2013.6.1-11.module+el8.3.0+6805+72837426.noarch
+    - pki-servlet-4.0-api-1:9.0.30-3.module+el8.5.0+11388+9e95fe00.noarch
+    - pki-servlet-engine-1:9.0.30-3.module+el8.5.0+11388+9e95fe00.noarch
+    - python-nss-debugsource-0:1.0.1-10.module+el8.1.0+3366+6dfb954c.x86_64
+    - python-nss-doc-0:1.0.1-10.module+el8.1.0+3366+6dfb954c.x86_64
+    - python3-nss-0:1.0.1-10.module+el8.1.0+3366+6dfb954c.x86_64
+    - python3-nss-debuginfo-0:1.0.1-10.module+el8.1.0+3366+6dfb954c.x86_64
+    - relaxngDatatype-0:2011.1-7.module+el8.1.0+3366+6dfb954c.noarch
+    - relaxngDatatype-javadoc-0:2011.1-7.module+el8.1.0+3366+6dfb954c.noarch
+    - relaxngcc-0:1.12-14.module+el8.3.0+6805+72837426.noarch
+    - relaxngcc-javadoc-0:1.12-14.module+el8.3.0+6805+72837426.noarch
+    - resteasy-0:3.0.26-6.module+el8.4.0+8891+bb8828ef.noarch
+    - resteasy-javadoc-0:3.0.26-6.module+el8.4.0+8891+bb8828ef.noarch
+    - slf4j-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - slf4j-ext-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - slf4j-javadoc-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - slf4j-jcl-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - slf4j-jdk14-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - slf4j-log4j12-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - slf4j-manual-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - slf4j-sources-0:1.7.25-4.module+el8.1.0+3366+6dfb954c.noarch
+    - stax-ex-0:1.7.7-8.module+el8.2.0+5723+4574fbff.noarch
+    - stax-ex-javadoc-0:1.7.7-8.module+el8.2.0+5723+4574fbff.noarch
+    - velocity-0:1.7-24.module+el8.1.0+3366+6dfb954c.noarch
+    - velocity-demo-0:1.7-24.module+el8.1.0+3366+6dfb954c.noarch
+    - velocity-javadoc-0:1.7-24.module+el8.1.0+3366+6dfb954c.noarch
+    - velocity-manual-0:1.7-24.module+el8.1.0+3366+6dfb954c.noarch
+    - xalan-j2-0:2.7.1-38.module+el8.1.0+3366+6dfb954c.noarch
+    - xalan-j2-demo-0:2.7.1-38.module+el8.1.0+3366+6dfb954c.noarch
+    - xalan-j2-javadoc-0:2.7.1-38.module+el8.1.0+3366+6dfb954c.noarch
+    - xalan-j2-manual-0:2.7.1-38.module+el8.1.0+3366+6dfb954c.noarch
+    - xalan-j2-xsltc-0:2.7.1-38.module+el8.1.0+3366+6dfb954c.noarch
+    - xerces-j2-0:2.11.0-34.module+el8.1.0+3366+6dfb954c.noarch
+    - xerces-j2-demo-0:2.11.0-34.module+el8.1.0+3366+6dfb954c.noarch
+    - xerces-j2-javadoc-0:2.11.0-34.module+el8.1.0+3366+6dfb954c.noarch
+    - xml-commons-apis-0:1.4.01-25.module+el8.1.0+3366+6dfb954c.noarch
+    - xml-commons-apis-javadoc-0:1.4.01-25.module+el8.1.0+3366+6dfb954c.noarch
+    - xml-commons-apis-manual-0:1.4.01-25.module+el8.1.0+3366+6dfb954c.noarch
+    - xml-commons-resolver-0:1.2-26.module+el8.1.0+3366+6dfb954c.noarch
+    - xml-commons-resolver-javadoc-0:1.2-26.module+el8.1.0+3366+6dfb954c.noarch
+    - xml-stylebook-0:1.0-0.25.b3_xalan2.svn313293.module+el8.3.0+6805+72837426.noarch
+    - xml-stylebook-demo-0:1.0-0.25.b3_xalan2.svn313293.module+el8.3.0+6805+72837426.noarch
+    - xml-stylebook-javadoc-0:1.0-0.25.b3_xalan2.svn313293.module+el8.3.0+6805+72837426.noarch
+    - xmlstreambuffer-0:1.5.4-8.module+el8.2.0+5723+4574fbff.noarch
+    - xmlstreambuffer-javadoc-0:1.5.4-8.module+el8.2.0+5723+4574fbff.noarch
+    - xsom-0:0-19.20110809svn.module+el8.1.0+3366+6dfb954c.noarch
+    - xsom-javadoc-0:0-19.20110809svn.module+el8.1.0+3366+6dfb954c.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: llvm-toolset
+  stream: rhel8
+  version: '8050020210917014158'
+  context: b4937e53
+  arch: x86_64
+  license:
+    content:
+    - NCSA
+    - NCSA and MIT
+    - NCSA or MIT
+    module:
+    - MIT
+  summary: LLVM
+  description: LLVM Tools and libraries
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.5.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      clang:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        multilib:
+        - x86_64
+        rationale: clang tools and libraries
+        ref: stream-rhel-8-rhel-8.5.0
+      compiler-rt:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        multilib:
+        - x86_64
+        rationale: LLVM compiler intrinsic and sanitizer libraries
+        ref: stream-rhel-8-rhel-8.5.0
+      libomp:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        multilib:
+        - x86_64
+        rationale: LLVM OpenMP runtime
+        ref: stream-rhel-8-rhel-8.5.0
+      lld:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        multilib:
+        - x86_64
+        rationale: LLVM linker
+        ref: stream-rhel-8-rhel-8.5.0
+      lldb:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        multilib:
+        - x86_64
+        rationale: lldb debugger
+        ref: stream-rhel-8-rhel-8.5.0
+      llvm:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        multilib:
+        - x86_64
+        rationale: LLVM tools and libraries
+        ref: stream-rhel-8-rhel-8.5.0
+      llvm-toolset:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        multilib:
+        - x86_64
+        rationale: Meta package for llvm-toolset providing scl enable scripts.
+        ref: stream-rhel-8-rhel-8.5.0
+      python-lit:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Lit test runner for LLVM
+        ref: stream-rhel-8-rhel-8.5.0
+  api:
+    rpms:
+    - clang
+    - clang-analyzer
+    - clang-devel
+    - clang-libs
+    - clang-tools-extra
+    - git-clang-format
+    - lld
+    - lld-libs
+    - lldb
+    - lldb-devel
+    - llvm
+    - llvm-devel
+    - llvm-libs
+  profiles:
+    common:
+      rpms:
+      - llvm-toolset
+  artifacts:
+    rpms:
+    - clang-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.i686
+    - clang-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.x86_64
+    - clang-analyzer-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.noarch
+    - clang-debuginfo-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.i686
+    - clang-debuginfo-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.x86_64
+    - clang-debugsource-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.i686
+    - clang-debugsource-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.x86_64
+    - clang-devel-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.i686
+    - clang-devel-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.x86_64
+    - clang-libs-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.i686
+    - clang-libs-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.x86_64
+    - clang-libs-debuginfo-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.i686
+    - clang-libs-debuginfo-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.x86_64
+    - clang-resource-filesystem-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.i686
+    - clang-resource-filesystem-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.x86_64
+    - clang-tools-extra-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.i686
+    - clang-tools-extra-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.x86_64
+    - clang-tools-extra-debuginfo-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.i686
+    - clang-tools-extra-debuginfo-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.x86_64
+    - compiler-rt-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - compiler-rt-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - compiler-rt-debuginfo-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - compiler-rt-debuginfo-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - compiler-rt-debugsource-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - compiler-rt-debugsource-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - git-clang-format-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.i686
+    - git-clang-format-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.x86_64
+    - libomp-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - libomp-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - libomp-debuginfo-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - libomp-debuginfo-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - libomp-debugsource-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - libomp-debugsource-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - libomp-devel-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - libomp-devel-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - libomp-test-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - libomp-test-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - libomp-test-debuginfo-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - libomp-test-debuginfo-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - lld-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - lld-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - lld-debuginfo-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - lld-debuginfo-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - lld-debugsource-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - lld-debugsource-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - lld-devel-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - lld-devel-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - lld-libs-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - lld-libs-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - lld-libs-debuginfo-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - lld-libs-debuginfo-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - lld-test-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - lld-test-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - lld-test-debuginfo-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - lld-test-debuginfo-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - lldb-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - lldb-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - lldb-debuginfo-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - lldb-debuginfo-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - lldb-debugsource-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - lldb-debugsource-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - lldb-devel-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - lldb-devel-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - llvm-0:12.0.1-2.module+el8.5.0+12488+254d2a07.i686
+    - llvm-0:12.0.1-2.module+el8.5.0+12488+254d2a07.x86_64
+    - llvm-debuginfo-0:12.0.1-2.module+el8.5.0+12488+254d2a07.i686
+    - llvm-debuginfo-0:12.0.1-2.module+el8.5.0+12488+254d2a07.x86_64
+    - llvm-debugsource-0:12.0.1-2.module+el8.5.0+12488+254d2a07.i686
+    - llvm-debugsource-0:12.0.1-2.module+el8.5.0+12488+254d2a07.x86_64
+    - llvm-devel-0:12.0.1-2.module+el8.5.0+12488+254d2a07.i686
+    - llvm-devel-0:12.0.1-2.module+el8.5.0+12488+254d2a07.x86_64
+    - llvm-devel-debuginfo-0:12.0.1-2.module+el8.5.0+12488+254d2a07.i686
+    - llvm-devel-debuginfo-0:12.0.1-2.module+el8.5.0+12488+254d2a07.x86_64
+    - llvm-doc-0:12.0.1-2.module+el8.5.0+12488+254d2a07.noarch
+    - llvm-googletest-0:12.0.1-2.module+el8.5.0+12488+254d2a07.i686
+    - llvm-googletest-0:12.0.1-2.module+el8.5.0+12488+254d2a07.x86_64
+    - llvm-libs-0:12.0.1-2.module+el8.5.0+12488+254d2a07.i686
+    - llvm-libs-0:12.0.1-2.module+el8.5.0+12488+254d2a07.x86_64
+    - llvm-libs-debuginfo-0:12.0.1-2.module+el8.5.0+12488+254d2a07.i686
+    - llvm-libs-debuginfo-0:12.0.1-2.module+el8.5.0+12488+254d2a07.x86_64
+    - llvm-static-0:12.0.1-2.module+el8.5.0+12488+254d2a07.i686
+    - llvm-static-0:12.0.1-2.module+el8.5.0+12488+254d2a07.x86_64
+    - llvm-test-0:12.0.1-2.module+el8.5.0+12488+254d2a07.i686
+    - llvm-test-0:12.0.1-2.module+el8.5.0+12488+254d2a07.x86_64
+    - llvm-test-debuginfo-0:12.0.1-2.module+el8.5.0+12488+254d2a07.i686
+    - llvm-test-debuginfo-0:12.0.1-2.module+el8.5.0+12488+254d2a07.x86_64
+    - llvm-toolset-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - llvm-toolset-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+    - python3-clang-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.i686
+    - python3-clang-0:12.0.1-2.module+el8.5.0+12651+6a7729ff.x86_64
+    - python3-lit-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.noarch
+    - python3-lldb-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.i686
+    - python3-lldb-0:12.0.1-1.module+el8.5.0+11871+08d0eab5.x86_64
+...
