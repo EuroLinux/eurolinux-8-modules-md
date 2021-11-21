@@ -4620,7 +4620,7 @@ data:
   stream: rhel8
   version: '8050020210817185544'
   context: f73640c0
-  arch: x86_64
+  arch: i686
   license:
     content:
     - (ASL 2.0 or MIT) and (BSD and MIT)
