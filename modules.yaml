@@ -4612,3 +4612,96 @@ data:
     - rubygem-power_assert-0:1.2.0-140.module+el8.5.0+12856+0c654ebc.noarch
     - rubygem-rbs-0:1.0.4-140.module+el8.5.0+12856+0c654ebc.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: rust-toolset
+  stream: rhel8
+  version: '8050020210817185544'
+  context: f73640c0
+  arch: x86_64
+  license:
+    content:
+    - (ASL 2.0 or MIT) and (BSD and MIT)
+    - ASL 2.0 or MIT
+    module:
+    - MIT
+  summary: Rust
+  description: Rust Toolset
+  dependencies:
+  - buildrequires:
+      llvm-toolset:
+      - rhel8
+      platform:
+      - el8.5.0
+      rust-toolset:
+      - rhel8
+    requires:
+      llvm-toolset:
+      - rhel8
+      platform:
+      - el8
+  components:
+    rpms:
+      rust:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Rust compiler and tools
+        ref: stream-rhel-8-rhel-8.5.0
+      rust-toolset:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Meta package for rust-toolset.
+        ref: stream-rhel-8-rhel-8.5.0
+  api:
+    rpms:
+    - cargo
+    - cargo-doc
+    - clippy
+    - rls
+    - rust
+    - rust-analysis
+    - rust-doc
+    - rust-gdb
+    - rust-lldb
+    - rust-src
+    - rust-std-static
+    - rust-toolset
+    - rustfmt
+  profiles:
+    common:
+      rpms:
+      - rust-toolset
+  artifacts:
+    rpms:
+    - cargo-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.i686
+    - cargo-debuginfo-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.i686
+    - cargo-doc-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.noarch
+    - clippy-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.i686
+    - clippy-debuginfo-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.i686
+    - rls-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.i686
+    - rls-debuginfo-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.i686
+    - rust-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.i686
+    - rust-analysis-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.i686
+    - rust-debugger-common-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.noarch
+    - rust-debuginfo-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.i686
+    - rust-debugsource-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.i686
+    - rust-doc-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.i686
+    - rust-gdb-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.noarch
+    - rust-lldb-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.noarch
+    - rust-src-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.noarch
+    - rust-std-static-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.i686
+    - rust-std-static-wasm32-unknown-unknown-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.i686
+    - rust-toolset-0:1.54.0-1.module+el8.5.0+12195+effd8a03.i686
+    - rustfmt-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.i686
+    - rustfmt-debuginfo-0:1.54.0-2.module+el8.5.0+12254+dc27bae9.i686
+...
