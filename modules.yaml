@@ -36723,3 +36723,61 @@ data:
     - freeradius-postgresql-0:3.0.20-10.module+el8.5.0+13440+b1b7f3c7.x86_64
     - freeradius-sqlite-debuginfo-0:3.0.20-10.module+el8.5.0+13440+b1b7f3c7.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: 389-ds
+  stream: '1.4'
+  version: '8050020211118174836'
+  context: 4051e825
+  arch: x86_64
+  license:
+    content:
+    - GPLv3+
+    module:
+    - MIT
+  summary: 389 Directory Server (base)
+  description: 389 Directory Server is an LDAPv3 compliant server.  The base package
+    includes the LDAP server and command line utilities for server administration.
+  dependencies:
+  - buildrequires:
+      llvm-toolset:
+      - rhel8
+      nodejs:
+      - '10'
+      platform:
+      - el8.5.0.z
+      rust-toolset:
+      - rhel8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      389-ds-base:
+        arches:
+        - aarch64
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Package in api
+        ref: stream-1.4-rhel-8.5.0
+  filter:
+    rpms:
+    - cockpit-389-ds
+  artifacts:
+    rpms:
+    - 389-ds-base-snmp-debuginfo-0:1.4.3.23-12.module+el8.5.0+13329+4096c77a.x86_64
+    - 389-ds-base-0:1.4.3.23-12.module+el8.5.0+13329+4096c77a.x86_64
+    - 389-ds-base-libs-debuginfo-0:1.4.3.23-12.module+el8.5.0+13329+4096c77a.x86_64
+    - 389-ds-base-libs-0:1.4.3.23-12.module+el8.5.0+13329+4096c77a.x86_64
+    - python3-lib389-0:1.4.3.23-12.module+el8.5.0+13329+4096c77a.noarch
+    - 389-ds-base-legacy-tools-debuginfo-0:1.4.3.23-12.module+el8.5.0+13329+4096c77a.x86_64
+    - 389-ds-base-legacy-tools-0:1.4.3.23-12.module+el8.5.0+13329+4096c77a.x86_64
+    - 389-ds-base-devel-0:1.4.3.23-12.module+el8.5.0+13329+4096c77a.x86_64
+    - 389-ds-base-debuginfo-0:1.4.3.23-12.module+el8.5.0+13329+4096c77a.x86_64
+    - 389-ds-base-snmp-0:1.4.3.23-12.module+el8.5.0+13329+4096c77a.x86_64
+    - cockpit-389-ds-0:1.4.3.23-12.module+el8.5.0+13329+4096c77a.noarch
+    - 389-ds-base-debugsource-0:1.4.3.23-12.module+el8.5.0+13329+4096c77a.x86_64
+...
