@@ -16785,9 +16785,10 @@ data:
     - perl-Test-NoWarnings
   artifacts:
     rpms:
-    - perl-Socket6-0:0.28-6.module+el8.3.0+6446+37a50855.aarch64
-    - perl-Socket6-debugsource-0:0.28-6.module+el8.3.0+6446+37a50855.aarch64
-    - perl-Socket6-debuginfo-0:0.28-6.module+el8.3.0+6446+37a50855.aarch64
+#   - perl-Socket6-0:0.28-6.module+el8.3.0+6446+37a50855.aarch64
+#   - perl-Socket6-debugsource-0:0.28-6.module+el8.3.0+6446+37a50855.aarch64
+#   - perl-Socket6-debuginfo-0:0.28-6.module+el8.3.0+6446+37a50855.aarch64
+#   - perl-IO-Socket-INET6-0:2.72-12.module+el8.3.0+6446+37a50855.noarch
     - perl-Net-SSLeay-0:1.88-1.module+el8.3.0+6446+37a50855.aarch64
     - perl-Net-SSLeay-debugsource-0:1.88-1.module+el8.3.0+6446+37a50855.aarch64
     - perl-Net-SSLeay-debuginfo-0:1.88-1.module+el8.3.0+6446+37a50855.aarch64
@@ -16800,7 +16801,6 @@ data:
     - perl-Devel-StackTrace-1:2.03-2.module+el8.3.0+6446+37a50855.noarch
     - perl-Test-NoWarnings-0:1.04-15.module+el8.3.0+6446+37a50855.noarch
     - perl-IPC-Run-0:0.99-1.module+el8.3.0+6446+37a50855.noarch
-    - perl-IO-Socket-INET6-0:2.72-12.module+el8.3.0+6446+37a50855.noarch
     - perl-Net-IDN-Encode-0:2.500-2.module+el8.3.0+6446+37a50855.aarch64
     - perl-Net-IDN-Encode-debugsource-0:2.500-2.module+el8.3.0+6446+37a50855.aarch64
     - perl-Net-IDN-Encode-debuginfo-0:2.500-2.module+el8.3.0+6446+37a50855.aarch64
@@ -16964,9 +16964,10 @@ data:
     - perl-Test-NoWarnings
   artifacts:
     rpms:
-    - perl-Socket6-0:0.28-6.module+el8.3.0+6452+449fe210.aarch64
-    - perl-Socket6-debugsource-0:0.28-6.module+el8.3.0+6452+449fe210.aarch64
-    - perl-Socket6-debuginfo-0:0.28-6.module+el8.3.0+6452+449fe210.aarch64
+#   - perl-Socket6-0:0.28-6.module+el8.3.0+6452+449fe210.aarch64
+#   - perl-Socket6-debugsource-0:0.28-6.module+el8.3.0+6452+449fe210.aarch64
+#   - perl-Socket6-debuginfo-0:0.28-6.module+el8.3.0+6452+449fe210.aarch64
+#   - perl-IO-Socket-INET6-0:2.72-12.module+el8.3.0+6452+449fe210.noarch
     - perl-Net-SSLeay-0:1.88-1.module+el8.3.0+6452+449fe210.aarch64
     - perl-Net-SSLeay-debugsource-0:1.88-1.module+el8.3.0+6452+449fe210.aarch64
     - perl-Net-SSLeay-debuginfo-0:1.88-1.module+el8.3.0+6452+449fe210.aarch64
@@ -16979,7 +16980,6 @@ data:
     - perl-Devel-StackTrace-1:2.03-2.module+el8.3.0+6452+449fe210.noarch
     - perl-Test-NoWarnings-0:1.04-15.module+el8.3.0+6452+449fe210.noarch
     - perl-IPC-Run-0:0.99-1.module+el8.3.0+6452+449fe210.noarch
-    - perl-IO-Socket-INET6-0:2.72-12.module+el8.3.0+6452+449fe210.noarch
     - perl-Net-IDN-Encode-0:2.500-2.module+el8.3.0+6452+449fe210.aarch64
     - perl-Net-IDN-Encode-debugsource-0:2.500-2.module+el8.3.0+6452+449fe210.aarch64
     - perl-Net-IDN-Encode-debuginfo-0:2.500-2.module+el8.3.0+6452+449fe210.aarch64
@@ -17612,9 +17612,10 @@ data:
     - perl-Test-NoWarnings
   artifacts:
     rpms:
-    - perl-Socket6-0:0.28-6.module+el8.3.0+6446+594cad75.aarch64
-    - perl-Socket6-debugsource-0:0.28-6.module+el8.3.0+6446+594cad75.aarch64
-    - perl-Socket6-debuginfo-0:0.28-6.module+el8.3.0+6446+594cad75.aarch64
+#   - perl-Socket6-0:0.28-6.module+el8.3.0+6446+594cad75.aarch64
+#   - perl-Socket6-debugsource-0:0.28-6.module+el8.3.0+6446+594cad75.aarch64
+#   - perl-Socket6-debuginfo-0:0.28-6.module+el8.3.0+6446+594cad75.aarch64
+#   - perl-IO-Socket-INET6-0:2.72-12.module+el8.3.0+6446+594cad75.noarch
     - perl-Net-SSLeay-0:1.88-1.module+el8.3.0+6446+594cad75.aarch64
     - perl-Net-SSLeay-debugsource-0:1.88-1.module+el8.3.0+6446+594cad75.aarch64
     - perl-Net-SSLeay-debuginfo-0:1.88-1.module+el8.3.0+6446+594cad75.aarch64
@@ -17627,9 +17628,89 @@ data:
     - perl-Devel-StackTrace-1:2.03-2.module+el8.3.0+6446+594cad75.noarch
     - perl-Test-NoWarnings-0:1.04-15.module+el8.3.0+6446+594cad75.noarch
     - perl-IPC-Run-0:0.99-1.module+el8.3.0+6446+594cad75.noarch
-    - perl-IO-Socket-INET6-0:2.72-12.module+el8.3.0+6446+594cad75.noarch
     - perl-Net-IDN-Encode-0:2.500-2.module+el8.3.0+6446+594cad75.aarch64
     - perl-Net-IDN-Encode-debugsource-0:2.500-2.module+el8.3.0+6446+594cad75.aarch64
     - perl-Net-IDN-Encode-debuginfo-0:2.500-2.module+el8.3.0+6446+594cad75.aarch64
     - perl-IO-Socket-SSL-0:2.066-4.module+el8.3.0+6446+594cad75.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: postgresql
+  stream: '10'
+  version: '8050020210716113442'
+  context: b4937e53
+  arch: aarch64
+  license:
+    content:
+    - PostgreSQL
+    module:
+    - MIT
+  summary: PostgreSQL server and client module
+  description: PostgreSQL is an advanced Object-Relational database management system
+    (DBMS). The postgresql-server package contains the programs needed to create and
+    run a PostgreSQL server, which will in turn allow you to create and maintain PostgreSQL
+    databases. The base postgresql package contains the client programs that you'll
+    need to access a PostgreSQL DBMS server.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.5.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      postgresql:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Module API.
+        ref: stream-10-rhel-8.5.0
+  api:
+    rpms:
+    - postgresql
+    - postgresql-server
+  references:
+    community: https://www.postgresql.org
+    documentation: https://www.postgresql.org/docs/10/index.html
+    tracker: http://bugzilla.redhat.com
+  profiles:
+    client:
+      rpms:
+      - postgresql
+    server:
+      rpms:
+      - postgresql-server
+  artifacts:
+    rpms:
+    - postgresql-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-server-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-docs-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-contrib-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-server-devel-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-test-rpm-macros-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-static-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-upgrade-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-upgrade-devel-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-plperl-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-plpython3-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-pltcl-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-test-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-debugsource-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-server-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-docs-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-contrib-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-server-devel-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-upgrade-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-upgrade-devel-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-plperl-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-plpython3-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-pltcl-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
+    - postgresql-test-debuginfo-0:10.17-2.module+el8.5.0+11838+8dca950a.aarch64
 ...

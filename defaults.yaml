@@ -36,6 +36,7 @@ data:
     10: [common]
     12: [common]
     14: [common]
+    16: [common]
 ...
 ---
 document: modulemd-defaults
@@ -111,17 +112,6 @@ data:
   stream: "2.8"
   profiles:
     2.8: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: ruby
-  stream: "2.5"
-  profiles:
-    2.5: [common]
-    2.6: [common]
-    2.7: [common]
 ...
 ---
 document: modulemd-defaults
@@ -377,6 +367,7 @@ data:
     1.14: [common]
     1.16: [common]
     1.18: [common]
+    1.20: [common]
 ...
 ---
 document: modulemd-defaults
@@ -433,4 +424,16 @@ data:
   profiles:
     10.3: [server]
     10.5: [server]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: ruby
+  stream: "2.5"
+  profiles:
+    2.5: [common]
+    2.6: [common]
+    2.7: [common]
+    3.0: [common]
 ...
