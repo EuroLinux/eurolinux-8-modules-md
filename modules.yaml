@@ -18795,3 +18795,86 @@ data:
     - squid-debuginfo-7:4.15-1.module+el8.5.0+11469+24c223d9.aarch64
     - squid-debugsource-7:4.15-1.module+el8.5.0+11469+24c223d9.aarch64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: go-toolset
+  stream: rhel8
+  version: '8050020211211004557'
+  context: '70889296'
+  arch: aarch64
+  license:
+    content:
+    - BSD and Public Domain
+    - MIT
+    module:
+    - MIT
+  summary: Go
+  description: Go Tools and libraries
+  dependencies:
+  - buildrequires:
+      go-toolset:
+      - rhel8
+      platform:
+      - el8.5.0.z
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      delve:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        rationale: A debugger for the Go programming language
+        ref: stream-rhel-8-rhel-8.5.0
+      go-toolset:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Meta package for go-toolset providing scl enable scripts.
+        ref: stream-rhel-8-rhel-8.5.0
+      golang:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Package providing the Go compiler toolchain.
+        ref: stream-rhel-8-rhel-8.5.0
+  api:
+    rpms:
+    - golang
+  buildopts:
+    rpms:
+      whitelist:
+      - delve
+      - go-toolset
+      - go-toolset-1.10
+      - go-toolset-1.10-golang
+      - go-toolset-golang
+      - golang
+  profiles:
+    common:
+      rpms:
+      - go-toolset
+  artifacts:
+    rpms:
+    - go-toolset-0:1.16.12-1.module+el8.5.0+13637+960c7771.aarch64
+    - golang-0:1.16.12-1.module+el8.5.0+13637+960c7771.aarch64
+    - golang-docs-0:1.16.12-1.module+el8.5.0+13637+960c7771.noarch
+    - golang-misc-0:1.16.12-1.module+el8.5.0+13637+960c7771.noarch
+    - golang-tests-0:1.16.12-1.module+el8.5.0+13637+960c7771.noarch
+    - golang-src-0:1.16.12-1.module+el8.5.0+13637+960c7771.noarch
+    - golang-bin-0:1.16.12-1.module+el8.5.0+13637+960c7771.aarch64
+...
