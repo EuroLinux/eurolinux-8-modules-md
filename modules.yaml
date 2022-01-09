@@ -18878,3 +18878,125 @@ data:
     - golang-src-0:1.16.12-1.module+el8.5.0+13637+960c7771.noarch
     - golang-bin-0:1.16.12-1.module+el8.5.0+13637+960c7771.aarch64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: postgresql
+  stream: '12'
+  version: '8050020211122082354'
+  context: c5368500
+  arch: aarch64
+  license:
+    content:
+    - BSD
+    - MIT
+    - PostgreSQL
+    module:
+    - MIT
+  summary: PostgreSQL server and client module
+  description: PostgreSQL is an advanced Object-Relational database management system
+    (DBMS). The postgresql-server package contains the programs needed to create and
+    run a PostgreSQL server, which will in turn allow you to create and maintain PostgreSQL
+    databases. The base postgresql package contains the client programs that you'll
+    need to access a PostgreSQL DBMS server.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.5.0.z
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      pg_repack:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: pg_repack extension
+        ref: stream-12-rhel-8.5.0
+      pgaudit:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: pgaudit extension
+        ref: stream-12-rhel-8.5.0
+      postgres-decoderbufs:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: postgres-decoderbufs extension
+        ref: stream-12-rhel-8.5.0
+      postgresql:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Module API.
+        ref: stream-12-rhel-8.5.0
+  api:
+    rpms:
+    - postgresql
+    - postgresql-server
+  references:
+    community: https://www.postgresql.org
+    documentation: https://www.postgresql.org/docs/12/index.html
+    tracker: http://bugzilla.redhat.com
+  profiles:
+    client:
+      rpms:
+      - postgresql
+    server:
+      rpms:
+      - postgresql-server
+  artifacts:
+    rpms:
+    - postgresql-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-server-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-docs-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-contrib-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-server-devel-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-test-rpm-macros-0:12.9-1.module+el8.5.0+13373+4554acc4.noarch
+    - postgresql-static-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-upgrade-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-upgrade-devel-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-plperl-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-plpython3-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-pltcl-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-test-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-debugsource-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-debuginfo-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-server-debuginfo-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-docs-debuginfo-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-contrib-debuginfo-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-server-devel-debuginfo-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-upgrade-debuginfo-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-upgrade-devel-debuginfo-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-plperl-debuginfo-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-plpython3-debuginfo-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-pltcl-debuginfo-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgresql-test-debuginfo-0:12.9-1.module+el8.5.0+13373+4554acc4.aarch64
+    - postgres-decoderbufs-0:0.10.0-2.module+el8.5.0+11354+78b3c9c5.aarch64
+    - postgres-decoderbufs-debugsource-0:0.10.0-2.module+el8.5.0+11354+78b3c9c5.aarch64
+    - postgres-decoderbufs-debuginfo-0:0.10.0-2.module+el8.5.0+11354+78b3c9c5.aarch64
+    - pgaudit-0:1.4.0-5.module+el8.5.0+11354+78b3c9c5.aarch64
+    - pgaudit-debugsource-0:1.4.0-5.module+el8.5.0+11354+78b3c9c5.aarch64
+    - pgaudit-debuginfo-0:1.4.0-5.module+el8.5.0+11354+78b3c9c5.aarch64
+    - pg_repack-0:1.4.6-3.module+el8.5.0+11354+78b3c9c5.aarch64
+    - pg_repack-debugsource-0:1.4.6-3.module+el8.5.0+11354+78b3c9c5.aarch64
+    - pg_repack-debuginfo-0:1.4.6-3.module+el8.5.0+11354+78b3c9c5.aarch64
+...
