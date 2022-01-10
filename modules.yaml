@@ -633,7 +633,7 @@ version: 2
 data:
   name: golang-ecosystem
   stream: '1.0'
-  version: abcabcabcabc
+  version: 1234
   context: fuckthem
   arch: aarch64
   license:
@@ -4514,7 +4514,7 @@ data:
   stream: '1.24'
   version: '1530'
   context: '1530'
-  arch: x86_64
+  arch: aarch64
   license:
     module:
     - MIT
@@ -4585,7 +4585,7 @@ data:
   stream: '1.24'
   version: '1524'
   context: '1524'
-  arch: x86_64
+  arch: aarch64
   license:
     module:
     - MIT
