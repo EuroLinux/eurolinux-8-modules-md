@@ -21012,3 +21012,61 @@ data:
     - php-xmlrpc-0:7.4.19-1.module+el8.5.0+11143+cc873159.aarch64
     - php-xmlrpc-debuginfo-0:7.4.19-1.module+el8.5.0+11143+cc873159.aarch64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: mailman
+  stream: '2.1'
+  version: '8050020211129071856'
+  context: aa3ced04
+  arch: aarch64
+  license:
+    content:
+    - GPLv2+
+    module:
+    - MIT
+  summary: Electronic mail discussion and e-newsletter lists managing software
+  description: An initial version of the mailman mailing list management software
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.5.0.z
+      python27:
+      - '2.7'
+    requires:
+      platform:
+      - el8
+      python27:
+      - '2.7'
+  components:
+    rpms:
+      mailman:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: Module API.
+        ref: stream-2.1-rhel-8.5.0
+  api:
+    rpms:
+    - mailman
+  references:
+    documentation: https://launchpad.net/mailman
+    tracker: https://bugs.launchpad.net/mailman
+  profiles:
+    common:
+      rpms:
+      - mailman
+  filter:
+    rpms:
+    - python3-dns
+  artifacts:
+    rpms:
+    - mailman-3:2.1.29-12.module+el8.5.0+13466+327eb9f3.2.2.aarch64
+    - mailman-debugsource-3:2.1.29-12.module+el8.5.0+13466+327eb9f3.2.2.aarch64
+    - mailman-debuginfo-3:2.1.29-12.module+el8.5.0+13466+327eb9f3.2.2.aarch64
+...
