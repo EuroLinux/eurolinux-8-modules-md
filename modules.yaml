@@ -20177,8 +20177,9 @@ data:
   artifacts:
     rpms:
     - Cython-debugsource-0:0.29.21-5.module+el8.4.0+9822+20bf1249.aarch64
-    - PyYAML-debugsource-0:5.4.1-1.module+el8.4.0+10484+27ce8e03.aarch64
-    - numpy-debugsource-0:1.19.4-2.module+el8.4.0+9822+20bf1249.aarch64
+    - PyYAML-debugsource-0:5.4.1-1.module+el8.5.0+10613+59a13ec4.aarch64
+    - numpy-debugsource-0:1.19.4-3.module+el8.5.0+12204+54860423.aarch64
+    - python-lxml-debugsource-0:4.6.2-3.module+el8.5.0+10536+a233b742.aarch64
     - python-cffi-debugsource-0:1.14.3-2.module+el8.4.0+9822+20bf1249.aarch64
     - python-cryptography-debugsource-0:3.3.1-2.module+el8.4.0+9822+20bf1249.aarch64
     - python-lxml-debugsource-0:4.6.2-2.module+el8.4.0+9822+20bf1249.aarch64
