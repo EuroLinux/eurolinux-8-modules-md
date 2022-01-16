@@ -21067,9 +21067,9 @@ data:
     - python3-dns
   artifacts:
     rpms:
-    - mailman-3:2.1.29-12.module+el8.5.0+13466+327eb9f3.2.2.aarch64
-    - mailman-debugsource-3:2.1.29-12.module+el8.5.0+13466+327eb9f3.2.2.aarch64
-    - mailman-debuginfo-3:2.1.29-12.module+el8.5.0+13466+327eb9f3.2.2.aarch64
+    - mailman-3:2.1.29-12.module+el8.5.0+13466+327eb9f3.2.aarch64
+    - mailman-debugsource-3:2.1.29-12.module+el8.5.0+13466+327eb9f3.2.aarch64
+    - mailman-debuginfo-3:2.1.29-12.module+el8.5.0+13466+327eb9f3.2.aarch64
 ...
 ---
 document: modulemd
@@ -24056,4 +24056,177 @@ data:
     - xmlstreambuffer-javadoc-0:1.5.4-8.module+el8.2.0+5723+4574fbff.noarch
     - xsom-0:0-19.20110809svn.module+el8.1.0+3366+6dfb954c.noarch
     - xsom-javadoc-0:0-19.20110809svn.module+el8.1.0+3366+6dfb954c.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: jmc
+  stream: rhel8
+  version: 8050020211005144542
+  context: 6392b1f8
+  arch: aarch64
+  summary: Java Mission Control is a profiling and diagnostics tool for the Hotspot
+    JVM
+  description: >-
+    Java Mission Control is a powerful profiler for HotSpot JVMs and has an advanced
+    set of tools that enables efficient and detailed analysis of the extensive data
+    collected by Java Flight Recorder. The tool chain enables developers and administrators
+    to collect and analyze data from Java applications running locally or deployed
+    in production environments.
+  license:
+    module:
+    - GPL
+  dependencies:
+  - buildrequires:
+      javapackages-tools: [201801]
+      platform: [el8.5.0]
+      tycho: [rhel8]
+    requires:
+      platform: [el8]
+  profiles:
+    common:
+      rpms:
+      - jmc
+    core:
+      rpms:
+      - jmc-core
+  api:
+    rpms:
+    - jmc-core
+  filter:
+    rpms:
+    - mvel
+    - mvel-javadoc
+  components:
+    rpms:
+      HdrHistogram:
+        rationale: 'Dependency of jmc.
+
+'
+        ref: stream-rhel8-rhel-8.5.0
+        buildorder: 2
+        arches: [x86_64]
+      directory-maven-plugin:
+        rationale: 'Dependency of jmc and jaf.
+
+'
+        ref: stream-rhel8-rhel-8.5.0
+        arches: [x86_64]
+      ee4j-parent:
+        rationale: 'Dependency of jaf.
+
+'
+        ref: stream-rhel8-rhel-8.5.0
+        arches: [x86_64]
+      jaf:
+        rationale: 'Dependency of jmc.
+
+'
+        ref: stream-rhel8-rhel-8.5.0
+        buildorder: 1
+        arches: [x86_64]
+      jmc:
+        rationale: 'Standalone application.
+
+'
+        ref: stream-rhel8-rhel-8.5.0
+        buildorder: 3
+        arches: [x86_64]
+      jmc-core:
+        rationale: 'Core API. Dependency of jmc.
+
+'
+        ref: stream-rhel8-rhel-8.5.0
+        buildorder: 2
+        arches: [x86_64]
+      lz4-java:
+        rationale: 'Dependency of jmc-core
+
+'
+        ref: stream-rhel8-rhel-8.5.0
+        buildorder: 1
+        arches: [x86_64]
+      mvel:
+        rationale: 'Dependency of lz4-java.
+
+'
+        ref: stream-rhel8-rhel-8.5.0
+        arches: [x86_64]
+      owasp-java-encoder:
+        rationale: 'Dependency of jmc-core.
+
+'
+        ref: stream-rhel8-rhel-8.5.0
+        arches: [x86_64]
+...
+---
+document: modulemd
+version: 2
+data:
+  name: pmdk
+  stream: 1-fileformat-v6
+  version: 8040020210211161159
+  context: 9f9e2e7e
+  arch: aarch64
+  summary: Persistent Memory Development Kit (former NVML)
+  description: >-
+    The Persistent Memory Development Kit is a collection of libraries for using memory-mapped
+    persistence, optimized specifically for persistent memory.
+  license:
+    module:
+    - BSD
+  dependencies:
+  - buildrequires:
+      platform: [el8.4.0]
+    requires:
+      platform: [el8]
+  references:
+    community: http://pmem.io/pmdk
+  components:
+    rpms:
+      libpmemobj-cpp:
+        rationale: depends on (recent version of) pmdk
+        ref: stream-rhel-8.4.0
+        buildorder: 10
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      pmdk:
+        rationale: main pmdk library
+        ref: stream-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+...
+---
+document: modulemd
+version: 2
+data:
+  name: pmdk
+  stream: 1_fileformat_v6
+  version: 8040020210405195856
+  context: 9f9e2e7e
+  arch: aarch64
+  summary: Persistent Memory Development Kit (former NVML)
+  description: >-
+    The Persistent Memory Development Kit is a collection of libraries for using memory-mapped
+    persistence, optimized specifically for persistent memory.
+  license:
+    module:
+    - BSD
+  dependencies:
+  - buildrequires:
+      platform: [el8.4.0]
+    requires:
+      platform: [el8]
+  references:
+    community: http://pmem.io/pmdk
+  components:
+    rpms:
+      libpmemobj-cpp:
+        rationale: depends on (recent version of) pmdk
+        ref: stream-rhel-8.4.0
+        buildorder: 10
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
+      pmdk:
+        rationale: main pmdk library
+        ref: stream-rhel-8.4.0
+        arches: [aarch64, i686, ppc64le, s390x, x86_64]
 ...
