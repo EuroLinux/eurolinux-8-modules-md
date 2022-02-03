@@ -38184,3 +38184,495 @@ data:
     - freeradius-ldap-0:3.0.20-11.module+el8.5.0+13640+a9514344.x86_64
     - freeradius-postgresql-debuginfo-0:3.0.20-11.module+el8.5.0+13640+a9514344.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: nodejs
+  stream: '14'
+  version: '8050020211213115342'
+  context: c5368500
+  arch: x86_64
+  license:
+    content:
+    - MIT
+    - MIT and ASL 2.0 and ISC and BSD
+    module:
+    - MIT
+  summary: Javascript runtime
+  description: Node.js is a platform built on Chrome's JavaScript runtime for easily
+    building fast, scalable network applications. Node.js uses an event-driven, non-blocking
+    I/O model that makes it lightweight and efficient, perfect for data-intensive
+    real-time applications that run across distributed devices.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.5.0.z
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      nodejs:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '100'
+        rationale: Javascript runtime and npm package manager.
+        ref: stream-14-rhel-8.5.0
+      nodejs-nodemon:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '200'
+        rationale: Simple monitor script for use during development of a node.js app
+        ref: stream-14-rhel-8.5.0
+      nodejs-packaging:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '10'
+        rationale: RPM Macros and Utilities for Node.js Packaging
+        ref: stream-14-rhel-8.5.0
+  api:
+    rpms:
+    - nodejs
+    - nodejs-devel
+    - npm
+  buildopts:
+    rpms:
+      macros: '%_with_bootstrap 1
+
+        '
+  references:
+    community: http://nodejs.org
+    documentation: http://nodejs.org/en/docs
+    tracker: https://github.com/nodejs/node/issues
+  profiles:
+    common:
+      rpms:
+      - nodejs
+      - npm
+    development:
+      rpms:
+      - nodejs
+      - nodejs-devel
+      - npm
+    minimal:
+      rpms:
+      - nodejs
+    s2i:
+      rpms:
+      - nodejs
+      - nodejs-nodemon
+      - npm
+  artifacts:
+    rpms:
+    - nodejs-nodemon-0:2.0.15-1.module+el8.5.0+13504+a2e74d91.noarch
+    - nodejs-1:14.18.2-2.module+el8.5.0+13644+8d46dafd.x86_64
+    - nodejs-devel-1:14.18.2-2.module+el8.5.0+13644+8d46dafd.x86_64
+    - nodejs-docs-1:14.18.2-2.module+el8.5.0+13644+8d46dafd.noarch
+    - nodejs-full-i18n-1:14.18.2-2.module+el8.5.0+13644+8d46dafd.x86_64
+    - nodejs-debuginfo-1:14.18.2-2.module+el8.5.0+13644+8d46dafd.x86_64
+    - nodejs-debugsource-1:14.18.2-2.module+el8.5.0+13644+8d46dafd.x86_64
+    - npm-1:6.14.15-1.14.18.2.2.module+el8.5.0+13644+8d46dafd.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: pki-core
+  stream: '10.6'
+  version: '8050020220111200158'
+  context: 3246ec52
+  arch: x86_64
+  license:
+    content:
+    - GPLv2 and LGPLv2
+    - LGPLv2+
+    - MPLv1.1 or GPLv2+ or LGPLv2+
+    module:
+    - MIT
+  summary: PKI Core module for PKI 10.6 or later
+  description: A module for PKI Core packages for PKI version 10.6 or later.
+  dependencies:
+  - buildrequires:
+      golang-ecosystem:
+      - '1.0'
+      pki-deps:
+      - '10.6'
+      platform:
+      - el8.5.0.z
+    requires:
+      pki-deps:
+      - '10.6'
+      platform:
+      - el8
+  components:
+    rpms:
+      jss:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: JSS packages
+        ref: stream-pki-10.6-rhel-8.5.0
+      ldapjdk:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: LDAP JDK packages
+        ref: stream-pki-10.6-rhel-8.5.0
+      pki-core:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '2'
+        rationale: PKI Core packages
+        ref: stream-pki-10.6-rhel-8.5.0
+      tomcatjss:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '1'
+        rationale: TomcatJSS packages
+        ref: stream-pki-10.6-rhel-8.5.0
+  references:
+    community: https://www.dogtagpki.org
+    documentation: https://www.dogtagpki.org
+    tracker: https://github.com/dogtagpki/pki/issues
+  artifacts:
+    rpms:
+    - jss-0:4.9.1-1.module+el8.5.0+12710+1c6f9ceb.x86_64
+    - jss-debuginfo-0:4.9.1-1.module+el8.5.0+12710+1c6f9ceb.x86_64
+    - jss-debugsource-0:4.9.1-1.module+el8.5.0+12710+1c6f9ceb.x86_64
+    - jss-javadoc-0:4.9.1-1.module+el8.5.0+12710+1c6f9ceb.x86_64
+    - ldapjdk-0:4.23.0-1.module+el8.5.0+11983+6ba118b4.noarch
+    - ldapjdk-javadoc-0:4.23.0-1.module+el8.5.0+11983+6ba118b4.noarch
+    - pki-acme-0:10.11.2-4.module+el8.5.0+13827+5b1d191d.noarch
+    - pki-base-0:10.11.2-4.module+el8.5.0+13827+5b1d191d.noarch
+    - pki-base-java-0:10.11.2-4.module+el8.5.0+13827+5b1d191d.noarch
+    - pki-ca-0:10.11.2-4.module+el8.5.0+13827+5b1d191d.noarch
+    - pki-core-debuginfo-0:10.11.2-4.module+el8.5.0+13827+5b1d191d.x86_64
+    - pki-core-debugsource-0:10.11.2-4.module+el8.5.0+13827+5b1d191d.x86_64
+    - pki-kra-0:10.11.2-4.module+el8.5.0+13827+5b1d191d.noarch
+    - pki-server-0:10.11.2-4.module+el8.5.0+13827+5b1d191d.noarch
+    - pki-symkey-0:10.11.2-4.module+el8.5.0+13827+5b1d191d.x86_64
+    - pki-symkey-debuginfo-0:10.11.2-4.module+el8.5.0+13827+5b1d191d.x86_64
+    - pki-tools-0:10.11.2-4.module+el8.5.0+13827+5b1d191d.x86_64
+    - pki-tools-debuginfo-0:10.11.2-4.module+el8.5.0+13827+5b1d191d.x86_64
+    - python3-pki-0:10.11.2-4.module+el8.5.0+13827+5b1d191d.noarch
+    - tomcatjss-0:7.7.0-1.module+el8.5.0+11983+6ba118b4.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: container-tools
+  stream: '3.0'
+  version: '8050020220104131412'
+  context: e34216c9
+  arch: x86_64
+  license:
+    content:
+    - ASL 2.0
+    - ASL 2.0 and GPLv3+
+    - BSD and MIT
+    - GPLv2
+    - GPLv2+
+    - GPLv3+
+    - LGPLv2+
+    module:
+    - MIT
+  summary: Stable versions of podman 3.0, buildah 1.19, skopeo 1.2, runc, conmon,
+    etc as well as dependencies such as container-selinux built and tested together,
+    and supported as documented on the Application Stream lifecycle page.
+  description: 'Stable versions of podman 3.0, buildah 1.19, skopeo 1.2, runc, conmon,
+    CRIU, Udica, etc as well as dependencies such as container-selinux built and tested
+    together. Released with RHEL 8.4 and supported for 24 months. During the support
+    lifecycle, back ports of important, critical vulnerabilities (CVEs, RHSAs) and
+    bug fixes (RHBAs) are provided to this stream, and versions do not move forward.
+    For more information see: https://access.redhat.com/support/policy/updates/containertools'
+  dependencies:
+  - buildrequires:
+      go-toolset:
+      - rhel8
+      golang-ecosystem:
+      - '1.0'
+      platform:
+      - el8.5.0.z
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      buildah:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.5.0
+      cockpit-podman:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.5.0
+      conmon:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.5.0
+      container-selinux:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.5.0
+      containernetworking-plugins:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.5.0
+      criu:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.5.0
+      crun:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.5.0
+      fuse-overlayfs:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.5.0
+      libslirp:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: '-1'
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.5.0
+      oci-seccomp-bpf-hook:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.5.0
+      podman:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.5.0
+      runc:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.5.0
+      skopeo:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.5.0
+      slirp4netns:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.5.0
+      toolbox:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.5.0
+      udica:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: Primary component of this module
+        ref: stream-container-tools-3.0-rhel-8.5.0
+  api:
+    rpms:
+    - buildah
+    - conmon
+    - container-selinux
+    - containernetworking-plugins
+    - containers-common
+    - fuse-overlayfs
+    - libslirp
+    - podman
+    - podman-docker
+    - podman-manpages
+    - podman-remote
+    - runc
+    - skopeo
+    - slirp4netns
+  buildopts:
+    rpms:
+      macros: '%_with_ignore_tests 1
+
+        '
+  references:
+    community: https://github.com/projectatomic
+    documentation: https://projectatomic.io
+    tracker: https://github.com/projectatomic
+  profiles:
+    common:
+      rpms:
+      - buildah
+      - cockpit-podman
+      - conmon
+      - container-selinux
+      - containernetworking-plugins
+      - criu
+      - crun
+      - fuse-overlayfs
+      - libslirp
+      - podman
+      - runc
+      - skopeo
+      - slirp4netns
+      - toolbox
+      - udica
+  artifacts:
+    rpms:
+    - buildah-0:1.19.9-1.module+el8.5.0+12236+c988d830.x86_64
+    - buildah-debuginfo-0:1.19.9-1.module+el8.5.0+12236+c988d830.x86_64
+    - buildah-debugsource-0:1.19.9-1.module+el8.5.0+12236+c988d830.x86_64
+    - buildah-tests-0:1.19.9-1.module+el8.5.0+12236+c988d830.x86_64
+    - buildah-tests-debuginfo-0:1.19.9-1.module+el8.5.0+12236+c988d830.x86_64
+    - cockpit-podman-0:29-2.module+el8.5.0+10306+3f72d66d.noarch
+    - conmon-2:2.0.26-1.module+el8.5.0+10306+3f72d66d.x86_64
+    - conmon-debuginfo-2:2.0.26-1.module+el8.5.0+10306+3f72d66d.x86_64
+    - conmon-debugsource-2:2.0.26-1.module+el8.5.0+10306+3f72d66d.x86_64
+    - container-selinux-2:2.167.0-1.module+el8.5.0+12609+beaa716d.noarch
+    - containernetworking-plugins-0:0.9.1-1.module+el8.5.0+10306+3f72d66d.x86_64
+    - containernetworking-plugins-debuginfo-0:0.9.1-1.module+el8.5.0+10306+3f72d66d.x86_64
+    - containernetworking-plugins-debugsource-0:0.9.1-1.module+el8.5.0+10306+3f72d66d.x86_64
+    - containers-common-1:1.2.4-1.module+el8.5.0+13605+73abf821.x86_64
+    - criu-0:3.15-1.module+el8.5.0+10306+3f72d66d.x86_64
+    - criu-debuginfo-0:3.15-1.module+el8.5.0+10306+3f72d66d.x86_64
+    - criu-debugsource-0:3.15-1.module+el8.5.0+10306+3f72d66d.x86_64
+    - crun-0:0.18-2.module+el8.5.0+10306+3f72d66d.x86_64
+    - crun-debuginfo-0:0.18-2.module+el8.5.0+10306+3f72d66d.x86_64
+    - crun-debugsource-0:0.18-2.module+el8.5.0+10306+3f72d66d.x86_64
+    - fuse-overlayfs-0:1.4.0-2.module+el8.5.0+10306+3f72d66d.x86_64
+    - fuse-overlayfs-debuginfo-0:1.4.0-2.module+el8.5.0+10306+3f72d66d.x86_64
+    - fuse-overlayfs-debugsource-0:1.4.0-2.module+el8.5.0+10306+3f72d66d.x86_64
+    - libslirp-0:4.3.1-1.module+el8.5.0+10306+3f72d66d.x86_64
+    - libslirp-debuginfo-0:4.3.1-1.module+el8.5.0+10306+3f72d66d.x86_64
+    - libslirp-debugsource-0:4.3.1-1.module+el8.5.0+10306+3f72d66d.x86_64
+    - libslirp-devel-0:4.3.1-1.module+el8.5.0+10306+3f72d66d.x86_64
+    - oci-seccomp-bpf-hook-0:1.2.0-3.module+el8.5.0+11073+ba5c6d09.x86_64
+    - oci-seccomp-bpf-hook-debuginfo-0:1.2.0-3.module+el8.5.0+11073+ba5c6d09.x86_64
+    - oci-seccomp-bpf-hook-debugsource-0:1.2.0-3.module+el8.5.0+11073+ba5c6d09.x86_64
+    - podman-0:3.0.1-7.module+el8.5.0+12960+5b7d72b5.x86_64
+    - podman-catatonit-0:3.0.1-7.module+el8.5.0+12960+5b7d72b5.x86_64
+    - podman-catatonit-debuginfo-0:3.0.1-7.module+el8.5.0+12960+5b7d72b5.x86_64
+    - podman-debuginfo-0:3.0.1-7.module+el8.5.0+12960+5b7d72b5.x86_64
+    - podman-debugsource-0:3.0.1-7.module+el8.5.0+12960+5b7d72b5.x86_64
+    - podman-docker-0:3.0.1-7.module+el8.5.0+12960+5b7d72b5.noarch
+    - podman-plugins-0:3.0.1-7.module+el8.5.0+12960+5b7d72b5.x86_64
+    - podman-plugins-debuginfo-0:3.0.1-7.module+el8.5.0+12960+5b7d72b5.x86_64
+    - podman-remote-0:3.0.1-7.module+el8.5.0+12960+5b7d72b5.x86_64
+    - podman-remote-debuginfo-0:3.0.1-7.module+el8.5.0+12960+5b7d72b5.x86_64
+    - podman-tests-0:3.0.1-7.module+el8.5.0+12960+5b7d72b5.x86_64
+    - python3-criu-0:3.15-1.module+el8.5.0+10306+3f72d66d.x86_64
+    - runc-0:1.0.0-72.rc92.module+el8.5.0+12236+c988d830.x86_64
+    - runc-debuginfo-0:1.0.0-72.rc92.module+el8.5.0+12236+c988d830.x86_64
+    - runc-debugsource-0:1.0.0-72.rc92.module+el8.5.0+12236+c988d830.x86_64
+    - skopeo-1:1.2.2-10.module+el8.5.0+11808+4e1db630.x86_64
+    - skopeo-1:1.2.4-1.module+el8.5.0+13605+73abf821.x86_64
+    - skopeo-debuginfo-1:1.2.4-1.module+el8.5.0+13605+73abf821.x86_64
+    - skopeo-debugsource-1:1.2.4-1.module+el8.5.0+13605+73abf821.x86_64
+    - skopeo-tests-1:1.2.4-1.module+el8.5.0+13605+73abf821.x86_64
+    - slirp4netns-0:1.1.8-1.module+el8.5.0+10306+3f72d66d.x86_64
+    - slirp4netns-debuginfo-0:1.1.8-1.module+el8.5.0+10306+3f72d66d.x86_64
+    - slirp4netns-debugsource-0:1.1.8-1.module+el8.5.0+10306+3f72d66d.x86_64
+    - toolbox-0:0.0.99.3-1.module+el8.5.0+13746+87221ce8.x86_64
+    - toolbox-debuginfo-0:0.0.99.3-1.module+el8.5.0+13746+87221ce8.x86_64
+    - toolbox-debugsource-0:0.0.99.3-1.module+el8.5.0+13746+87221ce8.x86_64
+    - toolbox-tests-0:0.0.99.3-1.module+el8.5.0+13746+87221ce8.x86_64
+    - udica-0:0.2.4-1.module+el8.5.0+10306+3f72d66d.noarch
+...
