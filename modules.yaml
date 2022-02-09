@@ -38023,8 +38023,9 @@ data:
   artifacts:
     rpms:
     - buildah-1:1.23.1-2.module+el8.5.0+13436+9c05b4ba.x86_64
-    - buildah-debugsource-0:1.22.3-2.module+el8.5.0+12582+56d94c81.x86_64
-    - buildah-tests-0:1.22.3-2.module+el8.5.0+12582+56d94c81.x86_64
+    - buildah-debuginfo-1:1.23.1-2.module+el8.5.0+13436+9c05b4ba.x86_64
+    - buildah-debugsource-1:1.23.1-2.module+el8.5.0+13436+9c05b4ba.x86_64
+    - buildah-tests-1:1.23.1-2.module+el8.5.0+13436+9c05b4ba.x86_64
     - buildah-tests-debuginfo-1:1.23.1-2.module+el8.5.0+13436+9c05b4ba.x86_64
     - cockpit-podman-0:39-1.module+el8.5.0+13754+92ec836b.noarch
     - conmon-2:2.0.32-1.module+el8.5.0+13852+150547f7.x86_64
@@ -38277,13 +38278,14 @@ data:
       - npm
   artifacts:
     rpms:
-    - nodejs-nodemon-0:2.0.15-1.module+el8.5.0+13504+a2e74d91.noarch
     - nodejs-1:14.18.2-2.module+el8.5.0+13644+8d46dafd.x86_64
+    - nodejs-debuginfo-1:14.18.2-2.module+el8.5.0+13644+8d46dafd.x86_64
+    - nodejs-debugsource-1:14.18.2-2.module+el8.5.0+13644+8d46dafd.x86_64
     - nodejs-devel-1:14.18.2-2.module+el8.5.0+13644+8d46dafd.x86_64
     - nodejs-docs-1:14.18.2-2.module+el8.5.0+13644+8d46dafd.noarch
     - nodejs-full-i18n-1:14.18.2-2.module+el8.5.0+13644+8d46dafd.x86_64
-    - nodejs-debuginfo-1:14.18.2-2.module+el8.5.0+13644+8d46dafd.x86_64
-    - nodejs-debugsource-1:14.18.2-2.module+el8.5.0+13644+8d46dafd.x86_64
+    - nodejs-nodemon-0:2.0.15-1.module+el8.5.0+13504+a2e74d91.noarch
+    - nodejs-packaging-0:23-3.module+el8.3.0+6519+9f98ed83.noarch
     - npm-1:6.14.15-1.14.18.2.2.module+el8.5.0+13644+8d46dafd.x86_64
 ...
 ---
@@ -38632,6 +38634,7 @@ data:
     - containernetworking-plugins-debugsource-0:0.9.1-1.module+el8.5.0+10306+3f72d66d.x86_64
     - containers-common-1:1.2.4-1.module+el8.5.0+13605+73abf821.x86_64
     - criu-0:3.15-1.module+el8.5.0+10306+3f72d66d.x86_64
+    - crit-0:3.15-1.module+el8.5.0+10306+3f72d66d.x86_64
     - criu-debuginfo-0:3.15-1.module+el8.5.0+10306+3f72d66d.x86_64
     - criu-debugsource-0:3.15-1.module+el8.5.0+10306+3f72d66d.x86_64
     - crun-0:0.18-2.module+el8.5.0+10306+3f72d66d.x86_64
