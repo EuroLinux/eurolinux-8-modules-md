@@ -4000,7 +4000,7 @@ data:
   stream: '2.4'
   version: '8040020211008164252'
   context: 522a0ee4
-  arch: x86_64
+  arch: i686
   license:
     content:
     - ASL 2.0
@@ -4478,7 +4478,7 @@ data:
   stream: '3.0'
   version: '8050020211006085658'
   context: b4937e53
-  arch: x86_64
+  arch: i686
   license:
     content:
     - (BSD or Ruby) and PostgreSQL
@@ -4713,7 +4713,7 @@ data:
   stream: rhel8
   version: '8050020211110163227'
   context: c5368500
-  arch: x86_64
+  arch: i686
   license:
     content:
     - NCSA
@@ -4972,7 +4972,7 @@ data:
   stream: '2.5'
   version: '8050020220216195847'
   context: c5368500
-  arch: x86_64
+  arch: i686
   license:
     content:
     - (BSD or Ruby) and PostgreSQL
@@ -5191,7 +5191,7 @@ data:
   stream: '2.6'
   version: '8050020211215144356'
   context: c5368500
-  arch: x86_64
+  arch: i686
   license:
     content:
     - (BSD or Ruby) and PostgreSQL
