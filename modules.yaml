@@ -39513,3 +39513,167 @@ data:
     - virt-v2v-1:1.40.2-28.module+el8.5.0+10717+67be7ac4.x86_64
     - virt-v2v-debuginfo-1:1.40.2-28.module+el8.5.0+10717+67be7ac4.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: 389-ds
+  stream: '1.4'
+  version: '8050020220302180105'
+  context: 4051e825
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - GPLv3+
+  summary: 389 Directory Server (base)
+  description: 389 Directory Server is an LDAPv3 compliant server.  The base package
+    includes the LDAP server and command line utilities for server administration.
+  dependencies:
+  - buildrequires:
+      llvm-toolset:
+      - rhel8
+      nodejs:
+      - '10'
+      platform:
+      - el8.5.0.z
+      rust-toolset:
+      - rhel8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      389-ds-base:
+        rationale: Package in api
+        ref: stream-1.4-rhel-8.5.0
+        arches:
+        - aarch64
+        - ppc64le
+        - s390x
+        - x86_64
+  filter:
+    rpms:
+    - cockpit-389-ds
+  artifacts:
+    rpms:
+    - 389-ds-base-snmp-0:1.4.3.23-14.module+el8.5.0+14377+c731dc97.x86_64
+    - 389-ds-base-0:1.4.3.23-14.module+el8.5.0+14377+c731dc97.x86_64
+    - 389-ds-base-legacy-tools-debuginfo-0:1.4.3.23-14.module+el8.5.0+14377+c731dc97.x86_64
+    - 389-ds-base-devel-0:1.4.3.23-14.module+el8.5.0+14377+c731dc97.x86_64
+    - cockpit-389-ds-0:1.4.3.23-14.module+el8.5.0+14377+c731dc97.noarch
+    - 389-ds-base-libs-debuginfo-0:1.4.3.23-14.module+el8.5.0+14377+c731dc97.x86_64
+    - python3-lib389-0:1.4.3.23-14.module+el8.5.0+14377+c731dc97.noarch
+    - 389-ds-base-debugsource-0:1.4.3.23-14.module+el8.5.0+14377+c731dc97.x86_64
+    - 389-ds-base-libs-0:1.4.3.23-14.module+el8.5.0+14377+c731dc97.x86_64
+    - 389-ds-base-snmp-debuginfo-0:1.4.3.23-14.module+el8.5.0+14377+c731dc97.x86_64
+    - 389-ds-base-debuginfo-0:1.4.3.23-14.module+el8.5.0+14377+c731dc97.x86_64
+    - 389-ds-base-legacy-tools-0:1.4.3.23-14.module+el8.5.0+14377+c731dc97.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: httpd
+  stream: '2.4'
+  version: '8050020220228164203'
+  context: c5368500
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - ASL 2.0
+  summary: Apache HTTP Server
+  description: Apache httpd is a powerful, efficient, and extensible HTTP server.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.5.0.z
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      httpd:
+        rationale: Apache httpd
+        ref: stream-2.4-rhel-8.5.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      mod_http2:
+        rationale: HTTP/2 support for Apache httpd
+        ref: stream-2.4-rhel-8.5.0
+        buildorder: '20'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      mod_md:
+        rationale: Certificate provisioning using ACME for Apache httpd
+        ref: stream-2.4-rhel-8.5.0
+        buildorder: '20'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - httpd
+    - httpd-devel
+    - httpd-filesystem
+    - mod_ssl
+  references:
+    documentation: https://httpd.apache.org/docs/2.4/
+    tracker: https://bz.apache.org/bugzilla/
+  profiles:
+    common:
+      rpms:
+      - httpd
+      - httpd-filesystem
+      - httpd-tools
+      - mod_http2
+      - mod_ssl
+    devel:
+      rpms:
+      - httpd
+      - httpd-devel
+      - httpd-filesystem
+      - httpd-tools
+    minimal:
+      rpms:
+      - httpd
+  artifacts:
+    rpms:
+    - httpd-0:2.4.37-43.module+el8.5.0+14370+51c6d843.2.x86_64
+    - httpd-debuginfo-0:2.4.37-43.module+el8.5.0+14370+51c6d843.2.x86_64
+    - httpd-debugsource-0:2.4.37-43.module+el8.5.0+14370+51c6d843.2.x86_64
+    - httpd-devel-0:2.4.37-43.module+el8.5.0+14370+51c6d843.2.x86_64
+    - httpd-filesystem-0:2.4.37-43.module+el8.5.0+14370+51c6d843.2.noarch
+    - httpd-manual-0:2.4.37-43.module+el8.5.0+14370+51c6d843.2.noarch
+    - httpd-tools-0:2.4.37-43.module+el8.5.0+14370+51c6d843.2.x86_64
+    - httpd-tools-debuginfo-0:2.4.37-43.module+el8.5.0+14370+51c6d843.2.x86_64
+    - mod_http2-0:1.15.7-3.module+el8.4.0+8625+d397f3da.x86_64
+    - mod_http2-debuginfo-0:1.15.7-3.module+el8.4.0+8625+d397f3da.x86_64
+    - mod_http2-debugsource-0:1.15.7-3.module+el8.4.0+8625+d397f3da.x86_64
+    - mod_ldap-0:2.4.37-43.module+el8.5.0+14370+51c6d843.2.x86_64
+    - mod_ldap-debuginfo-0:2.4.37-43.module+el8.5.0+14370+51c6d843.2.x86_64
+    - mod_md-1:2.0.8-8.module+el8.3.0+6814+67d1e611.x86_64
+    - mod_md-debuginfo-1:2.0.8-8.module+el8.3.0+6814+67d1e611.x86_64
+    - mod_md-debugsource-1:2.0.8-8.module+el8.3.0+6814+67d1e611.x86_64
+    - mod_proxy_html-1:2.4.37-43.module+el8.5.0+14370+51c6d843.2.x86_64
+    - mod_proxy_html-debuginfo-1:2.4.37-43.module+el8.5.0+14370+51c6d843.2.x86_64
+    - mod_session-0:2.4.37-43.module+el8.5.0+14370+51c6d843.2.x86_64
+    - mod_session-debuginfo-0:2.4.37-43.module+el8.5.0+14370+51c6d843.2.x86_64
+    - mod_ssl-1:2.4.37-43.module+el8.5.0+14370+51c6d843.2.x86_64
+    - mod_ssl-debuginfo-1:2.4.37-43.module+el8.5.0+14370+51c6d843.2.x86_64
+...
