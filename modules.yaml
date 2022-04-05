@@ -18142,13 +18142,15 @@ data:
     - mariadb-server-debuginfo-3:10.5.9-1.module+el8.4.0+10457+88cd7ba1.x86_64
     - mariadb-server-3:10.5.9-1.module+el8.4.0+10457+88cd7ba1.x86_64
     - galera-0:26.4.7-1.module+el8.4.0+10457+88cd7ba1.x86_64
+    - Judy-0:1.0.5-18.module+el8.4.0+9031+9abc7af9.x86_64
     - Judy-devel-0:1.0.5-18.module+el8.4.0+9031+9abc7af9.x86_64
+    - Judy-debuginfo-0:1.0.5-18.module+el8.4.0+9031+9abc7af9.x86_64
+    - Judy-debugsource-0:1.0.5-18.module+el8.4.0+9031+9abc7af9.x86_64
     - mariadb-debugsource-3:10.5.9-1.module+el8.4.0+10457+88cd7ba1.x86_64
     - mariadb-test-debuginfo-3:10.5.9-1.module+el8.4.0+10457+88cd7ba1.x86_64
     - mariadb-debuginfo-3:10.5.9-1.module+el8.4.0+10457+88cd7ba1.x86_64
     - mariadb-embedded-devel-3:10.5.9-1.module+el8.4.0+10457+88cd7ba1.x86_64
     - mariadb-server-galera-3:10.5.9-1.module+el8.4.0+10457+88cd7ba1.x86_64
-    - Judy-debuginfo-0:1.0.5-18.module+el8.4.0+9031+9abc7af9.x86_64
     - mariadb-backup-3:10.5.9-1.module+el8.4.0+10457+88cd7ba1.x86_64
     - mariadb-test-3:10.5.9-1.module+el8.4.0+10457+88cd7ba1.x86_64
     - mariadb-oqgraph-engine-debuginfo-3:10.5.9-1.module+el8.4.0+10457+88cd7ba1.x86_64
@@ -18156,9 +18158,7 @@ data:
     - mariadb-3:10.5.9-1.module+el8.4.0+10457+88cd7ba1.x86_64
     - mariadb-gssapi-server-debuginfo-3:10.5.9-1.module+el8.4.0+10457+88cd7ba1.x86_64
     - mariadb-oqgraph-engine-3:10.5.9-1.module+el8.4.0+10457+88cd7ba1.x86_64
-    - Judy-0:1.0.5-18.module+el8.4.0+9031+9abc7af9.x86_64
     - mariadb-pam-3:10.5.9-1.module+el8.4.0+10457+88cd7ba1.x86_64
-    - Judy-debugsource-0:1.0.5-18.module+el8.4.0+9031+9abc7af9.x86_64
     - galera-debuginfo-0:26.4.7-1.module+el8.4.0+10457+88cd7ba1.x86_64
 ...
 ---
@@ -40458,4 +40458,1625 @@ data:
     - postgresql-upgrade-debuginfo-0:12.9-3.module+el8.6.0+13484+00387d81.x86_64
     - postgresql-upgrade-devel-0:12.9-3.module+el8.6.0+13484+00387d81.x86_64
     - postgresql-upgrade-devel-debuginfo-0:12.9-3.module+el8.6.0+13484+00387d81.x86_64
+...
 ---
+document: modulemd
+version: 2
+data:
+  name: postgresql
+  stream: '13'
+  version: '8060020211129152445'
+  context: d63f516d
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - BSD
+    - MIT
+    - PostgreSQL
+  summary: PostgreSQL server and client module
+  description: PostgreSQL is an advanced Object-Relational database management system
+    (DBMS). The postgresql-server package contains the programs needed to create and
+    run a PostgreSQL server, which will in turn allow you to create and maintain PostgreSQL
+    databases. The base postgresql package contains the client programs that you'll
+    need to access a PostgreSQL DBMS server.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.6.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      pg_repack:
+        rationale: pg_repack extension
+        ref: stream-13-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      pgaudit:
+        rationale: pgaudit extension
+        ref: stream-13-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      postgres-decoderbufs:
+        rationale: postgres-decoderbufs extension
+        ref: stream-13-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      postgresql:
+        rationale: Module API.
+        ref: stream-13-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - postgresql
+    - postgresql-server
+  references:
+    community: https://www.postgresql.org
+    documentation: https://www.postgresql.org/docs/13/index.html
+    tracker: http://bugzilla.redhat.com
+  profiles:
+    client:
+      rpms:
+      - postgresql
+    server:
+      rpms:
+      - postgresql-server
+  artifacts:
+    rpms:
+    - pg_repack-0:1.4.6-3.module+el8.5.0+11357+bcc62552.src
+    - pg_repack-0:1.4.6-3.module+el8.5.0+11357+bcc62552.x86_64
+    - pg_repack-debuginfo-0:1.4.6-3.module+el8.5.0+11357+bcc62552.x86_64
+    - pg_repack-debugsource-0:1.4.6-3.module+el8.5.0+11357+bcc62552.x86_64
+    - pgaudit-0:1.5.0-1.module+el8.4.0+8873+b821c30a.src
+    - pgaudit-0:1.5.0-1.module+el8.4.0+8873+b821c30a.x86_64
+    - pgaudit-debuginfo-0:1.5.0-1.module+el8.4.0+8873+b821c30a.x86_64
+    - pgaudit-debugsource-0:1.5.0-1.module+el8.4.0+8873+b821c30a.x86_64
+    - postgres-decoderbufs-0:0.10.0-2.module+el8.4.0+8873+b821c30a.src
+    - postgres-decoderbufs-0:0.10.0-2.module+el8.4.0+8873+b821c30a.x86_64
+    - postgres-decoderbufs-debuginfo-0:0.10.0-2.module+el8.4.0+8873+b821c30a.x86_64
+    - postgres-decoderbufs-debugsource-0:0.10.0-2.module+el8.4.0+8873+b821c30a.x86_64
+    - postgresql-0:13.5-2.module+el8.6.0+13475+45b5138c.src
+    - postgresql-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-contrib-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-contrib-debuginfo-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-debuginfo-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-debugsource-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-docs-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-docs-debuginfo-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-plperl-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-plperl-debuginfo-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-plpython3-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-plpython3-debuginfo-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-pltcl-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-pltcl-debuginfo-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-server-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-server-debuginfo-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-server-devel-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-server-devel-debuginfo-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-static-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-test-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-test-debuginfo-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-test-rpm-macros-0:13.5-2.module+el8.6.0+13475+45b5138c.noarch
+    - postgresql-upgrade-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-upgrade-debuginfo-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-upgrade-devel-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+    - postgresql-upgrade-devel-debuginfo-0:13.5-2.module+el8.6.0+13475+45b5138c.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: postgresql
+  stream: '10'
+  version: '8060020211213101623'
+  context: d63f516d
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - PostgreSQL
+  summary: PostgreSQL server and client module
+  description: PostgreSQL is an advanced Object-Relational database management system
+    (DBMS). The postgresql-server package contains the programs needed to create and
+    run a PostgreSQL server, which will in turn allow you to create and maintain PostgreSQL
+    databases. The base postgresql package contains the client programs that you'll
+    need to access a PostgreSQL DBMS server.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.6.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      postgresql:
+        rationale: Module API.
+        ref: stream-10-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - postgresql
+    - postgresql-server
+  references:
+    community: https://www.postgresql.org
+    documentation: https://www.postgresql.org/docs/10/index.html
+    tracker: http://bugzilla.redhat.com
+  profiles:
+    client:
+      rpms:
+      - postgresql
+    server:
+      rpms:
+      - postgresql-server
+  artifacts:
+    rpms:
+    - postgresql-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-server-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-docs-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-contrib-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-server-devel-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-test-rpm-macros-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-static-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-upgrade-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-upgrade-devel-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-plperl-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-plpython3-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-pltcl-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-test-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-debugsource-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-debuginfo-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-server-debuginfo-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-docs-debuginfo-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-contrib-debuginfo-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-server-devel-debuginfo-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-upgrade-debuginfo-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-upgrade-devel-debuginfo-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-plperl-debuginfo-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-plpython3-debuginfo-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-pltcl-debuginfo-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+    - postgresql-test-debuginfo-0:10.19-1.module+el8.6.0+13642+78853f5a.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: pmdk
+  stream: 1_fileformat_v6
+  version: '8060020220127220545'
+  context: d63f516d
+  arch: x86_64
+  license:
+    module:
+    - BSD
+    content:
+    - BSD
+  summary: Persistent Memory Development Kit (former NVML)
+  description: The Persistent Memory Development Kit is a collection of libraries
+    for using memory-mapped persistence, optimized specifically for persistent memory.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.6.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      libpmemobj-cpp:
+        rationale: depends on (recent version of) pmdk
+        ref: stream-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      pmdk:
+        rationale: main pmdk library
+        ref: stream-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  references:
+    community: http://pmem.io/pmdk
+  artifacts:
+    rpms:
+    - libpmem-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmem-devel-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmem-debug-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmemblk-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmemblk-devel-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmemblk-debug-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmemlog-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmemlog-devel-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmemlog-debug-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmemobj-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmemobj-devel-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmemobj-debug-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmempool-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmempool-devel-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmempool-debug-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - librpmem-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - librpmem-devel-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - librpmem-debug-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - rpmemd-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - pmempool-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - pmreorder-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - daxio-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - pmdk-debugsource-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - pmdk-debuginfo-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmem-debuginfo-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmem-debug-debuginfo-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmemblk-debuginfo-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmemblk-debug-debuginfo-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmemlog-debuginfo-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmemlog-debug-debuginfo-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmemobj-debuginfo-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmemobj-debug-debuginfo-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmempool-debuginfo-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmempool-debug-debuginfo-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - librpmem-debuginfo-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - librpmem-debug-debuginfo-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - rpmemd-debuginfo-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - pmempool-debuginfo-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - daxio-debuginfo-0:1.11.1-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmemobj++-devel-0:1.11-1.module+el8.6.0+14043+a2e27587.x86_64
+    - libpmemobj++-doc-0:1.11-1.module+el8.6.0+14043+a2e27587.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: maven
+  stream: '3.6'
+  version: '8060020211119162118'
+  context: 5dbfe8be
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - ASL 1.1 and ASL 2.0 and xpp and BSD and Public Domain
+    - ASL 2.0
+    - ASL 2.0 and ASL 1.1 and MIT
+    - ASL 2.0 and CC0
+    - ASL 2.0 and MIT
+    - ASL 2.0 and MIT and xpp
+    - ASL 2.0 and Plexus
+    - BSD and CC-BY
+    - EPL-1.0 and BSD
+    - MIT
+    - MIT and ASL 2.0
+    - Public Domain
+  summary: Java project management and project comprehension tool
+  description: Maven is a software project management and comprehension tool. Based
+    on the concept of a project object model (POM), Maven can manage a project's build,
+    reporting and documentation from a central piece of information.
+  dependencies:
+  - buildrequires:
+      javapackages-tools:
+      - '201902'
+      platform:
+      - el8.6.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      aopalliance:
+        rationale: 'Runtime dependency of google-guice.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      apache-commons-cli:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      apache-commons-codec:
+        rationale: 'Runtime dependency of httpcomponents-client.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      apache-commons-io:
+        rationale: 'Runtime dependency of maven-shared-utils, maven-wagon.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      apache-commons-lang3:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      atinject:
+        rationale: 'Runtime dependency of cdi-api, google-guice, maven.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      cdi-api:
+        rationale: 'Runtime dependency of sisu.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '20'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      geronimo-annotation:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      google-guice:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '30'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      guava:
+        rationale: 'Runtime dependency of google-guice.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '20'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      httpcomponents-client:
+        rationale: 'Runtime dependency of maven-wagon.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '20'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      httpcomponents-core:
+        rationale: "Runtime dependency of httpcomponents-client,\n     maven-wagon.\n"
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      jansi:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      jsoup:
+        rationale: 'Runtime dependency of maven-wagon.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      jsr-305:
+        rationale: 'Runtime dependency of guava.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      maven:
+        rationale: 'Module API.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '50'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      maven-resolver:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '40'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      maven-shared-utils:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '20'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      maven-wagon:
+        rationale: 'Runtime dependency of maven, maven-resolver.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '30'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      plexus-cipher:
+        rationale: 'Runtime dependency of maven, plexus-sec-dispatcher.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      plexus-classworlds:
+        rationale: 'Runtime dependency of maven, sisu.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      plexus-containers:
+        rationale: 'Runtime dependency of maven, sisu.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      plexus-interpolation:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      plexus-sec-dispatcher:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '20'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      plexus-utils:
+        rationale: "Runtime dependency of maven, maven-wagon,\n     plexus-sec-dispatcher,\
+          \ sisu.\n"
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      sisu:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '30'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      slf4j:
+        rationale: "Runtime dependency of maven, maven-resolver,\n     maven-wagon.\n"
+        ref: stream-maven-3.6-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - maven
+    - maven-openjdk11
+    - maven-openjdk17
+    - maven-openjdk8
+  profiles:
+    common:
+      rpms:
+      - maven-openjdk11
+  filter:
+    rpms:
+    - aopalliance-javadoc
+    - apache-commons-cli-javadoc
+    - apache-commons-codec-javadoc
+    - apache-commons-io-javadoc
+    - apache-commons-lang3-javadoc
+    - atinject-javadoc
+    - atinject-tck
+    - cdi-api-javadoc
+    - geronimo-annotation-javadoc
+    - google-guice-javadoc
+    - guava-javadoc
+    - guava-testlib
+    - guice-assistedinject
+    - guice-bom
+    - guice-extensions
+    - guice-grapher
+    - guice-jmx
+    - guice-jndi
+    - guice-multibindings
+    - guice-parent
+    - guice-servlet
+    - guice-throwingproviders
+    - httpcomponents-client-javadoc
+    - httpcomponents-core-javadoc
+    - jansi-javadoc
+    - jsoup-javadoc
+    - jsr-305-javadoc
+    - jul-to-slf4j
+    - log4j-over-slf4j
+    - maven-javadoc
+    - maven-resolver-javadoc
+    - maven-shared-utils-javadoc
+    - maven-wagon-javadoc
+    - plexus-cipher-javadoc
+    - plexus-classworlds-javadoc
+    - plexus-containers
+    - plexus-containers-component-metadata
+    - plexus-containers-container-default
+    - plexus-containers-javadoc
+    - plexus-interpolation-javadoc
+    - plexus-sec-dispatcher-javadoc
+    - plexus-utils-javadoc
+    - sisu-javadoc
+    - slf4j-javadoc
+    - slf4j-jcl
+    - slf4j-jdk14
+    - slf4j-log4j12
+    - slf4j-manual
+    - slf4j-sources
+  artifacts:
+    rpms:
+    - slf4j-0:1.7.28-3.module+el8.6.0+13337+afcb49ec.noarch
+    - slf4j-javadoc-0:1.7.28-3.module+el8.6.0+13337+afcb49ec.noarch
+    - slf4j-manual-0:1.7.28-3.module+el8.6.0+13337+afcb49ec.noarch
+    - slf4j-jdk14-0:1.7.28-3.module+el8.6.0+13337+afcb49ec.noarch
+    - slf4j-log4j12-0:1.7.28-3.module+el8.6.0+13337+afcb49ec.noarch
+    - slf4j-jcl-0:1.7.28-3.module+el8.6.0+13337+afcb49ec.noarch
+    - jcl-over-slf4j-0:1.7.28-3.module+el8.6.0+13337+afcb49ec.noarch
+    - log4j-over-slf4j-0:1.7.28-3.module+el8.6.0+13337+afcb49ec.noarch
+    - jul-to-slf4j-0:1.7.28-3.module+el8.6.0+13337+afcb49ec.noarch
+    - slf4j-sources-0:1.7.28-3.module+el8.6.0+13337+afcb49ec.noarch
+    - plexus-utils-0:3.3.0-3.module+el8.6.0+13337+afcb49ec.noarch
+    - plexus-utils-javadoc-0:3.3.0-3.module+el8.6.0+13337+afcb49ec.noarch
+    - plexus-interpolation-0:1.26-3.module+el8.6.0+13337+afcb49ec.noarch
+    - plexus-interpolation-javadoc-0:1.26-3.module+el8.6.0+13337+afcb49ec.noarch
+    - plexus-containers-0:2.1.0-2.module+el8.6.0+13337+afcb49ec.noarch
+    - plexus-containers-component-metadata-0:2.1.0-2.module+el8.6.0+13337+afcb49ec.noarch
+    - plexus-containers-component-annotations-0:2.1.0-2.module+el8.6.0+13337+afcb49ec.noarch
+    - plexus-containers-container-default-0:2.1.0-2.module+el8.6.0+13337+afcb49ec.noarch
+    - plexus-containers-javadoc-0:2.1.0-2.module+el8.6.0+13337+afcb49ec.noarch
+    - plexus-classworlds-0:2.6.0-4.module+el8.6.0+13337+afcb49ec.noarch
+    - plexus-classworlds-javadoc-0:2.6.0-4.module+el8.6.0+13337+afcb49ec.noarch
+    - plexus-cipher-0:1.7-17.module+el8.6.0+13337+afcb49ec.noarch
+    - plexus-cipher-javadoc-0:1.7-17.module+el8.6.0+13337+afcb49ec.noarch
+    - jsr-305-0:0-0.25.20130910svn.module+el8.6.0+13337+afcb49ec.noarch
+    - jsr-305-javadoc-0:0-0.25.20130910svn.module+el8.6.0+13337+afcb49ec.noarch
+    - jsoup-0:1.12.1-3.module+el8.6.0+13337+afcb49ec.noarch
+    - jsoup-javadoc-0:1.12.1-3.module+el8.6.0+13337+afcb49ec.noarch
+    - jansi-0:1.18-4.module+el8.6.0+13337+afcb49ec.noarch
+    - jansi-javadoc-0:1.18-4.module+el8.6.0+13337+afcb49ec.noarch
+    - httpcomponents-core-0:4.4.12-3.module+el8.6.0+13337+afcb49ec.noarch
+    - httpcomponents-core-javadoc-0:4.4.12-3.module+el8.6.0+13337+afcb49ec.noarch
+    - geronimo-annotation-0:1.0-26.module+el8.6.0+13337+afcb49ec.noarch
+    - geronimo-annotation-javadoc-0:1.0-26.module+el8.6.0+13337+afcb49ec.noarch
+    - atinject-0:1-31.20100611svn86.module+el8.6.0+13337+afcb49ec.noarch
+    - atinject-tck-0:1-31.20100611svn86.module+el8.6.0+13337+afcb49ec.noarch
+    - atinject-javadoc-0:1-31.20100611svn86.module+el8.6.0+13337+afcb49ec.noarch
+    - apache-commons-lang3-0:3.9-4.module+el8.6.0+13337+afcb49ec.noarch
+    - apache-commons-lang3-javadoc-0:3.9-4.module+el8.6.0+13337+afcb49ec.noarch
+    - apache-commons-io-1:2.6-6.module+el8.6.0+13337+afcb49ec.noarch
+    - apache-commons-io-javadoc-1:2.6-6.module+el8.6.0+13337+afcb49ec.noarch
+    - apache-commons-codec-0:1.13-3.module+el8.6.0+13337+afcb49ec.noarch
+    - apache-commons-codec-javadoc-0:1.13-3.module+el8.6.0+13337+afcb49ec.noarch
+    - apache-commons-cli-0:1.4-7.module+el8.6.0+13337+afcb49ec.noarch
+    - apache-commons-cli-javadoc-0:1.4-7.module+el8.6.0+13337+afcb49ec.noarch
+    - aopalliance-0:1.0-20.module+el8.6.0+13337+afcb49ec.noarch
+    - aopalliance-javadoc-0:1.0-20.module+el8.6.0+13337+afcb49ec.noarch
+    - plexus-sec-dispatcher-0:1.4-29.module+el8.6.0+13337+afcb49ec.noarch
+    - plexus-sec-dispatcher-javadoc-0:1.4-29.module+el8.6.0+13337+afcb49ec.noarch
+    - maven-shared-utils-0:3.2.1-0.4.module+el8.6.0+13337+afcb49ec.noarch
+    - maven-shared-utils-javadoc-0:3.2.1-0.4.module+el8.6.0+13337+afcb49ec.noarch
+    - httpcomponents-client-0:4.5.10-4.module+el8.6.0+13337+afcb49ec.noarch
+    - httpcomponents-client-javadoc-0:4.5.10-4.module+el8.6.0+13337+afcb49ec.noarch
+    - guava-0:28.1-3.module+el8.6.0+13337+afcb49ec.noarch
+    - guava-javadoc-0:28.1-3.module+el8.6.0+13337+afcb49ec.noarch
+    - guava-testlib-0:28.1-3.module+el8.6.0+13337+afcb49ec.noarch
+    - cdi-api-0:2.0.1-3.module+el8.6.0+13337+afcb49ec.noarch
+    - cdi-api-javadoc-0:2.0.1-3.module+el8.6.0+13337+afcb49ec.noarch
+    - sisu-0:0.3.4-2.module+el8.6.0+13337+afcb49ec.noarch
+    - sisu-javadoc-0:0.3.4-2.module+el8.6.0+13337+afcb49ec.noarch
+    - maven-wagon-0:3.3.4-2.module+el8.6.0+13337+afcb49ec.noarch
+    - maven-wagon-javadoc-0:3.3.4-2.module+el8.6.0+13337+afcb49ec.noarch
+    - google-guice-0:4.2.2-4.module+el8.6.0+13337+afcb49ec.noarch
+    - guice-parent-0:4.2.2-4.module+el8.6.0+13337+afcb49ec.noarch
+    - guice-assistedinject-0:4.2.2-4.module+el8.6.0+13337+afcb49ec.noarch
+    - guice-extensions-0:4.2.2-4.module+el8.6.0+13337+afcb49ec.noarch
+    - guice-grapher-0:4.2.2-4.module+el8.6.0+13337+afcb49ec.noarch
+    - guice-jmx-0:4.2.2-4.module+el8.6.0+13337+afcb49ec.noarch
+    - guice-jndi-0:4.2.2-4.module+el8.6.0+13337+afcb49ec.noarch
+    - guice-multibindings-0:4.2.2-4.module+el8.6.0+13337+afcb49ec.noarch
+    - guice-servlet-0:4.2.2-4.module+el8.6.0+13337+afcb49ec.noarch
+    - guice-bom-0:4.2.2-4.module+el8.6.0+13337+afcb49ec.noarch
+    - guice-throwingproviders-0:4.2.2-4.module+el8.6.0+13337+afcb49ec.noarch
+    - google-guice-javadoc-0:4.2.2-4.module+el8.6.0+13337+afcb49ec.noarch
+    - maven-resolver-0:1.4.1-3.module+el8.6.0+13337+afcb49ec.noarch
+    - maven-resolver-javadoc-0:1.4.1-3.module+el8.6.0+13337+afcb49ec.noarch
+    - maven-1:3.6.2-7.module+el8.6.0+13337+afcb49ec.noarch
+    - maven-lib-1:3.6.2-7.module+el8.6.0+13337+afcb49ec.noarch
+    - maven-openjdk8-1:3.6.2-7.module+el8.6.0+13337+afcb49ec.noarch
+    - maven-openjdk11-1:3.6.2-7.module+el8.6.0+13337+afcb49ec.noarch
+    - maven-openjdk17-1:3.6.2-7.module+el8.6.0+13337+afcb49ec.noarch
+    - maven-javadoc-1:3.6.2-7.module+el8.6.0+13337+afcb49ec.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: maven
+  stream: '3.5'
+  version: '8060020211117110044'
+  context: c0229ad2
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - (CDDL or GPLv2 with exceptions) and ASL 2.0
+    - ASL 1.1 and ASL 2.0 and xpp and BSD and Public Domain
+    - ASL 2.0
+    - ASL 2.0 and ASL 1.1 and MIT
+    - ASL 2.0 and CC0
+    - ASL 2.0 and EPL-1.0 and BSD
+    - ASL 2.0 and MIT
+    - ASL 2.0 and MIT and xpp
+    - ASL 2.0 and Plexus
+    - CDDL or GPLv2 with exceptions
+    - EPL-1.0 and BSD
+    - MIT
+    - MIT and ASL 2.0
+    - Public Domain
+  summary: Java project management and project comprehension tool
+  description: Maven is a software project management and comprehension tool. Based
+    on the concept of a project object model (POM), Maven can manage a project's build,
+    reporting and documentation from a central piece of information.
+  dependencies:
+  - buildrequires:
+      javapackages-tools:
+      - '201801'
+      platform:
+      - el8.6.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      aopalliance:
+        rationale: 'Runtime dependency of google-guice, maven.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      apache-commons-cli:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      apache-commons-codec:
+        rationale: 'Runtime dependency of httpcomponents-client, maven.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      apache-commons-io:
+        rationale: "Runtime dependency of maven, maven-shared-utils,\n     maven-wagon.\n"
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      apache-commons-lang3:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      apache-commons-logging:
+        rationale: 'Runtime dependency of httpcomponents-client, maven.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      atinject:
+        rationale: 'Runtime dependency of cdi-api, google-guice, maven.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      cdi-api:
+        rationale: 'Runtime dependency of maven, sisu.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '20'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      geronimo-annotation:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      glassfish-el:
+        rationale: 'Runtime dependency of cdi-api.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      google-guice:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '20'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      guava20:
+        rationale: 'Runtime dependency of google-guice, maven.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      hawtjni:
+        rationale: 'Runtime dependency of jansi, jansi-native, maven.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      httpcomponents-client:
+        rationale: 'Runtime dependency of maven, maven-wagon.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '20'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      httpcomponents-core:
+        rationale: "Runtime dependency of httpcomponents-client, maven,\n     maven-wagon.\n"
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      jansi:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '30'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      jansi-native:
+        rationale: 'Runtime dependency of jansi, maven.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '20'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      jboss-interceptors-1.2-api:
+        rationale: 'Runtime dependency of cdi-api.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      jsoup:
+        rationale: 'Runtime dependency of maven-wagon.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      maven:
+        rationale: 'Module API.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '50'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      maven-resolver:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '40'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      maven-shared-utils:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '20'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      maven-wagon:
+        rationale: 'Runtime dependency of maven, maven-resolver.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '30'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      plexus-cipher:
+        rationale: 'Runtime dependency of maven, plexus-sec-dispatcher.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      plexus-classworlds:
+        rationale: 'Runtime dependency of maven, sisu.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      plexus-containers:
+        rationale: 'Runtime dependency of maven, sisu.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      plexus-interpolation:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      plexus-sec-dispatcher:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '20'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      plexus-utils:
+        rationale: "Runtime dependency of maven, maven-wagon,\n     plexus-sec-dispatcher,\
+          \ sisu.\n"
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      sisu:
+        rationale: 'Runtime dependency of maven.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '30'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      slf4j:
+        rationale: 'Runtime dependency of maven, maven-wagon.
+
+          '
+        ref: stream-maven-3.5-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - maven
+  buildopts:
+    rpms:
+      macros: '%_with_xmvn_javadoc 1
+
+        %_without_asciidoc 1
+
+        %_without_avalon 1
+
+        %_without_bouncycastle 1
+
+        %_without_cython 1
+
+        %_without_dafsa 1
+
+        %_without_desktop 1
+
+        %_without_dom4j 1
+
+        %_without_doxygen 1
+
+        %_without_dtd 1
+
+        %_without_eclipse 1
+
+        %_without_ehcache 1
+
+        %_without_emacs 1
+
+        %_without_equinox 1
+
+        %_without_fop 1
+
+        %_without_ftp 1
+
+        %_without_gradle 1
+
+        %_without_groovy 1
+
+        %_without_hadoop 1
+
+        %_without_hsqldb 1
+
+        %_without_itext 1
+
+        %_without_jackson 1
+
+        %_without_jmh 1
+
+        %_without_jna 1
+
+        %_without_jpa 1
+
+        %_without_junit5 1
+
+        %_without_logback 1
+
+        %_without_markdown 1
+
+        %_without_memcached 1
+
+        %_without_memoryfilesystem 1
+
+        %_without_obr 1
+
+        %_without_python 1
+
+        %_without_reporting 1
+
+        %_without_scm 1
+
+        %_without_snakeyaml 1
+
+        %_without_snappy 1
+
+        %_without_spring 1
+
+        %_without_ssh 1
+
+        %_without_testlib 1
+
+        %_without_vfs 1
+
+        '
+  profiles:
+    common:
+      rpms:
+      - maven
+  filter:
+    rpms:
+    - aopalliance-javadoc
+    - apache-commons-cli-javadoc
+    - apache-commons-codec-javadoc
+    - apache-commons-io-javadoc
+    - apache-commons-lang3-javadoc
+    - apache-commons-logging-javadoc
+    - atinject-javadoc
+    - atinject-tck
+    - cdi-api-javadoc
+    - geronimo-annotation-javadoc
+    - glassfish-el
+    - glassfish-el-javadoc
+    - google-guice-javadoc
+    - guava20-javadoc
+    - guava20-testlib
+    - guice-assistedinject
+    - guice-bom
+    - guice-extensions
+    - guice-grapher
+    - guice-jmx
+    - guice-jndi
+    - guice-multibindings
+    - guice-parent
+    - guice-servlet
+    - guice-testlib
+    - guice-throwingproviders
+    - hawtjni
+    - hawtjni-javadoc
+    - httpcomponents-client-cache
+    - httpcomponents-client-javadoc
+    - httpcomponents-core-javadoc
+    - jansi-javadoc
+    - jansi-native-javadoc
+    - jboss-interceptors-1.2-api-javadoc
+    - jsoup-javadoc
+    - jul-to-slf4j
+    - log4j-over-slf4j
+    - maven-hawtjni-plugin
+    - maven-javadoc
+    - maven-resolver
+    - maven-resolver-javadoc
+    - maven-resolver-test-util
+    - maven-resolver-transport-classpath
+    - maven-resolver-transport-file
+    - maven-resolver-transport-http
+    - maven-shared-utils-javadoc
+    - maven-wagon
+    - maven-wagon-ftp
+    - maven-wagon-http-lightweight
+    - maven-wagon-javadoc
+    - maven-wagon-providers
+    - plexus-cipher-javadoc
+    - plexus-classworlds-javadoc
+    - plexus-containers
+    - plexus-containers-component-javadoc
+    - plexus-containers-component-metadata
+    - plexus-containers-container-default
+    - plexus-containers-javadoc
+    - plexus-interpolation-javadoc
+    - plexus-sec-dispatcher-javadoc
+    - plexus-utils-javadoc
+    - sisu-javadoc
+    - slf4j-ext
+    - slf4j-javadoc
+    - slf4j-jcl
+    - slf4j-jdk14
+    - slf4j-log4j12
+    - slf4j-manual
+    - slf4j-sources
+  artifacts:
+    rpms:
+    - slf4j-0:1.7.25-4.module+el8+2452+b359bfcd.noarch
+    - slf4j-javadoc-0:1.7.25-4.module+el8+2452+b359bfcd.noarch
+    - slf4j-manual-0:1.7.25-4.module+el8+2452+b359bfcd.noarch
+    - slf4j-jdk14-0:1.7.25-4.module+el8+2452+b359bfcd.noarch
+    - slf4j-log4j12-0:1.7.25-4.module+el8+2452+b359bfcd.noarch
+    - slf4j-jcl-0:1.7.25-4.module+el8+2452+b359bfcd.noarch
+    - slf4j-ext-0:1.7.25-4.module+el8+2452+b359bfcd.noarch
+    - jcl-over-slf4j-0:1.7.25-4.module+el8+2452+b359bfcd.noarch
+    - log4j-over-slf4j-0:1.7.25-4.module+el8+2452+b359bfcd.noarch
+    - jul-to-slf4j-0:1.7.25-4.module+el8+2452+b359bfcd.noarch
+    - slf4j-sources-0:1.7.25-4.module+el8+2452+b359bfcd.noarch
+    - plexus-utils-0:3.1.0-3.module+el8+2452+b359bfcd.noarch
+    - plexus-utils-javadoc-0:3.1.0-3.module+el8+2452+b359bfcd.noarch
+    - plexus-interpolation-0:1.22-9.module+el8+2452+b359bfcd.noarch
+    - plexus-interpolation-javadoc-0:1.22-9.module+el8+2452+b359bfcd.noarch
+    - plexus-containers-0:1.7.1-8.module+el8+2452+b359bfcd.noarch
+    - plexus-containers-component-metadata-0:1.7.1-8.module+el8+2452+b359bfcd.noarch
+    - plexus-containers-component-javadoc-0:1.7.1-8.module+el8+2452+b359bfcd.noarch
+    - plexus-containers-component-annotations-0:1.7.1-8.module+el8+2452+b359bfcd.noarch
+    - plexus-containers-container-default-0:1.7.1-8.module+el8+2452+b359bfcd.noarch
+    - plexus-containers-javadoc-0:1.7.1-8.module+el8+2452+b359bfcd.noarch
+    - plexus-classworlds-0:2.5.2-9.module+el8+2452+b359bfcd.noarch
+    - plexus-classworlds-javadoc-0:2.5.2-9.module+el8+2452+b359bfcd.noarch
+    - plexus-cipher-0:1.7-14.module+el8+2452+b359bfcd.noarch
+    - plexus-cipher-javadoc-0:1.7-14.module+el8+2452+b359bfcd.noarch
+    - jsoup-0:1.11.3-3.module+el8+2452+b359bfcd.noarch
+    - jsoup-javadoc-0:1.11.3-3.module+el8+2452+b359bfcd.noarch
+    - jboss-interceptors-1.2-api-0:1.0.0-8.module+el8+2452+b359bfcd.noarch
+    - jboss-interceptors-1.2-api-javadoc-0:1.0.0-8.module+el8+2452+b359bfcd.noarch
+    - httpcomponents-core-0:4.4.10-3.module+el8+2452+b359bfcd.noarch
+    - httpcomponents-core-javadoc-0:4.4.10-3.module+el8+2452+b359bfcd.noarch
+    - hawtjni-0:1.16-2.module+el8+2452+b359bfcd.noarch
+    - hawtjni-javadoc-0:1.16-2.module+el8+2452+b359bfcd.noarch
+    - hawtjni-runtime-0:1.16-2.module+el8+2452+b359bfcd.noarch
+    - maven-hawtjni-plugin-0:1.16-2.module+el8+2452+b359bfcd.noarch
+    - guava20-0:20.0-8.module+el8+2452+b359bfcd.noarch
+    - guava20-javadoc-0:20.0-8.module+el8+2452+b359bfcd.noarch
+    - guava20-testlib-0:20.0-8.module+el8+2452+b359bfcd.noarch
+    - glassfish-el-0:3.0.1-0.7.b08.module+el8+2452+b359bfcd.noarch
+    - glassfish-el-api-0:3.0.1-0.7.b08.module+el8+2452+b359bfcd.noarch
+    - glassfish-el-javadoc-0:3.0.1-0.7.b08.module+el8+2452+b359bfcd.noarch
+    - geronimo-annotation-0:1.0-23.module+el8+2452+b359bfcd.noarch
+    - geronimo-annotation-javadoc-0:1.0-23.module+el8+2452+b359bfcd.noarch
+    - atinject-0:1-28.20100611svn86.module+el8+2452+b359bfcd.noarch
+    - atinject-tck-0:1-28.20100611svn86.module+el8+2452+b359bfcd.noarch
+    - atinject-javadoc-0:1-28.20100611svn86.module+el8+2452+b359bfcd.noarch
+    - apache-commons-logging-0:1.2-13.module+el8+2452+b359bfcd.noarch
+    - apache-commons-logging-javadoc-0:1.2-13.module+el8+2452+b359bfcd.noarch
+    - apache-commons-lang3-0:3.7-3.module+el8+2452+b359bfcd.noarch
+    - apache-commons-lang3-javadoc-0:3.7-3.module+el8+2452+b359bfcd.noarch
+    - apache-commons-io-1:2.6-3.module+el8+2452+b359bfcd.noarch
+    - apache-commons-io-javadoc-1:2.6-3.module+el8+2452+b359bfcd.noarch
+    - apache-commons-codec-0:1.11-3.module+el8+2452+b359bfcd.noarch
+    - apache-commons-codec-javadoc-0:1.11-3.module+el8+2452+b359bfcd.noarch
+    - apache-commons-cli-0:1.4-4.module+el8+2452+b359bfcd.noarch
+    - apache-commons-cli-javadoc-0:1.4-4.module+el8+2452+b359bfcd.noarch
+    - aopalliance-0:1.0-17.module+el8+2452+b359bfcd.noarch
+    - aopalliance-javadoc-0:1.0-17.module+el8+2452+b359bfcd.noarch
+    - plexus-sec-dispatcher-0:1.4-26.module+el8+2452+b359bfcd.noarch
+    - plexus-sec-dispatcher-javadoc-0:1.4-26.module+el8+2452+b359bfcd.noarch
+    - maven-shared-utils-0:3.2.1-0.1.module+el8+2452+b359bfcd.noarch
+    - maven-shared-utils-javadoc-0:3.2.1-0.1.module+el8+2452+b359bfcd.noarch
+    - jansi-native-0:1.7-7.module+el8+2452+b359bfcd.x86_64
+    - jansi-native-javadoc-0:1.7-7.module+el8+2452+b359bfcd.noarch
+    - httpcomponents-client-0:4.5.5-5.module+el8.6.0+13298+7b5243c0.noarch
+    - httpcomponents-client-cache-0:4.5.5-5.module+el8.6.0+13298+7b5243c0.noarch
+    - httpcomponents-client-javadoc-0:4.5.5-5.module+el8.6.0+13298+7b5243c0.noarch
+    - google-guice-0:4.1-11.module+el8+2452+b359bfcd.noarch
+    - guice-parent-0:4.1-11.module+el8+2452+b359bfcd.noarch
+    - guice-assistedinject-0:4.1-11.module+el8+2452+b359bfcd.noarch
+    - guice-extensions-0:4.1-11.module+el8+2452+b359bfcd.noarch
+    - guice-grapher-0:4.1-11.module+el8+2452+b359bfcd.noarch
+    - guice-jmx-0:4.1-11.module+el8+2452+b359bfcd.noarch
+    - guice-jndi-0:4.1-11.module+el8+2452+b359bfcd.noarch
+    - guice-multibindings-0:4.1-11.module+el8+2452+b359bfcd.noarch
+    - guice-servlet-0:4.1-11.module+el8+2452+b359bfcd.noarch
+    - guice-testlib-0:4.1-11.module+el8+2452+b359bfcd.noarch
+    - guice-throwingproviders-0:4.1-11.module+el8+2452+b359bfcd.noarch
+    - guice-bom-0:4.1-11.module+el8+2452+b359bfcd.noarch
+    - google-guice-javadoc-0:4.1-11.module+el8+2452+b359bfcd.noarch
+    - cdi-api-0:1.2-8.module+el8+2452+b359bfcd.noarch
+    - cdi-api-javadoc-0:1.2-8.module+el8+2452+b359bfcd.noarch
+    - sisu-inject-1:0.3.3-6.module+el8+2452+b359bfcd.noarch
+    - sisu-plexus-1:0.3.3-6.module+el8+2452+b359bfcd.noarch
+    - sisu-javadoc-1:0.3.3-6.module+el8+2452+b359bfcd.noarch
+    - maven-wagon-0:3.1.0-1.module+el8+2452+b359bfcd.noarch
+    - maven-wagon-provider-api-0:3.1.0-1.module+el8+2452+b359bfcd.noarch
+    - maven-wagon-providers-0:3.1.0-1.module+el8+2452+b359bfcd.noarch
+    - maven-wagon-file-0:3.1.0-1.module+el8+2452+b359bfcd.noarch
+    - maven-wagon-ftp-0:3.1.0-1.module+el8+2452+b359bfcd.noarch
+    - maven-wagon-http-0:3.1.0-1.module+el8+2452+b359bfcd.noarch
+    - maven-wagon-http-shared-0:3.1.0-1.module+el8+2452+b359bfcd.noarch
+    - maven-wagon-http-lightweight-0:3.1.0-1.module+el8+2452+b359bfcd.noarch
+    - maven-wagon-javadoc-0:3.1.0-1.module+el8+2452+b359bfcd.noarch
+    - jansi-0:1.17.1-1.module+el8+2452+b359bfcd.noarch
+    - jansi-javadoc-0:1.17.1-1.module+el8+2452+b359bfcd.noarch
+    - maven-resolver-1:1.1.1-2.module+el8+2452+b359bfcd.noarch
+    - maven-resolver-api-1:1.1.1-2.module+el8+2452+b359bfcd.noarch
+    - maven-resolver-spi-1:1.1.1-2.module+el8+2452+b359bfcd.noarch
+    - maven-resolver-util-1:1.1.1-2.module+el8+2452+b359bfcd.noarch
+    - maven-resolver-impl-1:1.1.1-2.module+el8+2452+b359bfcd.noarch
+    - maven-resolver-test-util-1:1.1.1-2.module+el8+2452+b359bfcd.noarch
+    - maven-resolver-connector-basic-1:1.1.1-2.module+el8+2452+b359bfcd.noarch
+    - maven-resolver-transport-classpath-1:1.1.1-2.module+el8+2452+b359bfcd.noarch
+    - maven-resolver-transport-file-1:1.1.1-2.module+el8+2452+b359bfcd.noarch
+    - maven-resolver-transport-http-1:1.1.1-2.module+el8+2452+b359bfcd.noarch
+    - maven-resolver-transport-wagon-1:1.1.1-2.module+el8+2452+b359bfcd.noarch
+    - maven-resolver-javadoc-1:1.1.1-2.module+el8+2452+b359bfcd.noarch
+    - maven-1:3.5.4-5.module+el8+2452+b359bfcd.noarch
+    - maven-lib-1:3.5.4-5.module+el8+2452+b359bfcd.noarch
+    - maven-javadoc-1:3.5.4-5.module+el8+2452+b359bfcd.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: mariadb
+  stream: '10.5'
+  version: '8050020220204122540'
+  context: c5368500
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - GPLv2
+    - GPLv2 with exceptions and LGPLv2 and BSD
+    - LGPLv2+
+  summary: MariaDB Module
+  description: MariaDB is a community developed branch of MySQL. MariaDB is a multi-user,
+    multi-threaded SQL database server. It is a client/server implementation consisting
+    of a server daemon (mysqld) and many different client programs and libraries.
+    The base package contains the standard MariaDB/MySQL client programs and generic
+    MySQL files.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.5.0.z
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      Judy:
+        rationale: MariaDB dependency for OQgraph computation engine
+        ref: stream-mariadb-10.5-rhel-8.5.0
+        buildorder: '4'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      asio:
+        rationale: Galera dependency for asynchronous I/O operation
+        ref: stream-mariadb-10.5-rhel-8.5.0
+        buildorder: '12'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      galera:
+        rationale: Galera package for MariaDB server replication
+        ref: stream-10.5-rhel-8.5.0
+        buildorder: '16'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      mariadb:
+        rationale: MariaDB package
+        ref: stream-10.5-rhel-8.5.0
+        buildorder: '8'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - mariadb
+    - mariadb-server
+  buildopts:
+    rpms:
+      macros: '%runselftest 1
+
+        %ignore_testsuite_result 0
+
+        '
+  references:
+    community: http://mariadb.org
+    documentation: https://mariadb.com/kb/en/library/documentation/
+    tracker: http://bugzilla.redhat.com
+  profiles:
+    client:
+      rpms:
+      - mariadb
+    galera:
+      rpms:
+      - mariadb-server
+      - mariadb-server-galera
+    server:
+      rpms:
+      - mariadb-server
+  filter:
+    rpms:
+    - Judy-devel
+    - asio-devel
+  artifacts:
+    rpms:
+    - mariadb-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-common-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-errmsg-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-server-galera-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-server-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-oqgraph-engine-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-backup-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-gssapi-server-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-pam-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-server-utils-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-devel-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-embedded-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-embedded-devel-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-test-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-debugsource-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-debuginfo-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-server-debuginfo-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-oqgraph-engine-debuginfo-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-backup-debuginfo-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-gssapi-server-debuginfo-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-pam-debuginfo-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-server-utils-debuginfo-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-embedded-debuginfo-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - mariadb-test-debuginfo-3:10.5.13-1.module+el8.5.0+14125+d11efe18.x86_64
+    - galera-0:26.4.9-4.module+el8.5.0+14125+d11efe18.x86_64
+    - galera-debugsource-0:26.4.9-4.module+el8.5.0+14125+d11efe18.x86_64
+    - galera-debuginfo-0:26.4.9-4.module+el8.5.0+14125+d11efe18.x86_64
+    - Judy-0:1.0.5-18.module+el8.4.0+9031+9abc7af9.x86_64
+    - Judy-devel-0:1.0.5-18.module+el8.4.0+9031+9abc7af9.x86_64
+    - Judy-debuginfo-0:1.0.5-18.module+el8.4.0+9031+9abc7af9.x86_64
+    - Judy-debugsource-0:1.0.5-18.module+el8.4.0+9031+9abc7af9.x86_64
+...
