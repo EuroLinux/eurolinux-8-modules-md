@@ -42213,3 +42213,64 @@ data:
     - mariadb-test-3:10.3.32-2.module+el8.5.0+14124+14ced695.x86_64
     - mariadb-test-debuginfo-3:10.3.32-2.module+el8.5.0+14124+14ced695.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: mod_auth_openidc
+  stream: '2.3'
+  version: '8060020220131105504'
+  context: d63f516d
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - ASL 2.0
+    - MIT
+  summary: Apache module suporting OpenID Connect authentication
+  description: This module enables an Apache 2.x web server to operate as an OpenID
+    Connect Relying Party and/or OAuth 2.0 Resource Server.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.6.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      cjose:
+        rationale: Provides JOSE support
+        ref: stream-mod_auth_open_idc-2.3-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      mod_auth_openidc:
+        rationale: Provides the core functionality.
+        ref: stream-mod_auth_open_idc-2.3-rhel-8.6.0
+        buildorder: '2'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  references:
+    community: https://github.com/zmartzone/mod_auth_openidc
+    documentation: https://github.com/zmartzone/mod_auth_openidc/wiki
+    tracker: https://github.com/zmartzone/mod_auth_openidc/issues
+  artifacts:
+    rpms:
+    - cjose-0:0.6.1-2.module+el8+2454+f890a43a.x86_64
+    - cjose-debuginfo-0:0.6.1-2.module+el8+2454+f890a43a.x86_64
+    - cjose-debugsource-0:0.6.1-2.module+el8+2454+f890a43a.x86_64
+    - cjose-devel-0:0.6.1-2.module+el8+2454+f890a43a.x86_64
+    - mod_auth_openidc-0:2.3.7-11.module+el8.6.0+14082+b6f23e95.x86_64
+    - mod_auth_openidc-debuginfo-0:2.3.7-11.module+el8.6.0+14082+b6f23e95.x86_64
+    - mod_auth_openidc-debugsource-0:2.3.7-11.module+el8.6.0+14082+b6f23e95.x86_64
+...
