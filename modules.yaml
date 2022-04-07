@@ -42274,3 +42274,3720 @@ data:
     - mod_auth_openidc-debuginfo-0:2.3.7-11.module+el8.6.0+14082+b6f23e95.x86_64
     - mod_auth_openidc-debugsource-0:2.3.7-11.module+el8.6.0+14082+b6f23e95.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: freeradius
+  stream: '3.0'
+  version: '8060020211210155858'
+  context: bc93984d
+  arch: x86_64
+  license:
+    module:
+    - GPL
+    content:
+    - GPLv2+ and LGPLv2+
+  summary: High-performance and highly configurable free RADIUS server
+  description: 'The FreeRADIUS Server Project is a high performance and highly configurable
+    GPL''d free RADIUS server. The server is similar in some respects to Livingston''s
+    2.0 server.  While FreeRADIUS started as a variant of the Cistron RADIUS server,
+    they don''t share a lot in common any more. It now has many more features than
+    Cistron or Livingston, and is much more configurable.
+
+    FreeRADIUS is an Internet authentication daemon, which implements the RADIUS protocol,
+    as defined in RFC 2865 (and others). It allows Network Access Servers (NAS boxes)
+    to perform authentication for dial-up users. There are also RADIUS clients available
+    for Web servers, firewalls, Unix logins, and more.  Using RADIUS allows authentication
+    and authorization for a network to be centralized, and minimizes the amount of
+    re-configuration which has to be done when adding or deleting new users.'
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.26'
+      platform:
+      - el8.6.0
+    requires:
+      perl:
+      - '5.26'
+      platform:
+      - el8
+  components:
+    rpms:
+      freeradius:
+        rationale: Provides the FreeRADIUS server
+        ref: stream-3.0-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - freeradius
+    - freeradius-devel
+    - freeradius-doc
+    - freeradius-krb5
+    - freeradius-ldap
+    - freeradius-mysql
+    - freeradius-perl
+    - freeradius-postgresql
+    - freeradius-rest
+    - freeradius-sqlite
+    - freeradius-unixODBC
+    - freeradius-utils
+  profiles:
+    server:
+      description: The FreeRADIUS Server
+      rpms:
+      - freeradius
+  artifacts:
+    rpms:
+    - freeradius-krb5-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-postgresql-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-utils-debuginfo-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-mysql-debuginfo-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-unixODBC-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - python3-freeradius-debuginfo-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-ldap-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-debuginfo-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-unixODBC-debuginfo-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-debugsource-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-ldap-debuginfo-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-doc-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - python3-freeradius-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-perl-debuginfo-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-krb5-debuginfo-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-rest-debuginfo-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-perl-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-postgresql-debuginfo-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-mysql-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-rest-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-utils-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-sqlite-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-devel-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+    - freeradius-sqlite-debuginfo-0:3.0.20-12.module+el8.6.0+13617+542eca26.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl
+  stream: '5.32'
+  version: '8060020211122091432'
+  context: e82d91b1
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - (GPL+ or Artistic) and (GPLv2+ or Artistic) and MIT
+    - (GPL+ or Artistic) and Artistic 2.0 and UCD
+    - (GPL+ or Artistic) and BSD
+    - (GPL+ or Artistic) and BSD and HSRL and MIT and UCD and Public domain
+    - (GPL+ or Artistic) and CC0 and Public Domain
+    - (GPL+ or Artistic) and FSFAP
+    - (GPL+ or Artistic) and MIT
+    - (GPL+ or Artistic) and Public Domain
+    - (GPL+ or Artistic) and UCD
+    - (GPL+ or Artistic) and UCD and Public Domain
+    - (GPL+ or Artistic) and Unicode
+    - (GPL+ or Artistic) and zlib
+    - ASL 2.0
+    - GPL+
+    - GPL+ or Artistic
+    - GPLv2+ or Artistic
+    - GPLv3+
+    - MIT
+    - TTWL
+  summary: Practical Extraction and Report Language
+  description: 'Perl is a high-level programming language with roots in C, sed, awk
+    and shell scripting. Perl is good at handling processes and files, and is especially
+    good at handling text. Perl''s hallmarks are practicality and efficiency. While
+    it is used to do a lot of different things, Perl''s most common applications are
+    system administration utilities and web programming.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl-bootstrap:
+      - '5.32'
+      platform:
+      - el8.6.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      perl:
+        rationale: The Perl interpreter.
+        ref: stream-5.32-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Algorithm-Diff:
+        rationale: A run-time dependency.
+        ref: stream-1.1903-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Archive-Tar:
+        rationale: Core Perl API.
+        ref: stream-2.38-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Archive-Zip:
+        rationale: A run-time dependency.
+        ref: stream-1.68-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-CPAN:
+        rationale: Core Perl API.
+        ref: stream-2.28-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-CPAN-DistnameInfo:
+        rationale: A run-time dependency.
+        ref: stream-0.12-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-CPAN-Meta:
+        rationale: Core Perl API.
+        ref: stream-2.150010-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-CPAN-Meta-Requirements:
+        rationale: Core Perl API.
+        ref: stream-2.140-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-CPAN-Meta-YAML:
+        rationale: Core Perl API.
+        ref: stream-0.018-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Carp:
+        rationale: Core Perl API.
+        ref: stream-1.50-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Compress-Bzip2:
+        rationale: A run-time dependency.
+        ref: stream-2.28-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Compress-Raw-Bzip2:
+        rationale: Core Perl API.
+        ref: stream-2.096-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Compress-Raw-Lzma:
+        rationale: A run-time dependency.
+        ref: stream-2.096-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Compress-Raw-Zlib:
+        rationale: Core Perl API.
+        ref: stream-2.096-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Config-Perl-V:
+        rationale: Core Perl API.
+        ref: stream-0.32-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-DB_File:
+        rationale: Core Perl API.
+        ref: stream-1.855-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Data-Dumper:
+        rationale: Core Perl API.
+        ref: stream-2.173-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Data-OptList:
+        rationale: A run-time dependency.
+        ref: stream-0.110-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Data-Section:
+        rationale: A run-time dependency.
+        ref: stream-0.200007-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Devel-PPPort:
+        rationale: Core Perl API.
+        ref: stream-3.62-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Devel-Size:
+        rationale: A run-time dependency.
+        ref: stream-0.83-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Digest:
+        rationale: Core Perl API.
+        ref: stream-1.20-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Digest-MD5:
+        rationale: Core Perl API.
+        ref: stream-2.58-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Digest-SHA:
+        rationale: Core Perl API.
+        ref: stream-6.01-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Encode:
+        rationale: Core Perl API.
+        ref: stream-3.08-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Encode-Locale:
+        rationale: A run-time dependency.
+        ref: stream-1.05-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Env:
+        rationale: Core Perl API.
+        ref: stream-1.04-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Exporter:
+        rationale: Core Perl API.
+        ref: stream-5.74-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-ExtUtils-CBuilder:
+        rationale: Core Perl API.
+        ref: stream-0.280236-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-ExtUtils-Install:
+        rationale: Core Perl API.
+        ref: stream-2.20-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-ExtUtils-MakeMaker:
+        rationale: Core Perl API.
+        ref: stream-7.46-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-ExtUtils-Manifest:
+        rationale: Core Perl API.
+        ref: stream-1.73-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-ExtUtils-ParseXS:
+        rationale: Core Perl API.
+        ref: stream-3.40-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Fedora-VSP:
+        rationale: A run-time dependency.
+        ref: stream-0.001-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-File-Fetch:
+        rationale: Core Perl API.
+        ref: stream-1.00-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-File-HomeDir:
+        rationale: A run-time dependency.
+        ref: stream-1.004-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-File-Path:
+        rationale: Core Perl API.
+        ref: stream-2.16-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-File-Temp:
+        rationale: Core Perl API.
+        ref: stream-0.231.100-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-File-Which:
+        rationale: A run-time dependency.
+        ref: stream-1.23-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Filter:
+        rationale: Core Perl API.
+        ref: stream-1.60-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Filter-Simple:
+        rationale: Core Perl API.
+        ref: stream-0.96-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Getopt-Long:
+        rationale: Core Perl API.
+        ref: stream-1.52-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-HTTP-Tiny:
+        rationale: Core Perl API.
+        ref: stream-0.078-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-IO-Compress:
+        rationale: Core Perl API.
+        ref: stream-2.096-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-IO-Compress-Lzma:
+        rationale: A run-time dependency.
+        ref: stream-2.096-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-IO-Socket-IP:
+        rationale: Core Perl API.
+        ref: stream-0.41-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-IPC-Cmd:
+        rationale: Core Perl API.
+        ref: stream-1.00-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-IPC-SysV:
+        rationale: Core Perl API.
+        ref: stream-2.09-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-IPC-System-Simple:
+        rationale: A run-time dependency.
+        ref: stream-1.30-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Importer:
+        rationale: A run-time dependency.
+        ref: stream-0.025-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-JSON-PP:
+        rationale: Core Perl API.
+        ref: stream-4.04-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Locale-Maketext:
+        rationale: Core Perl API.
+        ref: stream-1.29-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-MIME-Base64:
+        rationale: Core Perl API.
+        ref: stream-3.15-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-MRO-Compat:
+        rationale: A run-time dependency.
+        ref: stream-0.13-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Math-BigInt:
+        rationale: Core Perl API.
+        ref: stream-1.9998.18-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Math-BigInt-FastCalc:
+        rationale: Core Perl API.
+        ref: stream-0.5009-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Math-BigRat:
+        rationale: Core Perl API.
+        ref: stream-0.2613-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Module-Build:
+        rationale: A run-time dependency.
+        ref: stream-0.4231-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Module-CoreList:
+        rationale: Core Perl API.
+        ref: stream-5.20211020-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Module-Load:
+        rationale: Core Perl API.
+        ref: stream-0.36-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Module-Load-Conditional:
+        rationale: Core Perl API.
+        ref: stream-0.74-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Module-Metadata:
+        rationale: Core Perl API.
+        ref: stream-1.000036-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Object-HashBase:
+        rationale: A run-time dependency.
+        ref: stream-0.009-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Package-Generator:
+        rationale: A run-time dependency.
+        ref: stream-1.106-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Params-Check:
+        rationale: Core Perl API.
+        ref: stream-0.38-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Params-Util:
+        rationale: A run-time dependency.
+        ref: stream-1.102-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-PathTools:
+        rationale: Core Perl API.
+        ref: stream-3.78-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Perl-OSType:
+        rationale: Core Perl API.
+        ref: stream-1.010-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-PerlIO-via-QuotedPrint:
+        rationale: Core Perl API.
+        ref: stream-0.09-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Pod-Checker:
+        rationale: Core Perl API.
+        ref: stream-1.74-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Pod-Escapes:
+        rationale: Core Perl API.
+        ref: stream-1.07-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Pod-Parser:
+        rationale: Core Perl API.
+        ref: stream-1.63-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Pod-Perldoc:
+        rationale: Core Perl API.
+        ref: stream-3.28.01-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Pod-Simple:
+        rationale: Core Perl API.
+        ref: stream-3.42-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Pod-Usage:
+        rationale: Core Perl API.
+        ref: stream-2.01-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Scalar-List-Utils:
+        rationale: Core Perl API.
+        ref: stream-1.55-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Socket:
+        rationale: Core Perl API.
+        ref: stream-2.031-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Software-License:
+        rationale: A run-time dependency.
+        ref: stream-0.103014-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Storable:
+        rationale: Core Perl API.
+        ref: stream-3.21-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Sub-Exporter:
+        rationale: A run-time dependency.
+        ref: stream-0.987-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Sub-Install:
+        rationale: A run-time dependency.
+        ref: stream-0.928-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Sys-Syslog:
+        rationale: Core Perl API.
+        ref: stream-0.36-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Term-ANSIColor:
+        rationale: Core Perl API.
+        ref: stream-5.01-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Term-Cap:
+        rationale: Core Perl API.
+        ref: stream-1.17-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Term-Table:
+        rationale: A run-time dependency.
+        ref: stream-0.015-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Test-Harness:
+        rationale: Core Perl API.
+        ref: stream-3.41-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Test-Simple:
+        rationale: Core Perl API.
+        ref: stream-1.302181-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Text-Balanced:
+        rationale: Core Perl API.
+        ref: stream-2.04-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Text-Diff:
+        rationale: A run-time dependency.
+        ref: stream-1.45-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Text-Glob:
+        rationale: A run-time dependency.
+        ref: stream-0.11-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Text-ParseWords:
+        rationale: Core Perl API.
+        ref: stream-3.30-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Text-Tabs+Wrap:
+        rationale: Core Perl API.
+        ref: stream-2013.0523-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Text-Template:
+        rationale: A run-time dependency.
+        ref: stream-1.55-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Thread-Queue:
+        rationale: Core Perl API.
+        ref: stream-3.14-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Time-HiRes:
+        rationale: Core Perl API.
+        ref: stream-1.9764-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Time-Local:
+        rationale: Core Perl API.
+        ref: stream-1.300-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-URI:
+        rationale: A run-time dependency.
+        ref: stream-1.76-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Unicode-Collate:
+        rationale: Core Perl API.
+        ref: stream-1.29-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Unicode-Normalize:
+        rationale: Core Perl API.
+        ref: stream-1.27-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-autodie:
+        rationale: Core Perl API.
+        ref: stream-2.34-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-bignum:
+        rationale: Core Perl API.
+        ref: stream-0.51-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-constant:
+        rationale: Core Perl API.
+        ref: stream-1.33-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-experimental:
+        rationale: Core Perl API.
+        ref: stream-0.025-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-generators:
+        rationale: A developmental support.
+        ref: stream-1.13-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-inc-latest:
+        rationale: A run-time dependency.
+        ref: stream-0.500-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-libnet:
+        rationale: Core Perl API.
+        ref: stream-3.13-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-local-lib:
+        rationale: A run-time dependency.
+        ref: stream-2.000024-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-parent:
+        rationale: Core Perl API.
+        ref: stream-0.238-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-perlfaq:
+        rationale: Core Perl API.
+        ref: stream-5.20210520-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-podlators:
+        rationale: Core Perl API.
+        ref: stream-4.14-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-threads:
+        rationale: Core Perl API.
+        ref: stream-2.25-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-threads-shared:
+        rationale: Core Perl API.
+        ref: stream-1.61-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-version:
+        rationale: Core Perl API.
+        ref: stream-0.99.29-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - perl
+    - perl-Archive-Tar
+    - perl-Attribute-Handlers
+    - perl-AutoLoader
+    - perl-AutoSplit
+    - perl-B
+    - perl-Benchmark
+    - perl-CPAN
+    - perl-CPAN-Meta
+    - perl-CPAN-Meta-Requirements
+    - perl-CPAN-Meta-YAML
+    - perl-Carp
+    - perl-Class-Struct
+    - perl-Compress-Raw-Bzip2
+    - perl-Compress-Raw-Zlib
+    - perl-Config-Extensions
+    - perl-Config-Perl-V
+    - perl-DBM_Filter
+    - perl-DB_File
+    - perl-Data-Dumper
+    - perl-Devel-PPPort
+    - perl-Devel-Peek
+    - perl-Devel-SelfStubber
+    - perl-Digest
+    - perl-Digest-MD5
+    - perl-Digest-SHA
+    - perl-DirHandle
+    - perl-Dumpvalue
+    - perl-DynaLoader
+    - perl-Encode
+    - perl-Encode-devel
+    - perl-English
+    - perl-Env
+    - perl-Errno
+    - perl-Exporter
+    - perl-ExtUtils-CBuilder
+    - perl-ExtUtils-Command
+    - perl-ExtUtils-Constant
+    - perl-ExtUtils-Embed
+    - perl-ExtUtils-Install
+    - perl-ExtUtils-MM-Utils
+    - perl-ExtUtils-MakeMaker
+    - perl-ExtUtils-Manifest
+    - perl-ExtUtils-Miniperl
+    - perl-ExtUtils-ParseXS
+    - perl-Fcntl
+    - perl-File-Basename
+    - perl-File-Compare
+    - perl-File-Copy
+    - perl-File-DosGlob
+    - perl-File-Fetch
+    - perl-File-Find
+    - perl-File-Path
+    - perl-File-Temp
+    - perl-File-stat
+    - perl-FileCache
+    - perl-FileHandle
+    - perl-Filter
+    - perl-Filter-Simple
+    - perl-FindBin
+    - perl-GDBM_File
+    - perl-Getopt-Long
+    - perl-Getopt-Std
+    - perl-HTTP-Tiny
+    - perl-Hash-Util
+    - perl-Hash-Util-FieldHash
+    - perl-I18N-Collate
+    - perl-I18N-LangTags
+    - perl-I18N-Langinfo
+    - perl-IO
+    - perl-IO-Compress
+    - perl-IO-Socket-IP
+    - perl-IO-Zlib
+    - perl-IPC-Cmd
+    - perl-IPC-Open3
+    - perl-IPC-SysV
+    - perl-JSON-PP
+    - perl-Locale-Maketext
+    - perl-Locale-Maketext-Simple
+    - perl-MIME-Base64
+    - perl-Math-BigInt
+    - perl-Math-BigInt-FastCalc
+    - perl-Math-BigRat
+    - perl-Math-Complex
+    - perl-Memoize
+    - perl-Module-CoreList
+    - perl-Module-CoreList-tools
+    - perl-Module-Load
+    - perl-Module-Load-Conditional
+    - perl-Module-Loaded
+    - perl-Module-Metadata
+    - perl-NDBM_File
+    - perl-NEXT
+    - perl-Net
+    - perl-Net-Ping
+    - perl-ODBM_File
+    - perl-Opcode
+    - perl-POSIX
+    - perl-Params-Check
+    - perl-PathTools
+    - perl-Perl-OSType
+    - perl-PerlIO-via-QuotedPrint
+    - perl-Pod-Checker
+    - perl-Pod-Escapes
+    - perl-Pod-Functions
+    - perl-Pod-Html
+    - perl-Pod-Parser
+    - perl-Pod-Perldoc
+    - perl-Pod-Simple
+    - perl-Pod-Usage
+    - perl-Safe
+    - perl-Scalar-List-Utils
+    - perl-Search-Dict
+    - perl-SelectSaver
+    - perl-SelfLoader
+    - perl-Socket
+    - perl-Storable
+    - perl-Symbol
+    - perl-Sys-Hostname
+    - perl-Sys-Syslog
+    - perl-Term-ANSIColor
+    - perl-Term-Cap
+    - perl-Term-Complete
+    - perl-Term-ReadLine
+    - perl-Test
+    - perl-Test-Harness
+    - perl-Test-Simple
+    - perl-Text-Abbrev
+    - perl-Text-Balanced
+    - perl-Text-ParseWords
+    - perl-Text-Tabs+Wrap
+    - perl-Thread
+    - perl-Thread-Queue
+    - perl-Thread-Semaphore
+    - perl-Tie
+    - perl-Tie-File
+    - perl-Tie-Memoize
+    - perl-Tie-RefHash
+    - perl-Time
+    - perl-Time-HiRes
+    - perl-Time-Local
+    - perl-Time-Piece
+    - perl-Unicode-Collate
+    - perl-Unicode-Normalize
+    - perl-Unicode-UCD
+    - perl-User-pwent
+    - perl-autodie
+    - perl-autouse
+    - perl-base
+    - perl-bignum
+    - perl-blib
+    - perl-constant
+    - perl-debugger
+    - perl-deprecate
+    - perl-devel
+    - perl-diagnostics
+    - perl-doc
+    - perl-encoding
+    - perl-encoding-warnings
+    - perl-experimental
+    - perl-fields
+    - perl-filetest
+    - perl-generators
+    - perl-if
+    - perl-interpreter
+    - perl-less
+    - perl-lib
+    - perl-libnet
+    - perl-libnetcfg
+    - perl-libs
+    - perl-locale
+    - perl-macros
+    - perl-meta-notation
+    - perl-mro
+    - perl-open
+    - perl-overload
+    - perl-overloading
+    - perl-parent
+    - perl-perlfaq
+    - perl-ph
+    - perl-podlators
+    - perl-sigtrap
+    - perl-sort
+    - perl-subs
+    - perl-threads
+    - perl-threads-shared
+    - perl-utils
+    - perl-vars
+    - perl-version
+    - perl-vmsish
+  buildopts:
+    rpms:
+      macros: '%_with_perl_enables_groff 1
+
+        %_without_perl_enables_syslog_test 1
+
+        %_with_perl_enables_systemtap 1
+
+        %_without_perl_enables_tcsh 1
+
+        %_without_perl_Archive_Tar_enables_optional_test 1
+
+        %_without_perl_autodie_enables_optional_test 1
+
+        %_without_perl_Compress_Bzip2_enables_optional_test 1
+
+        %_without_perl_Compress_Raw_Bzip2_enables_optional_test 1
+
+        %_without_perl_Compress_Raw_Lzma_enables_optional_test 1
+
+        %_without_perl_Compress_Raw_Zlib_enables_optional_test 1
+
+        %_without_perl_constant_enables_optional_test 1
+
+        %_without_perl_CPAN_enables_optional_test 1
+
+        %_without_perl_CPAN_Meta_Requirements_enables_optional_test 1
+
+        %_without_perl_CPAN_Meta_YAML_enables_extra_test 1
+
+        %_without_perl_Data_OptList_enables_extra_test 1
+
+        %_without_perl_Data_Section_enables_extra_test 1
+
+        %_without_perl_Data_Section_enables_optional_test 1
+
+        %_without_perl_DB_File_enables_optional_test 1
+
+        %_without_perl_Devel_PPPort_enables_optional_test 1
+
+        %_without_perl_Devel_Size_enables_optional_test 1
+
+        %_without_perl_Digest_SHA_enables_optional_test 1
+
+        %_without_perl_Exporter_enables_optional_test 1
+
+        %_without_perl_ExtUtils_Install_enables_optional_test 1
+
+        %_without_perl_Filter_enables_optional_test 1
+
+        %_without_perl_IO_Compress_enables_optional_test 1
+
+        %_without_perl_IO_Compress_Lzma_enables_optional_test 1
+
+        %_without_perl_IO_Socket_IP_enables_optional_test 1
+
+        %_without_perl_IPC_Cmd_enables_IPC_Run 1
+
+        %_without_perl_IPC_System_Simple_enables_optional_test 1
+
+        %_without_perl_IPC_SysV_enables_optional_test 1
+
+        %_without_perl_JSON_PP_enables_optional_test 1
+
+        %_without_perl_libnet_enables_ssl 1
+
+        %_without_perl_Locale_Maketext_enables_optional_test 1
+
+        %_without_perl_Module_Build_enables_optional_test 1
+
+        %_without_perl_Module_CoreList_enables_optional_test 1
+
+        %_without_perl_Package_Generator_enables_extra_test 1
+
+        %_without_perl_Perl_OSType_enables_optional_test 1
+
+        %_without_perl_Pod_Parser_enables_optional_test 1
+
+        %_without_perl_Pod_Perldoc_enables_tk_test 1
+
+        %_without_perl_Pod_Simple_enables_optional_test 1
+
+        %_without_perl_Software_License_enables_extra_test 1
+
+        %_without_perl_Software_License_enables_optional_test 1
+
+        %_without_perl_Sub_Exporter_enables_extra_test 1
+
+        %_without_perl_Sub_Install_enables_optional_test 1
+
+        %_without_perl_Sys_Syslog_enables_optional_test 1
+
+        %_without_perl_Term_Size_Any_enabels_optional_test 1
+
+        %_with_perl_Term_Table_enables_terminal 1
+
+        %_without_perl_Term_Table_enables_unicode 1
+
+        %_without_perl_Test_Harness_enables_optional_test 1
+
+        %_without_perl_Test_NoWarnings_enables_stack_trace 1
+
+        %_without_perl_Test_Simple_enables_Module_Pluggable 1
+
+        %_without_perl_Test_Simple_enables_optional_test 1
+
+        %_without_perl_Text_Template_enables_optional_test 1
+
+        %_without_perl_Try_Tiny_enables_optional_test 1
+
+        %_without_perl_URI_enables_Business_ISBN 1
+
+        %_without_perl_version_enables_optional_test 1
+
+        '
+  references:
+    community: https://www.perl.org/
+    documentation: https://www.perl.org/docs.html
+    tracker: https://bugzilla.redhat.com/buglist.cgi?classification=Red%20Hat&component=perl-5.30-module&product=Red%20Hat%20Enterprise%20Linux%208
+  profiles:
+    common:
+      description: Interpreter and all Perl modules bundled within upstream Perl.
+      rpms:
+      - perl
+    minimal:
+      description: Only the interpreter as a standalone executable.
+      rpms:
+      - perl-interpreter
+  filter:
+    rpms:
+    - perl-Compress-Raw-Bzip2-tests
+    - perl-Compress-Raw-Zlib-tests
+    - perl-Digest-tests
+    - perl-ExtUtils-MakeMaker-tests
+    - perl-IO-Compress-tests
+    - perl-Module-CoreList-tests
+    - perl-Storable-tests
+    - perl-URI-tests
+    - perl-tests
+  artifacts:
+    rpms:
+    - perl-I18N-Langinfo-debuginfo-0:0.19-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-interpreter-debuginfo-4:5.32.1-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-URI-0:1.76-5.module+el8.6.0+13324+628a2397.noarch
+    - perl-Compress-Bzip2-debugsource-0:2.28-2.module+el8.6.0+13324+628a2397.x86_64
+    - perl-IPC-System-Simple-0:1.30-3.module+el8.6.0+13324+628a2397.noarch
+    - perl-parent-1:0.238-457.module+el8.6.0+13324+628a2397.noarch
+    - perl-Params-Util-0:1.102-2.module+el8.6.0+13324+628a2397.x86_64
+    - perl-IPC-Open3-0:1.21-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Devel-Peek-0:1.28-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-JSON-PP-1:4.04-2.module+el8.6.0+13324+628a2397.noarch
+    - perl-doc-0:5.32.1-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Pod-Escapes-1:1.07-396.module+el8.6.0+13324+628a2397.noarch
+    - perl-IPC-SysV-debugsource-0:2.09-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-NEXT-0:0.67-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-inc-latest-2:0.500-10.module+el8.6.0+13324+628a2397.noarch
+    - perl-generators-0:1.13-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-English-0:1.11-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-macros-4:5.32.1-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Compress-Raw-Lzma-debugsource-0:2.096-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-lib-0:0.65-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Scalar-List-Utils-debugsource-4:1.55-457.module+el8.6.0+13324+628a2397.x86_64
+    - perl-File-HomeDir-0:1.004-6.module+el8.6.0+13324+628a2397.noarch
+    - perl-Dumpvalue-0:2.27-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Encode-debuginfo-4:3.08-461.module+el8.6.0+13324+628a2397.x86_64
+    - perl-debuginfo-4:5.32.1-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-constant-0:1.33-1001.module+el8.6.0+13324+628a2397.noarch
+    - perl-debugger-0:1.56-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Pod-Checker-4:1.74-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-Sub-Exporter-0:0.987-17.module+el8.6.0+13324+628a2397.noarch
+    - perl-Compress-Raw-Zlib-debugsource-0:2.096-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-diagnostics-0:1.37-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Fcntl-0:1.13-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-ODBM_File-debuginfo-0:1.16-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Data-Dumper-0:2.174-440.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Object-HashBase-tools-0:0.009-4.module+el8.6.0+13324+628a2397.noarch
+    - perl-Math-BigInt-FastCalc-debugsource-0:0.500.900-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-File-Path-0:2.16-439.module+el8.6.0+13324+628a2397.noarch
+    - perl-Class-Struct-0:0.66-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-ph-0:5.32.1-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-if-0:0.60.800-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Safe-0:2.41-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Hash-Util-FieldHash-0:1.20-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Text-Tabs+Wrap-0:2013.0523-396.module+el8.6.0+13324+628a2397.noarch
+    - perl-Module-Load-1:0.36-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-Compress-Raw-Lzma-0:2.096-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-ODBM_File-0:1.16-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-File-stat-0:1.09-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Encode-devel-4:3.08-461.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Module-Build-2:0.42.31-5.module+el8.6.0+13324+628a2397.noarch
+    - perl-Term-ReadLine-0:1.17-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-encoding-4:3.00-461.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Exporter-0:5.74-458.module+el8.6.0+13324+628a2397.noarch
+    - perl-Module-CoreList-1:5.20211020-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-DB_File-debugsource-0:1.855-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Socket-debuginfo-4:2.031-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Math-BigRat-0:0.2614-2.module+el8.6.0+13324+628a2397.noarch
+    - perl-sigtrap-0:1.09-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Net-Ping-0:2.72-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Devel-Size-0:0.83-3.module+el8.6.0+13324+628a2397.x86_64
+    - perl-POSIX-debuginfo-0:1.94-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-4:5.32.1-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-IPC-SysV-debuginfo-0:2.09-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-experimental-0:0.025-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-Module-CoreList-tools-1:5.20211020-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-Pod-Usage-4:2.01-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-Data-Section-0:0.200007-8.module+el8.6.0+13324+628a2397.noarch
+    - perl-Unicode-Normalize-debuginfo-0:1.27-458.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Digest-MD5-debuginfo-0:2.58-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Term-ANSIColor-0:5.01-458.module+el8.6.0+13324+628a2397.noarch
+    - perl-vars-0:1.05-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Hash-Util-debuginfo-0:0.23-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-IO-Zlib-1:1.10-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-threads-shared-debuginfo-0:1.61-457.module+el8.6.0+13324+628a2397.x86_64
+    - perl-I18N-LangTags-0:0.44-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-IPC-SysV-0:2.09-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-CPAN-Meta-Requirements-0:2.140-397.module+el8.6.0+13324+628a2397.noarch
+    - perl-ExtUtils-Install-0:2.20-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-Text-ParseWords-0:3.30-396.module+el8.6.0+13324+628a2397.noarch
+    - perl-Params-Util-debuginfo-0:1.102-2.module+el8.6.0+13324+628a2397.x86_64
+    - perl-sort-0:2.04-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-libnet-0:3.13-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-perlfaq-0:5.20210520-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-podlators-1:4.14-457.module+el8.6.0+13324+628a2397.noarch
+    - perl-I18N-Collate-0:1.02-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-overloading-0:0.02-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Compress-Raw-Bzip2-debugsource-0:2.096-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Memoize-0:1.03-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Text-Glob-0:0.11-5.module+el8.6.0+13324+628a2397.noarch
+    - perl-mro-0:1.23-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-tests-4:5.32.1-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-ExtUtils-Embed-0:1.35-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-version-7:0.99.29-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-ExtUtils-ParseXS-1:3.40-439.module+el8.6.0+13324+628a2397.noarch
+    - perl-Digest-SHA-1:6.02-2.module+el8.6.0+13324+628a2397.x86_64
+    - perl-HTTP-Tiny-0:0.078-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-FileCache-0:1.10-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-meta-notation-0:5.32.1-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Math-Complex-0:1.59-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Compress-Bzip2-debuginfo-0:2.28-2.module+el8.6.0+13324+628a2397.x86_64
+    - perl-utils-0:5.32.1-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-AutoSplit-0:5.74-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Test-Simple-3:1.302181-2.module+el8.6.0+13324+628a2397.noarch
+    - perl-Devel-PPPort-0:3.62-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Params-Check-1:0.38-396.module+el8.6.0+13324+628a2397.noarch
+    - perl-Errno-0:1.30-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Term-Complete-0:1.403-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-File-Compare-0:1.100.600-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Filter-debugsource-2:1.60-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-ExtUtils-MakeMaker-2:7.46-3.module+el8.6.0+13324+628a2397.noarch
+    - perl-Config-Perl-V-0:0.32-441.module+el8.6.0+13324+628a2397.noarch
+    - perl-Pod-Functions-0:1.13-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-SelfLoader-0:1.26-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Math-BigInt-FastCalc-0:0.500.900-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Archive-Zip-0:1.68-3.module+el8.6.0+13324+628a2397.noarch
+    - perl-Hash-Util-FieldHash-debuginfo-0:1.20-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Test-Harness-1:3.42-2.module+el8.6.0+13324+628a2397.noarch
+    - perl-Thread-Semaphore-0:2.13-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Digest-MD5-0:2.58-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-GDBM_File-0:1.18-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Module-Loaded-1:0.08-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Thread-0:3.05-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-CPAN-DistnameInfo-0:0.12-13.module+el8.6.0+13324+628a2397.noarch
+    - perl-Filter-debuginfo-2:1.60-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-PerlIO-via-QuotedPrint-0:0.09-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-PathTools-0:3.78-439.module+el8.6.0+13324+628a2397.x86_64
+    - perl-NDBM_File-debuginfo-0:1.15-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Data-OptList-0:0.110-7.module+el8.6.0+13324+628a2397.noarch
+    - perl-encoding-warnings-0:0.13-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Term-Table-0:0.015-2.module+el8.6.0+13324+628a2397.noarch
+    - perl-Digest-0:1.20-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-File-Basename-0:2.85-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Software-License-0:0.103014-5.module+el8.6.0+13324+628a2397.noarch
+    - perl-Pod-Simple-1:3.42-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-ExtUtils-CBuilder-1:0.280236-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-Net-0:1.02-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Encode-debugsource-4:3.08-461.module+el8.6.0+13324+628a2397.x86_64
+    - perl-mro-debuginfo-0:1.23-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Scalar-List-Utils-debuginfo-4:1.55-457.module+el8.6.0+13324+628a2397.x86_64
+    - perl-DB_File-0:1.855-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-locale-0:1.09-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Devel-SelfStubber-0:1.06-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-overload-0:1.31-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Digest-SHA-debugsource-1:6.02-2.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Pod-Parser-0:1.63-1001.module+el8.6.0+13382+312b6629.noarch
+    - perl-DB_File-debuginfo-0:1.855-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-ExtUtils-Manifest-1:1.73-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-open-0:1.12-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-local-lib-0:2.000024-7.module+el8.6.0+13324+628a2397.noarch
+    - perl-NDBM_File-0:1.15-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-fields-0:2.27-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-CPAN-0:2.28-5.module+el8.6.0+13324+628a2397.noarch
+    - perl-Archive-Tar-0:2.38-3.module+el8.6.0+13324+628a2397.noarch
+    - perl-Tie-File-0:1.06-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-GDBM_File-debuginfo-0:1.18-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-filetest-0:1.03-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Time-0:1.03-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Hash-Util-0:0.23-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Env-0:1.04-396.module+el8.6.0+13324+628a2397.noarch
+    - perl-Getopt-Long-1:2.52-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-Scalar-List-Utils-4:1.55-457.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Digest-MD5-debugsource-0:2.58-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Tie-0:4.6-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Data-Dumper-debugsource-0:2.174-440.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Text-Template-0:1.58-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-Fedora-VSP-0:0.001-10.module+el8.6.0+13324+628a2397.noarch
+    - perl-Algorithm-Diff-0:1.1903-10.module+el8.6.0+13324+628a2397.noarch
+    - perl-POSIX-0:1.94-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-DynaLoader-0:1.47-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-ExtUtils-Command-2:7.46-3.module+el8.6.0+13324+628a2397.noarch
+    - perl-Tie-RefHash-0:1.39-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-IO-Socket-IP-0:0.41-2.module+el8.6.0+13324+628a2397.noarch
+    - perl-Importer-0:0.025-6.module+el8.6.0+13324+628a2397.noarch
+    - perl-base-0:2.27-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Unicode-UCD-0:0.75-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Digest-SHA-debuginfo-1:6.02-2.module+el8.6.0+13324+628a2397.x86_64
+    - perl-ExtUtils-Constant-0:0.25-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Text-Abbrev-0:1.02-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Devel-PPPort-debuginfo-0:3.62-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-interpreter-4:5.32.1-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-libs-debuginfo-4:5.32.1-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-CPAN-Meta-YAML-0:0.018-1001.module+el8.6.0+13324+628a2397.noarch
+    - perl-File-DosGlob-0:1.12-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-PathTools-debuginfo-0:3.78-439.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Perl-OSType-0:1.010-397.module+el8.6.0+13324+628a2397.noarch
+    - perl-File-Which-0:1.23-4.module+el8.6.0+13324+628a2397.noarch
+    - perl-Unicode-Collate-debugsource-0:1.29-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-File-Find-0:1.37-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Thread-Queue-0:3.14-457.module+el8.6.0+13324+628a2397.noarch
+    - perl-Module-Load-Conditional-0:0.74-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-B-debuginfo-0:1.80-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Time-HiRes-debugsource-4:1.9764-459.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Sys-Hostname-debuginfo-0:1.23-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Devel-PPPort-debugsource-0:3.62-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-MRO-Compat-0:0.13-5.module+el8.6.0+13324+628a2397.noarch
+    - perl-less-0:0.03-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Text-Balanced-0:2.04-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-Search-Dict-0:1.07-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-bignum-0:0.51-439.module+el8.6.0+13324+628a2397.noarch
+    - perl-threads-shared-0:1.61-457.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Text-Diff-0:1.45-7.module+el8.6.0+13324+628a2397.noarch
+    - perl-ExtUtils-Miniperl-0:1.09-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-version-debugsource-7:0.99.29-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-version-debuginfo-7:0.99.29-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Compress-Bzip2-0:2.28-2.module+el8.6.0+13324+628a2397.x86_64
+    - perl-IPC-Cmd-2:1.04-2.module+el8.6.0+13324+628a2397.noarch
+    - perl-Encode-4:3.08-461.module+el8.6.0+13324+628a2397.x86_64
+    - perl-IO-Compress-Lzma-0:2.096-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-Params-Util-debugsource-0:1.102-2.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Compress-Raw-Zlib-0:2.096-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-DynaLoader-debuginfo-0:1.47-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Devel-Size-debugsource-0:0.83-3.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Time-Piece-debuginfo-0:1.3401-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-File-Copy-0:2.34-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Compress-Raw-Bzip2-0:2.096-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Locale-Maketext-0:1.29-440.module+el8.6.0+13324+628a2397.noarch
+    - perl-Module-Metadata-0:1.000037-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-Compress-Raw-Zlib-debuginfo-0:2.096-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-homedir-0:2.000024-7.module+el8.6.0+13324+628a2397.noarch
+    - perl-File-DosGlob-debuginfo-0:1.12-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-File-Temp-1:0.231.100-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-Data-Dumper-debuginfo-0:2.174-440.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Pod-Perldoc-0:3.28.01-443.module+el8.6.0+13324+628a2397.noarch
+    - perl-libs-4:5.32.1-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Socket-debugsource-4:2.031-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Sys-Syslog-debuginfo-0:0.36-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Unicode-Normalize-0:1.27-458.module+el8.6.0+13324+628a2397.x86_64
+    - perl-I18N-Langinfo-0:0.19-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Devel-Size-debuginfo-0:0.83-3.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Sys-Syslog-0:0.36-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Carp-0:1.50-439.module+el8.6.0+13324+628a2397.noarch
+    - perl-Compress-Raw-Bzip2-debuginfo-0:2.096-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-AutoLoader-0:5.74-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Time-HiRes-debuginfo-4:1.9764-459.module+el8.6.0+13324+628a2397.x86_64
+    - perl-autouse-0:1.11-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-libnetcfg-4:5.32.1-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Sys-Syslog-debugsource-0:0.36-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-IO-debuginfo-0:1.43-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-MIME-Base64-debugsource-0:3.15-1001.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Unicode-Collate-0:1.29-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Term-Cap-0:1.17-396.module+el8.6.0+13324+628a2397.noarch
+    - perl-Encode-Locale-0:1.05-10.module+el8.6.0+13324+628a2397.noarch
+    - perl-Sub-Install-0:0.928-15.module+el8.6.0+13324+628a2397.noarch
+    - perl-MIME-Base64-0:3.15-1001.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Filter-Simple-0:0.96-457.module+el8.6.0+13324+628a2397.noarch
+    - perl-PathTools-debugsource-0:3.78-439.module+el8.6.0+13324+628a2397.x86_64
+    - perl-autodie-0:2.34-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-blib-0:1.07-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Storable-1:3.21-457.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Compress-Raw-Lzma-debuginfo-0:2.096-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Math-BigInt-FastCalc-debuginfo-0:0.500.900-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Storable-debuginfo-1:3.21-457.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Sys-Hostname-0:1.23-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-IO-Compress-0:2.096-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-Tie-Memoize-0:1.1-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-subs-0:1.03-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Math-BigInt-1:1.9998.18-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-threads-debuginfo-1:2.25-457.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Devel-Peek-debuginfo-0:1.28-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-debugsource-4:5.32.1-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-devel-4:5.32.1-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Test-0:1.31-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-threads-shared-debugsource-0:1.61-457.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Fcntl-debuginfo-0:1.13-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-File-Fetch-0:1.00-1.module+el8.6.0+13324+628a2397.noarch
+    - perl-Time-Local-2:1.300-4.module+el8.6.0+13324+628a2397.noarch
+    - perl-ExtUtils-MM-Utils-2:7.46-3.module+el8.6.0+13324+628a2397.noarch
+    - perl-FindBin-0:1.51-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-threads-1:2.25-457.module+el8.6.0+13324+628a2397.x86_64
+    - perl-deprecate-0:0.04-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Filter-2:1.60-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Unicode-Collate-debuginfo-0:1.29-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-FileHandle-0:2.03-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-B-0:1.80-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Symbol-0:1.08-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Storable-debugsource-1:3.21-457.module+el8.6.0+13324+628a2397.x86_64
+    - perl-IO-0:1.43-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Package-Generator-0:1.106-12.module+el8.6.0+13324+628a2397.noarch
+    - perl-threads-debugsource-1:2.25-457.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Object-HashBase-0:0.009-4.module+el8.6.0+13324+628a2397.noarch
+    - perl-Locale-Maketext-Simple-1:0.21-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Config-Extensions-0:0.03-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-vmsish-0:1.04-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-DBM_Filter-0:0.06-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Unicode-Normalize-debugsource-0:1.27-458.module+el8.6.0+13324+628a2397.x86_64
+    - perl-DirHandle-0:1.05-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-MIME-Base64-debuginfo-0:3.15-1001.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Pod-Html-0:1.25-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Opcode-debuginfo-0:1.48-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Time-Piece-0:1.3401-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Opcode-0:1.48-471.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Attribute-Handlers-0:1.01-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-SelectSaver-0:1.02-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-Socket-4:2.031-1.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Getopt-Std-0:1.12-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-CPAN-Meta-0:2.150010-397.module+el8.6.0+13324+628a2397.noarch
+    - perl-Time-HiRes-4:1.9764-459.module+el8.6.0+13324+628a2397.x86_64
+    - perl-Benchmark-0:1.23-471.module+el8.6.0+13324+628a2397.noarch
+    - perl-User-pwent-0:1.03-471.module+el8.6.0+13324+628a2397.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: php
+  stream: '7.4'
+  version: '8060020220120080432'
+  context: 0a326c83
+  arch: x86_64
+  license:
+    module:
+    - GPLv2+
+    content:
+    - BSD
+    - BSD and LGPLv3+
+    - PHP
+    - PHP and BSD
+    - PHP and LGPLv2 and OpenLDAP
+    - PHP and LGPLv2+
+    - PHP and Zend and BSD and MIT and ASL 1.0 and NCSA
+    - PHP and Zend and BSD and MIT and ASL 1.0 and NCSA and PostgreSQL
+  summary: PHP scripting language
+  description: php 7.4 module
+  dependencies:
+  - buildrequires:
+      httpd:
+      - '2.4'
+      nginx:
+      - '1.14'
+      platform:
+      - el8.6.0
+    requires:
+      httpd:
+      - '2.4'
+      nginx: []
+      platform:
+      - el8
+  components:
+    rpms:
+      libzip:
+        rationale: ZIP library
+        ref: stream-php-7.4-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      php:
+        rationale: Module API.
+        ref: stream-7.4-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      php-pear:
+        rationale: Extension management
+        ref: stream-php-7.4-rhel-8.6.0
+        buildorder: '2'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      php-pecl-apcu:
+        rationale: APCu extension
+        ref: stream-php-7.4-rhel-8.6.0
+        buildorder: '3'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      php-pecl-rrd:
+        rationale: RRD extension
+        ref: stream-php-7.4-rhel-8.6.0
+        buildorder: '3'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      php-pecl-xdebug:
+        rationale: Xdebug extension
+        ref: stream-php-7.4-rhel-8.6.0
+        buildorder: '3'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      php-pecl-zip:
+        rationale: ZIP extension
+        ref: stream-php-7.4-rhel-8.6.0
+        buildorder: '3'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - php-fpm
+  references:
+    documentation: http://php.net/
+    tracker: https://bugs.php.net/
+  profiles:
+    common:
+      rpms:
+      - php-cli
+      - php-common
+      - php-fpm
+      - php-json
+      - php-mbstring
+      - php-xml
+    devel:
+      rpms:
+      - libzip
+      - php-cli
+      - php-common
+      - php-devel
+      - php-fpm
+      - php-json
+      - php-mbstring
+      - php-pear
+      - php-pecl-zip
+      - php-process
+      - php-xml
+    minimal:
+      rpms:
+      - php-cli
+      - php-common
+  artifacts:
+    rpms:
+    - apcu-panel-0:5.1.18-1.module+el8.3.0+6678+b09f589e.noarch
+    - libzip-0:1.6.1-1.module+el8.3.0+6678+b09f589e.src
+    - libzip-0:1.6.1-1.module+el8.3.0+6678+b09f589e.x86_64
+    - libzip-debuginfo-0:1.6.1-1.module+el8.3.0+6678+b09f589e.x86_64
+    - libzip-debugsource-0:1.6.1-1.module+el8.3.0+6678+b09f589e.x86_64
+    - libzip-devel-0:1.6.1-1.module+el8.3.0+6678+b09f589e.x86_64
+    - libzip-tools-0:1.6.1-1.module+el8.3.0+6678+b09f589e.x86_64
+    - libzip-tools-debuginfo-0:1.6.1-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.src
+    - php-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-bcmath-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-bcmath-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-cli-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-cli-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-common-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-common-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-dba-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-dba-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-dbg-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-dbg-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-debugsource-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-devel-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-embedded-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-embedded-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-enchant-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-enchant-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-ffi-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-ffi-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-fpm-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-fpm-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-gd-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-gd-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-gmp-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-gmp-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-intl-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-intl-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-json-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-json-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-ldap-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-ldap-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-mbstring-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-mbstring-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-mysqlnd-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-mysqlnd-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-odbc-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-odbc-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-opcache-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-opcache-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-pdo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-pdo-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-pear-1:1.10.12-1.module+el8.3.0+6678+b09f589e.noarch
+    - php-pear-1:1.10.12-1.module+el8.3.0+6678+b09f589e.src
+    - php-pecl-apcu-0:5.1.18-1.module+el8.3.0+6678+b09f589e.src
+    - php-pecl-apcu-0:5.1.18-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-apcu-debuginfo-0:5.1.18-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-apcu-debugsource-0:5.1.18-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-apcu-devel-0:5.1.18-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-rrd-0:2.0.1-1.module+el8.3.0+6678+b09f589e.src
+    - php-pecl-rrd-0:2.0.1-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-rrd-debuginfo-0:2.0.1-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-rrd-debugsource-0:2.0.1-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-xdebug-0:2.9.5-1.module+el8.3.0+6678+b09f589e.src
+    - php-pecl-xdebug-0:2.9.5-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-xdebug-debuginfo-0:2.9.5-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-xdebug-debugsource-0:2.9.5-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-zip-0:1.18.2-1.module+el8.3.0+6678+b09f589e.src
+    - php-pecl-zip-0:1.18.2-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-zip-debuginfo-0:1.18.2-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pecl-zip-debugsource-0:1.18.2-1.module+el8.3.0+6678+b09f589e.x86_64
+    - php-pgsql-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-pgsql-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-process-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-process-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-snmp-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-snmp-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-soap-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-soap-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-xml-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-xml-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-xmlrpc-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+    - php-xmlrpc-debuginfo-0:7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: python27
+  stream: '2.7'
+  version: '8060020220210185952'
+  context: 8cdc2268
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - ASL 2.0
+    - ASL 2.0 and MIT
+    - ASL 2.0 and MIT and (MIT or GPL)
+    - BSD
+    - BSD and Boost and Public Domain
+    - BSD and Python
+    - BSD and Python and Unicode
+    - LGPLv2
+    - LGPLv2+ and Public Domain
+    - LGPLv3+ with exceptions
+    - MIT
+    - MIT and Public Domain
+    - MIT and Python and ASL 2.0 and BSD and ISC and LGPLv2 and MPLv2.0 and (ASL 2.0
+      or BSD)
+    - Public Domain
+    - Public Domain and BSD and Python and GPLv3+
+    - Python
+  summary: Python programming language, version 2.7
+  description: 'This module provides the Python 2.7 interpreter and additional Python
+
+    packages the users might need.'
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.6.0
+      python27:
+      - '2.7'
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      Cython:
+        rationale: Language for writing Python extension modules. Build dependency
+          of numpy and PyYAML
+        ref: stream-0.28.1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      PyYAML:
+        rationale: YAML parser and emitter for Python
+        ref: stream-3.12-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      babel:
+        rationale: Tools for internationalizing Python applications
+        ref: stream-2.5.1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      numpy:
+        rationale: A fast multidimensional array facility for Python
+        ref: stream-1.14.2-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      pytest:
+        rationale: Simple powerful testing with Python
+        ref: stream-3.4.2-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-PyMySQL:
+        rationale: Python adapter for the MySQL/MariaDB databases
+        ref: stream-0.8.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-attrs:
+        rationale: Python attributes without boilerplate
+        ref: stream-17.4.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-backports:
+        rationale: Namespace for backported Python features
+        ref: stream-1.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-backports-ssl_match_hostname:
+        rationale: The ssl.match_hostname() function from Python 3. Dependency of
+          urllib3/requests.
+        ref: stream-3.5.0.1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-chardet:
+        rationale: Character encoding auto-detection in Python. Dependency of requests.
+        ref: stream-3.0.4-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-coverage:
+        rationale: Code coverage testing module for Python
+        ref: stream-4.5.1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-dns:
+        rationale: DNS toolkit for Python. Useful package for IPA and mailman.
+        ref: stream-1.15.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-docs:
+        rationale: Documentation for Python
+        ref: stream-2.7-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-docutils:
+        rationale: System for processing plaintext documentation
+        ref: stream-0.14-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-funcsigs:
+        rationale: Python function signatures from PEP362 for Python 2.6, 2.7 and
+          3.2+. Dependency of Pytest and mock.
+        ref: stream-1.0.2-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-idna:
+        rationale: Internationalized Domain Names in Applications (IDNA). Dependency
+          of requests.
+        ref: stream-2.5-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-ipaddress:
+        rationale: Port of the python 3.3+ ipaddress module to 2.6+. Dependency of
+          urllib3/requests.
+        ref: stream-1.0.18-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-jinja2:
+        rationale: General purpose template engine
+        ref: stream-2.10-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-lxml:
+        rationale: XML processing library
+        ref: stream-4.2.3-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-markupsafe:
+        rationale: Implements a XML/HTML/XHTML Markup safe string for Python
+        ref: stream-0.23-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-mock:
+        rationale: A Python Mocking and Patching Library for Testing
+        ref: stream-2.0.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-nose:
+        rationale: Discovery-based unit test extension for Python
+        ref: stream-1.3.7-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-pluggy:
+        rationale: The plugin manager stripped of pytest specific details
+        ref: stream-0.6.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-psycopg2:
+        rationale: Python adapter for the PostgreSQL database
+        ref: stream-2.7.4-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-py:
+        rationale: Library with cross-python path, ini-parsing, io, code, log facilities
+        ref: stream-1.5.3-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-pygments:
+        rationale: Syntax highlighting engine written in Python
+        ref: stream-2.2.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-pymongo:
+        rationale: Python driver for MongoDB
+        ref: stream-3.6.1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-pysocks:
+        rationale: A Python SOCKS client module. Dependency of urllib3/requests.
+        ref: stream-1.6.8-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-pytest-mock:
+        rationale: Thin-wrapper around the mock package for easier use with py.test.
+          Build dependency of requests.
+        ref: stream-1.9.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-requests:
+        rationale: HTTP library, written in Python, for human beings
+        ref: stream-2.20.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-setuptools_scm:
+        rationale: Blessed package to manage your versions by scm tags. Build dependency
+          of pytest and pytest-mock.
+        ref: stream-1.15.7-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-sqlalchemy:
+        rationale: Modular and flexible ORM library for python
+        ref: stream-1.3.2-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-urllib3:
+        rationale: Python HTTP library with thread-safe connection pooling and file
+          post. Dependency of requests.
+        ref: stream-1.23-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-virtualenv:
+        rationale: Tool to create isolated Python environments
+        ref: stream-15.1.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-wheel:
+        rationale: Used for unbundling of pip and setuptools
+        ref: stream-0.30.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python2:
+        rationale: Main Python language interpreter
+        ref: stream-2.7-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python2-pip:
+        rationale: Python Packaging ecosystem
+        ref: stream-9.0.3-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python2-rpm-macros:
+        rationale: Python 2 RPM macros - dependency of python2-devel
+        ref: stream-python27-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python2-setuptools:
+        rationale: Python Packaging ecosystem
+        ref: stream-39.0.1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python2-six:
+        rationale: Python 2 and 3 compatibility utilities
+        ref: stream-1.11.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      pytz:
+        rationale: Runtime requires of babel, and python2-babel
+        ref: stream-2017.2-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      scipy:
+        rationale: Scientific Tools for Python
+        ref: stream-1.0.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - babel
+    - python-sqlalchemy-doc
+    - python2
+    - python2-Cython
+    - python2-PyMySQL
+    - python2-attrs
+    - python2-babel
+    - python2-backports
+    - python2-backports-ssl_match_hostname
+    - python2-bson
+    - python2-chardet
+    - python2-coverage
+    - python2-debug
+    - python2-devel
+    - python2-dns
+    - python2-docs
+    - python2-docs-info
+    - python2-docutils
+    - python2-funcsigs
+    - python2-idna
+    - python2-ipaddress
+    - python2-jinja2
+    - python2-libs
+    - python2-lxml
+    - python2-markupsafe
+    - python2-mock
+    - python2-nose
+    - python2-numpy
+    - python2-numpy-doc
+    - python2-numpy-f2py
+    - python2-pip
+    - python2-pluggy
+    - python2-psycopg2
+    - python2-psycopg2-debug
+    - python2-psycopg2-tests
+    - python2-py
+    - python2-pygments
+    - python2-pymongo
+    - python2-pymongo-gridfs
+    - python2-pysocks
+    - python2-pytest
+    - python2-pytest-mock
+    - python2-pytz
+    - python2-pyyaml
+    - python2-requests
+    - python2-rpm-macros
+    - python2-scipy
+    - python2-setuptools
+    - python2-setuptools_scm
+    - python2-six
+    - python2-sqlalchemy
+    - python2-test
+    - python2-tkinter
+    - python2-tools
+    - python2-urllib3
+    - python2-virtualenv
+    - python2-wheel
+  buildopts:
+    rpms:
+      macros: '# Note that we cannot disable building of all Python 3 subpackages,
+
+        # because python2-devel (needed to build all Python 2 packages)
+
+        # has a runtime dependency on python3-rpm-generators, and that
+
+        # package requires python3-setuptools at runtime. By rebuilding
+
+        # python-setuptools SRPM with only python2, we overshadow the
+
+        # already built python3 subpackage and it is no longer
+
+        # available for python3-rpm-generators when building python-pip
+
+        # (or any other Python package).
+
+        # We can disable Python 3 in all packages but ...
+
+        %_without_python3 1
+
+        # ... we have to have a way to enable some of them as described
+
+        # above. With this macro, we can add some module-specific
+
+        # conditions for python3-* subpackages and other special cases.
+
+        # %_with_python27_module 1
+
+
+        # for: python-jinja2
+
+        %_with_python2 1
+
+
+        # to solve circular dependency between pytest and [attrs, pluggy]
+
+        # %_without_tests 1
+
+        '
+  references:
+    community: https://www.python.org/
+    documentation: https://docs.python.org/2.7/
+  profiles:
+    common:
+      rpms:
+      - python2
+      - python2-libs
+      - python2-pip
+      - python2-setuptools
+  filter:
+    rpms:
+    - python3-Cython
+    - python3-PyMySQL
+    - python3-PyYAML
+    - python3-attrs
+    - python3-babel
+    - python3-bson
+    - python3-chardet
+    - python3-coverage
+    - python3-docutils
+    - python3-idna
+    - python3-jinja2
+    - python3-markupsafe
+    - python3-mock
+    - python3-nose
+    - python3-numpy
+    - python3-numpy-doc
+    - python3-numpy-f2py
+    - python3-pluggy
+    - python3-psycopg2
+    - python3-psycopg2-debug
+    - python3-psycopg2-tests
+    - python3-py
+    - python3-pygments
+    - python3-pymongo
+    - python3-pymongo-gridfs
+    - python3-pysocks
+    - python3-pytest
+    - python3-pytest-mock
+    - python3-pytz
+    - python3-requests
+    - python3-scipy
+    - python3-setuptools_scm
+    - python3-six
+    - python3-sqlalchemy
+    - python3-urllib3
+    - python3-virtualenv
+  artifacts:
+    rpms:
+    - Cython-0:0.28.1-7.module+el8.1.0+3111+de3f2d8e.src
+    - Cython-debugsource-0:0.28.1-7.module+el8.1.0+3111+de3f2d8e.x86_64
+    - PyYAML-0:3.12-16.module+el8.1.0+3111+de3f2d8e.src
+    - PyYAML-debugsource-0:3.12-16.module+el8.1.0+3111+de3f2d8e.x86_64
+    - babel-0:2.5.1-10.module+el8.5.0+11014+88fc0d0b.noarch
+    - babel-0:2.5.1-10.module+el8.5.0+11014+88fc0d0b.src
+    - numpy-1:1.14.2-16.module+el8.4.0+9406+221a4565.src
+    - numpy-debugsource-1:1.14.2-16.module+el8.4.0+9406+221a4565.x86_64
+    - pytest-0:3.4.2-13.module+el8.1.0+3111+de3f2d8e.src
+    - python-PyMySQL-0:0.8.0-10.module+el8.1.0+3111+de3f2d8e.src
+    - python-attrs-0:17.4.0-10.module+el8.1.0+3111+de3f2d8e.src
+    - python-backports-0:1.0-16.module+el8.4.0+9193+f3daf6ef.src
+    - python-backports-ssl_match_hostname-0:3.5.0.1-12.module+el8.4.0+9193+f3daf6ef.src
+    - python-chardet-0:3.0.4-10.module+el8.1.0+3111+de3f2d8e.src
+    - python-coverage-0:4.5.1-4.module+el8.1.0+3111+de3f2d8e.src
+    - python-coverage-debugsource-0:4.5.1-4.module+el8.1.0+3111+de3f2d8e.x86_64
+    - python-dns-0:1.15.0-10.module+el8.1.0+3111+de3f2d8e.src
+    - python-docs-0:2.7.16-2.module+el8.1.0+3111+de3f2d8e.src
+    - python-docutils-0:0.14-12.module+el8.1.0+3111+de3f2d8e.src
+    - python-funcsigs-0:1.0.2-13.module+el8.1.0+3111+de3f2d8e.src
+    - python-idna-0:2.5-7.module+el8.1.0+3111+de3f2d8e.src
+    - python-ipaddress-0:1.0.18-6.module+el8.1.0+3111+de3f2d8e.src
+    - python-jinja2-0:2.10-9.module+el8.5.0+10541+706bb066.src
+    - python-lxml-0:4.2.3-6.module+el8.6.0+13959+8e368262.src
+    - python-lxml-debugsource-0:4.2.3-6.module+el8.6.0+13959+8e368262.x86_64
+    - python-markupsafe-0:0.23-19.module+el8.1.0+3111+de3f2d8e.src
+    - python-mock-0:2.0.0-13.module+el8.1.0+3111+de3f2d8e.src
+    - python-nose-0:1.3.7-31.module+el8.5.0+12203+77770ab7.src
+    - python-nose-docs-0:1.3.7-31.module+el8.5.0+12203+77770ab7.noarch
+    - python-pluggy-0:0.6.0-8.module+el8.1.0+3111+de3f2d8e.src
+    - python-psycopg2-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.src
+    - python-psycopg2-debuginfo-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.x86_64
+    - python-psycopg2-debugsource-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.x86_64
+    - python-psycopg2-doc-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.x86_64
+    - python-py-0:1.5.3-6.module+el8.1.0+3111+de3f2d8e.src
+    - python-pygments-0:2.2.0-22.module+el8.5.0+10788+a4cea9e0.src
+    - python-pymongo-0:3.7.0-1.module+el8.5.0+10264+e5753a40.src
+    - python-pymongo-debuginfo-0:3.7.0-1.module+el8.5.0+10264+e5753a40.x86_64
+    - python-pymongo-debugsource-0:3.7.0-1.module+el8.5.0+10264+e5753a40.x86_64
+    - python-pysocks-0:1.6.8-6.module+el8.1.0+3111+de3f2d8e.src
+    - python-pytest-mock-0:1.9.0-4.module+el8.1.0+3111+de3f2d8e.src
+    - python-requests-0:2.20.0-3.module+el8.2.0+4577+feefd9b8.src
+    - python-setuptools_scm-0:1.15.7-6.module+el8.1.0+3111+de3f2d8e.src
+    - python-sqlalchemy-0:1.3.2-2.module+el8.3.0+6647+8d010749.src
+    - python-sqlalchemy-doc-0:1.3.2-2.module+el8.3.0+6647+8d010749.noarch
+    - python-urllib3-0:1.24.2-3.module+el8.4.0+9193+f3daf6ef.src
+    - python-virtualenv-0:15.1.0-21.module+el8.5.0+12203+77770ab7.src
+    - python-wheel-1:0.31.1-3.module+el8.5.0+12203+77770ab7.src
+    - python2-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.src
+    - python2-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.x86_64
+    - python2-Cython-0:0.28.1-7.module+el8.1.0+3111+de3f2d8e.x86_64
+    - python2-Cython-debuginfo-0:0.28.1-7.module+el8.1.0+3111+de3f2d8e.x86_64
+    - python2-PyMySQL-0:0.8.0-10.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-attrs-0:17.4.0-10.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-babel-0:2.5.1-10.module+el8.5.0+11014+88fc0d0b.noarch
+    - python2-backports-0:1.0-16.module+el8.4.0+9193+f3daf6ef.x86_64
+    - python2-backports-ssl_match_hostname-0:3.5.0.1-12.module+el8.4.0+9193+f3daf6ef.noarch
+    - python2-bson-0:3.7.0-1.module+el8.5.0+10264+e5753a40.x86_64
+    - python2-bson-debuginfo-0:3.7.0-1.module+el8.5.0+10264+e5753a40.x86_64
+    - python2-chardet-0:3.0.4-10.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-coverage-0:4.5.1-4.module+el8.1.0+3111+de3f2d8e.x86_64
+    - python2-coverage-debuginfo-0:4.5.1-4.module+el8.1.0+3111+de3f2d8e.x86_64
+    - python2-debug-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.x86_64
+    - python2-debuginfo-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.x86_64
+    - python2-debugsource-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.x86_64
+    - python2-devel-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.x86_64
+    - python2-dns-0:1.15.0-10.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-docs-0:2.7.16-2.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-docs-info-0:2.7.16-2.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-docutils-0:0.14-12.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-funcsigs-0:1.0.2-13.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-idna-0:2.5-7.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-ipaddress-0:1.0.18-6.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-jinja2-0:2.10-9.module+el8.5.0+10541+706bb066.noarch
+    - python2-libs-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.x86_64
+    - python2-lxml-0:4.2.3-6.module+el8.6.0+13959+8e368262.x86_64
+    - python2-lxml-debuginfo-0:4.2.3-6.module+el8.6.0+13959+8e368262.x86_64
+    - python2-markupsafe-0:0.23-19.module+el8.1.0+3111+de3f2d8e.x86_64
+    - python2-mock-0:2.0.0-13.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-nose-0:1.3.7-31.module+el8.5.0+12203+77770ab7.noarch
+    - python2-numpy-1:1.14.2-16.module+el8.4.0+9406+221a4565.x86_64
+    - python2-numpy-debuginfo-1:1.14.2-16.module+el8.4.0+9406+221a4565.x86_64
+    - python2-numpy-doc-1:1.14.2-16.module+el8.4.0+9406+221a4565.noarch
+    - python2-numpy-f2py-1:1.14.2-16.module+el8.4.0+9406+221a4565.x86_64
+    - python2-pip-0:9.0.3-19.module+el8.6.0+13001+ad200bd9.noarch
+    - python2-pip-0:9.0.3-19.module+el8.6.0+13001+ad200bd9.src
+    - python2-pip-wheel-0:9.0.3-19.module+el8.6.0+13001+ad200bd9.noarch
+    - python2-pluggy-0:0.6.0-8.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-psycopg2-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.x86_64
+    - python2-psycopg2-debug-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.x86_64
+    - python2-psycopg2-debug-debuginfo-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.x86_64
+    - python2-psycopg2-debuginfo-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.x86_64
+    - python2-psycopg2-tests-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.x86_64
+    - python2-py-0:1.5.3-6.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-pygments-0:2.2.0-22.module+el8.5.0+10788+a4cea9e0.noarch
+    - python2-pymongo-0:3.7.0-1.module+el8.5.0+10264+e5753a40.x86_64
+    - python2-pymongo-debuginfo-0:3.7.0-1.module+el8.5.0+10264+e5753a40.x86_64
+    - python2-pymongo-gridfs-0:3.7.0-1.module+el8.5.0+10264+e5753a40.x86_64
+    - python2-pysocks-0:1.6.8-6.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-pytest-0:3.4.2-13.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-pytest-mock-0:1.9.0-4.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-pytz-0:2017.2-12.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-pyyaml-0:3.12-16.module+el8.1.0+3111+de3f2d8e.x86_64
+    - python2-pyyaml-debuginfo-0:3.12-16.module+el8.1.0+3111+de3f2d8e.x86_64
+    - python2-requests-0:2.20.0-3.module+el8.2.0+4577+feefd9b8.noarch
+    - python2-rpm-macros-0:3-38.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-rpm-macros-0:3-38.module+el8.1.0+3111+de3f2d8e.src
+    - python2-scipy-0:1.0.0-21.module+el8.5.0+10858+05337455.x86_64
+    - python2-scipy-debuginfo-0:1.0.0-21.module+el8.5.0+10858+05337455.x86_64
+    - python2-setuptools-0:39.0.1-13.module+el8.4.0+9442+27d0e81c.noarch
+    - python2-setuptools-0:39.0.1-13.module+el8.4.0+9442+27d0e81c.src
+    - python2-setuptools-wheel-0:39.0.1-13.module+el8.4.0+9442+27d0e81c.noarch
+    - python2-setuptools_scm-0:1.15.7-6.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-six-0:1.11.0-6.module+el8.4.0+9287+299307c7.noarch
+    - python2-six-0:1.11.0-6.module+el8.4.0+9287+299307c7.src
+    - python2-sqlalchemy-0:1.3.2-2.module+el8.3.0+6647+8d010749.x86_64
+    - python2-test-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.x86_64
+    - python2-tkinter-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.x86_64
+    - python2-tools-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.x86_64
+    - python2-urllib3-0:1.24.2-3.module+el8.4.0+9193+f3daf6ef.noarch
+    - python2-virtualenv-0:15.1.0-21.module+el8.5.0+12203+77770ab7.noarch
+    - python2-wheel-1:0.31.1-3.module+el8.5.0+12203+77770ab7.noarch
+    - python2-wheel-wheel-1:0.31.1-3.module+el8.5.0+12203+77770ab7.noarch
+    - pytz-0:2017.2-12.module+el8.1.0+3111+de3f2d8e.src
+    - scipy-0:1.0.0-21.module+el8.5.0+10858+05337455.src
+    - scipy-debugsource-0:1.0.0-21.module+el8.5.0+10858+05337455.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: 389-ds
+  stream: '1.4'
+  version: '8060020220204145416'
+  context: ce3e8c9c
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - GPLv3+
+  summary: 389 Directory Server (base)
+  description: 389 Directory Server is an LDAPv3 compliant server.  The base package
+    includes the LDAP server and command line utilities for server administration.
+  dependencies:
+  - buildrequires:
+      llvm-toolset:
+      - rhel8
+      nodejs:
+      - '10'
+      platform:
+      - el8.6.0
+      rust-toolset:
+      - rhel8
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      389-ds-base:
+        rationale: Package in api
+        ref: stream-1.4-rhel-8.6.0
+        arches:
+        - aarch64
+        - ppc64le
+        - s390x
+        - x86_64
+  filter:
+    rpms:
+    - cockpit-389-ds
+  artifacts:
+    rpms:
+    - 389-ds-base-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.src
+    - 389-ds-base-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-debuginfo-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-debuginfo-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-debugsource-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-debugsource-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-devel-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-devel-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-legacy-tools-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-legacy-tools-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-legacy-tools-debuginfo-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-legacy-tools-debuginfo-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-libs-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-libs-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-libs-debuginfo-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-libs-debuginfo-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-snmp-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-snmp-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-snmp-debuginfo-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - 389-ds-base-snmp-debuginfo-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.x86_64
+    - cockpit-389-ds-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.noarch
+    - python3-lib389-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.noarch
+    - python3-lib389-0:1.4.3.28-6.module+el8.6.0+14129+983ceada.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: php
+  stream: '8.0'
+  version: '8060020211215065547'
+  context: 0a326c83
+  arch: x86_64
+  license:
+    module:
+    - GPLv2+
+    content:
+    - BSD
+    - BSD and LGPLv3+
+    - PHP
+    - PHP and BSD
+    - PHP and LGPLv2 and OpenLDAP
+    - PHP and LGPLv2+
+    - PHP and Zend and BSD and MIT and ASL 1.0 and NCSA
+    - PHP and Zend and BSD and MIT and ASL 1.0 and NCSA and PostgreSQL
+  summary: PHP scripting language
+  description: php 8.0 module
+  dependencies:
+  - buildrequires:
+      httpd:
+      - '2.4'
+      nginx:
+      - '1.14'
+      platform:
+      - el8.6.0
+    requires:
+      httpd:
+      - '2.4'
+      nginx: []
+      platform:
+      - el8
+  components:
+    rpms:
+      libzip:
+        rationale: ZIP library
+        ref: stream-php-8.0-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      php:
+        rationale: Module API.
+        ref: stream-php-8.0-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      php-pear:
+        rationale: Extension management
+        ref: stream-php-8.0-rhel-8.6.0
+        buildorder: '2'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      php-pecl-apcu:
+        rationale: APCu extension
+        ref: stream-php-8.0-rhel-8.6.0
+        buildorder: '3'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      php-pecl-rrd:
+        rationale: RRD extension
+        ref: stream-php-8.0-rhel-8.6.0
+        buildorder: '3'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      php-pecl-xdebug3:
+        rationale: Xdebug extension
+        ref: stream-php-8.0-rhel-8.6.0
+        buildorder: '3'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      php-pecl-zip:
+        rationale: ZIP extension
+        ref: stream-php-8.0-rhel-8.6.0
+        buildorder: '3'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - php-fpm
+  references:
+    documentation: http://php.net/
+    tracker: https://bugs.php.net/
+  profiles:
+    common:
+      rpms:
+      - php-cli
+      - php-common
+      - php-fpm
+      - php-mbstring
+      - php-xml
+    devel:
+      rpms:
+      - libzip
+      - php-cli
+      - php-common
+      - php-devel
+      - php-fpm
+      - php-mbstring
+      - php-pear
+      - php-pecl-zip
+      - php-process
+      - php-xml
+    minimal:
+      rpms:
+      - php-cli
+      - php-common
+  artifacts:
+    rpms:
+    - php-embedded-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-pecl-rrd-debugsource-0:2.0.3-1.module+el8.6.0+13671+84712317.x86_64
+    - php-pecl-zip-debuginfo-0:1.19.2-1.module+el8.6.0+13671+84712317.x86_64
+    - php-pdo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-pecl-apcu-0:5.1.20-1.module+el8.6.0+13671+84712317.x86_64
+    - php-ldap-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-fpm-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-gd-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-common-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-enchant-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-enchant-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-pgsql-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-pecl-xdebug3-debuginfo-0:3.1.2-1.module+el8.6.0+13671+84712317.x86_64
+    - php-odbc-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-mysqlnd-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-common-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-intl-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-pecl-zip-0:1.19.2-1.module+el8.6.0+13671+84712317.x86_64
+    - php-opcache-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - libzip-debugsource-0:1.7.3-1.module+el8.6.0+13671+84712317.x86_64
+    - libzip-devel-0:1.7.3-1.module+el8.6.0+13671+84712317.x86_64
+    - php-pdo-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-pecl-apcu-devel-0:5.1.20-1.module+el8.6.0+13671+84712317.x86_64
+    - apcu-panel-0:5.1.20-1.module+el8.6.0+13671+84712317.noarch
+    - php-dba-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-soap-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - libzip-tools-0:1.7.3-1.module+el8.6.0+13671+84712317.x86_64
+    - php-cli-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-dbg-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-gmp-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-opcache-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-dba-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-gd-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - libzip-debuginfo-0:1.7.3-1.module+el8.6.0+13671+84712317.x86_64
+    - php-snmp-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-process-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-devel-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-pgsql-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-mbstring-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-pecl-apcu-debuginfo-0:5.1.20-1.module+el8.6.0+13671+84712317.x86_64
+    - php-xml-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-process-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-ffi-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-pear-1:1.10.13-1.module+el8.6.0+13671+84712317.noarch
+    - php-fpm-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-bcmath-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-mysqlnd-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-debugsource-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-ldap-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-bcmath-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-pecl-rrd-0:2.0.3-1.module+el8.6.0+13671+84712317.x86_64
+    - php-pecl-xdebug3-debugsource-0:3.1.2-1.module+el8.6.0+13671+84712317.x86_64
+    - php-gmp-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-pecl-rrd-debuginfo-0:2.0.3-1.module+el8.6.0+13671+84712317.x86_64
+    - php-odbc-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-mbstring-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-ffi-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-dbg-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-intl-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-soap-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - libzip-tools-debuginfo-0:1.7.3-1.module+el8.6.0+13671+84712317.x86_64
+    - php-xml-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - libzip-0:1.7.3-1.module+el8.6.0+13671+84712317.x86_64
+    - php-embedded-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-snmp-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+    - php-pecl-apcu-debugsource-0:5.1.20-1.module+el8.6.0+13671+84712317.x86_64
+    - php-pecl-xdebug3-0:3.1.2-1.module+el8.6.0+13671+84712317.x86_64
+    - php-pecl-zip-debugsource-0:1.19.2-1.module+el8.6.0+13671+84712317.x86_64
+    - php-cli-debuginfo-0:8.0.13-2.module+el8.6.0+13671+84712317.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: python38
+  stream: '3.8'
+  version: '8060020220120164031'
+  context: 5294be16
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - ASL 2.0
+    - ASL 2.0 or BSD
+    - BSD
+    - BSD and Boost and Public Domain
+    - BSD and Python and ASL 2.0
+    - BSD and Python and Unicode
+    - LGPLv2
+    - LGPLv3+ with exceptions
+    - MIT
+    - MIT and (BSD or ASL 2.0)
+    - MIT and Python and ASL 2.0 and BSD and ISC and LGPLv2 and MPLv2.0 and (ASL 2.0
+      or BSD)
+    - Python
+  summary: Python programming language, version 3.8
+  description: 'This module gives users access to the internal Python 3.8 in RHEL8,
+    as
+
+    well as provides some additional Python packages the users might need.
+
+    In addition to these you can install any python3-* package available
+
+    in RHEL and use it with Python from this module.'
+  dependencies:
+  - buildrequires:
+      httpd:
+      - '2.4'
+      platform:
+      - el8.6.0
+      python38:
+      - 3.8-bootstrap
+      swig:
+      - '3.0'
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      Cython:
+        rationale: Python component
+        ref: stream-0.29.14-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      PyYAML:
+        rationale: Python component
+        ref: stream-5.3.1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      babel:
+        rationale: Python component
+        ref: stream-2.7.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      mod_wsgi:
+        rationale: Python component
+        ref: stream-4.6.8-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      numpy:
+        rationale: Python component
+        ref: stream-1.17.3-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      pytest:
+        rationale: Python component
+        ref: stream-4.6.6-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-PyMySQL:
+        rationale: Python component
+        ref: stream-0.10.1-python38-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-asn1crypto:
+        rationale: Python component
+        ref: stream-1.2.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-atomicwrites:
+        rationale: Python component
+        ref: stream-1.3.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-attrs:
+        rationale: Python component
+        ref: stream-19.3.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-cffi:
+        rationale: Python component
+        ref: stream-1.13.2-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-chardet:
+        rationale: Python component
+        ref: stream-3.0.4-python38-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-cryptography:
+        rationale: Python component
+        ref: stream-2.8-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-idna:
+        rationale: Python component
+        ref: stream-2.8-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-jinja2:
+        rationale: Python component
+        ref: stream-2.10.3-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-lxml:
+        rationale: Python component
+        ref: stream-4.4.1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-markupsafe:
+        rationale: Python component
+        ref: stream-1.1.1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-more-itertools:
+        rationale: Python component
+        ref: stream-7.2.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-packaging:
+        rationale: Python component
+        ref: stream-19.2-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-pluggy:
+        rationale: Python component
+        ref: stream-0.13.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-ply:
+        rationale: Python component
+        ref: stream-3.11-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-psutil:
+        rationale: Python component
+        ref: stream-5.6.4-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-psycopg2:
+        rationale: Python component
+        ref: stream-2.8.4-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-py:
+        rationale: Python component
+        ref: stream-1.8.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-pycparser:
+        rationale: Python component
+        ref: stream-2.19-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-pysocks:
+        rationale: Python component
+        ref: stream-1.7.1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-requests:
+        rationale: Python component
+        ref: stream-2.22.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-urllib3:
+        rationale: Python component
+        ref: stream-1.25.7-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-wcwidth:
+        rationale: Python component
+        ref: stream-0.1.7-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-wheel:
+        rationale: Packaging tool
+        ref: stream-0.33.6-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python38:
+        rationale: The main Python interpreter
+        ref: stream-3.8-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python3x-pip:
+        rationale: Packaging tool
+        ref: stream-19.3.1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python3x-pyparsing:
+        rationale: Python component
+        ref: stream-2.4.5-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python3x-setuptools:
+        rationale: Packaging tool
+        ref: stream-41.6.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python3x-six:
+        rationale: Python component
+        ref: stream-1.12.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      pytz:
+        rationale: Python component
+        ref: stream-2019.3-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      scipy:
+        rationale: Python component
+        ref: stream-1.3.1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - python38
+    - python38-Cython
+    - python38-PyMySQL
+    - python38-asn1crypto
+    - python38-babel
+    - python38-cffi
+    - python38-chardet
+    - python38-cryptography
+    - python38-devel
+    - python38-idle
+    - python38-idna
+    - python38-jinja2
+    - python38-libs
+    - python38-lxml
+    - python38-markupsafe
+    - python38-mod_wsgi
+    - python38-numpy
+    - python38-numpy-f2py
+    - python38-pip
+    - python38-pip-wheel
+    - python38-ply
+    - python38-psutil
+    - python38-psycopg2
+    - python38-pycparser
+    - python38-pysocks
+    - python38-pytz
+    - python38-pyyaml
+    - python38-requests
+    - python38-rpm-macros
+    - python38-scipy
+    - python38-setuptools
+    - python38-setuptools-wheel
+    - python38-six
+    - python38-test
+    - python38-tkinter
+    - python38-urllib3
+    - python38-wheel
+    - python38-wheel-wheel
+  buildopts:
+    rpms:
+      macros: '# === Bootstrap phase 3/4 ===
+
+        #
+
+        %python3_pkgversion 38
+
+        %_without_python2 1
+
+        # py, pyparsing, atomicwrites, packaging, pytest
+
+        %_without_docs 1
+
+        '
+  references:
+    community: https://www.python.org/
+    documentation: https://docs.python.org/3.8/
+  profiles:
+    build:
+      rpms:
+      - python38
+      - python38-devel
+      - python38-rpm-macros
+    common:
+      rpms:
+      - python38
+  filter:
+    rpms:
+    - python38-atomicwrites
+    - python38-attrs
+    - python38-more-itertools
+    - python38-packaging
+    - python38-pluggy
+    - python38-py
+    - python38-pyparsing
+    - python38-pytest
+    - python38-wcwidth
+  artifacts:
+    rpms:
+    - Cython-0:0.29.14-4.module+el8.4.0+8888+89bc7e79.src
+    - Cython-debugsource-0:0.29.14-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - PyYAML-0:5.4.1-1.module+el8.5.0+10721+14d8e0d5.src
+    - PyYAML-debugsource-0:5.4.1-1.module+el8.5.0+10721+14d8e0d5.x86_64
+    - babel-0:2.7.0-11.module+el8.5.0+11015+9c1c7c42.src
+    - mod_wsgi-0:4.6.8-3.module+el8.4.0+8888+89bc7e79.src
+    - numpy-0:1.17.3-6.module+el8.5.0+12205+a865257a.src
+    - numpy-debugsource-0:1.17.3-6.module+el8.5.0+12205+a865257a.x86_64
+    - python-PyMySQL-0:0.10.1-1.module+el8.4.0+9692+8e86ab84.src
+    - python-asn1crypto-0:1.2.0-3.module+el8.4.0+8888+89bc7e79.src
+    - python-cffi-0:1.13.2-3.module+el8.4.0+8888+89bc7e79.src
+    - python-cffi-debugsource-0:1.13.2-3.module+el8.4.0+8888+89bc7e79.x86_64
+    - python-chardet-0:3.0.4-19.module+el8.4.0+8888+89bc7e79.src
+    - python-cryptography-0:2.8-3.module+el8.4.0+8888+89bc7e79.src
+    - python-cryptography-debugsource-0:2.8-3.module+el8.4.0+8888+89bc7e79.x86_64
+    - python-idna-0:2.8-6.module+el8.4.0+8888+89bc7e79.src
+    - python-jinja2-0:2.10.3-5.module+el8.5.0+10542+ba057329.src
+    - python-lxml-0:4.4.1-7.module+el8.6.0+13958+214a5473.src
+    - python-lxml-debugsource-0:4.4.1-7.module+el8.6.0+13958+214a5473.x86_64
+    - python-markupsafe-0:1.1.1-6.module+el8.4.0+8888+89bc7e79.src
+    - python-markupsafe-debugsource-0:1.1.1-6.module+el8.4.0+8888+89bc7e79.x86_64
+    - python-ply-0:3.11-10.module+el8.4.0+9579+e9717e18.src
+    - python-psutil-0:5.6.4-4.module+el8.5.0+12031+10ce4870.src
+    - python-psutil-debugsource-0:5.6.4-4.module+el8.5.0+12031+10ce4870.x86_64
+    - python-psycopg2-0:2.8.4-4.module+el8.4.0+8888+89bc7e79.src
+    - python-psycopg2-debugsource-0:2.8.4-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - python-pycparser-0:2.19-3.module+el8.4.0+8888+89bc7e79.src
+    - python-pysocks-0:1.7.1-4.module+el8.4.0+8888+89bc7e79.src
+    - python-requests-0:2.22.0-9.module+el8.4.0+8888+89bc7e79.src
+    - python-urllib3-0:1.25.7-5.module+el8.5.0+11639+ea5b349d.src
+    - python-wheel-0:0.33.6-6.module+el8.5.0+12205+a865257a.src
+    - python38-0:3.8.12-1.module+el8.6.0+12642+c3710b74.src
+    - python38-0:3.8.12-1.module+el8.6.0+12642+c3710b74.x86_64
+    - python38-Cython-0:0.29.14-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-Cython-debuginfo-0:0.29.14-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-PyMySQL-0:0.10.1-1.module+el8.4.0+9692+8e86ab84.noarch
+    - python38-asn1crypto-0:1.2.0-3.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-babel-0:2.7.0-11.module+el8.5.0+11015+9c1c7c42.noarch
+    - python38-cffi-0:1.13.2-3.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-cffi-debuginfo-0:1.13.2-3.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-chardet-0:3.0.4-19.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-cryptography-0:2.8-3.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-cryptography-debuginfo-0:2.8-3.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-debug-0:3.8.12-1.module+el8.6.0+12642+c3710b74.x86_64
+    - python38-debuginfo-0:3.8.12-1.module+el8.6.0+12642+c3710b74.x86_64
+    - python38-debugsource-0:3.8.12-1.module+el8.6.0+12642+c3710b74.x86_64
+    - python38-devel-0:3.8.12-1.module+el8.6.0+12642+c3710b74.x86_64
+    - python38-idle-0:3.8.12-1.module+el8.6.0+12642+c3710b74.x86_64
+    - python38-idna-0:2.8-6.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-jinja2-0:2.10.3-5.module+el8.5.0+10542+ba057329.noarch
+    - python38-libs-0:3.8.12-1.module+el8.6.0+12642+c3710b74.x86_64
+    - python38-lxml-0:4.4.1-7.module+el8.6.0+13958+214a5473.x86_64
+    - python38-lxml-debuginfo-0:4.4.1-7.module+el8.6.0+13958+214a5473.x86_64
+    - python38-markupsafe-0:1.1.1-6.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-markupsafe-debuginfo-0:1.1.1-6.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-mod_wsgi-0:4.6.8-3.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-numpy-0:1.17.3-6.module+el8.5.0+12205+a865257a.x86_64
+    - python38-numpy-debuginfo-0:1.17.3-6.module+el8.5.0+12205+a865257a.x86_64
+    - python38-numpy-doc-0:1.17.3-6.module+el8.5.0+12205+a865257a.noarch
+    - python38-numpy-f2py-0:1.17.3-6.module+el8.5.0+12205+a865257a.x86_64
+    - python38-pip-0:19.3.1-5.module+el8.6.0+13002+70cfc74a.noarch
+    - python38-pip-wheel-0:19.3.1-5.module+el8.6.0+13002+70cfc74a.noarch
+    - python38-ply-0:3.11-10.module+el8.4.0+9579+e9717e18.noarch
+    - python38-psutil-0:5.6.4-4.module+el8.5.0+12031+10ce4870.x86_64
+    - python38-psutil-debuginfo-0:5.6.4-4.module+el8.5.0+12031+10ce4870.x86_64
+    - python38-psycopg2-0:2.8.4-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-psycopg2-debuginfo-0:2.8.4-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-psycopg2-doc-0:2.8.4-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-psycopg2-tests-0:2.8.4-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-pycparser-0:2.19-3.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-pysocks-0:1.7.1-4.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-pytz-0:2019.3-3.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-pyyaml-0:5.4.1-1.module+el8.5.0+10721+14d8e0d5.x86_64
+    - python38-pyyaml-debuginfo-0:5.4.1-1.module+el8.5.0+10721+14d8e0d5.x86_64
+    - python38-requests-0:2.22.0-9.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-rpm-macros-0:3.8.12-1.module+el8.6.0+12642+c3710b74.noarch
+    - python38-scipy-0:1.3.1-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-scipy-debuginfo-0:1.3.1-4.module+el8.4.0+8888+89bc7e79.x86_64
+    - python38-setuptools-0:41.6.0-5.module+el8.5.0+12205+a865257a.noarch
+    - python38-setuptools-wheel-0:41.6.0-5.module+el8.5.0+12205+a865257a.noarch
+    - python38-six-0:1.12.0-10.module+el8.4.0+8888+89bc7e79.noarch
+    - python38-test-0:3.8.12-1.module+el8.6.0+12642+c3710b74.x86_64
+    - python38-tkinter-0:3.8.12-1.module+el8.6.0+12642+c3710b74.x86_64
+    - python38-urllib3-0:1.25.7-5.module+el8.5.0+11639+ea5b349d.noarch
+    - python38-wheel-0:0.33.6-6.module+el8.5.0+12205+a865257a.noarch
+    - python38-wheel-wheel-0:0.33.6-6.module+el8.5.0+12205+a865257a.noarch
+    - python3x-pip-0:19.3.1-5.module+el8.6.0+13002+70cfc74a.src
+    - python3x-setuptools-0:41.6.0-5.module+el8.5.0+12205+a865257a.src
+    - python3x-six-0:1.12.0-10.module+el8.4.0+8888+89bc7e79.src
+    - pytz-0:2019.3-3.module+el8.4.0+8888+89bc7e79.src
+    - scipy-0:1.3.1-4.module+el8.4.0+8888+89bc7e79.src
+    - scipy-debugsource-0:1.3.1-4.module+el8.4.0+8888+89bc7e79.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: log4j
+  stream: '2'
+  version: '8060020220223074200'
+  context: 5dbfe8be
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - ASL 2.0
+  summary: Java logging library
+  description: Log4j is a popular Java logging library that allows the programmer
+    to output log statements to a variety of output targets.
+  dependencies:
+  - buildrequires:
+      javapackages-tools:
+      - '201902'
+      platform:
+      - el8.6.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      disruptor:
+        rationale: Dependency of log4j.
+        ref: stream-log4j-2-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      jctools:
+        rationale: Dependency of log4j.
+        ref: stream-log4j-2-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      log4j:
+        rationale: Module API.
+        ref: stream-log4j-2-rhel-8.6.0
+        buildorder: '20'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - log4j
+    - log4j-jcl
+    - log4j-slf4j
+  profiles:
+    common:
+      rpms:
+      - log4j
+  filter:
+    rpms:
+    - disruptor-javadoc
+    - jctools-javadoc
+  artifacts:
+    rpms:
+    - jctools-0:3.3.0-3.module+el8.6.0+14329+308e7a94.noarch
+    - jctools-javadoc-0:3.3.0-3.module+el8.6.0+14329+308e7a94.noarch
+    - disruptor-0:3.4.4-2.module+el8.6.0+14329+308e7a94.noarch
+    - disruptor-javadoc-0:3.4.4-2.module+el8.6.0+14329+308e7a94.noarch
+    - log4j-0:2.17.1-3.module+el8.6.0+14329+308e7a94.noarch
+    - log4j-slf4j-0:2.17.1-3.module+el8.6.0+14329+308e7a94.noarch
+    - log4j-jcl-0:2.17.1-3.module+el8.6.0+14329+308e7a94.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: squid
+  stream: '4'
+  version: '8060020220209171548'
+  context: d63f516d
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - BSD
+    - GPLv2+ and (LGPLv2+ and MIT and BSD and Public Domain)
+  summary: Squid - Optimising Web Delivery
+  description: an initial version of the squid caching proxy module
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.6.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      libecap:
+        rationale: library needed by Squid
+        ref: stream-1.0-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      squid:
+        rationale: squid caching proxy
+        ref: stream-4-rhel-8.6.0
+        buildorder: '2'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - squid
+  references:
+    documentation: http://www.squid-cache.org/Doc/
+    tracker: https://bugs.squid-cache.org/index.cgi
+  profiles:
+    common:
+      rpms:
+      - squid
+  artifacts:
+    rpms:
+    - squid-7:4.15-3.module+el8.6.0+14176+9782b8ab.x86_64
+    - squid-debugsource-7:4.15-3.module+el8.6.0+14176+9782b8ab.x86_64
+    - squid-debuginfo-7:4.15-3.module+el8.6.0+14176+9782b8ab.x86_64
+    - libecap-0:1.0.1-2.module+el8.1.0+4044+36416a77.x86_64
+    - libecap-devel-0:1.0.1-2.module+el8.1.0+4044+36416a77.x86_64
+    - libecap-debugsource-0:1.0.1-2.module+el8.1.0+4044+36416a77.x86_64
+    - libecap-debuginfo-0:1.0.1-2.module+el8.1.0+4044+36416a77.x86_64
+...
