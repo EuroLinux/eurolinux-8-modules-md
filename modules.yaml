@@ -46509,3 +46509,167 @@ data:
     - perl-Test-Pod-0:1.51-8.module+el8.6.0+13414+533ca04e.noarch
     - perl-HTML-Parser-debuginfo-0:3.72-15.module+el8.6.0+13414+533ca04e.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: pki-core
+  stream: '10.6'
+  version: '8060020220215143656'
+  context: 7e0b02f6
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - GPLv2 and LGPLv2
+    - LGPLv2+
+    - MPLv1.1 or GPLv2+ or LGPLv2+
+  summary: PKI Core module for PKI 10.6 or later
+  description: A module for PKI Core packages for PKI version 10.6 or later.
+  dependencies:
+  - buildrequires:
+      golang-ecosystem:
+      - '1.0'
+      pki-deps:
+      - '10.6'
+      platform:
+      - el8.6.0
+    requires:
+      pki-deps:
+      - '10.6'
+      platform:
+      - el8
+  components:
+    rpms:
+      jss:
+        rationale: JSS packages
+        ref: stream-pki-10.6-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      ldapjdk:
+        rationale: LDAP JDK packages
+        ref: stream-pki-10.6-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      pki-core:
+        rationale: PKI Core packages
+        ref: stream-pki-10.6-rhel-8.6.0
+        buildorder: '2'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      tomcatjss:
+        rationale: TomcatJSS packages
+        ref: stream-pki-10.6-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  references:
+    community: https://www.dogtagpki.org
+    documentation: https://www.dogtagpki.org
+    tracker: https://github.com/dogtagpki/pki/issues
+  artifacts:
+    rpms:
+    - jss-0:4.9.3-1.module+el8.6.0+14244+60d461b7.x86_64
+    - jss-javadoc-0:4.9.3-1.module+el8.6.0+14244+60d461b7.x86_64
+    - jss-debugsource-0:4.9.3-1.module+el8.6.0+14244+60d461b7.x86_64
+    - jss-debuginfo-0:4.9.3-1.module+el8.6.0+14244+60d461b7.x86_64
+    - tomcatjss-0:7.7.1-1.module+el8.6.0+13291+248751b1.noarch
+    - pki-symkey-0:10.12.0-2.module+el8.6.0+14115+8b467244.x86_64
+    - pki-base-0:10.12.0-2.module+el8.6.0+14115+8b467244.noarch
+    - python3-pki-0:10.12.0-2.module+el8.6.0+14115+8b467244.noarch
+    - pki-base-java-0:10.12.0-2.module+el8.6.0+14115+8b467244.noarch
+    - pki-tools-0:10.12.0-2.module+el8.6.0+14115+8b467244.x86_64
+    - pki-server-0:10.12.0-2.module+el8.6.0+14115+8b467244.noarch
+    - pki-acme-0:10.12.0-2.module+el8.6.0+14115+8b467244.noarch
+    - pki-ca-0:10.12.0-2.module+el8.6.0+14115+8b467244.noarch
+    - pki-kra-0:10.12.0-2.module+el8.6.0+14115+8b467244.noarch
+    - pki-core-debugsource-0:10.12.0-2.module+el8.6.0+14115+8b467244.x86_64
+    - pki-core-debuginfo-0:10.12.0-2.module+el8.6.0+14115+8b467244.x86_64
+    - pki-symkey-debuginfo-0:10.12.0-2.module+el8.6.0+14115+8b467244.x86_64
+    - pki-tools-debuginfo-0:10.12.0-2.module+el8.6.0+14115+8b467244.x86_64
+    - ldapjdk-javadoc-0:4.23.0-1.module+el8.5.0+11983+6ba118b4.noarch
+    - ldapjdk-0:4.23.0-1.module+el8.5.0+11983+6ba118b4.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-YAML
+  stream: '1.24'
+  version: '8060020210901112033'
+  context: 369bdfc6
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - GPL+ or Artistic
+  summary: Perl parser for YAML
+  description: 'The YAML.pm module implements a YAML Loader and Dumper based on the
+    YAML 1.0 specification. YAML is a generic data serialization language that is
+    optimized for human readability. It can be used to express the data structures
+    of most modern programming languages, including Perl. For information on the YAML
+    syntax, please refer to the YAML specification.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.32'
+      perl-YAML-bootstrap:
+      - '1.24'
+      platform:
+      - el8.6.0
+    requires:
+      perl:
+      - '5.32'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-YAML:
+        rationale: The API.
+        ref: stream-1.24-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - perl-YAML
+  buildopts:
+    rpms:
+      macros: '%_with_perl_YAML_enables_test 1
+
+        '
+  references:
+    community: https://metacpan.org/release/YAML
+  profiles:
+    common:
+      description: YAML distribution
+      rpms:
+      - perl-YAML
+  artifacts:
+    rpms:
+    - perl-YAML-0:1.24-3.module+el8.6.0+13365+dddf72ab.noarch
+...
