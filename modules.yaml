@@ -47899,3 +47899,232 @@ data:
     - perl-Net-SSLeay-0:1.88-2.module+el8.6.0+13392+f0897f98.x86_64
     - perl-Test-NoWarnings-0:1.04-15.module+el8.3.0+6446+594cad75.noarch
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: llvm-toolset
+  stream: rhel8
+  version: '8060020220204053142'
+  context: d63f516d
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - NCSA
+    - NCSA and MIT
+    - NCSA or MIT
+  summary: LLVM
+  description: LLVM Tools and libraries
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.6.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      clang:
+        rationale: clang tools and libraries
+        ref: stream-rhel-8-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        multilib:
+        - x86_64
+      compiler-rt:
+        rationale: LLVM compiler intrinsic and sanitizer libraries
+        ref: stream-rhel-8-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        multilib:
+        - x86_64
+      libomp:
+        rationale: LLVM OpenMP runtime
+        ref: stream-rhel-8-rhel-8.6.0
+        buildorder: '2'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        multilib:
+        - x86_64
+      lld:
+        rationale: LLVM linker
+        ref: stream-rhel-8-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        multilib:
+        - x86_64
+      lldb:
+        rationale: lldb debugger
+        ref: stream-rhel-8-rhel-8.6.0
+        buildorder: '2'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        multilib:
+        - x86_64
+      llvm:
+        rationale: LLVM tools and libraries
+        ref: stream-rhel-8-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        multilib:
+        - x86_64
+      llvm-toolset:
+        rationale: Meta package for llvm-toolset providing scl enable scripts.
+        ref: stream-rhel-8-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        multilib:
+        - x86_64
+      python-lit:
+        rationale: Lit test runner for LLVM
+        ref: stream-rhel-8-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - clang
+    - clang-analyzer
+    - clang-devel
+    - clang-libs
+    - clang-tools-extra
+    - git-clang-format
+    - lld
+    - lld-libs
+    - lldb
+    - lldb-devel
+    - llvm
+    - llvm-devel
+    - llvm-libs
+  profiles:
+    common:
+      rpms:
+      - llvm-toolset
+  artifacts:
+    rpms:
+    - clang-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - clang-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - clang-analyzer-0:13.0.1-1.module+el8.6.0+14118+d530a951.noarch
+    - clang-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - clang-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - clang-debugsource-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - clang-debugsource-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - clang-devel-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - clang-devel-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - clang-libs-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - clang-libs-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - clang-libs-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - clang-libs-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - clang-resource-filesystem-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - clang-resource-filesystem-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - clang-tools-extra-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - clang-tools-extra-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - clang-tools-extra-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - clang-tools-extra-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - compiler-rt-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - compiler-rt-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - compiler-rt-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - compiler-rt-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - compiler-rt-debugsource-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - compiler-rt-debugsource-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - git-clang-format-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - git-clang-format-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - libomp-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - libomp-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - libomp-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - libomp-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - libomp-debugsource-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - libomp-debugsource-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - libomp-devel-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - libomp-devel-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - libomp-test-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - libomp-test-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - libomp-test-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - libomp-test-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - lld-0:13.0.1-2.module+el8.6.0+14118+d530a951.i686
+    - lld-0:13.0.1-2.module+el8.6.0+14118+d530a951.x86_64
+    - lld-debuginfo-0:13.0.1-2.module+el8.6.0+14118+d530a951.i686
+    - lld-debuginfo-0:13.0.1-2.module+el8.6.0+14118+d530a951.x86_64
+    - lld-debugsource-0:13.0.1-2.module+el8.6.0+14118+d530a951.i686
+    - lld-debugsource-0:13.0.1-2.module+el8.6.0+14118+d530a951.x86_64
+    - lld-devel-0:13.0.1-2.module+el8.6.0+14118+d530a951.i686
+    - lld-devel-0:13.0.1-2.module+el8.6.0+14118+d530a951.x86_64
+    - lld-libs-0:13.0.1-2.module+el8.6.0+14118+d530a951.i686
+    - lld-libs-0:13.0.1-2.module+el8.6.0+14118+d530a951.x86_64
+    - lld-libs-debuginfo-0:13.0.1-2.module+el8.6.0+14118+d530a951.i686
+    - lld-libs-debuginfo-0:13.0.1-2.module+el8.6.0+14118+d530a951.x86_64
+    - lldb-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - lldb-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - lldb-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - lldb-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - lldb-debugsource-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - lldb-debugsource-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - lldb-devel-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - lldb-devel-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - llvm-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - llvm-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - llvm-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - llvm-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - llvm-debugsource-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - llvm-debugsource-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - llvm-devel-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - llvm-devel-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - llvm-devel-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - llvm-devel-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - llvm-doc-0:13.0.1-1.module+el8.6.0+14118+d530a951.noarch
+    - llvm-googletest-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - llvm-googletest-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - llvm-libs-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - llvm-libs-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - llvm-libs-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - llvm-libs-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - llvm-static-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - llvm-static-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - llvm-test-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - llvm-test-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - llvm-test-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - llvm-test-debuginfo-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - llvm-toolset-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - llvm-toolset-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - python3-clang-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - python3-clang-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+    - python3-lit-0:13.0.1-1.module+el8.6.0+14118+d530a951.noarch
+    - python3-lldb-0:13.0.1-1.module+el8.6.0+14118+d530a951.i686
+    - python3-lldb-0:13.0.1-1.module+el8.6.0+14118+d530a951.x86_64
+...
