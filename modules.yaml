@@ -47025,3 +47025,66 @@ data:
     - perl-FCGI-debuginfo-1:0.78-11.module+el8.6.0+13378+8c0bf7dc.x86_64
     - perl-FCGI-1:0.78-11.module+el8.6.0+13378+8c0bf7dc.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-DBD-MySQL
+  stream: '4.046'
+  version: '8060020210901110310'
+  context: 0c8a95f7
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - GPL+ or Artistic
+  summary: A MySQL interface for Perl
+  description: 'DBD::mysql is the Perl5 Database Interface driver for the MySQL database.
+    In other words: DBD::mysql is an interface between the Perl programming language
+    and the MySQL programming API that comes with the MySQL relational database management
+    system.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.32'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8.6.0
+    requires:
+      perl:
+      - '5.32'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-DBD-MySQL:
+        rationale: The API.
+        ref: stream-4.046-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - perl-DBD-MySQL
+  references:
+    community: http://search.cpan.org/dist/DBD-mysql/
+  profiles:
+    common:
+      description: DBD-mysql distribution
+      rpms:
+      - perl-DBD-MySQL
+  artifacts:
+    rpms:
+    - perl-DBD-MySQL-0:4.046-3.module+el8.6.0+13400+be0b5d34.x86_64
+    - perl-DBD-MySQL-debugsource-0:4.046-3.module+el8.6.0+13400+be0b5d34.x86_64
+    - perl-DBD-MySQL-debuginfo-0:4.046-3.module+el8.6.0+13400+be0b5d34.x86_64
+...
