@@ -46747,3 +46747,225 @@ data:
     - perl-DBI-debugsource-0:1.641-4.module+el8.6.0+13388+8b5cbb88.x86_64
     - perl-DBI-debuginfo-0:1.641-4.module+el8.6.0+13388+8b5cbb88.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-DBI
+  stream: '1.641'
+  version: '8060020211122100623'
+  context: 03d935ed
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - GPL+ or Artistic
+  summary: A database access API for Perl
+  description: 'DBI is a database access Application Programming Interface (API) for
+    the Perl language. The DBI API specification defines a set of functions, variables
+    and conventions that provide a consistent database interface independent of the
+    actual database being used.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.30'
+      platform:
+      - el8.6.0
+    requires:
+      perl:
+      - '5.30'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-DBI:
+        rationale: The API.
+        ref: stream-1.641-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - perl-DBI
+  buildopts:
+    rpms:
+      macros: '%_without_perl_DBI_enables_Clone 1
+
+        %_without_perl_DBI_enables_coro 1
+
+        %_without_perl_DBI_enables_DB_File 1
+
+        %_without_perl_DBI_enables_MLDBM 1
+
+        %_without_perl_DBI_enables_optional_test 1
+
+        %_without_perl_DBI_enables_SQL_Statement 1
+
+        '
+  references:
+    community: http://dbi.perl.org/
+  profiles:
+    common:
+      description: DBI distribution
+      rpms:
+      - perl-DBI
+  artifacts:
+    rpms:
+    - perl-DBI-debugsource-0:1.641-4.module+el8.6.0+13388+2264dcd4.x86_64
+    - perl-DBI-debuginfo-0:1.641-4.module+el8.6.0+13388+2264dcd4.x86_64
+    - perl-DBI-0:1.641-4.module+el8.6.0+13388+2264dcd4.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-DBI
+  stream: '1.641'
+  version: '8060020211122100623'
+  context: bc93984d
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - GPL+ or Artistic
+  summary: A database access API for Perl
+  description: 'DBI is a database access Application Programming Interface (API) for
+    the Perl language. The DBI API specification defines a set of functions, variables
+    and conventions that provide a consistent database interface independent of the
+    actual database being used.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.26'
+      platform:
+      - el8.6.0
+    requires:
+      perl:
+      - '5.26'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-DBI:
+        rationale: The API.
+        ref: stream-1.641-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - perl-DBI
+  buildopts:
+    rpms:
+      macros: '%_without_perl_DBI_enables_Clone 1
+
+        %_without_perl_DBI_enables_coro 1
+
+        %_without_perl_DBI_enables_DB_File 1
+
+        %_without_perl_DBI_enables_MLDBM 1
+
+        %_without_perl_DBI_enables_optional_test 1
+
+        %_without_perl_DBI_enables_SQL_Statement 1
+
+        '
+  references:
+    community: http://dbi.perl.org/
+  profiles:
+    common:
+      description: DBI distribution
+      rpms:
+      - perl-DBI
+  artifacts:
+    rpms:
+    - perl-DBI-debuginfo-0:1.641-4.module+el8.6.0+13388+70c0920f.x86_64
+    - perl-DBI-debugsource-0:1.641-4.module+el8.6.0+13388+70c0920f.x86_64
+    - perl-DBI-0:1.641-4.module+el8.6.0+13388+70c0920f.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-DBI
+  stream: '1.641'
+  version: '8060020211122100623'
+  context: 0e56aea9
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - GPL+ or Artistic
+  summary: A database access API for Perl
+  description: 'DBI is a database access Application Programming Interface (API) for
+    the Perl language. The DBI API specification defines a set of functions, variables
+    and conventions that provide a consistent database interface independent of the
+    actual database being used.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.32'
+      platform:
+      - el8.6.0
+    requires:
+      perl:
+      - '5.32'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-DBI:
+        rationale: The API.
+        ref: stream-1.641-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - perl-DBI
+  buildopts:
+    rpms:
+      macros: '%_without_perl_DBI_enables_Clone 1
+
+        %_without_perl_DBI_enables_coro 1
+
+        %_without_perl_DBI_enables_DB_File 1
+
+        %_without_perl_DBI_enables_MLDBM 1
+
+        %_without_perl_DBI_enables_optional_test 1
+
+        %_without_perl_DBI_enables_SQL_Statement 1
+
+        '
+  references:
+    community: http://dbi.perl.org/
+  profiles:
+    common:
+      description: DBI distribution
+      rpms:
+      - perl-DBI
+  artifacts:
+    rpms:
+    - perl-DBI-debuginfo-0:1.641-4.module+el8.6.0+13388+27b5ac11.x86_64
+    - perl-DBI-debugsource-0:1.641-4.module+el8.6.0+13388+27b5ac11.x86_64
+    - perl-DBI-0:1.641-4.module+el8.6.0+13388+27b5ac11.x86_64
+...
