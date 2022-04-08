@@ -47088,3 +47088,638 @@ data:
     - perl-DBD-MySQL-debugsource-0:4.046-3.module+el8.6.0+13400+be0b5d34.x86_64
     - perl-DBD-MySQL-debuginfo-0:4.046-3.module+el8.6.0+13400+be0b5d34.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-DBD-SQLite
+  stream: '1.58'
+  version: '8060020210901111154'
+  context: 0c8a95f7
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - (GPL+ or Artistic) and Public Domain
+  summary: SQLite DBI driver
+  description: 'SQLite is a public domain RDBMS database engine that you can find
+    at http://www.hwaci.com/sw/sqlite/. This Perl module provides a SQLite RDBMS module
+    that uses the system SQLite libraries.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.32'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8.6.0
+    requires:
+      perl:
+      - '5.32'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-DBD-SQLite:
+        rationale: The API.
+        ref: stream-1.58-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Test-NoWarnings:
+        rationale: A build-time dependency.
+        ref: stream-1.04-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - perl-DBD-SQLite
+  buildopts:
+    rpms:
+      macros: '%_without_perl_Test_NoWarnings_enables_stack_trace 1
+
+        '
+  references:
+    community: http://search.cpan.org/dist/DBD-SQLite/
+  profiles:
+    common:
+      description: DBD-SQLite distribution
+      rpms:
+      - perl-DBD-SQLite
+  filter:
+    rpms:
+    - perl-Test-NoWarnings
+  artifacts:
+    rpms:
+    - perl-DBD-SQLite-debugsource-0:1.58-2.module+el8.6.0+13408+461b4ab5.x86_64
+    - perl-DBD-SQLite-0:1.58-2.module+el8.6.0+13408+461b4ab5.x86_64
+    - perl-Test-NoWarnings-0:1.04-15.module+el8.6.0+13408+461b4ab5.noarch
+    - perl-DBD-SQLite-debuginfo-0:1.58-2.module+el8.6.0+13408+461b4ab5.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-DBD-Pg
+  stream: '3.7'
+  version: '8060020210901112417'
+  context: e46b129e
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - GPLv2+ or Artistic
+  summary: A PostgreSQL interface for Perl
+  description: 'DBD::Pg is a Perl module that works with the DBI module to provide
+    access to PostgreSQL databases.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.32'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8.6.0
+      postgresql:
+      - '10'
+    requires:
+      perl:
+      - '5.32'
+      perl-DBI:
+      - '1.641'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-DBD-Pg:
+        rationale: The API.
+        ref: stream-3.7-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - perl-DBD-Pg
+  references:
+    community: http://search.cpan.org/dist/DBD-Pg/
+  profiles:
+    common:
+      description: DBD-Pg distribution
+      rpms:
+      - perl-DBD-Pg
+  artifacts:
+    rpms:
+    - perl-DBD-Pg-0:3.7.4-4.module+el8.6.0+13404+90bdd130.x86_64
+    - perl-DBD-Pg-debuginfo-0:3.7.4-4.module+el8.6.0+13404+90bdd130.x86_64
+    - perl-DBD-Pg-debugsource-0:3.7.4-4.module+el8.6.0+13404+90bdd130.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-App-cpanminus
+  stream: '1.7044'
+  version: '8060020211122110049'
+  context: 7ba85dc7
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - (GPL+ or Artistic) and GPLv2+
+    - ASL 2.0
+    - GPL+ or Artistic
+  summary: Get, unpack, build and install CPAN modules
+  description: 'This is a CPAN client that requires zero configuration, and stands
+    alone but it''s maintainable and extensible with plug-ins and friendly to shell
+    scripting.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.32'
+      platform:
+      - el8.6.0
+    requires:
+      perl:
+      - '5.32'
+      perl-YAML: []
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-App-cpanminus:
+        rationale: The API.
+        ref: stream-1.7044-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-CPAN-DistnameInfo:
+        rationale: Run-time dependency.
+        ref: stream-0.12-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-CPAN-Meta-Check:
+        rationale: Run-time dependency.
+        ref: stream-0.014-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-File-pushd:
+        rationale: Run-time dependency.
+        ref: stream-1.014-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Module-CPANfile:
+        rationale: Run-time dependency.
+        ref: stream-1.1002-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Parse-PMFile:
+        rationale: Run-time dependency.
+        ref: stream-0.41-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-String-ShellQuote:
+        rationale: Run-time dependency.
+        ref: stream-1.04-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Test-Deep:
+        rationale: Build-time dependency.
+        ref: stream-1.127-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - perl-App-cpanminus
+  buildopts:
+    rpms:
+      macros: '%_without_perl_CPAN_Meta_Check_enables_extra_test 1
+
+        '
+  references:
+    community: https://metacpan.org/release/App-cpanminus
+  profiles:
+    common:
+      description: App-cpanminus distribution
+      rpms:
+      - perl-App-cpanminus
+  filter:
+    rpms:
+    - perl-CPAN-DistnameInfo-dummy
+    - perl-Test-Deep
+  artifacts:
+    rpms:
+    - perl-CPAN-Meta-Check-0:0.014-6.module+el8.6.0+13396+e9736658.noarch
+    - perl-String-ShellQuote-0:1.04-24.module+el8.6.0+13396+e9736658.noarch
+    - perl-CPAN-DistnameInfo-0:0.12-13.module+el8.6.0+13396+e9736658.noarch
+    - perl-Parse-PMFile-0:0.41-7.module+el8.6.0+13396+e9736658.noarch
+    - perl-Module-CPANfile-0:1.1002-7.module+el8.6.0+13396+e9736658.noarch
+    - perl-File-pushd-0:1.014-6.module+el8.6.0+13396+e9736658.noarch
+    - perl-App-cpanminus-0:1.7044-5.module+el8.6.0+13396+e9736658.noarch
+    - perl-Test-Deep-0:1.127-4.module+el8.6.0+13396+e9736658.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-IO-Socket-SSL
+  stream: '2.066'
+  version: '8060020211122104554'
+  context: 200e0407
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - (GPL+ or Artistic) and MPLv2.0
+    - Artistic 2.0
+  summary: Perl library for transparent TLS
+  description: 'IO::Socket::SSL is a drop-in replacement for IO::Socket::IP that uses
+    TLS to encrypt data before it is transferred to a remote server or client. IO::Socket::SSL
+    supports all the extra features that one needs to write a full-featured TLS client
+    or server application like multiple TLS contexts, cipher selection, certificate
+    verification, and TLS version selection. Net::SSLeay offers some high level convenience
+    functions for accessing web pages on TLS servers, a sslcat() function for writing
+    your own clients, and finally access to the API of OpenSSL library so you can
+    write servers or clients for more complicated applications.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.24'
+      platform:
+      - el8.6.0
+    requires:
+      perl:
+      - '5.24'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-Devel-StackTrace:
+        rationale: A build dependency.
+        ref: stream-2.03-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-IO-Socket-INET6:
+        rationale: A build dependency.
+        ref: stream-2.72-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-IO-Socket-SSL:
+        rationale: The API.
+        ref: stream-2.066-rhel-8.6.0
+        buildorder: '3'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-IO-Tty:
+        rationale: A build dependency.
+        ref: stream-1.12-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-IPC-Run:
+        rationale: A build dependency.
+        ref: stream-0.96-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Net-IDN-Encode:
+        rationale: A build dependency.
+        ref: stream-2.400-rhel-8.6.0
+        buildorder: '2'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Net-LibIDN:
+        rationale: A build dependency.
+        ref: stream-0.12-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Net-SSLeay:
+        rationale: The API.
+        ref: stream-1.88-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Socket6:
+        rationale: A build dependency.
+        ref: stream-0.28-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Test-NoWarnings:
+        rationale: A build dependency.
+        ref: stream-1.04-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - perl-IO-Socket-SSL
+    - perl-Net-SSLeay
+  references:
+    community: https://metacpan.org/release/IO-Socket-SSL
+  profiles:
+    common:
+      description: IO::Socket::SSL and Net::SSLeay
+      rpms:
+      - perl-IO-Socket-SSL
+      - perl-Net-SSLeay
+  filter:
+    rpms:
+    - perl-Devel-StackTrace
+    - perl-IO-Socket-INET6
+    - perl-IO-Tty
+    - perl-IPC-Run
+    - perl-Net-IDN-Encode
+    - perl-Net-LibIDN
+    - perl-Socket6
+    - perl-Test-NoWarnings
+  artifacts:
+    rpms:
+    - perl-Net-SSLeay-debuginfo-0:1.88-2.module+el8.6.0+13392+30f09725.x86_64
+    - perl-Net-SSLeay-debugsource-0:1.88-2.module+el8.6.0+13392+30f09725.x86_64
+    - perl-Net-SSLeay-0:1.88-2.module+el8.6.0+13392+30f09725.x86_64
+    - perl-Devel-StackTrace-1:2.03-2.module+el8.3.0+6446+37a50855.noarch
+    - perl-IO-Socket-SSL-0:2.066-4.module+el8.3.0+6446+37a50855.noarch
+    - perl-IO-Tty-0:1.12-11.module+el8.3.0+6446+37a50855.x86_64
+    - perl-IO-Tty-debuginfo-0:1.12-11.module+el8.3.0+6446+37a50855.x86_64
+    - perl-IO-Tty-debugsource-0:1.12-11.module+el8.3.0+6446+37a50855.x86_64
+    - perl-IPC-Run-0:0.99-1.module+el8.3.0+6446+37a50855.noarch
+    - perl-Net-IDN-Encode-0:2.500-2.module+el8.3.0+6446+37a50855.x86_64
+    - perl-Net-IDN-Encode-debuginfo-0:2.500-2.module+el8.3.0+6446+37a50855.x86_64
+    - perl-Net-IDN-Encode-debugsource-0:2.500-2.module+el8.3.0+6446+37a50855.x86_64
+    - perl-Net-LibIDN-0:0.12-35.module+el8.3.0+6446+37a50855.x86_64
+    - perl-Net-LibIDN-debuginfo-0:0.12-35.module+el8.3.0+6446+37a50855.x86_64
+    - perl-Net-LibIDN-debugsource-0:0.12-35.module+el8.3.0+6446+37a50855.x86_64
+    - perl-Test-NoWarnings-0:1.04-15.module+el8.3.0+6446+37a50855.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-IO-Socket-SSL
+  stream: '2.066'
+  version: '8060020211122104554'
+  context: 03d935ed
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - (GPL+ or Artistic) and MPLv2.0
+    - Artistic 2.0
+  summary: Perl library for transparent TLS
+  description: 'IO::Socket::SSL is a drop-in replacement for IO::Socket::IP that uses
+    TLS to encrypt data before it is transferred to a remote server or client. IO::Socket::SSL
+    supports all the extra features that one needs to write a full-featured TLS client
+    or server application like multiple TLS contexts, cipher selection, certificate
+    verification, and TLS version selection. Net::SSLeay offers some high level convenience
+    functions for accessing web pages on TLS servers, a sslcat() function for writing
+    your own clients, and finally access to the API of OpenSSL library so you can
+    write servers or clients for more complicated applications.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.30'
+      platform:
+      - el8.6.0
+    requires:
+      perl:
+      - '5.30'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-Devel-StackTrace:
+        rationale: A build dependency.
+        ref: stream-2.03-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-IO-Socket-INET6:
+        rationale: A build dependency.
+        ref: stream-2.72-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-IO-Socket-SSL:
+        rationale: The API.
+        ref: stream-2.066-rhel-8.6.0
+        buildorder: '3'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-IO-Tty:
+        rationale: A build dependency.
+        ref: stream-1.12-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-IPC-Run:
+        rationale: A build dependency.
+        ref: stream-0.96-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Net-IDN-Encode:
+        rationale: A build dependency.
+        ref: stream-2.400-rhel-8.6.0
+        buildorder: '2'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Net-LibIDN:
+        rationale: A build dependency.
+        ref: stream-0.12-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Net-SSLeay:
+        rationale: The API.
+        ref: stream-1.88-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Socket6:
+        rationale: A build dependency.
+        ref: stream-0.28-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Test-NoWarnings:
+        rationale: A build dependency.
+        ref: stream-1.04-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - perl-IO-Socket-SSL
+    - perl-Net-SSLeay
+  references:
+    community: https://metacpan.org/release/IO-Socket-SSL
+  profiles:
+    common:
+      description: IO::Socket::SSL and Net::SSLeay
+      rpms:
+      - perl-IO-Socket-SSL
+      - perl-Net-SSLeay
+  filter:
+    rpms:
+    - perl-Devel-StackTrace
+    - perl-IO-Socket-INET6
+    - perl-IO-Tty
+    - perl-IPC-Run
+    - perl-Net-IDN-Encode
+    - perl-Net-LibIDN
+    - perl-Socket6
+    - perl-Test-NoWarnings
+  artifacts:
+    rpms:
+    - perl-Devel-StackTrace-1:2.03-2.module+el8.3.0+6452+449fe210.noarch
+    - perl-IO-Socket-INET6-0:2.72-12.module+el8.3.0+6452+449fe210.noarch
+    - perl-IO-Socket-SSL-0:2.066-4.module+el8.3.0+6452+449fe210.noarch
+    - perl-IO-Tty-0:1.12-11.module+el8.3.0+6452+449fe210.x86_64
+    - perl-IO-Tty-debuginfo-0:1.12-11.module+el8.3.0+6452+449fe210.x86_64
+    - perl-IO-Tty-debugsource-0:1.12-11.module+el8.3.0+6452+449fe210.x86_64
+    - perl-IPC-Run-0:0.99-1.module+el8.3.0+6452+449fe210.noarch
+    - perl-Net-IDN-Encode-0:2.500-2.module+el8.3.0+6452+449fe210.x86_64
+    - perl-Net-IDN-Encode-debuginfo-0:2.500-2.module+el8.3.0+6452+449fe210.x86_64
+    - perl-Net-IDN-Encode-debugsource-0:2.500-2.module+el8.3.0+6452+449fe210.x86_64
+    - perl-Net-LibIDN-0:0.12-35.module+el8.3.0+6452+449fe210.x86_64
+    - perl-Net-LibIDN-debuginfo-0:0.12-35.module+el8.3.0+6452+449fe210.x86_64
+    - perl-Net-LibIDN-debugsource-0:0.12-35.module+el8.3.0+6452+449fe210.x86_64
+    - perl-Net-SSLeay-debugsource-0:1.88-2.module+el8.6.0+13392+09a687b6.x86_64
+    - perl-Net-SSLeay-debuginfo-0:1.88-2.module+el8.6.0+13392+09a687b6.x86_64
+    - perl-Net-SSLeay-0:1.88-2.module+el8.6.0+13392+09a687b6.x86_64
+    - perl-Test-NoWarnings-0:1.04-15.module+el8.3.0+6452+449fe210.noarch
+...
