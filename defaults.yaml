@@ -2,269 +2,11 @@
 document: modulemd-defaults
 version: 1
 data:
-  module: nodejs
-  stream: "10"
-  profiles:
-    10: [common]
-    12: [common]
-    14: [common]
-    16: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: inkscape
-  stream: "0.92.3"
-  profiles:
-    0.92.3: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: ruby
-  stream: "2.5"
-  profiles:
-    2.5: [common]
-    2.6: [common]
-    2.7: [common]
-    3.0: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: freeradius
-  stream: "3.0"
-  profiles:
-    3.0: [server]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: python36
-  stream: "3.6"
-  profiles:
-    3.6: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: perl-DBD-SQLite
-  stream: "1.58"
-  profiles:
-    1.58: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: redis
-  stream: "5"
-  profiles:
-    5: [common]
-    6: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: php
-  stream: "7.2"
-  profiles:
-    7.2: [common]
-    7.3: [common]
-    7.4: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: perl
-  stream: "5.26"
-  profiles:
-    5.24: [common]
-    5.26: [common]
-    5.30: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: idm
-  stream: "client"
-  profiles:
-    DL1: [common]
-    client: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: varnish
-  stream: "6"
-  profiles:
-    6: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: httpd
-  stream: "2.4"
-  profiles:
-    2.4: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: ant
-  stream: "1.10"
-  profiles:
-    1.10: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: go-toolset
-  stream: "rhel8"
-  profiles:
-    rhel8: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: mailman
-  stream: "2.1"
-  profiles:
-    2.1: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: perl-FCGI
-  stream: "0.78"
-  profiles:
-    0.78: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: satellite-5-client
-  stream: "1.0"
-  profiles:
-    1.0: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: postgresql
-  stream: "10"
-  profiles:
-    10: [server]
-    12: [server]
-    13: [server]
-    9.6: [server]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: javapackages-runtime
-  stream: "201801"
-  profiles:
-    201801: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: perl-DBI
-  stream: "1.641"
-  profiles:
-    1.641: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: llvm-toolset
-  stream: "rhel8"
-  profiles:
-    rhel8: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: perl-IO-Socket-SSL
-  stream: "2.066"
-  profiles:
-    2.066: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: virt
-  stream: "rhel"
-  profiles:
-    rhel: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: scala
-  stream: "2.10"
-  profiles:
-    2.10: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: gimp
-  stream: "2.8"
-  profiles:
-    2.8: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
   module: swig
   stream: "3.0"
   profiles:
     3.0: [common]
     4.0: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: python27
-  stream: "2.7"
-  profiles:
-    2.7: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: perl-libwww-perl
-  stream: "6.34"
-  profiles:
-    6.34: [common]
 ...
 ---
 document: modulemd-defaults
@@ -279,7 +21,64 @@ data:
 document: modulemd-defaults
 version: 1
 data:
-  module: jmc
+  module: squid
+  stream: "4"
+  profiles:
+    4: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: php
+  stream: "7.2"
+  profiles:
+    7.2: [common]
+    7.3: [common]
+    7.4: [common]
+    8.0: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: gimp
+  stream: "2.8"
+  profiles:
+    2.8: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: virt
+  stream: "rhel"
+  profiles:
+    rhel: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: perl-DBD-SQLite
+  stream: "1.58"
+  profiles:
+    1.58: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: perl-libwww-perl
+  stream: "6.34"
+  profiles:
+    6.34: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: rust-toolset
   stream: "rhel8"
   profiles:
     rhel8: [common]
@@ -288,59 +87,10 @@ data:
 document: modulemd-defaults
 version: 1
 data:
-  module: python38
-  stream: "3.8"
+  module: scala
+  stream: "2.10"
   profiles:
-    3.8: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: perl-DBD-Pg
-  stream: "3.7"
-  profiles:
-    3.7: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: mysql
-  stream: "8.0"
-  profiles:
-    8.0: [server]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: mariadb
-  stream: "10.3"
-  profiles:
-    10.3: [server]
-    10.5: [server]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: mercurial
-  stream: "4.8"
-  profiles:
-    4.8: [common]
-...
----
-document: modulemd-defaults
-version: 1
-data:
-  module: container-tools
-  stream: "rhel8"
-  profiles:
-    1.0: [common]
-    2.0: [common]
-    3.0: [common]
-    rhel8: [common]
+    2.10: [common]
 ...
 ---
 document: modulemd-defaults
@@ -358,37 +108,96 @@ data:
 document: modulemd-defaults
 version: 1
 data:
-  module: rhn-tools
-  stream: "1.0"
+  module: idm
+  stream: "client"
   profiles:
-    1.0: [common]
+    DL1: [common]
+    client: [common]
 ...
 ---
 document: modulemd-defaults
 version: 1
 data:
-  module: rust-toolset
-  stream: "rhel8"
+  module: perl-DBI
+  stream: "1.641"
   profiles:
-    rhel8: [common]
+    1.641: [common]
 ...
 ---
 document: modulemd-defaults
 version: 1
 data:
-  module: perl-YAML
-  stream: "1.24"
+  module: postgresql
+  stream: "10"
   profiles:
-    1.24: [common]
+    10: [server]
+    12: [server]
+    13: [server]
+    9.6: [server]
 ...
 ---
 document: modulemd-defaults
 version: 1
 data:
-  module: squid
-  stream: "4"
+  module: perl-App-cpanminus
+  stream: "1.7044"
   profiles:
-    4: [common]
+    1.7044: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: inkscape
+  stream: "0.92.3"
+  profiles:
+    0.92.3: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: python38
+  stream: "3.8"
+  profiles:
+    3.8: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: freeradius
+  stream: "3.0"
+  profiles:
+    3.0: [server]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: mysql
+  stream: "8.0"
+  profiles:
+    8.0: [server]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: subversion
+  stream: "1.10"
+  profiles:
+    1.10: [common]
+    1.14: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: mailman
+  stream: "2.1"
+  profiles:
+    2.1: [common]
 ...
 ---
 document: modulemd-defaults
@@ -405,6 +214,97 @@ data:
 document: modulemd-defaults
 version: 1
 data:
+  module: varnish
+  stream: "6"
+  profiles:
+    6: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: ruby
+  stream: "2.5"
+  profiles:
+    2.5: [common]
+    2.6: [common]
+    2.7: [common]
+    3.0: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: perl-IO-Socket-SSL
+  stream: "2.066"
+  profiles:
+    2.066: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: python36
+  stream: "3.6"
+  profiles:
+    3.6: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: rhn-tools
+  stream: "1.0"
+  profiles:
+    1.0: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: perl
+  stream: "5.26"
+  profiles:
+    5.24: [common]
+    5.26: [common]
+    5.30: [common]
+    5.32: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: mercurial
+  stream: "4.8"
+  profiles:
+    4.8: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: mariadb
+  stream: "10.3"
+  profiles:
+    10.3: [server]
+    10.5: [server]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: nodejs
+  stream: "10"
+  profiles:
+    10: [common]
+    12: [common]
+    14: [common]
+    16: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
   module: perl-DBD-MySQL
   stream: "4.046"
   profiles:
@@ -414,18 +314,137 @@ data:
 document: modulemd-defaults
 version: 1
 data:
-  module: subversion
-  stream: "1.10"
+  module: httpd
+  stream: "2.4"
   profiles:
-    1.10: [common]
-    1.14: [common]
+    2.4: [common]
 ...
 ---
 document: modulemd-defaults
 version: 1
 data:
-  module: perl-App-cpanminus
-  stream: "1.7044"
+  module: eclipse
   profiles:
-    1.7044: [common]
+    rhel8: [java]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: container-tools
+  stream: "rhel8"
+  profiles:
+    1.0: [common]
+    2.0: [common]
+    3.0: [common]
+    rhel8: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: jmc
+  stream: "rhel8"
+  profiles:
+    rhel8: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: perl-DBD-Pg
+  stream: "3.7"
+  profiles:
+    3.7: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: log4j
+  stream: "2"
+  profiles:
+    2: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: satellite-5-client
+  stream: "1.0"
+  profiles:
+    1.0: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: llvm-toolset
+  stream: "rhel8"
+  profiles:
+    rhel8: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: perl-FCGI
+  stream: "0.78"
+  profiles:
+    0.78: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: redis
+  stream: "5"
+  profiles:
+    5: [common]
+    6: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: perl-YAML
+  stream: "1.24"
+  profiles:
+    1.24: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: javapackages-runtime
+  stream: "201801"
+  profiles:
+    201801: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: python27
+  stream: "2.7"
+  profiles:
+    2.7: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: go-toolset
+  stream: "rhel8"
+  profiles:
+    rhel8: [common]
+...
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: ant
+  stream: "1.10"
+  profiles:
+    1.10: [common]
 ...

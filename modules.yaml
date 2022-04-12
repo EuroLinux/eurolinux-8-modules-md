@@ -50562,3 +50562,222 @@ data:
     - softhsm-debugsource-0:2.6.0-5.module+el8.4.0+10227+076cd560.x86_64
     - softhsm-devel-0:2.6.0-5.module+el8.4.0+10227+076cd560.x86_64
 ...
+---
+version: 2
+data:
+  name: idm
+  stream: client
+  version: '8060020220221131046'
+  context: 7c4ef452
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - BSD
+    - GPLv3
+    - GPLv3+
+    - LGPLv3+
+  summary: RHEL IdM long term support client module
+  description: 'RHEL IdM is an integrated solution to provide centrally managed Identity
+    (users, hosts, services), Authentication (SSO, 2FA), and Authorization (host access
+    control, SELinux user roles, services). The solution provides features for further
+    integration with Linux based clients (SUDO, automount) and integration with Active
+    Directory based infrastructures (Trusts).
+
+    This module stream supports only client side of RHEL IdM solution'
+  dependencies:
+  - buildrequires:
+      389-ds:
+      - '1.4'
+      httpd:
+      - '2.4'
+      pki-core:
+      - '10.6'
+      platform:
+      - el8.6.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      bind-dyndb-ldap:
+        rationale: Driver for BIND to store DNS information in LDAP
+        ref: stream-idm-DL1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      custodia:
+        rationale: Remote access to secrets and credentials in IdM topology
+        ref: stream-idm-DL1-rhel-8.6.0
+        buildorder: '2'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      ipa:
+        rationale: Module API
+        ref: stream-idm-DL1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      ipa-healthcheck:
+        rationale: A tool to detect issues in IdM clusters
+        ref: stream-DL1-rhel-8.6.0
+        buildorder: '3'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      opendnssec:
+        rationale: An implementation of DNSSEC support for IdM integrated DNS server
+        ref: stream-idm-DL1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-jwcrypto:
+        rationale: JSON Web Cryptographic Tokens used by Custodia
+        ref: stream-idm-DL1-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-qrcode:
+        rationale: QR code generator for IdM two-factor authentication
+        ref: stream-idm-DL1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-yubico:
+        rationale: Support for Yubikey-based tokens for IdM two-factor authentication
+        ref: stream-idm-DL1-rhel-8.6.0
+        buildorder: '2'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      pyusb:
+        rationale: Python USB support to access USB tokens for IdM two-factor authentication
+        ref: stream-idm-DL1-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      slapi-nis:
+        rationale: Compatibility plugin to serve legacy clients
+        ref: stream-idm-DL1-rhel-8.6.0
+        arches:
+        - aarch64
+        - ppc64le
+        - s390x
+        - x86_64
+      softhsm:
+        rationale: Software version of a PKCS#11 Hardware Security Module
+        ref: stream-idm-DL1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - ipa-client
+    - ipa-client-common
+    - ipa-client-debuginfo
+    - ipa-common
+    - ipa-debuginfo
+    - ipa-debugsource
+    - ipa-healthcheck-core
+    - ipa-python-compat
+    - python3-ipaclient
+    - python3-ipalib
+    - python3-jwcrypto
+    - python3-pyusb
+    - python3-qrcode
+    - python3-qrcode-core
+    - python3-yubico
+  references:
+    community: https://www.freeipa.org/
+    documentation: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/linux_domain_identity_authentication_and_policy_guide/index
+    tracker: https://pagure.io/freeipa/issues
+  profiles:
+    common:
+      description: A default profile for RHEL IdM client
+      rpms:
+      - ipa-client
+  filter:
+    rpms:
+    - bind-dyndb-ldap
+    - bind-dyndb-ldap-debuginfo
+    - bind-dyndb-ldap-debugsource
+    - custodia
+    - ipa-healthcheck
+    - ipa-server
+    - ipa-server-common
+    - ipa-server-debuginfo
+    - ipa-server-dns
+    - ipa-server-trust-ad
+    - ipa-server-trust-ad-debuginfo
+    - opendnssec
+    - opendnssec-debuginfo
+    - opendnssec-debugsource
+    - python3-custodia
+    - python3-ipaserver
+    - python3-ipatests
+    - slapi-nis
+    - slapi-nis-debuginfo
+    - slapi-nis-debugsource
+    - softhsm
+    - softhsm-debuginfo
+    - softhsm-debugsource
+    - softhsm-devel
+  artifacts:
+    rpms:
+    - ipa-server-0:4.9.8-6.module+el8.6.0+14300+0c339766.x86_64
+    - python3-ipaserver-0:4.9.8-6.module+el8.6.0+14300+0c339766.noarch
+    - ipa-server-common-0:4.9.8-6.module+el8.6.0+14300+0c339766.noarch
+    - ipa-server-dns-0:4.9.8-6.module+el8.6.0+14300+0c339766.noarch
+    - ipa-server-trust-ad-0:4.9.8-6.module+el8.6.0+14300+0c339766.x86_64
+    - ipa-client-0:4.9.8-6.module+el8.6.0+14300+0c339766.x86_64
+    - ipa-client-samba-0:4.9.8-6.module+el8.6.0+14300+0c339766.x86_64
+    - ipa-client-epn-0:4.9.8-6.module+el8.6.0+14300+0c339766.x86_64
+    - python3-ipaclient-0:4.9.8-6.module+el8.6.0+14300+0c339766.noarch
+    - ipa-client-common-0:4.9.8-6.module+el8.6.0+14300+0c339766.noarch
+    - ipa-python-compat-0:4.9.8-6.module+el8.6.0+14300+0c339766.noarch
+    - python3-ipalib-0:4.9.8-6.module+el8.6.0+14300+0c339766.noarch
+    - ipa-common-0:4.9.8-6.module+el8.6.0+14300+0c339766.noarch
+    - python3-ipatests-0:4.9.8-6.module+el8.6.0+14300+0c339766.noarch
+    - ipa-selinux-0:4.9.8-6.module+el8.6.0+14300+0c339766.noarch
+    - ipa-debugsource-0:4.9.8-6.module+el8.6.0+14300+0c339766.x86_64
+    - ipa-debuginfo-0:4.9.8-6.module+el8.6.0+14300+0c339766.x86_64
+    - ipa-server-debuginfo-0:4.9.8-6.module+el8.6.0+14300+0c339766.x86_64
+    - ipa-server-trust-ad-debuginfo-0:4.9.8-6.module+el8.6.0+14300+0c339766.x86_64
+    - ipa-client-debuginfo-0:4.9.8-6.module+el8.6.0+14300+0c339766.x86_64
+    - ipa-healthcheck-0:0.7-10.module+el8.6.0+14300+0c339766.noarch
+    - ipa-healthcheck-core-0:0.7-10.module+el8.6.0+14300+0c339766.noarch
+...
