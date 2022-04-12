@@ -50563,6 +50563,7 @@ data:
     - softhsm-devel-0:2.6.0-5.module+el8.4.0+10227+076cd560.x86_64
 ...
 ---
+document: modulemd
 version: 2
 data:
   name: idm
