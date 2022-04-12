@@ -39575,90 +39575,6 @@ data:
 document: modulemd
 version: 2
 data:
-  name: httpd
-  stream: '2.4'
-  version: '8050020220228164203'
-  context: c5368500
-  arch: x86_64
-  license:
-    module:
-    - MIT
-    content:
-    - ASL 2.0
-  summary: Apache HTTP Server
-  description: Apache httpd is a powerful, efficient, and extensible HTTP server.
-  dependencies:
-  - buildrequires:
-      platform:
-      - el8.5.0.z
-    requires:
-      platform:
-      - el8
-  components:
-    rpms:
-      httpd:
-        rationale: Apache httpd
-        ref: stream-2.4-rhel-8.5.0
-        buildorder: '10'
-        arches:
-        - aarch64
-        - i686
-        - ppc64le
-        - s390x
-        - x86_64
-      mod_http2:
-        rationale: HTTP/2 support for Apache httpd
-        ref: stream-2.4-rhel-8.5.0
-        buildorder: '20'
-        arches:
-        - aarch64
-        - i686
-        - ppc64le
-        - s390x
-        - x86_64
-      mod_md:
-        rationale: Certificate provisioning using ACME for Apache httpd
-        ref: stream-2.4-rhel-8.5.0
-        buildorder: '20'
-        arches:
-        - aarch64
-        - i686
-        - ppc64le
-        - s390x
-        - x86_64
-  api:
-    rpms:
-    - httpd
-    - httpd-devel
-    - httpd-filesystem
-    - mod_ssl
-  references:
-    documentation: https://httpd.apache.org/docs/2.4/
-    tracker: https://bz.apache.org/bugzilla/
-  profiles:
-    common:
-      rpms:
-      - httpd
-      - httpd-filesystem
-      - httpd-tools
-      - mod_http2
-      - mod_ssl
-    devel:
-      rpms:
-      - httpd
-      - httpd-devel
-      - httpd-filesystem
-      - httpd-tools
-    minimal:
-      rpms:
-      - httpd
-  artifacts:
-    rpms:
-...
----
-document: modulemd
-version: 2
-data:
   name: virt
   stream: rhel
   version: '8050020220208234339'
@@ -47881,7 +47797,6 @@ data:
     - perl-Test-NoWarnings
   artifacts:
     rpms:
-    
     - perl-Devel-StackTrace-1:2.03-2.module+el8.3.0+6446+594cad75.noarch
     - perl-IO-Socket-SSL-0:2.066-4.module+el8.3.0+6446+594cad75.noarch
     - perl-IO-Tty-0:1.12-11.module+el8.3.0+6446+594cad75.x86_64
