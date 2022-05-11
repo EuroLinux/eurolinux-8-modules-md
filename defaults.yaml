@@ -337,6 +337,7 @@ data:
     1.0: [common]
     2.0: [common]
     3.0: [common]
+    4.0: [common]
     rhel8: [common]
 ...
 ---
