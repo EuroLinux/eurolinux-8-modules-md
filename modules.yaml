@@ -58385,8 +58385,7 @@ data:
     - nodejs-debugsource-1:16.14.0-4.module+el8.6.0+15294+54b291d2.x86_64
     - nodejs-full-i18n-1:16.14.0-4.module+el8.6.0+15294+54b291d2.x86_64
     - nodejs-devel-1:16.14.0-4.module+el8.6.0+15294+54b291d2.x86_64
-    - nodejs-nodemon-0:2.0.15-1.module+el8.5.0+13548+45d748af.noarch
-    - nodejs-nodemon-0:2.0.7-1.module+el8.5.0+10992+fac5fe06.noarch
+    - nodejs-nodemon-0:2.0.15-1.module+el8.6.0+15294+54b291d2.noarch
     - nodejs-packaging-0:25-1.module+el8.5.0+10992+fac5fe06.noarch
 ...
 ---
