@@ -32255,3 +32255,954 @@ data:
     - perl-DBD-MySQL-debugsource-0:4.046-3.module+el8.6.0+13400+be0b5d34.aarch64
     - perl-DBD-MySQL-debuginfo-0:4.046-3.module+el8.6.0+13400+be0b5d34.aarch64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: httpd
+  stream: '2.4'
+  version: '8060020220321163517'
+  context: d63f516d
+  arch: aarch64
+  license:
+    module:
+    - MIT
+    content:
+    - ASL 2.0
+  summary: Apache HTTP Server
+  description: Apache httpd is a powerful, efficient, and extensible HTTP server.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.6.0
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      httpd:
+        rationale: Apache httpd
+        ref: stream-2.4-rhel-8.6.0
+        buildorder: '10'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      mod_http2:
+        rationale: HTTP/2 support for Apache httpd
+        ref: stream-2.4-rhel-8.6.0
+        buildorder: '20'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      mod_md:
+        rationale: Certificate provisioning using ACME for Apache httpd
+        ref: stream-2.4-rhel-8.6.0
+        buildorder: '20'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - httpd
+    - httpd-devel
+    - httpd-filesystem
+    - mod_ssl
+  references:
+    documentation: https://httpd.apache.org/docs/2.4/
+    tracker: https://bz.apache.org/bugzilla/
+  profiles:
+    common:
+      rpms:
+      - httpd
+      - httpd-filesystem
+      - httpd-tools
+      - mod_http2
+      - mod_ssl
+    devel:
+      rpms:
+      - httpd
+      - httpd-devel
+      - httpd-filesystem
+      - httpd-tools
+    minimal:
+      rpms:
+      - httpd
+  artifacts:
+    rpms:
+    - httpd-0:2.4.37-47.module+el8.6.0+14529+083145da.1.aarch64
+    - httpd-debuginfo-0:2.4.37-47.module+el8.6.0+14529+083145da.1.aarch64
+    - httpd-debugsource-0:2.4.37-47.module+el8.6.0+14529+083145da.1.aarch64
+    - httpd-devel-0:2.4.37-47.module+el8.6.0+14529+083145da.1.aarch64
+    - httpd-filesystem-0:2.4.37-47.module+el8.6.0+14529+083145da.1.noarch
+    - httpd-manual-0:2.4.37-47.module+el8.6.0+14529+083145da.1.noarch
+    - httpd-tools-0:2.4.37-47.module+el8.6.0+14529+083145da.1.aarch64
+    - httpd-tools-debuginfo-0:2.4.37-47.module+el8.6.0+14529+083145da.1.aarch64
+    - mod_http2-0:1.15.7-5.module+el8.6.0+13996+01710940.aarch64
+    - mod_http2-debuginfo-0:1.15.7-5.module+el8.6.0+13996+01710940.aarch64
+    - mod_http2-debugsource-0:1.15.7-5.module+el8.6.0+13996+01710940.aarch64
+    - mod_ldap-0:2.4.37-47.module+el8.6.0+14529+083145da.1.aarch64
+    - mod_ldap-debuginfo-0:2.4.37-47.module+el8.6.0+14529+083145da.1.aarch64
+    - mod_md-1:2.0.8-8.module+el8.3.0+6814+67d1e611.aarch64
+    - mod_md-debuginfo-1:2.0.8-8.module+el8.3.0+6814+67d1e611.aarch64
+    - mod_md-debugsource-1:2.0.8-8.module+el8.3.0+6814+67d1e611.aarch64
+    - mod_proxy_html-1:2.4.37-47.module+el8.6.0+14529+083145da.1.aarch64
+    - mod_proxy_html-debuginfo-1:2.4.37-47.module+el8.6.0+14529+083145da.1.aarch64
+    - mod_session-0:2.4.37-47.module+el8.6.0+14529+083145da.1.aarch64
+    - mod_session-debuginfo-0:2.4.37-47.module+el8.6.0+14529+083145da.1.aarch64
+    - mod_ssl-1:2.4.37-47.module+el8.6.0+14529+083145da.1.aarch64
+    - mod_ssl-debuginfo-1:2.4.37-47.module+el8.6.0+14529+083145da.1.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-IO-Socket-SSL
+  stream: '2.066'
+  version: '8060020211122104554'
+  context: 0e56aea9
+  arch: aarch64
+  license:
+    module:
+    - MIT
+    content:
+    - (GPL+ or Artistic) and MPLv2.0
+    - Artistic 2.0
+  summary: Perl library for transparent TLS
+  description: 'IO::Socket::SSL is a drop-in replacement for IO::Socket::IP that uses
+    TLS to encrypt data before it is transferred to a remote server or client. IO::Socket::SSL
+    supports all the extra features that one needs to write a full-featured TLS client
+    or server application like multiple TLS contexts, cipher selection, certificate
+    verification, and TLS version selection. Net::SSLeay offers some high level convenience
+    functions for accessing web pages on TLS servers, a sslcat() function for writing
+    your own clients, and finally access to the API of OpenSSL library so you can
+    write servers or clients for more complicated applications.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.32'
+      platform:
+      - el8.6.0
+    requires:
+      perl:
+      - '5.32'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-Devel-StackTrace:
+        rationale: A build dependency.
+        ref: stream-2.03-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-IO-Socket-INET6:
+        rationale: A build dependency.
+        ref: stream-2.72-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-IO-Socket-SSL:
+        rationale: The API.
+        ref: stream-2.066-rhel-8.6.0
+        buildorder: '3'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-IO-Tty:
+        rationale: A build dependency.
+        ref: stream-1.12-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-IPC-Run:
+        rationale: A build dependency.
+        ref: stream-0.96-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Net-IDN-Encode:
+        rationale: A build dependency.
+        ref: stream-2.400-rhel-8.6.0
+        buildorder: '2'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Net-LibIDN:
+        rationale: A build dependency.
+        ref: stream-0.12-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Net-SSLeay:
+        rationale: The API.
+        ref: stream-1.88-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Socket6:
+        rationale: A build dependency.
+        ref: stream-0.28-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      perl-Test-NoWarnings:
+        rationale: A build dependency.
+        ref: stream-1.04-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - perl-IO-Socket-SSL
+    - perl-Net-SSLeay
+  references:
+    community: https://metacpan.org/release/IO-Socket-SSL
+  profiles:
+    common:
+      description: IO::Socket::SSL and Net::SSLeay
+      rpms:
+      - perl-IO-Socket-SSL
+      - perl-Net-SSLeay
+  filter:
+    rpms:
+    - perl-Devel-StackTrace
+    - perl-IO-Socket-INET6
+    - perl-IO-Tty
+    - perl-IPC-Run
+    - perl-Net-IDN-Encode
+    - perl-Net-LibIDN
+    - perl-Socket6
+    - perl-Test-NoWarnings
+  artifacts:
+    rpms:
+    - perl-Socket6-0:0.28-6.module+el8.6.0+13392+6b8485cb.aarch64
+    - perl-Socket6-debugsource-0:0.28-6.module+el8.6.0+13392+6b8485cb.aarch64
+    - perl-Socket6-debuginfo-0:0.28-6.module+el8.6.0+13392+6b8485cb.aarch64
+    - perl-Net-SSLeay-0:1.88-2.module+el8.6.0+13392+6b8485cb.aarch64
+    - perl-Net-SSLeay-debugsource-0:1.88-2.module+el8.6.0+13392+6b8485cb.aarch64
+    - perl-Net-SSLeay-debuginfo-0:1.88-2.module+el8.6.0+13392+6b8485cb.aarch64
+    - perl-Net-LibIDN-0:0.12-35.module+el8.6.0+13392+6b8485cb.aarch64
+    - perl-Net-LibIDN-debugsource-0:0.12-35.module+el8.6.0+13392+6b8485cb.aarch64
+    - perl-Net-LibIDN-debuginfo-0:0.12-35.module+el8.6.0+13392+6b8485cb.aarch64
+    - perl-IO-Tty-0:1.12-11.module+el8.6.0+13392+6b8485cb.aarch64
+    - perl-IO-Tty-debugsource-0:1.12-11.module+el8.6.0+13392+6b8485cb.aarch64
+    - perl-IO-Tty-debuginfo-0:1.12-11.module+el8.6.0+13392+6b8485cb.aarch64
+    - perl-Devel-StackTrace-1:2.03-2.module+el8.6.0+13392+6b8485cb.noarch
+    - perl-Test-NoWarnings-0:1.04-15.module+el8.6.0+13392+6b8485cb.noarch
+    - perl-IPC-Run-0:0.99-1.module+el8.6.0+13392+6b8485cb.noarch
+    - perl-IO-Socket-INET6-0:2.72-12.module+el8.6.0+13392+6b8485cb.noarch
+    - perl-Net-IDN-Encode-0:2.500-2.module+el8.6.0+13392+6b8485cb.aarch64
+    - perl-Net-IDN-Encode-debugsource-0:2.500-2.module+el8.6.0+13392+6b8485cb.aarch64
+    - perl-Net-IDN-Encode-debuginfo-0:2.500-2.module+el8.6.0+13392+6b8485cb.aarch64
+    - perl-IO-Socket-SSL-0:2.066-4.module+el8.6.0+13392+6b8485cb.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: python27
+  stream: '2.7'
+  version: '8060020220210185952'
+  context: 8cdc2268
+  arch: aarch64
+  license:
+    module:
+    - MIT
+    content:
+    - ASL 2.0
+    - ASL 2.0 and MIT
+    - ASL 2.0 and MIT and (MIT or GPL)
+    - BSD
+    - BSD and Boost and Public Domain
+    - BSD and Python
+    - BSD and Python and Unicode
+    - LGPLv2
+    - LGPLv2+ and Public Domain
+    - LGPLv3+ with exceptions
+    - MIT
+    - MIT and Public Domain
+    - MIT and Python and ASL 2.0 and BSD and ISC and LGPLv2 and MPLv2.0 and (ASL 2.0
+      or BSD)
+    - Public Domain
+    - Public Domain and BSD and Python and GPLv3+
+    - Python
+  summary: Python programming language, version 2.7
+  description: 'This module provides the Python 2.7 interpreter and additional Python
+
+    packages the users might need.'
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.6.0
+      python27:
+      - '2.7'
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      Cython:
+        rationale: Language for writing Python extension modules. Build dependency
+          of numpy and PyYAML
+        ref: stream-0.28.1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      PyYAML:
+        rationale: YAML parser and emitter for Python
+        ref: stream-3.12-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      babel:
+        rationale: Tools for internationalizing Python applications
+        ref: stream-2.5.1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      numpy:
+        rationale: A fast multidimensional array facility for Python
+        ref: stream-1.14.2-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      pytest:
+        rationale: Simple powerful testing with Python
+        ref: stream-3.4.2-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-PyMySQL:
+        rationale: Python adapter for the MySQL/MariaDB databases
+        ref: stream-0.8.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-attrs:
+        rationale: Python attributes without boilerplate
+        ref: stream-17.4.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-backports:
+        rationale: Namespace for backported Python features
+        ref: stream-1.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-backports-ssl_match_hostname:
+        rationale: The ssl.match_hostname() function from Python 3. Dependency of
+          urllib3/requests.
+        ref: stream-3.5.0.1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-chardet:
+        rationale: Character encoding auto-detection in Python. Dependency of requests.
+        ref: stream-3.0.4-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-coverage:
+        rationale: Code coverage testing module for Python
+        ref: stream-4.5.1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-dns:
+        rationale: DNS toolkit for Python. Useful package for IPA and mailman.
+        ref: stream-1.15.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-docs:
+        rationale: Documentation for Python
+        ref: stream-2.7-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-docutils:
+        rationale: System for processing plaintext documentation
+        ref: stream-0.14-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-funcsigs:
+        rationale: Python function signatures from PEP362 for Python 2.6, 2.7 and
+          3.2+. Dependency of Pytest and mock.
+        ref: stream-1.0.2-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-idna:
+        rationale: Internationalized Domain Names in Applications (IDNA). Dependency
+          of requests.
+        ref: stream-2.5-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-ipaddress:
+        rationale: Port of the python 3.3+ ipaddress module to 2.6+. Dependency of
+          urllib3/requests.
+        ref: stream-1.0.18-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-jinja2:
+        rationale: General purpose template engine
+        ref: stream-2.10-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-lxml:
+        rationale: XML processing library
+        ref: stream-4.2.3-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-markupsafe:
+        rationale: Implements a XML/HTML/XHTML Markup safe string for Python
+        ref: stream-0.23-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-mock:
+        rationale: A Python Mocking and Patching Library for Testing
+        ref: stream-2.0.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-nose:
+        rationale: Discovery-based unit test extension for Python
+        ref: stream-1.3.7-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-pluggy:
+        rationale: The plugin manager stripped of pytest specific details
+        ref: stream-0.6.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-psycopg2:
+        rationale: Python adapter for the PostgreSQL database
+        ref: stream-2.7.4-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-py:
+        rationale: Library with cross-python path, ini-parsing, io, code, log facilities
+        ref: stream-1.5.3-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-pygments:
+        rationale: Syntax highlighting engine written in Python
+        ref: stream-2.2.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-pymongo:
+        rationale: Python driver for MongoDB
+        ref: stream-3.6.1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-pysocks:
+        rationale: A Python SOCKS client module. Dependency of urllib3/requests.
+        ref: stream-1.6.8-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-pytest-mock:
+        rationale: Thin-wrapper around the mock package for easier use with py.test.
+          Build dependency of requests.
+        ref: stream-1.9.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-requests:
+        rationale: HTTP library, written in Python, for human beings
+        ref: stream-2.20.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-setuptools_scm:
+        rationale: Blessed package to manage your versions by scm tags. Build dependency
+          of pytest and pytest-mock.
+        ref: stream-1.15.7-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-sqlalchemy:
+        rationale: Modular and flexible ORM library for python
+        ref: stream-1.3.2-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-urllib3:
+        rationale: Python HTTP library with thread-safe connection pooling and file
+          post. Dependency of requests.
+        ref: stream-1.23-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-virtualenv:
+        rationale: Tool to create isolated Python environments
+        ref: stream-15.1.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-wheel:
+        rationale: Used for unbundling of pip and setuptools
+        ref: stream-0.30.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python2:
+        rationale: Main Python language interpreter
+        ref: stream-2.7-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python2-pip:
+        rationale: Python Packaging ecosystem
+        ref: stream-9.0.3-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python2-rpm-macros:
+        rationale: Python 2 RPM macros - dependency of python2-devel
+        ref: stream-python27-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python2-setuptools:
+        rationale: Python Packaging ecosystem
+        ref: stream-39.0.1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python2-six:
+        rationale: Python 2 and 3 compatibility utilities
+        ref: stream-1.11.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      pytz:
+        rationale: Runtime requires of babel, and python2-babel
+        ref: stream-2017.2-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      scipy:
+        rationale: Scientific Tools for Python
+        ref: stream-1.0.0-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - babel
+    - python-sqlalchemy-doc
+    - python2
+    - python2-Cython
+    - python2-PyMySQL
+    - python2-attrs
+    - python2-babel
+    - python2-backports
+    - python2-backports-ssl_match_hostname
+    - python2-bson
+    - python2-chardet
+    - python2-coverage
+    - python2-debug
+    - python2-devel
+    - python2-dns
+    - python2-docs
+    - python2-docs-info
+    - python2-docutils
+    - python2-funcsigs
+    - python2-idna
+    - python2-ipaddress
+    - python2-jinja2
+    - python2-libs
+    - python2-lxml
+    - python2-markupsafe
+    - python2-mock
+    - python2-nose
+    - python2-numpy
+    - python2-numpy-doc
+    - python2-numpy-f2py
+    - python2-pip
+    - python2-pluggy
+    - python2-psycopg2
+    - python2-psycopg2-debug
+    - python2-psycopg2-tests
+    - python2-py
+    - python2-pygments
+    - python2-pymongo
+    - python2-pymongo-gridfs
+    - python2-pysocks
+    - python2-pytest
+    - python2-pytest-mock
+    - python2-pytz
+    - python2-pyyaml
+    - python2-requests
+    - python2-rpm-macros
+    - python2-scipy
+    - python2-setuptools
+    - python2-setuptools_scm
+    - python2-six
+    - python2-sqlalchemy
+    - python2-test
+    - python2-tkinter
+    - python2-tools
+    - python2-urllib3
+    - python2-virtualenv
+    - python2-wheel
+  buildopts:
+    rpms:
+      macros: '# Note that we cannot disable building of all Python 3 subpackages,
+
+        # because python2-devel (needed to build all Python 2 packages)
+
+        # has a runtime dependency on python3-rpm-generators, and that
+
+        # package requires python3-setuptools at runtime. By rebuilding
+
+        # python-setuptools SRPM with only python2, we overshadow the
+
+        # already built python3 subpackage and it is no longer
+
+        # available for python3-rpm-generators when building python-pip
+
+        # (or any other Python package).
+
+        # We can disable Python 3 in all packages but ...
+
+        %_without_python3 1
+
+        # ... we have to have a way to enable some of them as described
+
+        # above. With this macro, we can add some module-specific
+
+        # conditions for python3-* subpackages and other special cases.
+
+        # %_with_python27_module 1
+
+
+        # for: python-jinja2
+
+        %_with_python2 1
+
+
+        # to solve circular dependency between pytest and [attrs, pluggy]
+
+        # %_without_tests 1
+
+        '
+  references:
+    community: https://www.python.org/
+    documentation: https://docs.python.org/2.7/
+  profiles:
+    common:
+      rpms:
+      - python2
+      - python2-libs
+      - python2-pip
+      - python2-setuptools
+  filter:
+    rpms:
+    - python3-Cython
+    - python3-PyMySQL
+    - python3-PyYAML
+    - python3-attrs
+    - python3-babel
+    - python3-bson
+    - python3-chardet
+    - python3-coverage
+    - python3-docutils
+    - python3-idna
+    - python3-jinja2
+    - python3-markupsafe
+    - python3-mock
+    - python3-nose
+    - python3-numpy
+    - python3-numpy-doc
+    - python3-numpy-f2py
+    - python3-pluggy
+    - python3-psycopg2
+    - python3-psycopg2-debug
+    - python3-psycopg2-tests
+    - python3-py
+    - python3-pygments
+    - python3-pymongo
+    - python3-pymongo-gridfs
+    - python3-pysocks
+    - python3-pytest
+    - python3-pytest-mock
+    - python3-pytz
+    - python3-requests
+    - python3-scipy
+    - python3-setuptools_scm
+    - python3-six
+    - python3-sqlalchemy
+    - python3-urllib3
+    - python3-virtualenv
+  artifacts:
+    rpms:
+    - Cython-debugsource-0:0.28.1-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - PyYAML-debugsource-0:3.12-16.module+el8.1.0+3111+de3f2d8e.aarch64
+    - babel-0:2.5.1-10.module+el8.5.0+11014+88fc0d0b.noarch
+    - numpy-debugsource-1:1.14.2-16.module+el8.4.0+9406+221a4565.aarch64
+    - python-coverage-debugsource-0:4.5.1-4.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python-lxml-debugsource-0:4.2.3-6.module+el8.6.0+13959+8e368262.aarch64
+    - python-nose-docs-0:1.3.7-31.module+el8.5.0+12203+77770ab7.noarch
+    - python-psycopg2-debuginfo-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python-psycopg2-debugsource-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python-psycopg2-doc-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python-pymongo-debuginfo-0:3.7.0-1.module+el8.5.0+10264+e5753a40.aarch64
+    - python-pymongo-debugsource-0:3.7.0-1.module+el8.5.0+10264+e5753a40.aarch64
+    - python-sqlalchemy-doc-0:1.3.2-2.module+el8.3.0+6647+8d010749.noarch
+    - python2-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.aarch64
+    - python2-Cython-0:0.28.1-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-Cython-debuginfo-0:0.28.1-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-PyMySQL-0:0.8.0-10.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-attrs-0:17.4.0-10.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-babel-0:2.5.1-10.module+el8.5.0+11014+88fc0d0b.noarch
+    - python2-backports-0:1.0-16.module+el8.4.0+9193+f3daf6ef.aarch64
+    - python2-backports-ssl_match_hostname-0:3.5.0.1-12.module+el8.4.0+9193+f3daf6ef.noarch
+    - python2-bson-0:3.7.0-1.module+el8.5.0+10264+e5753a40.aarch64
+    - python2-bson-debuginfo-0:3.7.0-1.module+el8.5.0+10264+e5753a40.aarch64
+    - python2-chardet-0:3.0.4-10.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-coverage-0:4.5.1-4.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-coverage-debuginfo-0:4.5.1-4.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-debug-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.aarch64
+    - python2-debuginfo-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.aarch64
+    - python2-debugsource-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.aarch64
+    - python2-devel-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.aarch64
+    - python2-dns-0:1.15.0-10.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-docs-0:2.7.16-2.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-docs-info-0:2.7.16-2.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-docutils-0:0.14-12.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-funcsigs-0:1.0.2-13.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-idna-0:2.5-7.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-ipaddress-0:1.0.18-6.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-jinja2-0:2.10-9.module+el8.5.0+10541+706bb066.noarch
+    - python2-libs-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.aarch64
+    - python2-lxml-0:4.2.3-6.module+el8.6.0+13959+8e368262.aarch64
+    - python2-lxml-debuginfo-0:4.2.3-6.module+el8.6.0+13959+8e368262.aarch64
+    - python2-markupsafe-0:0.23-19.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-mock-0:2.0.0-13.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-nose-0:1.3.7-31.module+el8.5.0+12203+77770ab7.noarch
+    - python2-numpy-1:1.14.2-16.module+el8.4.0+9406+221a4565.aarch64
+    - python2-numpy-debuginfo-1:1.14.2-16.module+el8.4.0+9406+221a4565.aarch64
+    - python2-numpy-doc-1:1.14.2-16.module+el8.4.0+9406+221a4565.noarch
+    - python2-numpy-f2py-1:1.14.2-16.module+el8.4.0+9406+221a4565.aarch64
+    - python2-pip-0:9.0.3-19.module+el8.6.0+13001+ad200bd9.noarch
+    - python2-pip-wheel-0:9.0.3-19.module+el8.6.0+13001+ad200bd9.noarch
+    - python2-pluggy-0:0.6.0-8.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-psycopg2-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-psycopg2-debug-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-psycopg2-debug-debuginfo-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-psycopg2-debuginfo-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-psycopg2-tests-0:2.7.5-7.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-py-0:1.5.3-6.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-pygments-0:2.2.0-22.module+el8.5.0+10788+a4cea9e0.noarch
+    - python2-pymongo-0:3.7.0-1.module+el8.5.0+10264+e5753a40.aarch64
+    - python2-pymongo-debuginfo-0:3.7.0-1.module+el8.5.0+10264+e5753a40.aarch64
+    - python2-pymongo-gridfs-0:3.7.0-1.module+el8.5.0+10264+e5753a40.aarch64
+    - python2-pysocks-0:1.6.8-6.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-pytest-0:3.4.2-13.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-pytest-mock-0:1.9.0-4.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-pytz-0:2017.2-12.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-pyyaml-0:3.12-16.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-pyyaml-debuginfo-0:3.12-16.module+el8.1.0+3111+de3f2d8e.aarch64
+    - python2-requests-0:2.20.0-3.module+el8.2.0+4577+feefd9b8.noarch
+    - python2-rpm-macros-0:3-38.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-scipy-0:1.0.0-21.module+el8.5.0+10858+05337455.aarch64
+    - python2-scipy-debuginfo-0:1.0.0-21.module+el8.5.0+10858+05337455.aarch64
+    - python2-setuptools-0:39.0.1-13.module+el8.4.0+9442+27d0e81c.noarch
+    - python2-setuptools-wheel-0:39.0.1-13.module+el8.4.0+9442+27d0e81c.noarch
+    - python2-setuptools_scm-0:1.15.7-6.module+el8.1.0+3111+de3f2d8e.noarch
+    - python2-six-0:1.11.0-6.module+el8.4.0+9287+299307c7.noarch
+    - python2-sqlalchemy-0:1.3.2-2.module+el8.3.0+6647+8d010749.aarch64
+    - python2-test-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.aarch64
+    - python2-tkinter-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.aarch64
+    - python2-tools-0:2.7.18-10.module+el8.6.0+14191+7fdd52cd.aarch64
+    - python2-urllib3-0:1.24.2-3.module+el8.4.0+9193+f3daf6ef.noarch
+    - python2-virtualenv-0:15.1.0-21.module+el8.5.0+12203+77770ab7.noarch
+    - python2-wheel-1:0.31.1-3.module+el8.5.0+12203+77770ab7.noarch
+    - python2-wheel-wheel-1:0.31.1-3.module+el8.5.0+12203+77770ab7.noarch
+    - scipy-debugsource-0:1.0.0-21.module+el8.5.0+10858+05337455.aarch64
+...
