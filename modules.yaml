@@ -25488,7 +25488,7 @@ data:
     - plexus-sec-dispatcher-javadoc-0:1.4-26.module+el8+2452+b359bfcd.noarch
     - maven-shared-utils-0:3.2.1-0.1.module+el8+2452+b359bfcd.noarch
     - maven-shared-utils-javadoc-0:3.2.1-0.1.module+el8+2452+b359bfcd.noarch
-    - jansi-native-0:1.7-7.module+el8+2452+b359bfcd.x86_64
+    - jansi-native-0:1.7-7.module+el8+2452+b359bfcd.aarch64
     - jansi-native-javadoc-0:1.7-7.module+el8+2452+b359bfcd.noarch
     - httpcomponents-client-0:4.5.5-5.module+el8.6.0+13298+7b5243c0.noarch
     - httpcomponents-client-cache-0:4.5.5-5.module+el8.6.0+13298+7b5243c0.noarch
@@ -26172,7 +26172,7 @@ data:
     - plexus-sec-dispatcher-javadoc-0:1.4-26.module+el8+2452+b359bfcd.noarch
     - maven-shared-utils-0:3.2.1-0.1.module+el8+2452+b359bfcd.noarch
     - maven-shared-utils-javadoc-0:3.2.1-0.1.module+el8+2452+b359bfcd.noarch
-    - jansi-native-0:1.7-7.module+el8+2452+b359bfcd.x86_64
+    - jansi-native-0:1.7-7.module+el8+2452+b359bfcd.aarch64
     - jansi-native-javadoc-0:1.7-7.module+el8+2452+b359bfcd.noarch
     - httpcomponents-client-0:4.5.5-5.module+el8.6.0+13298+7b5243c0.noarch
     - httpcomponents-client-cache-0:4.5.5-5.module+el8.6.0+13298+7b5243c0.noarch
@@ -34199,4 +34199,241 @@ data:
     - nodejs-debuginfo-1:16.14.0-4.module+el8.5.0+14799+f68201fd.aarch64
     - nodejs-packaging-0:25-1.module+el8.5.0+10992+fac5fe06.noarch
     - nodejs-nodemon-0:2.0.15-1.module+el8.5.0+13548+45d748af.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: idm
+  stream: DL1
+  version: '8060020220224175416'
+  context: '92098735'
+  arch: aarch64
+  license:
+    module:
+    - MIT
+    content:
+    - BSD
+    - GPLv2
+    - GPLv2+
+    - GPLv3
+    - GPLv3+
+    - LGPLv3+
+    - MIT
+  summary: The Red Hat Enterprise Linux Identity Management system module
+  description: RHEL IdM is an integrated solution to provide centrally managed Identity
+    (users, hosts, services), Authentication (SSO, 2FA), and Authorization (host access
+    control, SELinux user roles, services). The solution provides features for further
+    integration with Linux based clients (SUDO, automount) and integration with Active
+    Directory based infrastructures (Trusts).
+  dependencies:
+  - buildrequires:
+      389-ds:
+      - '1.4'
+      httpd:
+      - '2.4'
+      pki-core:
+      - '10.6'
+      platform:
+      - el8.6.0
+    requires:
+      389-ds:
+      - '1.4'
+      httpd:
+      - '2.4'
+      pki-core:
+      - '10.6'
+      platform:
+      - el8
+  components:
+    rpms:
+      bind-dyndb-ldap:
+        rationale: Driver for BIND to store DNS information in LDAP
+        ref: stream-idm-DL1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      custodia:
+        rationale: Remote access to secrets and credentials in IdM topology
+        ref: stream-idm-DL1-rhel-8.6.0
+        buildorder: '2'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      ipa:
+        rationale: Module API
+        ref: stream-idm-DL1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      ipa-healthcheck:
+        rationale: A tool to detect issues in IdM clusters
+        ref: stream-DL1-rhel-8.6.0
+        buildorder: '3'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      opendnssec:
+        rationale: An implementation of DNSSEC support for IdM integrated DNS server
+        ref: stream-idm-DL1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-jwcrypto:
+        rationale: JSON Web Cryptographic Tokens used by Custodia
+        ref: stream-idm-DL1-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-kdcproxy:
+        rationale: MS-KKDCP (kerberos proxy) WSGI module
+        ref: stream-idm-DL1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-qrcode:
+        rationale: QR code generator for IdM two-factor authentication
+        ref: stream-idm-DL1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      python-yubico:
+        rationale: Support for Yubikey-based tokens for IdM two-factor authentication
+        ref: stream-idm-DL1-rhel-8.6.0
+        buildorder: '2'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      pyusb:
+        rationale: Python USB support to access USB tokens for IdM two-factor authentication
+        ref: stream-idm-DL1-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      slapi-nis:
+        rationale: Compatibility plugin to serve legacy clients
+        ref: stream-idm-DL1-rhel-8.6.0
+        arches:
+        - aarch64
+        - ppc64le
+        - s390x
+        - x86_64
+      softhsm:
+        rationale: Software version of a PKCS#11 Hardware Security Module
+        ref: stream-idm-DL1-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  references:
+    community: https://www.freeipa.org/
+    documentation: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/linux_domain_identity_authentication_and_policy_guide/index
+    tracker: https://pagure.io/freeipa/issues
+  profiles:
+    adtrust:
+      description: RHEL IdM Server Integration with Active Directory
+      rpms:
+      - ipa-healthcheck
+      - ipa-healthcheck-core
+      - ipa-server-trust-ad
+    client:
+      description: RHEL IdM Client
+      rpms:
+      - ipa-client
+    common:
+      description: A default profile for RHEL IdM client
+      rpms:
+      - ipa-client
+    dns:
+      description: RHEL IdM with integrated DNS server and integrated CA
+      rpms:
+      - ipa-healthcheck
+      - ipa-healthcheck-core
+      - ipa-server
+      - ipa-server-dns
+    server:
+      description: Base RHEL IdM Server with integrated CA and no integrated DNS
+      rpms:
+      - ipa-healthcheck
+      - ipa-healthcheck-core
+      - ipa-server
+  artifacts:
+    rpms:
+    - bind-dyndb-ldap-0:11.6-3.module+el8.6.0+13728+d9324aaf.aarch64
+    - bind-dyndb-ldap-debuginfo-0:11.6-3.module+el8.6.0+13728+d9324aaf.aarch64
+    - bind-dyndb-ldap-debugsource-0:11.6-3.module+el8.6.0+13728+d9324aaf.aarch64
+    - custodia-0:0.6.0-3.module+el8.1.0+4098+f286395e.noarch
+    - ipa-client-0:4.9.8-7.module+el8.6.0+14337+19b76db2.aarch64
+    - ipa-client-common-0:4.9.8-7.module+el8.6.0+14337+19b76db2.noarch
+    - ipa-client-debuginfo-0:4.9.8-7.module+el8.6.0+14337+19b76db2.aarch64
+    - ipa-client-epn-0:4.9.8-7.module+el8.6.0+14337+19b76db2.aarch64
+    - ipa-client-samba-0:4.9.8-7.module+el8.6.0+14337+19b76db2.aarch64
+    - ipa-common-0:4.9.8-7.module+el8.6.0+14337+19b76db2.noarch
+    - ipa-debuginfo-0:4.9.8-7.module+el8.6.0+14337+19b76db2.aarch64
+    - ipa-debugsource-0:4.9.8-7.module+el8.6.0+14337+19b76db2.aarch64
+    - ipa-healthcheck-0:0.7-10.module+el8.6.0+14292+18b36d36.noarch
+    - ipa-healthcheck-core-0:0.7-10.module+el8.6.0+14292+18b36d36.noarch
+    - ipa-python-compat-0:4.9.8-7.module+el8.6.0+14337+19b76db2.noarch
+    - ipa-selinux-0:4.9.8-7.module+el8.6.0+14337+19b76db2.noarch
+    - ipa-server-0:4.9.8-7.module+el8.6.0+14337+19b76db2.aarch64
+    - ipa-server-common-0:4.9.8-7.module+el8.6.0+14337+19b76db2.noarch
+    - ipa-server-debuginfo-0:4.9.8-7.module+el8.6.0+14337+19b76db2.aarch64
+    - ipa-server-dns-0:4.9.8-7.module+el8.6.0+14337+19b76db2.noarch
+    - ipa-server-trust-ad-0:4.9.8-7.module+el8.6.0+14337+19b76db2.aarch64
+    - ipa-server-trust-ad-debuginfo-0:4.9.8-7.module+el8.6.0+14337+19b76db2.aarch64
+    - opendnssec-0:2.1.7-1.module+el8.4.0+9007+5084bdd8.aarch64
+    - opendnssec-debuginfo-0:2.1.7-1.module+el8.4.0+9007+5084bdd8.aarch64
+    - opendnssec-debugsource-0:2.1.7-1.module+el8.4.0+9007+5084bdd8.aarch64
+    - python3-custodia-0:0.6.0-3.module+el8.1.0+4098+f286395e.noarch
+    - python3-ipaclient-0:4.9.8-7.module+el8.6.0+14337+19b76db2.noarch
+    - python3-ipalib-0:4.9.8-7.module+el8.6.0+14337+19b76db2.noarch
+    - python3-ipaserver-0:4.9.8-7.module+el8.6.0+14337+19b76db2.noarch
+    - python3-ipatests-0:4.9.8-7.module+el8.6.0+14337+19b76db2.noarch
+    - python3-jwcrypto-0:0.5.0-1.module+el8.1.0+4098+f286395e.noarch
+    - python3-kdcproxy-0:0.4-5.module+el8.2.0+4691+a05b2456.noarch
+    - python3-pyusb-0:1.0.0-9.module+el8.1.0+4098+f286395e.noarch
+    - python3-qrcode-0:5.1-12.module+el8.1.0+4098+f286395e.noarch
+    - python3-qrcode-core-0:5.1-12.module+el8.1.0+4098+f286395e.noarch
+    - python3-yubico-0:1.3.2-9.module+el8.1.0+4098+f286395e.noarch
+    - slapi-nis-0:0.56.6-4.module+el8.6.0+12936+736896b2.aarch64
+    - slapi-nis-debuginfo-0:0.56.6-4.module+el8.6.0+12936+736896b2.aarch64
+    - slapi-nis-debugsource-0:0.56.6-4.module+el8.6.0+12936+736896b2.aarch64
+    - softhsm-0:2.6.0-5.module+el8.4.0+10227+076cd560.aarch64
+    - softhsm-debuginfo-0:2.6.0-5.module+el8.4.0+10227+076cd560.aarch64
+    - softhsm-debugsource-0:2.6.0-5.module+el8.4.0+10227+076cd560.aarch64
+    - softhsm-devel-0:2.6.0-5.module+el8.4.0+10227+076cd560.aarch64
 ...
