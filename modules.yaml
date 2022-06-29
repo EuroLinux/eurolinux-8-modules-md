@@ -5112,8 +5112,8 @@ data:
     - perl-Test-Deep
   artifacts:
     rpms:
-    - perl-Test-Deep-0:1.127-4.module+el8.2.0+4278+29f88ddb.noarch
-    - perl-CPAN-DistnameInfo-0:0.12-13.module+el8.2.0+4278+29f88ddb.noarch
+#    - perl-Test-Deep-0:1.127-4.module+el8.2.0+4278+29f88ddb.noarch
+#    - perl-CPAN-DistnameInfo-0:0.12-13.module+el8.2.0+4278+29f88ddb.noarch
     - perl-App-cpanminus-0:1.7044-5.module+el8.1.0+2942+5e3df93c.noarch
     - perl-Parse-PMFile-0:0.41-7.module+el8.1.0+2942+5e3df93c.noarch
     - perl-File-pushd-0:1.014-6.module+el8.1.0+2942+5e3df93c.noarch
@@ -14924,7 +14924,7 @@ data:
     - perl-Test-NoWarnings
   artifacts:
     rpms:
-    - perl-Test-NoWarnings-0:1.04-15.module+el8.2.0+4265+ff794501.noarch
+#    - perl-Test-NoWarnings-0:1.04-15.module+el8.2.0+4265+ff794501.noarch
     - perl-DBD-SQLite-0:1.58-2.module+el8.2.0+4265+ff794501.aarch64
     - perl-DBD-SQLite-debugsource-0:1.58-2.module+el8.2.0+4265+ff794501.aarch64
     - perl-DBD-SQLite-debuginfo-0:1.58-2.module+el8.2.0+4265+ff794501.aarch64
@@ -15179,12 +15179,12 @@ data:
     - perl-Test-Deep
   artifacts:
     rpms:
-    - perl-Test-Deep-0:1.127-4.module+el8.2.0+4278+abcfa81a.noarch
+#    - perl-Test-Deep-0:1.127-4.module+el8.2.0+4278+abcfa81a.noarch
     - perl-String-ShellQuote-0:1.04-24.module+el8.2.0+4278+abcfa81a.noarch
     - perl-Parse-PMFile-0:0.41-7.module+el8.2.0+4278+abcfa81a.noarch
     - perl-Module-CPANfile-0:1.1002-7.module+el8.2.0+4278+abcfa81a.noarch
     - perl-File-pushd-0:1.014-6.module+el8.2.0+4278+abcfa81a.noarch
-    - perl-CPAN-DistnameInfo-dummy-0:0.12-13.module+el8.2.0+4278+abcfa81a.noarch
+#    - perl-CPAN-DistnameInfo-dummy-0:0.12-13.module+el8.2.0+4278+abcfa81a.noarch
     - perl-CPAN-Meta-Check-0:0.014-6.module+el8.2.0+4278+abcfa81a.noarch
     - perl-App-cpanminus-0:1.7044-5.module+el8.2.0+4278+abcfa81a.noarch
 ...
@@ -15319,12 +15319,12 @@ data:
     - perl-Test-Deep
   artifacts:
     rpms:
-    - perl-Test-Deep-0:1.127-4.module+el8.2.0+4278+abcfa81a.noarch
+#    - perl-Test-Deep-0:1.127-4.module+el8.2.0+4278+abcfa81a.noarch
     - perl-String-ShellQuote-0:1.04-24.module+el8.2.0+4278+abcfa81a.noarch
     - perl-Parse-PMFile-0:0.41-7.module+el8.2.0+4278+abcfa81a.noarch
     - perl-Module-CPANfile-0:1.1002-7.module+el8.2.0+4278+abcfa81a.noarch
     - perl-File-pushd-0:1.014-6.module+el8.2.0+4278+abcfa81a.noarch
-    - perl-CPAN-DistnameInfo-dummy-0:0.12-13.module+el8.2.0+4278+abcfa81a.noarch
+#    - perl-CPAN-DistnameInfo-dummy-0:0.12-13.module+el8.2.0+4278+abcfa81a.noarch
     - perl-CPAN-Meta-Check-0:0.014-6.module+el8.2.0+4278+abcfa81a.noarch
     - perl-App-cpanminus-0:1.7044-5.module+el8.2.0+4278+abcfa81a.noarch
 ...
@@ -15703,8 +15703,8 @@ data:
     - perl-WWW-RobotRules-0:6.02-18.module+el8.3.0+6498+fb59cb73.noarch
     - perl-Try-Tiny-0:0.30-7.module+el8.3.0+6498+fb59cb73.noarch
     - perl-TimeDate-1:2.30-15.module+el8.3.0+6498+fb59cb73.noarch
-    - perl-Test-RequiresInternet-0:0.05-15.module+el8.3.0+6498+fb59cb73.noarch
-    - perl-Test-Pod-0:1.51-8.module+el8.3.0+6498+fb59cb73.noarch
+#    - perl-Test-RequiresInternet-0:0.05-15.module+el8.3.0+6498+fb59cb73.noarch
+#    - perl-Test-Pod-0:1.51-8.module+el8.3.0+6498+fb59cb73.noarch
     - perl-Net-HTTP-0:6.17-2.module+el8.3.0+6498+fb59cb73.noarch
     - perl-Mozilla-CA-0:20160104-7.module+el8.3.0+6498+fb59cb73.noarch
     - perl-LWP-MediaTypes-0:6.02-15.module+el8.3.0+6498+fb59cb73.noarch
@@ -15712,17 +15712,17 @@ data:
     - perl-HTTP-Date-0:6.02-19.module+el8.3.0+6498+fb59cb73.noarch
     - perl-HTML-Tagset-0:3.20-34.module+el8.3.0+6498+fb59cb73.noarch
     - perl-Encode-Locale-0:1.05-10.module+el8.3.0+6498+fb59cb73.noarch
-    - perl-Digest-SHA1-0:2.13-23.module+el8.3.0+6498+fb59cb73.aarch64
-    - perl-Digest-SHA1-debugsource-0:2.13-23.module+el8.3.0+6498+fb59cb73.aarch64
-    - perl-Digest-SHA1-debuginfo-0:2.13-23.module+el8.3.0+6498+fb59cb73.aarch64
+#    - perl-Digest-SHA1-0:2.13-23.module+el8.3.0+6498+fb59cb73.aarch64
+#    - perl-Digest-SHA1-debugsource-0:2.13-23.module+el8.3.0+6498+fb59cb73.aarch64
+#    - perl-Digest-SHA1-debuginfo-0:2.13-23.module+el8.3.0+6498+fb59cb73.aarch64
     - perl-Data-Dump-0:1.23-7.module+el8.3.0+6498+fb59cb73.noarch
-    - perl-Test-Fatal-0:0.014-9.module+el8.3.0+6498+fb59cb73.noarch
+#    - perl-Test-Fatal-0:0.014-9.module+el8.3.0+6498+fb59cb73.noarch
     - perl-HTTP-Message-0:6.18-1.module+el8.3.0+6498+fb59cb73.noarch
     - perl-File-Listing-0:6.04-17.module+el8.3.0+6498+fb59cb73.noarch
     - perl-Digest-HMAC-0:1.03-17.module+el8.3.0+6498+fb59cb73.noarch
     - perl-NTLM-0:1.09-17.module+el8.3.0+6498+fb59cb73.noarch
     - perl-HTTP-Negotiate-0:6.01-19.module+el8.3.0+6498+fb59cb73.noarch
-    - perl-HTTP-Daemon-0:6.01-23.module+el8.3.0+6498+fb59cb73.noarch
+#    - perl-HTTP-Daemon-0:6.01-23.module+el8.3.0+6498+fb59cb73.noarch
     - perl-HTTP-Cookies-0:6.04-2.module+el8.3.0+6498+fb59cb73.noarch
     - perl-HTML-Parser-0:3.72-15.module+el8.3.0+6498+fb59cb73.aarch64
     - perl-HTML-Parser-debugsource-0:3.72-15.module+el8.3.0+6498+fb59cb73.aarch64
@@ -15806,7 +15806,7 @@ data:
     - perl-Test-NoWarnings
   artifacts:
     rpms:
-    - perl-Test-NoWarnings-0:1.04-15.module+el8.1.0+2940+f62455ee.noarch
+#    - perl-Test-NoWarnings-0:1.04-15.module+el8.1.0+2940+f62455ee.noarch
     - perl-DBD-SQLite-0:1.58-2.module+el8.1.0+2940+f62455ee.aarch64
     - perl-DBD-SQLite-debugsource-0:1.58-2.module+el8.1.0+2940+f62455ee.aarch64
     - perl-DBD-SQLite-debuginfo-0:1.58-2.module+el8.1.0+2940+f62455ee.aarch64
@@ -16123,8 +16123,8 @@ data:
     - perl-WWW-RobotRules-0:6.02-18.module+el8.3.0+6498+9eecfe51.noarch
     - perl-Try-Tiny-0:0.30-7.module+el8.3.0+6498+9eecfe51.noarch
     - perl-TimeDate-1:2.30-15.module+el8.3.0+6498+9eecfe51.noarch
-    - perl-Test-RequiresInternet-0:0.05-15.module+el8.3.0+6498+9eecfe51.noarch
-    - perl-Test-Pod-0:1.51-8.module+el8.3.0+6498+9eecfe51.noarch
+#    - perl-Test-RequiresInternet-0:0.05-15.module+el8.3.0+6498+9eecfe51.noarch
+#    - perl-Test-Pod-0:1.51-8.module+el8.3.0+6498+9eecfe51.noarch
     - perl-Net-HTTP-0:6.17-2.module+el8.3.0+6498+9eecfe51.noarch
     - perl-Mozilla-CA-0:20160104-7.module+el8.3.0+6498+9eecfe51.noarch
     - perl-LWP-MediaTypes-0:6.02-15.module+el8.3.0+6498+9eecfe51.noarch
@@ -16132,17 +16132,17 @@ data:
     - perl-HTTP-Date-0:6.02-19.module+el8.3.0+6498+9eecfe51.noarch
     - perl-HTML-Tagset-0:3.20-34.module+el8.3.0+6498+9eecfe51.noarch
     - perl-Encode-Locale-0:1.05-10.module+el8.3.0+6498+9eecfe51.noarch
-    - perl-Digest-SHA1-0:2.13-23.module+el8.3.0+6498+9eecfe51.aarch64
-    - perl-Digest-SHA1-debugsource-0:2.13-23.module+el8.3.0+6498+9eecfe51.aarch64
-    - perl-Digest-SHA1-debuginfo-0:2.13-23.module+el8.3.0+6498+9eecfe51.aarch64
+#    - perl-Digest-SHA1-0:2.13-23.module+el8.3.0+6498+9eecfe51.aarch64
+#    - perl-Digest-SHA1-debugsource-0:2.13-23.module+el8.3.0+6498+9eecfe51.aarch64
+#    - perl-Digest-SHA1-debuginfo-0:2.13-23.module+el8.3.0+6498+9eecfe51.aarch64
     - perl-Data-Dump-0:1.23-7.module+el8.3.0+6498+9eecfe51.noarch
-    - perl-Test-Fatal-0:0.014-9.module+el8.3.0+6498+9eecfe51.noarch
+#    - perl-Test-Fatal-0:0.014-9.module+el8.3.0+6498+9eecfe51.noarch
     - perl-HTTP-Message-0:6.18-1.module+el8.3.0+6498+9eecfe51.noarch
     - perl-File-Listing-0:6.04-17.module+el8.3.0+6498+9eecfe51.noarch
     - perl-Digest-HMAC-0:1.03-17.module+el8.3.0+6498+9eecfe51.noarch
     - perl-NTLM-0:1.09-17.module+el8.3.0+6498+9eecfe51.noarch
     - perl-HTTP-Negotiate-0:6.01-19.module+el8.3.0+6498+9eecfe51.noarch
-    - perl-HTTP-Daemon-0:6.01-23.module+el8.3.0+6498+9eecfe51.noarch
+#    - perl-HTTP-Daemon-0:6.01-23.module+el8.3.0+6498+9eecfe51.noarch
     - perl-HTTP-Cookies-0:6.04-2.module+el8.3.0+6498+9eecfe51.noarch
     - perl-HTML-Parser-0:3.72-15.module+el8.3.0+6498+9eecfe51.aarch64
     - perl-HTML-Parser-debugsource-0:3.72-15.module+el8.3.0+6498+9eecfe51.aarch64
@@ -16300,7 +16300,7 @@ data:
     - perl-Test-NoWarnings
   artifacts:
     rpms:
-    - perl-Test-NoWarnings-0:1.04-15.module+el8.1.0+2940+55ca6856.noarch
+#    - perl-Test-NoWarnings-0:1.04-15.module+el8.1.0+2940+55ca6856.noarch
     - perl-DBD-SQLite-0:1.58-2.module+el8.1.0+2940+55ca6856.aarch64
     - perl-DBD-SQLite-debugsource-0:1.58-2.module+el8.1.0+2940+55ca6856.aarch64
     - perl-DBD-SQLite-debuginfo-0:1.58-2.module+el8.1.0+2940+55ca6856.aarch64
@@ -16562,12 +16562,12 @@ data:
     - perl-Test-Deep
   artifacts:
     rpms:
-    - perl-Test-Deep-0:1.127-4.module+el8.2.0+4278+3c6cbe3c.noarch
+#    - perl-Test-Deep-0:1.127-4.module+el8.2.0+4278+3c6cbe3c.noarch
     - perl-String-ShellQuote-0:1.04-24.module+el8.1.0+2942+110089f5.noarch
     - perl-Parse-PMFile-0:0.41-7.module+el8.1.0+2942+110089f5.noarch
     - perl-Module-CPANfile-0:1.1002-7.module+el8.1.0+2942+110089f5.noarch
     - perl-File-pushd-0:1.014-6.module+el8.1.0+2942+110089f5.noarch
-    - perl-CPAN-DistnameInfo-0:0.12-13.module+el8.2.0+4278+3c6cbe3c.noarch
+#    - perl-CPAN-DistnameInfo-0:0.12-13.module+el8.2.0+4278+3c6cbe3c.noarch
     - perl-CPAN-Meta-Check-0:0.014-6.module+el8.1.0+2942+110089f5.noarch
     - perl-App-cpanminus-0:1.7044-5.module+el8.1.0+2942+110089f5.noarch
 ...
@@ -16792,18 +16792,18 @@ data:
     - perl-Net-SSLeay-0:1.88-1.module+el8.3.0+6446+37a50855.aarch64
     - perl-Net-SSLeay-debugsource-0:1.88-1.module+el8.3.0+6446+37a50855.aarch64
     - perl-Net-SSLeay-debuginfo-0:1.88-1.module+el8.3.0+6446+37a50855.aarch64
-    - perl-Net-LibIDN-0:0.12-35.module+el8.3.0+6446+37a50855.aarch64
-    - perl-Net-LibIDN-debugsource-0:0.12-35.module+el8.3.0+6446+37a50855.aarch64
-    - perl-Net-LibIDN-debuginfo-0:0.12-35.module+el8.3.0+6446+37a50855.aarch64
-    - perl-IO-Tty-0:1.12-11.module+el8.3.0+6446+37a50855.aarch64
-    - perl-IO-Tty-debugsource-0:1.12-11.module+el8.3.0+6446+37a50855.aarch64
-    - perl-IO-Tty-debuginfo-0:1.12-11.module+el8.3.0+6446+37a50855.aarch64
-    - perl-Devel-StackTrace-1:2.03-2.module+el8.3.0+6446+37a50855.noarch
-    - perl-Test-NoWarnings-0:1.04-15.module+el8.3.0+6446+37a50855.noarch
-    - perl-IPC-Run-0:0.99-1.module+el8.3.0+6446+37a50855.noarch
-    - perl-Net-IDN-Encode-0:2.500-2.module+el8.3.0+6446+37a50855.aarch64
-    - perl-Net-IDN-Encode-debugsource-0:2.500-2.module+el8.3.0+6446+37a50855.aarch64
-    - perl-Net-IDN-Encode-debuginfo-0:2.500-2.module+el8.3.0+6446+37a50855.aarch64
+#    - perl-Net-LibIDN-0:0.12-35.module+el8.3.0+6446+37a50855.aarch64
+#    - perl-Net-LibIDN-debugsource-0:0.12-35.module+el8.3.0+6446+37a50855.aarch64
+#    - perl-Net-LibIDN-debuginfo-0:0.12-35.module+el8.3.0+6446+37a50855.aarch64
+#    - perl-IO-Tty-0:1.12-11.module+el8.3.0+6446+37a50855.aarch64
+#    - perl-IO-Tty-debugsource-0:1.12-11.module+el8.3.0+6446+37a50855.aarch64
+#    - perl-IO-Tty-debuginfo-0:1.12-11.module+el8.3.0+6446+37a50855.aarch64
+#    - perl-Devel-StackTrace-1:2.03-2.module+el8.3.0+6446+37a50855.noarch
+#    - perl-Test-NoWarnings-0:1.04-15.module+el8.3.0+6446+37a50855.noarch
+#    - perl-IPC-Run-0:0.99-1.module+el8.3.0+6446+37a50855.noarch
+#    - perl-Net-IDN-Encode-0:2.500-2.module+el8.3.0+6446+37a50855.aarch64
+#    - perl-Net-IDN-Encode-debugsource-0:2.500-2.module+el8.3.0+6446+37a50855.aarch64
+#    - perl-Net-IDN-Encode-debuginfo-0:2.500-2.module+el8.3.0+6446+37a50855.aarch64
     - perl-IO-Socket-SSL-0:2.066-4.module+el8.3.0+6446+37a50855.noarch
 ...
 ---
@@ -16971,18 +16971,18 @@ data:
     - perl-Net-SSLeay-0:1.88-1.module+el8.3.0+6452+449fe210.aarch64
     - perl-Net-SSLeay-debugsource-0:1.88-1.module+el8.3.0+6452+449fe210.aarch64
     - perl-Net-SSLeay-debuginfo-0:1.88-1.module+el8.3.0+6452+449fe210.aarch64
-    - perl-Net-LibIDN-0:0.12-35.module+el8.3.0+6452+449fe210.aarch64
-    - perl-Net-LibIDN-debugsource-0:0.12-35.module+el8.3.0+6452+449fe210.aarch64
-    - perl-Net-LibIDN-debuginfo-0:0.12-35.module+el8.3.0+6452+449fe210.aarch64
-    - perl-IO-Tty-0:1.12-11.module+el8.3.0+6452+449fe210.aarch64
-    - perl-IO-Tty-debugsource-0:1.12-11.module+el8.3.0+6452+449fe210.aarch64
-    - perl-IO-Tty-debuginfo-0:1.12-11.module+el8.3.0+6452+449fe210.aarch64
-    - perl-Devel-StackTrace-1:2.03-2.module+el8.3.0+6452+449fe210.noarch
-    - perl-Test-NoWarnings-0:1.04-15.module+el8.3.0+6452+449fe210.noarch
-    - perl-IPC-Run-0:0.99-1.module+el8.3.0+6452+449fe210.noarch
-    - perl-Net-IDN-Encode-0:2.500-2.module+el8.3.0+6452+449fe210.aarch64
-    - perl-Net-IDN-Encode-debugsource-0:2.500-2.module+el8.3.0+6452+449fe210.aarch64
-    - perl-Net-IDN-Encode-debuginfo-0:2.500-2.module+el8.3.0+6452+449fe210.aarch64
+#    - perl-Net-LibIDN-0:0.12-35.module+el8.3.0+6452+449fe210.aarch64
+#    - perl-Net-LibIDN-debugsource-0:0.12-35.module+el8.3.0+6452+449fe210.aarch64
+#    - perl-Net-LibIDN-debuginfo-0:0.12-35.module+el8.3.0+6452+449fe210.aarch64
+#    - perl-IO-Tty-0:1.12-11.module+el8.3.0+6452+449fe210.aarch64
+#    - perl-IO-Tty-debugsource-0:1.12-11.module+el8.3.0+6452+449fe210.aarch64
+#    - perl-IO-Tty-debuginfo-0:1.12-11.module+el8.3.0+6452+449fe210.aarch64
+#    - perl-Devel-StackTrace-1:2.03-2.module+el8.3.0+6452+449fe210.noarch
+#    - perl-Test-NoWarnings-0:1.04-15.module+el8.3.0+6452+449fe210.noarch
+#    - perl-IPC-Run-0:0.99-1.module+el8.3.0+6452+449fe210.noarch
+#    - perl-Net-IDN-Encode-0:2.500-2.module+el8.3.0+6452+449fe210.aarch64
+#    - perl-Net-IDN-Encode-debugsource-0:2.500-2.module+el8.3.0+6452+449fe210.aarch64
+#    - perl-Net-IDN-Encode-debuginfo-0:2.500-2.module+el8.3.0+6452+449fe210.aarch64
     - perl-IO-Socket-SSL-0:2.066-4.module+el8.3.0+6452+449fe210.noarch
 ...
 ---
@@ -17297,8 +17297,8 @@ data:
     - perl-WWW-RobotRules-0:6.02-18.module+el8.3.0+6498+31ea7642.noarch
     - perl-Try-Tiny-0:0.30-7.module+el8.3.0+6498+31ea7642.noarch
     - perl-TimeDate-1:2.30-15.module+el8.3.0+6498+31ea7642.noarch
-    - perl-Test-RequiresInternet-0:0.05-15.module+el8.3.0+6498+31ea7642.noarch
-    - perl-Test-Pod-0:1.51-8.module+el8.3.0+6498+31ea7642.noarch
+#    - perl-Test-RequiresInternet-0:0.05-15.module+el8.3.0+6498+31ea7642.noarch
+#    - perl-Test-Pod-0:1.51-8.module+el8.3.0+6498+31ea7642.noarch
     - perl-Net-HTTP-0:6.17-2.module+el8.3.0+6498+31ea7642.noarch
     - perl-Mozilla-CA-0:20160104-7.module+el8.3.0+6498+31ea7642.noarch
     - perl-LWP-MediaTypes-0:6.02-15.module+el8.3.0+6498+31ea7642.noarch
@@ -17306,17 +17306,17 @@ data:
     - perl-HTTP-Date-0:6.02-19.module+el8.3.0+6498+31ea7642.noarch
     - perl-HTML-Tagset-0:3.20-34.module+el8.3.0+6498+31ea7642.noarch
     - perl-Encode-Locale-0:1.05-10.module+el8.3.0+6498+31ea7642.noarch
-    - perl-Digest-SHA1-0:2.13-23.module+el8.3.0+6498+31ea7642.aarch64
-    - perl-Digest-SHA1-debugsource-0:2.13-23.module+el8.3.0+6498+31ea7642.aarch64
-    - perl-Digest-SHA1-debuginfo-0:2.13-23.module+el8.3.0+6498+31ea7642.aarch64
+#    - perl-Digest-SHA1-0:2.13-23.module+el8.3.0+6498+31ea7642.aarch64
+#    - perl-Digest-SHA1-debugsource-0:2.13-23.module+el8.3.0+6498+31ea7642.aarch64
+#    - perl-Digest-SHA1-debuginfo-0:2.13-23.module+el8.3.0+6498+31ea7642.aarch64
     - perl-Data-Dump-0:1.23-7.module+el8.3.0+6498+31ea7642.noarch
-    - perl-Test-Fatal-0:0.014-9.module+el8.3.0+6498+31ea7642.noarch
+#    - perl-Test-Fatal-0:0.014-9.module+el8.3.0+6498+31ea7642.noarch
     - perl-HTTP-Message-0:6.18-1.module+el8.3.0+6498+31ea7642.noarch
     - perl-File-Listing-0:6.04-17.module+el8.3.0+6498+31ea7642.noarch
     - perl-Digest-HMAC-0:1.03-17.module+el8.3.0+6498+31ea7642.noarch
     - perl-NTLM-0:1.09-17.module+el8.3.0+6498+31ea7642.noarch
     - perl-HTTP-Negotiate-0:6.01-19.module+el8.3.0+6498+31ea7642.noarch
-    - perl-HTTP-Daemon-0:6.01-23.module+el8.3.0+6498+31ea7642.noarch
+#    - perl-HTTP-Daemon-0:6.01-23.module+el8.3.0+6498+31ea7642.noarch
     - perl-HTTP-Cookies-0:6.04-2.module+el8.3.0+6498+31ea7642.noarch
     - perl-HTML-Parser-0:3.72-15.module+el8.3.0+6498+31ea7642.aarch64
     - perl-HTML-Parser-debugsource-0:3.72-15.module+el8.3.0+6498+31ea7642.aarch64
@@ -17619,18 +17619,18 @@ data:
     - perl-Net-SSLeay-0:1.88-1.module+el8.3.0+6446+594cad75.aarch64
     - perl-Net-SSLeay-debugsource-0:1.88-1.module+el8.3.0+6446+594cad75.aarch64
     - perl-Net-SSLeay-debuginfo-0:1.88-1.module+el8.3.0+6446+594cad75.aarch64
-    - perl-Net-LibIDN-0:0.12-35.module+el8.3.0+6446+594cad75.aarch64
-    - perl-Net-LibIDN-debugsource-0:0.12-35.module+el8.3.0+6446+594cad75.aarch64
-    - perl-Net-LibIDN-debuginfo-0:0.12-35.module+el8.3.0+6446+594cad75.aarch64
-    - perl-IO-Tty-0:1.12-11.module+el8.3.0+6446+594cad75.aarch64
-    - perl-IO-Tty-debugsource-0:1.12-11.module+el8.3.0+6446+594cad75.aarch64
-    - perl-IO-Tty-debuginfo-0:1.12-11.module+el8.3.0+6446+594cad75.aarch64
-    - perl-Devel-StackTrace-1:2.03-2.module+el8.3.0+6446+594cad75.noarch
-    - perl-Test-NoWarnings-0:1.04-15.module+el8.3.0+6446+594cad75.noarch
-    - perl-IPC-Run-0:0.99-1.module+el8.3.0+6446+594cad75.noarch
-    - perl-Net-IDN-Encode-0:2.500-2.module+el8.3.0+6446+594cad75.aarch64
-    - perl-Net-IDN-Encode-debugsource-0:2.500-2.module+el8.3.0+6446+594cad75.aarch64
-    - perl-Net-IDN-Encode-debuginfo-0:2.500-2.module+el8.3.0+6446+594cad75.aarch64
+#    - perl-Net-LibIDN-0:0.12-35.module+el8.3.0+6446+594cad75.aarch64
+#    - perl-Net-LibIDN-debugsource-0:0.12-35.module+el8.3.0+6446+594cad75.aarch64
+#    - perl-Net-LibIDN-debuginfo-0:0.12-35.module+el8.3.0+6446+594cad75.aarch64
+#    - perl-IO-Tty-0:1.12-11.module+el8.3.0+6446+594cad75.aarch64
+#    - perl-IO-Tty-debugsource-0:1.12-11.module+el8.3.0+6446+594cad75.aarch64
+#    - perl-IO-Tty-debuginfo-0:1.12-11.module+el8.3.0+6446+594cad75.aarch64
+#    - perl-Devel-StackTrace-1:2.03-2.module+el8.3.0+6446+594cad75.noarch
+#    - perl-Test-NoWarnings-0:1.04-15.module+el8.3.0+6446+594cad75.noarch
+#    - perl-IPC-Run-0:0.99-1.module+el8.3.0+6446+594cad75.noarch
+#    - perl-Net-IDN-Encode-0:2.500-2.module+el8.3.0+6446+594cad75.aarch64
+#    - perl-Net-IDN-Encode-debugsource-0:2.500-2.module+el8.3.0+6446+594cad75.aarch64
+#    - perl-Net-IDN-Encode-debuginfo-0:2.500-2.module+el8.3.0+6446+594cad75.aarch64
     - perl-IO-Socket-SSL-0:2.066-4.module+el8.3.0+6446+594cad75.noarch
 ...
 ---
@@ -31083,7 +31083,7 @@ data:
     - perl-libs-4:5.32.1-471.module+el8.6.0+13324+628a2397.aarch64
     - perl-devel-4:5.32.1-471.module+el8.6.0+13324+628a2397.aarch64
     - perl-macros-4:5.32.1-471.module+el8.6.0+13324+628a2397.noarch
-    - perl-tests-4:5.32.1-471.module+el8.6.0+13324+628a2397.aarch64
+#    - perl-tests-4:5.32.1-471.module+el8.6.0+13324+628a2397.aarch64
     - perl-utils-0:5.32.1-471.module+el8.6.0+13324+628a2397.noarch
     - perl-Attribute-Handlers-0:1.01-471.module+el8.6.0+13324+628a2397.noarch
     - perl-AutoLoader-0:5.74-471.module+el8.6.0+13324+628a2397.noarch
@@ -32187,7 +32187,7 @@ data:
     - perl-Test-NoWarnings
   artifacts:
     rpms:
-    - perl-Test-NoWarnings-0:1.04-15.module+el8.6.0+13408+461b4ab5.noarch
+#    - perl-Test-NoWarnings-0:1.04-15.module+el8.6.0+13408+461b4ab5.noarch
     - perl-DBD-SQLite-0:1.58-2.module+el8.6.0+13408+461b4ab5.aarch64
     - perl-DBD-SQLite-debugsource-0:1.58-2.module+el8.6.0+13408+461b4ab5.aarch64
     - perl-DBD-SQLite-debuginfo-0:1.58-2.module+el8.6.0+13408+461b4ab5.aarch64
@@ -32526,18 +32526,18 @@ data:
     - perl-Net-SSLeay-0:1.88-2.module+el8.6.0+13392+6b8485cb.aarch64
     - perl-Net-SSLeay-debugsource-0:1.88-2.module+el8.6.0+13392+6b8485cb.aarch64
     - perl-Net-SSLeay-debuginfo-0:1.88-2.module+el8.6.0+13392+6b8485cb.aarch64
-    - perl-Net-LibIDN-0:0.12-35.module+el8.6.0+13392+6b8485cb.aarch64
-    - perl-Net-LibIDN-debugsource-0:0.12-35.module+el8.6.0+13392+6b8485cb.aarch64
-    - perl-Net-LibIDN-debuginfo-0:0.12-35.module+el8.6.0+13392+6b8485cb.aarch64
-    - perl-IO-Tty-0:1.12-11.module+el8.6.0+13392+6b8485cb.aarch64
-    - perl-IO-Tty-debugsource-0:1.12-11.module+el8.6.0+13392+6b8485cb.aarch64
-    - perl-IO-Tty-debuginfo-0:1.12-11.module+el8.6.0+13392+6b8485cb.aarch64
-    - perl-Devel-StackTrace-1:2.03-2.module+el8.6.0+13392+6b8485cb.noarch
-    - perl-Test-NoWarnings-0:1.04-15.module+el8.6.0+13392+6b8485cb.noarch
-    - perl-IPC-Run-0:0.99-1.module+el8.6.0+13392+6b8485cb.noarch
-    - perl-Net-IDN-Encode-0:2.500-2.module+el8.6.0+13392+6b8485cb.aarch64
-    - perl-Net-IDN-Encode-debugsource-0:2.500-2.module+el8.6.0+13392+6b8485cb.aarch64
-    - perl-Net-IDN-Encode-debuginfo-0:2.500-2.module+el8.6.0+13392+6b8485cb.aarch64
+#    - perl-Net-LibIDN-0:0.12-35.module+el8.6.0+13392+6b8485cb.aarch64
+#    - perl-Net-LibIDN-debugsource-0:0.12-35.module+el8.6.0+13392+6b8485cb.aarch64
+#    - perl-Net-LibIDN-debuginfo-0:0.12-35.module+el8.6.0+13392+6b8485cb.aarch64
+#    - perl-IO-Tty-0:1.12-11.module+el8.6.0+13392+6b8485cb.aarch64
+#    - perl-IO-Tty-debugsource-0:1.12-11.module+el8.6.0+13392+6b8485cb.aarch64
+#    - perl-IO-Tty-debuginfo-0:1.12-11.module+el8.6.0+13392+6b8485cb.aarch64
+#    - perl-Devel-StackTrace-1:2.03-2.module+el8.6.0+13392+6b8485cb.noarch
+#    - perl-Test-NoWarnings-0:1.04-15.module+el8.6.0+13392+6b8485cb.noarch
+#    - perl-IPC-Run-0:0.99-1.module+el8.6.0+13392+6b8485cb.noarch
+#    - perl-Net-IDN-Encode-0:2.500-2.module+el8.6.0+13392+6b8485cb.aarch64
+#    - perl-Net-IDN-Encode-debugsource-0:2.500-2.module+el8.6.0+13392+6b8485cb.aarch64
+#    - perl-Net-IDN-Encode-debuginfo-0:2.500-2.module+el8.6.0+13392+6b8485cb.aarch64
     - perl-IO-Socket-SSL-0:2.066-4.module+el8.6.0+13392+6b8485cb.noarch
 ...
 ---
@@ -35199,4 +35199,847 @@ data:
     - python3-yubico-0:1.3.2-9.module+el8.1.0+4107+4a66eb87.noarch
     - python3-qrcode-0:5.1-12.module+el8.1.0+4107+4a66eb87.noarch
     - python3-qrcode-core-0:5.1-12.module+el8.1.0+4107+4a66eb87.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: ruby
+  stream: '2.6'
+  version: '8050020211215144356'
+  context: c5368500
+  arch: aarch64
+  license:
+    module:
+    - MIT
+    content:
+    - (BSD or Ruby) and PostgreSQL
+    - (Ruby or BSD) and (Ruby or BSD or Python) and (Ruby or BSD or LGPLv2+)
+    - (Ruby or BSD) and Public Domain and MIT and CC0 and zlib and UCD
+    - (Ruby or GPLv2) and UCD
+    - ASL 2.0
+    - GPLv2 and Ruby and MIT and OFL
+    - MIT
+    - Ruby or BSD
+    - Ruby or MIT
+  summary: An interpreter of object-oriented scripting language
+  description: Ruby is the interpreted scripting language for quick and easy object-oriented
+    programming.  It has many features to process text files and to do system management
+    tasks (as in Perl).  It is simple, straight-forward, and extensible.
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.5.0.z
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      ruby:
+        rationale: An interpreter of object-oriented scripting language
+        ref: stream-ruby-2.6-rhel-8.5.0
+        buildorder: '101'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        multilib:
+        - x86_64
+      rubygem-abrt:
+        rationale: ABRT support for Ruby
+        ref: stream-ruby-2.6-rhel-8.5.0
+        buildorder: '102'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      rubygem-bson:
+        rationale: Ruby Implementation of the BSON specification
+        ref: stream-ruby-2.6-rhel-8.5.0
+        buildorder: '102'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      rubygem-mongo:
+        rationale: Ruby driver for MongoDB
+        ref: stream-ruby-2.6-rhel-8.5.0
+        buildorder: '103'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      rubygem-mysql2:
+        rationale: A simple, fast Mysql library for Ruby, binding to libmysql
+        ref: stream-ruby-2.6-rhel-8.5.0
+        buildorder: '102'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      rubygem-pg:
+        rationale: A Ruby interface to the PostgreSQL RDBMS
+        ref: stream-ruby-2.6-rhel-8.5.0
+        buildorder: '102'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - ruby
+    - ruby-devel
+    - ruby-libs
+    - rubygem-abrt
+    - rubygem-bigdecimal
+    - rubygem-bson
+    - rubygem-bundler
+    - rubygem-did_you_mean
+    - rubygem-io-console
+    - rubygem-irb
+    - rubygem-json
+    - rubygem-minitest
+    - rubygem-mongo
+    - rubygem-mysql2
+    - rubygem-net-telnet
+    - rubygem-openssl
+    - rubygem-pg
+    - rubygem-power_assert
+    - rubygem-psych
+    - rubygem-rake
+    - rubygem-rdoc
+    - rubygem-test-unit
+    - rubygem-xmlrpc
+    - rubygems
+    - rubygems-devel
+  buildopts:
+    rpms:
+      macros: '%_without_rubypick 1
+
+        '
+  references:
+    community: http://ruby-lang.org/
+    documentation: https://www.ruby-lang.org/en/documentation/
+    tracker: https://bugs.ruby-lang.org/
+  profiles:
+    common:
+      rpms:
+      - ruby
+  artifacts:
+    rpms:
+    - ruby-0:2.6.9-108.module+el8.5.0+13719+08a8ba32.aarch64
+    - ruby-devel-0:2.6.9-108.module+el8.5.0+13719+08a8ba32.aarch64
+    - ruby-libs-0:2.6.9-108.module+el8.5.0+13719+08a8ba32.aarch64
+    - rubygems-0:3.0.3.1-108.module+el8.5.0+13719+08a8ba32.noarch
+    - rubygems-devel-0:3.0.3.1-108.module+el8.5.0+13719+08a8ba32.noarch
+    - rubygem-rake-0:12.3.3-108.module+el8.5.0+13719+08a8ba32.noarch
+    - rubygem-irb-0:1.0.0-108.module+el8.5.0+13719+08a8ba32.noarch
+    - rubygem-rdoc-0:6.1.2.1-108.module+el8.5.0+13719+08a8ba32.noarch
+    - ruby-doc-0:2.6.9-108.module+el8.5.0+13719+08a8ba32.noarch
+    - rubygem-bigdecimal-0:1.4.1-108.module+el8.5.0+13719+08a8ba32.aarch64
+    - rubygem-did_you_mean-0:1.3.0-108.module+el8.5.0+13719+08a8ba32.noarch
+    - rubygem-io-console-0:0.4.7-108.module+el8.5.0+13719+08a8ba32.aarch64
+    - rubygem-json-0:2.1.0-108.module+el8.5.0+13719+08a8ba32.aarch64
+    - rubygem-minitest-0:5.11.3-108.module+el8.5.0+13719+08a8ba32.noarch
+    - rubygem-openssl-0:2.1.2-108.module+el8.5.0+13719+08a8ba32.aarch64
+    - rubygem-power_assert-0:1.1.3-108.module+el8.5.0+13719+08a8ba32.noarch
+    - rubygem-psych-0:3.1.0-108.module+el8.5.0+13719+08a8ba32.aarch64
+    - rubygem-net-telnet-0:0.2.0-108.module+el8.5.0+13719+08a8ba32.noarch
+    - rubygem-test-unit-0:3.2.9-108.module+el8.5.0+13719+08a8ba32.noarch
+    - rubygem-xmlrpc-0:0.3.0-108.module+el8.5.0+13719+08a8ba32.noarch
+    - rubygem-bundler-0:1.17.2-108.module+el8.5.0+13719+08a8ba32.noarch
+    - ruby-debugsource-0:2.6.9-108.module+el8.5.0+13719+08a8ba32.aarch64
+    - ruby-debuginfo-0:2.6.9-108.module+el8.5.0+13719+08a8ba32.aarch64
+    - ruby-libs-debuginfo-0:2.6.9-108.module+el8.5.0+13719+08a8ba32.aarch64
+    - rubygem-bigdecimal-debuginfo-0:1.4.1-108.module+el8.5.0+13719+08a8ba32.aarch64
+    - rubygem-io-console-debuginfo-0:0.4.7-108.module+el8.5.0+13719+08a8ba32.aarch64
+    - rubygem-json-debuginfo-0:2.1.0-108.module+el8.5.0+13719+08a8ba32.aarch64
+    - rubygem-openssl-debuginfo-0:2.1.2-108.module+el8.5.0+13719+08a8ba32.aarch64
+    - rubygem-psych-debuginfo-0:3.1.0-108.module+el8.5.0+13719+08a8ba32.aarch64
+    - rubygem-pg-0:1.1.4-1.module+el8.1.0+3653+beb38eb0.aarch64
+    - rubygem-pg-doc-0:1.1.4-1.module+el8.1.0+3653+beb38eb0.noarch
+    - rubygem-pg-debugsource-0:1.1.4-1.module+el8.1.0+3653+beb38eb0.aarch64
+    - rubygem-pg-debuginfo-0:1.1.4-1.module+el8.1.0+3653+beb38eb0.aarch64
+    - rubygem-mysql2-0:0.5.2-1.module+el8.1.0+3653+beb38eb0.aarch64
+    - rubygem-mysql2-doc-0:0.5.2-1.module+el8.1.0+3653+beb38eb0.noarch
+    - rubygem-mysql2-debugsource-0:0.5.2-1.module+el8.1.0+3653+beb38eb0.aarch64
+    - rubygem-mysql2-debuginfo-0:0.5.2-1.module+el8.1.0+3653+beb38eb0.aarch64
+    - rubygem-bson-0:4.5.0-1.module+el8.1.0+3653+beb38eb0.aarch64
+    - rubygem-bson-doc-0:4.5.0-1.module+el8.1.0+3653+beb38eb0.noarch
+    - rubygem-bson-debugsource-0:4.5.0-1.module+el8.1.0+3653+beb38eb0.aarch64
+    - rubygem-bson-debuginfo-0:4.5.0-1.module+el8.1.0+3653+beb38eb0.aarch64
+    - rubygem-abrt-0:0.3.0-4.module+el8.1.0+3653+beb38eb0.noarch
+    - rubygem-abrt-doc-0:0.3.0-4.module+el8.1.0+3653+beb38eb0.noarch
+    - rubygem-mongo-0:2.8.0-1.module+el8.1.0+3653+beb38eb0.noarch
+    - rubygem-mongo-doc-0:2.8.0-1.module+el8.1.0+3653+beb38eb0.noarch
+...
+---
+document: modulemd
+version: 2
+data:
+  name: varnish
+  stream: '6'
+  version: '8050020220201171716'
+  context: c5368500
+  arch: aarch64
+  license:
+    module:
+    - MIT
+    content:
+    - BSD
+  summary: Varnish HTTP cache
+  description: Varnish Cache web application accelerator
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.5.0.z
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      varnish:
+        rationale: Module API.
+        ref: stream-6-rhel-8.5.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      varnish-modules:
+        rationale: Extension modules.
+        ref: stream-6-rhel-8.5.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - varnish
+    - varnish-modules
+  buildopts:
+    rpms:
+      macros: '%_without_python2 1
+
+        %_with_python3 1
+
+        '
+  references:
+    documentation: http://varnish-cache.org/docs/
+    tracker: https://github.com/varnishcache/varnish-cache/issues
+  profiles:
+    common:
+      rpms:
+      - varnish
+      - varnish-modules
+  artifacts:
+    rpms:
+    - varnish-0:6.0.8-1.module+el8.5.0+14089+03a0c2cc.1.aarch64
+    - varnish-devel-0:6.0.8-1.module+el8.5.0+14089+03a0c2cc.1.aarch64
+    - varnish-docs-0:6.0.8-1.module+el8.5.0+14089+03a0c2cc.1.aarch64
+    - varnish-modules-0:0.15.0-6.module+el8.5.0+11976+0b4af72d.aarch64
+    - varnish-modules-debugsource-0:0.15.0-6.module+el8.5.0+11976+0b4af72d.aarch64
+    - varnish-modules-debuginfo-0:0.15.0-6.module+el8.5.0+11976+0b4af72d.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-DBI
+  stream: '1.641'
+  version: '8060020211122100623'
+  context: 03d935ed
+  arch: aarch64
+  license:
+    module:
+    - MIT
+    content:
+    - GPL+ or Artistic
+  summary: A database access API for Perl
+  description: 'DBI is a database access Application Programming Interface (API) for
+    the Perl language. The DBI API specification defines a set of functions, variables
+    and conventions that provide a consistent database interface independent of the
+    actual database being used.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.30'
+      platform:
+      - el8.6.0
+    requires:
+      perl:
+      - '5.30'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-DBI:
+        rationale: The API.
+        ref: stream-1.641-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - perl-DBI
+  buildopts:
+    rpms:
+      macros: '%_without_perl_DBI_enables_Clone 1
+
+        %_without_perl_DBI_enables_coro 1
+
+        %_without_perl_DBI_enables_DB_File 1
+
+        %_without_perl_DBI_enables_MLDBM 1
+
+        %_without_perl_DBI_enables_optional_test 1
+
+        %_without_perl_DBI_enables_SQL_Statement 1
+
+        '
+  references:
+    community: http://dbi.perl.org/
+  profiles:
+    common:
+      description: DBI distribution
+      rpms:
+      - perl-DBI
+  artifacts:
+    rpms:
+    - perl-DBI-0:1.641-4.module+el8.6.0+13388+2264dcd4.aarch64
+    - perl-DBI-debugsource-0:1.641-4.module+el8.6.0+13388+2264dcd4.aarch64
+    - perl-DBI-debuginfo-0:1.641-4.module+el8.6.0+13388+2264dcd4.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-DBI
+  stream: '1.641'
+  version: '8060020211122100623'
+  context: 200e0407
+  arch: aarch64
+  license:
+    module:
+    - MIT
+    content:
+    - GPL+ or Artistic
+  summary: A database access API for Perl
+  description: 'DBI is a database access Application Programming Interface (API) for
+    the Perl language. The DBI API specification defines a set of functions, variables
+    and conventions that provide a consistent database interface independent of the
+    actual database being used.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.24'
+      platform:
+      - el8.6.0
+    requires:
+      perl:
+      - '5.24'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-DBI:
+        rationale: The API.
+        ref: stream-1.641-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - perl-DBI
+  buildopts:
+    rpms:
+      macros: '%_without_perl_DBI_enables_Clone 1
+
+        %_without_perl_DBI_enables_coro 1
+
+        %_without_perl_DBI_enables_DB_File 1
+
+        %_without_perl_DBI_enables_MLDBM 1
+
+        %_without_perl_DBI_enables_optional_test 1
+
+        %_without_perl_DBI_enables_SQL_Statement 1
+
+        '
+  references:
+    community: http://dbi.perl.org/
+  profiles:
+    common:
+      description: DBI distribution
+      rpms:
+      - perl-DBI
+  artifacts:
+    rpms:
+    - perl-DBI-0:1.641-4.module+el8.6.0+13388+8b5cbb88.aarch64
+    - perl-DBI-debugsource-0:1.641-4.module+el8.6.0+13388+8b5cbb88.aarch64
+    - perl-DBI-debuginfo-0:1.641-4.module+el8.6.0+13388+8b5cbb88.aarch64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: perl-DBI
+  stream: '1.641'
+  version: '8060020211122100623'
+  context: bc93984d
+  arch: aarch64
+  license:
+    module:
+    - MIT
+    content:
+    - GPL+ or Artistic
+  summary: A database access API for Perl
+  description: 'DBI is a database access Application Programming Interface (API) for
+    the Perl language. The DBI API specification defines a set of functions, variables
+    and conventions that provide a consistent database interface independent of the
+    actual database being used.
+
+    '
+  dependencies:
+  - buildrequires:
+      perl:
+      - '5.26'
+      platform:
+      - el8.6.0
+    requires:
+      perl:
+      - '5.26'
+      platform:
+      - el8
+  components:
+    rpms:
+      perl-DBI:
+        rationale: The API.
+        ref: stream-1.641-rhel-8.6.0
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - perl-DBI
+  buildopts:
+    rpms:
+      macros: '%_without_perl_DBI_enables_Clone 1
+
+        %_without_perl_DBI_enables_coro 1
+
+        %_without_perl_DBI_enables_DB_File 1
+
+        %_without_perl_DBI_enables_MLDBM 1
+
+        %_without_perl_DBI_enables_optional_test 1
+
+        %_without_perl_DBI_enables_SQL_Statement 1
+
+        '
+  references:
+    community: http://dbi.perl.org/
+  profiles:
+    common:
+      description: DBI distribution
+      rpms:
+      - perl-DBI
+  artifacts:
+    rpms:
+    - perl-DBI-0:1.641-4.module+el8.6.0+13388+70c0920f.aarch64
+    - perl-DBI-debugsource-0:1.641-4.module+el8.6.0+13388+70c0920f.aarch64
+    - perl-DBI-debuginfo-0:1.641-4.module+el8.6.0+13388+70c0920f.aarch64
+...
+---
+data:
+  api:
+    rpms:
+    - perl-LWP-Protocol-https
+    - perl-libwww-perl
+  arch: aarch64
+  artifacts:
+    rpms:
+    - perl-Data-Dump-0:1.23-7.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-Data-Dump-0:1.23-7.module+el8.3.0+6498+9eecfe51.src
+    - perl-Digest-HMAC-0:1.03-17.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-Digest-HMAC-0:1.03-17.module+el8.3.0+6498+9eecfe51.src
+    - perl-Encode-Locale-0:1.05-10.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-Encode-Locale-0:1.05-10.module+el8.3.0+6498+9eecfe51.src
+    - perl-File-Listing-0:6.04-17.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-File-Listing-0:6.04-17.module+el8.3.0+6498+9eecfe51.src
+    - perl-HTML-Parser-0:3.72-15.module+el8.3.0+6498+9eecfe51.src
+    - perl-HTML-Parser-0:3.72-15.module+el8.3.0+6498+9eecfe51.aarch64
+    - perl-HTML-Tagset-0:3.20-34.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-HTML-Tagset-0:3.20-34.module+el8.3.0+6498+9eecfe51.src
+    - perl-HTTP-Cookies-0:6.04-2.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-HTTP-Cookies-0:6.04-2.module+el8.3.0+6498+9eecfe51.src
+    - perl-HTTP-Date-0:6.02-19.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-HTTP-Date-0:6.02-19.module+el8.3.0+6498+9eecfe51.src
+    - perl-HTTP-Message-0:6.18-1.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-HTTP-Message-0:6.18-1.module+el8.3.0+6498+9eecfe51.src
+    - perl-HTTP-Negotiate-0:6.01-19.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-HTTP-Negotiate-0:6.01-19.module+el8.3.0+6498+9eecfe51.src
+    - perl-IO-HTML-0:1.001-11.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-IO-HTML-0:1.001-11.module+el8.3.0+6498+9eecfe51.src
+    - perl-LWP-MediaTypes-0:6.02-15.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-LWP-MediaTypes-0:6.02-15.module+el8.3.0+6498+9eecfe51.src
+    - perl-LWP-Protocol-https-0:6.07-4.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-LWP-Protocol-https-0:6.07-4.module+el8.3.0+6498+9eecfe51.src
+    - perl-Mozilla-CA-0:20160104-7.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-Mozilla-CA-0:20160104-7.module+el8.3.0+6498+9eecfe51.src
+    - perl-NTLM-0:1.09-17.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-NTLM-0:1.09-17.module+el8.3.0+6498+9eecfe51.src
+    - perl-Net-HTTP-0:6.17-2.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-Net-HTTP-0:6.17-2.module+el8.3.0+6498+9eecfe51.src
+    - perl-TimeDate-1:2.30-15.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-TimeDate-1:2.30-15.module+el8.3.0+6498+9eecfe51.src
+    - perl-Try-Tiny-0:0.30-7.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-Try-Tiny-0:0.30-7.module+el8.3.0+6498+9eecfe51.src
+    - perl-WWW-RobotRules-0:6.02-18.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-WWW-RobotRules-0:6.02-18.module+el8.3.0+6498+9eecfe51.src
+    - perl-libwww-perl-0:6.34-1.module+el8.3.0+6498+9eecfe51.noarch
+    - perl-libwww-perl-0:6.34-1.module+el8.3.0+6498+9eecfe51.src
+  buildopts:
+    rpms:
+      macros: '
+
+        %_without_perl_HTML_Tagset_enables_optional_test 1
+
+
+
+        %_without_perl_Test_Fatal_enables_extra_test 1
+
+
+
+        %_without_perl_Test_Fatal_enables_optional_test 1
+
+        '
+  components:
+    rpms:
+      perl-Data-Dump:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time depenedency.
+        ref: stream-1.23-rhel-8.6.0
+      perl-Digest-HMAC:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: A run-time dependency.
+        ref: stream-1.03-rhel-8.6.0
+      perl-Digest-SHA1:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A build dependency.
+        ref: stream-2.13-rhel-8.6.0
+      perl-Encode-Locale:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-1.05-rhel-8.6.0
+      perl-File-Listing:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: A run-time dependency.
+        ref: stream-6.04-rhel-8.6.0
+      perl-HTML-Parser:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 2
+        rationale: A run-time dependency.
+        ref: stream-3.72-rhel-8.6.0
+      perl-HTML-Tagset:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-3.20-rhel-8.6.0
+      perl-HTTP-Cookies:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 2
+        rationale: A run-time dependency.
+        ref: stream-6.04-rhel-8.6.0
+      perl-HTTP-Daemon:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 2
+        rationale: A build dependency.
+        ref: stream-6.01-rhel-8.6.0
+      perl-HTTP-Date:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-6.02-rhel-8.6.0
+      perl-HTTP-Message:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: A run-time dependency.
+        ref: stream-6.15-rhel-8.6.0
+      perl-HTTP-Negotiate:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 2
+        rationale: A run-time dependency.
+        ref: stream-6.01-rhel-8.6.0
+      perl-IO-HTML:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-1.001-rhel-8.6.0
+      perl-LWP-MediaTypes:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-6.02-rhel-8.6.0
+      perl-LWP-Protocol-https:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 4
+        rationale: The API.
+        ref: stream-6.07-rhel-8.6.0
+      perl-Mozilla-CA:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-20160104-rhel-8.6.0
+      perl-NTLM:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 2
+        rationale: A run-time dependency.
+        ref: stream-1.09-rhel-8.6.0
+      perl-Net-HTTP:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-6.17-rhel-8.6.0
+      perl-Test-Fatal:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 1
+        rationale: A build dependency.
+        ref: stream-0.014-rhel-8.6.0
+      perl-Test-Pod:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A build dependency.
+        ref: stream-1.51-rhel-8.6.0
+      perl-Test-RequiresInternet:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A build dependency.
+        ref: stream-0.05-rhel-8.6.0
+      perl-TimeDate:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-2.30-rhel-8.6.0
+      perl-Try-Tiny:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-0.30-rhel-8.6.0
+      perl-WWW-RobotRules:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        rationale: A run-time dependency.
+        ref: stream-6.02-rhel-8.6.0
+      perl-libwww-perl:
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+        buildorder: 3
+        rationale: The API.
+        ref: stream-6.34-rhel-8.6.0
+  context: 9168a43d
+  dependencies:
+  - buildrequires:
+      perl:
+      - 5.26
+      perl-IO-Socket-SSL:
+      - 2.066
+      platform:
+      - el8.6.0
+    requires:
+      perl:
+      - 5.26
+      perl-IO-Socket-SSL:
+      - 2.066
+      platform:
+      - el8
+  description: '
+
+    The libwww-perl collection is a set of Perl modules which provide a simple and
+
+    consistent application programming interface to the World-Wide Web. The main focus
+
+    of the library is to provide classes and functions that enable you to write WWW
+
+    clients. The library also contains modules that are of more general use and even
+
+    classes that help you implement simple HTTP servers. LWP::Protocol::https adds
+
+    a support for an HTTPS protocol.
+
+    '
+  filter:
+    rpms:
+    - perl-Digest-SHA1
+    - perl-HTTP-Daemon
+    - perl-Test-Fatal
+    - perl-Test-Pod
+    - perl-Test-RequiresInternet
+  license:
+    content:
+    - (GPL+ or Artistic) and Public Domain
+    - GPL+ or Artistic
+    - MIT
+    - MPLv2.0
+    module:
+    - MIT
+  name: perl-libwww-perl
+  profiles:
+    common:
+      description: LWP with HTTPS support
+      rpms:
+      - perl-LWP-Protocol-https
+      - perl-libwww-perl
+  references:
+    community: https://metacpan.org/release/libwww-perl
+  stream: '6.34'
+  summary: A Perl interface to the World-Wide Web
+  version: 8060020210901111951
+  xmd: {}
+document: modulemd
+version: 2
 ...
