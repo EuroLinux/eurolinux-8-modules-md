@@ -59725,3 +59725,261 @@ data:
     - php-xmlrpc-0:7.4.19-3.module+el8.6.0+15726+994cde98.x86_64
     - php-xmlrpc-debuginfo-0:7.4.19-3.module+el8.6.0+15726+994cde98.x86_64
 ...
+---
+document: modulemd
+version: 2
+data:
+  name: php
+  stream: '8.0'
+  version: '8060020220622070726'
+  context: 5caa48ff
+  arch: x86_64
+  license:
+    module:
+    - GPLv2+
+    content:
+    - BSD
+    - BSD and LGPLv3+
+    - PHP
+    - PHP and BSD
+    - PHP and LGPLv2 and OpenLDAP
+    - PHP and LGPLv2+
+    - PHP and Zend and BSD and MIT and ASL 1.0 and NCSA
+    - PHP and Zend and BSD and MIT and ASL 1.0 and NCSA and PostgreSQL
+  summary: PHP scripting language
+  description: php 8.0 module
+  dependencies:
+  - buildrequires:
+      httpd:
+      - '2.4'
+      nginx:
+      - '1.14'
+      platform:
+      - el8.6.0.z
+    requires:
+      httpd:
+      - '2.4'
+      nginx: []
+      platform:
+      - el8
+  components:
+    rpms:
+      libzip:
+        rationale: ZIP library
+        ref: stream-php-8.0-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      php:
+        rationale: Module API.
+        ref: stream-php-8.0-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      php-pear:
+        rationale: Extension management
+        ref: stream-php-8.0-rhel-8.6.0
+        buildorder: '2'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      php-pecl-apcu:
+        rationale: APCu extension
+        ref: stream-php-8.0-rhel-8.6.0
+        buildorder: '3'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      php-pecl-rrd:
+        rationale: RRD extension
+        ref: stream-php-8.0-rhel-8.6.0
+        buildorder: '3'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      php-pecl-xdebug3:
+        rationale: Xdebug extension
+        ref: stream-php-8.0-rhel-8.6.0
+        buildorder: '3'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      php-pecl-zip:
+        rationale: ZIP extension
+        ref: stream-php-8.0-rhel-8.6.0
+        buildorder: '3'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - php-fpm
+  references:
+    documentation: http://php.net/
+    tracker: https://bugs.php.net/
+  profiles:
+    common:
+      rpms:
+      - php-cli
+      - php-common
+      - php-fpm
+      - php-mbstring
+      - php-xml
+    devel:
+      rpms:
+      - libzip
+      - php-cli
+      - php-common
+      - php-devel
+      - php-fpm
+      - php-mbstring
+      - php-pear
+      - php-pecl-zip
+      - php-process
+      - php-xml
+    minimal:
+      rpms:
+      - php-cli
+      - php-common
+  artifacts:
+    rpms:
+    - php-pgsql-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-mysqlnd-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-cli-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-debugsource-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-mbstring-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-bcmath-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-dba-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-gmp-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-enchant-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-fpm-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-pdo-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-snmp-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-process-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-xml-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-opcache-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-soap-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-xml-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-intl-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-enchant-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-common-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-embedded-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-odbc-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-common-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-cli-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-gd-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-ldap-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-intl-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-process-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-mysqlnd-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-gmp-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-gd-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-opcache-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-odbc-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-mbstring-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-fpm-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-dba-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-pdo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-pgsql-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-embedded-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-ffi-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-dbg-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-soap-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-bcmath-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-dbg-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-snmp-debuginfo-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-devel-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-ffi-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+    - php-ldap-0:8.0.13-3.module+el8.6.0+15725+0c79e7c4.x86_64
+...
+---
+document: modulemd
+version: 2
+data:
+  name: squid
+  stream: '4'
+  version: '8060020220628135610'
+  context: ad008a3a
+  arch: x86_64
+  license:
+    module:
+    - MIT
+    content:
+    - BSD
+    - GPLv2+ and (LGPLv2+ and MIT and BSD and Public Domain)
+  summary: Squid - Optimising Web Delivery
+  description: an initial version of the squid caching proxy module
+  dependencies:
+  - buildrequires:
+      platform:
+      - el8.6.0.z
+    requires:
+      platform:
+      - el8
+  components:
+    rpms:
+      libecap:
+        rationale: library needed by Squid
+        ref: stream-1.0-rhel-8.6.0
+        buildorder: '1'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+      squid:
+        rationale: squid caching proxy
+        ref: stream-4-rhel-8.6.0
+        buildorder: '2'
+        arches:
+        - aarch64
+        - i686
+        - ppc64le
+        - s390x
+        - x86_64
+  api:
+    rpms:
+    - squid
+  references:
+    documentation: http://www.squid-cache.org/Doc/
+    tracker: https://bugs.squid-cache.org/index.cgi
+  profiles:
+    common:
+      rpms:
+      - squid
+  artifacts:
+    rpms:
+    - squid-debugsource-7:4.15-3.module+el8.6.0+15801+8fa20c64.1.x86_64
+    - squid-7:4.15-3.module+el8.6.0+15801+8fa20c64.1.x86_64
+    - squid-debuginfo-7:4.15-3.module+el8.6.0+15801+8fa20c64.1.x86_64
+    - libecap-0:1.0.1-2.module+el8.1.0+4044+36416a77.x86_64
+    - libecap-devel-0:1.0.1-2.module+el8.1.0+4044+36416a77.x86_64
+    - libecap-debugsource-0:1.0.1-2.module+el8.1.0+4044+36416a77.x86_64
+    - libecap-debuginfo-0:1.0.1-2.module+el8.1.0+4044+36416a77.x86_64
+...
